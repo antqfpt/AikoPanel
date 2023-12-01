@@ -9584,7 +9584,7 @@
 				}), d.a.createElement(r.a, {
 					id: "server",
 					maskClosable: !0,
-					title: e.id ? "Chỉnh Sửa Nút" : "Tạo Mới Nút",
+					title: e.id ? "Chỉnh Sửa Nút" : "Tạo Nút Vmess Mới",
 					width: "80%",
 					visible: this.state.visible,
 					onClose: () => this.onShow()
@@ -22209,7 +22209,7 @@
 				}), h.a.createElement(r.a, {
 					id: "server",
 					maskClosable: !0,
-					title: e.id ? "Chỉnh Sửa Nút" : "Tạo Nút Mới",
+					title: e.id ? "Chỉnh Sửa Nút" : "Tạo Nút Shadowsocks Mới",
 					width: "80%",
 					visible: this.state.visible,
 					onClose: () => this.onShow()
@@ -78142,7 +78142,7 @@
 				}), y.a.createElement(R.a, {
 					id: "server",
 					maskClosable: !0,
-					title: e.id ? "Chỉnh Sửa Nút" : "Tạo Nút Mới",
+					title: e.id ? "Chỉnh Sửa Nút" : "Tạo Nút Hysteria Mới",
 					width: "80%",
 					visible: this.state.visible,
 					onClose: () => this.onShow()
@@ -78632,7 +78632,7 @@
 				}), y.a.createElement(R.a, {
 					id: "server",
 					maskClosable: !0,
-					title: e.id ? "Chỉnh Sửa Server" : "Tạo Server Mới",
+					title: e.id ? "Chỉnh Sửa Server" : "Tạo Nút Vless Mới",
 					width: "80%",
 					visible: this.state.visible,
 					onClose: () => this.onShow()
@@ -84395,7 +84395,7 @@
 				}), f.a.createElement(r.a, {
 					id: "server",
 					maskClosable: !0,
-					title: e.id ? "Chỉnh Sửa Server" : "Tạo Server Mới",
+					title: e.id ? "Chỉnh Sửa Server" : "Tạo Nút Trojan Mới",
 					width: "80%",
 					visible: this.state.visible,
 					onClose: () => this.onShow()

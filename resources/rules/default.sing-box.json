@@ -30,7 +30,7 @@
         "servers": [
             {
                 "address": "https://1.1.1.1/dns-query",
-                "detour": "节点选择",
+                "detour": "Tự động chọn",
                 "tag": "remote"
             },
             {
@@ -106,7 +106,7 @@
             },
             {
                 "clash_mode": "global",
-                "outbound": "节点选择"
+                "outbound": "Lựa chọn nút"
             },
             {
                 "geoip": [
