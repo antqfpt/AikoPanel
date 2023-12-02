@@ -19860,24 +19860,24 @@
 			}
 			render() {
 				var e = this.props.user.userInfo;
-				return a.a.createElement("header", {
+				return i.a.createElement("header", {
 					id: "page-header",
-				}, a.a.createElement("div", {
+				}, i.a.createElement("div", {
 					className: "content-header",
-				}, a.a.createElement("div", {
+				}, i.a.createElement("div", {
 					className: "sidebar-toggle",
 					style: {
 						display: this.props.search ? "block" : "none",
 					},
-				}, a.a.createElement("button", {
+				}, i.a.createElement("button", {
 					type: "button",
 					className: "dark" === m.header ? "btn btn-primary mr-1 d-lg-none" : "btn mr-1 d-lg-none",
 					onClick: () => this.props.dispatch({
 						type: "layout/showNav",
 					}),
-				}, a.a.createElement("i", {
+				}, i.a.createElement("i", {
 					className: "fa fa-fw fa-bars",
-				})), this.props.search && a.a.createElement("button", {
+				})), this.props.search && i.a.createElement("button", {
 					type: "button",
 					className: "dark" === m.header ? "btn btn-primary" : "btn",
 					onClick: () => {
@@ -19885,40 +19885,40 @@
 							showSearchBar: !0,
 						});
 					},
-				}, a.a.createElement("i", {
+				}, i.a.createElement("i", {
 					className: "fa fa-fw fa-search",
-				}), " ", a.a.createElement("span", {
+				}), " ", i.a.createElement("span", {
 					className: "ml-1 d-none d-sm-inline-block",
 				}, Object(u.formatMessage)({
 					id: "Tìm Kiếm",
-				})))), a.a.createElement("div", {
+				})))), i.a.createElement("div", {
 					className: "dark" === m.header ? "v2board-container-title text-white" : "v2board-container-title text-black",
-				}, this.props.title), a.a.createElement("div", null, a.a.createElement("div", {
+				}, this.props.title), i.a.createElement("div", null, i.a.createElement("div", {
 					className: "dropdown d-inline-block",
-				}, a.a.createElement("button", {
+				}, i.a.createElement("button", {
 					type: "button",
 					className: "dark" === m.header ? "btn btn-primary mr-1" : "btn mr-1",
 					onClick: () => this.darkMode(),
-				}, "1" === Object(h.e)("dark_mode") ? a.a.createElement("i", {
+				}, "1" === Object(h.e)("dark_mode") ? i.a.createElement("i", {
 					className: "far fa fa-moon",
-				}) : a.a.createElement("i", {
+				}) : i.a.createElement("i", {
 					className: "far fa fa-sun",
-				}))), a.a.createElement("div", {
+				}))), i.a.createElement("div", {
 					className: "dropdown d-inline-block",
-				}, a.a.createElement(p.a, null, a.a.createElement("button", {
+				}, i.a.createElement(p.a, null, i.a.createElement("button", {
 					type: "button",
 					className: "dark" === m.header ? "btn btn-primary mr-1" : "btn mr-1",
-				}, a.a.createElement("i", {
+				}, i.a.createElement("i", {
 					className: "far fa fa-language",
-				})))), this.state.loading ? a.a.createElement("div", {
+				})))), this.state.loading ? i.a.createElement("div", {
 					className: "spinner-grow text-primary",
-				}) : a.a.createElement("div", {
+				}) : i.a.createElement("div", {
 					className: "dropdown d-inline-block",
-				}, a.a.createElement("button", {
+				}, i.a.createElement("button", {
 					type: "button",
 					className: "dark" === m.header ? "btn btn-primary" : "btn",
 					onClick: () => this.showDropmenu("showAvatarMenu"),
-				}, a.a.createElement("img", {
+				}, i.a.createElement("img", {
 					className: "user_avatar",
 					alt: "Avatar",
 					src: e.avatar_url,
@@ -19928,47 +19928,47 @@
 						borderRadius: "50%",
 						border: "2px solid #ffffff",
 					},
-				}), a.a.createElement("span", {
+				}), i.a.createElement("span", {
 					className: "d-none d-lg-inline ml-1",
-				}), a.a.createElement("i", {
+				}), i.a.createElement("i", {
 					className: "fa fa-fw fa-angle-down ml-1",
-				})), a.a.createElement("div", {
+				})), i.a.createElement("div", {
 					className: "dropdown-menu dropdown-menu-right p-0 ".concat(this.state.showAvatarMenu && "show"),
-				}, a.a.createElement("div", {
+				}, i.a.createElement("div", {
 					className: "p-2",
-				}, a.a.createElement("a", {
+				}, i.a.createElement("a", {
 					className: "dropdown-item",
 					href: "/#/profile",
-				}, a.a.createElement("i", {
+				}, i.a.createElement("i", {
 					className: "far fa-fw fa-envelope mr-1",
 				}), " ", Object(u.formatMessage)({
 					id: "Email: " + e.email,
-				})), a.a.createElement("a", {
+				})), i.a.createElement("a", {
 					className: "dropdown-item",
 					href: "/#/utilities",
-				}, a.a.createElement("i", {
+				}, i.a.createElement("i", {
 					className: "far fa-fw fa-user mr-1",
 				}), " ", Object(u.formatMessage)({
 					id: "Tiện ích",
-				})), a.a.createElement("a", {
+				})), i.a.createElement("a", {
 					className: "dropdown-item",
 					href: "javascript:void(0);",
 					onClick: () => this.logout(),
-				}, a.a.createElement("i", {
+				}, i.a.createElement("i", {
 					className: "far fa-fw fa-arrow-alt-circle-left mr-1",
 				}), " ", Object(u.formatMessage)({
 					id: "Đăng Xuất",
-				}))))))), this.props.search && a.a.createElement("div", {
+				}))))))), this.props.search && i.a.createElement("div", {
 					className: "overlay-header bg-dark ".concat(this.state.showSearchBar ? "show" : ""),
-				}, a.a.createElement("div", {
+				}, i.a.createElement("div", {
 					className: "content-header bg-dark",
-				}, a.a.createElement("div", {
+				}, i.a.createElement("div", {
 					className: "w-100",
-				}, a.a.createElement("div", {
+				}, i.a.createElement("div", {
 					className: "input-group",
-				}, a.a.createElement("div", {
+				}, i.a.createElement("div", {
 					className: "input-group-prepend",
-				}, a.a.createElement("button", {
+				}, i.a.createElement("button", {
 					type: "button",
 					className: "btn btn-dark",
 					onClick: () => {
@@ -19976,9 +19976,9 @@
 							showSearchBar: !1,
 						});
 					},
-				}, a.a.createElement("i", {
+				}, i.a.createElement("i", {
 					className: "fa fa-fw fa-times-circle",
-				}))), a.a.createElement("input", {
+				}))), i.a.createElement("input", {
 					type: "text",
 					className: "form-control border-0",
 					placeholder: this.props.search.placeholder,
