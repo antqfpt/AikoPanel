@@ -19689,7 +19689,7 @@
 							id: "Tiện ích"
 						}),
 						type: "item",
-						href: "/plan",
+						href: "/utilities",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-rocket"
 						})
@@ -19698,7 +19698,7 @@
 							id: "Trạng Thái Server Máy Chủ"
 						}),
 						type: "item",
-						href: "/utilities",
+						href: "/node",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-check"
 						})
