@@ -19686,10 +19686,19 @@
 						})
 					}, {
 						title: Object(u.formatMessage)({
+							id: "Tiện ích"
+						}),
+						type: "item",
+						href: "/plan",
+						icon: i.a.createElement("i", {
+							className: "nav-main-link-icon si si-rocket"
+						})
+					}, {
+						title: Object(u.formatMessage)({
 							id: "Trạng Thái Server Máy Chủ"
 						}),
 						type: "item",
-						href: "/node",
+						href: "/utilities",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-check"
 						})
