@@ -17761,6 +17761,14 @@
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
+				}, "SNI"), p.a.createElement(u.a, {
+					defaultValue: t.sni,
+					placeholder: "Nếu để trống, thì sẽ sử dụng SNI của máy chủ.",
+					onChange: e => this.formChange("sni", e.target.value)
+				})), p.a.createElement("div", {
+					className: "form-group"
+				}, p.a.createElement("label", {
+					for: "example-text-input-alt"
 				}, "Có Phải Là Quản Trị Viên Không"), p.a.createElement("div", null, p.a.createElement(i.a, {
 					checked: t.is_admin,
 					onChange: e => this.formChange("is_admin", e ? 1 : 0)
@@ -61122,6 +61130,20 @@
 						this.setState({
 							record: d()({}, this.state.record, {
 								capacity_limit: e.target.value
+							})
+						})
+					}
+				})),m.a.createElement("div", {
+					className: "form-group"
+				}, m.a.createElement("label", {
+					for: "example-text-input-alt"
+				}, "SNI mặc định của gói"), m.a.createElement(C.a, {
+					placeholder: "Nếu để trống, thì sẽ sử dụng SNI của máy chủ.",
+					value: this.state.record.sni,
+					onChange: e => {
+						this.setState({
+							record: d()({}, this.state.record, {
+								sni: e.target.value
 							})
 						})
 					}
