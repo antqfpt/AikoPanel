@@ -4735,6 +4735,18 @@
 					size: "large",
 					type: "number",
 					placeholder: "Vui lòng nhập",
+					defaultValue: u.server_alive_interval,
+					onChange: e => this.set("server", "server_alive_interval", e.target.value)
+				}))),f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Khoảng thời gian xóa dữ liệu trực tuyến của nút đã hết hạn",
+					description: "Xoá dữ liệu trực tuyến của nút đã hết hạn ( Khuyến Nghị để giá trị là 120 giây )"
+				}, f.a.createElement(a.a, {
+					addonAfter: "Giây",
+					size: "large",
+					type: "number",
+					placeholder: "Vui lòng nhập",
 					defaultValue: u.server_push_interval,
 					onChange: e => this.set("server", "server_push_interval", e.target.value)
 				})))), f.a.createElement(s.a.TabPane, {
@@ -4901,7 +4913,25 @@
 					placeholder: "Không nhập thì mặc định là không xoá phiên đăng nhập của người dùng", 
 					defaultValue: w.session_ttl,
 					onChange: e => this.set("app", "session_ttl", e.target.value)
-				})))))))
+				})),f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Auto backup database",
+					description: "Database sẽ được backup theo thời gian mà bạn đã config ở dưới đây -> gửi tới telegram"
+				}, f.a.createElement(a.a, {
+					addonAfter: "Giây",
+					size: "large",
+					type: "number",
+					placeholder: "Xin Nhập Vào",
+					defaultValue: w.interval_backup_database,
+					onChange: e => this.set("app", "interval_backup_database", e.target.value)
+				}),f.a.createElement("input", {
+					type: "text",
+					className: "form-control",
+					placeholder: "Vui lòng nhập telegram id của bạn (ID này sẽ nhận được thông báo backup database)", 
+					defaultValue: w.admin_telegram_id,
+					onChange: e => this.set("app", "admin_telegram_id", e.target.value)
+				}))))))))
 			}
 		}
 		t.default = Object(p.c)((e => ({
