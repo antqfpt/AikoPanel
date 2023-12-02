@@ -783,13 +783,13 @@
 					className: "".concat(v.a.item, " subsrcibe-for-link"),
 					onClick: () => {
 						f()(this.props.subscribeUrl), a.a.success(Object(p.formatMessage)({
-							id: "复制成功"
+							id: "Sao Chép Thành Công"
 						}))
 					}
 				}, c.a.createElement("div", null, c.a.createElement("i", {
 					className: "fa fa-copy mr-2"
 				})), c.a.createElement("div", null, Object(p.formatMessage)({
-					id: "复制订阅地址"
+					id: "Sao Chép Liên Kết Server"
 				}))), c.a.createElement("div", {
 					key: "2",
 					className: "".concat(v.a.item, " subscribe-for-qrcode"),
@@ -799,7 +799,7 @@
 				}, c.a.createElement("div", null, c.a.createElement("i", {
 					className: "fa fa-qrcode mr-2"
 				})), c.a.createElement("div", null, Object(p.formatMessage)({
-					id: "扫描二维码订阅"
+					id: "Quét Mã QR để Đăng Ký"
 				}))), t.map((e => {
 					var t;
 					return c.a.createElement("div", {
@@ -811,7 +811,7 @@
 					}, c.a.createElement("div", null, c.a.createElement("img", {
 						src: "".concat((null === (t = window.settings) || void 0 === t ? void 0 : t.assets_path) || "", "/./images/icon/").concat(e.title, ".png")
 					})), c.a.createElement("div", null, Object(p.formatMessage)({
-						id: "导入到"
+						id: "Nhập Vào"
 					}), " ", e.title))
 				})), c.a.createElement("div", {
 					style: {
@@ -823,7 +823,7 @@
 					block: !0,
 					type: "primary"
 				}, Object(p.formatMessage)({
-					id: "不会使用，查看使用教程"
+					id: "Xem HD Nếu Chưa Biết"
 				}))))
 			}
 			render() {
@@ -853,7 +853,7 @@
 						marginTop: 10
 					}
 				}, Object(p.formatMessage)({
-					id: "使用支持扫码的客户端进行订阅"
+					id: "Sử dụng ứng dụng hỗ trợ quét mã QR để đăng ký"
 				}))), Object(u.l)() ? c.a.createElement(r.a, {
 					placement: "bottom",
 					closable: !1,
@@ -5355,7 +5355,7 @@
 							case 16:
 								return n.abrupt("break", 20);
 							case 17:
-								return window.location.href = c.data, r.a.info("正在前往收银台"), n.abrupt("break", 20);
+								return window.location.href = c.data, r.a.info("Đang Chuyển Đến Trang Thanh Toán"), n.abrupt("break", 20);
 							case 20:
 							case "end":
 								return n.stop()
@@ -5393,7 +5393,7 @@
 								}
 								return n.abrupt("return");
 							case 11:
-								r.a.loading("请稍等，我们正在验证该笔支付", 5);
+								r.a.loading("Xin hãy chờ một chút, chúng tôi đang xác minh thanh toán này.", 5);
 							case 12:
 							case "end":
 								return n.stop()
@@ -12740,7 +12740,7 @@
 			}
 			changePassword() {
 				if (this.refs.re_password.value !== this.refs.new_password.value) return c.a.error(Object(m.formatMessage)({
-					id: "两次新密码输入不同"
+					id: "Hai lần nhập Mật Khẩu Mới không giống nhau."
 				}));
 				this.props.dispatch({
 					type: "user/changePassword",
@@ -12759,24 +12759,24 @@
 				var e = this;
 				s.a.confirm({
 					title: Object(m.formatMessage)({
-						id: "确定要重置订阅信息？"
+						id: "Bạn có chắc muốn đặt lại thông tin đăng ký không?"
 					}),
 					content: Object(m.formatMessage)({
-						id: "如果你的订阅地址或信息泄露可以进行此操作。重置后你的UUID及订阅将会变更，需要重新进行订阅。"
+						id: "Nếu địa chỉ đăng ký hoặc thông tin của bạn đã bị rò rỉ, bạn có thể thực hiện thao tác này. Sau khi đặt lại, UUID và đăng ký của bạn sẽ thay đổi, và bạn sẽ cần phải đăng ký lại."
 					}),
 					onOk() {
 						Object(d.a)("/user/resetSecurity").then((t => {
 							200 === t.code && (c.a.success(Object(m.formatMessage)({
-								id: "重置成功"
+								id: "Đặt Lại Thành Công"
 							})), e.fetchData())
 						}))
 					},
 					onCancel() {},
 					okText: Object(m.formatMessage)({
-						id: "确认"
+						id: "Xác Nhận"
 					}),
 					cancelText: Object(m.formatMessage)({
-						id: "取消"
+						id: "Hủy Bỏ"
 					})
 				})
 			}
@@ -12787,7 +12787,7 @@
 					r = this.props.comm.config;
 				return l.a.createElement(f.a, o()({}, this.props, {
 					title: Object(m.formatMessage)({
-						id: "个人中心"
+						id: "Trung Tâm Cá Nhân"
 					})
 				}), l.a.createElement("main", {
 					id: "main-container"
@@ -12808,7 +12808,7 @@
 				}, l.a.createElement("p", {
 					className: "text-muted w-75"
 				}, Object(m.formatMessage)({
-					id: "我的钱包"
+					id: "Ví Tiền Của Bạn"
 				})), l.a.createElement("p", {
 					className: "display-4 text-black font-w300 mb-2"
 				}, void 0 !== t.balance ? (parseInt(t.balance) / 100).toFixed(2) : "--.--", l.a.createElement("span", {
@@ -12819,7 +12819,7 @@
 						cursor: "pointer"
 					}
 				}, Object(m.formatMessage)({
-					id: "账户余额(仅消费)"
+					id: "Số Dư Tài Khoản (Chỉ Sử Dụng cho Chi Tiêu)"
 				}))))))), l.a.createElement("div", {
 					className: "row mb-3 mb-md-0"
 				}, l.a.createElement("div", {
@@ -12831,7 +12831,7 @@
 				}, l.a.createElement("h3", {
 					className: "block-title"
 				}, Object(m.formatMessage)({
-					id: "修改密码"
+					id: "Thay Đổi Mật Khẩu"
 				})), l.a.createElement("div", {
 					className: "block-options"
 				})), l.a.createElement("div", {
@@ -12843,34 +12843,34 @@
 				}, l.a.createElement("div", {
 					className: "form-group"
 				}, l.a.createElement("label", null, Object(m.formatMessage)({
-					id: "旧密码"
+					id: "Mật Khẩu Cũ"
 				})), l.a.createElement("input", {
 					type: "password",
 					className: "form-control",
 					placeholder: Object(m.formatMessage)({
-						id: "请输入旧密码"
+						id: "Vui lòng nhập Mật Khẩu Cũ"
 					}),
 					ref: "old_password"
 				})), l.a.createElement("div", {
 					className: "form-group"
 				}, l.a.createElement("label", null, Object(m.formatMessage)({
-					id: "新密码"
+					id: "Mật Khẩu Mới"
 				})), l.a.createElement("input", {
 					type: "password",
 					className: "form-control",
 					placeholder: Object(m.formatMessage)({
-						id: "请输入新密码"
+						id: "Vui lòng nhập Mật Khẩu Mới"
 					}),
 					ref: "new_password"
 				})), l.a.createElement("div", {
 					className: "form-group"
 				}, l.a.createElement("label", null, Object(m.formatMessage)({
-					id: "新密码"
+					id: "Mật Khẩu Mới"
 				})), l.a.createElement("input", {
 					type: "password",
 					className: "form-control",
 					placeholder: Object(m.formatMessage)({
-						id: "请输入新密码"
+						id: "Vui lòng nhập Mật Khẩu Mới"
 					}),
 					ref: "re_password"
 				})), l.a.createElement(a.a, {
@@ -12878,7 +12878,7 @@
 					onClick: () => this.changePassword(),
 					loading: n
 				}, Object(m.formatMessage)({
-					id: "保存"
+					id: "Lưu"
 				})))))))), l.a.createElement("div", {
 					className: "row mb-3 mb-md-0"
 				}, l.a.createElement("div", {
@@ -12890,7 +12890,7 @@
 				}, l.a.createElement("h3", {
 					className: "block-title"
 				}, Object(m.formatMessage)({
-					id: "通知"
+					id: "Thông Báo"
 				}))), l.a.createElement("div", {
 					className: "block-content"
 				}, l.a.createElement("div", {
@@ -12900,7 +12900,7 @@
 				}, l.a.createElement("div", {
 					className: "form-group"
 				}, l.a.createElement("label", null, Object(m.formatMessage)({
-					id: "到期邮件提醒"
+					id: "Nhắc Nhở qua Email Khi Hết Hạn"
 				})), l.a.createElement("div", null, l.a.createElement(i.a, {
 					loading: this.props.user.remind_expire_loading,
 					checked: t.remind_expire,
@@ -12908,7 +12908,7 @@
 				}))), l.a.createElement("div", {
 					className: "form-group"
 				}, l.a.createElement("label", null, Object(m.formatMessage)({
-					id: "流量邮件提醒"
+					id: "Nhắc Nhở qua Email Về Lưu Lượng"
 				})), l.a.createElement("div", null, l.a.createElement(i.a, {
 					loading: this.props.user.remind_traffic_loading,
 					checked: t.remind_traffic,
@@ -12924,14 +12924,14 @@
 				}, l.a.createElement("h3", {
 					className: "block-title"
 				}, Object(m.formatMessage)({
-					id: "绑定Telegram"
+					id: "Liên Kết với Telegram"
 				})), l.a.createElement("div", {
 					className: "block-options"
 				}, l.a.createElement(h.a, null, l.a.createElement("button", {
 					type: "button",
 					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3"
 				}, Object(m.formatMessage)({
-					id: "立即开始"
+					id: "Bắt Đầu Ngay"
 				})))))) : l.a.createElement(l.a.Fragment, null), r.telegram_discuss_link ? l.a.createElement("div", {
 					className: "block block-rounded join_telegram_disscuss"
 				}, l.a.createElement("div", {
@@ -12939,7 +12939,7 @@
 				}, l.a.createElement("h3", {
 					className: "block-title"
 				}, Object(m.formatMessage)({
-					id: "Telegram 讨论组"
+					id: "Nhóm Telegram"
 				})), l.a.createElement("div", {
 					className: "block-options"
 				}, l.a.createElement("a", {
@@ -12947,7 +12947,7 @@
 					target: "_blank",
 					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3"
 				}, Object(m.formatMessage)({
-					id: "立即加入"
+					id: "Tham Gia Ngay"
 				}))))) : l.a.createElement(l.a.Fragment, null), l.a.createElement("div", {
 					className: "block block-rounded "
 				}, l.a.createElement("div", {
@@ -12955,7 +12955,7 @@
 				}, l.a.createElement("h3", {
 					className: "block-title"
 				}, Object(m.formatMessage)({
-					id: "重置订阅信息"
+					id: "Reset Liên Kết Server"
 				})), l.a.createElement("div", {
 					className: "block-options"
 				})), l.a.createElement("div", {
@@ -12967,11 +12967,11 @@
 				}, l.a.createElement("div", {
 					className: "alert alert-warning mb-3",
 					role: "alert"
-				}, "当你的订阅地址或账户发生泄漏被他人滥用时，可以在此重置订阅信息。避免带来不必要的损失。"), l.a.createElement(a.a, {
+				}, "Khi địa chỉ gói dịch vụ hoặc tài khoản của bạn bị rò rỉ và bị người khác lạm dụng, bạn có thể đặt lại thông tin đăng ký tại đây để tránh gây ra tổn thất không đáng có."), l.a.createElement(a.a, {
 					type: "danger",
 					onClick: () => this.resetSecurity()
 				}, Object(m.formatMessage)({
-					id: "重置"
+					id: "Đặt Lại"
 				})))))))))))
 			}
 		}
@@ -13428,16 +13428,16 @@
 					onClick: () => this.show()
 				}), a.a.createElement(r.a, {
 					title: Object(c.formatMessage)({
-						id: "推广佣金划转至余额"
+						id: "Chuyển Hoa Hồng Tiếp Thị vào Số Dư Tài Khoản"
 					}),
 					visible: e,
 					onOk: () => this.ok(),
 					onCancel: () => this.show(),
 					okText: Object(c.formatMessage)({
-						id: "确认"
+						id: "Xác Nhận"
 					}),
 					cancelText: Object(c.formatMessage)({
-						id: "取消"
+						id: "Hủy Bỏ"
 					})
 				}, a.a.createElement("div", {
 					className: "alert alert-danger d-flex align-items-center",
@@ -13451,13 +13451,13 @@
 				}, a.a.createElement("p", {
 					className: "mb-0"
 				}, Object(c.formatMessage)({
-					id: "划转后的余额仅用于{title}消费使用"
+					id: "Sau khi chuyển khoản, Số Dư Tài Khoản chỉ có thể được sử dụng cho {title}"
 				}, {
 					title: window.settings.title
 				})))), a.a.createElement("div", {
 					className: "form-group"
 				}, a.a.createElement("label", null, Object(c.formatMessage)({
-					id: "当前推广佣金余额"
+					id: "Số Dư Hoa Hồng Tiếp Thị Hiện Tại"
 				})), a.a.createElement(o.a, {
 					disabled: !0,
 					type: "text",
@@ -13466,12 +13466,12 @@
 				})), a.a.createElement("div", {
 					className: "form-group"
 				}, a.a.createElement("label", null, Object(c.formatMessage)({
-					id: "划转金额"
+					id: "Số Tiền Chuyển Khoản"
 				})), a.a.createElement(o.a, {
 					type: "text",
 					className: "form-control",
 					placeholder: Object(c.formatMessage)({
-						id: "请输入需要划转到余额的金额"
+						id: "Vui lòng nhập số tiền cần chuyển khoản vào Số Dư Tài Khoản"
 					}),
 					onChange: e => this.setState({
 						transferAmount: e.target.value
@@ -14235,7 +14235,7 @@
 					t = this.props.comm.config;
 				return a.a.createElement(s.a, o()({}, this.props, {
 					title: Object(p.formatMessage)({
-						id: "购买订阅"
+						id: "Mua Gói Dịch Vụ"
 					})
 				}), a.a.createElement("main", {
 					id: "main-container"
@@ -14244,7 +14244,7 @@
 				}, a.a.createElement("h2", {
 					className: "font-weight-normal mb-4 m-3 mx-xl-0 mt-xl-0 mt-4"
 				}, Object(p.formatMessage)({
-					id: "选择最适合你的计划"
+					id: "Hãy chọn gói dịch vụ phù hợp nhất với bạn"
 				})), a.a.createElement("div", {
 					className: "mb-3 font-size-sm mt-3 m-3 mx-xl-0"
 				}, a.a.createElement("span", {
@@ -14255,21 +14255,21 @@
 						tabs: 0
 					})
 				}, Object(p.formatMessage)({
-					id: "全部"
+					id: "Toàn Bộ"
 				})), a.a.createElement("span", {
 					className: 1 === this.state.tabs && "active bg-primary",
 					onClick: () => this.setState({
 						tabs: 1
 					})
 				}, Object(p.formatMessage)({
-					id: "按周期"
+					id: "Theo Chu Kỳ"
 				})), a.a.createElement("span", {
 					className: 2 === this.state.tabs && "active bg-primary",
 					onClick: () => this.setState({
 						tabs: 2
 					})
 				}, Object(p.formatMessage)({
-					id: "按流量"
+					id: "Theo Lưu Lượng"
 				})))), e.length <= 0 ? a.a.createElement("div", {
 					className: "spinner-grow text-primary",
 					role: "status"
@@ -14298,7 +14298,7 @@
 					}, e.name), i && a.a.createElement("span", {
 						className: "aikopanel-sold-out-tag"
 					}, Object(p.formatMessage)({
-						id: "即将售罄"
+						id: "Sắp Hết Hàng"
 					}))), a.a.createElement("div", {
 						className: "block-content bg-gray-light"
 					}, a.a.createElement("div", {
@@ -14343,7 +14343,7 @@
 						disabled: o,
 						class: "btn btn-sm btn-alt-primary"
 					}, Object(p.formatMessage)({
-						id: o ? "已售罄" : "立即订阅"
+						id: o ? "Đã Hết Hàng" : "Mua Gói Ngay"
 					})))))
 				}))))))
 			}
@@ -14675,7 +14675,7 @@
 					type: "text",
 					className: "js-chat-input bg-body-dark border-0 form-control form-control-alt",
 					placeholder: Object(f.formatMessage)({
-						id: "输入内容回复工单..."
+						id: "Nhập nội dung để trả lời công việc..."
 					}),
 					onChange: e => this.props.onChange(e)
 				})))
@@ -14954,7 +14954,7 @@
 					method: t,
 					token: r.token.id
 				}) : u.a.error(Object(b.formatMessage)({
-					id: "请检查信用卡支付信息"
+					id: "Hãy kiểm tra thông tin thẻ thanh toán"
 				}));
 				this.props.dispatch({
 					type: "order/checkout",
@@ -14993,26 +14993,26 @@
 					case 1:
 						return {
 							status: "info", title: Object(b.formatMessage)({
-								id: "开通中"
+								id: "Đang Xử Lý"
 							}), subTitle: Object(b.formatMessage)({
-								id: "订单系统正在进行处理，请稍等1-3分钟。"
+								id: "Hệ thống đang xử lý đơn hàng, vui lòng đợi trong vòng 1-3 phút."
 							})
 						};
 					case 2:
 						return {
 							status: "warning", title: Object(b.formatMessage)({
-								id: "已取消"
+								id: "Đã Hủy"
 							}), subTitle: Object(b.formatMessage)({
-								id: "订单由于超时支付已被取消。"
+								id: "Đơn hàng đã bị hủy do quá thời gian thanh toán."
 							})
 						};
 					case 3:
 					case 4:
 						return {
 							status: "success", title: Object(b.formatMessage)({
-								id: "已完成"
+								id: "Đã Hoàn Thành"
 							}), subTitle: Object(b.formatMessage)({
-								id: "订单已支付并开通。"
+								id: "Đơn hàng đã được thanh toán và kích hoạt."
 							}), extra: [f.a.createElement("button", {
 								type: "button",
 								onClick: () => E.router.push("/knowledge"),
@@ -15020,7 +15020,7 @@
 							}, f.a.createElement("i", {
 								className: "nav-main-link-icon si si-book-open mr-1"
 							}), Object(b.formatMessage)({
-								id: "查看使用教程"
+								id: "Xem Hướng Dẫn Sử Dụng"
 							}))]
 						}
 				}
@@ -15065,7 +15065,7 @@
 					E = s.find((e => e.id === n)) || {};
 				return f.a.createElement(p.a, c()({}, this.props, {
 					title: Object(b.formatMessage)({
-						id: "订单详情"
+						id: "Chi Tiết Đơn Hàng"
 					})
 				}), f.a.createElement("main", {
 					id: "main-container"
@@ -15094,17 +15094,17 @@
 				}, f.a.createElement("h3", {
 					className: "block-title aikopanel-trade-no"
 				}, Object(b.formatMessage)({
-					id: "商品信息"
+					id: "Thông Tin Sản Phẩm"
 				}))), f.a.createElement("div", {
 					className: "block-content pb-4"
 				}, f.a.createElement("div", {
 					className: "aikopanel-order-info"
 				}, f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "产品名称"
+					id: "Tên Sản Phẩm"
 				}), "："), f.a.createElement("span", null, t.plan.name)), f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "类型/周期"
+					id: "Loại/Chu Kỳ"
 				}), "："), f.a.createElement("span", null, h.a.periodText[t.period] && h.a.periodText[t.period]())), f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "产品流量"
+					id: "Lưu Lượng Sản Phẩm"
 				}), "："), f.a.createElement("span", null, t.plan.transfer_enable, " GB"))))), f.a.createElement("div", {
 					className: "block block-rounded"
 				}, f.a.createElement("div", {
@@ -15112,7 +15112,7 @@
 				}, f.a.createElement("h3", {
 					className: "block-title aikopanel-trade-no"
 				}, Object(b.formatMessage)({
-					id: "订单信息"
+					id: "Thông Tin Đơn Hàng"
 				})), 0 === t.status && f.a.createElement("div", {
 					className: "block-options"
 				}, f.a.createElement("button", {
@@ -15121,10 +15121,10 @@
 					className: "btn btn-primary btn-sm btn-danger btn-rounded px-3",
 					onClick: () => i.a.confirm({
 						title: Object(b.formatMessage)({
-							id: "注意"
+							id: "Lưu Ý"
 						}),
 						content: Object(b.formatMessage)({
-							id: "如果你已经付款，取消订单可能会导致支付失败，确定取消订单吗？"
+							id: "Nếu bạn đã thanh toán, việc hủy bỏ đơn hàng có thể gây ra thất bại trong thanh toán. Bạn có chắc chắn muốn hủy bỏ đơn hàng không?"
 						}),
 						onOk: () => {
 							this.props.dispatch({
@@ -15133,7 +15133,7 @@
 							})
 						},
 						okText: Object(b.formatMessage)({
-							id: "关闭订单"
+							id: "Đóng Đơn Hàng"
 						}),
 						okButtonProps: {
 							loading: y
@@ -15143,25 +15143,25 @@
 					size: "sm",
 					type: "light"
 				}), " ", Object(b.formatMessage)({
-					id: "关闭订单"
+					id: "Đóng Đơn Hàng"
 				})))), f.a.createElement("div", {
 					className: "block-content pb-4"
 				}, f.a.createElement("div", {
 					className: "aikopanel-order-info"
 				}, f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "订单号"
+					id: "Mã Đơn Hàng"
 				}), "："), f.a.createElement("span", null, t.trade_no)), t.discount_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "优惠金额"
+					id: "Số Tiền Giảm Giá"
 				}), "："), f.a.createElement("span", null, (t.discount_amount / 100).toFixed(2))) : "", t.surplus_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "旧订阅折抵金额"
+					id: "Số Tiền Giảm Giá từ Đăng Ký Cũ"
 				}), "："), f.a.createElement("span", null, (t.surplus_amount / 100).toFixed(2))) : "", t.refund_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "退款金额"
+					id: "Số Tiền Hoàn Trả"
 				}), "："), f.a.createElement("span", null, (t.refund_amount / 100).toFixed(2))) : "", t.balance_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "余额支付"
+					id: "Thanh Toán Bằng Số Dư Tài Khoản"
 				}), "："), f.a.createElement("span", null, (t.balance_amount / 100).toFixed(2))) : "", t.pre_handling_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "支付手续费"
+					id: "Phí Giao Dịch Thanh Toán"
 				}), "："), f.a.createElement("span", null, (t.pre_handling_amount / 100).toFixed(2))) : "", f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "创建时间"
+					id: "Thời Gian Tạo"
 				}), "："), f.a.createElement("span", null, x()(1e3 * t.created_at).format("YYYY-MM-DD HH:mm:ss")))))), 0 === t.status && f.a.createElement(f.a.Fragment, null, f.a.createElement("div", {
 					className: "block block-rounded js-appear-enabled"
 				}, f.a.createElement("div", {
@@ -15169,7 +15169,7 @@
 				}, f.a.createElement("h3", {
 					className: "block-title"
 				}, Object(b.formatMessage)({
-					id: "支付方式"
+					id: "Phương Thức Thanh Toán"
 				})), f.a.createElement("div", {
 					className: "block-options"
 				})), f.a.createElement("div", {
@@ -15196,7 +15196,7 @@
 				})))))))), 0 === t.status && "StripeCredit" === E.payment && this.state.pk && f.a.createElement(f.a.Fragment, null, f.a.createElement("h3", {
 					className: "font-w300 mt-5 mb-3"
 				}, Object(b.formatMessage)({
-					id: "填写信用卡支付信息"
+					id: "Điền Thông Tin Thanh Toán Bằng Thẻ Tín Dụng"
 				})), f.a.createElement(S, {
 					key: this.state.pk,
 					pk: this.state.pk,
@@ -15213,7 +15213,7 @@
 						color: "#7cb305"
 					}
 				}), Object(b.formatMessage)({
-					id: "您的信用卡信息只会被用作当次扣款，系统并不会保存，这是我们认为最安全的。"
+					id: "Thông tin thẻ tín dụng của bạn chỉ được sử dụng cho việc thanh toán lần này và hệ thống không lưu trữ thông tin này. Điều này được coi là an toàn nhất bởi chúng tôi."
 				})))), 0 === t.status && f.a.createElement("div", {
 					className: "col-md-4 col-sm-12"
 				}, f.a.createElement("div", {
@@ -15224,7 +15224,7 @@
 				}, f.a.createElement("h5", {
 					className: "text-light mb-3"
 				}, Object(b.formatMessage)({
-					id: "订单总额"
+					id: "Tổng Số Tiền Đơn Hàng"
 				})), f.a.createElement("div", {
 					className: "row no-gutters pb-3",
 					style: {
@@ -15240,7 +15240,7 @@
 						color: "#646669"
 					}
 				}, Object(b.formatMessage)({
-					id: "折扣"
+					id: "Giảm Giá"
 				})), f.a.createElement("div", {
 					className: "row no-gutters py-3",
 					style: {
@@ -15256,7 +15256,7 @@
 						color: "#646669"
 					}
 				}, Object(b.formatMessage)({
-					id: "折抵"
+					id: "Khấu Trừ"
 				})), f.a.createElement("div", {
 					className: "row no-gutters py-3",
 					style: {
@@ -15272,7 +15272,7 @@
 						color: "#646669"
 					}
 				}, Object(b.formatMessage)({
-					id: "退款"
+					id: "Hoàn Tiền"
 				})), f.a.createElement("div", {
 					className: "row no-gutters py-3",
 					style: {
@@ -15288,7 +15288,7 @@
 						color: "#646669"
 					}
 				}, Object(b.formatMessage)({
-					id: "支付手续费"
+					id: "Phí Giao Dịch Thanh Toán"
 				})), f.a.createElement("div", {
 					className: "row no-gutters py-3",
 					style: {
@@ -15304,7 +15304,7 @@
 						color: "#646669"
 					}
 				}, Object(b.formatMessage)({
-					id: "总计"
+					id: "Tổng Cộng"
 				})), f.a.createElement("h1", {
 					className: "text-light mt-3 mb-3"
 				}, g.currency_symbol, " ", ((t.total_amount + (t.pre_handling_amount || 0)) / 100).toFixed(2), " ", g.currency), f.a.createElement("button", {
@@ -15317,7 +15317,7 @@
 				}) : f.a.createElement("span", null, f.a.createElement("i", {
 					className: "far fa-check-circle"
 				}), " ", Object(b.formatMessage)({
-					id: "结账"
+					id: "Thanh Toán"
 				})))))))), f.a.createElement(i.a, {
 					className: "aikopanel-payment-qrcode",
 					maskClosable: !0,
@@ -15339,7 +15339,7 @@
 							textAlign: "center"
 						}
 					}, Object(b.formatMessage)({
-						id: "等待支付中"
+						id: "Đang Chờ Thanh Toán"
 					}))
 				}, l && f.a.createElement(v.a, {
 					renderAs: "svg",
@@ -19276,7 +19276,7 @@
 				super(...arguments), this.state = {
 					nav: [{
 						title: Object(u.formatMessage)({
-							id: "仪表盘"
+							id: "Trang Chủ"
 						}),
 						type: "item",
 						href: "/dashboard",
@@ -19285,7 +19285,7 @@
 						})
 					}, {
 						title: Object(u.formatMessage)({
-							id: "使用文档"
+							id: "Hướng Dẫn Sử Dụng"
 						}),
 						type: "item",
 						href: "/knowledge",
@@ -19294,12 +19294,12 @@
 						})
 					}, {
 						title: Object(u.formatMessage)({
-							id: "订阅"
+							id: "Gói Dịch Vụ"
 						}),
 						type: "heading"
 					}, {
 						title: Object(u.formatMessage)({
-							id: "购买订阅"
+							id: "Mua Gói Dịch Vụ"
 						}),
 						type: "item",
 						href: "/plan",
@@ -19308,7 +19308,7 @@
 						})
 					}, {
 						title: Object(u.formatMessage)({
-							id: "节点状态"
+							id: "Trạng Thái Server Máy Chủ"
 						}),
 						type: "item",
 						href: "/node",
@@ -19317,12 +19317,12 @@
 						})
 					}, {
 						title: Object(u.formatMessage)({
-							id: "财务"
+							id: "Tài Chính"
 						}),
 						type: "heading"
 					}, {
 						title: Object(u.formatMessage)({
-							id: "我的订单"
+							id: "Lịch Sử Mua Hàng"
 						}),
 						type: "item",
 						href: "/order",
@@ -19331,7 +19331,7 @@
 						})
 					}, {
 						title: Object(u.formatMessage)({
-							id: "我的邀请"
+							id: "Tiếp Thị Liên Kết - CTV"
 						}),
 						type: "item",
 						href: "/invite",
@@ -19340,12 +19340,12 @@
 						})
 					}, {
 						title: Object(u.formatMessage)({
-							id: "用户"
+							id: "Người Dùng"
 						}),
 						type: "heading"
 					}, {
 						title: Object(u.formatMessage)({
-							id: "个人中心"
+							id: "Trung Tâm Cá Nhân"
 						}),
 						type: "item",
 						href: "/profile",
@@ -19354,7 +19354,7 @@
 						})
 					}, {
 						title: Object(u.formatMessage)({
-							id: "我的工单"
+							id: "Gửi Hỗ Trợ Tới Admin"
 						}),
 						type: "item",
 						href: "/ticket",
@@ -19363,7 +19363,7 @@
 						})
 					}, {
 						title: Object(u.formatMessage)({
-							id: "流量明细"
+							id: "Thống Kê Lưu Lượng"
 						}),
 						type: "item",
 						href: "/traffic",
@@ -19512,7 +19512,7 @@
 				}), " ", i.a.createElement("span", {
 					className: "ml-1 d-none d-sm-inline-block"
 				}, Object(u.formatMessage)({
-					id: "搜索"
+					id: "Tìm Kiếm"
 				})))), i.a.createElement("div", {
 					className: "dark" === m.header ? "aikopanel-container-title text-white" : "aikopanel-container-title text-black"
 				}, this.props.title), i.a.createElement("div", null, i.a.createElement("div", {
@@ -19556,7 +19556,7 @@
 				}, i.a.createElement("i", {
 					className: "far fa-fw fa-user mr-1"
 				}), " ", Object(u.formatMessage)({
-					id: "个人中心"
+					id: "Trung Tâm Cá Nhân"
 				})), i.a.createElement("a", {
 					className: "dropdown-item",
 					href: "javascript:void(0);",
@@ -19564,7 +19564,7 @@
 				}, i.a.createElement("i", {
 					className: "far fa-fw fa-arrow-alt-circle-left mr-1"
 				}), " ", Object(u.formatMessage)({
-					id: "登出"
+					id: "Đăng Xuất"
 				}))))))), this.props.search && i.a.createElement("div", {
 					className: "overlay-header bg-dark ".concat(this.state.showSearchBar ? "show" : "")
 				}, i.a.createElement("div", {
@@ -19644,7 +19644,7 @@
 			today: "今天",
 			now: "此刻",
 			backToToday: "返回今天",
-			ok: "确定",
+			ok: "Xác Nhận",
 			timeSelect: "选择时间",
 			dateSelect: "选择日期",
 			weekSelect: "选择周",
@@ -22017,7 +22017,7 @@
 		t.a = {
 			items_per_page: "条/页",
 			jump_to: "跳至",
-			jump_to_confirm: "确定",
+			jump_to_confirm: "Xác Nhận",
 			page: "页",
 			prev_page: "上一页",
 			next_page: "下一页",
@@ -24695,27 +24695,27 @@
 					onClick: () => this.show()
 				}), s.a.createElement(r.a, {
 					title: Object(u.formatMessage)({
-						id: "申请提现"
+						id: "Yêu Cầu Rút Tiền"
 					}),
 					visible: t,
 					onOk: () => this.ok(),
 					onCancel: () => this.show(),
 					okText: Object(u.formatMessage)({
-						id: "确认"
+						id: "Xác Nhận"
 					}),
 					cancelText: Object(u.formatMessage)({
-						id: "取消"
+						id: "Hủy Bỏ"
 					})
 				}, s.a.createElement("div", {
 					className: "form-group"
 				}, s.a.createElement("label", null, Object(u.formatMessage)({
-					id: "提现方式"
+					id: "Phương Thức Rút Tiền"
 				})), s.a.createElement("div", null, s.a.createElement(i.a, {
 					style: {
 						width: "100%"
 					},
 					placeholder: Object(u.formatMessage)({
-						id: "请选择提现方式"
+						id: "Vui lòng chọn Phương Thức Rút Tiền"
 					}),
 					value: n,
 					onChange: e => this.setState({
@@ -24726,12 +24726,12 @@
 				}, e)))))), s.a.createElement("div", {
 					className: "form-group"
 				}, s.a.createElement("label", null, Object(u.formatMessage)({
-					id: "提现账号"
+					id: "Tài Khoản Rút Tiền"
 				})), s.a.createElement(o.a, {
 					type: "text",
 					className: "form-control",
 					placeholder: Object(u.formatMessage)({
-						id: "请输入提现账号"
+						id: "Vui lòng nhập Tài Khoản Rút Tiền"
 					}),
 					onChange: e => this.setState({
 						withdrawAccount: e.target.value
@@ -24773,14 +24773,14 @@
 					n = e.getTrafficLogLoading,
 					r = [{
 						title: Object(v.formatMessage)({
-							id: "记录时间"
+							id: "Thời Gian Ghi Nhận"
 						}),
 						dataIndex: "record_at",
 						key: "record_at",
 						render: e => e ? h()(1e3 * e).format("YYYY/MM/DD") : "-"
 					}, {
 						title: Object(v.formatMessage)({
-							id: "实际上行"
+							id: "Upload Thực Tế"
 						}),
 						dataIndex: "u",
 						key: "u",
@@ -24788,7 +24788,7 @@
 						render: (e, t) => t.server_rate ? Object(p.b)(parseInt(e)) : 0
 					}, {
 						title: Object(v.formatMessage)({
-							id: "实际下行"
+							id: "Download Thực Tế"
 						}),
 						dataIndex: "d",
 						key: "d",
@@ -24796,7 +24796,7 @@
 						render: (e, t) => t.server_rate ? Object(p.b)(parseInt(e)) : 0
 					}, {
 						title: Object(v.formatMessage)({
-							id: "扣费倍率"
+							id: "Tỷ lệ khấu trừ"
 						}),
 						dataIndex: "server_rate",
 						key: "server_rate",
@@ -24810,10 +24810,10 @@
 						title: l.a.createElement(a.a, {
 							placement: "topRight",
 							title: Object(v.formatMessage)({
-								id: "公式：(实际上行 + 实际下行) x 扣费倍率 = 扣除流量"
+								id: "Công thức: (upload thực tế + download thực tế) x bội số trừ phí = Dung lượng khấu trừ"
 							})
 						}, Object(v.formatMessage)({
-							id: "合计"
+							id: "Cộng"
 						}), " ", l.a.createElement(s.a, {
 							type: "question-circle"
 						})),
@@ -24825,7 +24825,7 @@
 					}];
 				return l.a.createElement(f.a, o()({}, this.props, {
 					title: Object(v.formatMessage)({
-						id: "流量明细"
+						id: "Thống Kê Lưu Lượng"
 					})
 				}), l.a.createElement("main", {
 					id: "main-container"
@@ -24845,7 +24845,7 @@
 				}, l.a.createElement("p", {
 					className: "mb-0"
 				}, Object(v.formatMessage)({
-					id: "流量明细仅保留近月数据以供查询。"
+					id: "Chi tiết dung lượng chỉ lưu dữ liệu của những tháng gần đây để truy vấn."
 				}))))), l.a.createElement(i.a, {
 					tableLayout: "auto",
 					style: {
@@ -24930,7 +24930,7 @@
 					complete: () => {
 						var e, t = (null === (e = this.props.notice) || void 0 === e ? void 0 : e.notices) || [];
 						if (t.length) {
-							var n = t.find((e => -1 !== e.tags.indexOf("弹窗")));
+							var n = t.find((e => -1 !== e.tags.indexOf("Pop-up")));
 							console.log(n), n && this.modalVisible(n)
 						}
 					}
@@ -24960,7 +24960,7 @@
 				}, l.a.createElement("p", null, l.a.createElement("span", {
 					className: "badge badge-danger p-2 text-uppercase"
 				}, Object(b.formatMessage)({
-					id: "公告"
+					id: "Thông Báo"
 				})))), l.a.createElement("p", {
 					className: "font-size-lg text-white mb-1"
 				}, e.title), l.a.createElement("p", {
@@ -24973,10 +24973,10 @@
 				c.a.confirm({
 					maskClosable: !0,
 					title: Object(b.formatMessage)({
-						id: "确定重置当前已用流量？"
+						id: "Bạn có chắc chắn muốn đặt lại lưu lượng đã sử dụng hiện tại không?"
 					}),
 					content: Object(b.formatMessage)({
-						id: "点击「确定」将会跳转到收银台，支付订单后系统将会清空您当月已使用流量。"
+						id: "Khi nhấp vào ”Xác Nhận‟, bạn sẽ được chuyển đến quầy thanh toán, sau khi thanh toán đơn hàng, hệ thống sẽ xóa lưu lượng đã sử dụng trong tháng của bạn."
 					}),
 					onOk() {
 						t.props.dispatch({
@@ -24991,10 +24991,10 @@
 					okText: t.props.order.saveLoading ? l.a.createElement(s.a, {
 						type: "loading"
 					}) : Object(b.formatMessage)({
-						id: "确定"
+						id: "Xác Nhận"
 					}),
 					cancelText: Object(b.formatMessage)({
-						id: "取消"
+						id: "Hủy Bỏ"
 					}),
 					okButtonProps: {
 						disabled: t.props.order.saveLoading
@@ -25014,40 +25014,40 @@
 				}, l.a.createElement("p", {
 					className: "mb-0"
 				}, Object(b.formatMessage)({
-					id: "还有没支付的订单"
+					id: "Có đơn hàng chưa thanh toán"
 				}), " ", l.a.createElement("a", {
 					className: "alert-link",
 					href: "javascript:void(0)",
 					onClick: () => h.a.push("/order")
 				}, Object(b.formatMessage)({
-					id: "立即支付"
+					id: "Thanh Toán Ngay"
 				}))))), void 0 !== u[1] && u[1] && x.push(l.a.createElement("div", {
 					className: "alert alert-warning",
 					role: "alert"
 				}, l.a.createElement("p", {
 					className: "mb-0"
 				}, l.a.createElement("strong", null, u[1]), " ", Object(b.formatMessage)({
-					id: "条工单正在处理中"
+					id: "Công Việc đang được xử lý"
 				}), " ", l.a.createElement("a", {
 					className: "alert-link",
 					href: "javascript:void(0)",
 					onClick: () => h.a.push("/ticket")
 				}, Object(b.formatMessage)({
-					id: "立即查看"
+					id: "Xem Ngay"
 				}))))), y >= 80 && !Object(p.h)(d.expired_at) && x.push(l.a.createElement("div", {
 					className: "alert alert-info",
 					role: "alert"
 				}, l.a.createElement("p", {
 					className: "mb-0"
 				}, Object(b.formatMessage)({
-					id: "当前已使用流量达{rate}%"
+					id: "Lưu Lượng Đã Sử Dụng hiện tại đạt {rate}%"
 				}, {
 					rate: y
 				}), " ", (null === (r = d.plan) || void 0 === r ? void 0 : r.reset_price) && l.a.createElement("a", {
 					onClick: () => this.resetPackage()
-				}, l.a.createElement("strong", null, "重置已用流量"))))), l.a.createElement(f.a, o()({}, this.props, {
+				}, l.a.createElement("strong", null, "Reset Lưu Lượng Đã Sử Dụng"))))), l.a.createElement(f.a, o()({}, this.props, {
 					title: Object(b.formatMessage)({
-						id: "仪表盘"
+						id: "Trang Chủ"
 					})
 				}), l.a.createElement("main", {
 					id: "main-container"
@@ -25072,7 +25072,7 @@
 				}, l.a.createElement("h3", {
 					className: "block-title"
 				}, Object(b.formatMessage)({
-					id: "我的订阅"
+					id: "Gói Dịch Vụ Của Bạn"
 				}))), l.a.createElement("div", {
 					className: "block-content"
 				}, d.email ? d.plan_id ? l.a.createElement("div", null, l.a.createElement("div", null, l.a.createElement("div", {
@@ -25082,25 +25082,25 @@
 				}, d.plan.name), null === d.expired_at ? l.a.createElement("p", {
 					className: "font-size-sm text-muted"
 				}, Object(b.formatMessage)({
-					id: "该订阅长期有效"
+					id: "Gói Này Có Thời Gian Vĩnh Viễn"
 				})) : l.a.createElement("p", {
 					className: "font-size-sm text-muted"
 				}, Object(p.h)(d.expired_at) ? l.a.createElement("a", {
 					className: "font-w600 text-danger",
 					href: "javascript:void(0);"
 				}, Object(b.formatMessage)({
-					id: "已过期"
+					id: "Gói Đã Quá Hạn"
 				})) : l.a.createElement("span", null, Object(b.formatMessage)({
-					id: "于 {date} 到期，距离到期还有 {day} 天。"
+					id: "Hết Hạn vào ngày {date}, còn {day} ngày nữa."
 				}, {
 					date: v()(1e3 * d.expired_at).format("YYYY/MM/DD"),
 					day: ((d.expired_at - v()().format("X")) / 86400).toFixed(0)
 				}), null !== d.reset_day ? 0 !== d.reset_day ? Object(b.formatMessage)({
-					id: "已用流量将在 {reset_day} 日后重置"
+					id: "Lưu Lượng Đã Sử Dụng sẽ được đặt lại sau {reset_day} ngày"
 				}, {
 					reset_day: d.reset_day
 				}) : Object(b.formatMessage)({
-					id: "已用流量已在今日重置"
+					id: "Lưu Lượng Đã Sử Dụng đã được đặt lại vào hôm nay"
 				}) : "")), l.a.createElement("div", {
 					className: "mb-0"
 				}, l.a.createElement("div", {
@@ -25119,7 +25119,7 @@
 				}, l.a.createElement("span", {
 					className: "font-w700"
 				}, Object(b.formatMessage)({
-					id: "已用 {used} / 总计 {total}"
+					id: "Đã Sử Dụng {used} / Tổng Cộng {total}"
 				}, {
 					used: Object(p.b)(d.u + d.d),
 					total: Object(p.b)(d.transfer_enable)
@@ -25128,7 +25128,7 @@
 				}, "  "), l.a.createElement("span", {
 					className: "font-w700"
 				}, Object(b.formatMessage)({
-					id: "在线设备 {alive_ip}/{device_limit}"
+					id: "Đang Online {alive_ip}/{device_limit} Thiết Bị"
 				}, {
 					alive_ip: d.alive_ip,
 					device_limit: null == d.device_limit ? "∞" : d.device_limit
@@ -25138,14 +25138,14 @@
 					type: "primary",
 					onClick: () => this.resetPackage()
 				}, Object(b.formatMessage)({
-					id: "重置已用流量"
+					id: "Reset Lưu Lượng Đã Sử Dụng"
 				}))), Object(p.h)(d.expired_at) && l.a.createElement("div", {
 					className: "mb-4"
 				}, l.a.createElement(i.a, {
 					type: "primary",
 					onClick: () => h.a.push(Object(p.m)(d) ? "/plan/" + d.plan_id : "/plan")
 				}, Object(b.formatMessage)({
-					id: Object(p.m)(d) ? "续费订阅" : "购买订阅"
+					id: Object(p.m)(d) ? "Gia Hạn Gói Dịch Vụ" : "Mua Gói Dịch Vụ"
 				})))), l.a.createElement("div", null)))) : l.a.createElement("a", {
 					onClick: () => h.a.push("/plan")
 				}, l.a.createElement("div", null, l.a.createElement("div", {
@@ -25155,7 +25155,7 @@
 				})), l.a.createElement("div", {
 					className: "font-size-sm text-uppercase text-muted pt-2 pb-3"
 				}, Object(b.formatMessage)({
-					id: "购买订阅"
+					id: "Mua Gói Dịch Vụ"
 				}))))) : l.a.createElement(w.a, {
 					className: "font-size-h3 mb-3"
 				}))))), l.a.createElement("div", {
@@ -25169,7 +25169,7 @@
 				}, l.a.createElement("h3", {
 					className: "block-title"
 				}, Object(b.formatMessage)({
-					id: "捷径"
+					id: "Menu Lối Tắt"
 				}))), l.a.createElement("div", {
 					className: "block-content p-0"
 				}, l.a.createElement("div", {
@@ -25180,11 +25180,11 @@
 					className: "aikopanel-shortcuts-item",
 					onClick: () => h.a.push("/knowledge")
 				}, l.a.createElement("div", null, Object(b.formatMessage)({
-					id: "查看教程"
+					id: "Xem Hướng Dẫn"
 				})), l.a.createElement("div", {
 					className: "description"
 				}, Object(b.formatMessage)({
-					id: "学习如何使用"
+					id: "Hướng Dẫn Sử Dụng"
 				}), " ", null === (t = window) || void 0 === t || null === (n = t.settings) || void 0 === n ? void 0 : n.title), l.a.createElement("i", {
 					style: {
 						float: "right"
@@ -25195,11 +25195,11 @@
 				}, l.a.createElement("div", {
 					className: "aikopanel-shortcuts-item"
 				}, l.a.createElement("div", null, Object(b.formatMessage)({
-					id: "一键订阅"
+					id: "Đồng Bộ Máy Chủ Về APP"
 				})), l.a.createElement("div", {
 					className: "description"
 				}, Object(b.formatMessage)({
-					id: "快速将节点导入对应客户端进行使用"
+					id: "Bạn Cần Phải Mua Gói Này"
 				})), l.a.createElement("i", {
 					style: {
 						float: "right"
@@ -25209,11 +25209,11 @@
 					className: "aikopanel-shortcuts-item",
 					onClick: () => h.a.push(Object(p.m)(d) ? "/plan/" + d.plan_id : "/plan")
 				}, l.a.createElement("div", null, Object(b.formatMessage)({
-					id: Object(p.m)(d) ? "续费订阅" : "购买订阅"
+					id: Object(p.m)(d) ? "Gia Hạn Gói Dịch Vụ" : "Mua Gói Dịch Vụ"
 				})), l.a.createElement("div", {
 					className: "description"
 				}, Object(b.formatMessage)({
-					id: Object(p.m)(d) ? "对您当前的订阅进行续费" : "对您当前的订阅进行购买"
+					id: Object(p.m)(d) ? "Gia hạn gói hiện tại" : "Mua gói bạn đã chọn"
 				})), l.a.createElement("i", {
 					style: {
 						float: "right"
@@ -25223,11 +25223,11 @@
 					className: "aikopanel-shortcuts-item",
 					onClick: () => h.a.push("/ticket")
 				}, l.a.createElement("div", null, Object(b.formatMessage)({
-					id: "遇到问题"
+					id: "Gửi Hỗ Trợ Lên Admin"
 				})), l.a.createElement("div", {
 					className: "description"
 				}, Object(b.formatMessage)({
-					id: "遇到问题可以通过工单与我们沟通"
+					id: "Nếu gặp vấn đề, bạn có thể liên hệ với chúng tôi qua Công Việc để trao đổi."
 				})), l.a.createElement("i", {
 					style: {
 						float: "right"
@@ -25922,7 +25922,7 @@
 					visible: !0
 				}), window.copy = e => {
 					Object(g.a)(e), m.a.success(Object(l.formatMessage)({
-						id: "复制成功"
+						id: "Sao Chép Thành Công"
 					}))
 				}, window.jump = e => {
 					this.getKnowledge(e)
@@ -25986,7 +25986,7 @@
 					r = this.props.location.query.id;
 				return s.a.createElement(c.a, o()({}, this.props, {
 					title: Object(l.formatMessage)({
-						id: "使用文档"
+						id: "Hướng Dẫn Sử Dụng"
 					})
 				}), s.a.createElement("main", {
 					id: "main-container"
@@ -26002,7 +26002,7 @@
 					size: "large",
 					enterButton: !0,
 					placeholder: Object(l.formatMessage)({
-						id: "搜索文档"
+						id: "Tìm Kiếm Tài Liệu"
 					})
 				})), n ? s.a.createElement("div", {
 					className: "spinner-grow text-primary",
@@ -26034,7 +26034,7 @@
 				}, s.a.createElement("h5", {
 					className: "font-size-base mb-1"
 				}, e.title), s.a.createElement("small", null, Object(l.formatMessage)({
-					id: "最后更新: {date}"
+					id: "Cập Nhật Cuối: {date}"
 				}, {
 					date: p()(1e3 * e.updated_at).format("YYYY/MM/DD")
 				})))))))))))))))
@@ -26334,7 +26334,7 @@
 					r = this.props.user.subscribe,
 					l = [{
 						title: Object(y.formatMessage)({
-							id: "名称"
+							id: "Tên"
 						}),
 						dataIndex: "name",
 						key: "name"
@@ -26342,10 +26342,10 @@
 						title: f.a.createElement("span", null, f.a.createElement(c.a, {
 							placement: "top",
 							title: Object(y.formatMessage)({
-								id: "节点五分钟内节点在线情况"
+								id: "Trạng Thái Trực Tuyến của Node trong 5 Phút Gần Đây"
 							})
 						}, Object(y.formatMessage)({
-							id: "状态"
+							id: "Trạng Thái"
 						}), " ", f.a.createElement(u.a, {
 							type: "question-circle"
 						}))),
@@ -26359,10 +26359,10 @@
 						title: f.a.createElement("span", null, f.a.createElement(c.a, {
 							placement: "top",
 							title: Object(y.formatMessage)({
-								id: "使用的流量将乘以倍率进行扣除"
+								id: "Lưu Lượng Sử Dụng sẽ được nhân với Hệ Số để trừ đi"
 							})
 						}, Object(y.formatMessage)({
-							id: "倍率"
+							id: "Hệ Số"
 						}), " ", f.a.createElement(u.a, {
 							type: "question-circle"
 						}))),
@@ -26376,7 +26376,7 @@
 						}, e + " x")
 					}, {
 						title: Object(y.formatMessage)({
-							id: "标签"
+							id: "Nhãn"
 						}),
 						dataIndex: "tags",
 						key: "tags",
@@ -26386,7 +26386,7 @@
 					}];
 				return Object(v.f)(r.u + r.d, r.transfer_enable), f.a.createElement(p.a, o()({}, this.props, {
 					title: Object(y.formatMessage)({
-						id: "节点状态"
+						id: "Trạng Thái Server Máy Chủ"
 					})
 				}), f.a.createElement("main", {
 					id: "main-container"
@@ -26419,19 +26419,19 @@
 				}, f.a.createElement("p", {
 					className: "mb-0"
 				}, Object(y.formatMessage)({
-					id: "没有可用节点，如果您未订阅或已过期请"
+					id: "Không có Server khả dụng, nếu bạn chưa có gói hoặc gói đã hết hạn, vui lòng"
 				}), " ", r.plan_id ? f.a.createElement("a", {
 					className: "alert-link",
 					href: "javascript:void(0);",
 					onClick: () => m.a.push("/plan/" + r.plan_id)
 				}, Object(y.formatMessage)({
-					id: "续费"
+					id: "Gia Hạn"
 				})) : f.a.createElement("a", {
 					className: "alert-link",
 					href: "javascript:void(0);",
 					onClick: () => m.a.push("/plan")
 				}, Object(y.formatMessage)({
-					id: "订阅"
+					id: "Gói Dịch Vụ"
 				})), "。")))))))
 			}
 		}
@@ -26597,18 +26597,18 @@
 					a = o.subscribe;
 				return i && i !== e.id && !Object(v.h)(a.expired_at) ? u.a.confirm({
 					title: Object(m.formatMessage)({
-						id: "注意"
+						id: "Lưu Ý"
 					}),
 					content: Object(m.formatMessage)({
-						id: "变更订阅会导致当前订阅被新订阅覆盖，请注意。"
+						id: "Thay đổi gói sẽ làm ghi đè lên gói hiện tại, và sẽ mất gói hiện tại không thể khôi phục, vui lòng lưu ý."
 					}),
 					onOk: () => this.order()
 				}) : !n.length || 1 !== n[0].status && 0 !== n[0].status ? void this.order() : u.a.confirm({
 					title: Object(m.formatMessage)({
-						id: "注意"
+						id: "Lưu Ý"
 					}),
 					content: Object(m.formatMessage)({
-						id: "你还有未完成的订单，购买前需要先进行取消，确定取消先前的订单吗？"
+						id: "Bạn còn đơn hàng chưa hoàn thành, trước khi mua, bạn cần hủy bỏ đơn hàng trước đó. Bạn có chắc muốn hủy bỏ đơn hàng trước không?"
 					}),
 					onOk: () => {
 						this.props.dispatch({
@@ -26620,13 +26620,13 @@
 						})
 					},
 					okText: Object(m.formatMessage)({
-						id: "确定取消"
+						id: "Xác Nhận Hủy Bỏ"
 					}),
 					okButtonProps: {
 						loading: r
 					},
 					cancelText: Object(m.formatMessage)({
-						id: "返回我的订单"
+						id: "Quay Lại Đơn Hàng Của Bạn"
 					}),
 					onCancel: () => y.router.push("/order")
 				})
@@ -26678,7 +26678,7 @@
 						color: "#646669"
 					}
 				}, Object(m.formatMessage)({
-					id: "折扣"
+					id: "Giảm Giá"
 				})), f.a.createElement("div", {
 					className: "row no-gutters py-3",
 					style: {
@@ -26701,7 +26701,7 @@
 					g = Object(v.c)(t.content);
 				return f.a.createElement(p.a, o()({}, this.props, {
 					title: Object(m.formatMessage)({
-						id: "配置订阅"
+						id: "Thiết Lập Gói"
 					})
 				}), f.a.createElement("main", {
 					id: "main-container"
@@ -26760,7 +26760,7 @@
 				}, f.a.createElement("h3", {
 					className: "block-title"
 				}, Object(m.formatMessage)({
-					id: "付款周期"
+					id: "Chu Kỳ Thanh Toán"
 				})), f.a.createElement("div", {
 					className: "block-options"
 				})), f.a.createElement("div", {
@@ -26801,7 +26801,7 @@
 					className: "form-control aikopanel-input-coupon p-0",
 					ref: "coupon",
 					placeholder: Object(m.formatMessage)({
-						id: "有优惠券？"
+						id: "Có Phiếu Giảm Giá không?"
 					})
 				}), f.a.createElement("button", {
 					onClick: () => this.couponCheck(),
@@ -26815,7 +26815,7 @@
 				}, f.a.createElement("i", {
 					className: "fa fa-fw fa-ticket-alt mr-2"
 				}), Object(m.formatMessage)({
-					id: "验证"
+					id: "Xác Minh"
 				}))), f.a.createElement("div", {
 					className: "block block-link-pop block-rounded  px-3 py-3 text-light",
 					style: {
@@ -26824,7 +26824,7 @@
 				}, f.a.createElement("h5", {
 					className: "text-light mb-3"
 				}, Object(m.formatMessage)({
-					id: "订单总额"
+					id: "Tổng Số Tiền Đơn Hàng"
 				})), f.a.createElement("div", {
 					className: "row no-gutters pb-3",
 					style: {
@@ -26840,7 +26840,7 @@
 						color: "#646669"
 					}
 				}, Object(m.formatMessage)({
-					id: "总计"
+					id: "Tổng Cộng"
 				})), f.a.createElement("h1", {
 					className: "text-light mt-3 mb-3"
 				}, d.currency_symbol, " ", this.getTotalAmount(), " ", d.currency), f.a.createElement("button", {
@@ -26853,7 +26853,7 @@
 				}) : f.a.createElement("span", null, f.a.createElement("i", {
 					className: "far fa-check-circle"
 				}), " ", Object(m.formatMessage)({
-					id: "下单"
+					id: "Đặt Hàng"
 				})))))) : f.a.createElement("div", {
 					className: "row"
 				}, f.a.createElement("div", {
@@ -26865,14 +26865,14 @@
 				}, f.a.createElement(s.a, {
 					status: "info",
 					title: Object(m.formatMessage)({
-						id: "该订阅无法续费，仅允许新用户购买"
+						id: "Đăng ký này không thể gia hạn, chỉ người dùng mới được phép mua"
 					}),
 					subTitle: f.a.createElement(c.a, {
 						className: "mt-3",
 						type: "primary",
 						onClick: () => y.router.push("/plan")
 					}, Object(m.formatMessage)({
-						id: "选择其他订阅"
+						id: "Chọn Gói Dịch Vụ Khác"
 					}))
 				}))))))))
 			}
@@ -28868,7 +28868,7 @@
 					type: "text",
 					className: "form-control form-control-alt",
 					placeholder: Object(l.formatMessage)({
-						id: "邮箱"
+						id: "E-Mail"
 					}),
 					ref: "email"
 				})), a.a.createElement("div", {
@@ -28877,7 +28877,7 @@
 					type: "password",
 					className: "form-control form-control-alt",
 					placeholder: Object(l.formatMessage)({
-						id: "密码"
+						id: "Mật Khẩu"
 					}),
 					ref: "password"
 				})), a.a.createElement("div", {
@@ -28892,7 +28892,7 @@
 				}) : a.a.createElement("span", null, a.a.createElement("i", {
 					className: "si si-login mr-1"
 				}), Object(l.formatMessage)({
-					id: "登入"
+					id: "Đăng Nhập"
 				}))))))), a.a.createElement("div", {
 					className: "text-left bg-gray-lighter p-3 px-4"
 				}, a.a.createElement("a", {
@@ -28900,7 +28900,7 @@
 					href: "javascript:void(0);",
 					onClick: () => u.a.push("/register")
 				}, Object(l.formatMessage)({
-					id: "注册"
+					id: "Đăng Ký"
 				})), a.a.createElement(r.a, {
 					type: "vertical"
 				}), a.a.createElement("a", {
@@ -28908,7 +28908,7 @@
 					href: "javascript:void(0);",
 					onClick: () => u.a.push("/forgetpassword")
 				}, Object(l.formatMessage)({
-					id: "忘记密码"
+					id: "Quên Mật Khẩu"
 				})), a.a.createElement(f.a, null, a.a.createElement("span", {
 					className: "aikopanel-login-i18n-btn"
 				}, a.a.createElement("i", {
@@ -28986,13 +28986,13 @@
 					emailCode: this.refs.email_code ? this.refs.email_code.value : "",
 					recaptchaData: e
 				}) : Object(p.r)("error", Object(l.formatMessage)({
-					id: "请求失败"
+					id: "Yêu Cầu Thất Bại"
 				}), Object(l.formatMessage)({
-					id: "两次密码输入不同"
+					id: "Hai lần nhập mật khẩu không giống nhau"
 				})) : Object(p.r)("error", Object(l.formatMessage)({
-					id: "请求失败"
+					id: "Yêu Cầu Thất Bại"
 				}), Object(l.formatMessage)({
-					id: "请同意服务条款"
+					id: "Vui lòng đồng ý với Điều Khoản Dịch Vụ"
 				}))
 			}
 			render() {
@@ -29059,7 +29059,7 @@
 					type: "text",
 					className: "form-control form-control-alt",
 					placeholder: Object(l.formatMessage)({
-						id: "邮箱"
+						id: "E-Mail"
 					}),
 					ref: "email"
 				}), c.email_whitelist_suffix ? i.a.createElement("select", {
@@ -29084,7 +29084,7 @@
 					type: "text",
 					className: "form-control form-control-alt",
 					placeholder: Object(l.formatMessage)({
-						id: "邮箱验证码"
+						id: "Mã Xác Minh Email"
 					}),
 					ref: "email_code"
 				})), i.a.createElement("div", {
@@ -29099,14 +29099,14 @@
 				}, 60 === this.state.sendEmailVerifyTimeout ? t ? i.a.createElement(r.a, {
 					type: "loading"
 				}) : Object(l.formatMessage)({
-					id: "发送"
+					id: "Gửi"
 				}) : this.state.sendEmailVerifyTimeout)))) : "", i.a.createElement("div", {
 					className: "form-group"
 				}, i.a.createElement("input", {
 					type: "password",
 					className: "form-control form-control-alt",
 					placeholder: Object(l.formatMessage)({
-						id: "密码"
+						id: "Mật Khẩu"
 					}),
 					ref: "password"
 				})), i.a.createElement("div", {
@@ -29115,7 +29115,7 @@
 					type: "password",
 					className: "form-control form-control-alt",
 					placeholder: Object(l.formatMessage)({
-						id: "密码"
+						id: "Mật Khẩu"
 					}),
 					ref: "repassword"
 				})), i.a.createElement("div", {
@@ -29126,7 +29126,7 @@
 					defaultValue: this.props.location.query.code,
 					className: "form-control form-control-alt",
 					placeholder: Object(l.formatMessage)({
-						id: c.is_invite_force ? "邀请码" : "邀请码(选填)"
+						id: c.is_invite_force ? "Mã Mời" : "Mã Mời (Không Bắt Buộc)"
 					}),
 					ref: "invite"
 				})), c.tos_url && i.a.createElement("div", {
@@ -29148,7 +29148,7 @@
 				}, i.a.createElement("div", {
 					dangerouslySetInnerHTML: {
 						__html: Object(l.formatMessage)({
-							id: '我已阅读并同意 <a target="_blank" href="{url}">服务条款</a>'
+							id: 'Tôi đã đọc và đồng ý với <a target="_blank" href="{url}">Điều Khoản Dịch Vụ</a>'
 						}, {
 							url: c.tos_url
 						})
@@ -29168,7 +29168,7 @@
 				}) : i.a.createElement("span", null, i.a.createElement("i", {
 					className: "si si-emoticon-smile mr-1"
 				}), Object(l.formatMessage)({
-					id: "注册"
+					id: "Đăng Ký"
 				}))))))))), i.a.createElement("div", {
 					className: "text-left bg-gray-lighter p-3 px-4"
 				}, i.a.createElement("a", {
@@ -29176,7 +29176,7 @@
 					href: "javascript:void(0);",
 					onClick: () => s.a.push("/login")
 				}, Object(l.formatMessage)({
-					id: "返回登入"
+					id: "Quay Lại Đăng Nhập"
 				})), i.a.createElement(f.a, null, i.a.createElement("span", {
 					className: "aikopanel-login-i18n-btn"
 				}, i.a.createElement("i", {
@@ -29655,7 +29655,7 @@
 								}
 								return e.abrupt("return");
 							case 10:
-								return r.a.success("已生成"), e.next = 13, n({
+								return r.a.success("Đã tạo thành công"), e.next = 13, n({
 									type: "fetch"
 								});
 							case 13:
@@ -31919,7 +31919,7 @@
 									}
 								});
 							case 8:
-								return r.a.loading("发送中"), n.next = 11, Object(a.b)("/user/ticket/reply", i()({
+								return r.a.loading("Đang gửi..."), n.next = 11, Object(a.b)("/user/ticket/reply", i()({
 									id: o
 								}, p));
 							case 11:
@@ -31936,7 +31936,7 @@
 								}
 								return n.abrupt("return");
 							case 17:
-								return r.a.success("发送成功"), n.next = 20, c({
+								return r.a.success("Gửi thành công"), n.next = 20, c({
 									type: "setState",
 									payload: {
 										replyData: {}
@@ -36282,7 +36282,7 @@
 								}
 								return n.abrupt("return");
 							case 11:
-								r.a.success("修改成功，请重新登陆"), c.a.push("/login");
+								r.a.success("Thay đổi thành công. Vui lòng đăng nhập lại."), c.a.push("/login");
 							case 13:
 							case "end":
 								return n.stop()
@@ -36316,7 +36316,7 @@
 								}
 								return e.abrupt("return");
 							case 10:
-								r.a.success("重置成功");
+								r.a.success("Đặt Lại Thành Công");
 							case 11:
 							case "end":
 								return e.stop()
@@ -36482,14 +36482,14 @@
 			}
 			getAppLocale() {
 				var e = {
-						locale: "zh-CN",
+						locale: "vi-VN",
 						messages: {},
-						data: n("dVHv"),
-						momentLocale: "zh-cn"
+						data: n("kEdy"),
+						momentLocale: "vi"
 					},
 					t = n("PszG").mergeConfig("locale") || {},
 					r = "function" == typeof t.default ? t.default() : t.default;
-				e = "undefined" != typeof localStorage && localStorage.getItem("umi_locale") && y[localStorage.getItem("umi_locale")] ? y[localStorage.getItem("umi_locale")] : ("undefined" != typeof navigator && navigator.language, y[r] ? y[r] : y["zh-CN"] || e), window.g_lang = e.locale, window.g_langSeparator = "-", e.data && Object(h.addLocaleData)(e.data);
+				e = "undefined" != typeof localStorage && localStorage.getItem("umi_locale") && y[localStorage.getItem("umi_locale")] ? y[localStorage.getItem("umi_locale")] : ("undefined" != typeof navigator && navigator.language, y[r] ? y[r] : y["vi-VN"] || e), window.g_lang = e.locale, window.g_langSeparator = "-", e.data && Object(h.addLocaleData)(e.data);
 				var o = typeof t.messages;
 				if ("object" === o || "function" === o) {
 					var i = "object" === o ? t.messages[e.locale] : t.messages()[e.locale];
@@ -38234,7 +38234,7 @@
 			}, e
 		}
 		t.default = {
-			name: "使用文档",
+			name: "Hướng Dẫn Sử Dụng",
 			state: {
 				knowledges: {},
 				knowledge: {},
@@ -40364,7 +40364,7 @@
 					email: this.refs.email.value,
 					password: this.refs.password.value,
 					emailCode: this.refs.email_code.value
-				}) : Object(p.r)("error", "请求失败", "两次密码输入不同")
+				}) : Object(p.r)("error", "Yêu Cầu Thất Bại", "Hai lần nhập mật khẩu không giống nhau.")
 			}
 			render() {
 				var e = this.props.passport,
@@ -40420,7 +40420,7 @@
 					type: "text",
 					className: "form-control form-control-alt",
 					placeholder: Object(l.formatMessage)({
-						id: "邮箱"
+						id: "E-Mail"
 					}),
 					ref: "email"
 				})), i.a.createElement("div", {
@@ -40431,7 +40431,7 @@
 					type: "text",
 					className: "form-control form-control-alt",
 					placeholder: Object(l.formatMessage)({
-						id: "邮箱验证码"
+						id: "Mã Xác Minh Email"
 					}),
 					ref: "email_code"
 				})), i.a.createElement("div", {
@@ -40446,14 +40446,14 @@
 				}, 60 === this.state.sendEmailVerifyTimeout ? t ? i.a.createElement(r.a, {
 					type: "loading"
 				}) : Object(l.formatMessage)({
-					id: "发送"
+					id: "Gửi"
 				}) : this.state.sendEmailVerifyTimeout)))), i.a.createElement("div", {
 					className: "form-group"
 				}, i.a.createElement("input", {
 					type: "password",
 					className: "form-control form-control-alt",
 					placeholder: Object(l.formatMessage)({
-						id: "密码"
+						id: "Mật Khẩu"
 					}),
 					ref: "password"
 				})), i.a.createElement("div", {
@@ -40462,7 +40462,7 @@
 					type: "password",
 					className: "form-control form-control-alt",
 					placeholder: Object(l.formatMessage)({
-						id: "密码"
+						id: "Mật Khẩu"
 					}),
 					ref: "repassword"
 				})), i.a.createElement("div", {
@@ -40477,7 +40477,7 @@
 				}) : i.a.createElement("span", null, i.a.createElement("i", {
 					className: "si si-support mr-1"
 				}), Object(l.formatMessage)({
-					id: "重置密码"
+					id: "Đặt Lại Mật Khẩu"
 				}))))))), i.a.createElement("div", {
 					className: "text-left bg-gray-lighter p-3 px-4"
 				}, i.a.createElement("a", {
@@ -40485,7 +40485,7 @@
 					href: "javascript:void(0);",
 					onClick: () => s.a.push("/login")
 				}, Object(l.formatMessage)({
-					id: "返回登入"
+					id: "Quay Lại Đăng Nhập"
 				})), i.a.createElement(f.a, null, i.a.createElement("span", {
 					className: "aikopanel-login-i18n-btn"
 				}, i.a.createElement("i", {
@@ -40562,7 +40562,7 @@
 					E = this.props.user.userInfo,
 					_ = [{
 						title: Object(w.formatMessage)({
-							id: "邀请码"
+							id: "Mã Mời"
 						}),
 						dataIndex: "code",
 						key: "code",
@@ -40573,15 +40573,15 @@
 							href: "javascript:void(0);",
 							onClick: () => {
 								y()(window.location.origin + window.location.pathname + "#/register?code=" + e), f.a.success(Object(w.formatMessage)({
-									id: "复制成功"
+									id: "Sao Chép Thành Công"
 								}))
 							}
 						}, Object(w.formatMessage)({
-							id: "复制链接"
+							id: "Sao Chép Liên Kết"
 						})))
 					}, {
 						title: Object(w.formatMessage)({
-							id: "创建时间"
+							id: "Thời Gian Tạo"
 						}),
 						dataIndex: "created_at",
 						key: "created_at",
@@ -40590,14 +40590,14 @@
 					}],
 					k = [{
 						title: Object(w.formatMessage)({
-							id: "发放时间"
+							id: "Thời Gian Phát Hành"
 						}),
 						dataIndex: "created_at",
 						key: "created_at",
 						render: e => b()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}, {
 						title: Object(w.formatMessage)({
-							id: "佣金"
+							id: "Tiền Hoa Hồng"
 						}),
 						dataIndex: "get_amount",
 						key: "get_amount",
@@ -40606,7 +40606,7 @@
 					}];
 				return d.a.createElement(h.a, o()({}, this.props, {
 					title: Object(w.formatMessage)({
-						id: "我的邀请"
+						id: "Tiếp Thị Liên Kết - CTV"
 					})
 				}), d.a.createElement("main", {
 					id: "main-container"
@@ -40627,7 +40627,7 @@
 				}, d.a.createElement("p", {
 					className: "text-muted w-75"
 				}, Object(w.formatMessage)({
-					id: "我的邀请"
+					id: "Tiếp Thị Liên Kết - CTV"
 				})), d.a.createElement("p", {
 					className: "display-4 text-black font-w300 mb-2"
 				}, void 0 !== E.commission_balance ? (parseInt(E.commission_balance) / 100).toFixed(2) : "--.--", d.a.createElement("span", {
@@ -40638,7 +40638,7 @@
 						cursor: "pointer"
 					}
 				}, Object(w.formatMessage)({
-					id: "当前剩余佣金"
+					id: "Số Dư Hoa Hồng Hiện Tại"
 				})), d.a.createElement("div", {
 					className: "pt-3"
 				}, d.a.createElement(x.a, null, d.a.createElement(u.a, {
@@ -40646,11 +40646,11 @@
 				}, d.a.createElement(l.a, {
 					type: "transaction"
 				}), " ", Object(w.formatMessage)({
-					id: "划转"
+					id: "Chuyển Khoản"
 				}))), !g.withdraw_close && d.a.createElement(O.a, null, d.a.createElement(u.a, null, d.a.createElement(l.a, {
 					type: "pay-circle"
 				}), " ", Object(w.formatMessage)({
-					id: "推广佣金提现"
+					id: "Rút Tiền Hoa Hồng Tiếp Thị"
 				}))))))))), d.a.createElement("div", {
 					className: "row mb-3 mb-md-0"
 				}, d.a.createElement("div", {
@@ -40669,7 +40669,7 @@
 						flex: 1
 					}
 				}, Object(w.formatMessage)({
-					id: "已注册用户数"
+					id: "Số Người Dùng Đã Đăng Ký"
 				})), d.a.createElement("div", {
 					style: {
 						flex: 1,
@@ -40677,7 +40677,7 @@
 					}
 				}, void 0 !== t[0] ? t[0] : d.a.createElement(l.a, {
 					type: "loading"
-				}), "人")), d.a.createElement("div", {
+				}), " Người")), d.a.createElement("div", {
 					style: {
 						display: "flex",
 						padding: "5px 0"
@@ -40687,16 +40687,16 @@
 						flex: 1
 					}
 				}, g.commission_distribution_enable ? d.a.createElement(d.a.Fragment, null, Object(w.formatMessage)({
-					id: "三级分销比例"
+					id: "Tỷ Lệ Phân Phối Cấp Ba"
 				}), " ", d.a.createElement(c.a, {
 					placement: "top",
 					title: Object(w.formatMessage)({
-						id: "您邀请的用户再次邀请用户将按照订单金额乘以分销等级的比例进行分成。"
+						id: "Nếu người dùng mà bạn đã mời tiếp tục mời thêm người dùng khác, phần chia sẽ được tính dựa trên tỷ lệ phân phối cấp độ nhân với số tiền đơn hàng."
 					})
 				}, d.a.createElement(l.a, {
 					type: "question-circle"
 				}))) : Object(w.formatMessage)({
-					id: "佣金比例"
+					id: "Tỷ Lệ Hoa Hồng"
 				})), d.a.createElement("div", {
 					style: {
 						flex: 1,
@@ -40714,11 +40714,11 @@
 						flex: 1
 					}
 				}, Object(w.formatMessage)({
-					id: "确认中的佣金"
+					id: "Hoa Hồng Đang Được Xác Nhận"
 				}), " ", d.a.createElement(c.a, {
 					placement: "top",
 					title: Object(w.formatMessage)({
-						id: "佣金将会在确认后会到达你的佣金账户。"
+						id: "Hoa Hồng Sẽ Được Chuyển Vào Tài Khoản Hoa Hồng Của Bạn Sau Khi Được Xác Nhận."
 					})
 				}, d.a.createElement(l.a, {
 					type: "question-circle"
@@ -40739,7 +40739,7 @@
 						flex: 1
 					}
 				}, Object(w.formatMessage)({
-					id: "累计获得佣金"
+					id: "Tổng Hoa Hồng Nhận Được"
 				})), d.a.createElement("div", {
 					style: {
 						flex: 1,
@@ -40758,7 +40758,7 @@
 				}, d.a.createElement("h3", {
 					className: "block-title"
 				}, Object(w.formatMessage)({
-					id: "邀请码管理"
+					id: "Quản Lý Mã Mời"
 				})), d.a.createElement("div", {
 					className: "block-options"
 				}, d.a.createElement("button", {
@@ -40768,7 +40768,7 @@
 				}, m ? d.a.createElement(l.a, {
 					type: "loading"
 				}) : Object(w.formatMessage)({
-					id: "生成邀请码"
+					id: "Tạo Mã Mời"
 				})))), d.a.createElement("div", {
 					className: "block-content p-0"
 				}, d.a.createElement(s.a, {
@@ -40787,7 +40787,7 @@
 				}, d.a.createElement("h3", {
 					className: "block-title"
 				}, Object(w.formatMessage)({
-					id: "佣金发放记录"
+					id: "Bản Ghi Phát Hành Hoa Hồng"
 				}))), d.a.createElement("div", {
 					className: "block-content p-0"
 				}, d.a.createElement(s.a, {
@@ -42299,14 +42299,14 @@
 								break
 							}
 							return Object(f.r)("error", Object(l.formatMessage)({
-								id: "请求失败"
+								id: "Yêu Cầu Thất Bại"
 							}), Object.values(a.errors)[0][0]), e.abrupt("return", {
 								code: i.status,
 								msg: Object.values(a.errors)[0][0]
 							});
 						case 21:
 							return Object(f.r)("error", Object(l.formatMessage)({
-								id: "请求失败"
+								id: "Yêu Cầu Thất Bại"
 							}), a.message), e.abrupt("return", {
 								code: i.status,
 								msg: a.message
@@ -42476,28 +42476,28 @@
 		t.a = {
 			periodText: {
 				month_price: () => Object(r.formatMessage)({
-					id: "月付"
+					id: "1Tháng"
 				}),
 				quarter_price: () => Object(r.formatMessage)({
-					id: "季付"
+					id: "3Tháng"
 				}),
 				half_year_price: () => Object(r.formatMessage)({
-					id: "半年付"
+					id: "6Tháng"
 				}),
 				year_price: () => Object(r.formatMessage)({
-					id: "年付"
+					id: "Một Năm"
 				}),
 				two_year_price: () => Object(r.formatMessage)({
-					id: "两年付"
+					id: "Hai Năm"
 				}),
 				three_year_price: () => Object(r.formatMessage)({
-					id: "三年付"
+					id: "Ba Năm"
 				}),
 				onetime_price: () => Object(r.formatMessage)({
-					id: "一次性"
+					id: "Vĩnh Viễn"
 				}),
 				reset_price: () => Object(r.formatMessage)({
-					id: "流量重置包"
+					id: "Đặt Lại Làm Mới Lưu Lượng"
 				})
 			},
 			tutorialCategoryText: {
@@ -42518,33 +42518,33 @@
 			},
 			orderStatusText: {
 				0: () => Object(r.formatMessage)({
-					id: "待支付"
+					id: "Đợi Thanh Toán"
 				}),
 				1: () => Object(r.formatMessage)({
-					id: "开通中"
+					id: "Đang Xử Lý"
 				}),
 				2: () => Object(r.formatMessage)({
-					id: "已取消"
+					id: "Đã Hủy"
 				}),
 				3: () => Object(r.formatMessage)({
-					id: "已完成"
+					id: "Đã Hoàn Thành"
 				}),
 				4: () => Object(r.formatMessage)({
-					id: "已折抵"
+					id: "Đã Trừ Tiền"
 				})
 			},
 			commissionStatusText: {
 				0: () => Object(r.formatMessage)({
-					id: "待确认"
+					id: "Chờ Xác Nhận"
 				}),
 				1: () => Object(r.formatMessage)({
-					id: "发放中"
+					id: "Đang Phát Hành"
 				}),
 				2: () => Object(r.formatMessage)({
-					id: "已发放"
+					id: "Hoàn Thành"
 				}),
 				3: () => Object(r.formatMessage)({
-					id: "无效"
+					id: "Không Hợp Lệ"
 				})
 			},
 			i18nText: {
@@ -42656,11 +42656,11 @@
 					p = e.newTicketModalVisible,
 					d = e.saveLoading,
 					h = [Object(w.formatMessage)({
-						id: "低"
+						id: "Thấp"
 					}), Object(w.formatMessage)({
-						id: "中"
+						id: "Vừa"
 					}), Object(w.formatMessage)({
-						id: "高"
+						id: "Cao"
 					})],
 					y = [{
 						title: "#",
@@ -42668,51 +42668,51 @@
 						key: "id"
 					}, {
 						title: Object(w.formatMessage)({
-							id: "主题"
+							id: "Chủ Đề"
 						}),
 						dataIndex: "subject",
 						key: "subject"
 					}, {
 						title: Object(w.formatMessage)({
-							id: "工单级别"
+							id: "Cấp Độ Công Việc"
 						}),
 						dataIndex: "level",
 						key: "level",
 						render: e => h[e]
 					}, {
 						title: Object(w.formatMessage)({
-							id: "工单状态"
+							id: "Trạng Thái Công Việc"
 						}),
 						dataIndex: "reply_status",
 						key: "reply_status",
 						render: (e, t) => 1 === t.status ? m.a.createElement("span", null, m.a.createElement(f.a, {
 							status: "success"
 						}), Object(w.formatMessage)({
-							id: "已关闭"
+							id: "Đã Đóng"
 						})) : m.a.createElement("span", null, m.a.createElement(f.a, {
 							status: parseInt(e) ? "error" : "processing"
 						}), parseInt(e) ? Object(w.formatMessage)({
-							id: "待回复"
+							id: "Chờ Phản Hồi"
 						}) : Object(w.formatMessage)({
-							id: "已回复"
+							id: "Đã Phản Hồi"
 						}))
 					}, {
 						title: Object(w.formatMessage)({
-							id: "创建时间"
+							id: "Thời Gian Tạo"
 						}),
 						dataIndex: "created_at",
 						key: "created_at",
 						render: e => b()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}, {
 						title: Object(w.formatMessage)({
-							id: "最后回复"
+							id: "Phản Hồi Cuối Cùng"
 						}),
 						dataIndex: "updated_at",
 						key: "updated_at",
 						render: e => b()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}, {
 						title: Object(w.formatMessage)({
-							id: "操作"
+							id: "Tùy Chọn"
 						}),
 						dataIndex: "action",
 						key: "action",
@@ -42722,7 +42722,7 @@
 							href: "javascript:void(0);",
 							onClick: () => this.toChat(t.id)
 						}, Object(w.formatMessage)({
-							id: "查看"
+							id: "Xem"
 						})), m.a.createElement(l.a, {
 							type: "vertical"
 						}), m.a.createElement("a", {
@@ -42730,12 +42730,12 @@
 							href: "javascript:void(0);",
 							onClick: () => this.close(t.id)
 						}, Object(w.formatMessage)({
-							id: "关闭"
+							id: "Đóng"
 						})))
 					}];
 				return m.a.createElement(v.a, o()({}, this.props, {
 					title: Object(w.formatMessage)({
-						id: "我的工单"
+						id: "Gửi Hỗ Trợ Tới Admin"
 					})
 				}), m.a.createElement("main", {
 					id: "main-container"
@@ -42748,7 +42748,7 @@
 				}, m.a.createElement("h3", {
 					className: "block-title"
 				}, Object(w.formatMessage)({
-					id: "工单历史"
+					id: "Lịch Sử Công Việc"
 				})), m.a.createElement("div", {
 					className: "block-options"
 				}, m.a.createElement("button", {
@@ -42763,7 +42763,7 @@
 				}, d ? m.a.createElement(u.a, {
 					type: "loading"
 				}) : Object(w.formatMessage)({
-					id: "新的工单"
+					id: "Ticket Mới"
 				})))), m.a.createElement("div", {
 					className: "block-content p-0"
 				}, m.a.createElement(c.a, {
@@ -42776,7 +42776,7 @@
 					}
 				}))))), m.a.createElement(i.a, {
 					title: Object(w.formatMessage)({
-						id: "新的工单"
+						id: "Ticket Mới"
 					}),
 					visible: p,
 					onCancel: () => this.props.dispatch({
@@ -42790,20 +42790,20 @@
 					okText: d ? m.a.createElement(u.a, {
 						type: "loading"
 					}) : Object(w.formatMessage)({
-						id: "确认"
+						id: "Xác Nhận"
 					}),
 					cancelText: Object(w.formatMessage)({
-						id: "取消"
+						id: "Hủy Bỏ"
 					})
 				}, m.a.createElement("div", null, m.a.createElement("div", {
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
 				}, Object(w.formatMessage)({
-					id: "主题"
+					id: "Chủ Đề"
 				})), m.a.createElement(s.a, {
 					placeholder: Object(w.formatMessage)({
-						id: "请输入工单主题"
+						id: "Vui lòng nhập Chủ Đề Công Việc"
 					}),
 					onChange: e => this.setSaveData("subject", e.target.value),
 					value: r.subject
@@ -42812,10 +42812,10 @@
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
 				}, Object(w.formatMessage)({
-					id: "工单等级"
+					id: "Cấp Độ Công Việc"
 				})), m.a.createElement(a.a, {
 					placeholder: Object(w.formatMessage)({
-						id: "请选择工单等级"
+						id: "Vui lòng chọn Cấp Độ Công Việc"
 					}),
 					style: {
 						width: "100%"
@@ -42830,11 +42830,11 @@
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
 				}, Object(w.formatMessage)({
-					id: "消息"
+					id: "Tin Nhắn"
 				})), m.a.createElement(s.a.TextArea, {
 					rows: 5,
 					placeholder: Object(w.formatMessage)({
-						id: "请描述你遇到的问题"
+						id: "Vui lòng mô tả vấn đề mà bạn đang gặp phải"
 					}),
 					onChange: e => this.setSaveData("message", e.target.value),
 					value: r.message
@@ -45279,109 +45279,109 @@
 		}, e.exports = i
 	},
 	vSOm: function(e, t, n) {
-		e.exports = function() {
-			"use strict";
-			return [{
-				locale: "ja",
-				pluralRuleFunction: function(e, t) {
-					return "other"
+e.exports = function() {
+	"use strict";
+	return [{
+		locale: "ja",
+		pluralRuleFunction: function(e, t) {
+			return "other"
+		},
+		fields: {
+			year: {
+				displayName: "Năm",
+				relative: {
+					0: "năm nay",
+					1: "năm sau",
+					"-1": "năm trước"
 				},
-				fields: {
-					year: {
-						displayName: "年",
-						relative: {
-							0: "今年",
-							1: "翌年",
-							"-1": "昨年"
-						},
-						relativeTime: {
-							future: {
-								other: "{0} 年後"
-							},
-							past: {
-								other: "{0} 年前"
-							}
-						}
+				relativeTime: {
+					future: {
+						other: "sau {0} năm"
 					},
-					month: {
-						displayName: "月",
-						relative: {
-							0: "今月",
-							1: "翌月",
-							"-1": "先月"
-						},
-						relativeTime: {
-							future: {
-								other: "{0} か月後"
-							},
-							past: {
-								other: "{0} か月前"
-							}
-						}
-					},
-					day: {
-						displayName: "日",
-						relative: {
-							0: "今日",
-							1: "明日",
-							2: "明後日",
-							"-2": "一昨日",
-							"-1": "昨日"
-						},
-						relativeTime: {
-							future: {
-								other: "{0} 日後"
-							},
-							past: {
-								other: "{0} 日前"
-							}
-						}
-					},
-					hour: {
-						displayName: "時",
-						relative: {
-							0: "1 時間以内"
-						},
-						relativeTime: {
-							future: {
-								other: "{0} 時間後"
-							},
-							past: {
-								other: "{0} 時間前"
-							}
-						}
-					},
-					minute: {
-						displayName: "分",
-						relative: {
-							0: "1 分以内"
-						},
-						relativeTime: {
-							future: {
-								other: "{0} 分後"
-							},
-							past: {
-								other: "{0} 分前"
-							}
-						}
-					},
-					second: {
-						displayName: "秒",
-						relative: {
-							0: "今"
-						},
-						relativeTime: {
-							future: {
-								other: "{0} 秒後"
-							},
-							past: {
-								other: "{0} 秒前"
-							}
-						}
+					past: {
+						other: "trước {0} năm"
 					}
 				}
-			}]
-		}()
+			},
+			month: {
+				displayName: "tháng",
+				relative: {
+					0: "tháng này",
+					1: "tháng sau",
+					"-1": "tháng trước"
+				},
+				relativeTime: {
+					future: {
+						other: "sau {0} tháng"
+					},
+					past: {
+						other: "trước {0} tháng"
+					}
+				}
+			},
+			day: {
+				displayName: "ngày",
+				relative: {
+					0: "hôm nay",
+					1: "ngày mai",
+					2: "ngày kia",
+					"-2": "hôm kia",
+					"-1": "ngày hôm qua"
+				},
+				relativeTime: {
+					future: {
+						other: "sau {0} ngày"
+					},
+					past: {
+						other: "trước {0} ngày"
+					}
+				}
+			},
+			hour: {
+				displayName: "giờ",
+				relative: {
+					0: "trong vòng 1 giờ"
+				},
+				relativeTime: {
+					future: {
+						other: "sau {0} giờ"
+					},
+					past: {
+						other: "trước {0} giờ"
+					}
+				}
+			},
+			minute: {
+				displayName: "phút",
+				relative: {
+					0: "trong vòng 1 phút"
+				},
+				relativeTime: {
+					future: {
+						other: "sau {0} phút"
+					},
+					past: {
+						other: "trước {0} phút"
+					}
+				}
+			},
+			second: {
+				displayName: "giây",
+				relative: {
+					0: "hiện tại"
+				},
+				relativeTime: {
+					future: {
+						other: "sau {0} giây"
+					},
+					past: {
+						other: "trước {0} giây"
+					}
+				}
+			}
+		}
+	}]
+}()
 	},
 	vWgF: function(e, t, n) {
 		"use strict";
@@ -46424,7 +46424,7 @@
 								}
 								return n.abrupt("return");
 							case 16:
-								Object(c.r)("success", "发送成功", "如果没有收到验证码请检查垃圾箱。"), "function" == typeof o && o();
+								Object(c.r)("success", "Gửi thành công", "Nếu bạn không nhận được mã xác nhận, hãy kiểm tra thư mục thư rác (spam) của bạn."), "function" == typeof o && o();
 							case 18:
 							case "end":
 								return n.stop()
@@ -48048,10 +48048,10 @@
 				var t = this.props.order.cancelLoading;
 				return M.a.confirm({
 					title: Object(z.formatMessage)({
-						id: "注意"
+						id: "Lưu Ý"
 					}),
 					content: Object(z.formatMessage)({
-						id: "如果你已经付款，取消订单可能会导致支付失败，确定取消订单吗？"
+						id: "Nếu bạn đã thanh toán, việc hủy bỏ đơn hàng có thể gây ra thất bại trong thanh toán. Bạn có chắc chắn muốn hủy bỏ đơn hàng không?"
 					}),
 					onOk: () => {
 						this.props.dispatch({
@@ -48060,7 +48060,7 @@
 						})
 					},
 					okText: Object(z.formatMessage)({
-						id: "关闭订单"
+						id: "Đóng Đơn Hàng"
 					}),
 					okButtonProps: {
 						loading: t
@@ -48074,7 +48074,7 @@
 					r = ["error", "processing", "default", "success", "default"],
 					a = [{
 						title: Object(z.formatMessage)({
-							id: "# 订单号"
+							id: "# Mã Đơn Hàng"
 						}),
 						dataIndex: "trade_no",
 						key: "trade_no",
@@ -48084,7 +48084,7 @@
 						}, e)
 					}, {
 						title: Object(z.formatMessage)({
-							id: "周期"
+							id: "Chu Kỳ"
 						}),
 						dataIndex: "period",
 						key: "period",
@@ -48092,7 +48092,7 @@
 						render: (e, t) => b.a.createElement(N.a, null, B.a.periodText[t.period] && B.a.periodText[t.period]())
 					}, {
 						title: Object(z.formatMessage)({
-							id: "订单金额"
+							id: "Số Tiền Đơn Hàng"
 						}),
 						dataIndex: "total_amount",
 						key: "total_amount",
@@ -48100,7 +48100,7 @@
 						render: e => (e / 100).toFixed(2)
 					}, {
 						title: Object(z.formatMessage)({
-							id: "订单状态"
+							id: "Trạng Thái Đơn Hàng"
 						}),
 						dataIndex: "status",
 						key: "status",
@@ -48109,14 +48109,14 @@
 						}), B.a.orderStatusText[e] && B.a.orderStatusText[e]())
 					}, {
 						title: Object(z.formatMessage)({
-							id: "创建时间"
+							id: "Thời Gian Tạo"
 						}),
 						dataIndex: "created_at",
 						key: "created_at",
 						render: e => V()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}, {
 						title: Object(z.formatMessage)({
-							id: "操作"
+							id: "Tùy Chọn"
 						}),
 						dataIndex: "action",
 						key: "action",
@@ -48127,7 +48127,7 @@
 							href: "javascript:void(0);",
 							onClick: () => R.a.push("/order/" + t.trade_no)
 						}, Object(z.formatMessage)({
-							id: "查看详情"
+							id: "Xem Chi Tiết"
 						})), b.a.createElement(T.a, {
 							type: "vertical"
 						}), b.a.createElement("a", {
@@ -48135,12 +48135,12 @@
 							href: "javascript:void(0);",
 							onClick: () => this.cancel(t)
 						}, Object(z.formatMessage)({
-							id: "取消"
+							id: "Hủy Bỏ"
 						})))
 					}];
 				return b.a.createElement(A.a, o()({}, this.props, {
 					title: Object(z.formatMessage)({
-						id: "我的订单"
+						id: "Lịch Sử Mua Hàng"
 					})
 				}), b.a.createElement("main", {
 					id: "main-container"
@@ -48551,7 +48551,7 @@
 
 		function x(e) {
 			a()(e), o.a.success(Object(s.formatMessage)({
-				id: "复制成功"
+				id: "Sao Chép Thành Công"
 			}))
 		}
 
@@ -48613,13 +48613,13 @@
 					}
 				}), a.a.createElement(r.a, {
 					okText: Object(l.formatMessage)({
-						id: "我知道了"
+						id: "Tôi hiểu rồi"
 					}),
 					cancelButtonProps: {
 						hidden: !0
 					},
 					title: Object(l.formatMessage)({
-						id: "绑定Telegram"
+						id: "Liên Kết với Telegram"
 					}),
 					visible: this.state.visible,
 					onOk: () => this.show(),
@@ -48629,9 +48629,9 @@
 				}, a.a.createElement("i", {
 					className: "fa fa-arrow-right text-info mr-1"
 				}), " ", Object(l.formatMessage)({
-					id: "第一步"
+					id: "Bước 1"
 				})), a.a.createElement("div", null, Object(l.formatMessage)({
-					id: "打开Telegram搜索"
+					id: "Mở Telegram và tìm kiếm"
 				}), a.a.createElement("a", {
 					href: "https://t.me/".concat(e.username)
 				}, "@", e.username)), a.a.createElement("h2", {
@@ -48639,9 +48639,9 @@
 				}, a.a.createElement("i", {
 					className: "fa fa-arrow-right text-info mr-1"
 				}), " ", Object(l.formatMessage)({
-					id: "第二步"
+					id: "Bước 2"
 				})), a.a.createElement("div", null, Object(l.formatMessage)({
-					id: "向机器人发送你的"
+					id: "Gửi cho Bot của bạn"
 				}), a.a.createElement("br", null), a.a.createElement("code", {
 					onClick: () => u()("/bind " + t.subscribe_url)
 				}, "/bind ", t.subscribe_url))) : a.a.createElement(o.a, {
