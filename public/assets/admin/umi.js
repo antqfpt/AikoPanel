@@ -4904,16 +4904,19 @@
 					placeholder: "Vui lòng nhập mã giấy phép AikoPanel", 
 					defaultValue: w.license,
 					onChange: e => this.set("app", "license", e.target.value)
-				})),f.a.createElement(m, {
+				})),f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
 					title: "Thời gian kết thúc phiên đăng nhập của người dùng",
 					description: "Sau khi config nó thì hãy xoá hết tất cả phiên đăng nhập của người dùng sau ... phút, sau khi config chức năng này thì hãy vào trong terminal gõ: redis-cli FLUSHALL để active ..."
-				}, f.a.createElement("input", {
-					type: "text",
-					className: "form-control",
-					placeholder: "Không nhập thì mặc định là không xoá phiên đăng nhập của người dùng", 
+				}, f.a.createElement(a.a, {
+					addonAfter: "Phút",
+					size: "large",
+					type: "number",
+					placeholder: "Không nhập thì mặc định là không xoá phiên đăng nhập của người dùng",
 					defaultValue: w.session_ttl,
 					onChange: e => this.set("app", "session_ttl", e.target.value)
-				})),f.a.createElement("div", {
+				}))),f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
 					title: "Auto backup database",

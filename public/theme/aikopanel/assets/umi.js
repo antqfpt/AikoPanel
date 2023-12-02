@@ -12713,6 +12713,384 @@
 			return t
 		}(void 0))
 	},
+	Utilities: function(e, t, n) {
+		"use strict";
+		n.r(t);
+		var r = n("jehZ"),
+			o = n.n(r),
+			a = (n("BoS7"),
+				n("Sdc0")),
+			i = (n("+L6B"),
+				n("2/Rp")),
+			s = (n("2qtc"),
+				n("kLXV")),
+			c = (n("miYZ"),
+				n("tsqr")),
+			u = n("q1tI"),
+			l = n.n(u),
+			f = n("L12J"),
+			p = n("/MKj"),
+			d = n("t3Un"),
+			h = (n("E3Iv"),
+				n("Td40"),
+				n("yxnn")),
+			m = n("Y2fQ");
+		n("v32e");
+		class v extends l.a.Component {
+			componentDidMount() {
+				this.props.dispatch({
+						type: "user/getUserInfo",
+					}),
+					this.props.dispatch({
+						type: "comm/config",
+					});
+			}
+			changeSNI() {
+				var self = this;
+
+				if (self.refs.new_sni.value.includes("https://") || self.refs.new_sni.value.includes("http://"))
+					return c.a.error(Object(m.formatMessage)({
+						id: "SNI không thể chứa https:// và http://",
+					}));
+
+				s.a.confirm({
+					title: Object(m.formatMessage)({
+						id: "Bạn có chắc chắn đặt thay đổi SNI ?",
+					}),
+					content: Object(m.formatMessage)({
+						id: "Nếu bạn thay đổi SNI thì bạn cần phải cập nhật lại link đăng kí trên ứng dung để có thể hoạt động hiệu quả",
+					}),
+					onOk() {
+						self.props.dispatch({
+							type: "user/changeSNI",
+							sni: self.refs.new_sni.value,
+						});
+						s.a.success({
+							title: Object(m.formatMessage)({
+								id: "SNI đã cập nhật thành công",
+							}),
+							content: Object(m.formatMessage)({
+								id: "SNI mới của bạn là: " + self.refs.new_sni.value,
+							}),
+						});
+					},
+					onCancel() {},
+					okText: Object(m.formatMessage)({
+						id: "xác nhận",
+					}),
+					cancelText: Object(m.formatMessage)({
+						id: "Hủy bỏ",
+					}),
+				});
+			}
+			changeAvatar() {
+				var self = this;
+
+				if (!self.refs.new_avatar_url.value.includes("https://") && !self.refs.new_avatar_url.value.includes("http://")) {
+					return c.a.error(Object(m.formatMessage)({
+						id: "Avatar chỉ hỗ trợ đường dẫn",
+					}));
+				}
+
+				s.a.confirm({
+					title: Object(m.formatMessage)({
+						id: "Bạn có chắc chắn đặt thay Avatar ?",
+					}),
+					content: Object(m.formatMessage)({
+						id: "Nếu bạn thay đổi Avatar thì bạn cần phải load lại trang web để có thể thấy avatar mới",
+					}),
+					onOk() {
+						self.props.dispatch({
+							type: "user/changeAvatar",
+							avatar: self.refs.new_avatar_url.value,
+						});
+						s.a.success({
+							title: Object(m.formatMessage)({
+								id: "Avatar đã cập nhật thành công",
+							}),
+							content: Object(m.formatMessage)({
+								id: "URL Avatar mới của bạn là: " + self.refs.new_avatar_url.value,
+							}),
+						});
+					},
+					onCancel() {},
+					okText: Object(m.formatMessage)({
+						id: "xác nhận",
+					}),
+					cancelText: Object(m.formatMessage)({
+						id: "Hủy bỏ",
+					}),
+				});
+			}
+			update(e, t) {
+				this.props.dispatch({
+					type: "user/update",
+					key: e,
+					value: t,
+				});
+			}
+			isAppleDevice() {
+				return /Mac|iPod|iPhone|iPad/.test(navigator.userAgent);
+			}
+			resetSecurity() {
+				var e = this;
+				s.a.confirm({
+					title: Object(m.formatMessage)({
+						id: "Bạn có chắc chắn đặt lại thông tin đăng ký?",
+					}),
+					content: Object(m.formatMessage)({
+						id: "Hoạt động này có thể được thực hiện nếu có thể thực hiện địa chỉ đăng ký hoặc rò rỉ thông tin của bạn.Sau khi đặt lại UUID và đăng ký của bạn sẽ thay đổi, bạn cần đăng ký lại.",
+					}),
+					onOk() {
+						Object(d.a)("/user/resetSecurity").then((t) => {
+							200 === t.code && (c.a.success(Object(m.formatMessage)({
+									id: "Cài lại",
+								})),
+								e.fetchData());
+						});
+					},
+					onCancel() {},
+					okText: Object(m.formatMessage)({
+						id: "xác nhận",
+					}),
+					cancelText: Object(m.formatMessage)({
+						id: "Hủy bỏ",
+					}),
+				});
+			}
+			render() {
+				var e = this.props.user,
+					t = e.userInfo,
+					d = e.subscribe,
+					z = e.changeSNILoading,
+					y = e.changeAvatarLoading,
+					r = this.props.comm.config;
+				return l.a.createElement(f.a, o()({}, this.props, {
+					title: Object(m.formatMessage)({
+						id: "Tiện ích",
+					}),
+				}), l.a.createElement("main", {
+					id: "main-container",
+				}, l.a.createElement("div", {
+					className: "content content-full",
+				}, r.change_sni_enable && t.allow_change_sni && d.plan_id ? l.a.createElement("div", {
+					className: "row mb-3 mb-md-0",
+				}, l.a.createElement("div", {
+					className: "col-md-12",
+				}, l.a.createElement("div", {
+					className: "block block-rounded ",
+				}, l.a.createElement("div", {
+					className: "block-header block-header-default",
+				}, l.a.createElement("h3", {
+					className: "block-title",
+				}, Object(m.formatMessage)({
+					id: "Thay đổi SNI",
+				})), l.a.createElement("div", {
+					className: "block-options",
+				})), l.a.createElement("div", {
+					className: "block-content",
+				}, l.a.createElement("div", {
+					className: "row push",
+				}, t.user_status ? l.a.createElement("div", {
+					className: "col-lg-8 col-xl-5",
+				}, l.a.createElement("div", {
+					className: "form-group",
+				}, l.a.createElement("label", null, Object(m.formatMessage)({
+					id: "SNI Hiện tại",
+				}), ": ", t.sni), l.a.createElement("input", {
+					type: "text",
+					className: "form-control",
+					placeholder: Object(m.formatMessage)({
+						id: "Vui lòng nhập SNI mới",
+					}),
+					ref: "new_sni",
+				})), l.a.createElement(i.a, {
+					type: "primary",
+					onClick: () => this.changeSNI(),
+					loading: z,
+				}, Object(m.formatMessage)({
+					id: "Lưu",
+				}))) : l.a.createElement("div", {
+					className: "alert alert-warning mb-3",
+					role: "alert",
+				}, Object(m.formatMessage)({
+					id: "Lưu ý : Bạn cần mua gói thì mới có thể đổi SNI ",
+				}))))))) : l.a.createElement(l.a.Fragment, null), 
+				// this.isAppleDevice() && r.appleid_enable && t.allow_get_idapple && d.plan_id ? l.a.createElement("div", {
+				// 	className: "row mb-3 mb-md-0",
+				// }, l.a.createElement("div", {
+				// 	className: "col-md-12",
+				// }, l.a.createElement("div", {
+				// 	className: "block block-rounded ",
+				// }, l.a.createElement("div", {
+				// 	className: "block-header block-header-default",
+				// }, l.a.createElement("h3", {
+				// 	className: "block-title",
+				// }, Object(m.formatMessage)({
+				// 	id: "AppleID dành cho",
+				// }), ": ", t.email), l.a.createElement("div", {
+				// 	className: "block-options",
+				// })), l.a.createElement("div", {
+				// 	className: "block-content",
+				// }, l.a.createElement("div", {
+				// 	className: "row push",
+				// }, l.a.createElement("div", {
+				// 	className: "col-lg-8 col-xl-5",
+				// }, l.a.createElement("div", {
+				// 	className: "form-group",
+				// }, t.user_status ? l.a.createElement(l.a.Fragment, null, l.a.createElement("label", null, Object(m.formatMessage)({
+				// 	id: "Status ID",
+				// }), ": ", t.appleid_status), l.a.createElement("label", null, Object(m.formatMessage)({
+				// 	id: "AppleID UserName",
+				// }), ": ", t.appleid_username), l.a.createElement("label", null, Object(m.formatMessage)({
+				// 	id: "AppleID PassWord",
+				// }), ": ", t.appleid_password), l.a.createElement("label", null, Object(m.formatMessage)({
+				// 	id: "Thời gian kiểm tra cuối cùng",
+				// }), ": ", t.appleid_last_check), l.a.createElement("div", {
+				// 	className: "alert alert-warning mb-3",
+				// 	role: "alert",
+				// }, Object(m.formatMessage)({
+				// 	id: "Lưu ý : Bạn vào mục người dùng -> Rồi mục ứng dụng đã mua để tài nhé vì IDAPPLE trên không phải idapple gốc của app nên bạn cần vào đó để tải, Và nếu bạn muốn sử dụng Quantumult X thì sau khi tải Quantumult X từ IDAPPLE rồi thì bạn hãy xoá nó đi xong rồi bạn click link dưới để tải bản Fix Build đỏ.",
+				// })), l.a.createElement("div", {
+				// 	style: {
+				// 		height: "10px",
+				// 	},
+				// }), r.quantumultx_download_url ? l.a.createElement("div", {
+				// 	className: "block-options",
+				// }, l.a.createElement("a", {
+				// 	href: r.quantumultx_download_url,
+				// 	target: "_blank",
+				// 	className: "btn btn-primary btn-sm btn-primary btn-rounded px-3",
+				// }, Object(m.formatMessage)({
+				// 	id: "Quantumult X Version: " + r.quantumultx_version,
+				// }))) : l.a.createElement(l.a.Fragment, null)) : l.a.createElement("div", {
+				// 	className: "alert alert-warning mb-3",
+				// 	role: "alert",
+				// }, Object(m.formatMessage)({
+				// 	id: "Lưu ý : Bạn cần mua gói thì mới có thể lấy thông tin AppleID nhé",
+				// }))))))))) : l.a.createElement(l.a.Fragment, null), 
+				l.a.createElement("div", {
+					className: "row mb-3 mb-md-0",
+				}, l.a.createElement("div", {
+					className: "col-md-12",
+				}, l.a.createElement("div", {
+					className: "block block-rounded ",
+				}, l.a.createElement("div", {
+					className: "block-header block-header-default",
+				}, l.a.createElement("h3", {
+					className: "block-title",
+				}, Object(m.formatMessage)({
+					id: "Cá nhân hoá",
+				})), l.a.createElement("div", {
+					className: "block-options",
+				})), l.a.createElement("div", {
+					className: "block-content",
+				}, l.a.createElement("div", {
+					className: "row push",
+				}, l.a.createElement("div", {
+					className: "col-lg-8 col-xl-5",
+				}, l.a.createElement("div", {
+					className: "form-group",
+				}, l.a.createElement("label", null, Object(m.formatMessage)({
+					id: "Thay đổi Avatar User",
+				}), ), l.a.createElement("input", {
+					type: "text",
+					className: "form-control",
+					placeholder: Object(m.formatMessage)({
+						id: "Vui lòng nhập URL avatar mới",
+					}),
+					ref: "new_avatar_url",
+				})), l.a.createElement(i.a, {
+					type: "primary",
+					onClick: () => this.changeAvatar(),
+					loading: y,
+				}, Object(m.formatMessage)({
+					id: "Lưu",
+				})))))))), l.a.createElement("div", {
+					className: "row mb-3 mb-md-0",
+				}, l.a.createElement("div", {
+					className: "col-md-12",
+				}, r.is_telegram ? l.a.createElement("div", {
+					className: "block block-rounded bind_telegram",
+				}, l.a.createElement("div", {
+					className: "block-header block-header-default",
+				}, l.a.createElement("h3", {
+					className: "block-title",
+				}, Object(m.formatMessage)({
+					id: "BIND Telegram",
+				})), l.a.createElement("div", {
+					className: "block-options",
+				}, l.a.createElement(h.a, null, l.a.createElement("button", {
+					type: "button",
+					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3",
+				}, Object(m.formatMessage)({
+					id: "Liên kết ngay",
+				})))))) : l.a.createElement(l.a.Fragment, null), r.telegram_discuss_link ? l.a.createElement("div", {
+					className: "block block-rounded join_telegram_disscuss",
+				}, l.a.createElement("div", {
+					className: "block-header block-header-default",
+				}, l.a.createElement("h3", {
+					className: "block-title",
+				}, Object(m.formatMessage)({
+					id: "Nhóm thảo luận Telegram",
+				})), l.a.createElement("div", {
+					className: "block-options",
+				}, l.a.createElement("a", {
+					href: r.telegram_discuss_link,
+					target: "_blank",
+					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3",
+				}, Object(m.formatMessage)({
+					id: "Vào ngay",
+				}))))) : l.a.createElement(l.a.Fragment, null), r.zalo_discuss_link ? l.a.createElement("div", {
+					className: "block block-rounded join_telegram_disscuss",
+				}, l.a.createElement("div", {
+					className: "block-header block-header-default",
+				}, l.a.createElement("h3", {
+					className: "block-title",
+				}, Object(m.formatMessage)({
+					id: "Nhóm Zalo",
+				})), l.a.createElement("div", {
+					className: "block-options",
+				}, l.a.createElement("a", {
+					href: r.zalo_discuss_link,
+					target: "_blank",
+					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3",
+				}, Object(m.formatMessage)({
+					id: "Vào ngay",
+				}))))) : l.a.createElement(l.a.Fragment, null), l.a.createElement("div", {
+					className: "block block-rounded ",
+				}, l.a.createElement("div", {
+					className: "block-header block-header-default",
+				}, l.a.createElement("h3", {
+					className: "block-title",
+				}, Object(m.formatMessage)({
+					id: "Đặt lại thông tin đăng ký",
+				})), l.a.createElement("div", {
+					className: "block-options",
+				})), l.a.createElement("div", {
+					className: "block-content",
+				}, l.a.createElement("div", {
+					className: "row push",
+				}, l.a.createElement("div", {
+					className: "col-md-12",
+				}, l.a.createElement("div", {
+					className: "alert alert-warning mb-3",
+					role: "alert",
+				}, Object(m.formatMessage)({
+					id: "Khi địa chỉ đăng ký hoặc tài khoản của bạn bị rò rỉ và bị người khác lạm dụng, bạn có thể đặt lại thông tin đăng ký tại đây để tránh gây ra những tổn thất không cần thiết.",
+				})), l.a.createElement(i.a, {
+					type: "danger",
+					onClick: () => this.resetSecurity(),
+				}, Object(m.formatMessage)({
+					id: "Đặt lại link liên kết UUID mới",
+				})))))))))));
+			}
+		}
+		t.default = Object(p.c)((e) => ({
+			user: e.user,
+			comm: e.comm,
+		}))(v);
+	},
 	DQfm: function(e, t, n) {
 		"use strict";
 		n.r(t);
@@ -19482,116 +19860,131 @@
 			}
 			render() {
 				var e = this.props.user.userInfo;
-				return i.a.createElement("header", {
-					id: "page-header"
-				}, i.a.createElement("div", {
-					className: "content-header"
-				}, i.a.createElement("div", {
+				return a.a.createElement("header", {
+					id: "page-header",
+				}, a.a.createElement("div", {
+					className: "content-header",
+				}, a.a.createElement("div", {
 					className: "sidebar-toggle",
 					style: {
-						display: this.props.search ? "block" : "none"
-					}
-				}, i.a.createElement("button", {
+						display: this.props.search ? "block" : "none",
+					},
+				}, a.a.createElement("button", {
 					type: "button",
 					className: "dark" === m.header ? "btn btn-primary mr-1 d-lg-none" : "btn mr-1 d-lg-none",
 					onClick: () => this.props.dispatch({
-						type: "layout/showNav"
-					})
-				}, i.a.createElement("i", {
-					className: "fa fa-fw fa-bars"
-				})), this.props.search && i.a.createElement("button", {
+						type: "layout/showNav",
+					}),
+				}, a.a.createElement("i", {
+					className: "fa fa-fw fa-bars",
+				})), this.props.search && a.a.createElement("button", {
 					type: "button",
 					className: "dark" === m.header ? "btn btn-primary" : "btn",
 					onClick: () => {
 						this.setState({
-							showSearchBar: !0
-						})
-					}
-				}, i.a.createElement("i", {
-					className: "fa fa-fw fa-search"
-				}), " ", i.a.createElement("span", {
-					className: "ml-1 d-none d-sm-inline-block"
+							showSearchBar: !0,
+						});
+					},
+				}, a.a.createElement("i", {
+					className: "fa fa-fw fa-search",
+				}), " ", a.a.createElement("span", {
+					className: "ml-1 d-none d-sm-inline-block",
 				}, Object(u.formatMessage)({
-					id: "Tìm Kiếm"
-				})))), i.a.createElement("div", {
-					className: "dark" === m.header ? "aikopanel-container-title text-white" : "aikopanel-container-title text-black"
-				}, this.props.title), i.a.createElement("div", null, i.a.createElement("div", {
-					className: "dropdown d-inline-block"
-				}, i.a.createElement("button", {
+					id: "Tìm Kiếm",
+				})))), a.a.createElement("div", {
+					className: "dark" === m.header ? "v2board-container-title text-white" : "v2board-container-title text-black",
+				}, this.props.title), a.a.createElement("div", null, a.a.createElement("div", {
+					className: "dropdown d-inline-block",
+				}, a.a.createElement("button", {
 					type: "button",
 					className: "dark" === m.header ? "btn btn-primary mr-1" : "btn mr-1",
-					onClick: () => this.darkMode()
-				}, "1" === Object(h.e)("dark_mode") ? i.a.createElement("i", {
-					className: "far fa fa-moon"
-				}) : i.a.createElement("i", {
-					className: "far fa fa-sun"
-				}))), i.a.createElement("div", {
-					className: "dropdown d-inline-block"
-				}, i.a.createElement(p.a, null, i.a.createElement("button", {
+					onClick: () => this.darkMode(),
+				}, "1" === Object(h.e)("dark_mode") ? a.a.createElement("i", {
+					className: "far fa fa-moon",
+				}) : a.a.createElement("i", {
+					className: "far fa fa-sun",
+				}))), a.a.createElement("div", {
+					className: "dropdown d-inline-block",
+				}, a.a.createElement(p.a, null, a.a.createElement("button", {
 					type: "button",
-					className: "dark" === m.header ? "btn btn-primary mr-1" : "btn mr-1"
-				}, i.a.createElement("i", {
-					className: "far fa fa-language"
-				})))), this.state.loading ? i.a.createElement("div", {
-					className: "spinner-grow text-primary"
-				}) : i.a.createElement("div", {
-					className: "dropdown d-inline-block"
-				}, i.a.createElement("button", {
+					className: "dark" === m.header ? "btn btn-primary mr-1" : "btn mr-1",
+				}, a.a.createElement("i", {
+					className: "far fa fa-language",
+				})))), this.state.loading ? a.a.createElement("div", {
+					className: "spinner-grow text-primary",
+				}) : a.a.createElement("div", {
+					className: "dropdown d-inline-block",
+				}, a.a.createElement("button", {
 					type: "button",
 					className: "dark" === m.header ? "btn btn-primary" : "btn",
-					onClick: () => this.showDropmenu("showAvatarMenu")
-				}, i.a.createElement("i", {
-					className: "far fa fa-user-circle"
-				}), i.a.createElement("span", {
-					className: "d-none d-lg-inline ml-1"
-				}, e.email || "Loading..."), i.a.createElement("i", {
-					className: "fa fa-fw fa-angle-down ml-1"
-				})), i.a.createElement("div", {
-					className: "dropdown-menu dropdown-menu-right p-0 ".concat(this.state.showAvatarMenu && "show")
-				}, i.a.createElement("div", {
-					className: "p-2"
-				}, i.a.createElement("a", {
+					onClick: () => this.showDropmenu("showAvatarMenu"),
+				}, a.a.createElement("img", {
+					className: "user_avatar",
+					alt: "Avatar",
+					src: e.avatar_url,
+					style: {
+						width: "28px",
+						height: "28px",
+						borderRadius: "50%",
+						border: "2px solid #ffffff",
+					},
+				}), a.a.createElement("span", {
+					className: "d-none d-lg-inline ml-1",
+				}), a.a.createElement("i", {
+					className: "fa fa-fw fa-angle-down ml-1",
+				})), a.a.createElement("div", {
+					className: "dropdown-menu dropdown-menu-right p-0 ".concat(this.state.showAvatarMenu && "show"),
+				}, a.a.createElement("div", {
+					className: "p-2",
+				}, a.a.createElement("a", {
 					className: "dropdown-item",
-					href: "/#/profile"
-				}, i.a.createElement("i", {
-					className: "far fa-fw fa-user mr-1"
+					href: "/#/profile",
+				}, a.a.createElement("i", {
+					className: "far fa-fw fa-envelope mr-1",
 				}), " ", Object(u.formatMessage)({
-					id: "Trung Tâm Cá Nhân"
-				})), i.a.createElement("a", {
+					id: "Email: " + e.email,
+				})), a.a.createElement("a", {
+					className: "dropdown-item",
+					href: "/#/utilities",
+				}, a.a.createElement("i", {
+					className: "far fa-fw fa-user mr-1",
+				}), " ", Object(u.formatMessage)({
+					id: "Tiện ích",
+				})), a.a.createElement("a", {
 					className: "dropdown-item",
 					href: "javascript:void(0);",
-					onClick: () => this.logout()
-				}, i.a.createElement("i", {
-					className: "far fa-fw fa-arrow-alt-circle-left mr-1"
+					onClick: () => this.logout(),
+				}, a.a.createElement("i", {
+					className: "far fa-fw fa-arrow-alt-circle-left mr-1",
 				}), " ", Object(u.formatMessage)({
-					id: "Đăng Xuất"
-				}))))))), this.props.search && i.a.createElement("div", {
-					className: "overlay-header bg-dark ".concat(this.state.showSearchBar ? "show" : "")
-				}, i.a.createElement("div", {
-					className: "content-header bg-dark"
-				}, i.a.createElement("div", {
-					className: "w-100"
-				}, i.a.createElement("div", {
-					className: "input-group"
-				}, i.a.createElement("div", {
-					className: "input-group-prepend"
-				}, i.a.createElement("button", {
+					id: "Đăng Xuất",
+				}))))))), this.props.search && a.a.createElement("div", {
+					className: "overlay-header bg-dark ".concat(this.state.showSearchBar ? "show" : ""),
+				}, a.a.createElement("div", {
+					className: "content-header bg-dark",
+				}, a.a.createElement("div", {
+					className: "w-100",
+				}, a.a.createElement("div", {
+					className: "input-group",
+				}, a.a.createElement("div", {
+					className: "input-group-prepend",
+				}, a.a.createElement("button", {
 					type: "button",
 					className: "btn btn-dark",
 					onClick: () => {
 						this.setState({
-							showSearchBar: !1
-						})
-					}
-				}, i.a.createElement("i", {
-					className: "fa fa-fw fa-times-circle"
-				}))), i.a.createElement("input", {
+							showSearchBar: !1,
+						});
+					},
+				}, a.a.createElement("i", {
+					className: "fa fa-fw fa-times-circle",
+				}))), a.a.createElement("input", {
 					type: "text",
 					className: "form-control border-0",
 					placeholder: this.props.search.placeholder,
-					onChange: e => this.props.search.onChange(e.target.value),
-					defaultValue: this.props.search.defaultValue
-				}))))))
+					onChange: (e) => this.props.search.onChange(e.target.value),
+					defaultValue: this.props.search.defaultValue,
+				}))))));
 			}
 		}
 		var y = Object(c.c)((e => ({
@@ -36097,6 +36490,8 @@
 				userInfo: {},
 				getUserInfoLoading: !1,
 				changePasswordLoading: !1,
+				changeSNILoading: !1,
+				changeAvatarLoading: !1,
 				resetSecurityLoading: !1,
 				events: []
 			},
@@ -36289,6 +36684,92 @@
 						}
 					}), n)
 				}))(),
+				changeSNI: (e, t) => p().mark(function n() {
+					var o, i, s, u;
+					return p().wrap(function(n) {
+						for (;;)
+							switch ((n.prev = n.next)) {
+								case 0:
+									return ((o = e.sni),
+										(s = t.put),
+										(n.next = 4),
+										s({
+											type: "setState",
+											payload: {
+												changeSNILoading: !0,
+											},
+										}));
+								case 4:
+									return ((n.next = 6),
+										Object(a.b)("/user/changeSNI", {
+											sni: o,
+										}));
+								case 6:
+									return ((u = n.sent),
+										(n.next = 9),
+										s({
+											type: "setState",
+											payload: {
+												changeSNILoading: !1,
+											},
+										}));
+								case 9:
+									if (200 === u.code) {
+										n.next = 11;
+										break;
+									}
+									return n.abrupt("return");
+								case 11:
+									r.a.success("Sửa đổi SNI thành công, vui lòng cập nhật lại liên kết đăng kí");
+								case 13:
+								case "end":
+									return n.stop();
+							}
+					}, n);
+				})(),
+				changeAvatar: (e, t) => p().mark(function n() {
+					var o, i, s, u;
+					return p().wrap(function(n) {
+						for (;;)
+							switch ((n.prev = n.next)) {
+								case 0:
+									return ((o = e.avatar),
+										(s = t.put),
+										(n.next = 4),
+										s({
+											type: "setState",
+											payload: {
+												changeAvatarLoading: !0,
+											},
+										}));
+								case 4:
+									return ((n.next = 6),
+										Object(a.b)("/user/changeAvatar", {
+											avatar: o,
+										}));
+								case 6:
+									return ((u = n.sent),
+										(n.next = 9),
+										s({
+											type: "setState",
+											payload: {
+												changeAvatarLoading: !1,
+											},
+										}));
+								case 9:
+									if (200 === u.code) {
+										n.next = 11;
+										break;
+									}
+									return n.abrupt("return");
+								case 11:
+									r.a.success("Sửa đổi Avatar thành công, vui lòng load lại trang để cập nhật thay đổi");
+								case 13:
+								case "end":
+									return n.stop();
+							}
+					}, n);
+				})(),
 				resetSecurity: (e, t) => p().mark((function e() {
 					var n, o;
 					return p().wrap((function(e) {
@@ -36581,6 +37062,10 @@
 				exact: !0,
 				component: n("DQfm").default
 			}, {
+				path: "/utilities",
+				exact: !0,
+				component: n("Utilities").default,
+			},{
 				path: "/register",
 				exact: !0,
 				component: n("ap3T").default
