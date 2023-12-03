@@ -16872,11 +16872,19 @@
 					"aria-haspopup": "true",
 					"aria-expanded": "false",
 					onClick: () => this.showAvatarMenu()
-				}, i.a.createElement("i", {
-					className: "far fa fa-user-circle"
+				}, i.a.createElement("img", {
+					className: "user_avatar",
+					alt: "Avatar",
+					src: e.avatar,
+					style: {
+						width: "28px",
+						height: "28px",
+						borderRadius: "50%",
+						border: "2px solid #ffffff",
+					},
 				}), i.a.createElement("span", {
 					className: "d-none d-lg-inline ml-1"
-				}, e.email), i.a.createElement("i", {
+				}), i.a.createElement("i", {
 					className: "fa fa-fw fa-angle-down ml-1"
 				})), i.a.createElement("div", {
 					className: "dropdown-menu dropdown-menu-right dropdown-menu-lg p-0 ".concat(this.state.showAvatarMenu && "show"),
@@ -16884,6 +16892,10 @@
 				}, i.a.createElement("div", {
 					className: "p-2"
 				}, i.a.createElement("a", {
+					className: "dropdown-item d-flex justify-content-between align-items-center",
+				}, "Email: " + e.email, i.a.createElement("i", {
+					className: "fa fa-fw fa-envelope text-danger ml-1"
+				})), i.a.createElement("a", {
 					className: "dropdown-item d-flex justify-content-between align-items-center",
 					href: "javascript:void(0);",
 					onClick: () => this.logout()
