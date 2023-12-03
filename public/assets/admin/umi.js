@@ -16875,7 +16875,7 @@
 				}, i.a.createElement("img", {
 					className: "user_avatar",
 					alt: "Avatar",
-					src: e.avatar,
+					src: e.avatar_url,
 					style: {
 						width: "28px",
 						height: "28px",
