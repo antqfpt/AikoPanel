@@ -4735,8 +4735,8 @@
 					size: "large",
 					type: "number",
 					placeholder: "Vui lòng nhập",
-					defaultValue: u.server_alive_interval,
-					onChange: e => this.set("server", "server_alive_interval", e.target.value)
+					defaultValue: u.server_push_interval,
+					onChange: e => this.set("server", "server_push_interval", e.target.value)
 				}))),f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
@@ -4747,8 +4747,8 @@
 					size: "large",
 					type: "number",
 					placeholder: "Vui lòng nhập",
-					defaultValue: u.server_push_interval,
-					onChange: e => this.set("server", "server_push_interval", e.target.value)
+					defaultValue: u.server_alive_interval,
+					onChange: e => this.set("server", "server_alive_interval", e.target.value)
 				})))), f.a.createElement(s.a.TabPane, {
 					tab: "Email",
 					key: "email"
