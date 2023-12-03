@@ -78761,7 +78761,7 @@
 				}, y.a.createElement(N.a.Option, {
 					key: 0,
 					value: 0
-				}, "Rỗng"), y.a.createElement(N.a.Option, {
+				}, "Không"), y.a.createElement(N.a.Option, {
 					key: 1,
 					value: 1
 				}, "TLS"), y.a.createElement(N.a.Option, {
