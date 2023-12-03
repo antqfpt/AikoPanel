@@ -204,6 +204,7 @@ window.settings.i18n['vi-VN'] = {
   'Thống Kê Lưu Lượng': 'Thống Kê Lưu Lượng',
   'Thiết Lập Gói': 'Thiết lập gói',
   'Tiếp Thị Liên Kết - CTV': 'Hoa Hồng Tiếp Thị Liên Kết',
+  'Quản Lý Hoa Hồng': 'Quản Lý Hoa Hồng',
   'Trạng Thái Server Máy Chủ': 'Trạng Thái [Máy Chủ]',
   'Sao Chép Thành Công': 'Sao Chép Thành Công',
   'Thông Tin Sản Phẩm': 'Thông tin',

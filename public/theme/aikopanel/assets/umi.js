@@ -25571,6 +25571,53 @@
 				}, l.a.createElement("h3", {
 					className: "block-title"
 				}, Object(b.formatMessage)({
+					id: "Tiện ích"
+				}))), l.a.createElement("div", {
+					className: "block-content p-0"
+				}, l.a.createElement("div", {
+					className: "justify-content-md-between align-items-md-center"
+				}, l.a.createElement("div", {
+					className: "mb-3"
+				}, l.a.createElement(g.a, {
+					subscribeUrl: d.subscribe_url
+				}, l.a.createElement("div", {
+					className: "aikopanel-shortcuts-item"
+				}, l.a.createElement("div", null, Object(b.formatMessage)({
+					id: "Đồng Bộ Máy Chủ Về APP"
+				})), l.a.createElement("div", {
+					className: "description"
+				}, Object(b.formatMessage)({
+					id: "Bạn Cần Phải Mua Gói Này"
+				})), l.a.createElement("i", {
+					style: {
+						float: "right"
+					},
+					className: "nav-main-link-icon si si-feed"
+				}))), l.a.createElement("div", {
+					className: "aikopanel-shortcuts-item",
+					onClick: () => h.a.push(Object(p.m)(d) ? "/plan/" + d.plan_id : "/plan")
+				}, l.a.createElement("div", null, Object(b.formatMessage)({
+					id: Object(p.m)(d) ? "Gia Hạn Gói Dịch Vụ" : "Mua Gói Dịch Vụ"
+				})), l.a.createElement("div", {
+					className: "description"
+				}, Object(b.formatMessage)({
+					id: Object(p.m)(d) ? "Gia hạn gói hiện tại" : "Mua gói bạn đã chọn"
+				})), l.a.createElement("i", {
+					style: {
+						float: "right"
+					},
+					className: "nav-main-link-icon si si-".concat(Object(p.m)(d) ? "clock" : "bag")
+				})))))))), l.a.createElement("div", {
+					className: "row mb-3 mb-md-0"
+				}, l.a.createElement("div", {
+					className: "col-xl-12"
+				}, l.a.createElement("div", {
+					className: "block block-rounded js-appear-enabled"
+				}, l.a.createElement("div", {
+					className: "block-header block-header-default"
+				}, l.a.createElement("h3", {
+					className: "block-title"
+				}, Object(b.formatMessage)({
 					id: "Menu Lối Tắt"
 				}))), l.a.createElement("div", {
 					className: "block-content p-0"
@@ -25592,22 +25639,7 @@
 						float: "right"
 					},
 					className: "nav-main-link-icon si si-book-open"
-				})), l.a.createElement(g.a, {
-					subscribeUrl: d.subscribe_url
-				}, l.a.createElement("div", {
-					className: "aikopanel-shortcuts-item"
-				}, l.a.createElement("div", null, Object(b.formatMessage)({
-					id: "Đồng Bộ Máy Chủ Về APP"
 				})), l.a.createElement("div", {
-					className: "description"
-				}, Object(b.formatMessage)({
-					id: "Bạn Cần Phải Mua Gói Này"
-				})), l.a.createElement("i", {
-					style: {
-						float: "right"
-					},
-					className: "nav-main-link-icon si si-feed"
-				}))), l.a.createElement("div", {
 					className: "aikopanel-shortcuts-item",
 					onClick: () => h.a.push(Object(p.m)(d) ? "/plan/" + d.plan_id : "/plan")
 				}, l.a.createElement("div", null, Object(b.formatMessage)({
@@ -41100,7 +41132,7 @@
 					}];
 				return d.a.createElement(h.a, o()({}, this.props, {
 					title: Object(w.formatMessage)({
-						id: "Tiếp Thị Liên Kết - CTV"
+						id: "Quản Lý Hoa Hồng"
 					})
 				}), d.a.createElement("main", {
 					id: "main-container"
