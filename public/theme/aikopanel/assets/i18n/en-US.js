@@ -278,5 +278,6 @@ window.settings.i18n['en-US'] = {
   'Xem Hướng Dẫn Sử Dụng': 'Xem Hướng Dẫn Sử Dụng',
   'Hai lần nhập mật khẩu không giống nhau': 'Xem Hai lần nhập mật khẩu không giống nhau',
   'Thời Gian Phát Hành': 'Thời Gian Phát Hành',
-  'Đặt Lại Làm Mới Lưu Lượng': 'Đặt Lại Làm Mới Lưu Lượng'
+  'Đặt Lại Làm Mới Lưu Lượng': 'Đặt Lại Làm Mới Lưu Lượng',
+  'Đang Online {alive_ip}/{device_limit} Thiết Bị': 'Currently Online {alive_ip}/{device_limit} Devices'
 };

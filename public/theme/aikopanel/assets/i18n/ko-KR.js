@@ -273,5 +273,10 @@ window.settings.i18n['ko-KR'] = {
   'Số Dư Hoa Hồng Hiện Tại': '当前剩余佣金',
   'Tỷ Lệ Phân Phối Cấp Ba': '三级分销比例',
   'Tổng Hoa Hồng Nhận Được': '累计获得佣金',
-  'Nếu người dùng mà bạn đã mời tiếp tục mời thêm người dùng khác, phần chia sẽ được tính dựa trên tỷ lệ phân phối cấp độ nhân với số tiền đơn hàng.': '您邀请的用户再次邀请用户将按照订单金额乘以分销等级的比例进行分成。'
+  'Nếu người dùng mà bạn đã mời tiếp tục mời thêm người dùng khác, phần chia sẽ được tính dựa trên tỷ lệ phân phối cấp độ nhân với số tiền đơn hàng.': '您邀请的用户再次邀请用户将按照订单金额乘以分销等级的比例进行分成。',
+  'Xem Hướng Dẫn Sử Dụng': 'Xem Hướng Dẫn Sử Dụng',
+  'Hai lần nhập mật khẩu không giống nhau': 'Xem Hai lần nhập mật khẩu không giống nhau',
+  'Thời Gian Phát Hành': 'Thời Gian Phát Hành',
+  'Đặt Lại Làm Mới Lưu Lượng': 'Đặt Lại Làm Mới Lưu Lượng',
+  'Đang Online {alive_ip}/{device_limit} Thiết Bị': '현재 온라인 중인 장치 {alive_ip}/{device_limit}대'
 };

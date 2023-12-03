@@ -278,5 +278,6 @@ window.settings.i18n['zh-TW'] = {
   'Xem Hướng Dẫn Sử Dụng': 'Xem Hướng Dẫn Sử Dụng',
   'Hai lần nhập mật khẩu không giống nhau': 'Xem Hai lần nhập mật khẩu không giống nhau',
   'Thời Gian Phát Hành': 'Thời Gian Phát Hành',
-  'Đặt Lại Làm Mới Lưu Lượng': 'Đặt Lại Làm Mới Lưu Lượng'
+  'Đặt Lại Làm Mới Lưu Lượng': 'Đặt Lại Làm Mới Lưu Lượng',
+  'Đang Online {alive_ip}/{device_limit} Thiết Bị': '目前在線 {alive_ip}/{device_limit} 台設備'
 };
