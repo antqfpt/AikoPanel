@@ -73951,36 +73951,36 @@
 						height: 400
 					},
 					ref: this.serverLastRankChart
-				})))), l.a.createElement("div", {
+				})))), c.a.createElement("div", {
                     className: "col-lg-6 js-appear-enabled animated pr-xl-1",
                     "data-toggle": "appear"
-                }, l.a.createElement("div", {
+                }, c.a.createElement("div", {
                     className: "block border-bottom"
-                }, l.a.createElement("div", {
+                }, c.a.createElement("div", {
                     class: "block-header block-header-default"
-                }, l.a.createElement("h3", {
+                }, c.a.createElement("h3", {
                     class: "block-title"
-                }, "Hôm nay lưu lượng người dùng")), l.a.createElement("div", {
+                }, "Hôm nay lưu lượng người dùng")), c.a.createElement("div", {
                     className: "block-content"
-                }, l.a.createElement("div", {
+                }, c.a.createElement("div", {
                     className: "px-sm-3 pt-sm-3 py-3 clearfix",
                     id: "userTodayRankChart",
                     style: {
                         height: 400
                     },
                     ref: this.userTodayRankChart
-                })))), l.a.createElement("div", {
+                })))), c.a.createElement("div", {
                     className: "col-lg-6 js-appear-enabled animated",
                     "data-toggle": "appear"
-                }, l.a.createElement("div", {
+                }, c.a.createElement("div", {
                     className: "block border-bottom"
-                }, l.a.createElement("div", {
+                }, c.a.createElement("div", {
                     class: "block-header block-header-default"
-                }, l.a.createElement("h3", {
+                }, c.a.createElement("h3", {
                     class: "block-title"
-                }, "Ngày hôm qua, sắp xếp lưu lượng người dùng")), l.a.createElement("div", {
+                }, "Ngày hôm qua, sắp xếp lưu lượng người dùng")), c.a.createElement("div", {
                     className: "block-content"
-                }, l.a.createElement("div", {
+                }, c.a.createElement("div", {
                     className: "px-sm-3 pt-sm-3 py-3 clearfix",
                     id: "userLastRankChart",
                     style: {
