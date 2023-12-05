@@ -73468,7 +73468,18 @@
 		m.a([v.a, y.a, b.a, w.a, x.a, _.a, E.a, k.a, S.a]);
 		class O extends c.a.Component {
 			constructor(e) {
-				super(e), this.state = {}, this.orderChart = c.a.createRef(), this.orderChartObj = void 0, this.serverLastRankChart = c.a.createRef(), this.serverTodayRankChart = c.a.createRef(), this.serverLastRankChartObj = void 0, this.serverTodayRankChartObj = void 0
+				super(e), 
+				this.state = {}, 
+				this.orderChart = c.a.createRef(), 
+				this.orderChartObj = void 0, 
+				this.serverLastRankChart = c.a.createRef(), 
+				this.serverTodayRankChart = c.a.createRef(), 
+				this.userTodayRankChart = l.a.createRef(), 
+				this.userLastRankChart = l.a.createRef(), 
+				this.serverLastRankChartObj = void 0, 
+				this.serverTodayRankChartObj = void 0, 
+				this.userTodayRankChartObj = void 0, 
+				this.userLastRankChartObj = void 0
 			}
 			orderChartRender(e) {
 				var t;
@@ -73573,8 +73584,85 @@
 					n.yAxis.data.push(e.server_name), n.series[0].data.push(e.total)
 				})), this.serverTodayRankChartObj.setOption(n)
 			}
+			userTodayRankChartRender(e) {
+                var t;
+                this.userTodayRankChartObj = g["b"](null === (t = this.userTodayRankChart) || void 0 === t ? void 0 : t.current);
+                var n = {
+                    tooltip: {
+                        trigger: "axis",
+                        formatter: e=>{
+                            return "".concat(e[0].value, " GB")
+                        }
+                    },
+                    grid: {
+                        top: "1%",
+                        left: "1%",
+                        right: "1%",
+                        bottom: "3%",
+                        containLabel: !0
+                    },
+                    xAxis: {
+                        type: "value"
+                    },
+                    yAxis: {
+                        type: "category",
+                        data: []
+                    },
+                    series: [{
+                        data: [],
+                        type: "bar"
+                    }]
+                };
+                e.reverse().forEach(e=>{
+                    n.yAxis.data.push(e.email),
+                    n.series[0].data.push(e.total)
+                }
+                ),
+                this.userTodayRankChartObj.setOption(n)
+            }
+            userLastRankChartRender(e) {
+                var t;
+                this.userLastRankChartObj = g["b"](null === (t = this.userLastRankChart) || void 0 === t ? void 0 : t.current);
+                var n = {
+                    tooltip: {
+                        trigger: "axis",
+                        formatter: e=>{
+                            return "".concat(e[0].value, " GB")
+                        }
+                    },
+                    grid: {
+                        top: "1%",
+                        left: "1%",
+                        right: "1%",
+                        bottom: "3%",
+                        containLabel: !0
+                    },
+                    xAxis: {
+                        type: "value"
+                    },
+                    yAxis: {
+                        type: "category",
+                        data: []
+                    },
+                    series: [{
+                        data: [],
+                        type: "bar"
+                    }]
+                };
+                e.reverse().forEach(e=>{
+                    n.yAxis.data.push(e.email),
+                    n.series[0].data.push(e.total)
+                }
+                ),
+                this.userLastRankChartObj.setOption(n)
+            }
 			chartResize() {
-				this.orderChartObj.resize(), this.serverLastRankChartObj.resize(), this.serverTodayRankChartObj.resize()
+				this.orderChartObj.resize(), 
+				this.serverLastRankChartObj.resize(), 
+				this.serverTodayRankChartObj.resize(),
+				this.serverTodayRankChartObj.resize(),
+                this.userTodayRankChartObj.resize(),
+                this.userLastRankChartObj.resize()
 			}
 			componentDidMount() {
 				var e = this;
@@ -73606,6 +73694,16 @@
 						this.serverTodayRankChartRender(e)
 					}
 				}), this.props.dispatch({
+                    type: "stat/getUserTodayRank",
+                    complete: e=>{
+                        this.userTodayRankChartRender(e)
+                    }
+                }), this.props.dispatch({
+                    type: "stat/getUserLastRank",
+                    complete: e=>{
+                        this.userLastRankChartRender(e)
+                    }
+                }), this.props.dispatch({
 					type: "config/fetch",
 					key: "site"
 				})
@@ -73853,6 +73951,42 @@
 						height: 400
 					},
 					ref: this.serverLastRankChart
+				})))), l.a.createElement("div", {
+                    className: "col-lg-6 js-appear-enabled animated pr-xl-1",
+                    "data-toggle": "appear"
+                }, l.a.createElement("div", {
+                    className: "block border-bottom"
+                }, l.a.createElement("div", {
+                    class: "block-header block-header-default"
+                }, l.a.createElement("h3", {
+                    class: "block-title"
+                }, "Hôm nay lưu lượng người dùng")), l.a.createElement("div", {
+                    className: "block-content"
+                }, l.a.createElement("div", {
+                    className: "px-sm-3 pt-sm-3 py-3 clearfix",
+                    id: "userTodayRankChart",
+                    style: {
+                        height: 400
+                    },
+                    ref: this.userTodayRankChart
+                })))), l.a.createElement("div", {
+                    className: "col-lg-6 js-appear-enabled animated",
+                    "data-toggle": "appear"
+                }, l.a.createElement("div", {
+                    className: "block border-bottom"
+                }, l.a.createElement("div", {
+                    class: "block-header block-header-default"
+                }, l.a.createElement("h3", {
+                    class: "block-title"
+                }, "Ngày hôm qua, sắp xếp lưu lượng người dùng")), l.a.createElement("div", {
+                    className: "block-content"
+                }, l.a.createElement("div", {
+                    className: "px-sm-3 pt-sm-3 py-3 clearfix",
+                    id: "userLastRankChart",
+                    style: {
+                        height: 400
+                    },
+                    ref: this.userLastRankChart
 				}))))))
 			}
 		}
