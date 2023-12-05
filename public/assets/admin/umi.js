@@ -9655,16 +9655,6 @@
 					},
 					placeholder: "Nhập Và Nhấn Enter Để Thêm Thẻ",
 					onChange: e => this.formChange("tags", e.length > 0 ? e : null)
-				})),d.a.createElement("div", {
-					className: "form-group"
-				}, d.a.createElement("label", null, "Node IPS"), d.a.createElement(a.a, {
-					mode: "tags",
-					value: e.ips || [],
-					style: {
-						width: "100%"
-					},
-					placeholder: "Nhập IP và nhấn Enter để thêm IP node",
-					onChange: e => this.formChange("ips", e.length > 0 ? e : null)
 				})), d.a.createElement("div", {
 					className: "form-group"
 				}, d.a.createElement("label", null, "Nhóm Gói ", d.a.createElement(_.a, null, d.a.createElement("a", {
@@ -22310,16 +22300,6 @@
 					},
 					placeholder: "Nhập Và Nhấn Enter Để Thêm Nhãn",
 					onChange: e => this.formChange("tags", e.length > 0 ? e : null)
-				})),h.a.createElement("div", {
-					className: "form-group"
-				}, h.a.createElement("label", null, "Node IPS"), h.a.createElement(a.a, {
-					mode: "tags",
-					value: e.ips || [],
-					style: {
-						width: "100%"
-					},
-					placeholder: "Nhập IP và nhấn Enter để thêm IP node",
-					onChange: e => this.formChange("ips", e.length > 0 ? e : null)
 				})), h.a.createElement("div", {
 					className: "form-group"
 				}, h.a.createElement("label", null, "Nhóm Gói ", h.a.createElement(d.a, null, h.a.createElement("a", {
@@ -78401,16 +78381,6 @@
 					},
 					placeholder: "Nhập nhãn và nhấn Enter để thêm nhãn.",
 					onChange: e => this.formChange("tags", e.length > 0 ? e : null)
-				})),y.a.createElement("div", {
-					className: "form-group"
-				}, y.a.createElement("label", null, "Node IPS"), y.a.createElement(N.a, {
-					mode: "tags",
-					value: e.ips || [],
-					style: {
-						width: "100%"
-					},
-					placeholder: "Nhập IP và nhấn Enter để thêm IP node",
-					onChange: e => this.formChange("ips", e.length > 0 ? e : null)
 				})), y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, "Nhóm Gói ", y.a.createElement(B.a, null, y.a.createElement("a", {
@@ -78901,16 +78871,6 @@
 					},
 					placeholder: "Vui lòng nhập nhãn cho nút và nhấn Enter để thêm nhãn đó.",
 					onChange: e => this.formChange("tags", e.length > 0 ? e : null)
-				})),y.a.createElement("div", {
-					className: "form-group"
-				}, y.a.createElement("label", null, "Node IPS"), y.a.createElement(N.a, {
-					mode: "tags",
-					value: e.ips || [],
-					style: {
-						width: "100%"
-					},
-					placeholder: "Nhập IP và nhấn Enter để thêm IP node",
-					onChange: e => this.formChange("ips", e.length > 0 ? e : null)
 				})), y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, "Nhóm Gói ", y.a.createElement(B.a, null, y.a.createElement("a", {
@@ -84674,16 +84634,6 @@
 					},
 					placeholder: "Vui lòng nhập nhãn cho nút và nhấn Enter để thêm nhãn đó.",
 					onChange: e => this.formChange("tags", e.length > 0 ? e : null)
-				})),f.a.createElement("div", {
-					className: "form-group"
-				}, f.a.createElement("label", null, "Node IP"), f.a.createElement(s.a, {
-					mode: "tags",
-					value: e.ips || [],
-					style: {
-						width: "100%"
-					},
-					placeholder: "Nhập IP và nhấn Enter để thêm IP node",
-					onChange: e => this.formChange("ips", e.length > 0 ? e : null)
 				})), f.a.createElement("div", {
 					className: "form-group"
 				}, f.a.createElement("label", null, "Nhóm Gói ", f.a.createElement(p.a, null, f.a.createElement("a", {
