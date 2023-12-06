@@ -73564,7 +73564,7 @@
 					n.yAxis.data.push(e.server_name), n.series[0].data.push(e.total)
 				})), this.serverTodayRankChartObj.setOption(n)
 			}
-			userTodayRankChartRender(e) {
+            userTodayRankChartRender(e) {
                 var t;
                 this.userTodayRankChartObj = g["b"](null === (t = this.userTodayRankChart) || void 0 === t ? void 0 : t.current);
                 var n = {
@@ -73636,58 +73636,66 @@
                 ),
                 this.userLastRankChartObj.setOption(n)
             }
-			chartResize() {
-				this.orderChartObj.resize(), 
-				this.serverLastRankChartObj.resize(), 
-				this.serverTodayRankChartObj.resize(),
-				this.serverTodayRankChartObj.resize(),
+            chartResize() {
+                this.orderChartObj.resize(),
+                this.serverLastRankChartObj.resize(),
+                this.serverTodayRankChartObj.resize(),
                 this.userTodayRankChartObj.resize(),
                 this.userLastRankChartObj.resize()
-			}
-			componentDidMount() {
-				var e = this;
-				a()(C().mark((function t() {
-					return C().wrap((function(t) {
-						for (;;) switch (t.prev = t.next) {
-							case 0:
-								return t.next = 2, e.checkQueue();
-							case 2:
-							case "end":
-								return t.stop()
-						}
-					}), t)
-				})))(), this.props.dispatch({
-					type: "stat/getOverride"
-				}), this.props.dispatch({
-					type: "stat/getOrder",
-					complete: e => {
-						this.orderChartRender(e)
-					}
-				}), this.props.dispatch({
-					type: "stat/getServerLastRank",
-					complete: e => {
-						this.serverLastRankChartRender(e)
-					}
-				}), this.props.dispatch({
-					type: "stat/getServerTodayRank",
-					complete: e => {
-						this.serverTodayRankChartRender(e)
-					}
-				}), this.props.dispatch({
+            }
+            componentDidMount() {
+                var e = this;
+                a()(C().mark(function t() {
+                    return C().wrap(function(t) {
+                        while (1)
+                            switch (t.prev = t.next) {
+                            case 0:
+                                return t.next = 2,
+                                e.checkQueue();
+                            case 2:
+                            case "end":
+                                return t.stop()
+                            }
+                    }, t)
+                }))(),
+                this.props.dispatch({
+                    type: "stat/getOverride"
+                }),
+                this.props.dispatch({
+                    type: "stat/getOrder",
+                    complete: e=>{
+                        this.orderChartRender(e)
+                    }
+                }),
+                this.props.dispatch({
+                    type: "stat/getServerLastRank",
+                    complete: e=>{
+                        this.serverLastRankChartRender(e)
+                    }
+                }),
+                this.props.dispatch({
+                    type: "stat/getServerTodayRank",
+                    complete: e=>{
+                        this.serverTodayRankChartRender(e)
+                    }
+                }),
+                this.props.dispatch({
                     type: "stat/getUserTodayRank",
                     complete: e=>{
                         this.userTodayRankChartRender(e)
                     }
-                }), this.props.dispatch({
+                }),
+                this.props.dispatch({
                     type: "stat/getUserLastRank",
                     complete: e=>{
                         this.userLastRankChartRender(e)
                     }
-                }), this.props.dispatch({
-					type: "config/fetch",
-					key: "site"
-				})
-			}
+                }),
+                this.props.dispatch({
+                    type: "config/fetch",
+                    key: "site"
+                })
+            }
 			componentWillUnmount() {
 				window.removeEventListener("resize", this.chartResize.bind(this))
 			}
