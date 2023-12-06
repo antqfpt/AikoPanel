@@ -1,5 +1,5 @@
 {
-    "name": "aikopanel/aikpanel",
+    "name": "aikopanel/aikopanel",
     "type": "project",
     "description": "aikopanel is a proxy protocol manage.",
     "keywords": [
@@ -7,15 +7,14 @@
         "v2ray",
         "shadowsocks",
         "trojan",
-        "hysteria",
         "laravel"
     ],
     "license": "MIT",
     "require": {
         "php": "^7.3.0|^8.0",
-        "doctrine/dbal": "^3.7",
         "fideloper/proxy": "^4.4",
         "firebase/php-jwt": "^6.3",
+        "fruitcake/laravel-cors": "^2.0",
         "google/recaptcha": "^1.2",
         "guzzlehttp/guzzle": "^7.4.3",
         "laravel/framework": "^8.0",
@@ -50,7 +49,7 @@
             "Library\\": "library/"
         },
         "classmap": [
-            "database/seeders",
+            "database/seeds",
             "database/factories"
         ]
     },
