@@ -4859,7 +4859,7 @@
 					checked: parseInt(y.telegram_bot_enable),
 					onChange: e => this.set("telegram", "telegram_bot_enable", e ? 1 : 0)
 				})), f.a.createElement(m, {
-					title: "Địa chỉ nhóm",
+					title: "Link Telegram",
 					description: "Sau khi điền vào, nó sẽ được hiển thị ở đầu người dùng hoặc nó được sử dụng trong nhu cầu."
 				}, f.a.createElement("input", {
 					type: "text",
@@ -4867,6 +4867,15 @@
 					placeholder: "https://t.me/xxxxxx",
 					defaultValue: y.telegram_discuss_link,
 					onChange: e => this.set("telegram", "telegram_discuss_link", e.target.value)
+				})),f.a.createElement(m, {
+					title: "Link Zalo",
+					description: "Sau khi điền vào, nó sẽ được hiển thị ở đầu người dùng hoặc nó được sử dụng trong nhu cầu."
+				}, f.a.createElement("input", {
+					type: "text",
+					className: "form-control",
+					placeholder: "https://zalo.me/g/xxxxxx",
+					defaultValue: y.zalo_discuss_link,
+					onChange: e => this.set("telegram", "zalo_discuss_link", e.target.value)
 				})))), f.a.createElement(s.a.TabPane, {
 					tab: "AikoPanel",
 					key: "app"
