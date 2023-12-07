@@ -4872,19 +4872,30 @@
 					tab: "AikoPanel",
 					key: "app"
 				}, f.a.createElement("div", {
+					className: "block-content"
+				}, f.a.createElement("div", {
+					className: "row"
+				}, f.a.createElement("div", {
+					className: "col-lg-12"
+				}, f.a.createElement("div", {
+					className: "alert alert-warning",
+					role: "alert"
+				}, f.a.createElement("p", {
+					className: "mb-0"
+				}, "Quản lý Quản lý và cập nhật phiên bản của AikoPanel , Chức năng được tích hợp riêng trên AikoPanel"))))), f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
-					title: "AikoPanel License",
-					description: "Vui lòng nhập Key AikoPanel do AikoCute cung cấp, sau khi nhập key sẽ tự động được kích hoạt nếu không kích hoạt được bấm nút ở dưới."
+					title: "License AikoPanel",
+					description: "Vui lòng nhập mã giấy phép được cung cấp bởi AikoPanel"
 				}, f.a.createElement("input", {
 					type: "text",
 					className: "form-control",
-					placeholder: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+					placeholder: "Vui lòng nhập mã giấy phép AikoPanel", 
 					defaultValue: w.license,
 					onChange: e => this.set("app", "license", e.target.value)
-				})), w.license && f.a.createElement(m, {
-					title: "Kích hoạt thủ công",
-					description: "Sau khi nhập key sẽ tự động được kích hoạt nếu không kích hoạt nhấn nút này ."
+				})), w.telegram_bot_token && f.a.createElement(m, {
+					title: "Activate AikoPanel",
+					description: "Nếu không tự động Kích hoạt key bạn có thể kích hoạt thủ công."
 				}, f.a.createElement(i.a, {
 					type: "primary",
 					onClick: () => {
@@ -4892,9 +4903,39 @@
 							type: "config/setLicense"
 						})
 					},
-					loading: b,
-					disabled: b
-				}, "Click để kích hoạt thủ công")))))))
+					loading: c,
+					disabled: c
+				}, "Kích hoạt thủ công")), f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Thời gian kết thúc phiên đăng nhập của người dùng",
+					description: "Sau khi config nó thì hãy xoá hết tất cả phiên đăng nhập của người dùng sau ... phút, sau khi config chức năng này thì hãy vào trong terminal gõ: redis-cli FLUSHALL để active ..."
+				}, f.a.createElement(a.a, {
+					addonAfter: "Phút",
+					size: "large",
+					type: "number",
+					placeholder: "Không nhập thì mặc định là không xoá phiên đăng nhập của người dùng",
+					defaultValue: w.session_ttl,
+					onChange: e => this.set("app", "session_ttl", e.target.value)
+				}))),f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Auto backup database",
+					description: "Database sẽ được backup theo thời gian mà bạn đã config ở dưới đây -> gửi tới telegram"
+				}, f.a.createElement(a.a, {
+					addonAfter: "Giây",
+					size: "large",
+					type: "number",
+					placeholder: "Xin Nhập Vào",
+					defaultValue: w.interval_backup_database,
+					onChange: e => this.set("app", "interval_backup_database", e.target.value)
+				}),f.a.createElement("input", {
+					type: "text",
+					className: "form-control",
+					placeholder: "Vui lòng nhập telegram id của bạn (ID này sẽ nhận được thông báo backup database)", 
+					defaultValue: w.admin_telegram_id,
+					onChange: e => this.set("app", "admin_telegram_id", e.target.value)
+				}))))))))
 			}
 		}
 		t.default = Object(p.c)((e => ({
@@ -13338,7 +13379,7 @@
 									return e.next = 2, r({
 										type: "setState",
 										payload: {
-											setLicense: !0
+											setLicenseLoading: !0
 										}
 									});
 								case 2:
@@ -13349,7 +13390,7 @@
 									return t = e.sent, e.next = 7, r({
 										type: "setState",
 										payload: {
-											setLicense: !1
+											setLicenseLoading: !1
 										}
 									});
 								case 7:
