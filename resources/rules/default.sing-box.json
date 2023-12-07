@@ -30,7 +30,7 @@
         "servers": [
             {
                 "address": "https://1.1.1.1/dns-query",
-                "detour": "节点选择",
+                "detour": "Lựa chọn nút",
                 "tag": "remote"
             },
             {
