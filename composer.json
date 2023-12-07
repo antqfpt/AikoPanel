@@ -50,7 +50,6 @@
             "Database\\Seeders\\": "database/seeders/"
         },
         "classmap": [
-            "database/seeders",
             "database/factories"
         ]
     },
