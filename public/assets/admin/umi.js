@@ -4210,7 +4210,6 @@
 					v = (e.themeTemplate, e.email),
 					y = e.telegram,
 					b = e.setTelegramWebhookLoading,
-					c = e.setLicenseLoading,
 					w = e.app,
 					x = e.testSendMailLoading,
 					_ = e.safe,
@@ -4893,19 +4892,7 @@
 					placeholder: "Vui lòng nhập mã giấy phép AikoPanel", 
 					defaultValue: w.license,
 					onChange: e => this.set("app", "license", e.target.value)
-				})), w.telegram_bot_token && f.a.createElement(m, {
-					title: "Activate AikoPanel",
-					description: "Nếu không tự động Kích hoạt key bạn có thể kích hoạt thủ công."
-				}, f.a.createElement(i.a, {
-					type: "primary",
-					onClick: () => {
-						this.props.dispatch({
-							type: "config/setLicense"
-						})
-					},
-					loading: c,
-					disabled: c
-				}, "Kích hoạt thủ công")), f.a.createElement("div", {
+				})), f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
 					title: "Thời gian kết thúc phiên đăng nhập của người dùng",
@@ -13361,46 +13348,6 @@
 									return e.abrupt("return");
 								case 9:
 									o.a.success("Cài đặt webhook thành công");
-								case 10:
-								case "end":
-									return e.stop()
-							}
-						}), e)
-					}))()
-				},
-				setLicense(e, t) {
-					var n = e.token,
-						r = t.put;
-					return t.select, u().mark((function e() {
-						var t;
-						return u().wrap((function(e) {
-							for (;;) switch (e.prev = e.next) {
-								case 0:
-									return e.next = 2, r({
-										type: "setState",
-										payload: {
-											setLicenseLoading: !0
-										}
-									});
-								case 2:
-									return e.next = 4, Object(l.b)("/" + window.settings.secure_path + "/config/setLicense", {
-										license: n
-									});
-								case 4:
-									return t = e.sent, e.next = 7, r({
-										type: "setState",
-										payload: {
-											setLicenseLoading: !1
-										}
-									});
-								case 7:
-									if (200 === t.code) {
-										e.next = 9;
-										break
-									}
-									return e.abrupt("return");
-								case 9:
-									o.a.success("Cài đặt Key thủ công thành công");
 								case 10:
 								case "end":
 									return e.stop()
