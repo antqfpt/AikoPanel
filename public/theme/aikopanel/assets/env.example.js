@@ -2,7 +2,7 @@ window.settings = {
   // 站点标题
   title: 'AikoPanel',
   // 站点描述
-  description: 'AikoPanel is best',
+  description: 'AikoPanel is a Beautiful, Simple, and Powerful Admin Panel',
   // API
   host: '',
   // 主题

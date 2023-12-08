@@ -1,28 +1,28 @@
 {
     "name": "AikoPanel",
-    "description": "Chủ đề mặc định của AikoPanel",
-    "version": "1.7.2",
+    "description": "Giao diện Mặc định của AikoPanel",
+    "version": "1.0.0",
     "images": "https://images.unsplash.com/photo-1515405295579-ba7b45403062?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2160&q=80",
     "configs": [{
-        "label": "Màu chủ đề",
-        "placeholder": "Vui lòng chọn màu chủ đề",
+        "label": "Màu sắc chủ đề",
+        "placeholder": "Vui lòng chọn màu sắc chủ đề",
         "field_name": "theme_color",
         "field_type": "select",
         "select_options": {
-            "default": "Mặc định (màu xanh)",
-            "green": "Màu xanh lá cây",
+            "default": "Mặc định (Màu xanh)",
+            "green": "Màu xanh lục nhạt",
             "black": "Màu đen",
             "darkblue": "Màu xanh đậm"
         },
         "default_value": "default"
     }, {
-        "label": "Nền",
-        "placeholder": "Nhập URL hình ảnh nền",
+        "label": "Hình nền",
+        "placeholder": "Vui lòng nhập URL của hình nền",
         "field_name": "background_url",
         "field_type": "input"
     }, {
-        "label": "Kiểu thanh bên",
-        "placeholder": "Vui lòng chọn kiểu thanh bên",
+        "label": "Phong cách thanh bên",
+        "placeholder": "Vui lòng chọn phong cách thanh bên",
         "field_name": "theme_sidebar",
         "field_type": "select",
         "select_options": {
@@ -31,8 +31,8 @@
         },
         "default_value": "light"
     }, {
-        "label": "Kiểu đầu trang",
-        "placeholder": "Vui lòng chọn kiểu đầu trang",
+        "label": "Phong cách phần đầu trang",
+        "placeholder": "Vui lòng chọn phong cách phần đầu trang",
         "field_name": "theme_header",
         "field_type": "select",
         "select_options": {
@@ -41,8 +41,8 @@
         },
         "default_value": "dark"
     }, {
-        "label": "Mã HTML tùy chỉnh cho chân trang",
-        "placeholder": "Có thể thêm mã JS phục vụ khách hàng và nhiều tính năng khác",
+        "label": "HTML tùy chỉnh cho chân trang",
+        "placeholder": "Có thể thêm mã JS hỗ trợ khách hàng, v.v.",
         "field_name": "custom_html",
         "field_type": "textarea"
     }]
