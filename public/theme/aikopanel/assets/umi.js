@@ -19882,7 +19882,7 @@
 				}, Object(u.formatMessage)({
 					id: "Tìm Kiếm",
 				})))), i.a.createElement("div", {
-					className: "dark" === m.header ? "v2board-container-title text-white" : "v2board-container-title text-black",
+					className: "dark" === m.header ? "aikopanel-container-title text-white" : "aikopanel-container-title text-black",
 				}, this.props.title), i.a.createElement("div", null, i.a.createElement("div", {
 					className: "dropdown d-inline-block",
 				}, i.a.createElement("button", {

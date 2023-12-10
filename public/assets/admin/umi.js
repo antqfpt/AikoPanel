@@ -4146,7 +4146,7 @@
 		class m extends f.a.Component {
 			render() {
 				return f.a.createElement("div", {
-					className: "row ".concat(this.props.isChildren ? "v2board-config-children" : ""),
+					className: "row ".concat(this.props.isChildren ? "aikopanel-config-children" : ""),
 					style: {
 						padding: "20px",
 						borderBottom: "1px solid #eee"
@@ -4659,7 +4659,7 @@
 					role: "alert"
 				}, f.a.createElement("p", {
 					className: "mb-0"
-				}, "Nếu bạn triển khai giao diện quản lý V2board bằng cách tách biệt phía trước và phía sau, thì cấu hình trang này sẽ không có hiệu lực.", f.a.createElement("b", null, f.a.createElement("a", {
+				}, "Nếu bạn triển khai giao diện quản lý AikoPanel bằng cách tách biệt phía trước và phía sau, thì cấu hình trang này sẽ không có hiệu lực.", f.a.createElement("b", null, f.a.createElement("a", {
 					href: "https://docs.v2board.com/use/advanced.html#%E5%89%8D%E7%AB%AF%E5%88%86%E7%A6%BB"
 				}, "phân tách phía trước và phía sau"))))))), f.a.createElement("div", {
 					className: ""
@@ -4706,8 +4706,8 @@
 				}, f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
-					title: "通讯密钥",
-					description: "V2board与节点通讯的密钥，以便数据不会被他人获取。"
+					title: "Khoá kết nối API",
+					description: "Khóa của giao tiếp AikoPanel và nút để dữ liệu sẽ không được người khác lấy."
 				}, f.a.createElement("input", {
 					type: "text",
 					className: "form-control",
@@ -4828,7 +4828,7 @@
 						type: "config/testSendMail"
 					})
 				}, "发送测试邮件")))), f.a.createElement(s.a.TabPane, {
-					tab: "Telegram",
+					tab: "Liên kết",
 					key: "telegram"
 				}, f.a.createElement("div", {
 					className: ""
@@ -4860,18 +4860,27 @@
 					checked: parseInt(y.telegram_bot_enable),
 					onChange: e => this.set("telegram", "telegram_bot_enable", e ? 1 : 0)
 				})), f.a.createElement(m, {
-					title: "群组地址",
-					description: "填写后将会在用户端展示，或者被用于需要的地方。"
+					title: "Liên kết Nhóm Telegram",
+					description: "Sau khi điền vào, nó sẽ được hiển thị ở phần User Center của người dùng, hoặc được sử dụng ở những nơi cần thiết."
 				}, f.a.createElement("input", {
 					type: "text",
 					className: "form-control",
 					placeholder: "https://t.me/xxxxxx",
 					defaultValue: y.telegram_discuss_link,
 					onChange: e => this.set("telegram", "telegram_discuss_link", e.target.value)
+				})),f.a.createElement(m, {
+					title: "Liên kết nhóm Zalo",
+					description: "Sau khi điền vào, nó sẽ được hiển thị ở phần User Center của người dùng, hoặc được sử dụng ở những nơi cần thiết."
+				}, f.a.createElement("input", {
+					type: "text",
+					className: "form-control",
+					placeholder: "https://zalo.me/g/xxxxxx",
+					defaultValue: y.zalo_discuss_link,
+					onChange: e => this.set("telegram", "zalo_discuss_link", e.target.value)
 				})))), f.a.createElement(s.a.TabPane, {
-					tab: "APP",
+					tab: "AikoPanel",
 					key: "app"
-				}, f.a.createElement("div", {
+                }, f.a.createElement("div", {
 					className: "block-content"
 				}, f.a.createElement("div", {
 					className: "row"
@@ -4882,54 +4891,48 @@
 					role: "alert"
 				}, f.a.createElement("p", {
 					className: "mb-0"
-				}, "用于自有客户端(APP)的版本管理及更新"))))), f.a.createElement("div", {
+				}, "Quản lý Quản lý và cập nhật phiên bản của AikoPanel , Chức năng được tích hợp riêng trên AikoPanel"))))), f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
-					title: "Windows",
-					description: "Windows端版本号及下载地址"
+					title: "License AikoPanel",
+					description: "Vui lòng nhập mã giấy phép được cung cấp bởi AikoPanel"
 				}, f.a.createElement("input", {
 					type: "text",
 					className: "form-control",
-					placeholder: "1.0.0",
-					defaultValue: w.windows_version,
-					onChange: e => this.set("app", "windows_version", e.target.value)
-				}), f.a.createElement("input", {
-					type: "text",
-					className: "form-control mt-1",
-					placeholder: "https://xxxx.com/xxx.exe",
-					defaultValue: w.windows_download_url,
-					onChange: e => this.set("app", "windows_download_url", e.target.value)
-				})), f.a.createElement(m, {
-					title: "macOS",
-					description: "macOS端版本号及下载地址"
-				}, f.a.createElement("input", {
+					placeholder: "Vui lòng nhập mã giấy phép AikoPanel", 
+					defaultValue: w.license,
+					onChange: e => this.set("app", "license", e.target.value)
+				})), f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Thời gian kết thúc phiên đăng nhập của người dùng",
+					description: "Sau khi config nó thì hãy xoá hết tất cả phiên đăng nhập của người dùng sau ... phút, sau khi config chức năng này thì hãy vào trong terminal gõ: redis-cli FLUSHALL để active ..."
+				}, f.a.createElement(a.a, {
+					addonAfter: "Phút",
+					size: "large",
+					type: "number",
+					placeholder: "Không nhập thì mặc định là không xoá phiên đăng nhập của người dùng",
+					defaultValue: w.session_ttl,
+					onChange: e => this.set("app", "session_ttl", e.target.value)
+				}))),f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Auto backup database",
+					description: "Database sẽ được backup theo thời gian mà bạn đã config ở dưới đây -> gửi tới telegram"
+				}, f.a.createElement(a.a, {
+					addonAfter: "Giây",
+					size: "large",
+					type: "number",
+					placeholder: "Xin Nhập Vào",
+					defaultValue: w.interval_backup_database,
+					onChange: e => this.set("app", "interval_backup_database", e.target.value)
+				}),f.a.createElement("input", {
 					type: "text",
 					className: "form-control",
-					placeholder: "1.0.0",
-					defaultValue: w.macos_version,
-					onChange: e => this.set("app", "macos_version", e.target.value)
-				}), f.a.createElement("input", {
-					type: "text",
-					className: "form-control mt-1",
-					placeholder: "https://xxxx.com/xxx.dmg",
-					defaultValue: w.macos_download_url,
-					onChange: e => this.set("app", "macos_download_url", e.target.value)
-				})), f.a.createElement(m, {
-					title: "Android",
-					description: "Android端版本号及下载地址"
-				}, f.a.createElement("input", {
-					type: "text",
-					className: "form-control",
-					placeholder: "1.0.0",
-					defaultValue: w.android_version,
-					onChange: e => this.set("app", "android_version", e.target.value)
-				}), f.a.createElement("input", {
-					type: "text",
-					className: "form-control mt-1",
-					placeholder: "https://xxxx.com/xxx.apk",
-					defaultValue: w.android_download_url,
-					onChange: e => this.set("app", "android_download_url", e.target.value)
-				})))))))
+					placeholder: "Vui lòng nhập telegram id của bạn (ID này sẽ nhận được thông báo backup database)", 
+					defaultValue: w.admin_telegram_id,
+					onChange: e => this.set("app", "admin_telegram_id", e.target.value)
+				}))))))))
 			}
 		}
 		t.default = Object(p.c)((e => ({
@@ -9753,7 +9756,7 @@
 				}, u.map((e => d.a.createElement(a.a.Option, {
 					key: e.id
 				}, e.remarks)))))), d.a.createElement("div", {
-					className: "v2board-drawer-action"
+					className: "aikopanel-drawer-action"
 				}, d.a.createElement(o.a, {
 					style: {
 						marginRight: 8
@@ -13255,7 +13258,7 @@
 									}
 									return e.abrupt("return");
 								case 8:
-									return o.a.success("保存成功"), e.next = 11, r({
+									return o.a.success("Đã lưu thành công"), e.next = 11, r({
 										type: "fetch"
 									});
 								case 11:
@@ -14436,7 +14439,7 @@
 					config: window.btoa(unescape(encodeURIComponent(JSON.stringify(this.state.params)))),
 					name: e,
 					complete: e => {
-						p.a.success("保存成功")
+						p.a.success("Đã lưu thành công")
 					}
 				})
 			}
@@ -14869,7 +14872,7 @@
 					role: "alert"
 				}, c.a.createElement("p", {
 					className: "mb-0"
-				}, "如果你采用前后分离的方式部署V2board，那么主题配置将不会生效。了解", c.a.createElement("b", null, c.a.createElement("a", {
+				}, "如果你采用前后分离的方式部署AikoPanel，那么主题配置将不会生效。了解", c.a.createElement("b", null, c.a.createElement("a", {
 					href: "https://docs.v2board.com/use/advanced.html#%E5%89%8D%E7%AB%AF%E5%88%86%E7%A6%BB"
 				}, "前后分离")))))), Object.keys(t).map((e => {
 					var r = t[e];
@@ -16739,7 +16742,7 @@
 					href: "/"
 				}, i.a.createElement("span", {
 					className: "text-white-75"
-				}, window.settings.title ? window.settings.title : "V2Board")), i.a.createElement("div", {
+				}, window.settings.title ? window.settings.title : "AikoPanel")), i.a.createElement("div", {
 					className: "d-lg-none"
 				}, i.a.createElement("a", {
 					className: "text-white ml-2",
@@ -16756,8 +16759,8 @@
 				}, i.a.createElement("ul", {
 					className: "nav-main"
 				}, this.state.nav.map((e => this.renderMenu(e.type, e.title, e.href, e.icon))))), i.a.createElement("div", {
-					className: "v2board-copyright"
-				}, window.settings.title ? window.settings.title : "V2Board", " v1.7.4"))
+					className: "aikopanel-copyright"
+				}, window.settings.title ? window.settings.title : "AikoPanelv3", " " + window.settings.version))
 			}
 		}
 		var u = Object(c.c)((e => ({
@@ -16835,7 +16838,7 @@
 				}), " ", i.a.createElement("span", {
 					className: "ml-1 d-none d-sm-inline-block"
 				}, "搜索"))), i.a.createElement("div", {
-					className: "dark" === d.header ? "v2board-container-title text-white" : "v2board-container-title text-black"
+					className: "dark" === d.header ? "aikopanel-container-title text-white" : "aikopanel-container-title text-black"
 				}, this.props.title), i.a.createElement("div", null, i.a.createElement("div", {
 					className: "dropdown d-inline-block"
 				}, i.a.createElement("button", {
@@ -16924,7 +16927,7 @@
 					onClick: () => this.props.dispatch({
 						type: "layout/showNav"
 					}),
-					className: "v2board-nav-mask",
+					className: "aikopanel-nav-mask",
 					style: {
 						display: this.props.layout.showNav ? "block" : "none"
 					}
@@ -17809,7 +17812,7 @@
 					defaultValue: t.remarks,
 					onChange: e => this.formChange("remarks", e.target.value)
 				})))), p.a.createElement("div", {
-					className: "v2board-drawer-action"
+					className: "aikopanel-drawer-action"
 				}, p.a.createElement(o.a, {
 					style: {
 						marginRight: 8
@@ -22372,7 +22375,7 @@
 				}, l.map((e => h.a.createElement(a.a.Option, {
 					key: e.id
 				}, e.remarks)))))), h.a.createElement("div", {
-					className: "v2board-drawer-action"
+					className: "aikopanel-drawer-action"
 				}, h.a.createElement(o.a, {
 					style: {
 						marginRight: 8
@@ -30641,18 +30644,18 @@
 					onRow: (e, t) => {
 						if (!this.props.disableRightClick) return {
 							onClick: e => {
-								this.props.onContextMenu && (this.props.onContextMenu(void 0), document.getElementById("v2board-table-dropdown").style = "display:none;")
+								this.props.onContextMenu && (this.props.onContextMenu(void 0), document.getElementById("aikopanel-table-dropdown").style = "display:none;")
 							},
 							onDoubleClick: e => {},
 							onContextMenu: t => {
-								this.props.onContextMenu && (t.preventDefault(), this.forceUpdate(), this.props.onContextMenu && this.props.onContextMenu(e), document.getElementById("v2board-table-dropdown").style = "top: ".concat(t.clientY, "px; left: ").concat(t.clientX, "px;display:unset;"))
+								this.props.onContextMenu && (t.preventDefault(), this.forceUpdate(), this.props.onContextMenu && this.props.onContextMenu(e), document.getElementById("aikopanel-table-dropdown").style = "top: ".concat(t.clientY, "px; left: ").concat(t.clientX, "px;display:unset;"))
 							},
 							onMouseEnter: e => {},
 							onMouseLeave: e => {}
 						}
 					}
 				})), s.a.createElement("div", {
-					id: "v2board-table-dropdown",
+					id: "aikopanel-table-dropdown",
 					className: "ant-dropdown ant-dropdown-placement-bottomLeft",
 					style: {
 						display: "none",
@@ -30661,7 +30664,7 @@
 						left: 0
 					},
 					onClick: () => {
-						this.props.onContextMenu && (document.getElementById("v2board-table-dropdown").style = "display:none;")
+						this.props.onContextMenu && (document.getElementById("aikopanel-table-dropdown").style = "display:none;")
 					}
 				}, this.props.children))
 			}
@@ -32893,12 +32896,12 @@
 				}, a.a.createElement("main", {
 					id: "main-container"
 				}, a.a.createElement("div", {
-					className: "v2board-background",
+					className: "aikopanel-background",
 					style: {
 						backgroundImage: window.settings.background_url && "url(".concat(window.settings.background_url, ")")
 					}
 				}), a.a.createElement("div", {
-					className: "no-gutters v2board-auth-box"
+					className: "no-gutters aikopanel-auth-box"
 				}, a.a.createElement("div", {
 					className: "",
 					style: {
@@ -32925,11 +32928,11 @@
 					className: "font-size-h1",
 					href: "javascript:void(0);"
 				}, window.settings.logo ? a.a.createElement("img", {
-					className: "v2board-logo mb-3",
+					className: "aikopanel-logo mb-3",
 					src: window.settings.logo
 				}) : a.a.createElement("span", {
 					className: "text-dark"
-				}, window.settings.title || "V2Board")), a.a.createElement("p", {
+				}, window.settings.title || "AikoPanel")), a.a.createElement("p", {
 					className: "font-size-sm text-muted mb-3"
 				}, "登录到管理中心")), a.a.createElement("div", {
 					className: "form-group"
@@ -53281,7 +53284,7 @@
 				}, g.a.createElement("div", {
 					className: "bg-white"
 				}, g.a.createElement("div", {
-					className: "v2board-table-action",
+					className: "aikopanel-table-action",
 					style: {
 						padding: 15
 					}
@@ -53399,7 +53402,7 @@
 					onContextMenu: e => {
 						this.record = e, this.forceUpdate()
 					},
-					className: "v2board-table",
+					className: "aikopanel-table",
 					tableLayout: "auto",
 					dataSource: b,
 					pagination: a()({}, x, {
@@ -59082,7 +59085,7 @@
 					title: "过滤器",
 					visible: this.state.visible,
 					onClose: () => this.hide(),
-					className: "v2board-filter-drawer",
+					className: "aikopanel-filter-drawer",
 					footer: m.a.createElement(m.a.Fragment, null)
 				}, this.state.filter.length > 0 && this.state.filter.map(((e, t) => {
 					var n = this.props.keys.find((e => e.key === this.state.filter[t].key));
@@ -59152,7 +59155,7 @@
 				}, m.a.createElement(l.a, {
 					type: "plus"
 				}), " 添加条件"), m.a.createElement("div", {
-					className: "v2board-drawer-action"
+					className: "aikopanel-drawer-action"
 				}, m.a.createElement(o.a, {
 					disabled: !this.state.filter.length,
 					type: "danger",
@@ -61215,7 +61218,7 @@
 						})
 					}
 				})), m.a.createElement("div", {
-					className: "v2board-drawer-action"
+					className: "aikopanel-drawer-action"
 				}, m.a.createElement("div", {
 					style: {
 						float: "left",
@@ -62054,7 +62057,7 @@
 				this.props.dispatch({
 					type: "knowledge/save",
 					callback: () => {
-						x.a.success("保存成功")
+						x.a.success("Đã lưu thành công")
 					}
 				})
 			}
@@ -62126,7 +62129,7 @@
 						}
 					}
 				}))), f.a.createElement("div", {
-					className: "v2board-drawer-action"
+					className: "aikopanel-drawer-action"
 				}, f.a.createElement(a.a, {
 					style: {
 						marginRight: 8
@@ -73823,7 +73826,7 @@
 					className: "col-lg-12 js-appear-enabled animated",
 					"data-toggle": "appear"
 				}, c.a.createElement("div", {
-					className: "block border-bottom mb-0 v2board-stats-bar",
+					className: "block border-bottom mb-0 aikopanel-stats-bar",
 					onScroll: e => console.log(e.currentTarget.scrollLeft)
 				}, c.a.createElement("div", {
 					className: "block-content block-content-full"
@@ -78531,7 +78534,7 @@
 				}, o.map((e => y.a.createElement(N.a.Option, {
 					key: e.id
 				}, e.remarks)))))), y.a.createElement("div", {
-					className: "v2board-drawer-action"
+					className: "aikopanel-drawer-action"
 				}, y.a.createElement(c.a, {
 					style: {
 						marginRight: 8
@@ -78978,7 +78981,7 @@
 				}, o.map((e => y.a.createElement(N.a.Option, {
 					key: e.id
 				}, e.remarks)))))), y.a.createElement("div", {
-					className: "v2board-drawer-action"
+					className: "aikopanel-drawer-action"
 				}, y.a.createElement(c.a, {
 					style: {
 						marginRight: 8
@@ -79257,7 +79260,7 @@
 				}, y.a.createElement("div", {
 					className: "bg-white"
 				}, y.a.createElement("div", {
-					className: "v2board-table-action",
+					className: "aikopanel-table-action",
 					style: {
 						padding: 15
 					}
@@ -79300,11 +79303,11 @@
 						})
 					}
 				}, A ? "保存排序" : "编辑排序")), Object(L.f)() ? y.a.createElement(i.a, {
-					className: "v2board-table",
+					className: "aikopanel-table",
 					itemLayout: "vertical",
 					dataSource: N ? E.filter((e => -1 !== JSON.stringify(e).indexOf(N))) : E,
 					renderItem: e => y.a.createElement(i.a.Item, {
-						className: "v2board_node_mobile ".concat(e.parent_id ? "child_node" : ""),
+						className: "aikopanel_node_mobile ".concat(e.parent_id ? "child_node" : ""),
 						actions: [y.a.createElement(y.a.Fragment, null, this.getTypeTag(e.type, e.parent_id ? e.id + " => " + e.parent_id : e.id), y.a.createElement(g.a, null, y.a.createElement(m.a, {
 							type: "user"
 						}), " ", e.online || 0), y.a.createElement(g.a, null, e.rate, " x"))],
@@ -84730,7 +84733,7 @@
 				}, u.map((e => f.a.createElement(s.a.Option, {
 					key: e.id
 				}, e.remarks)))))), f.a.createElement("div", {
-					className: "v2board-drawer-action"
+					className: "aikopanel-drawer-action"
 				}, f.a.createElement(o.a, {
 					style: {
 						marginRight: 8
