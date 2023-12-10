@@ -1,4 +1,4 @@
-## Hướng dẫn Di chuyển phiên bản Nflash (v2board mod)
+## Hướng dẫn Di chuyển phiên bản AikoPanelv1
 
 ### Kịch bản di chuyển sẽ thực hiện các thay đổi sau đây đối với cơ sở dữ liệu của bạn
 - Nhiều quá không liệt kê hết được

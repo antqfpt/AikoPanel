@@ -4701,7 +4701,7 @@
 					defaultValue: l.frontend_background_url,
 					onChange: e => this.set("frontend", "frontend_background_url", e.target.value)
 				})))), f.a.createElement(s.a.TabPane, {
-					tab: "节点",
+					tab: "Server",
 					key: "server"
 				}, f.a.createElement("div", {
 					className: ""
@@ -4739,7 +4739,7 @@
 					defaultValue: u.server_push_interval,
 					onChange: e => this.set("server", "server_push_interval", e.target.value)
 				})))), f.a.createElement(s.a.TabPane, {
-					tab: "邮件",
+					tab: "Email",
 					key: "email"
 				}, f.a.createElement("div", {
 					className: "block-content"
