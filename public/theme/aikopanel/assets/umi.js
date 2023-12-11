@@ -13269,7 +13269,7 @@
 					id: "Ví Tiền Của Bạn"
 				})), l.a.createElement("p", {
 					className: "display-4 text-black font-w300 mb-2"
-				}, void 0 !== t.balance ? (parseInt(t.balance) / 100).toFixed(2) : "--.--", l.a.createElement("span", {
+				}, void 0 !== t.balance ? (parseInt(t.balance) / 100).toLocaleString('vi-VN') : "--.--", l.a.createElement("span", {
 					className: "font-size-h5 text-muted ml-4"
 				}, r.currency)), l.a.createElement("span", {
 					className: "text-muted",
@@ -14779,7 +14779,7 @@
 						className: "py-2"
 					}, a.a.createElement("p", {
 						className: "h1 mb-2"
-					}, t.currency_symbol, " ", (n.price / 100).toFixed(2)), a.a.createElement("p", {
+					}, t.currency_symbol, " ", (n.price / 100).toLocaleString('vi-VN')), a.a.createElement("p", {
 						className: "h6 text-muted"
 					}, n.tag))), a.a.createElement("div", {
 						className: "block-content py-3"
@@ -15626,15 +15626,15 @@
 					id: "Mã Đơn Hàng"
 				}), "："), f.a.createElement("span", null, t.trade_no)), t.discount_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Số Tiền Giảm Giá"
-				}), "："), f.a.createElement("span", null, (t.discount_amount / 100).toFixed(2))) : "", t.surplus_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.discount_amount / 100).toLocaleString('vi-VN'))) : "", t.surplus_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Số Tiền Giảm Giá từ Đăng Ký Cũ"
-				}), "："), f.a.createElement("span", null, (t.surplus_amount / 100).toFixed(2))) : "", t.refund_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.surplus_amount / 100).toLocaleString('vi-VN'))) : "", t.refund_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Số Tiền Hoàn Trả"
-				}), "："), f.a.createElement("span", null, (t.refund_amount / 100).toFixed(2))) : "", t.balance_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.refund_amount / 100).toLocaleString('vi-VN'))) : "", t.balance_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Thanh Toán Bằng Số Dư Tài Khoản"
-				}), "："), f.a.createElement("span", null, (t.balance_amount / 100).toFixed(2))) : "", t.pre_handling_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.balance_amount / 100).toLocaleString('vi-VN'))) : "", t.pre_handling_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Phí Giao Dịch Thanh Toán"
-				}), "："), f.a.createElement("span", null, (t.pre_handling_amount / 100).toFixed(2))) : "", f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.pre_handling_amount / 100).toLocaleString('vi-VN'))) : "", f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Thời Gian Tạo"
 				}), "："), f.a.createElement("span", null, x()(1e3 * t.created_at).format("YYYY-MM-DD HH:mm:ss")))))), 0 === t.status && f.a.createElement(f.a.Fragment, null, f.a.createElement("div", {
 					className: "block block-rounded js-appear-enabled"
@@ -15708,7 +15708,7 @@
 					className: "col-8"
 				}, t.plan.name, " x ", h.a.periodText[t.period] && h.a.periodText[t.period]()), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, g.currency_symbol, (t.plan[t.period] / 100).toFixed(2))), t.discount_amount ? f.a.createElement("div", null, f.a.createElement("div", {
+				}, g.currency_symbol, (t.plan[t.period] / 100).toLocaleString('vi-VN'))), t.discount_amount ? f.a.createElement("div", null, f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15724,7 +15724,7 @@
 					className: "col-8"
 				}), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, g.currency_symbol, (t.discount_amount / 100).toFixed(2)))) : "", t.surplus_amount ? f.a.createElement("div", null, f.a.createElement("div", {
+				}, g.currency_symbol, (t.discount_amount / 100).toLocaleString('vi-VN')))) : "", t.surplus_amount ? f.a.createElement("div", null, f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15740,7 +15740,7 @@
 					className: "col-8"
 				}), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, g.currency_symbol, (t.surplus_amount / 100).toFixed(2)))) : "", t.refund_amount ? f.a.createElement("div", null, f.a.createElement("div", {
+				}, g.currency_symbol, (t.surplus_amount / 100).toLocaleString('vi-VN')))) : "", t.refund_amount ? f.a.createElement("div", null, f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15756,7 +15756,7 @@
 					className: "col-8"
 				}), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, "- ", g.currency_symbol, (t.refund_amount / 100).toFixed(2)))) : "", t.pre_handling_amount ? f.a.createElement("div", null, f.a.createElement("div", {
+				}, "- ", g.currency_symbol, (t.refund_amount / 100).toLocaleString('vi-VN')))) : "", t.pre_handling_amount ? f.a.createElement("div", null, f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15772,7 +15772,7 @@
 					className: "col-8"
 				}), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, "+ ", (t.pre_handling_amount / 100).toFixed(2)))) : "", f.a.createElement("div", {
+				}, "+ ", (t.pre_handling_amount / 100).toLocaleString('vi-VN')))) : "", f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15781,7 +15781,7 @@
 					id: "Tổng Cộng"
 				})), f.a.createElement("h1", {
 					className: "text-light mt-3 mb-3"
-				}, g.currency_symbol, " ", ((t.total_amount + (t.pre_handling_amount || 0)) / 100).toFixed(2), " ", g.currency), f.a.createElement("button", {
+				}, g.currency_symbol, " ", ((t.total_amount + (t.pre_handling_amount || 0)) / 100).toLocaleString('vi-VN'), " ", g.currency), f.a.createElement("button", {
 					type: "button",
 					className: "btn btn-block btn-primary",
 					disabled: d || "StripeCredit" === E.payment && !w.token,
@@ -25319,7 +25319,7 @@
 							style: {
 								minWidth: 60
 							}
-						}, parseFloat(e) ? parseFloat(e).toFixed(2) + " x" : "-")
+						}, parseFloat(e) ? parseFloat(e).toLocaleString('vi-VN') + " x" : "-")
 					}, {
 						title: l.a.createElement(a.a, {
 							placement: "topRight",
@@ -27234,7 +27234,7 @@
 					className: "col-8"
 				}, e.name), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, "-", o.currency_symbol, (this.couponProcess(r[n], e.type, e.value) / 100).toFixed(2))))
+				}, "-", o.currency_symbol, (this.couponProcess(r[n], e.type, e.value) / 100).toLocaleString('vi-VN'))))
 			}
 			render() {
 				var e = this.props.plan,
@@ -27334,7 +27334,7 @@
 						}
 					}, f.a.createElement("span", {
 						className: "price"
-					}, d.currency_symbol, (t[e] / 100).toFixed(2)))) : void 0
+					}, d.currency_symbol, (t[e] / 100).toLocaleString('vi-VN'), d.currency))) : void 0
 				}))))), f.a.createElement("div", {
 					className: "col-md-4 col-sm-12"
 				}, f.a.createElement("div", {
@@ -27380,7 +27380,7 @@
 					className: "col-8"
 				}, t.name, " x ", h.a.periodText[n] && h.a.periodText[n]()), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, d.currency_symbol, (t[n] / 100).toFixed(2))), this.getCouponJSX(), f.a.createElement("div", {
+				}, d.currency_symbol, (t[n] / 100).toLocaleString('vi-VN'))), this.getCouponJSX(), f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -41250,7 +41250,7 @@
 						dataIndex: "get_amount",
 						key: "get_amount",
 						align: "right",
-						render: (e, t) => (e / 100).toFixed(2)
+						render: (e, t) => (e / 100).toLocaleString('vi-VN')
 					}];
 				return d.a.createElement(h.a, o()({}, this.props, {
 					title: Object(w.formatMessage)({
@@ -41278,7 +41278,7 @@
 					id: "Tiếp Thị Liên Kết - CTV"
 				})), d.a.createElement("p", {
 					className: "display-4 text-black font-w300 mb-2"
-				}, void 0 !== E.commission_balance ? (parseInt(E.commission_balance) / 100).toFixed(2) : "--.--", d.a.createElement("span", {
+				}, void 0 !== E.commission_balance ? (parseInt(E.commission_balance) / 100).toLocaleString('vi-VN') : "--.--", d.a.createElement("span", {
 					className: "font-size-h5 text-muted ml-4"
 				}, g.currency)), d.a.createElement("span", {
 					className: "text-muted",
@@ -48745,7 +48745,7 @@ e.exports = function() {
 						dataIndex: "total_amount",
 						key: "total_amount",
 						align: "right",
-						render: e => (e / 100).toFixed(2)
+						render: e => (e / 100).toLocaleString('vi-VN')
 					}, {
 						title: Object(z.formatMessage)({
 							id: "Trạng Thái Đơn Hàng"
@@ -48804,7 +48804,7 @@ e.exports = function() {
 						arrow: "horizontal",
 						multipleLine: !0,
 						onClick: () => R.a.push("/order/" + e.trade_no),
-						extra: b.a.createElement("div", null, b.a.createElement("div", null, (e.total_amount / 100).toFixed(2)), b.a.createElement("div", null, b.a.createElement(L.a, {
+						extra: b.a.createElement("div", null, b.a.createElement("div", null, (e.total_amount / 100).toLocaleString('vi-VN')), b.a.createElement("div", null, b.a.createElement(L.a, {
 							status: r[e.status]
 						}), B.a.orderStatusText[e.status] && B.a.orderStatusText[e.status]()))
 					}, null === (t = e.plan) || void 0 === t ? void 0 : t.name, " ", b.a.createElement(P.Item.Brief, null, V()(1e3 * e.created_at).format("YYYY-MM-DD HH:mm:ss")))
