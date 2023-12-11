@@ -4744,6 +4744,18 @@
 					placeholder: "Vui lòng nhập",
 					defaultValue: u.server_push_interval,
 					onChange: e => this.set("server", "server_push_interval", e.target.value)
+				}))),f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Khoảng thời gian xóa dữ liệu trực tuyến của nút đã hết hạn",
+					description: "Xoá dữ liệu trực tuyến của nút đã hết hạn ( Khuyến Nghị để giá trị là 120 giây )"
+				}, f.a.createElement(a.a, {
+					addonAfter: "Giây",
+					size: "large",
+					type: "number",
+					placeholder: "Vui lòng nhập",
+					defaultValue: u.server_alive_interval,
+					onChange: e => this.set("server", "server_alive_interval", e.target.value)
 				})))), f.a.createElement(s.a.TabPane, {
 					tab: "Email",
 					key: "email"
@@ -73818,11 +73830,11 @@
 					role: "alert"
 				}, c.a.createElement("p", {
 					className: "mb-0"
-				}, "Có ", t.ticket_pending_total, " đơn hàng đang chờ xử lý.", c.a.createElement("a", {
+				}, "Có ", t.ticket_pending_total, " đơn hàng đang chờ xử lý", c.a.createElement("a", {
 					className: "alert-link",
 					href: "javascript:void(0)",
 					onClick: () => f.a.push("/ticket")
-				}, "Xử lý ngay lập tức")))), t.commission_pending_total && r.push(c.a.createElement("div", {
+				}, " Xử lý ngay lập tức")))), t.commission_pending_total && r.push(c.a.createElement("div", {
 					className: "alert alert-danger",
 					role: "alert"
 				}, c.a.createElement("p", {
