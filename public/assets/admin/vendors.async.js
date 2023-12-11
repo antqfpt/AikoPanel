@@ -84,12 +84,12 @@
                     minute: "{HH}:{mm}",
                     second: "{HH}:{mm}:{ss}",
                     millisecond: "{HH}:{mm}:{ss} {SSS}",
-                    none: "{yyyy}-{MM}-{dd} {HH}:{mm}:{ss} {SSS}"
+                    none: "{dd}-{MM}-{yyyy} {HH}:{mm}:{ss} {SSS}"
                 },
-                h = "{yyyy}-{MM}-{dd}",
+                h = "{dd}-{MM}-{yyyy}",
                 p = {
                     year: "{yyyy}",
-                    month: "{yyyy}-{MM}",
+                    month: "{MM}-{yyyy}",
                     day: h,
                     hour: h + " " + d.hour,
                     minute: h + " " + d.minute,
@@ -3921,7 +3921,7 @@
             var u = r["H"];
 
             function c(e, t, n) {
-                var i = "{yyyy}-{MM}-{dd} {HH}:{mm}:{ss}";
+                var i = "{dd}-{MM}-{yyyy} {HH}:{mm}:{ss}";
 
                 function l(e) {
                     return e && r["O"](e) ? e : "-"
