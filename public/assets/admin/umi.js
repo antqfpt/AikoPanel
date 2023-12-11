@@ -9795,7 +9795,8 @@
 					className: "row"
 				}, d.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
-				}, d.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), d.a.createElement(a.a, {
+				}, d.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), d.a.createElement(s.a, {
+					addonAfter: "Mbps",
 					placeholder: "Speed Limit Node ( Mbps )",
 					value: e.speed_limit,
 					onChange: e => this.formChange("host", e.target.value)
@@ -22465,7 +22466,8 @@
 					className: "row"
 				}, h.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
-				}, h.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), h.a.createElement(a.a, {
+				}, h.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), h.a.createElement(s.a, {
+					addonAfter: "Mbps",
 					placeholder: "Speed Limit Node ( Mbps )",
 					value: e.speed_limit,
 					onChange: e => this.formChange("host", e.target.value)
@@ -78675,7 +78677,8 @@
 					className: "row"
 				}, y.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
-				}, y.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), y.a.createElement(N.a, {
+				}, y.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), y.a.createElement(s.a, {
+					addonAfter: "Mbps",
 					placeholder: "Speed Limit Node ( Mbps )",
 					value: e.speed_limit,
 					onChange: e => this.formChange("host", e.target.value)
@@ -79172,7 +79175,8 @@
 					className: "row"
 				}, y.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
-				}, y.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), y.a.createElement(N.a, {
+				}, y.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), y.a.createElement(s.a, {
+					addonAfter: "Mbps",
 					placeholder: "Speed Limit Node ( Mbps )",
 					value: e.speed_limit,
 					onChange: e => this.formChange("host", e.target.value)
@@ -84974,7 +84978,8 @@
 					className: "row"
 				}, f.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
-				}, f.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), f.a.createElement(s.a, {
+				}, f.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), f.a.createElement(c.a, {
+					addonAfter: "Mbps",
 					placeholder: "Speed Limit Node ( Mbps )",
 					value: e.speed_limit,
 					onChange: e => this.formChange("host", e.target.value)
