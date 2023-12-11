@@ -9791,7 +9791,15 @@
 							)
 						),
 					)
-				),
+				),d.a.createElement("div", {
+					className: "row"
+				}, d.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, d.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), d.a.createElement(a.a, {
+					placeholder: "Speed Limit Node ( Mbps )",
+					value: e.speed_limit,
+					onChange: e => this.formChange("host", e.target.value)
+				}))),
 				d.a.createElement("div", {
 					className: "form-group"
 				}, d.a.createElement("label", null, "Nhóm Định tuyến"), d.a.createElement(a.a, {
@@ -22453,7 +22461,15 @@
 							)
 						),
 					)
-				),
+				),h.a.createElement("div", {
+					className: "row"
+				}, h.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, h.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), h.a.createElement(a.a, {
+					placeholder: "Speed Limit Node ( Mbps )",
+					value: e.speed_limit,
+					onChange: e => this.formChange("host", e.target.value)
+				}))),
 				h.a.createElement("div", {
 					className: "form-group"
 				}, h.a.createElement("label", null, "Nhóm Định Tuyến"), h.a.createElement(a.a, {
@@ -78656,6 +78672,14 @@
 						),
 					)
 				),y.a.createElement("div", {
+					className: "row"
+				}, y.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, y.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), y.a.createElement(N.a, {
+					placeholder: "Speed Limit Node ( Mbps )",
+					value: e.speed_limit,
+					onChange: e => this.formChange("host", e.target.value)
+				}))),y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, "Nhóm Định Tuyến"), y.a.createElement(N.a, {
 					mode: "multiple",
@@ -79145,6 +79169,14 @@
 						),
 					)
 				),y.a.createElement("div", {
+					className: "row"
+				}, y.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, y.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), y.a.createElement(N.a, {
+					placeholder: "Speed Limit Node ( Mbps )",
+					value: e.speed_limit,
+					onChange: e => this.formChange("host", e.target.value)
+				}))),y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, "Nhóm Định Tuyến"), y.a.createElement(N.a, {
 					mode: "multiple",
@@ -84896,7 +84928,7 @@
 						key: Math.random(),
 						value: t.id
 					}, t.name)
-				})))),                             f.a.createElement(
+				})))), f.a.createElement(
 					"div",
 					{
 						className: "row",
@@ -84939,6 +84971,14 @@
 						),
 					)
 				),f.a.createElement("div", {
+					className: "row"
+				}, f.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, f.a.createElement("label", null, "Node SpeedLimit ( Mbps )"), f.a.createElement(s.a, {
+					placeholder: "Speed Limit Node ( Mbps )",
+					value: e.speed_limit,
+					onChange: e => this.formChange("host", e.target.value)
+				}))),f.a.createElement("div", {
 					className: "form-group"
 				}, f.a.createElement("label", null, "Nhóm Định tuyến"), f.a.createElement(s.a, {
 					mode: "multiple",
