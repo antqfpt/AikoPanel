@@ -153,7 +153,7 @@
                     w = x.get("monthAbbr"),
                     O = x.get("dayOfWeek"),
                     S = x.get("dayOfWeekAbbr");
-                return (t || "").replace(/{yyyy}/g, l + "").replace(/{yy}/g, l % 100 + "").replace(/{Q}/g, c + "").replace(/{MMMM}/g, _[u - 1]).replace(/{MMM}/g, w[u - 1]).replace(/{MM}/g, v(u, 2)).replace(/{M}/g, u + "").replace(/{dd}/g, v(f, 2)).replace(/{d}/g, f + "").replace(/{eeee}/g, O[d]).replace(/{ee}/g, S[d]).replace(/{e}/g, d + "").replace(/{HH}/g, v(h, 2)).replace(/{H}/g, h + "").replace(/{hh}/g, v(p + "", 2)).replace(/{h}/g, p + "").replace(/{mm}/g, v(g, 2)).replace(/{m}/g, g + "").replace(/{ss}/g, v(m, 2)).replace(/{s}/g, m + "").replace(/{SSS}/g, v(y, 3)).replace(/{S}/g, y + "")
+                return (t || "").replace(/{yyyy}/g, l + "").replace(/{yy}/g, l % 100 + "").replace(/{Q}/g, c + "").replace(/{MMMM}/g, _[u - 1]).replace(/{MMM}/g, w[u - 1]).replace(/{MM}/g, v(u, 2)).replace(/{M}/g, u + "").replace(/{dd}/g, v(f, 2)).replace(/{d}/g, f + "").replace(/{eeee}/g, O[d]).replace(/{ee}/g, S[d]).replace(/{e}/g, d + "").replace(/{HH}/g, v(h, 2)).replace(/{H}/g, h + "").replace(/{hh}/g, v((h % 12 || 12) + "", 2)).replace(/{h}/g, (h % 12 || 12) + "").replace(/{mm}/g, v(g, 2)).replace(/{m}/g, g + "").replace(/{ss}/g, v(m, 2)).replace(/{s}/g, m + "").replace(/{SSS}/g, v(y, 3)).replace(/{S}/g, y + "")
             }
 
             function w(e, t, n, i, o) {
