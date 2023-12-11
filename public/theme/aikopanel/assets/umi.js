@@ -25164,7 +25164,7 @@
 					visible: !1,
 					withdrawMethod: void 0,
 					withdrawAccount: void 0,
-					withdrawNumberAccount: void 0
+					withdrawAmount: void 0
 				}
 			}
 			show() {
@@ -25173,14 +25173,14 @@
 				}), this.setState({
 					withdrawMethod: void 0,
 					withdrawAccount: void 0,
-					withdrawNumberAccount: void 0
+					withdrawAmount: void 0
 				})
 			}
 			ok() {
 				this.props.dispatch({
 					type: "ticket/withdraw",
 					withdrawAccount: this.state.withdrawAccount,
-					withdrawNumberAccount: this.state.withdrawNumberAccount,
+					withdrawAmount: this.state.withdrawAmount,
 					withdrawMethod: this.state.withdrawMethod,
 					callback: () => {
 						this.show()
@@ -25227,26 +25227,28 @@
 				}, e)))))), s.a.createElement("div", {
 					className: "form-group"
 				}, s.a.createElement("label", null, Object(u.formatMessage)({
+					id: "Tài Khoản Rút Tiền"
+				})), s.a.createElement(o.a, {
+					type: "text",
+					className: "form-control",
+					placeholder: Object(u.formatMessage)({
+						id: "Vui lòng nhập Tài Khoản Rút Tiền"
+					}),
+					onChange: e => this.setState({
+						withdrawAccount: e.target.value
+					})
+				})),s.a.createElement("div", {
+					className: "form-group"
+				}, s.a.createElement("label", null, Object(u.formatMessage)({
 					id: "Số tiền cần rút"
 				})), s.a.createElement(o.a, {
 					type: "text",
 					className: "form-control",
 					placeholder: Object(u.formatMessage)({
-						id: "Vui lòng nhập số tiền cần rút"
+						id: "Vui lòng nhập Số tiền cần rút"
 					}),
 					onChange: e => this.setState({
-						withdrawAccount: e.target.value
-					})
-				}),s.a.createElement("label", null, Object(u.formatMessage)({
-					id: "Tài khoản nhận tiền"
-				})), s.a.createElement(o.a, {
-					type: "text",
-					className: "form-control",
-					placeholder: Object(u.formatMessage)({
-						id: "Vui lòng nhập Tài khoản nhận tiền"
-					}),
-					onChange: e => this.setState({
-						withdrawNumberAccount: e.target.value
+						withdrawAmount: e.target.value
 					})
 				}))))
 			}
@@ -32499,10 +32501,10 @@
 					return u().wrap((function(t) {
 						for (;;) switch (t.prev = t.next) {
 							case 0:
-								return n = e.withdrawAccount, r = e.withdrawMethod, q = e.withdrawNumberAccount, o = e.callback, t.next = 3, Object(a.b)("/user/ticket/withdraw", {
+								return n = e.withdrawAccount, r = e.withdrawMethod, q = e.withdrawAmount, o = e.callback, t.next = 3, Object(a.b)("/user/ticket/withdraw", {
 									withdraw_account: n,
 									withdraw_method: r,
-									withdraw_numberaccount: q
+									withdraw_amount: q
 								});
 							case 3:
 								if (200 === t.sent.code) {
