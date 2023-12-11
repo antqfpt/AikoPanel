@@ -4845,7 +4845,23 @@
 					onClick: () => this.props.dispatch({
 						type: "config/testSendMail"
 					})
-				}, "Gửi email kiểm tra")))), f.a.createElement(s.a.TabPane, {
+				}, "Gửi email kiểm tra")), f.a.createElement(
+                    m,
+                    {
+                      title: "Bật thông báo Report Payments Success",
+                      description:
+                        "Sau khi mở khi khách hàng thanh toán thành công thì sẽ gửi mail thông báo cho khách hàng.",
+                    },
+                    f.a.createElement(c["a"], {
+                      checked: parseInt(v.email_payment_suscess),
+                      onChange: (e) =>
+                        this.set(
+                          "email",
+                          "email_payment_suscess",
+                          e ? 1 : 0
+                        ),
+                    })
+                  ))), f.a.createElement(s.a.TabPane, {
 					tab: "Liên kết",
 					key: "telegram"
 				}, f.a.createElement("div", {
