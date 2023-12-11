@@ -754,7 +754,7 @@
                     date: "DD-MM-YYYY",
                     dateTime: "DD-MM-YYYY HH:mm:ss",
                     week: "gggg-wo",
-                    month: "YYYY-MM"
+                    month: "MM-YYYY"
                 },
                 pe = {
                     date: "dateFormat",
