@@ -4966,8 +4966,7 @@
 					placeholder: "Vui lòng nhập telegram id của bạn (ID này sẽ nhận được thông báo backup database)", 
 					defaultValue: w.database_telegram_id,
 					onChange: e => this.set("app", "database_telegram_id", e.target.value)
-				}))),
-				f.a.createElement("div", {
+				}))),f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
 					title: "Cloudflare API",
@@ -4979,11 +4978,10 @@
 					placeholder: "Vui lòng nhập Zone ID của bạn",
 					defaultValue: w.cloudflare_zone_id,
 					onChange: e => this.set("app", "cloudflare_zone_id", e.target.value)
-				}),f.a.createElement(a.a, {
+				}), f.a.createElement(a.a, {
 					addonAfter: "API Token",
 					size: "large",
 					type: "text",
-					className: "form-control",
 					placeholder: "Vui lòng nhập API Cloudflare Token của bạn", 
 					defaultValue: w.cloudflare_api_token,
 					onChange: e => this.set("app", "cloudflare_api_token", e.target.value)
