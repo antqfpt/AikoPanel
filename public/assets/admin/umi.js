@@ -4540,6 +4540,12 @@
 				}, f.a.createElement(c.a, {
 					checked: parseInt(r.show_info_to_server_enable),
 					onChange: e => this.set("subscribe", "show_info_to_server_enable", e ? 1 : 0)
+				})),f.a.createElement(m, {
+					title: "Sắp xếp thứ tự các Server",
+					description: "Sắp xếp lại các server của máy chủ theo thứ tự online từ nhỏ tới lớn"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(r.arrange_server_enable),
+					onChange: e => this.set("subscribe", "arrange_server_enable", e ? 1 : 0)
 				})))), f.a.createElement(s.a.TabPane, {
 					tab: "Mời & Thanh toán",
 					key: "invite"
@@ -9743,9 +9749,52 @@
 						key: Math.random(),
 						value: t.id
 					}, t.name)
-				})))), d.a.createElement("div", {
+				})))), d.a.createElement(
+					"div",
+					{
+						className: "row",
+					},
+					d.a.createElement(
+						"div",
+						{
+							className:
+								"form-group col-md-12 col-xs-12",
+						},
+						d.a.createElement(
+							"label",
+							null,
+							"Ưu tiên sắp xếp ",
+						),
+						d.a.createElement(
+							a.a,
+							{
+								value: e.arrange_priority,
+								style: {
+									width: "100%",
+								},
+								onChange: (e) =>
+									this.formChange("arrange_priority", e),
+							},
+							d.a.createElement(
+								a.a.Option,
+								{
+									value: 0,
+								},
+								"Không"
+							),
+							d.a.createElement(
+								a.a.Option,
+								{
+									value: 1,
+								},
+								"Có"
+							)
+						),
+					)
+				),
+				d.a.createElement("div", {
 					className: "form-group"
-				}, d.a.createElement("label", null, "Đồng Hạng Địa chỉ"), d.a.createElement(a.a, {
+				}, d.a.createElement("label", null, "Nhóm Định tuyến"), d.a.createElement(a.a, {
 					mode: "multiple",
 					value: e.route_id || [],
 					placeholder: "Vui lòng chọn nhóm định tuyến",
@@ -22362,7 +22411,50 @@
 						key: Math.random(),
 						value: t.id
 					}, t.name)
-				})))), h.a.createElement("div", {
+				})))), h.a.createElement(
+					"div",
+					{
+						className: "row",
+					},
+					h.a.createElement(
+						"div",
+						{
+							className:
+								"form-group col-md-12 col-xs-12",
+						},
+						h.a.createElement(
+							"label",
+							null,
+							"Ưu tiên sắp xếp ",
+						),
+						h.a.createElement(
+							a.a,
+							{
+								value: e.arrange_priority,
+								style: {
+									width: "100%",
+								},
+								onChange: (e) =>
+									this.formChange("arrange_priority", e),
+							},
+							h.a.createElement(
+								a.a.Option,
+								{
+									value: 0,
+								},
+								"Không"
+							),
+							h.a.createElement(
+								a.a.Option,
+								{
+									value: 1,
+								},
+								"Có"
+							)
+						),
+					)
+				),
+				h.a.createElement("div", {
 					className: "form-group"
 				}, h.a.createElement("label", null, "Nhóm Định Tuyến"), h.a.createElement(a.a, {
 					mode: "multiple",
@@ -78521,7 +78613,49 @@
 						key: Math.random(),
 						value: t.id
 					}, t.name)
-				})))), y.a.createElement("div", {
+				})))), y.a.createElement(
+					"div",
+					{
+						className: "row",
+					},
+					y.a.createElement(
+						"div",
+						{
+							className:
+								"form-group col-md-12 col-xs-12",
+						},
+						y.a.createElement(
+							"label",
+							null,
+							"Ưu tiên sắp xếp ",
+						),
+						y.a.createElement(
+							N.a,
+							{
+								value: e.arrange_priority,
+								style: {
+									width: "100%",
+								},
+								onChange: (e) =>
+									this.formChange("arrange_priority", e),
+							},
+							y.a.createElement(
+								N.a.Option,
+								{
+									value: 0,
+								},
+								"Không"
+							),
+							y.a.createElement(
+								N.a.Option,
+								{
+									value: 1,
+								},
+								"Có"
+							)
+						),
+					)
+				),y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, "Nhóm Định Tuyến"), y.a.createElement(N.a, {
 					mode: "multiple",
@@ -78968,7 +79102,49 @@
 						key: Math.random(),
 						value: t.id
 					}, t.name)
-				})))), y.a.createElement("div", {
+				})))),                             y.a.createElement(
+					"div",
+					{
+						className: "row",
+					},
+					y.a.createElement(
+						"div",
+						{
+							className:
+								"form-group col-md-12 col-xs-12",
+						},
+						y.a.createElement(
+							"label",
+							null,
+							"Ưu tiên sắp xếp ",
+						),
+						y.a.createElement(
+							N.a,
+							{
+								value: e.arrange_priority,
+								style: {
+									width: "100%",
+								},
+								onChange: (e) =>
+									this.formChange("arrange_priority", e),
+							},
+							y.a.createElement(
+								N.a.Option,
+								{
+									value: 0,
+								},
+								"Không"
+							),
+							y.a.createElement(
+								N.a.Option,
+								{
+									value: 1,
+								},
+								"Có"
+							)
+						),
+					)
+				),y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, "Nhóm Định Tuyến"), y.a.createElement(N.a, {
 					mode: "multiple",
@@ -84720,7 +84896,49 @@
 						key: Math.random(),
 						value: t.id
 					}, t.name)
-				})))), f.a.createElement("div", {
+				})))),                             f.a.createElement(
+					"div",
+					{
+						className: "row",
+					},
+					f.a.createElement(
+						"div",
+						{
+							className:
+								"form-group col-md-12 col-xs-12",
+						},
+						f.a.createElement(
+							"label",
+							null,
+							"Ưu tiên sắp xếp ",
+						),
+						f.a.createElement(
+							s.a,
+							{
+								value: e.arrange_priority,
+								style: {
+									width: "100%",
+								},
+								onChange: (e) =>
+									this.formChange("arrange_priority", e),
+							},
+							f.a.createElement(
+								s.a.Option,
+								{
+									value: 0,
+								},
+								"Không"
+							),
+							f.a.createElement(
+								s.a.Option,
+								{
+									value: 1,
+								},
+								"Có"
+							)
+						),
+					)
+				),f.a.createElement("div", {
 					className: "form-group"
 				}, f.a.createElement("label", null, "Nhóm Định tuyến"), f.a.createElement(s.a, {
 					mode: "multiple",

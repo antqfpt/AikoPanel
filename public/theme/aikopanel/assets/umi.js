@@ -13397,6 +13397,22 @@
 					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3"
 				}, Object(m.formatMessage)({
 					id: "Tham Gia Ngay"
+				}))))) : l.a.createElement(l.a.Fragment, null), r.zalo_discuss_link ? l.a.createElement("div", {
+					className: "block block-rounded join_telegram_disscuss",
+				}, l.a.createElement("div", {
+					className: "block-header block-header-default",
+				}, l.a.createElement("h3", {
+					className: "block-title",
+				}, Object(m.formatMessage)({
+					id: "Nhóm Zalo",
+				})), l.a.createElement("div", {
+					className: "block-options",
+				}, l.a.createElement("a", {
+					href: r.zalo_discuss_link,
+					target: "_blank",
+					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3",
+				}, Object(m.formatMessage)({
+					id: "Vào ngay",
 				}))))) : l.a.createElement(l.a.Fragment, null), l.a.createElement("div", {
 					className: "block block-rounded "
 				}, l.a.createElement("div", {
