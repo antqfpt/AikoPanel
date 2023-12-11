@@ -12969,6 +12969,12 @@
 									  onChange: this.handleSelectChange,
 									},
 									l.a.createElement(
+										"option",
+										Object(m.formatMessage)({
+										  id: "Vui lòng chọn SNI",
+										})
+									),
+									l.a.createElement(
 									  "option",
 									  {
 										value: '1',
