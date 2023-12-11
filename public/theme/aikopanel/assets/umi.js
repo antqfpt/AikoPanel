@@ -11967,9 +11967,9 @@
 			yearSelect: "연 선택",
 			decadeSelect: "연대 선택",
 			yearFormat: "YYYY년",
-			dateFormat: "DD-MM-YYYY",
+			dateFormat: "YYYY-MM-DD",
 			dayFormat: "Do",
-			dateTimeFormat: "DD-MM-YYYY HH:mm:ss",
+			dateTimeFormat: "YYYY-MM-DD HH:mm:ss",
 			monthBeforeYear: !1,
 			previousMonth: "이전 달 (PageUp)",
 			nextMonth: "다음 달 (PageDown)",
@@ -12872,184 +12872,165 @@
 				}), l.a.createElement("main", {
 					id: "main-container",
 				}, l.a.createElement("div", {
-						className: "content content-full",
-					}, r.change_sni_enable && t.allow_change_sni && d.plan_id ? l.a.createElement("div", {
-						className: "row mb-3 mb-md-0",
-					}, l.a.createElement("div", {
-						className: "col-md-12",
-					}, l.a.createElement("div", {
-						className: "block block-rounded ",
-					}, l.a.createElement("div", {
-						className: "block-header block-header-default",
-					}, l.a.createElement("h3", {
-						className: "block-title",
-					}, Object(m.formatMessage)({
-						id: "Thay đổi SNI",
-					})), l.a.createElement("div", {
-						className: "block-options",
-					})), l.a.createElement("div", {
-						className: "block-content",
-					}, l.a.createElement("div", {
-						className: "row push",
-					}, t.user_status ? l.a.createElement("div", {
-						className: "col-lg-8 col-xl-5",
-					}, l.a.createElement("div", {
-						className: "form-group",
-					}, l.a.createElement("label", null, Object(m.formatMessage)({
-						id: "SNI Hiện tại",
-					}), ": ", t.sni), l.a.createElement("select", {
-						className: "form-control",
-						ref: "new_sni",
-					}, l.a.createElement("option", {
-						value: "custom",
-					}, Object(m.formatMessage)({
-						id: "SNI tùy chỉnh",
-					})), l.a.createElement("option", {
-						value: 1,
-					}, Object(m.formatMessage)({
-						id: "Nền Liên Quân Viettel",
-					})), l.a.createElement("option", {
-						value: 2,
-					}, Object(m.formatMessage)({
-						id: "Nền Free Fire Viettel",
-					})), l.a.createElement("option", {
-						value: 3,
-					}, Object(m.formatMessage)({
-						id: "Nền TikTok Viettel",
-					})), new_sni == "custom" ? l.a.createElement("input", {
-						type: "text",
-						className: "form-control",
-						placeholder: Object(m.formatMessage)({
-							id: "Vui lòng nhập SNI mới",
-						}),
-						ref: "new_sni",
-					}) : l.a.createElement(l.a.Fragment, null)), l.a.createElement(i.a, {
-						type: "primary",
-						onClick: () => this.changeSNI(),
-						loading: z,
-					}, Object(m.formatMessage)({
-						id: "Lưu",
-					})))) : l.a.createElement("div", {
-						className: "alert alert-warning mb-3",
-						role: "alert",
-					}, Object(m.formatMessage)({
-						id: "Lưu ý : Bạn cần mua gói thì mới có thể đổi SNI ",
-					}))))))) : l.a.createElement(l.a.Fragment, null),
-					l.a.createElement("div", {
-						className: "row mb-3 mb-md-0",
-					}, l.a.createElement("div", {
-						className: "col-md-12",
-					}, l.a.createElement("div", {
-						className: "block block-rounded ",
-					}, l.a.createElement("div", {
-						className: "block-header block-header-default",
-					}, l.a.createElement("h3", {
-						className: "block-title",
-					}, Object(m.formatMessage)({
-						id: "Cá nhân hoá",
-					})), l.a.createElement("div", {
-						className: "block-options",
-					})), l.a.createElement("div", {
-						className: "block-content",
-					}, l.a.createElement("div", {
-						className: "row push",
-					}, l.a.createElement("div", {
-						className: "col-lg-8 col-xl-5",
-					}, l.a.createElement("div", {
-						className: "form-group",
-					}, l.a.createElement("label", null, Object(m.formatMessage)({
-						id: "Thay đổi Avatar User",
-					}), ), l.a.createElement("input", {
-						type: "text",
-						className: "form-control",
-						placeholder: Object(m.formatMessage)({
-							id: "Vui lòng nhập URL avatar mới",
-						}),
-						ref: "new_avatar_url",
-					})), l.a.createElement(i.a, {
-						type: "primary",
-						onClick: () => this.changeAvatar(),
-						loading: y,
-					}, Object(m.formatMessage)({
-						id: "Lưu",
-					})))))))), l.a.createElement("div", {
-						className: "row mb-3 mb-md-0",
-					}, l.a.createElement("div", {
-						className: "col-md-12",
-					}, r.is_telegram ? l.a.createElement("div", {
-						className: "block block-rounded bind_telegram",
-					}, l.a.createElement("div", {
-						className: "block-header block-header-default",
-					}, l.a.createElement("h3", {
-						className: "block-title",
-					}, Object(m.formatMessage)({
-						id: "BIND Telegram",
-					})), l.a.createElement("div", {
-						className: "block-options",
-					}, l.a.createElement(h.a, null, l.a.createElement("button", {
-						type: "button",
-						className: "btn btn-primary btn-sm btn-primary btn-rounded px-3",
-					}, Object(m.formatMessage)({
-						id: "Liên kết ngay",
-					})))))) : l.a.createElement(l.a.Fragment, null), r.telegram_discuss_link ? l.a.createElement("div", {
-						className: "block block-rounded join_telegram_disscuss",
-					}, l.a.createElement("div", {
-						className: "block-header block-header-default",
-					}, l.a.createElement("h3", {
-						className: "block-title",
-					}, Object(m.formatMessage)({
-						id: "Nhóm thảo luận Telegram",
-					})), l.a.createElement("div", {
-						className: "block-options",
-					}, l.a.createElement("a", {
-						href: r.telegram_discuss_link,
-						target: "_blank",
-						className: "btn btn-primary btn-sm btn-primary btn-rounded px-3",
-					}, Object(m.formatMessage)({
-						id: "Vào ngay",
-					}))))) : l.a.createElement(l.a.Fragment, null), r.zalo_discuss_link ? l.a.createElement("div", {
-						className: "block block-rounded join_telegram_disscuss",
-					}, l.a.createElement("div", {
-						className: "block-header block-header-default",
-					}, l.a.createElement("h3", {
-						className: "block-title",
-					}, Object(m.formatMessage)({
-						id: "Nhóm Zalo",
-					})), l.a.createElement("div", {
-						className: "block-options",
-					}, l.a.createElement("a", {
-						href: r.zalo_discuss_link,
-						target: "_blank",
-						className: "btn btn-primary btn-sm btn-primary btn-rounded px-3",
-					}, Object(m.formatMessage)({
-						id: "Vào ngay",
-					}))))) : l.a.createElement(l.a.Fragment, null), l.a.createElement("div", {
-						className: "block block-rounded ",
-					}, l.a.createElement("div", {
-						className: "block-header block-header-default",
-					}, l.a.createElement("h3", {
-						className: "block-title",
-					}, Object(m.formatMessage)({
-						id: "Đặt lại thông tin đăng ký",
-					})), l.a.createElement("div", {
-						className: "block-options",
-					})), l.a.createElement("div", {
-						className: "block-content",
-					}, l.a.createElement("div", {
-						className: "row push",
-					}, l.a.createElement("div", {
-						className: "col-md-12",
-					}, l.a.createElement("div", {
-						className: "alert alert-warning mb-3",
-						role: "alert",
-					}, Object(m.formatMessage)({
-						id: "Khi địa chỉ đăng ký hoặc tài khoản của bạn bị rò rỉ và bị người khác lạm dụng, bạn có thể đặt lại thông tin đăng ký tại đây để tránh gây ra những tổn thất không cần thiết.",
-					})), l.a.createElement(i.a, {
-						type: "danger",
-						onClick: () => this.resetSecurity(),
-					}, Object(m.formatMessage)({
-						id: "Đặt lại link liên kết UUID mới",
-					})))))))))));
+					className: "content content-full",
+				}, d.plan_id ? l.a.createElement("div", {
+					className: "row mb-3 mb-md-0",
+				}, l.a.createElement("div", {
+					className: "col-md-12",
+				}, l.a.createElement("div", {
+					className: "block block-rounded ",
+				}, l.a.createElement("div", {
+					className: "block-header block-header-default",
+				}, l.a.createElement("h3", {
+					className: "block-title",
+				}, Object(m.formatMessage)({
+					id: "Thay đổi SNI",
+				})), l.a.createElement("div", {
+					className: "block-options",
+				})), l.a.createElement("div", {
+					className: "block-content",
+				}, l.a.createElement("div", {
+					className: "row push",
+				}, t.user_status ? l.a.createElement("div", {
+					className: "col-lg-8 col-xl-5",
+				}, l.a.createElement("div", {
+					className: "form-group",
+				}, l.a.createElement("label", null, Object(m.formatMessage)({
+					id: "SNI Hiện tại",
+				}), ": ", t.sni), l.a.createElement("input", {
+					type: "text",
+					className: "form-control",
+					placeholder: Object(m.formatMessage)({
+						id: "Vui lòng nhập SNI mới",
+					}),
+					ref: "new_sni",
+				})), l.a.createElement(i.a, {
+					type: "primary",
+					onClick: () => this.changeSNI(),
+					loading: z,
+				}, Object(m.formatMessage)({
+					id: "Lưu",
+				}))) : l.a.createElement("div", {
+					className: "alert alert-warning mb-3",
+					role: "alert",
+				}, Object(m.formatMessage)({
+					id: "Lưu ý : Bạn cần mua gói thì mới có thể đổi SNI ",
+				}))))))) : l.a.createElement(l.a.Fragment, null),  
+				l.a.createElement("div", {
+					className: "row mb-3 mb-md-0",
+				}, l.a.createElement("div", {
+					className: "col-md-12",
+				}, l.a.createElement("div", {
+					className: "block block-rounded ",
+				}, l.a.createElement("div", {
+					className: "block-header block-header-default",
+				}, l.a.createElement("h3", {
+					className: "block-title",
+				}, Object(m.formatMessage)({
+					id: "Cá nhân hoá",
+				})), l.a.createElement("div", {
+					className: "block-options",
+				})), l.a.createElement("div", {
+					className: "block-content",
+				}, l.a.createElement("div", {
+					className: "row push",
+				}, l.a.createElement("div", {
+					className: "col-lg-8 col-xl-5",
+				}, l.a.createElement("div", {
+					className: "form-group",
+				}, l.a.createElement("label", null, Object(m.formatMessage)({
+					id: "Thay đổi Avatar User",
+				}), ), l.a.createElement("input", {
+					type: "text",
+					className: "form-control",
+					placeholder: Object(m.formatMessage)({
+						id: "Vui lòng nhập URL avatar mới",
+					}),
+					ref: "new_avatar_url",
+				})), l.a.createElement(i.a, {
+					type: "primary",
+					onClick: () => this.changeAvatar(),
+					loading: y,
+				}, Object(m.formatMessage)({
+					id: "Lưu",
+				})))))))), l.a.createElement("div", {
+					className: "row mb-3 mb-md-0",
+				}, l.a.createElement("div", {
+					className: "col-md-12",
+				}, r.is_telegram ? l.a.createElement("div", {
+					className: "block block-rounded bind_telegram",
+				}, l.a.createElement("div", {
+					className: "block-header block-header-default",
+				}, l.a.createElement("h3", {
+					className: "block-title",
+				}, Object(m.formatMessage)({
+					id: "BIND Telegram",
+				})), l.a.createElement("div", {
+					className: "block-options",
+				}, l.a.createElement(h.a, null, l.a.createElement("button", {
+					type: "button",
+					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3",
+				}, Object(m.formatMessage)({
+					id: "Liên kết ngay",
+				})))))) : l.a.createElement(l.a.Fragment, null), r.telegram_discuss_link ? l.a.createElement("div", {
+					className: "block block-rounded join_telegram_disscuss",
+				}, l.a.createElement("div", {
+					className: "block-header block-header-default",
+				}, l.a.createElement("h3", {
+					className: "block-title",
+				}, Object(m.formatMessage)({
+					id: "Nhóm thảo luận Telegram",
+				})), l.a.createElement("div", {
+					className: "block-options",
+				}, l.a.createElement("a", {
+					href: r.telegram_discuss_link,
+					target: "_blank",
+					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3",
+				}, Object(m.formatMessage)({
+					id: "Vào ngay",
+				}))))) : l.a.createElement(l.a.Fragment, null), r.zalo_discuss_link ? l.a.createElement("div", {
+					className: "block block-rounded join_telegram_disscuss",
+				}, l.a.createElement("div", {
+					className: "block-header block-header-default",
+				}, l.a.createElement("h3", {
+					className: "block-title",
+				}, Object(m.formatMessage)({
+					id: "Nhóm Zalo",
+				})), l.a.createElement("div", {
+					className: "block-options",
+				}, l.a.createElement("a", {
+					href: r.zalo_discuss_link,
+					target: "_blank",
+					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3",
+				}, Object(m.formatMessage)({
+					id: "Vào ngay",
+				}))))) : l.a.createElement(l.a.Fragment, null), l.a.createElement("div", {
+					className: "block block-rounded ",
+				}, l.a.createElement("div", {
+					className: "block-header block-header-default",
+				}, l.a.createElement("h3", {
+					className: "block-title",
+				}, Object(m.formatMessage)({
+					id: "Đặt lại thông tin đăng ký",
+				})), l.a.createElement("div", {
+					className: "block-options",
+				})), l.a.createElement("div", {
+					className: "block-content",
+				}, l.a.createElement("div", {
+					className: "row push",
+				}, l.a.createElement("div", {
+					className: "col-md-12",
+				}, l.a.createElement("div", {
+					className: "alert alert-warning mb-3",
+					role: "alert",
+				}, Object(m.formatMessage)({
+					id: "Khi địa chỉ đăng ký hoặc tài khoản của bạn bị rò rỉ và bị người khác lạm dụng, bạn có thể đặt lại thông tin đăng ký tại đây để tránh gây ra những tổn thất không cần thiết.",
+				})), l.a.createElement(i.a, {
+					type: "danger",
+					onClick: () => this.resetSecurity(),
+				}, Object(m.formatMessage)({
+					id: "Đặt lại link liên kết UUID mới",
+				})))))))))));
 			}
 		}
 		t.default = Object(p.c)((e) => ({
@@ -13155,7 +13136,7 @@
 					id: "Ví Tiền Của Bạn"
 				})), l.a.createElement("p", {
 					className: "display-4 text-black font-w300 mb-2"
-				}, void 0 !== t.balance ? (parseInt(t.balance) / 100).toLocaleString() : "--.--", l.a.createElement("span", {
+				}, void 0 !== t.balance ? (parseInt(t.balance) / 100).toFixed(2) : "--.--", l.a.createElement("span", {
 					className: "font-size-h5 text-muted ml-4"
 				}, r.currency)), l.a.createElement("span", {
 					className: "text-muted",
@@ -14649,7 +14630,7 @@
 						className: "py-2"
 					}, a.a.createElement("p", {
 						className: "h1 mb-2"
-					}, (n.price / 100).toLocaleString(), " ", t.currency_symbol), a.a.createElement("p", {
+					}, t.currency_symbol, " ", (n.price / 100).toFixed(2)), a.a.createElement("p", {
 						className: "h6 text-muted"
 					}, n.tag))), a.a.createElement("div", {
 						className: "block-content py-3"
@@ -14999,13 +14980,13 @@
 					ref: "chat"
 				}, null === (t = this.props.ticket) || void 0 === t ? void 0 : t.message.map((e => e.is_me ? s.a.createElement("div", null, s.a.createElement("div", {
 					className: "font-size-sm text-muted my-2 text-right"
-				}, l()(1e3 * e.created_at).format("DD/MM/YYYY HH:mm")), s.a.createElement("div", {
+				}, l()(1e3 * e.created_at).format("YYYY/MM/DD HH:mm")), s.a.createElement("div", {
 					className: "text-right ml-4"
 				}, s.a.createElement("div", {
 					className: "d-inline-block bg-gray-lighter px-3 py-2 mb-2 mw-100 rounded text-left"
 				}, e.message))) : s.a.createElement("div", null, s.a.createElement("div", {
 					className: "font-size-sm text-muted my-2"
-				}, l()(1e3 * e.created_at).format("DD/MM/YYYY HH:mm")), s.a.createElement("div", {
+				}, l()(1e3 * e.created_at).format("YYYY/MM/DD HH:mm")), s.a.createElement("div", {
 					className: "mr-4"
 				}, s.a.createElement("div", {
 					className: "d-inline-block bg-success-lighter px-3 py-2 mb-2 mw-100 rounded text-left"
@@ -15496,32 +15477,17 @@
 					id: "Mã Đơn Hàng"
 				}), "："), f.a.createElement("span", null, t.trade_no)), t.discount_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Số Tiền Giảm Giá"
-				}), "："), f.a.createElement("span", null, (t.discount_amount / 100).toLocaleString('vi-VN', {
-					style: 'currency',
-					currency: 'VND'
-				}))) : "", t.surplus_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.discount_amount / 100).toFixed(2))) : "", t.surplus_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Số Tiền Giảm Giá từ Đăng Ký Cũ"
-				}), "："), f.a.createElement("span", null, (t.surplus_amount / 100).toLocaleString('vi-VN', {
-					style: 'currency',
-					currency: 'VND'
-				}))) : "", t.refund_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.surplus_amount / 100).toFixed(2))) : "", t.refund_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Số Tiền Hoàn Trả"
-				}), "："), f.a.createElement("span", null, (t.refund_amount / 100).toLocaleString('vi-VN', {
-					style: 'currency',
-					currency: 'VND'
-				}))) : "", t.balance_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.refund_amount / 100).toFixed(2))) : "", t.balance_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Thanh Toán Bằng Số Dư Tài Khoản"
-				}), "："), f.a.createElement("span", null, (t.balance_amount / 100).toLocaleString('vi-VN', {
-					style: 'currency',
-					currency: 'VND'
-				}))) : "", t.pre_handling_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.balance_amount / 100).toFixed(2))) : "", t.pre_handling_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Phí Giao Dịch Thanh Toán"
-				}), "："), f.a.createElement("span", null, (t.pre_handling_amount / 100).toLocaleString('vi-VN', {
-					style: 'currency',
-					currency: 'VND'
-				}))) : "", f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.pre_handling_amount / 100).toFixed(2))) : "", f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Thời Gian Tạo"
-				}), "："), f.a.createElement("span", null, x()(1e3 * t.created_at).format("DD-MM-YYYY HH:mm:ss")))))), 0 === t.status && f.a.createElement(f.a.Fragment, null, f.a.createElement("div", {
+				}), "："), f.a.createElement("span", null, x()(1e3 * t.created_at).format("YYYY-MM-DD HH:mm:ss")))))), 0 === t.status && f.a.createElement(f.a.Fragment, null, f.a.createElement("div", {
 					className: "block block-rounded js-appear-enabled"
 				}, f.a.createElement("div", {
 					className: "block-header block-header-default"
@@ -15593,7 +15559,7 @@
 					className: "col-8"
 				}, t.plan.name, " x ", h.a.periodText[t.period] && h.a.periodText[t.period]()), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, (t.plan[t.period] / 100).toLocaleString(), " ", g.currency_symbol)), t.discount_amount ? f.a.createElement("div", null, f.a.createElement("div", {
+				}, g.currency_symbol, (t.plan[t.period] / 100).toFixed(2))), t.discount_amount ? f.a.createElement("div", null, f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15609,7 +15575,7 @@
 					className: "col-8"
 				}), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, (t.discount_amount / 100).toLocaleString(), " ", g.currency_symbol))) : "", t.surplus_amount ? f.a.createElement("div", null, f.a.createElement("div", {
+				}, g.currency_symbol, (t.discount_amount / 100).toFixed(2)))) : "", t.surplus_amount ? f.a.createElement("div", null, f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15625,7 +15591,7 @@
 					className: "col-8"
 				}), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, (t.surplus_amount / 100).toLocaleString(), " ", g.currency_symbol))) : "", t.refund_amount ? f.a.createElement("div", null, f.a.createElement("div", {
+				}, g.currency_symbol, (t.surplus_amount / 100).toFixed(2)))) : "", t.refund_amount ? f.a.createElement("div", null, f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15641,7 +15607,7 @@
 					className: "col-8"
 				}), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, "- ", (t.refund_amount / 100).toLocaleString(), " ", g.currency_symbol))) : "", t.pre_handling_amount ? f.a.createElement("div", null, f.a.createElement("div", {
+				}, "- ", g.currency_symbol, (t.refund_amount / 100).toFixed(2)))) : "", t.pre_handling_amount ? f.a.createElement("div", null, f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15657,7 +15623,7 @@
 					className: "col-8"
 				}), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, "+ ", (t.pre_handling_amount / 100).toLocaleString()))) : "", f.a.createElement("div", {
+				}, "+ ", (t.pre_handling_amount / 100).toFixed(2)))) : "", f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15666,7 +15632,7 @@
 					id: "Tổng Cộng"
 				})), f.a.createElement("h1", {
 					className: "text-light mt-3 mb-3"
-				}, ((t.total_amount + (t.pre_handling_amount || 0)) / 100).toLocaleString(), " ", g.currency), f.a.createElement("button", {
+				}, g.currency_symbol, " ", ((t.total_amount + (t.pre_handling_amount || 0)) / 100).toFixed(2), " ", g.currency), f.a.createElement("button", {
 					type: "button",
 					className: "btn btn-block btn-primary",
 					disabled: d || "StripeCredit" === E.payment && !w.token,
@@ -19882,7 +19848,7 @@
 				}, Object(u.formatMessage)({
 					id: "Tìm Kiếm",
 				})))), i.a.createElement("div", {
-					className: "dark" === m.header ? "aikopanel-container-title text-white" : "aikopanel-container-title text-black",
+					className: "dark" === m.header ? "v2board-container-title text-white" : "v2board-container-title text-black",
 				}, this.props.title), i.a.createElement("div", null, i.a.createElement("div", {
 					className: "dropdown d-inline-block",
 				}, i.a.createElement("button", {
@@ -19906,7 +19872,7 @@
 					className: "dropdown d-inline-block",
 				}, i.a.createElement("button", {
 					type: "button",
-					className: "dark" === m.header ? "btn-DVS-Aiko btn-primary" : "btn-DVS-Aiko",
+					className: "dark" === m.header ? "btn btn-primary" : "btn",
 					onClick: () => this.showDropmenu("showAvatarMenu"),
 				}, i.a.createElement("img", {
 					className: "user_avatar",
@@ -25160,7 +25126,7 @@
 						}),
 						dataIndex: "record_at",
 						key: "record_at",
-						render: e => e ? h()(1e3 * e).format("DD/MM/YYYY") : "-"
+						render: e => e ? h()(1e3 * e).format("YYYY/MM/DD") : "-"
 					}, {
 						title: Object(v.formatMessage)({
 							id: "Upload Thực Tế"
@@ -25348,7 +25314,7 @@
 					className: "font-size-lg text-white mb-1"
 				}, e.title), l.a.createElement("p", {
 					className: "font-w600 text-white-75"
-				}, v()(1e3 * e.created_at).format("DD-MM-YYYY"))))
+				}, v()(1e3 * e.created_at).format("YYYY-MM-DD"))))
 			}
 			resetPackage() {
 				var e = this.props.user.subscribe,
@@ -25460,16 +25426,8 @@
 					className: "block-content"
 				}, d.email ? d.plan_id ? l.a.createElement("div", null, l.a.createElement("div", null, l.a.createElement("div", {
 					className: "justify-content-md-between align-items-md-center"
-				}, l.a.createElement("div", {
-					className: "font-w700 font-size-dvs"
-				}, Object(b.formatMessage)({
-					id: d.device_limit == null ?
-						"Đang Online {alive_ip} / Không Giới Hạn Thiết Bị" : (d.alive_ip === 0 ? "🟡Đang Online {alive_ip}/{device_limit} Thiết Bị" : "🟢Đang Online {alive_ip}/{device_limit} Thiết Bị")
-				}, {
-					alive_ip: d.alive_ip,
-					device_limit: d.device_limit != null ? d.device_limit : null
-				})), l.a.createElement("div", null, l.a.createElement("h3", {
-					className: "h4 mb-3 dvs-text-center"
+				}, l.a.createElement("div", null, l.a.createElement("h3", {
+					className: "h4 mb-3"
 				}, d.plan.name), null === d.expired_at ? l.a.createElement("p", {
 					className: "font-size-sm text-muted"
 				}, Object(b.formatMessage)({
@@ -25484,7 +25442,7 @@
 				})) : l.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Hết Hạn vào ngày {date}, còn {day} ngày nữa."
 				}, {
-					date: v()(1e3 * d.expired_at).format("DD/MM/YYYY"),
+					date: v()(1e3 * d.expired_at).format("YYYY/MM/DD"),
 					day: ((d.expired_at - v()().format("X")) / 86400).toFixed(0)
 				}), null !== d.reset_day ? 0 !== d.reset_day ? Object(b.formatMessage)({
 					id: "Lưu Lượng Đã Sử Dụng sẽ được đặt lại sau {reset_day} ngày"
@@ -25500,62 +25458,30 @@
 						height: 6
 					}
 				}, l.a.createElement("div", {
-					className: "progress-bar progress-bar-striped progress-bar-animated",
+					className: "progress-bar progress-bar-striped progress-bar-animated bg-".concat(y >= 100 ? "danger" : y >= 80 ? "warning" : "success"),
 					role: "progressbar",
 					style: {
-						width: Object(p.f)(d.u + d.d, d.transfer_enable) + "%",
-						backgroundColor: y < 50 ? "#37b837" : y < 90 ? "#ffff37" : "#ff6363"
+						width: Object(p.f)(d.u + d.d, d.transfer_enable) + "%"
 					}
-				}, l.a.createElement("span", {
-					className: "progress-text",
-					style: {
-						color: y < 50 ? "#56ff59" : y < 90 ? "#ffff37" : "#ff6363"
-					}
-				}, Object(p.f)(d.u + d.d, d.transfer_enable) + "%"))), l.a.createElement("p", {
-					className: "font-size-sm font-w600 mb-3 dvs-text-center"
+				})), l.a.createElement("p", {
+					className: "font-size-sm font-w600 mb-3"
 				}, l.a.createElement("span", {
 					className: "font-w700"
 				}, Object(b.formatMessage)({
 					id: "Đã Sử Dụng {used} / Tổng Cộng {total}"
 				}, {
 					used: Object(p.b)(d.u + d.d),
-					remaining: Object(p.b)(d.transfer_enable - (d.u + d.d)),
 					total: Object(p.b)(d.transfer_enable)
-				})))), l.a.createElement(g.a, {
-					subscribeUrl: d.subscribe_url
-				}, l.a.createElement("div", {
-					className: "aikopanel-DevDVS-App"
-				}, null, l.a.createElement("div", {
-					className: "aikopanel-DevDVS-item"
-				}, l.a.createElement("div", {
-					className: "Aiko-DVS",
-					style: {
-						alignItems: "center"
-					}
-				}, [
-					l.a.createElement("i", {
-						className: "nav-main-link-icon si si-feed"
-					}),
-					Object(b.formatMessage)({
-						id: "Đồng Bộ Máy Chủ Về APP"
-					})
-				])), l.a.createElement("img", {
-					src: "https://cdn-icons-png.flaticon.com/512/732/732225.png",
-					alt: "Ảnh",
-					className: "description1"
-				}), l.a.createElement("img", {
-					src: "https://stc.hnammobilecare.com/hcare/uploads/images/120-logo-android.jpg",
-					alt: "Ảnh",
-					className: "description2"
-				}), l.a.createElement("img", {
-					src: "data:image/png;base64,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",
-					alt: "Ảnh",
-					className: "description3"
-				}), l.a.createElement("img", {
-					src: "https://maychuvatly.com/wp-content/uploads/2020/12/linux.jpg",
-					alt: "Ảnh",
-					className: "description4"
-				}))), y >= 80 && !Object(p.h)(d.expired_at) && (null == d || null === (e = d.plan) || void 0 === e ? void 0 : e.reset_price) && l.a.createElement("div", {
+				})), l.a.createElement("span", {
+					className: "font-w700"
+				}, "  "), l.a.createElement("span", {
+					className: "font-w700"
+				}, Object(b.formatMessage)({
+					id: "Đang Online {alive_ip}/{device_limit} Thiết Bị"
+				}, {
+					alive_ip: d.alive_ip,
+					device_limit: null == d.device_limit ? "∞" : d.device_limit
+				})))), y >= 80 && !Object(p.h)(d.expired_at) && (null == d || null === (e = d.plan) || void 0 === e ? void 0 : e.reset_price) && l.a.createElement("div", {
 					className: "mb-4"
 				}, l.a.createElement(i.a, {
 					type: "primary",
@@ -25598,54 +25524,37 @@
 				}, l.a.createElement("div", {
 					className: "justify-content-md-between align-items-md-center"
 				}, l.a.createElement("div", {
-						className: "mb-3"
-					}, l.a.createElement("div", {
-						className: "aikopanel-shortcuts-item",
-						onClick: () => h.a.push("/knowledge")
-					}, l.a.createElement("div", null, Object(b.formatMessage)({
-						id: "Xem Hướng Dẫn"
-					})), l.a.createElement("div", {
-						className: "description"
-					}, Object(b.formatMessage)({
-						id: "Hướng Dẫn Sử Dụng"
-					}), " ", null === (t = window) || void 0 === t || null === (n = t.settings) || void 0 === n ? void 0 : n.title), l.a.createElement("i", {
-						style: {
-							float: "right"
-						},
-						className: "nav-main-link-icon si si-book-open"
-					})),
-					l.a.createElement("div", {
-						className: "aikopanel-shortcuts-item",
-						onClick: () => h.a.push("/utilities")
-					}, l.a.createElement("div", null, Object(b.formatMessage)({
-						id: "Lấy ID Apple Tải App Cho iPhone"
-					})), l.a.createElement("div", {
-						className: "description"
-					}, Object(b.formatMessage)({
-						id: "Bạn Cần Có Gói Mới Lấy Được ID Apple"
-					})), l.a.createElement("i", {
-						style: {
-							float: "right"
-						},
-						className: "nav-main-link-icon fab fa-apple"
-					})),
-
-					l.a.createElement("div", {
-						className: "aikopanel-shortcuts-item",
-						onClick: () => h.a.push("/utilities")
-					}, l.a.createElement("div", null, Object(b.formatMessage)({
-						id: "Thay Đổi Cài Đặt SNI"
-					})), l.a.createElement("div", {
-						className: "description"
-					}, Object(b.formatMessage)({
-						id: "Thay Đổi SNI Theo Ý Muốn Của Bạn"
-					})), l.a.createElement("i", {
-						style: {
-							float: "right"
-						},
-						className: "nav-main-link-icon fas fa-cog"
-					}))
-				)))))), l.a.createElement("div", {
+					className: "mb-3"
+				}, l.a.createElement(g.a, {
+					subscribeUrl: d.subscribe_url
+				}, l.a.createElement("div", {
+					className: "aikopanel-shortcuts-item"
+				}, l.a.createElement("div", null, Object(b.formatMessage)({
+					id: "Đồng Bộ Máy Chủ Về APP"
+				})), l.a.createElement("div", {
+					className: "description"
+				}, Object(b.formatMessage)({
+					id: "Bạn Cần Phải Mua Gói Này"
+				})), l.a.createElement("i", {
+					style: {
+						float: "right"
+					},
+					className: "nav-main-link-icon si si-feed"
+				}))), l.a.createElement("div", {
+					className: "aikopanel-shortcuts-item",
+					onClick: () => h.a.push(Object(p.m)(d) ? "/plan/" + d.plan_id : "/plan")
+				}, l.a.createElement("div", null, Object(b.formatMessage)({
+					id: Object(p.m)(d) ? "Gia Hạn Gói Dịch Vụ" : "Mua Gói Dịch Vụ"
+				})), l.a.createElement("div", {
+					className: "description"
+				}, Object(b.formatMessage)({
+					id: Object(p.m)(d) ? "Gia hạn gói hiện tại" : "Mua gói bạn đã chọn"
+				})), l.a.createElement("i", {
+					style: {
+						float: "right"
+					},
+					className: "nav-main-link-icon si si-".concat(Object(p.m)(d) ? "clock" : "bag")
+				})))))))), l.a.createElement("div", {
 					className: "row mb-3 mb-md-0"
 				}, l.a.createElement("div", {
 					className: "col-xl-12"
@@ -25664,6 +25573,20 @@
 				}, l.a.createElement("div", {
 					className: "mb-3"
 				}, l.a.createElement("div", {
+					className: "aikopanel-shortcuts-item",
+					onClick: () => h.a.push("/knowledge")
+				}, l.a.createElement("div", null, Object(b.formatMessage)({
+					id: "Xem Hướng Dẫn"
+				})), l.a.createElement("div", {
+					className: "description"
+				}, Object(b.formatMessage)({
+					id: "Hướng Dẫn Sử Dụng"
+				}), " ", null === (t = window) || void 0 === t || null === (n = t.settings) || void 0 === n ? void 0 : n.title), l.a.createElement("i", {
+					style: {
+						float: "right"
+					},
+					className: "nav-main-link-icon si si-book-open"
+				})), l.a.createElement("div", {
 					className: "aikopanel-shortcuts-item",
 					onClick: () => h.a.push(Object(p.m)(d) ? "/plan/" + d.plan_id : "/plan")
 				}, l.a.createElement("div", null, Object(b.formatMessage)({
@@ -26494,7 +26417,7 @@
 				}, e.title), s.a.createElement("small", null, Object(l.formatMessage)({
 					id: "Cập Nhật Cuối: {date}"
 				}, {
-					date: p()(1e3 * e.updated_at).format("DD/MM/YYYY")
+					date: p()(1e3 * e.updated_at).format("YYYY/MM/DD")
 				})))))))))))))))
 			}
 		}
@@ -27122,7 +27045,7 @@
 					t = this.props.plan,
 					n = t.selectPeriod,
 					r = t.plan[n];
-				return e.name && (r -= this.couponProcess(r, e.type, e.value)), r <= 0 && (r = 0), (r / 100).toLocaleString()
+				return e.name && (r -= this.couponProcess(r, e.type, e.value)), r <= 0 && (r = 0), (r / 100).toFixed(2)
 			}
 			getCouponJSX() {
 				var e = this.props.coupon.coupon,
@@ -27146,7 +27069,7 @@
 					className: "col-8"
 				}, e.name), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, "-", (this.couponProcess(r[n], e.type, e.value) / 100).toLocaleString(), " ", o.currency_symbol)))
+				}, "-", o.currency_symbol, (this.couponProcess(r[n], e.type, e.value) / 100).toFixed(2))))
 			}
 			render() {
 				var e = this.props.plan,
@@ -27246,7 +27169,7 @@
 						}
 					}, f.a.createElement("span", {
 						className: "price"
-					}, (t[e] / 100).toLocaleString(), " ", d.currency_symbol))) : void 0
+					}, d.currency_symbol, (t[e] / 100).toFixed(2)))) : void 0
 				}))))), f.a.createElement("div", {
 					className: "col-md-4 col-sm-12"
 				}, f.a.createElement("div", {
@@ -27292,7 +27215,7 @@
 					className: "col-8"
 				}, t.name, " x ", h.a.periodText[n] && h.a.periodText[n]()), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, (t[n] / 100).toLocaleString(), " ", d.currency_symbol)), this.getCouponJSX(), f.a.createElement("div", {
+				}, d.currency_symbol, (t[n] / 100).toFixed(2))), this.getCouponJSX(), f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -29247,38 +29170,25 @@
 			p = n("tI4l");
 		class d extends a.a.Component {
 			constructor(e) {
-				super(e);
-				this.state = {
-					showPassword: false
-				};
-				this.keyDown = this.keyDown.bind(this);
-				this.togglePasswordVisibility = this.togglePasswordVisibility.bind(this);
+				super(e), this.state = {}, this.keyDown = this.keyDown.bind(this)
 			}
-
 			keyDown(e) {
-				if (e.keyCode === 13) {
-					this.login();
-				}
+				13 === e.keyCode && this.login()
 			}
 			componentDidMount() {
 				var e = this.props.location.query.verify,
 					t = this.props.location.query.redirect;
-				if (e) {
-					this.props.dispatch({
-						type: "passport/token2Login",
-						verify: e,
-						redirect: t
-					});
-				}
-				this.props.dispatch({
+				e && this.props.dispatch({
+					type: "passport/token2Login",
+					verify: e,
+					redirect: t
+				}), this.props.dispatch({
 					type: "user/checkLogin",
 					redirect: t
-				});
-				window.addEventListener("keydown", this.keyDown, false);
+				}), window.addEventListener("keydown", this.keyDown, !1)
 			}
-
 			componentWillUnmount() {
-				window.removeEventListener("keydown", this.keyDown, false);
+				window.removeEventListener("keydown", this.keyDown, !1)
 			}
 			login() {
 				var e = this.props.location.query.redirect;
@@ -29287,15 +29197,8 @@
 					email: this.refs.email.value,
 					password: this.refs.password.value,
 					redirect: e
-				});
+				})
 			}
-
-			togglePasswordVisibility() {
-				this.setState({
-					showPassword: !this.state.showPassword
-				});
-			}
-
 			render() {
 				var e = this.props.passport.loginLoading;
 				return a.a.createElement("div", {
@@ -29318,7 +29221,7 @@
 				}, a.a.createElement("div", {
 					className: "mx-2 mx-sm-0"
 				}, a.a.createElement("div", {
-					className: "block block-transparent block-fx-pop w-100 mb-0 overflow-hidden bg-image",
+					className: "block block-rounded block-transparent block-fx-pop w-100 mb-0 overflow-hidden bg-image",
 					style: {
 						boxShadow: "0 0.5rem 2rem #0000000d"
 					}
@@ -29327,89 +29230,51 @@
 				}, a.a.createElement("div", {
 					className: "col-md-12 order-md-1 bg-white"
 				}, a.a.createElement("div", {
-						className: "block-content block-content-full px-lg-4 py-md-4 py-lg-4"
-					}, a.a.createElement("div", {
-						className: "mb-3 text-center"
-					}, a.a.createElement("a", {
-						className: "font-size-h1",
-						href: "javascript:void(0);"
-					}, window.settings.logo ? a.a.createElement("img", {
-						className: "aikopanel-logo mb-3",
-						src: window.settings.logo
-					}) : a.a.createElement("span", {
-						className: "text-dark"
-					}, window.settings.title || "AikoPanel")), window.settings.description && a.a.createElement("p", {
-						className: "font-size-sm text-muted mb-3"
-					}, window.settings.description)),
-					a.a.createElement("div", {
-							className: "form-group",
-							style: {
-								position: 'relative'
-							}
-						},
-						a.a.createElement("i", {
-							className: "fas fa-envelope icon-inside-input"
-						}),
-						a.a.createElement("input", {
-							type: "text",
-							className: "form-control form-control-alt with-icon",
-							placeholder: Object(l.formatMessage)({
-								id: "Tài Khoản Email"
-							}),
-							ref: "email"
-						})
-					),
-					a.a.createElement("div", {
-							className: "form-group",
-							style: {
-								position: 'relative'
-							}
-						},
-						a.a.createElement("i", {
-							className: "fas fa-lock icon-inside-input"
-						}),
-						a.a.createElement("input", {
-							type: this.state.showPassword ? "text" : "password",
-							className: "form-control form-control-alt with-icon",
-							placeholder: Object(l.formatMessage)({
-								id: "Mật Khẩu"
-							}),
-							ref: "password"
-						}),
-						a.a.createElement("button", {
-								onClick: this.togglePasswordVisibility,
-								className: "toggle-password-visibility",
-								style: {
-									position: 'absolute',
-									top: '0',
-									right: '0'
-								}
-							},
-							a.a.createElement("i", {
-								className: this.state.showPassword ? "fas fa-eye-slash" : "fas fa-eye"
-							}),
-							this.state.showPassword ? "Ẩn" : "Hiện"
-						)
-					), a.a.createElement("div", {
-						className: "form-group mb-0"
-					}, a.a.createElement("button", {
-						disabled: e,
-						type: "submit",
-						className: "btn btn-primary font-w400",
-						onClick: () => this.login()
-					}, e ? a.a.createElement(o.a, {
-						type: "loading"
-					}) : a.a.createElement("span", null, a.a.createElement("i", {
-						className: "si si-login mr-1"
-					}), Object(l.formatMessage)({
-						id: "Đăng Nhập"
-					}))), a.a.createElement("a", {
-						className: "font-size-sm text-muted",
-						href: "javascript:void(0);",
-						onClick: () => u.a.push("/forgetpassword")
-					}, Object(l.formatMessage)({
-						id: "Quên Mật Khẩu"
-					})))))), a.a.createElement("div", {
+					className: "block-content block-content-full px-lg-4 py-md-4 py-lg-4"
+				}, a.a.createElement("div", {
+					className: "mb-3 text-center"
+				}, a.a.createElement("a", {
+					className: "font-size-h1",
+					href: "javascript:void(0);"
+				}, window.settings.logo ? a.a.createElement("img", {
+					className: "aikopanel-logo mb-3",
+					src: window.settings.logo
+				}) : a.a.createElement("span", {
+					className: "text-dark"
+				}, window.settings.title || "AikoPanel")), window.settings.description && a.a.createElement("p", {
+					className: "font-size-sm text-muted mb-3"
+				}, window.settings.description)), a.a.createElement("div", {
+					className: "form-group"
+				}, a.a.createElement("input", {
+					type: "text",
+					className: "form-control form-control-alt",
+					placeholder: Object(l.formatMessage)({
+						id: "E-Mail"
+					}),
+					ref: "email"
+				})), a.a.createElement("div", {
+					className: "form-group"
+				}, a.a.createElement("input", {
+					type: "password",
+					className: "form-control form-control-alt",
+					placeholder: Object(l.formatMessage)({
+						id: "Mật Khẩu"
+					}),
+					ref: "password"
+				})), a.a.createElement("div", {
+					className: "form-group mb-0"
+				}, a.a.createElement("button", {
+					disabled: e,
+					type: "submit",
+					className: "btn btn-block btn-primary font-w400",
+					onClick: () => this.login()
+				}, e ? a.a.createElement(o.a, {
+					type: "loading"
+				}) : a.a.createElement("span", null, a.a.createElement("i", {
+					className: "si si-login mr-1"
+				}), Object(l.formatMessage)({
+					id: "Đăng Nhập"
+				}))))))), a.a.createElement("div", {
 					className: "text-left bg-gray-lighter p-3 px-4"
 				}, a.a.createElement("a", {
 					className: "font-size-sm text-muted",
@@ -29417,6 +29282,14 @@
 					onClick: () => u.a.push("/register")
 				}, Object(l.formatMessage)({
 					id: "Đăng Ký"
+				})), a.a.createElement(r.a, {
+					type: "vertical"
+				}), a.a.createElement("a", {
+					className: "font-size-sm text-muted",
+					href: "javascript:void(0);",
+					onClick: () => u.a.push("/forgetpassword")
+				}, Object(l.formatMessage)({
+					id: "Quên Mật Khẩu"
 				})), a.a.createElement(f.a, null, a.a.createElement("span", {
 					className: "aikopanel-login-i18n-btn"
 				}, a.a.createElement("i", {
@@ -29452,7 +29325,6 @@
 				super(e), this.state = {
 					sendEmailVerifyTimeout: 60
 				}
-				this.togglePasswordVisibility = this.togglePasswordVisibility.bind(this);
 			}
 			componentDidMount() {
 				this.props.dispatch({
@@ -29504,13 +29376,6 @@
 					id: "Vui lòng đồng ý với Điều Khoản Dịch Vụ"
 				}))
 			}
-			togglePasswordVisibility() {
-				this.setState({
-					showPassword: !this.state.showPassword
-				});
-
-			}
-
 			render() {
 				var e = this.props.passport,
 					t = e.sendEmailVerifyLoading,
@@ -29570,157 +29435,122 @@
 				}, i.a.createElement("span", {
 					className: "sr-only"
 				}, "Loading..."))) : i.a.createElement("div", null, i.a.createElement("div", {
-						className: "form-group ".concat(c.email_whitelist_suffix ? "aikopanel-email-whitelist-enable" : "")
-					}, i.a.createElement("input", {
-						type: "text",
-						className: "form-control form-control-alt",
-						placeholder: Object(l.formatMessage)({
-							id: "E-Mail"
-						}),
-						ref: "email"
-					}), c.email_whitelist_suffix ? i.a.createElement("select", {
-						className: "form-control form-control-alt",
-						value: p,
-						onChange: e => {
-							this.props.dispatch({
-								type: "guest/setState",
-								payload: {
-									selectEmailSuffix: e.target.value
-								}
-							})
-						}
-					}, c.email_whitelist_suffix.map((e => i.a.createElement("option", {
-						key: e,
-						value: e
-					}, "@", e)))) : ""), c.is_email_verify ? i.a.createElement("div", {
-						className: "form-group form-row"
-					}, i.a.createElement("div", {
-						className: "col-9"
-					}, i.a.createElement("input", {
-						type: "text",
-						className: "form-control form-control-alt",
-						placeholder: Object(l.formatMessage)({
-							id: "Mã Xác Minh Email"
-						}),
-						ref: "email_code"
-					})), i.a.createElement("div", {
-						className: "col-3"
-					}, i.a.createElement(u.a, {
-						visible: c.is_recaptcha,
-						callback: e => this.sendEmailVerify(e)
-					}, i.a.createElement("button", {
-						type: "submit",
-						disabled: 60 !== this.state.sendEmailVerifyTimeout || t,
-						className: "btn btn-block btn-primary font-w400"
-					}, 60 === this.state.sendEmailVerifyTimeout ? t ? i.a.createElement(r.a, {
-						type: "loading"
-					}) : Object(l.formatMessage)({
-						id: "Gửi"
-					}) : this.state.sendEmailVerifyTimeout)))) : "",
-					i.a.createElement("div", {
-						className: "form-group Dev-DVS",
-						style: {
-							position: 'relative'
-						}
-					}, i.a.createElement("input", {
-						type: this.state.showPassword ? "text" : "password",
-						className: "form-control form-control-alt",
-						placeholder: Object(l.formatMessage)({
-							id: "Mật Khẩu"
-						}),
-						ref: "password"
-					}), i.a.createElement("button", {
-							onClick: this.togglePasswordVisibility,
-							className: "toggle-password-visibility",
-							style: {
-								position: 'absolute',
-								top: '0',
-								right: '10px'
+					className: "form-group ".concat(c.email_whitelist_suffix ? "aikopanel-email-whitelist-enable" : "")
+				}, i.a.createElement("input", {
+					type: "text",
+					className: "form-control form-control-alt",
+					placeholder: Object(l.formatMessage)({
+						id: "E-Mail"
+					}),
+					ref: "email"
+				}), c.email_whitelist_suffix ? i.a.createElement("select", {
+					className: "form-control form-control-alt",
+					value: p,
+					onChange: e => {
+						this.props.dispatch({
+							type: "guest/setState",
+							payload: {
+								selectEmailSuffix: e.target.value
 							}
-						},
-						i.a.createElement("i", {
-							className: this.state.showPassword ? "fas fa-eye-slash" : "fas fa-eye"
-						}),
-						this.state.showPassword ? "Ẩn" : "Hiện"
-					)),
-					i.a.createElement("div", {
-						className: "form-group Dev-DVS",
-						style: {
-							position: 'relative'
-						}
-					}, i.a.createElement("input", {
-						type: this.state.showPassword ? "text" : "password",
-						className: "form-control form-control-alt",
-						placeholder: Object(l.formatMessage)({
-							id: "Nhập Lại Mật Khẩu"
-						}),
-						ref: "repassword"
-					}), i.a.createElement("button", {
-							onClick: this.togglePasswordVisibility,
-							className: "toggle-password-visibility",
-							style: {
-								position: 'absolute',
-								top: '0',
-								right: '10px'
-							}
-						},
-						i.a.createElement("i", {
-							className: this.state.showPassword ? "fas fa-eye-slash" : "fas fa-eye"
-						}),
-						this.state.showPassword ? "Ẩn" : "Hiện"
-					)),
-					i.a.createElement("div", {
-						className: "form-group Dev-DVS"
-					}, i.a.createElement("input", {
-						type: "text",
-						disabled: this.props.location.query.code,
-						defaultValue: this.props.location.query.code,
-						className: "form-control form-control-alt",
-						placeholder: Object(l.formatMessage)({
-							id: c.is_invite_force ? "Mã Mời" : "Mã Mời (Không Bắt Buộc)"
-						}),
-						ref: "invite"
-					})), c.tos_url && i.a.createElement("div", {
-						className: "form-group Dev-DVS"
-					}, i.a.createElement("div", {
-						className: "custom-control custom-checkbox custom-control-primary"
-					}, i.a.createElement("input", {
-						type: "checkbox",
-						className: "custom-control-input",
-						checked: this.state.tosChecked,
-						style: {
-							zIndex: 1e3
-						},
-						onClick: () => this.setState({
-							tosChecked: !this.state.tosChecked
 						})
-					}), i.a.createElement("label", {
-						className: "custom-control-label"
-					}, i.a.createElement("div", {
-						dangerouslySetInnerHTML: {
-							__html: Object(l.formatMessage)({
-								id: 'Tôi đã đọc và đồng ý với <a target="_blank" href="{url}">Điều Khoản Dịch Vụ</a>'
-							}, {
-								url: c.tos_url
-							})
-						}
-					})))), i.a.createElement("div", {
-						className: "form-group mb-0"
-					}, i.a.createElement(u.a, {
-						visible: c.is_recaptcha,
-						callback: e => this.register(e)
-					}, i.a.createElement("button", {
-						disabled: n || c.tos_url && !this.state.tosChecked,
-						type: "submit",
-						className: "btn btn-block btn-primary font-w400",
-						onClick: () => this.register()
-					}, n ? i.a.createElement(r.a, {
-						type: "loading"
-					}) : i.a.createElement("span", null, i.a.createElement("i", {
-						className: "si si-emoticon-smile mr-1"
-					}), Object(l.formatMessage)({
-						id: "Đăng Ký"
-					}))))))))), i.a.createElement("div", {
+					}
+				}, c.email_whitelist_suffix.map((e => i.a.createElement("option", {
+					key: e,
+					value: e
+				}, "@", e)))) : ""), c.is_email_verify ? i.a.createElement("div", {
+					className: "form-group form-row"
+				}, i.a.createElement("div", {
+					className: "col-9"
+				}, i.a.createElement("input", {
+					type: "text",
+					className: "form-control form-control-alt",
+					placeholder: Object(l.formatMessage)({
+						id: "Mã Xác Minh Email"
+					}),
+					ref: "email_code"
+				})), i.a.createElement("div", {
+					className: "col-3"
+				}, i.a.createElement(u.a, {
+					visible: c.is_recaptcha,
+					callback: e => this.sendEmailVerify(e)
+				}, i.a.createElement("button", {
+					type: "submit",
+					disabled: 60 !== this.state.sendEmailVerifyTimeout || t,
+					className: "btn btn-block btn-primary font-w400"
+				}, 60 === this.state.sendEmailVerifyTimeout ? t ? i.a.createElement(r.a, {
+					type: "loading"
+				}) : Object(l.formatMessage)({
+					id: "Gửi"
+				}) : this.state.sendEmailVerifyTimeout)))) : "", i.a.createElement("div", {
+					className: "form-group"
+				}, i.a.createElement("input", {
+					type: "password",
+					className: "form-control form-control-alt",
+					placeholder: Object(l.formatMessage)({
+						id: "Mật Khẩu"
+					}),
+					ref: "password"
+				})), i.a.createElement("div", {
+					className: "form-group"
+				}, i.a.createElement("input", {
+					type: "password",
+					className: "form-control form-control-alt",
+					placeholder: Object(l.formatMessage)({
+						id: "Mật Khẩu"
+					}),
+					ref: "repassword"
+				})), i.a.createElement("div", {
+					className: "form-group"
+				}, i.a.createElement("input", {
+					type: "text",
+					disabled: this.props.location.query.code,
+					defaultValue: this.props.location.query.code,
+					className: "form-control form-control-alt",
+					placeholder: Object(l.formatMessage)({
+						id: c.is_invite_force ? "Mã Mời" : "Mã Mời (Không Bắt Buộc)"
+					}),
+					ref: "invite"
+				})), c.tos_url && i.a.createElement("div", {
+					className: "form-group"
+				}, i.a.createElement("div", {
+					className: "custom-control custom-checkbox custom-control-primary"
+				}, i.a.createElement("input", {
+					type: "checkbox",
+					className: "custom-control-input",
+					checked: this.state.tosChecked,
+					style: {
+						zIndex: 1e3
+					},
+					onClick: () => this.setState({
+						tosChecked: !this.state.tosChecked
+					})
+				}), i.a.createElement("label", {
+					className: "custom-control-label"
+				}, i.a.createElement("div", {
+					dangerouslySetInnerHTML: {
+						__html: Object(l.formatMessage)({
+							id: 'Tôi đã đọc và đồng ý với <a target="_blank" href="{url}">Điều Khoản Dịch Vụ</a>'
+						}, {
+							url: c.tos_url
+						})
+					}
+				})))), i.a.createElement("div", {
+					className: "form-group mb-0"
+				}, i.a.createElement(u.a, {
+					visible: c.is_recaptcha,
+					callback: e => this.register(e)
+				}, i.a.createElement("button", {
+					disabled: n || c.tos_url && !this.state.tosChecked,
+					type: "submit",
+					className: "btn btn-block btn-primary font-w400",
+					onClick: () => this.register()
+				}, n ? i.a.createElement(r.a, {
+					type: "loading"
+				}) : i.a.createElement("span", null, i.a.createElement("i", {
+					className: "si si-emoticon-smile mr-1"
+				}), Object(l.formatMessage)({
+					id: "Đăng Ký"
+				}))))))))), i.a.createElement("div", {
 					className: "text-left bg-gray-lighter p-3 px-4"
 				}, i.a.createElement("a", {
 					className: "font-size-sm text-muted",
@@ -36683,7 +36513,7 @@
 								window.$crisp && window.$crisp.push(["set", "session:data", [
 									[
 										["Plan", (null === (o = r.data.plan) || void 0 === o ? void 0 : o.name) || "-"],
-										["ExpireTime", f()(1e3 * r.data.expired_at).format("DD-MM-YYYY")],
+										["ExpireTime", f()(1e3 * r.data.expired_at).format("YYYY-MM-DD")],
 										["UsedTraffic", Object(u.b)(r.data.u + r.data.d)],
 										["AllTraffic", Object(u.b)(r.data.transfer_enable)]
 									]
@@ -37223,7 +37053,7 @@
 				path: "/utilities",
 				exact: !0,
 				component: n("Utilities").default,
-			}, {
+			},{
 				path: "/register",
 				exact: !0,
 				component: n("ap3T").default
@@ -40974,7 +40804,6 @@
 				super(e), this.state = {
 					sendEmailVerifyTimeout: 60
 				}
-				this.togglePasswordVisibility = this.togglePasswordVisibility.bind(this);
 			}
 			componentDidMount() {
 				this.props.dispatch({
@@ -41010,12 +40839,6 @@
 					emailCode: this.refs.email_code.value
 				}) : Object(p.r)("error", "Yêu Cầu Thất Bại", "Hai lần nhập mật khẩu không giống nhau.")
 			}
-			togglePasswordVisibility() {
-				this.setState({
-					showPassword: !this.state.showPassword
-				});
-			}
-
 			render() {
 				var e = this.props.passport,
 					t = e.sendEmailVerifyLoading,
@@ -41051,119 +40874,84 @@
 				}, i.a.createElement("div", {
 					className: "col-md-12 order-md-1 bg-white"
 				}, i.a.createElement("div", {
-						className: "block-content block-content-full px-lg-4 py-md-4 py-lg-4"
-					}, i.a.createElement("div", {
-						className: "mb-3 text-center"
-					}, i.a.createElement("a", {
-						className: "font-size-h1",
-						href: "javascript:void(0);"
-					}, window.settings.logo ? i.a.createElement("img", {
-						className: "aikopanel-logo mb-3",
-						src: window.settings.logo
-					}) : i.a.createElement("span", {
-						className: "text-dark"
-					}, window.settings.title || "AikoPanel")), window.settings.description && i.a.createElement("p", {
-						className: "font-size-sm text-muted mb-3"
-					}, window.settings.description)), i.a.createElement("div", {
-						className: "form-group Dev-DVS"
-					}, i.a.createElement("input", {
-						type: "text",
-						className: "form-control form-control-alt",
-						placeholder: Object(l.formatMessage)({
-							id: "E-Mail"
-						}),
-						ref: "email"
-					})), i.a.createElement("div", {
-						className: "form-group form-row"
-					}, i.a.createElement("div", {
-						className: "col-9"
-					}, i.a.createElement("input", {
-						type: "text",
-						className: "form-control form-control-alt",
-						placeholder: Object(l.formatMessage)({
-							id: "Mã Xác Minh Email"
-						}),
-						ref: "email_code"
-					})), i.a.createElement("div", {
-						className: "col-3"
-					}, i.a.createElement(u.a, {
-						visible: o.is_recaptcha,
-						callback: e => this.sendEmailVerify(e)
-					}, i.a.createElement("button", {
-						type: "submit",
-						disabled: 60 !== this.state.sendEmailVerifyTimeout || t,
-						className: "btn btn-block btn-primary"
-					}, 60 === this.state.sendEmailVerifyTimeout ? t ? i.a.createElement(r.a, {
-						type: "loading"
-					}) : Object(l.formatMessage)({
-						id: "Gửi"
-					}) : this.state.sendEmailVerifyTimeout)))),
-					i.a.createElement("div", {
-						className: "form-group",
-						style: {
-							position: 'relative'
-						}
-					}, i.a.createElement("input", {
-						type: this.state.showPassword ? "text" : "password",
-						className: "form-control form-control-alt",
-						placeholder: Object(l.formatMessage)({
-							id: "Mật Khẩu"
-						}),
-						ref: "password"
-					}), i.a.createElement("button", {
-							onClick: this.togglePasswordVisibility,
-							className: "toggle-password-visibility",
-							style: {
-								position: 'absolute',
-								top: '0',
-								right: '10px'
-							}
-						},
-						i.a.createElement("i", {
-							className: this.state.showPassword ? "fas fa-eye-slash" : "fas fa-eye"
-						}),
-						this.state.showPassword ? "Ẩn" : "Hiện"
-					)),
-					i.a.createElement("div", {
-						className: "form-group",
-						style: {
-							position: 'relative'
-						}
-					}, i.a.createElement("input", {
-						type: this.state.showPassword ? "text" : "password",
-						className: "form-control form-control-alt",
-						placeholder: Object(l.formatMessage)({
-							id: "Nhập Lại Mật Khẩu"
-						}),
-						ref: "repassword"
-					}), i.a.createElement("button", {
-							onClick: this.togglePasswordVisibility,
-							className: "toggle-password-visibility",
-							style: {
-								position: 'absolute',
-								top: '0',
-								right: '10px'
-							}
-						},
-						i.a.createElement("i", {
-							className: this.state.showPassword ? "fas fa-eye-slash" : "fas fa-eye"
-						}),
-						this.state.showPassword ? "Ẩn" : "Hiện"
-					)),
-					i.a.createElement("div", {
-						className: "form-group mb-0"
-					}, i.a.createElement("button", {
-						disabled: n,
-						type: "submit",
-						className: "btn btn-block btn-primary font-w400",
-						onClick: () => this.forget()
-					}, n ? i.a.createElement(r.a, {
-						type: "loading"
-					}) : i.a.createElement("span", null, i.a.createElement("i", {
-						className: "si si-support mr-1"
-					}), Object(l.formatMessage)({
-						id: "Đặt Lại Mật Khẩu"
-					}))))))), i.a.createElement("div", {
+					className: "block-content block-content-full px-lg-4 py-md-4 py-lg-4"
+				}, i.a.createElement("div", {
+					className: "mb-3 text-center"
+				}, i.a.createElement("a", {
+					className: "font-size-h1",
+					href: "javascript:void(0);"
+				}, window.settings.logo ? i.a.createElement("img", {
+					className: "aikopanel-logo mb-3",
+					src: window.settings.logo
+				}) : i.a.createElement("span", {
+					className: "text-dark"
+				}, window.settings.title || "AikoPanel")), window.settings.description && i.a.createElement("p", {
+					className: "font-size-sm text-muted mb-3"
+				}, window.settings.description)), i.a.createElement("div", {
+					className: "form-group"
+				}, i.a.createElement("input", {
+					type: "text",
+					className: "form-control form-control-alt",
+					placeholder: Object(l.formatMessage)({
+						id: "E-Mail"
+					}),
+					ref: "email"
+				})), i.a.createElement("div", {
+					className: "form-group form-row"
+				}, i.a.createElement("div", {
+					className: "col-9"
+				}, i.a.createElement("input", {
+					type: "text",
+					className: "form-control form-control-alt",
+					placeholder: Object(l.formatMessage)({
+						id: "Mã Xác Minh Email"
+					}),
+					ref: "email_code"
+				})), i.a.createElement("div", {
+					className: "col-3"
+				}, i.a.createElement(u.a, {
+					visible: o.is_recaptcha,
+					callback: e => this.sendEmailVerify(e)
+				}, i.a.createElement("button", {
+					type: "submit",
+					disabled: 60 !== this.state.sendEmailVerifyTimeout || t,
+					className: "btn btn-block btn-primary"
+				}, 60 === this.state.sendEmailVerifyTimeout ? t ? i.a.createElement(r.a, {
+					type: "loading"
+				}) : Object(l.formatMessage)({
+					id: "Gửi"
+				}) : this.state.sendEmailVerifyTimeout)))), i.a.createElement("div", {
+					className: "form-group"
+				}, i.a.createElement("input", {
+					type: "password",
+					className: "form-control form-control-alt",
+					placeholder: Object(l.formatMessage)({
+						id: "Mật Khẩu"
+					}),
+					ref: "password"
+				})), i.a.createElement("div", {
+					className: "form-group"
+				}, i.a.createElement("input", {
+					type: "password",
+					className: "form-control form-control-alt",
+					placeholder: Object(l.formatMessage)({
+						id: "Mật Khẩu"
+					}),
+					ref: "repassword"
+				})), i.a.createElement("div", {
+					className: "form-group mb-0"
+				}, i.a.createElement("button", {
+					disabled: n,
+					type: "submit",
+					className: "btn btn-block btn-primary font-w400",
+					onClick: () => this.forget()
+				}, n ? i.a.createElement(r.a, {
+					type: "loading"
+				}) : i.a.createElement("span", null, i.a.createElement("i", {
+					className: "si si-support mr-1"
+				}), Object(l.formatMessage)({
+					id: "Đặt Lại Mật Khẩu"
+				}))))))), i.a.createElement("div", {
 					className: "text-left bg-gray-lighter p-3 px-4"
 				}, i.a.createElement("a", {
 					className: "font-size-sm text-muted",
@@ -41271,7 +41059,7 @@
 						dataIndex: "created_at",
 						key: "created_at",
 						align: "right",
-						render: e => b()(1e3 * e).format("DD/MM/YYYY HH:mm")
+						render: e => b()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}],
 					k = [{
 						title: Object(w.formatMessage)({
@@ -41279,7 +41067,7 @@
 						}),
 						dataIndex: "created_at",
 						key: "created_at",
-						render: e => b()(1e3 * e).format("DD/MM/YYYY HH:mm")
+						render: e => b()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}, {
 						title: Object(w.formatMessage)({
 							id: "Tiền Hoa Hồng"
@@ -41287,7 +41075,7 @@
 						dataIndex: "get_amount",
 						key: "get_amount",
 						align: "right",
-						render: (e, t) => (e / 100).toLocaleString()
+						render: (e, t) => (e / 100).toFixed(2)
 					}];
 				return d.a.createElement(h.a, o()({}, this.props, {
 					title: Object(w.formatMessage)({
@@ -41315,7 +41103,7 @@
 					id: "Tiếp Thị Liên Kết - CTV"
 				})), d.a.createElement("p", {
 					className: "display-4 text-black font-w300 mb-2"
-				}, void 0 !== E.commission_balance ? (parseInt(E.commission_balance) / 100).toLocaleString() : "--.--", d.a.createElement("span", {
+				}, void 0 !== E.commission_balance ? (parseInt(E.commission_balance) / 100).toFixed(2) : "--.--", d.a.createElement("span", {
 					className: "font-size-h5 text-muted ml-4"
 				}, g.currency)), d.a.createElement("span", {
 					className: "text-muted",
@@ -41412,7 +41200,7 @@
 						flex: 1,
 						textAlign: "right"
 					}
-				}, void 0 !== t[2] ? "".concat(t[2] / 100).concat(" ", g.currency_symbol) : d.a.createElement(l.a, {
+				}, void 0 !== t[2] ? "".concat(g.currency_symbol, " ").concat(t[2] / 100) : d.a.createElement(l.a, {
 					type: "loading"
 				}))), d.a.createElement("div", {
 					style: {
@@ -41430,7 +41218,7 @@
 						flex: 1,
 						textAlign: "right"
 					}
-				}, void 0 !== t[1] ? "".concat(t[1] / 100).concat(" ", g.currency_symbol) : d.a.createElement(l.a, {
+				}, void 0 !== t[1] ? "".concat(g.currency_symbol, " ").concat(t[1] / 100) : d.a.createElement(l.a, {
 					type: "loading"
 				}))))))), d.a.createElement("div", {
 					className: "row mb-3 mb-md-0"
@@ -43387,14 +43175,14 @@
 						}),
 						dataIndex: "created_at",
 						key: "created_at",
-						render: e => b()(1e3 * e).format("DD/MM/YYYY HH:mm")
+						render: e => b()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}, {
 						title: Object(w.formatMessage)({
 							id: "Phản Hồi Cuối Cùng"
 						}),
 						dataIndex: "updated_at",
 						key: "updated_at",
-						render: e => b()(1e3 * e).format("DD/MM/YYYY HH:mm")
+						render: e => b()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}, {
 						title: Object(w.formatMessage)({
 							id: "Tùy Chọn"
@@ -45964,109 +45752,109 @@
 		}, e.exports = i
 	},
 	vSOm: function(e, t, n) {
-		e.exports = function() {
-			"use strict";
-			return [{
-				locale: "ja",
-				pluralRuleFunction: function(e, t) {
-					return "other"
+e.exports = function() {
+	"use strict";
+	return [{
+		locale: "ja",
+		pluralRuleFunction: function(e, t) {
+			return "other"
+		},
+		fields: {
+			year: {
+				displayName: "Năm",
+				relative: {
+					0: "năm nay",
+					1: "năm sau",
+					"-1": "năm trước"
 				},
-				fields: {
-					year: {
-						displayName: "Năm",
-						relative: {
-							0: "năm nay",
-							1: "năm sau",
-							"-1": "năm trước"
-						},
-						relativeTime: {
-							future: {
-								other: "sau {0} năm"
-							},
-							past: {
-								other: "trước {0} năm"
-							}
-						}
+				relativeTime: {
+					future: {
+						other: "sau {0} năm"
 					},
-					month: {
-						displayName: "tháng",
-						relative: {
-							0: "tháng này",
-							1: "tháng sau",
-							"-1": "tháng trước"
-						},
-						relativeTime: {
-							future: {
-								other: "sau {0} tháng"
-							},
-							past: {
-								other: "trước {0} tháng"
-							}
-						}
-					},
-					day: {
-						displayName: "ngày",
-						relative: {
-							0: "hôm nay",
-							1: "ngày mai",
-							2: "ngày kia",
-							"-2": "hôm kia",
-							"-1": "ngày hôm qua"
-						},
-						relativeTime: {
-							future: {
-								other: "sau {0} ngày"
-							},
-							past: {
-								other: "trước {0} ngày"
-							}
-						}
-					},
-					hour: {
-						displayName: "giờ",
-						relative: {
-							0: "trong vòng 1 giờ"
-						},
-						relativeTime: {
-							future: {
-								other: "sau {0} giờ"
-							},
-							past: {
-								other: "trước {0} giờ"
-							}
-						}
-					},
-					minute: {
-						displayName: "phút",
-						relative: {
-							0: "trong vòng 1 phút"
-						},
-						relativeTime: {
-							future: {
-								other: "sau {0} phút"
-							},
-							past: {
-								other: "trước {0} phút"
-							}
-						}
-					},
-					second: {
-						displayName: "giây",
-						relative: {
-							0: "hiện tại"
-						},
-						relativeTime: {
-							future: {
-								other: "sau {0} giây"
-							},
-							past: {
-								other: "trước {0} giây"
-							}
-						}
+					past: {
+						other: "trước {0} năm"
 					}
 				}
-			}]
-		}()
+			},
+			month: {
+				displayName: "tháng",
+				relative: {
+					0: "tháng này",
+					1: "tháng sau",
+					"-1": "tháng trước"
+				},
+				relativeTime: {
+					future: {
+						other: "sau {0} tháng"
+					},
+					past: {
+						other: "trước {0} tháng"
+					}
+				}
+			},
+			day: {
+				displayName: "ngày",
+				relative: {
+					0: "hôm nay",
+					1: "ngày mai",
+					2: "ngày kia",
+					"-2": "hôm kia",
+					"-1": "ngày hôm qua"
+				},
+				relativeTime: {
+					future: {
+						other: "sau {0} ngày"
+					},
+					past: {
+						other: "trước {0} ngày"
+					}
+				}
+			},
+			hour: {
+				displayName: "giờ",
+				relative: {
+					0: "trong vòng 1 giờ"
+				},
+				relativeTime: {
+					future: {
+						other: "sau {0} giờ"
+					},
+					past: {
+						other: "trước {0} giờ"
+					}
+				}
+			},
+			minute: {
+				displayName: "phút",
+				relative: {
+					0: "trong vòng 1 phút"
+				},
+				relativeTime: {
+					future: {
+						other: "sau {0} phút"
+					},
+					past: {
+						other: "trước {0} phút"
+					}
+				}
+			},
+			second: {
+				displayName: "giây",
+				relative: {
+					0: "hiện tại"
+				},
+				relativeTime: {
+					future: {
+						other: "sau {0} giây"
+					},
+					past: {
+						other: "trước {0} giây"
+					}
+				}
+			}
+		}
+	}]
+}()
 	},
 	vWgF: function(e, t, n) {
 		"use strict";
@@ -48782,10 +48570,7 @@
 						dataIndex: "total_amount",
 						key: "total_amount",
 						align: "right",
-						render: e => (e / 100).toLocaleString('vi-VN', {
-							style: 'currency',
-							currency: 'VND'
-						})
+						render: e => (e / 100).toFixed(2)
 					}, {
 						title: Object(z.formatMessage)({
 							id: "Trạng Thái Đơn Hàng"
@@ -48801,7 +48586,7 @@
 						}),
 						dataIndex: "created_at",
 						key: "created_at",
-						render: e => V()(1e3 * e).format("DD/MM/YYYY HH:mm")
+						render: e => V()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}, {
 						title: Object(z.formatMessage)({
 							id: "Tùy Chọn"
@@ -48844,13 +48629,10 @@
 						arrow: "horizontal",
 						multipleLine: !0,
 						onClick: () => R.a.push("/order/" + e.trade_no),
-						extra: b.a.createElement("div", null, b.a.createElement("div", null, (e.total_amount / 100).toLocaleString('vi-VN', {
-							style: 'currency',
-							currency: 'VND'
-						})), b.a.createElement("div", null, b.a.createElement(L.a, {
+						extra: b.a.createElement("div", null, b.a.createElement("div", null, (e.total_amount / 100).toFixed(2)), b.a.createElement("div", null, b.a.createElement(L.a, {
 							status: r[e.status]
 						}), B.a.orderStatusText[e.status] && B.a.orderStatusText[e.status]()))
-					}, null === (t = e.plan) || void 0 === t ? void 0 : t.name, " ", b.a.createElement(P.Item.Brief, null, V()(1e3 * e.created_at).format("DD-MM-YYYY HH:mm:ss")))
+					}, null === (t = e.plan) || void 0 === t ? void 0 : t.name, " ", b.a.createElement(P.Item.Brief, null, V()(1e3 * e.created_at).format("YYYY-MM-DD HH:mm:ss")))
 				}))) : b.a.createElement(i.a, {
 					tableLayout: "auto",
 					dataSource: t,
@@ -49217,21 +48999,8 @@
 			var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
 				t = 1048576,
 				n = 1073741824;
-			e = parseInt(e);
-
-			if (e > n) {
-				return (e / n).toLocaleString('vi-VN') + " GB";
-			} else if (e > t) {
-				return (e / t).toLocaleString('vi-VN') + " MB";
-			} else if (e > 1024) {
-				return (e / 1024).toLocaleString('vi-VN') + " KB";
-			} else if (e < 0) {
-				return 0;
-			} else {
-				return e.toLocaleString('vi-VN') + " B";
-			}
+			return (e = parseInt(e)) > n ? (e / n).toFixed(2) + " GB" : e > t ? (e / t).toFixed(2) + " MB" : e > 1024 ? (e / 1024).toFixed(2) + " KB" : e < 0 ? 0 : e.toFixed(2) + " B"
 		}
-
 
 		function g(e) {
 			return null !== e && e < (new Date).getTime() / 1e3
