@@ -4966,6 +4966,27 @@
 					placeholder: "Vui lòng nhập telegram id của bạn (ID này sẽ nhận được thông báo backup database)", 
 					defaultValue: w.database_telegram_id,
 					onChange: e => this.set("app", "database_telegram_id", e.target.value)
+				}))),
+				f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Cloudflare API",
+					description: "Cloudflare API sẽ được sử dụng để cập nhật IP của máy chủ của bạn vào Cloudflare"
+				}, f.a.createElement(a.a, {
+					addonAfter: "Zone ID",
+					size: "large",
+					type: "text",
+					placeholder: "Vui lòng nhập Zone ID của bạn",
+					defaultValue: w.cloudflare_zone_id,
+					onChange: e => this.set("app", "cloudflare_zone_id", e.target.value)
+				}),f.a.createElement(a.a, {
+					addonAfter: "API Token",
+					size: "large",
+					type: "text",
+					className: "form-control",
+					placeholder: "Vui lòng nhập API Cloudflare Token của bạn", 
+					defaultValue: w.cloudflare_api_token,
+					onChange: e => this.set("app", "cloudflare_api_token", e.target.value)
 				}))))))))
 			}
 		}
@@ -9738,6 +9759,24 @@
 					className: "row"
 				}, d.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
+				}, d.a.createElement("label", null, "IP (IPv4)"), d.a.createElement(s.a, {
+					addonAfter: "IP",
+					placeholder: "Vui lòng nhập IP (IPv4)",
+					value: e.ip,
+					onChange: e => this.formChange("ip", e.target.value)
+				}))), d.a.createElement("div", {
+					className: "row"
+				}, d.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, d.a.createElement("label", null, "Record ID"), d.a.createElement(s.a, {
+					addonAfter: "Record ID",
+					placeholder: "Vui lòng nhập Record ID",
+					value: e.record_id,
+					onChange: e => this.formChange("record_id", e.target.value)
+				}))), d.a.createElement("div", {
+					className: "row"
+				}, d.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
 				}, d.a.createElement("label", null, "Truyền tải Giao thức ", d.a.createElement("a", {
 					href: "javascript:void(0);",
 					onClick: () => this.showChildDrawer("Chỉnh sửa Cấu hình Giao thức", "networkSettings")
@@ -9827,7 +9866,7 @@
 					addonAfter: "Mbps",
 					placeholder: "Speed Limit Node ( Mbps )",
 					value: e.speed_limit,
-					onChange: e => this.formChange("host", e.target.value)
+					onChange: e => this.formChange("speed_limit", e.target.value)
 				}))),
 				d.a.createElement("div", {
 					className: "form-group"
@@ -22396,6 +22435,24 @@
 						this.formChange("server_port", e.target.value)
 					}
 				}))), h.a.createElement("div", {
+					className: "row"
+				}, h.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, h.a.createElement("label", null, "IP (IPv4)"), h.a.createElement(s.a, {
+					addonAfter: "IP",
+					placeholder: "Vui lòng nhập IP (IPv4)",
+					value: e.ip,
+					onChange: e => this.formChange("ip", e.target.value)
+				}))), h.a.createElement("div", {
+					className: "row"
+				}, h.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, h.a.createElement("label", null, "Cloudflare Record ID"), h.a.createElement(s.a, {
+					addonAfter: "Record ID",
+					placeholder: "Vui lòng nhập Record ID",
+					value: e.record_id,
+					onChange: e => this.formChange("record_id", e.target.value)
+				}))), h.a.createElement("div", {
 					className: "form-group"
 				}, h.a.createElement("label", null, "Thuật Toán Mã Hóa"), h.a.createElement(a.a, {
 					value: e.cipher,
@@ -22498,7 +22555,7 @@
 					addonAfter: "Mbps",
 					placeholder: "Speed Limit Node ( Mbps )",
 					value: e.speed_limit,
-					onChange: e => this.formChange("host", e.target.value)
+					onChange: e => this.formChange("speed_limit", e.target.value)
 				}))),
 				h.a.createElement("div", {
 					className: "form-group"
@@ -78555,6 +78612,24 @@
 						this.formChange("server_port", e.target.value)
 					}
 				})), y.a.createElement("div", {
+					className: "row"
+				}, y.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, y.a.createElement("label", null, "IP (IPv4)"), y.a.createElement(s.a, {
+					addonAfter: "IP",
+					placeholder: "Vui lòng nhập IP (IPv4)",
+					value: e.ip,
+					onChange: e => this.formChange("ip", e.target.value)
+				}))), y.a.createElement("div", {
+					className: "row"
+				}, y.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, y.a.createElement("label", null, "Cloudflare Record ID"), y.a.createElement(s.a, {
+					addonAfter: "Record ID",
+					placeholder: "Vui lòng nhập Record ID",
+					value: e.record_id,
+					onChange: e => this.formChange("record_id", e.target.value)
+				}))), y.a.createElement("div", {
 					className: "form-group col-md-4 col-xs-12"
 				}, y.a.createElement("label", null, y.a.createElement(u.a, {
 					placement: "top",
@@ -78709,8 +78784,8 @@
 					addonAfter: "Mbps",
 					placeholder: "Speed Limit Node ( Mbps )",
 					value: e.speed_limit,
-					onChange: e => this.formChange("host", e.target.value)
-				}))),y.a.createElement("div", {
+					onChange: e => this.formChange("speed_limit", e.target.value)
+				}))), y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, "Nhóm Định Tuyến"), y.a.createElement(N.a, {
 					mode: "multiple",
@@ -79101,6 +79176,24 @@
 					className: "row"
 				}, y.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
+				}, y.a.createElement("label", null, "IP (IPv4)"), y.a.createElement(s.a, {
+					addonAfter: "IP",
+					placeholder: "Vui lòng nhập IP (IPv4)",
+					value: e.ip,
+					onChange: e => this.formChange("ip", e.target.value)
+				}))), y.a.createElement("div", {
+					className: "row"
+				}, y.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, y.a.createElement("label", null, "Cloudflare Record ID"), y.a.createElement(s.a, {
+					addonAfter: "Record ID",
+					placeholder: "Vui lòng nhập Record ID",
+					value: e.record_id,
+					onChange: e => this.formChange("record_id", e.target.value)
+				}))), y.a.createElement("div", {
+					className: "row"
+				}, y.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
 				}, y.a.createElement("label", null, "Giao thức Truyền tải ", y.a.createElement("a", {
 					href: "javascript:void(0);",
 					onClick: () => this.showChildDrawer("Chỉnh sửa cấu hình giao thức", "network_settings")
@@ -79207,7 +79300,7 @@
 					addonAfter: "Mbps",
 					placeholder: "Speed Limit Node ( Mbps )",
 					value: e.speed_limit,
-					onChange: e => this.formChange("host", e.target.value)
+					onChange: e => this.formChange("speed_limit", e.target.value)
 				}))),y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, "Nhóm Định Tuyến"), y.a.createElement(N.a, {
@@ -84900,7 +84993,25 @@
 					title: "Để sử dụng chứng chỉ tự ký, người dùng cần phải cho phép kết nối không an toàn."
 				}, "Cho phép kết nối không an toàn. ", f.a.createElement(a.a, {
 					type: "question-circle"
-				}))), f.a.createElement(s.a, {
+				}))), f.a.createElement("div", {
+					className: "row"
+				}, f.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, f.a.createElement("label", null, "IP (IPv4)"), f.a.createElement(c.a, {
+					addonAfter: "IP",
+					placeholder: "Vui lòng nhập IP (IPv4)",
+					value: e.ip,
+					onChange: e => this.formChange("ip", e.target.value)
+				}))),f.a.createElement("div", {
+					className: "row"
+				}, f.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, f.a.createElement("label", null, "Cloudflare Record ID"), f.a.createElement(c.a, {
+					addonAfter: "Record ID",
+					placeholder: "Vui lòng nhập Record ID",
+					value: e.record_id,
+					onChange: e => this.formChange("record_id", e.target.value)
+				}))),f.a.createElement(s.a, {
 					value: parseInt(e.allow_insecure) ? 1 : 0,
 					placeholder: "Đồng ý kết nối không an toàn.",
 					style: {
@@ -85010,8 +85121,8 @@
 					addonAfter: "Mbps",
 					placeholder: "Speed Limit Node ( Mbps )",
 					value: e.speed_limit,
-					onChange: e => this.formChange("host", e.target.value)
-				}))),f.a.createElement("div", {
+					onChange: e => this.formChange("speed_limit", e.target.value)
+				}))), f.a.createElement("div", {
 					className: "form-group"
 				}, f.a.createElement("label", null, "Nhóm Định tuyến"), f.a.createElement(s.a, {
 					mode: "multiple",

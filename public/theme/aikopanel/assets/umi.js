@@ -13269,7 +13269,7 @@
 					id: "Ví Tiền Của Bạn"
 				})), l.a.createElement("p", {
 					className: "display-4 text-black font-w300 mb-2"
-				}, void 0 !== t.balance ? (parseInt(t.balance) / 100).toFixed(2) : "--.--", l.a.createElement("span", {
+				}, void 0 !== t.balance ? (parseInt(t.balance) / 100).toLocaleString() : "--.--", l.a.createElement("span", {
 					className: "font-size-h5 text-muted ml-4"
 				}, r.currency)), l.a.createElement("span", {
 					className: "text-muted",
@@ -14779,7 +14779,7 @@
 						className: "py-2"
 					}, a.a.createElement("p", {
 						className: "h1 mb-2"
-					}, t.currency_symbol, " ", (n.price / 100).toFixed(2)), a.a.createElement("p", {
+					}, (n.price / 100).toLocaleString(), " ", t.currency_symbol), a.a.createElement("p", {
 						className: "h6 text-muted"
 					}, n.tag))), a.a.createElement("div", {
 						className: "block-content py-3"
@@ -15626,15 +15626,15 @@
 					id: "Mã Đơn Hàng"
 				}), "："), f.a.createElement("span", null, t.trade_no)), t.discount_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Số Tiền Giảm Giá"
-				}), "："), f.a.createElement("span", null, (t.discount_amount / 100).toFixed(2))) : "", t.surplus_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.discount_amount / 100).toLocaleString('vi-VN', {style : 'currency', currency : 'VND'}))) : "", t.surplus_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Số Tiền Giảm Giá từ Đăng Ký Cũ"
-				}), "："), f.a.createElement("span", null, (t.surplus_amount / 100).toFixed(2))) : "", t.refund_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.surplus_amount / 100).toLocaleString('vi-VN', {style : 'currency', currency : 'VND'}))) : "", t.refund_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Số Tiền Hoàn Trả"
-				}), "："), f.a.createElement("span", null, (t.refund_amount / 100).toFixed(2))) : "", t.balance_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.refund_amount / 100).toLocaleString('vi-VN', {style : 'currency', currency : 'VND'}))) : "", t.balance_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Thanh Toán Bằng Số Dư Tài Khoản"
-				}), "："), f.a.createElement("span", null, (t.balance_amount / 100).toFixed(2))) : "", t.pre_handling_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.balance_amount / 100).toLocaleString('vi-VN', {style : 'currency', currency : 'VND'}))) : "", t.pre_handling_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Phí Giao Dịch Thanh Toán"
-				}), "："), f.a.createElement("span", null, (t.pre_handling_amount / 100).toFixed(2))) : "", f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, (t.pre_handling_amount / 100).toLocaleString('vi-VN', {style : 'currency', currency : 'VND'}))) : "", f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Thời Gian Tạo"
 				}), "："), f.a.createElement("span", null, x()(1e3 * t.created_at).format("YYYY-MM-DD HH:mm:ss")))))), 0 === t.status && f.a.createElement(f.a.Fragment, null, f.a.createElement("div", {
 					className: "block block-rounded js-appear-enabled"
@@ -15708,7 +15708,7 @@
 					className: "col-8"
 				}, t.plan.name, " x ", h.a.periodText[t.period] && h.a.periodText[t.period]()), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, g.currency_symbol, (t.plan[t.period] / 100).toFixed(2))), t.discount_amount ? f.a.createElement("div", null, f.a.createElement("div", {
+				}, (t.plan[t.period] / 100).toLocaleString(), " ", g.currency_symbol)), t.discount_amount ? f.a.createElement("div", null, f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15724,7 +15724,7 @@
 					className: "col-8"
 				}), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, g.currency_symbol, (t.discount_amount / 100).toFixed(2)))) : "", t.surplus_amount ? f.a.createElement("div", null, f.a.createElement("div", {
+				}, (t.discount_amount / 100).toLocaleString(), " ", g.currency_symbol))) : "", t.surplus_amount ? f.a.createElement("div", null, f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15740,7 +15740,7 @@
 					className: "col-8"
 				}), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, g.currency_symbol, (t.surplus_amount / 100).toFixed(2)))) : "", t.refund_amount ? f.a.createElement("div", null, f.a.createElement("div", {
+				}, (t.surplus_amount / 100).toLocaleString(), " ", g.currency_symbol))) : "", t.refund_amount ? f.a.createElement("div", null, f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15756,7 +15756,7 @@
 					className: "col-8"
 				}), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, "- ", g.currency_symbol, (t.refund_amount / 100).toFixed(2)))) : "", t.pre_handling_amount ? f.a.createElement("div", null, f.a.createElement("div", {
+				}, "- ", (t.refund_amount / 100).toLocaleString(), " ", g.currency_symbol))) : "", t.pre_handling_amount ? f.a.createElement("div", null, f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15772,7 +15772,7 @@
 					className: "col-8"
 				}), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, "+ ", (t.pre_handling_amount / 100).toFixed(2)))) : "", f.a.createElement("div", {
+				}, "+ ", (t.pre_handling_amount / 100).toLocaleString()))) : "", f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -15781,7 +15781,7 @@
 					id: "Tổng Cộng"
 				})), f.a.createElement("h1", {
 					className: "text-light mt-3 mb-3"
-				}, g.currency_symbol, " ", ((t.total_amount + (t.pre_handling_amount || 0)) / 100).toFixed(2), " ", g.currency), f.a.createElement("button", {
+				}, ((t.total_amount + (t.pre_handling_amount || 0)) / 100).toLocaleString(), " ", g.currency), f.a.createElement("button", {
 					type: "button",
 					className: "btn btn-block btn-primary",
 					disabled: d || "StripeCredit" === E.payment && !w.token,
@@ -27210,7 +27210,7 @@
 					t = this.props.plan,
 					n = t.selectPeriod,
 					r = t.plan[n];
-				return e.name && (r -= this.couponProcess(r, e.type, e.value)), r <= 0 && (r = 0), (r / 100).toFixed(2)
+				return e.name && (r -= this.couponProcess(r, e.type, e.value)), r <= 0 && (r = 0), (r / 100).toLocaleString()
 			}
 			getCouponJSX() {
 				var e = this.props.coupon.coupon,
@@ -27234,7 +27234,7 @@
 					className: "col-8"
 				}, e.name), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, "-", o.currency_symbol, (this.couponProcess(r[n], e.type, e.value) / 100).toFixed(2))))
+				}, "-", (this.couponProcess(r[n], e.type, e.value) / 100).toLocaleString(), " ", o.currency_symbol)))
 			}
 			render() {
 				var e = this.props.plan,
@@ -27334,7 +27334,7 @@
 						}
 					}, f.a.createElement("span", {
 						className: "price"
-					}, d.currency_symbol, (t[e] / 100).toFixed(2), d.currency))) : void 0
+					}, (t[e] / 100).toLocaleString(), d.currency))) : void 0
 				}))))), f.a.createElement("div", {
 					className: "col-md-4 col-sm-12"
 				}, f.a.createElement("div", {
@@ -27380,7 +27380,7 @@
 					className: "col-8"
 				}, t.name, " x ", h.a.periodText[n] && h.a.periodText[n]()), f.a.createElement("div", {
 					className: "col-4 text-right"
-				}, d.currency_symbol, (t[n] / 100).toFixed(2))), this.getCouponJSX(), f.a.createElement("div", {
+				}, (t[n] / 100).toLocaleString(), " ", d.currency_symbol)), this.getCouponJSX(), f.a.createElement("div", {
 					className: "pt-3",
 					style: {
 						color: "#646669"
@@ -29335,7 +29335,12 @@
 			p = n("tI4l");
 		class d extends a.a.Component {
 			constructor(e) {
-				super(e), this.state = {}, this.keyDown = this.keyDown.bind(this)
+				super(e);
+				this.state = {
+					showPassword: false
+				};
+				this.keyDown = this.keyDown.bind(this);
+				this.togglePasswordVisibility = this.togglePasswordVisibility.bind(this);
 			}
 			keyDown(e) {
 				13 === e.keyCode && this.login()
@@ -29363,6 +29368,11 @@
 					password: this.refs.password.value,
 					redirect: e
 				})
+			}
+			togglePasswordVisibility() {
+				this.setState({
+					showPassword: !this.state.showPassword
+				});
 			}
 			render() {
 				var e = this.props.passport.loginLoading;
@@ -29408,25 +29418,57 @@
 					className: "text-dark"
 				}, window.settings.title || "AikoPanel")), window.settings.description && a.a.createElement("p", {
 					className: "font-size-sm text-muted mb-3"
-				}, window.settings.description)), a.a.createElement("div", {
-					className: "form-group"
-				}, a.a.createElement("input", {
-					type: "text",
-					className: "form-control form-control-alt",
-					placeholder: Object(l.formatMessage)({
-						id: "E-Mail"
-					}),
-					ref: "email"
-				})), a.a.createElement("div", {
-					className: "form-group"
-				}, a.a.createElement("input", {
-					type: "password",
-					className: "form-control form-control-alt",
-					placeholder: Object(l.formatMessage)({
-						id: "Mật Khẩu"
-					}),
-					ref: "password"
-				})), a.a.createElement("div", {
+				}, window.settings.description)),
+				a.a.createElement("div", {
+							className: "form-group",
+							style: {
+								position: 'relative'
+							}
+						},
+						a.a.createElement("i", {
+							className: "fas fa-envelope icon-inside-input"
+						}),
+						a.a.createElement("input", {
+							type: "text",
+							className: "form-control form-control-alt with-icon",
+							placeholder: Object(l.formatMessage)({
+								id: "Tài Khoản Email"
+							}),
+							ref: "email"
+						})
+					),
+				a.a.createElement("div", {
+							className: "form-group",
+							style: {
+								position: 'relative'
+							}
+						},
+						a.a.createElement("i", {
+							className: "fas fa-lock icon-inside-input"
+						}),
+						a.a.createElement("input", {
+							type: this.state.showPassword ? "text" : "password",
+							className: "form-control form-control-alt with-icon",
+							placeholder: Object(l.formatMessage)({
+								id: "Mật Khẩu"
+							}),
+							ref: "password"
+						}),
+						a.a.createElement("button", {
+								onClick: this.togglePasswordVisibility,
+								className: "toggle-password-visibility",
+								style: { 
+									position: 'absolute',
+									top: '0',
+									right: '0'
+								}
+							},
+							a.a.createElement("i", {
+								className: this.state.showPassword ? "fas fa-eye-slash" : "fas fa-eye"
+							}),
+							this.state.showPassword ? "Ẩn" : "Hiện"
+						)
+					), a.a.createElement("div", {
 					className: "form-group mb-0"
 				}, a.a.createElement("button", {
 					disabled: e,
@@ -29490,6 +29532,7 @@
 				super(e), this.state = {
 					sendEmailVerifyTimeout: 60
 				}
+				this.togglePasswordVisibility = this.togglePasswordVisibility.bind(this);
 			}
 			componentDidMount() {
 				this.props.dispatch({
@@ -29540,6 +29583,12 @@
 				}), Object(l.formatMessage)({
 					id: "Vui lòng đồng ý với Điều Khoản Dịch Vụ"
 				}))
+			}
+			togglePasswordVisibility() {
+				this.setState({
+					showPassword: !this.state.showPassword
+				});
+
 			}
 			render() {
 				var e = this.props.passport,
@@ -29647,26 +29696,52 @@
 				}) : Object(l.formatMessage)({
 					id: "Gửi"
 				}) : this.state.sendEmailVerifyTimeout)))) : "", i.a.createElement("div", {
-					className: "form-group"
-				}, i.a.createElement("input", {
-					type: "password",
-					className: "form-control form-control-alt",
-					placeholder: Object(l.formatMessage)({
-						id: "Mật Khẩu"
-					}),
-					ref: "password"
-				})), i.a.createElement("div", {
-					className: "form-group"
-				}, i.a.createElement("input", {
-					type: "password",
-					className: "form-control form-control-alt",
-					placeholder: Object(l.formatMessage)({
-						id: "Mật Khẩu"
-					}),
-					ref: "repassword"
-				})), i.a.createElement("div", {
-					className: "form-group"
-				}, i.a.createElement("input", {
+                    className: "form-group Dev-DVS",
+                    style: {
+                        position: 'relative'
+                    }
+                }, i.a.createElement("input", {
+                    type: this.state.showPassword ? "text" : "password",
+                    className: "form-control form-control-alt",
+                    placeholder: Object(l.formatMessage)({
+                        id: "Mật Khẩu"
+                    }),
+                    ref: "password"
+                }), i.a.createElement("button", {
+                    onClick: this.togglePasswordVisibility,
+                    className: "toggle-password-visibility",
+                    style: {
+                        position: 'absolute',
+                        top: '0',
+                        right: '10px'
+                    }
+                }, i.a.createElement("i", {
+                    className: this.state.showPassword ? "fas fa-eye-slash" : "fas fa-eye"
+                }), this.state.showPassword ? "Ẩn" : "Hiện")), i.a.createElement("div", {
+                    className: "form-group Dev-DVS",
+                    style: {
+                        position: 'relative'
+                    }
+                }, i.a.createElement("input", {
+                    type: this.state.showPassword ? "text" : "password",
+                    className: "form-control form-control-alt",
+                    placeholder: Object(l.formatMessage)({
+                        id: "Nhập Lại Mật Khẩu"
+                    }),
+                    ref: "repassword"
+                }), i.a.createElement("button", {
+                    onClick: this.togglePasswordVisibility,
+                    className: "toggle-password-visibility",
+                    style: {
+                        position: 'absolute',
+                        top: '0',
+                        right: '10px'
+                    }
+                }, i.a.createElement("i", {
+                    className: this.state.showPassword ? "fas fa-eye-slash" : "fas fa-eye"
+                }), this.state.showPassword ? "Ẩn" : "Hiện")), i.a.createElement("div", {
+                    className: "form-group Dev-DVS"
+                }, i.a.createElement("input", {
 					type: "text",
 					disabled: this.props.location.query.code,
 					defaultValue: this.props.location.query.code,
@@ -40979,6 +41054,7 @@
 				super(e), this.state = {
 					sendEmailVerifyTimeout: 60
 				}
+				this.togglePasswordVisibility = this.togglePasswordVisibility.bind(this);
 			}
 			componentDidMount() {
 				this.props.dispatch({
@@ -41014,6 +41090,11 @@
 					emailCode: this.refs.email_code.value
 				}) : Object(p.r)("error", "Yêu Cầu Thất Bại", "Hai lần nhập mật khẩu không giống nhau.")
 			}
+            togglePasswordVisibility() {
+                this.setState({
+                    showPassword: !this.state.showPassword
+                });
+            }
 			render() {
 				var e = this.props.passport,
 					t = e.sendEmailVerifyLoading,
@@ -41096,24 +41177,50 @@
 				}) : Object(l.formatMessage)({
 					id: "Gửi"
 				}) : this.state.sendEmailVerifyTimeout)))), i.a.createElement("div", {
-					className: "form-group"
-				}, i.a.createElement("input", {
-					type: "password",
-					className: "form-control form-control-alt",
-					placeholder: Object(l.formatMessage)({
-						id: "Mật Khẩu"
-					}),
-					ref: "password"
-				})), i.a.createElement("div", {
-					className: "form-group"
-				}, i.a.createElement("input", {
-					type: "password",
-					className: "form-control form-control-alt",
-					placeholder: Object(l.formatMessage)({
-						id: "Mật Khẩu"
-					}),
-					ref: "repassword"
-				})), i.a.createElement("div", {
+                    className: "form-group",
+                    style: {
+                        position: 'relative'
+                    }
+                }, i.a.createElement("input", {
+                    type: this.state.showPassword ? "text" : "password",
+                    className: "form-control form-control-alt",
+                    placeholder: Object(l.formatMessage)({
+                        id: "Mật Khẩu"
+                    }),
+                    ref: "password"
+                }), i.a.createElement("button", {
+                    onClick: this.togglePasswordVisibility,
+                    className: "toggle-password-visibility",
+                    style: {
+                        position: 'absolute',
+                        top: '0',
+                        right: '10px'
+                    }
+                }, i.a.createElement("i", {
+                    className: this.state.showPassword ? "fas fa-eye-slash" : "fas fa-eye"
+                }), this.state.showPassword ? "Ẩn" : "Hiện")), i.a.createElement("div", {
+                    className: "form-group",
+                    style: {
+                        position: 'relative'
+                    }
+                }, i.a.createElement("input", {
+                    type: this.state.showPassword ? "text" : "password",
+                    className: "form-control form-control-alt",
+                    placeholder: Object(l.formatMessage)({
+                        id: "Nhập Lại Mật Khẩu"
+                    }),
+                    ref: "repassword"
+                }), i.a.createElement("button", {
+                    onClick: this.togglePasswordVisibility,
+                    className: "toggle-password-visibility",
+                    style: {
+                        position: 'absolute',
+                        top: '0',
+                        right: '10px'
+                    }
+                }, i.a.createElement("i", {
+                    className: this.state.showPassword ? "fas fa-eye-slash" : "fas fa-eye"
+                }), this.state.showPassword ? "Ẩn" : "Hiện")), i.a.createElement("div", {
 					className: "form-group mb-0"
 				}, i.a.createElement("button", {
 					disabled: n,
@@ -41250,7 +41357,7 @@
 						dataIndex: "get_amount",
 						key: "get_amount",
 						align: "right",
-						render: (e, t) => (e / 100).toFixed(2)
+						render: (e, t) => (e / 100).toLocaleString('vi-VN', {style : 'currency', currency : 'VND'})
 					}];
 				return d.a.createElement(h.a, o()({}, this.props, {
 					title: Object(w.formatMessage)({
@@ -41278,7 +41385,7 @@
 					id: "Tiếp Thị Liên Kết - CTV"
 				})), d.a.createElement("p", {
 					className: "display-4 text-black font-w300 mb-2"
-				}, void 0 !== E.commission_balance ? (parseInt(E.commission_balance) / 100).toFixed(2) : "--.--", d.a.createElement("span", {
+				}, void 0 !== E.commission_balance ? (parseInt(E.commission_balance) / 100).toLocaleString() : "--.--", d.a.createElement("span", {
 					className: "font-size-h5 text-muted ml-4"
 				}, g.currency)), d.a.createElement("span", {
 					className: "text-muted",
@@ -41375,7 +41482,7 @@
 						flex: 1,
 						textAlign: "right"
 					}
-				}, void 0 !== t[2] ? "".concat(g.currency_symbol, " ").concat(t[2] / 100) : d.a.createElement(l.a, {
+				}, void 0 !== t[2] ? "".concat(t[2] / 100).concat(" ", g.currency_symbol) : d.a.createElement(l.a, {
 					type: "loading"
 				}))), d.a.createElement("div", {
 					style: {
@@ -41393,7 +41500,7 @@
 						flex: 1,
 						textAlign: "right"
 					}
-				}, void 0 !== t[1] ? "".concat(g.currency_symbol, " ").concat(t[1] / 100) : d.a.createElement(l.a, {
+				}, void 0 !== t[1] ? "".concat(t[1] / 100).concat(" ", g.currency_symbol) : d.a.createElement(l.a, {
 					type: "loading"
 				}))))))), d.a.createElement("div", {
 					className: "row mb-3 mb-md-0"
@@ -48745,7 +48852,7 @@ e.exports = function() {
 						dataIndex: "total_amount",
 						key: "total_amount",
 						align: "right",
-						render: e => (e / 100).toFixed(2)
+						render: e => (e / 100).toLocaleString('vi-VN', {style : 'currency', currency : 'VND'})
 					}, {
 						title: Object(z.formatMessage)({
 							id: "Trạng Thái Đơn Hàng"
@@ -48804,7 +48911,7 @@ e.exports = function() {
 						arrow: "horizontal",
 						multipleLine: !0,
 						onClick: () => R.a.push("/order/" + e.trade_no),
-						extra: b.a.createElement("div", null, b.a.createElement("div", null, (e.total_amount / 100).toFixed(2)), b.a.createElement("div", null, b.a.createElement(L.a, {
+						extra: b.a.createElement("div", null, b.a.createElement("div", null, (e.total_amount / 100).toLocaleString('vi-VN', {style : 'currency', currency : 'VND'})), b.a.createElement("div", null, b.a.createElement(L.a, {
 							status: r[e.status]
 						}), B.a.orderStatusText[e.status] && B.a.orderStatusText[e.status]()))
 					}, null === (t = e.plan) || void 0 === t ? void 0 : t.name, " ", b.a.createElement(P.Item.Brief, null, V()(1e3 * e.created_at).format("YYYY-MM-DD HH:mm:ss")))
@@ -49174,7 +49281,19 @@ e.exports = function() {
 			var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
 				t = 1048576,
 				n = 1073741824;
-			return (e = parseInt(e)) > n ? (e / n).toFixed(2) + " GB" : e > t ? (e / t).toFixed(2) + " MB" : e > 1024 ? (e / 1024).toFixed(2) + " KB" : e < 0 ? 0 : e.toFixed(2) + " B"
+			e = parseInt(e);
+
+			if (e > n) {
+				return (e / n).toLocaleString('vi-VN') + " GB";
+			} else if (e > t) {
+				return (e / t).toLocaleString('vi-VN') + " MB";
+			} else if (e > 1024) {
+				return (e / 1024).toLocaleString('vi-VN') + " KB";
+			} else if (e < 0) {
+				return 0;
+			} else {
+				return e.toLocaleString('vi-VN') + " B";
+			}
 		}
 
 		function g(e) {

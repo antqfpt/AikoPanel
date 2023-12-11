@@ -965,7 +965,7 @@ body {
     line-height: 1.5;
     color: #495057;
     text-align: left;
-    background-color: #f0f3f8
+    background-color: #f0f3f8;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -2816,15 +2816,14 @@ pre code {
 .form-control {
     display: block;
     width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
+    padding: .60rem .75rem;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid #d4dcec;
+    border: 1px solid #0665d0;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
 }
@@ -3262,7 +3261,7 @@ textarea.form-control {
     user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
-    padding: .375rem .75rem;
+    padding: 8px 0.7rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
@@ -11920,13 +11919,30 @@ label {
 }
 
 .form-control {
-    font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji
+    font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
 }
 
 .form-control.form-control-alt {
-    border-color: #f0f3f8;
+    border-color: #0665d0;
     background-color: #f0f3f8;
     transition: none
+}
+
+input.form-control.form-control-alt {
+    border-color: #0665d0 !important;
+    outline: none;
+}
+
+button.toggle-password-visibility {
+    background-color: #f0f3f8;
+    padding: 0px 8px 2px 17px;
+    font-size: 13px;
+    top: 0px !important;
+    right: 0px !important;
+    border-radius: 0rem 8rem 0 50rem;
+    border: 1px solid #0665d0;
+    font-weight: 500;
+    color: #0665d0;
 }
 
 .form-control.form-control-alt:focus {
@@ -14131,7 +14147,8 @@ a.badge-secondary.focus,a.badge-secondary:focus {
     width: 100%;
     margin: 0 auto;
     padding: 1.25rem 1.25rem 1px;
-    overflow-x: visible
+    overflow-x: visible;
+    white-space: pre-line;
 }
 
 .block-content>.pull-t,.block-content>.pull-y {
@@ -25284,6 +25301,14 @@ a.text-xplay-lighter:focus,a.text-xplay-lighter:hover {
     font-weight: 900
 }
 
+i.fas.fa-eye {
+    padding-right: 5px;
+}
+
+i.fas.fa-eye-slash {
+    padding-right: 5px;
+}
+
 @font-face {
     font-family: Font Awesome\ 5 Brands;
     font-style: normal;
@@ -27207,7 +27232,17 @@ a:not([href]):hover {
     color: #425b94;
     font-weight: 900
 }
+.form-control-alt.with-icon {
+    padding-left: 30px;
+}
 
+.icon-inside-input {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0665d0;
+}
 .aikopanel-email-whitelist-enable {
     display: flex
 }
