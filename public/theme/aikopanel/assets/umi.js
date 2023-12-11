@@ -12873,50 +12873,7 @@
 					id: "main-container",
 				}, l.a.createElement("div", {
 					className: "content content-full",
-				}, d.plan_id ? l.a.createElement("div", {
-					className: "row mb-3 mb-md-0",
 				}, l.a.createElement("div", {
-					className: "col-md-12",
-				}, l.a.createElement("div", {
-					className: "block block-rounded ",
-				}, l.a.createElement("div", {
-					className: "block-header block-header-default",
-				}, l.a.createElement("h3", {
-					className: "block-title",
-				}, Object(m.formatMessage)({
-					id: "Thay đổi SNI",
-				})), l.a.createElement("div", {
-					className: "block-options",
-				})), l.a.createElement("div", {
-					className: "block-content",
-				}, l.a.createElement("div", {
-					className: "row push",
-				}, t.user_status ? l.a.createElement("div", {
-					className: "col-lg-8 col-xl-5",
-				}, l.a.createElement("div", {
-					className: "form-group",
-				}, l.a.createElement("label", null, Object(m.formatMessage)({
-					id: "SNI Hiện tại",
-				}), ": ", t.sni), l.a.createElement("input", {
-					type: "text",
-					className: "form-control",
-					placeholder: Object(m.formatMessage)({
-						id: "Vui lòng nhập SNI mới",
-					}),
-					ref: "new_sni",
-				})), l.a.createElement(i.a, {
-					type: "primary",
-					onClick: () => this.changeSNI(),
-					loading: z,
-				}, Object(m.formatMessage)({
-					id: "Lưu",
-				}))) : l.a.createElement("div", {
-					className: "alert alert-warning mb-3",
-					role: "alert",
-				}, Object(m.formatMessage)({
-					id: "Lưu ý : Bạn cần mua gói thì mới có thể đổi SNI ",
-				}))))))) : l.a.createElement(l.a.Fragment, null),  
-				l.a.createElement("div", {
 					className: "row mb-3 mb-md-0",
 				}, l.a.createElement("div", {
 					className: "col-md-12",
