@@ -12970,8 +12970,11 @@
 									},
 									l.a.createElement(
 										"option",
+										{
+											value: '',
+										},
 										Object(m.formatMessage)({
-										  id: "Vui lòng chọn SNI",
+										  id: "SNI mặc định",
 										})
 									),
 									l.a.createElement(
