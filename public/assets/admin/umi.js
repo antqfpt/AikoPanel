@@ -4952,7 +4952,7 @@
 					className: ""
 				}, f.a.createElement(m, {
 					title: "Auto backup database",
-					description: "Database sẽ được backup theo thời gian mà bạn đã config ở dưới đây -> gửi tới telegram"
+					description: "Database sẽ được backup theo thời gian mà bạn đã config ở dưới đây -> gửi tới telegra và lưu ý backup theo giờ nhé nghĩa là max > 0 và max < 24"
 				}, f.a.createElement(a.a, {
 					addonAfter: "Giờ",
 					size: "large",
