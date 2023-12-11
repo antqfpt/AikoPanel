@@ -12955,7 +12955,7 @@
 									id: "SNI Hiện tại",
 								  }),
 								  ": ",
-								  t.user_sni
+								  t.sni
 								),
 								// Select SNI with options and input for custom SNI if value is 3
 								l.a.createElement(
@@ -13025,7 +13025,7 @@
 								)
 							  ),                          
 							  l.a.createElement(
-								a.a,
+								i.a,
 								{
 								  type: "primary",
 								  onClick: () => this.changeSNI(),
