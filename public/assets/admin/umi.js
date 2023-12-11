@@ -4853,11 +4853,11 @@
                         "Sau khi mở khi khách hàng thanh toán thành công thì sẽ gửi mail thông báo cho khách hàng.",
                     },
                     f.a.createElement(c["a"], {
-                      checked: parseInt(v.email_payment_suscess),
+                      checked: parseInt(v.email_payments_success),
                       onChange: (e) =>
                         this.set(
                           "email",
-                          "email_payment_suscess",
+                          "email_payments_success",
                           e ? 1 : 0
                         ),
                     })
