@@ -13103,7 +13103,7 @@
 				}, l.a.createElement("h3", {
 					className: "block-title",
 				}, Object(m.formatMessage)({
-					id: "Nhóm thảo luận Telegram",
+					id: "Nhóm Telegram",
 				})), l.a.createElement("div", {
 					className: "block-options",
 				}, l.a.createElement("a", {
