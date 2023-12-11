@@ -2481,15 +2481,15 @@
 					t = e.groups,
 					n = e.fetchLoading,
 					r = [{
-						title: "组ID",
+						title: "Nhóm ID",
 						dataIndex: "id",
 						key: "id"
 					}, {
-						title: "组名称",
+						title: "Tên Nhóm",
 						dataIndex: "name",
 						key: "name"
 					}, {
-						title: "用户数量",
+						title: "Số lượng Người dùng",
 						dataIndex: "user_count",
 						key: "user_count",
 						render: e => u.a.createElement(u.a.Fragment, null, u.a.createElement(c.a, {
@@ -2499,7 +2499,7 @@
 							}
 						}), " ", e)
 					}, {
-						title: "节点数量",
+						title: "Số Lượng Server",
 						dataIndex: "server_count",
 						key: "server_count",
 						render: e => u.a.createElement(u.a.Fragment, null, u.a.createElement(c.a, {
@@ -2509,7 +2509,7 @@
 							}
 						}), " ", e)
 					}, {
-						title: "操作",
+						title: "Hoạt Động",
 						dataIndex: "action",
 						key: "action",
 						align: "right",
@@ -2518,15 +2518,15 @@
 							key: t.id
 						}, u.a.createElement("a", {
 							href: "javascript:void(0);"
-						}, "编辑")), u.a.createElement(s.a, {
+						}, "Biên Tập")), u.a.createElement(s.a, {
 							type: "vertical"
 						}), u.a.createElement("a", {
 							href: "javascript:void(0);",
 							onClick: () => this.drop(t.id)
-						}, "删除"))
+						}, "Xóa"))
 					}];
 				return u.a.createElement(h.a, o()({}, this.props, {
-					title: "权限组管理"
+					title: "Quản Lý Nhóm Máy Chủ"
 				}), u.a.createElement("div", {
 					className: "d-flex justify-content-between align-items-center"
 				}), u.a.createElement(p.a, {
@@ -2543,7 +2543,7 @@
 					onClick: () => this.modalVisible()
 				}, u.a.createElement(c.a, {
 					type: "plus"
-				}), " 添加权限组"))), u.a.createElement(i.a, {
+				}), " Thêm Nhóm Máy Chủ"))), u.a.createElement(i.a, {
 					tableLayout: "auto",
 					columns: r,
 					dataSource: t,
@@ -2654,7 +2654,7 @@
 			var a = Object(o.l)({}, r);
 			a.font = t, n = Object(o.K)(n, "..."), a.maxIterations = Object(o.K)(r.maxIterations, 2);
 			var s = a.minChar = Object(o.K)(r.minChar, 0);
-			a.cnCharWidth = Object(i.f)("国", t);
+			a.cnCharWidth = Object(i.f)("Quốc Gia", t);
 			var c = a.ascCharWidth = Object(i.f)("a", t);
 			a.placeholder = Object(o.K)(r.placeholder, "");
 			for (var l = e = Math.max(0, e - 1), u = 0; u < s && l >= c; u++) l -= c;
@@ -4464,7 +4464,7 @@
 					defaultValue: _.password_limit_expire,
 					onChange: e => this.set("safe", "password_limit_expire", e.target.value)
 				}))) : "")), f.a.createElement(s.a.TabPane, {
-					tab: "Đăng ký",
+					tab: "Gói Dịch Vụ",
 					key: "subscribe"
 				}, f.a.createElement("div", {
 					className: ""
@@ -4488,7 +4488,7 @@
 					value: 1
 				}, "Thiết lập lại theo tháng."), f.a.createElement("option", {
 					value: 2
-				}, "Không đặt lại"), f.a.createElement("option", {
+				}, "Không Reset"), f.a.createElement("option", {
 					value: 3
 				}, "Mỗi năm 1 lần vào ngày 1 tháng 1"), f.a.createElement("option", {
 					value: 4
@@ -4717,10 +4717,10 @@
 				}))), f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
-					title: "节点拉取动作轮询间隔",
-					description: "节点从面板获取数据的间隔频率。"
+					title: "Khoảng thời gian truy vấn liên tục hành động của nút.",
+					description: "Tần suất lấy dữ liệu từ bảng điều khiển của nút."
 				}, f.a.createElement(a.a, {
-					addonAfter: "秒",
+					addonAfter: "Giây",
 					size: "large",
 					type: "number",
 					placeholder: "Vui lòng nhập",
@@ -4729,10 +4729,10 @@
 				}))), f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
-					title: "节点推送动作轮询间隔",
-					description: "节点推送数据到面板的间隔频率。"
+					title: "Khoảng thời gian truy vấn liên tục hành động gửi từ nút.",
+					description: "Tần suất gửi dữ liệu từ nút đến bảng điều khiển."
 				}, f.a.createElement(a.a, {
-					addonAfter: "秒",
+					addonAfter: "Giây",
 					size: "large",
 					type: "number",
 					placeholder: "Vui lòng nhập",
@@ -4752,11 +4752,11 @@
 					role: "alert"
 				}, f.a.createElement("p", {
 					className: "mb-0"
-				}, "如果你更改了本页配置，需要对队列服务进行重启。另外本页配置优先级高于.env中邮件配置。"))))), f.a.createElement("div", {
+				}, "Nếu bạn thay đổi cấu hình trang này, bạn cần khởi động lại dịch vụ hàng đợi. Ngoài ra, cấu hình trang này có ưu tiên cao hơn cấu hình email trong tệp .env."))))), f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
-					title: "SMTP服务器地址",
-					description: "由邮件服务商提供的服务地址"
+					title: "Địa chỉ Máy Chủ SMTP",
+					description: "Địa chỉ Dịch Vụ được cung cấp bởi nhà cung cấp dịch vụ email."
 				}, f.a.createElement("input", {
 					type: "text",
 					className: "form-control",
@@ -4764,8 +4764,8 @@
 					defaultValue: v.email_host,
 					onChange: e => this.set("email", "email_host", e.target.value)
 				})), f.a.createElement(m, {
-					title: "SMTP服务端口",
-					description: "常见的端口有25, 465, 587"
+					title: "Cổng Máy Chủ SMTP",
+					description: "Các cổng phổ biến cho dịch vụ SMTP là 25, 465 và 587."
 				}, f.a.createElement("input", {
 					type: "text",
 					className: "form-control",
@@ -4773,8 +4773,8 @@
 					defaultValue: v.email_port,
 					onChange: e => this.set("email", "email_port", e.target.value)
 				})), f.a.createElement(m, {
-					title: "SMTP加密方式",
-					description: "465端口加密方式一般为SSL，587端口加密方式一般为TLS"
+					title: "Phương thức Mã Hóa SMTP",
+					description: "Thông thường, phương thức mã hóa SSL được sử dụng trên cổng 465 của dịch vụ SMTP, trong khi phương thức mã hóa TLS được sử dụng trên cổng 587."
 				}, f.a.createElement("input", {
 					type: "text",
 					className: "form-control",
@@ -4782,8 +4782,8 @@
 					defaultValue: v.email_encryption,
 					onChange: e => this.set("email", "email_encryption", e.target.value)
 				})), f.a.createElement(m, {
-					title: "SMTP账号",
-					description: "由邮件服务商提供的账号"
+					title: "Tài Khoản SMTP",
+					description: "Tài Khoản được cung cấp bởi nhà cung cấp dịch vụ email."
 				}, f.a.createElement("input", {
 					type: "text",
 					className: "form-control",
@@ -4791,8 +4791,8 @@
 					defaultValue: v.email_username,
 					onChange: e => this.set("email", "email_username", e.target.value)
 				})), f.a.createElement(m, {
-					title: "SMTP密码",
-					description: "由邮件服务商提供的密码"
+					title: "Mật Khẩu SMTP",
+					description: "Mật khẩu được cung cấp bởi nhà cung cấp dịch vụ email."
 				}, f.a.createElement("input", {
 					type: "text",
 					className: "form-control",
@@ -4800,8 +4800,8 @@
 					defaultValue: v.email_password,
 					onChange: e => this.set("email", "email_password", e.target.value)
 				})), f.a.createElement(m, {
-					title: "发件地址",
-					description: "由邮件服务商提供的发件地址"
+					title: "Địa Chỉ Gửi Thư",
+					description: "Địa chỉ gửi thư được cung cấp bởi nhà cung cấp dịch vụ email."
 				}, f.a.createElement("input", {
 					type: "text",
 					className: "form-control",
@@ -4809,8 +4809,8 @@
 					defaultValue: v.email_from_address,
 					onChange: e => this.set("email", "email_from_address", e.target.value)
 				})), f.a.createElement(m, {
-					title: "邮件模板",
-					description: "你可以在文档查看如何自定义邮件模板"
+					title: "Mẫu Email",
+					description: "Bạn có thể xem cách tùy chỉnh mẫu email trong tài liệu"
 				}, f.a.createElement("select", {
 					onChange: e => this.set("email", "email_template", e.target.value),
 					className: "form-control",
@@ -4819,22 +4819,22 @@
 					key: Math.random(),
 					value: e
 				}, e))))), f.a.createElement(m, {
-					title: "发送测试邮件",
-					description: "邮件将会发送到当前登陆用户邮箱"
+					title: "Gửi email kiểm tra",
+					description: "Thư sẽ được gửi đến hộp thư người dùng đăng nhập hiện tại"
 				}, f.a.createElement(i.a, {
 					loading: x,
 					type: "primary",
 					onClick: () => this.props.dispatch({
 						type: "config/testSendMail"
 					})
-				}, "发送测试邮件")))), f.a.createElement(s.a.TabPane, {
+				}, "Gửi email kiểm tra")))), f.a.createElement(s.a.TabPane, {
 					tab: "Liên kết",
 					key: "telegram"
 				}, f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
-					title: "机器人Token",
-					description: "请输入由Botfather提供的token。"
+					title: "Mã Token của Robot",
+					description: "Vui lòng cung cấp mã Token do Botfather cung cấp."
 				}, f.a.createElement("input", {
 					type: "text",
 					className: "form-control",
@@ -4842,8 +4842,8 @@
 					defaultValue: y.telegram_bot_token,
 					onChange: e => this.set("telegram", "telegram_bot_token", e.target.value)
 				})), y.telegram_bot_token && f.a.createElement(m, {
-					title: "设置Webhook",
-					description: "对机器人进行Webhook设置，不设置将无法收到Telegram通知。"
+					title: "Thiết Lập Webhook",
+					description: "Đối với cài đặt webhook cho robot, thông báo Telegram sẽ không được nhận nếu không có cài đặt."
 				}, f.a.createElement(i.a, {
 					type: "primary",
 					onClick: () => {
@@ -4853,9 +4853,9 @@
 					},
 					loading: b,
 					disabled: b
-				}, "一键设置")), f.a.createElement(m, {
-					title: "开启机器人通知",
-					description: "开启后bot将会对绑定了telegram的管理员和用户进行基础通知。"
+				}, "Cài đặt một 1 Click")), f.a.createElement(m, {
+					title: "Bật thông báo robot",
+					description: "Sau khi mở, bot sẽ thông báo cho quản trị viên và người dùng bị ràng buộc bởi Telegram."
 				}, f.a.createElement(c.a, {
 					checked: parseInt(y.telegram_bot_enable),
 					onChange: e => this.set("telegram", "telegram_bot_enable", e ? 1 : 0)
@@ -9346,7 +9346,7 @@
 				var e = this.state.settings.servers;
 				return d.a.createElement(d.a.Fragment, null, d.a.createElement("div", {
 					className: "form-group"
-				}, d.a.createElement("label", null, "DNS服务器表"), e.map(((e, t) => {
+				}, d.a.createElement("label", null, "Bảng Máy Chủ DNS"), e.map(((e, t) => {
 					var n;
 					return d.a.createElement("div", {
 						key: t
@@ -9354,7 +9354,7 @@
 						className: "row"
 					}, d.a.createElement(m.a, {
 						type: "horizontal"
-					}, e.address || "服务器组".concat(t + 1), " ", d.a.createElement(c.a, {
+					}, e.address || "Nhóm Máy Chủ".concat(t + 1), " ", d.a.createElement(c.a, {
 						type: "delete",
 						style: {
 							color: "#ff4d4f"
@@ -9362,24 +9362,24 @@
 						onClick: () => this.dropServer(t)
 					})), d.a.createElement("div", {
 						className: "form-group col-md-9 col-xs-12"
-					}, d.a.createElement("label", null, "DNS服务器地址"), d.a.createElement(s.a, {
-						placeholder: "请输入DNS服务器地址",
+					}, d.a.createElement("label", null, "Địa Chỉ Máy Chủ DNS"), d.a.createElement(s.a, {
+						placeholder: "Vui lòng nhập địa chỉ máy chủ DNS.",
 						value: e.address,
 						onChange: e => this.changeServer(t, "address", e.target.value)
 					})), d.a.createElement("div", {
 						className: "form-group col-md-3 col-xs-12"
-					}, d.a.createElement("label", null, "端口"), d.a.createElement(s.a, {
+					}, d.a.createElement("label", null, "Cổng"), d.a.createElement(s.a, {
 						type: "number",
-						placeholder: "端口",
+						placeholder: "Cổng",
 						value: e.port,
 						onChange: e => this.changeServer(t, "port", parseInt(e.target.value))
 					}))), d.a.createElement("div", {
 						className: "form-group"
-					}, d.a.createElement("label", null, "域名"), d.a.createElement(s.a.TextArea, {
+					}, d.a.createElement("label", null, "Tên Miền"), d.a.createElement(s.a.TextArea, {
 						rows: 5,
 						onChange: e => this.changeServer(t, "domains", e.target.value),
 						value: null === (n = e.domains) || void 0 === n ? void 0 : n.join("\n"),
-						placeholder: "域名列表，此列表包含的域名，将优先使用此服务器进行查询。一行一条"
+						placeholder: "Danh sách Tên Miền, danh sách này sẽ được ưu tiên sử dụng máy chủ này để truy vấn. Mỗi dòng là một tên miền."
 					})))
 				})), d.a.createElement("div", null, d.a.createElement(o.a, {
 					type: "primary",
@@ -9387,7 +9387,7 @@
 						width: "100%"
 					},
 					onClick: () => this.addServer()
-				}, "添加"))))
+				}, "Thêm"))))
 			}
 		}
 		class v extends d.a.Component {
@@ -9413,13 +9413,13 @@
 					n = e.protocol;
 				return d.a.createElement(d.a.Fragment, null, d.a.createElement("div", {
 					className: "form-group"
-				}, d.a.createElement("label", null, "域名过滤器"), d.a.createElement(s.a.TextArea, {
+				}, d.a.createElement("label", null, "Bộ Lọc Tên Miền"), d.a.createElement(s.a.TextArea, {
 					value: t && t.join("\n"),
 					onChange: e => this.change("domain", e.target.value),
 					rows: 5
 				})), d.a.createElement("div", {
 					className: "form-group"
-				}, d.a.createElement("label", null, "协议过滤器"), d.a.createElement(s.a.TextArea, {
+				}, d.a.createElement("label", null, "Bộ Lọc Giao Thức"), d.a.createElement(s.a.TextArea, {
 					value: n && n.join("\n"),
 					onChange: e => this.change("protocol", e.target.value),
 					rows: 5
@@ -9454,7 +9454,7 @@
 				}, d.a.createElement("label", null, "Server Name"), d.a.createElement(s.a, {
 					value: t,
 					onChange: e => this.change("serverName", e.target.value),
-					placeholder: "不使用请留空"
+					placeholder: "Để trống nếu không sử dụng."
 				})), d.a.createElement("div", {
 					className: "form-group"
 				}, d.a.createElement("label", null, "Allow Insecure"), d.a.createElement("div", null, d.a.createElement(y.a, {
@@ -9501,8 +9501,8 @@
 					})
 				} catch (e) {
 					h.a.error({
-						message: "请求失败",
-						description: "传输协议配置格式有误"
+						message: "Yêu Cầu Thất Bại",
+						description: "Định dạng cấu hình giao thức truyền tải không chính xác."
 					})
 				}
 			}
@@ -9557,11 +9557,11 @@
 							id: "v2ray-protocol"
 						}, d.a.createElement("div", {
 							className: "form-group"
-						}, d.a.createElement("label", null, "协议详细配置", d.a.createElement("a", {
+						}, d.a.createElement("label", null, "Cấu hình Chi Tiết Giao Thức", d.a.createElement("a", {
 							href: "https://www.v2ray.com/chapter_02/05_transport.html"
 						}, d.a.createElement(c.a, {
 							type: "link"
-						}), "参考")), d.a.createElement(x.a, {
+						}), " Tham Khảo")), d.a.createElement(x.a, {
 							placeholder: (null == i ? void 0 : i[this.state.server.network]) || "",
 							mode: "json",
 							theme: "github",
@@ -9615,7 +9615,7 @@
 				}), d.a.createElement(r.a, {
 					id: "server",
 					maskClosable: !0,
-					title: e.id ? "编辑节点" : "新建节点",
+					title: e.id ? "Chỉnh Sửa Server" : "Tạo Mới Server",
 					width: "80%",
 					visible: this.state.visible,
 					onClose: () => this.onShow()
@@ -9623,35 +9623,35 @@
 					className: "row"
 				}, d.a.createElement("div", {
 					className: "form-group col-8"
-				}, d.a.createElement("label", null, "节点名称"), d.a.createElement(s.a, {
-					placeholder: "请输入节点名称",
+				}, d.a.createElement("label", null, "Tên Server"), d.a.createElement(s.a, {
+					placeholder: "Vui lòng nhập tên cho nút.",
 					value: e.name,
 					onChange: e => this.formChange("name", e.target.value)
 				})), d.a.createElement("div", {
 					className: "form-group col-4"
-				}, d.a.createElement("label", null, "倍率"), d.a.createElement(s.a, {
+				}, d.a.createElement("label", null, "Tỷ Lệ"), d.a.createElement(s.a, {
 					addonAfter: "x",
-					placeholder: "请输入节点倍率",
+					placeholder: "Vui lòng nhập tỷ lệ cho nút.",
 					value: e.rate,
 					onChange: e => this.formChange("rate", e.target.value)
 				}))), d.a.createElement("div", {
 					className: "form-group"
-				}, d.a.createElement("label", null, "节点标签"), d.a.createElement(a.a, {
+				}, d.a.createElement("label", null, "Nhãn Server"), d.a.createElement(a.a, {
 					mode: "tags",
 					value: e.tags || [],
 					style: {
 						width: "100%"
 					},
-					placeholder: "输入后回车添加标签",
+					placeholder: "Nhập và nhấn Enter để thêm nhãn.",
 					onChange: e => this.formChange("tags", e.length > 0 ? e : null)
 				})), d.a.createElement("div", {
 					className: "form-group"
-				}, d.a.createElement("label", null, "权限组 ", d.a.createElement(_.a, null, d.a.createElement("a", {
+				}, d.a.createElement("label", null, "Nhóm Máy Chủ ", d.a.createElement(_.a, null, d.a.createElement("a", {
 					href: "javascript:(0);"
-				}, "添加权限组"))), d.a.createElement(a.a, {
+				}, "Thêm Nhóm Máy Chủ"))), d.a.createElement(a.a, {
 					mode: "multiple",
 					value: e.group_id,
-					placeholder: "请选择权限组",
+					placeholder: "Vui lòng chọn một Nhóm Máy Chủ.",
 					style: {
 						width: "100%"
 					},
@@ -9662,18 +9662,18 @@
 					className: "row"
 				}, d.a.createElement("div", {
 					className: "form-group col-md-8 col-xs-12"
-				}, d.a.createElement("label", null, "节点地址"), d.a.createElement(s.a, {
-					placeholder: "请输入连接地址",
+				}, d.a.createElement("label", null, "Địa Chỉ Server"), d.a.createElement(s.a, {
+					placeholder: "Vui lòng nhập địa chỉ kết nối.",
 					value: e.host,
 					onChange: e => this.formChange("host", e.target.value)
 				})), d.a.createElement("div", {
 					className: "form-group col-md-4 col-xs-12"
 				}, d.a.createElement("label", null, "TLS ", d.a.createElement("a", {
 					href: "javascript:void(0);",
-					onClick: () => this.showChildDrawer("编辑TLS配置", "tlsSettings")
-				}, "编辑配置")), d.a.createElement(a.a, {
+					onClick: () => this.showChildDrawer("Chỉnh Sửa Cấu Hình TLS", "tlsSettings")
+				}, "Chỉnh Sửa Cấu Hình")), d.a.createElement(a.a, {
 					value: parseInt(e.tls) ? 1 : 0,
-					placeholder: "是否支持TLS",
+					placeholder: "Có hỗ trợ TLS không?",
 					style: {
 						width: "100%"
 					},
@@ -9681,35 +9681,35 @@
 				}, d.a.createElement(a.a.Option, {
 					key: 0,
 					value: 0
-				}, "不支持"), d.a.createElement(a.a.Option, {
+				}, "Không Hỗ Trợ"), d.a.createElement(a.a.Option, {
 					key: 1,
 					value: 1
-				}, "支持")))), d.a.createElement("div", {
+				}, "Hỗ Trợ")))), d.a.createElement("div", {
 					className: "row"
 				}, d.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, d.a.createElement("label", null, "连接端口"), d.a.createElement(s.a, {
-					placeholder: "用户连接端口",
+				}, d.a.createElement("label", null, "Cổng Kết Nối"), d.a.createElement(s.a, {
+					placeholder: "Cổng Kết Nối Người Dùng",
 					value: e.port,
 					onChange: e => {
 						this.formChange("port", e.target.value)
 					}
 				})), d.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, d.a.createElement("label", null, "服务端口"), d.a.createElement(s.a, {
-					placeholder: "非NAT同连接端口",
+				}, d.a.createElement("label", null, "Cổng Dịch Vụ"), d.a.createElement(s.a, {
+					placeholder: "Không NAT Cổng Kết nối Tương tự",
 					value: e.server_port,
 					onChange: e => this.formChange("server_port", e.target.value)
 				}))), d.a.createElement("div", {
 					className: "row"
 				}, d.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
-				}, d.a.createElement("label", null, "传输协议 ", d.a.createElement("a", {
+				}, d.a.createElement("label", null, "Truyền tải Giao thức ", d.a.createElement("a", {
 					href: "javascript:void(0);",
-					onClick: () => this.showChildDrawer("编辑协议配置", "networkSettings")
-				}, "编辑配置")), d.a.createElement(a.a, {
+					onClick: () => this.showChildDrawer("Chỉnh sửa Cấu hình Giao thức", "networkSettings")
+				}, "Chỉnh Sửa Cấu Hình")), d.a.createElement(a.a, {
 					value: e.network,
-					placeholder: "选择传输协议",
+					placeholder: "Chọn Giao thức Truyền tải",
 					style: {
 						width: "100%"
 					},
@@ -9724,7 +9724,7 @@
 					className: "form-group"
 				}, d.a.createElement("label", null, d.a.createElement(i.a, {
 					placement: "top"
-				}, "父节点 ", d.a.createElement("a", {
+				}, "Phụ Nút ", d.a.createElement("a", {
 					target: "_blank",
 					href: "https://docs.v2board.com/use/node.html#父节点与子节点关系",
 					rel: "noreferrer"
@@ -9738,17 +9738,17 @@
 					}
 				}, d.a.createElement(a.a.Option, {
 					value: ""
-				}, "无"), n.map((t => {
+				}, "không có"), n.map((t => {
 					if ("vmess" === t.type && t.id !== e.id) return d.a.createElement(a.a.Option, {
 						key: Math.random(),
 						value: t.id
 					}, t.name)
 				})))), d.a.createElement("div", {
 					className: "form-group"
-				}, d.a.createElement("label", null, "路由组"), d.a.createElement(a.a, {
+				}, d.a.createElement("label", null, "Đồng Hạng Địa chỉ"), d.a.createElement(a.a, {
 					mode: "multiple",
 					value: e.route_id || [],
-					placeholder: "请选择路由组",
+					placeholder: "Vui lòng chọn nhóm định tuyến",
 					style: {
 						width: "100%"
 					},
@@ -9762,11 +9762,11 @@
 						marginRight: 8
 					},
 					onClick: () => this.onShow()
-				}, "取消"), d.a.createElement(o.a, {
+				}, "Hủy Bỏ"), d.a.createElement(o.a, {
 					loading: t,
 					onClick: () => this.save(),
 					type: "primary"
-				}, "提交")), d.a.createElement(r.a, {
+				}, "Xác Nhận")), d.a.createElement(r.a, {
 					closable: !1,
 					id: "server",
 					width: "80%",
@@ -12693,7 +12693,7 @@
 		}
 
 		function f(e) {
-			return s("国", e)
+			return s("Quốc gia", e)
 		}
 
 		function d(e, t) {
@@ -13356,7 +13356,7 @@
 									}
 									return e.abrupt("return");
 								case 9:
-									o.a.success("webhook 设置成功");
+									o.a.success("Webhook Thiết Lập Thành Công");
 								case 10:
 								case "end":
 									return e.stop()
@@ -13394,8 +13394,8 @@
 									return e.abrupt("return");
 								case 9:
 									r.a[(null == m || null === (t = m.log) || void 0 === t ? void 0 : t.error) ? "error" : "success"]({
-										title: (null == m || null === (o = m.log) || void 0 === o ? void 0 : o.error) ? "发送失败" : "发送成功",
-										content: c.a.createElement("div", null, (null == m || null === (i = m.log) || void 0 === i ? void 0 : i.error) && c.a.createElement("div", null, c.a.createElement("span", null, "失败原因:"), c.a.createElement("span", null, null == m || null === (a = m.log) || void 0 === a ? void 0 : a.error)), c.a.createElement("div", null, c.a.createElement("span", null, "收信地址:"), c.a.createElement("span", null, null == m || null === (s = m.log) || void 0 === s ? void 0 : s.email)), c.a.createElement("div", null, c.a.createElement("span", null, "发信服务器:"), c.a.createElement("span", null, null == m || null === (h = m.log) || void 0 === h ? void 0 : h.config.host)), c.a.createElement("div", null, c.a.createElement("span", null, "发信端口:"), c.a.createElement("span", null, null == m || null === (f = m.log) || void 0 === f ? void 0 : f.config.port)), c.a.createElement("div", null, c.a.createElement("span", null, "发信加密方式:"), c.a.createElement("span", null, null == m || null === (d = m.log) || void 0 === d ? void 0 : d.config.encryption)), c.a.createElement("div", null, c.a.createElement("span", null, "发信用户名:"), c.a.createElement("span", null, null == m || null === (p = m.log) || void 0 === p ? void 0 : p.config.username)))
+										title: (null == m || null === (o = m.log) || void 0 === o ? void 0 : o.error) ? "Gửi Thất Bại" : "Gửi Thành Công",
+										content: c.a.createElement("div", null, (null == m || null === (i = m.log) || void 0 === i ? void 0 : i.error) && c.a.createElement("div", null, c.a.createElement("span", null, "Lý do thất bại:"), c.a.createElement("span", null, null == m || null === (a = m.log) || void 0 === a ? void 0 : a.error)), c.a.createElement("div", null, c.a.createElement("span", null, "Địa chỉ nhận thư:"), c.a.createElement("span", null, null == m || null === (s = m.log) || void 0 === s ? void 0 : s.email)), c.a.createElement("div", null, c.a.createElement("span", null, "Máy chủ gửi thư:"), c.a.createElement("span", null, null == m || null === (h = m.log) || void 0 === h ? void 0 : h.config.host)), c.a.createElement("div", null, c.a.createElement("span", null, "Cổng gửi thư:"), c.a.createElement("span", null, null == m || null === (f = m.log) || void 0 === f ? void 0 : f.config.port)), c.a.createElement("div", null, c.a.createElement("span", null, "Phương thức mã hóa gửi thư:"), c.a.createElement("span", null, null == m || null === (d = m.log) || void 0 === d ? void 0 : d.config.encryption)), c.a.createElement("div", null, c.a.createElement("span", null, "Tên người dùng gửi thư:"), c.a.createElement("span", null, null == m || null === (p = m.log) || void 0 === p ? void 0 : p.config.username)))
 									}), console.log(m);
 								case 11:
 								case "end":
@@ -14479,7 +14479,7 @@
 					onClick: () => this.show()
 				}), c.a.createElement(h.a, {
 					onCancel: () => this.hidden(),
-					title: "配置".concat(this.props.themeName, "主题"),
+					title: "Cấu hình".concat(this.props.themeName, "Chủ đề"),
 					visible: this.state.visible,
 					okButtonProps: {
 						loading: t
@@ -14862,7 +14862,7 @@
 					n = e.active;
 				return e.getThemesLoading, c.a.createElement(l.a, o()({}, this.props, {
 					loading: Object.keys(t).length <= 0,
-					title: "主题配置"
+					title: "Cấu hình chủ đề"
 				}), c.a.createElement("div", {
 					className: "row"
 				}, c.a.createElement("div", {
@@ -14872,9 +14872,9 @@
 					role: "alert"
 				}, c.a.createElement("p", {
 					className: "mb-0"
-				}, "如果你采用前后分离的方式部署AikoPanel，那么主题配置将不会生效。了解", c.a.createElement("b", null, c.a.createElement("a", {
+				}, "Nếu bạn triển khai Akopanel theo cách tách biệt trước và sau, cấu hình chủ đề sẽ không có hiệu lực.học hỏi", c.a.createElement("b", null, c.a.createElement("a", {
 					href: "https://docs.v2board.com/use/advanced.html#%E5%89%8D%E7%AB%AF%E5%88%86%E7%A6%BB"
-				}, "前后分离")))))), Object.keys(t).map((e => {
+				}, "Phân tách Frontend và Backend")))))), Object.keys(t).map((e => {
 					var r = t[e];
 					return c.a.createElement("div", {
 						className: "block block-transparent bg-image mb-0 mb-md-3 bg-primary",
@@ -14898,14 +14898,14 @@
 						className: "btn btn-sm rounded-pill btn-outline-light px-3 mr-2",
 						onClick: () => this.activeTheme(e),
 						disabled: n === e
-					}, n === e ? "当前主题" : "激活主题"), c.a.createElement(g, {
+					}, n === e ? "Chủ Đề Hiện Tại" : "Kích Hoạt Chủ Đề"), c.a.createElement(g, {
 						keyName: e,
 						themeName: r.name,
 						configs: r.configs
 					}, c.a.createElement("button", {
 						type: "button",
 						className: "btn btn-sm rounded-pill btn-outline-light px-3"
-					}, "主题设置"))))))
+					}, "Cài Đặt Chủ Đề"))))))
 				})))
 			}
 		}
@@ -15213,7 +15213,7 @@
 						visible: !0
 					})
 				}), l.a.createElement(r.a, {
-					title: "".concat(this.state.submit.id ? "编辑组" : "创建组"),
+					title: "".concat(this.state.submit.id ? "Chỉnh Sửa Nhóm" : "Tạo Nhóm"),
 					visible: this.state.visible,
 					onCancel: () => this.setState({
 						visible: !1
@@ -15221,14 +15221,14 @@
 					onOk: () => e || this.save(),
 					okText: e ? l.a.createElement(i.a, {
 						type: "loading"
-					}) : "提交",
-					cancelText: "取消"
+					}) : "Lưu",
+					cancelText: "Hủy Bỏ"
 				}, l.a.createElement("div", null, l.a.createElement("div", {
 					className: "form-group"
 				}, l.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "组名"), l.a.createElement(o.a, {
-					placeholder: "请输入组名",
+				}, "Tên Nhóm"), l.a.createElement(o.a, {
+					placeholder: "Vui lòng nhập tên nhóm.",
 					value: this.state.submit.name,
 					onChange: e => {
 						this.setState({
@@ -16568,55 +16568,55 @@
 			constructor(e) {
 				super(e), this.state = {
 					nav: [{
-						title: "Bảng điều khiển",
+						title: "Bảng Điều Kiển",
 						type: "item",
 						href: "/dashboard",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-speedometer"
 						})
 					}, {
-						title: "Thiết lập",
+						title: "Thiết Lập",
 						type: "heading"
 					}, {
-						title: "Thiết lập hệ thống",
+						title: "Thiết lập Hệ Thống",
 						type: "item",
 						href: "/config/system",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-equalizer"
 						})
 					}, {
-						title: "Thiết lập thanh toán",
+						title: "Cấu Hình Thanh Toán",
 						type: "item",
 						href: "/config/payment",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-credit-card"
 						})
 					}, {
-						title: "Thiết lập chủ đề",
+						title: "Thiết lập Chủ Đề",
 						type: "item",
 						href: "/config/theme",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-magic-wand"
 						})
 					}, {
-						title: "Máy chủ dịch vụ",
+						title: "Máy Chủ Dịch Vụ",
 						type: "heading"
 					}, {
-						title: "Quản lý máy chủ",
+						title: "Quản Lý Máy Chủ",
 						type: "item",
 						href: "/server/manage",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-layers"
 						})
 					}, {
-						title: "Nhóm máy chủ",
+						title: "Nhóm Máy Chủ",
 						type: "item",
 						href: "/server/group",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-wrench"
 						})
 					}, {
-						title: "Quản lý định tuyến",
+						title: "Quản Lý Định Tuyến",
 						type: "item",
 						href: "/server/route",
 						icon: i.a.createElement("i", {
@@ -16626,21 +16626,21 @@
 						title: "Tài chính",
 						type: "heading"
 					}, {
-						title: "Quản lý đặt hàng",
+						title: "Quản Lý Gói Dịch Vụ",
 						type: "item",
 						href: "/plan",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-bag"
 						})
 					}, {
-						title: "Quản lý đơn đặt hàng",
+						title: "Quản Lý Đơn Hàng",
 						type: "item",
 						href: "/order",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-list"
 						})
 					}, {
-						title: "Quản lý voucher",
+						title: "Quản Lý Mã Giảm Giá",
 						type: "item",
 						href: "/coupon",
 						icon: i.a.createElement("i", {
@@ -16650,35 +16650,35 @@
 						title: "Người dùng",
 						type: "heading"
 					}, {
-						title: "Quản lý người dùng",
+						title: "Quản Lý Khách Hàng",
 						type: "item",
 						href: "/user",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-users"
 						})
 					}, {
-						title: "Quản lý thông báo",
+						title: "Quản Lý Thông Báo",
 						type: "item",
 						href: "/notice",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-speech"
 						})
 					}, {
-						title: "Quản lý hóa đơn",
+						title: "Quản Lý Đơn Hàng",
 						type: "item",
 						href: "/ticket",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-support"
 						})
 					}, {
-						title: "Quản lý hướng dẫn",
+						title: "Cấu Hình Hướng Dẫn",
 						type: "item",
 						href: "/knowledge",
 						icon: i.a.createElement("i", {
 							className: "nav-main-link-icon si si-bulb"
 						})
 					}, {
-						title: "Tác vụ khác",
+						title: "Tác Vụ Khác",
 						type: "heading"
 					}, {
 						title: "Trạng Thái AikoPanel",
@@ -16837,7 +16837,7 @@
 					className: "fa fa-fw fa-search"
 				}), " ", i.a.createElement("span", {
 					className: "ml-1 d-none d-sm-inline-block"
-				}, "搜索"))), i.a.createElement("div", {
+				}, "Tìm Kiếm"))), i.a.createElement("div", {
 					className: "dark" === d.header ? "aikopanel-container-title text-white" : "aikopanel-container-title text-black"
 				}, this.props.title), i.a.createElement("div", null, i.a.createElement("div", {
 					className: "dropdown d-inline-block"
@@ -16876,7 +16876,7 @@
 					className: "dropdown-item d-flex justify-content-between align-items-center",
 					href: "javascript:void(0);",
 					onClick: () => this.logout()
-				}, "登出", i.a.createElement("i", {
+				}, "Đăng Xuất", i.a.createElement("i", {
 					className: "fa fa-fw fa-sign-out-alt text-danger ml-1"
 				}))))))), this.props.search && i.a.createElement("div", {
 					className: "overlay-header bg-dark ".concat(this.state.showSearchBar ? "show" : "")
@@ -17612,94 +17612,94 @@
 				}), p.a.createElement(r.a, {
 					id: "user",
 					width: "80%",
-					title: "用户管理",
+					title: "Quản Lý Người Dùng",
 					visible: f,
 					onClose: () => this.hide(),
-					cancelText: "取消"
+					cancelText: "Hủy Bỏ"
 				}, t.email ? p.a.createElement("div", null, p.a.createElement("div", null, p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "邮箱"), p.a.createElement(u.a, {
-					placeholder: "请输入邮箱",
+				}, "Email"), p.a.createElement(u.a, {
+					placeholder: "Vui lòng nhập địa chỉ email.",
 					defaultValue: t.email,
 					onChange: e => this.formChange("email", e.target.value)
 				})), p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "邀请人邮箱"), p.a.createElement(u.a, {
-					placeholder: "请输入邀请人邮箱",
+				}, "Email Người Mời"), p.a.createElement(u.a, {
+					placeholder: "Vui lòng nhập địa chỉ email của người mời.",
 					defaultValue: t.invite_user_email,
 					onChange: e => this.formChange("invite_user_email", e.target.value)
 				})), p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "密码"), p.a.createElement(u.a, {
+				}, "Mật Khẩu"), p.a.createElement(u.a, {
 					defaultValue: t.password,
-					placeholder: "如需修改密码请输入",
+					placeholder: "Nếu bạn muốn thay đổi mật khẩu, vui lòng nhập.",
 					onChange: e => this.formChange("password", e.target.value)
 				})), p.a.createElement("div", {
 					className: "row"
 				}, p.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, p.a.createElement("label", null, "余额"), p.a.createElement(u.a, {
+				}, p.a.createElement("label", null, "Số Dư"), p.a.createElement(u.a, {
 					type: "number",
 					addonAfter: "¥",
-					placeholder: "余额",
+					placeholder: "Nhập Số Dư Ví",
 					defaultValue: t.balance,
 					onChange: e => this.formChange("balance", e.target.value)
 				})), p.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, p.a.createElement("label", null, "推广佣金"), p.a.createElement(u.a, {
+				}, p.a.createElement("label", null, "Tiền Hoa Hồng Quảng Cáo"), p.a.createElement(u.a, {
 					type: "number",
 					addonAfter: "¥",
-					placeholder: "推广佣金",
+					placeholder: "Không Hợp Lệ",
 					defaultValue: t.commission_balance,
 					onChange: e => this.formChange("commission_balance", e.target.value)
 				}))), p.a.createElement("div", {
 					className: "row"
 				}, p.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, p.a.createElement("label", null, "已用上行"), p.a.createElement(u.a, {
+				}, p.a.createElement("label", null, "Đã Sử Dụng Download"), p.a.createElement(u.a, {
 					type: "number",
 					addonAfter: "GB",
-					placeholder: "已用上行",
+					placeholder: "Lưu Lượng Download",
 					defaultValue: t.u,
 					onChange: e => this.formChange("u", e.target.value)
 				})), p.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, p.a.createElement("label", null, "已用下行"), p.a.createElement(u.a, {
+				}, p.a.createElement("label", null, "Đã Sử Dụng Upload"), p.a.createElement(u.a, {
 					type: "number",
 					addonAfter: "GB",
-					placeholder: "已用下行",
+					placeholder: "Lưu Lượng Upload",
 					defaultValue: t.d,
 					onChange: e => this.formChange("d", e.target.value)
 				}))), p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "流量"), p.a.createElement(u.a, {
+				}, "Lưu Lượng"), p.a.createElement(u.a, {
 					type: "number",
 					addonAfter: "GB",
 					defaultValue: t.transfer_enable,
-					placeholder: "请输入流量",
+					placeholder: "Vui lòng nhập lưu lượng.",
 					onChange: e => this.formChange("transfer_enable", e.target.value)
 				})), p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "设备数限制"), p.a.createElement(u.a, {
-					placeholder: "留空则不限制",
+				}, "Giới Hạn Số Lượng Thiết Bị"), p.a.createElement(u.a, {
+					placeholder: "Nếu để trống, không giới hạn số lượng thiết bị.",
 					defaultValue: t.device_limit,
 					onChange: e => this.formChange("device_limit", e.target.value)
 				})), p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "到期时间"), p.a.createElement("div", null, p.a.createElement(l.a, {
-					placeholder: "长期有效",
+				}, "Thời Gian Hết Hạn"), p.a.createElement("div", null, p.a.createElement(l.a, {
+					placeholder: "Có Hiệu Lực Vĩnh Viễn",
 					defaultValue: null !== t.expired_at && v()(1e3 * t.expired_at),
 					style: {
 						width: "100%"
@@ -17709,8 +17709,8 @@
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "订阅计划"), p.a.createElement(c.a, {
-					placeholder: "请选择用户订阅计划",
+				}, "Gói Dịch Vụ"), p.a.createElement(c.a, {
+					placeholder: "Xin vui lòng chọn kế hoạch đăng ký cho người dùng.",
 					style: {
 						width: "100%"
 					},
@@ -17718,14 +17718,14 @@
 					onChange: e => this.formChange("plan_id", e)
 				}, p.a.createElement(c.a.Option, {
 					value: null
-				}, "无"), h.map((e => p.a.createElement(c.a.Option, {
+				}, "Không"), h.map((e => p.a.createElement(c.a.Option, {
 					key: Math.random(),
 					value: e.id
 				}, e.name))))), p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "账户状态"), p.a.createElement(c.a, {
+				}, "Trạng Thái Tài Khoản"), p.a.createElement(c.a, {
 					style: {
 						width: "100%"
 					},
@@ -17734,14 +17734,14 @@
 				}, p.a.createElement(c.a.Option, {
 					key: 1,
 					value: 1
-				}, "封禁"), p.a.createElement(c.a.Option, {
+				}, "Cấm"), p.a.createElement(c.a.Option, {
 					key: 0,
 					value: 0
-				}, "正常"))), p.a.createElement("div", {
+				}, "Bình Thường"))), p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "推荐返利类型"), p.a.createElement(c.a, {
+				}, "Loại Hoàn Tiền Được Đề Xuất"), p.a.createElement(c.a, {
 					style: {
 						width: "100%"
 					},
@@ -17750,65 +17750,65 @@
 				}, p.a.createElement(c.a.Option, {
 					key: 0,
 					value: 0
-				}, "跟随系统设置"), p.a.createElement(c.a.Option, {
+				}, "Theo Cài Đặt Hệ Thống"), p.a.createElement(c.a.Option, {
 					key: 1,
 					value: 1
-				}, "循环返利"), p.a.createElement(c.a.Option, {
+				}, "Hoàn Tiền Lặp Lại"), p.a.createElement(c.a.Option, {
 					key: 2,
 					value: 2
-				}, "首次返利"))), p.a.createElement("div", {
+				}, "Hoàn Tiền Lần Đầu"))), p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "推荐返利比例"), p.a.createElement(u.a, {
+				}, "Tỷ lệ Hoàn Tiền Khuyến Nghị"), p.a.createElement(u.a, {
 					addonAfter: "%",
 					defaultValue: t.commission_rate,
-					placeholder: "请输入推荐返利比例(为空则跟随站点设置返利比例)",
+					placeholder: "Vui lòng nhập tỷ lệ hoàn tiền khuyến nghị (nếu để trống, sẽ tuân theo cài đặt tỷ lệ hoàn tiền của trang web).",
 					onChange: e => this.formChange("commission_rate", e.target.value)
 				})), p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "专享折扣比例 ", p.a.createElement(a.a, {
+				}, "Tỷ lệ Chiết Khấu Độc Quyền", p.a.createElement(a.a, {
 					placement: "top",
-					title: "设置后该用户购买任何订阅将始终享受该折扣"
+					title: "Sau khi được thiết lập, người dùng sẽ luôn được hưởng ưu đãi chiết khấu khi mua bất kỳ đăng ký nào."
 				}, p.a.createElement(s.a, {
 					type: "question-circle"
 				}))), p.a.createElement(u.a, {
 					addonAfter: "%",
 					defaultValue: t.discount,
-					placeholder: "请输入专享折扣比例",
+					placeholder: "Vui lòng nhập tỷ lệ chiết khấu độc quyền.",
 					onChange: e => this.formChange("discount", e.target.value)
 				})), p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "限速"), p.a.createElement(u.a, {
+				}, "Giới Hạn Tốc Độ"), p.a.createElement(u.a, {
 					addonAfter: "Mbps",
 					defaultValue: t.speed_limit,
-					placeholder: "留空则不限制",
+					placeholder: "Nếu để trống, không giới hạn tốc độ.",
 					onChange: e => this.formChange("speed_limit", e.target.value)
 				})), p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "是否管理员"), p.a.createElement("div", null, p.a.createElement(i.a, {
+				}, "Cho Phép Email Này Làm Quản Trị Viên"), p.a.createElement("div", null, p.a.createElement(i.a, {
 					checked: t.is_admin,
 					onChange: e => this.formChange("is_admin", e ? 1 : 0)
 				}))), p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "是否员工"), p.a.createElement("div", null, p.a.createElement(i.a, {
+				}, "Làm Công Tắc Cho Vui Kệ Mẹ Nó 🙃 - DevDVSTEAM"), p.a.createElement("div", null, p.a.createElement(i.a, {
 					checked: t.is_staff,
 					onChange: e => this.formChange("is_staff", e ? 1 : 0)
 				}))), p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "备注"), p.a.createElement("div", null, p.a.createElement(u.a.TextArea, {
+				}, "Chú Thích"), p.a.createElement("div", null, p.a.createElement(u.a.TextArea, {
 					rows: 4,
-					placeholder: "请在这里记录..",
+					placeholder: "Thêm ghi chú vào đây để dễ tìm khi cần...",
 					defaultValue: t.remarks,
 					onChange: e => this.formChange("remarks", e.target.value)
 				})))), p.a.createElement("div", {
@@ -17818,12 +17818,12 @@
 						marginRight: 8
 					},
 					onClick: () => this.hide()
-				}, "取消"), p.a.createElement(o.a, {
+				}, "Huỷ Bỏ"), p.a.createElement(o.a, {
 					disabled: n,
 					loading: n,
 					onClick: () => this.submit(),
 					type: "primary"
-				}, "提交"))) : p.a.createElement(s.a, {
+				}, "Lưu"))) : p.a.createElement(s.a, {
 					type: "loading",
 					style: {
 						fontSize: 24,
@@ -20869,7 +20869,7 @@
 				}, i.a.createElement(p.a, {
 					userId: null == n ? void 0 : n.user_id
 				}, i.a.createElement(c.a, {
-					title: "用户管理",
+					title: "Quản Lý Người Dùng",
 					placement: "left"
 				}, i.a.createElement(l.a, {
 					type: "user"
@@ -20879,7 +20879,7 @@
 					userId: null == n ? void 0 : n.user_id,
 					key: null == n ? void 0 : n.user_id
 				}, i.a.createElement(c.a, {
-					title: "TA的流量记录",
+					title: "Thống Kê Lưu Lượng",
 					placement: "left"
 				}, i.a.createElement(l.a, {
 					type: "solution"
@@ -20907,7 +20907,7 @@
 					ref: "message",
 					type: "text",
 					className: "js-chat-input bg-body-dark border-0 form-control form-control-alt",
-					placeholder: "输入内容回复工单...",
+					placeholder: "Nhập nội dung để trả lời công việc...",
 					onChange: e => this.props.onChange(e)
 				})))
 			}
@@ -22216,7 +22216,7 @@
 				}, h.a.createElement("div", {
 					className: "form-group col-4 mb-0"
 				}, h.a.createElement(s.a, {
-					placeholder: "路径",
+					placeholder: "Đường Dẫn",
 					value: null === (e = n.obfs_settings) || void 0 === e ? void 0 : e.path,
 					onChange: e => this.setObfsSettings("path", e.target.value)
 				})), h.a.createElement("div", {
@@ -22240,7 +22240,7 @@
 				}), h.a.createElement(r.a, {
 					id: "server",
 					maskClosable: !0,
-					title: e.id ? "编辑节点" : "新建节点",
+					title: e.id ? "Chỉnh Sửa Server" : "Tạo Mới Server",
 					width: "80%",
 					visible: this.state.visible,
 					onClose: () => this.onShow()
@@ -22248,35 +22248,35 @@
 					className: "row"
 				}, h.a.createElement("div", {
 					className: "form-group col-8"
-				}, h.a.createElement("label", null, "节点名称"), h.a.createElement(s.a, {
-					placeholder: "请输入节点名称",
+				}, h.a.createElement("label", null, "Tên Server"), h.a.createElement(s.a, {
+					placeholder: "Xin vui lòng nhập tên nút.",
 					value: e.name,
 					onChange: e => this.formChange("name", e.target.value)
 				})), h.a.createElement("div", {
 					className: "form-group col-4"
-				}, h.a.createElement("label", null, "倍率"), h.a.createElement(s.a, {
+				}, h.a.createElement("label", null, "Tỷ Lệ"), h.a.createElement(s.a, {
 					addonAfter: "x",
-					placeholder: "请输入节点倍率",
+					placeholder: "Xin vui lòng nhập tỷ lệ của nút.",
 					value: e.rate,
 					onChange: e => this.formChange("rate", e.target.value)
 				}))), h.a.createElement("div", {
 					className: "form-group"
-				}, h.a.createElement("label", null, "节点标签"), h.a.createElement(a.a, {
+				}, h.a.createElement("label", null, "Nhãn Của Server"), h.a.createElement(a.a, {
 					mode: "tags",
 					value: e.tags || [],
 					style: {
 						width: "100%"
 					},
-					placeholder: "输入后回车添加标签",
+					placeholder: "Nhập và nhấn Enter để thêm nhãn.",
 					onChange: e => this.formChange("tags", e.length > 0 ? e : null)
 				})), h.a.createElement("div", {
 					className: "form-group"
-				}, h.a.createElement("label", null, "权限组 ", h.a.createElement(d.a, null, h.a.createElement("a", {
+				}, h.a.createElement("label", null, "Nhóm Máy Chủ ", h.a.createElement(d.a, null, h.a.createElement("a", {
 					href: "javascript:(0);"
-				}, "添加权限组"))), h.a.createElement(a.a, {
+				}, "Thêm Nhóm Máy Chủ"))), h.a.createElement(a.a, {
 					mode: "multiple",
 					value: e.group_id,
-					placeholder: "请选择权限组",
+					placeholder: "Xin vui lòng chọn một Nhóm Máy Chủ.",
 					style: {
 						width: "100%"
 					},
@@ -22287,31 +22287,31 @@
 					className: "row"
 				}, h.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
-				}, h.a.createElement("label", null, "节点地址"), h.a.createElement(s.a, {
-					placeholder: "地址或IP",
+				}, h.a.createElement("label", null, "Địa Chỉ Server"), h.a.createElement(s.a, {
+					placeholder: "Địa chỉ hoặc IP",
 					value: e.host,
 					onChange: e => this.formChange("host", e.target.value)
 				}))), h.a.createElement("div", {
 					className: "row"
 				}, h.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, h.a.createElement("label", null, "连接端口"), h.a.createElement(s.a, {
-					placeholder: "用户连接端口",
+				}, h.a.createElement("label", null, "Cổng Kết Nối"), h.a.createElement(s.a, {
+					placeholder: "Cổng Kết Nối Người Dùng",
 					value: e.port,
 					onChange: e => {
 						this.formChange("port", e.target.value)
 					}
 				})), h.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, h.a.createElement("label", null, "服务端口"), h.a.createElement(s.a, {
-					placeholder: "服务端开放端口",
+				}, h.a.createElement("label", null, "Cổng Dịch Vụ"), h.a.createElement(s.a, {
+					placeholder: "Cổng Mở Dịch Vụ",
 					value: e.server_port,
 					onChange: e => {
 						this.formChange("server_port", e.target.value)
 					}
 				}))), h.a.createElement("div", {
 					className: "form-group"
-				}, h.a.createElement("label", null, "加密算法"), h.a.createElement(a.a, {
+				}, h.a.createElement("label", null, "Thuật Toán Mã Hóa"), h.a.createElement(a.a, {
 					value: e.cipher,
 					onChange: e => this.formChange("cipher", e),
 					style: {
@@ -22331,7 +22331,7 @@
 					value: "2022-blake3-aes-256-gcm"
 				}, "2022-blake3-aes-256-gcm"))), h.a.createElement("div", {
 					className: "form-group"
-				}, h.a.createElement("label", null, "混淆"), h.a.createElement(a.a, {
+				}, h.a.createElement("label", null, "Phương Thức"), h.a.createElement(a.a, {
 					value: e.obfs || "",
 					onChange: e => this.formChange("obfs", e),
 					style: {
@@ -22339,17 +22339,17 @@
 					}
 				}, h.a.createElement(a.a.Option, {
 					value: ""
-				}, "无"), h.a.createElement(a.a.Option, {
+				}, "Không có"), h.a.createElement(a.a.Option, {
 					value: "http"
 				}, "HTTP")), h.a.createElement("div", null, this.renderObfs())), h.a.createElement("div", {
 					className: "form-group"
 				}, h.a.createElement("label", null, h.a.createElement(i.a, {
 					placement: "top"
-				}, "父节点 ", h.a.createElement("a", {
+				}, "Chuyển Tiếp Server ", h.a.createElement("a", {
 					target: "_blank",
 					href: "https://docs.v2board.com/use/node.html#父节点与子节点关系",
 					rel: "noreferrer"
-				}, "更多解答"))), h.a.createElement(a.a, {
+				}, " Tham Khảo"))), h.a.createElement(a.a, {
 					value: e.parent_id || "",
 					onChange: e => this.formChange("parent_id", e),
 					style: {
@@ -22357,17 +22357,17 @@
 					}
 				}, h.a.createElement(a.a.Option, {
 					value: ""
-				}, "无"), n.map((t => {
+				}, "Không"), n.map((t => {
 					if ("shadowsocks" === t.type && t.id !== e.id) return h.a.createElement(a.a.Option, {
 						key: Math.random(),
 						value: t.id
 					}, t.name)
 				})))), h.a.createElement("div", {
 					className: "form-group"
-				}, h.a.createElement("label", null, "路由组"), h.a.createElement(a.a, {
+				}, h.a.createElement("label", null, "Nhóm Định Tuyến"), h.a.createElement(a.a, {
 					mode: "multiple",
 					value: e.route_id || [],
-					placeholder: "请选择路由组",
+					placeholder: "Xin vui lòng chọn một nhóm định tuyến.",
 					style: {
 						width: "100%"
 					},
@@ -22381,11 +22381,11 @@
 						marginRight: 8
 					},
 					onClick: () => this.onShow()
-				}, "取消"), h.a.createElement(o.a, {
+				}, "Hủy Bỏ"), h.a.createElement(o.a, {
 					loading: t,
 					onClick: () => this.save(),
 					type: "primary"
-				}, "提交"))))
+				}, "Lưu"))))
 			}
 		}
 		t.a = Object(f.c)((e => ({
@@ -24748,7 +24748,7 @@
 						dataIndex: "id",
 						key: "id"
 					}, {
-						title: "显示",
+						title: "Hiển Thị",
 						dataIndex: "show",
 						key: "show",
 						render: (e, t) => g.a.createElement(f.a, {
@@ -24760,17 +24760,17 @@
 							checked: e
 						})
 					}, {
-						title: "标题",
+						title: "Tiêu Đề",
 						dataIndex: "title",
 						key: "title"
 					}, {
-						title: "创建时间",
+						title: "Thời Gian Tạo",
 						dataIndex: "created_at",
 						key: "created_at",
 						align: "right",
 						render: e => b()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}, {
-						title: "操作",
+						title: "Tùy Chọn",
 						dataIndex: "action",
 						key: "action",
 						align: "right",
@@ -24780,15 +24780,15 @@
 								submit: t[r]
 							}, (() => this.modalVisible())),
 							href: "javascript:void(0);"
-						}, "编辑"), g.a.createElement(h.a, {
+						}, "Chỉnh Sửa"), g.a.createElement(h.a, {
 							type: "vertical"
 						}), g.a.createElement("a", {
 							onClick: () => this.drop(n),
 							href: "javascript:void(0);"
-						}, "删除"))
+						}, "Xóa"))
 					}];
 				return g.a.createElement(v.a, o()({}, this.props, {
-					title: "公告管理"
+					title: "Quản Lý Thông Báo"
 				}), g.a.createElement("div", {
 					className: "d-flex justify-content-between align-items-center"
 				}), g.a.createElement(x.a, {
@@ -24805,7 +24805,7 @@
 					onClick: () => this.modalVisible()
 				}, g.a.createElement(u.a, {
 					type: "plus"
-				}), " 添加公告")), g.a.createElement(c.a, {
+				}), " Thêm Thông Báo")), g.a.createElement(c.a, {
 					tableLayout: "auto",
 					dataSource: t,
 					pagination: !1,
@@ -24814,20 +24814,20 @@
 						x: 950
 					}
 				})))), g.a.createElement(i.a, {
-					title: "".concat(this.state.submit.id ? "编辑公告" : "新建公告"),
+					title: "".concat(this.state.submit.id ? "Chỉnh Sửa Thông Báo" : "Tạo Mới Thông Báo"),
 					visible: this.state.visible,
 					onCancel: () => this.modalVisible(),
 					onOk: () => this.state.saveLoading || this.save(),
 					okText: this.state.saveLoading ? g.a.createElement(u.a, {
 						type: "loading"
-					}) : "提交",
-					cancelText: "取消"
+					}) : "Lưu",
+					cancelText: "Hủy Bỏ"
 				}, g.a.createElement("div", null, g.a.createElement("div", {
 					className: "form-group"
 				}, g.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "标题"), g.a.createElement(s.a, {
-					placeholder: "请输入公告标题",
+				}, "Tiêu Đề"), g.a.createElement(s.a, {
+					placeholder: "Xin vui lòng cung cấp tiêu đề cho thông báo của bạn.",
 					value: this.state.submit.title,
 					onChange: e => {
 						this.setState({
@@ -24840,10 +24840,10 @@
 					className: "form-group"
 				}, g.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "公告内容"), g.a.createElement(s.a.TextArea, {
+				}, "NỘI DUNG THÔNG BÁO"), g.a.createElement(s.a.TextArea, {
 					rows: 12,
 					value: this.state.submit.content,
-					placeholder: "请输入公告内容",
+					placeholder: "Vui lòng nhập nội dung thông báo",
 					onChange: e => {
 						this.setState({
 							submit: p()({}, this.state.submit, {
@@ -24855,13 +24855,13 @@
 					className: "form-group"
 				}, g.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "公告标签"), g.a.createElement(a.a, {
+				}, "Thông báo"), g.a.createElement(a.a, {
 					mode: "tags",
 					value: this.state.submit.tags || [],
 					style: {
 						width: "100%"
 					},
-					placeholder: "输入后回车添加标签",
+					placeholder: "Nhập và nhấn Enter để thêm thẻ.",
 					onChange: e => {
 						this.setState({
 							submit: p()({}, this.state.submit, {
@@ -24873,8 +24873,8 @@
 					className: "form-group"
 				}, g.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "图片URL"), g.a.createElement(s.a, {
-					placeholder: "请输入图片URL",
+				}, "URL Hình Ảnh"), g.a.createElement(s.a, {
+					placeholder: "Vui lòng nhập URL của hình ảnh.",
 					value: this.state.submit.img_url,
 					onChange: e => {
 						this.setState({
@@ -25296,7 +25296,7 @@
 					t = e.queueStats,
 					n = (e.getQueueStatsLoading, e.queueWorkload);
 				return e.getQueueWorkloadLoading, s.a.createElement(c.a, o()({}, this.props, {
-					title: "队列监控"
+					title: "Giám Sát Chim Cụt"
 				}), s.a.createElement(u.a, {
 					loading: !t
 				}, s.a.createElement("div", {
@@ -25305,27 +25305,27 @@
 					className: "block-header block-header-default"
 				}, s.a.createElement("h3", {
 					className: "block-title"
-				}, "总览")), s.a.createElement("div", {
+				}, "Tổng Quan")), s.a.createElement("div", {
 					className: "block-content p-0"
 				}, s.a.createElement("div", {
 					className: "row no-gutters"
 				}, s.a.createElement("div", {
 					className: "col-lg-6 col-xl-3 border-right p-4 border-bottom"
-				}, s.a.createElement("div", null, s.a.createElement("div", null, "当前作业量"), s.a.createElement("div", {
+				}, s.a.createElement("div", null, s.a.createElement("div", null, "Hiện tại, tình trạng công việc."), s.a.createElement("div", {
 					className: "mt-4 font-size-h3"
 				}, (null == t ? void 0 : t.jobsPerMinute) || "0"))), s.a.createElement("div", {
 					className: "col-lg-6 col-xl-3 border-right p-4 border-bottom"
-				}, s.a.createElement("div", null, s.a.createElement("div", null, "近一小时处理量"), s.a.createElement("div", {
+				}, s.a.createElement("div", null, s.a.createElement("div", null, "Gần 1 giờ qua, lượng công việc đã xử lý."), s.a.createElement("div", {
 					className: "mt-4 font-size-h3"
 				}, (null == t ? void 0 : t.recentJobs) || "0"))), s.a.createElement("div", {
 					className: "col-lg-6 col-xl-3 border-right p-4 border-bottom"
-				}, s.a.createElement("div", null, s.a.createElement("div", null, "7日内报错数量"), s.a.createElement("div", {
+				}, s.a.createElement("div", null, s.a.createElement("div", null, "Trong vòng 7 ngày gần đây, số lượng lỗi báo cáo."), s.a.createElement("div", {
 					className: "mt-4 font-size-h3"
 				}, (null == t ? void 0 : t.failedJobs) || "0"))), s.a.createElement("div", {
 					className: "col-lg-6 col-xl-3 p-4 border-bottom overflow-hidden"
-				}, s.a.createElement("div", null, s.a.createElement("div", null, "状态"), s.a.createElement("div", {
+				}, s.a.createElement("div", null, s.a.createElement("div", null, "Trạng Thái."), s.a.createElement("div", {
 					className: "mt-4 font-size-h3"
-				}, t && ((null == t ? void 0 : t.status) ? "运行中" : "未启动")), t && ((null == t ? void 0 : t.status) ? s.a.createElement("i", {
+				}, t && ((null == t ? void 0 : t.status) ? "Đang chạy" : "Chưa khởi động")), t && ((null == t ? void 0 : t.status) ? s.a.createElement("i", {
 					class: "si si-check text-success",
 					style: {
 						position: "absolute",
@@ -25349,31 +25349,31 @@
 					className: "block-header block-header-default"
 				}, s.a.createElement("h3", {
 					className: "block-title"
-				}, "当前作业详情")), s.a.createElement("div", {
+				}, "Thông Tin Chi Tiết Về Công Việc Hiện Tại")), s.a.createElement("div", {
 					className: "block-content p-0"
 				}, s.a.createElement(i.a, {
 					columns: [{
-						title: "队列名称",
+						title: "Tên Hàng Đợi",
 						dataIndex: "name",
 						key: "name",
 						render: e => ({
-							order_handle: "订单队列",
-							send_email: "邮件队列",
-							send_email_mass: "邮件群发队列",
-							send_telegram: "Telegram消息队列",
-							stat: "统计队列",
-							traffic_fetch: "流量消费队列"
+							order_handle: "Đội Hàng Đợi",
+							send_email: "Thư Hàng Đợi",
+							send_email_mass: "Thư Hàng Đợi Gửi Nhiều Người",
+							send_telegram: "Telegram Hàng Đợi Tin Nhắn",
+							stat: "Thống Kê Hàng Đợi",
+							traffic_fetch: "Luồng Tiêu Thụ Dữ Liệu"
 						} [e])
 					}, {
-						title: "作业量",
+						title: "Lượng Công Việc",
 						dataIndex: "processes",
 						key: "processes"
 					}, {
-						title: "任务量",
+						title: "Lượng Nhiệm Vụ",
 						dataIndex: "length",
 						key: "length"
 					}, {
-						title: "占用时间",
+						title: "Thời Gian Chiếm Dụng",
 						dataIndex: "wait",
 						key: "wait",
 						align: "right",
@@ -25951,31 +25951,31 @@
 	L9pr: function(e, t, n) {
 		"use strict";
 		t.a = {
-			today: "今天",
-			now: "此刻",
-			backToToday: "返回今天",
-			ok: "确定",
-			timeSelect: "选择时间",
-			dateSelect: "选择日期",
-			weekSelect: "选择周",
-			clear: "清除",
-			month: "月",
-			year: "年",
-			previousMonth: "上个月 (翻页上键)",
-			nextMonth: "下个月 (翻页下键)",
-			monthSelect: "选择月份",
-			yearSelect: "选择年份",
-			decadeSelect: "选择年代",
-			yearFormat: "YYYY年",
-			dayFormat: "D日",
-			dateFormat: "YYYY年M月D日",
-			dateTimeFormat: "YYYY年M月D日 HH时mm分ss秒",
-			previousYear: "上一年 (Control键加左方向键)",
-			nextYear: "下一年 (Control键加右方向键)",
-			previousDecade: "上一年代",
-			nextDecade: "下一年代",
-			previousCentury: "上一世纪",
-			nextCentury: "下一世纪"
+			today: "Hôm nay",
+			now: "Hiện tại",
+			backToToday: "Trở lại hôm nay",
+			ok: "Xác nhận",
+			timeSelect: "Chọn thời gian",
+			dateSelect: "Chọn ngày",
+			weekSelect: "Chọn tuần",
+			clear: "Xóa",
+			month: "Tháng",
+			year: "Năm",
+			previousMonth: "Tháng trước (Phím mũi tên lên)",
+			nextMonth: "Tháng sau (Phím mũi tên xuống)",
+			monthSelect: "Chọn tháng",
+			yearSelect: "Chọn năm",
+			decadeSelect: "Chọn thập kỷ",
+			yearFormat: "YYYY",
+			dayFormat: "D",
+			dateFormat: "D/MM/YYYY",
+			dateTimeFormat: "D/MM/YYYY HH:mm:ss",
+			previousYear: "Năm trước (Phím Control + mũi tên trái)",
+			nextYear: "Năm sau (Phím Control + mũi tên phải)",
+			previousDecade: "Thập kỷ trước",
+			nextDecade: "Thập kỷ sau",
+			previousCentury: "Thế kỷ trước",
+			nextCentury: "Thế kỷ sau"
 		}
 	},
 	LIAx: function(e, t, n) {
@@ -28911,16 +28911,16 @@
 	N2Kk: function(e, t, n) {
 		"use strict";
 		t.a = {
-			items_per_page: "条/页",
-			jump_to: "跳至",
-			jump_to_confirm: "确定",
-			page: "页",
-			prev_page: "上一页",
-			next_page: "下一页",
-			prev_5: "向前 5 页",
-			next_5: "向后 5 页",
-			prev_3: "向前 3 页",
-			next_3: "向后 3 页"
+			items_per_page: "mục/trang",
+			jump_to: "Chuyển đến",
+			jump_to_confirm: "Xác nhận",
+			page: "Trang",
+			prev_page: "Trang trước",
+			next_page: "Trang sau",
+			prev_5: "Quay lại 5 trang",
+			next_5: "Tiến tới 5 trang",
+			prev_3: "Quay lại 3 trang",
+			next_3: "Tiến tới 3 trang"
 		}
 	},
 	N4uP: function(e, t, n) {
@@ -31360,7 +31360,7 @@
 						dataIndex: "id",
 						key: "id"
 					}, {
-						title: "启用",
+						title: "Kích Hoạt",
 						dataIndex: "show",
 						key: "show",
 						render: (e, t) => b.a.createElement(m.a, {
@@ -31372,16 +31372,16 @@
 							checked: e
 						})
 					}, {
-						title: "券名称",
+						title: "Tên Phiếu Mã",
 						dataIndex: "name",
 						key: "name"
 					}, {
-						title: "类型",
+						title: "Loại",
 						dataIndex: "type",
 						key: "type",
-						render: e => 1 === e ? "金额" : "比例"
+						render: e => 1 === e ? "Số Tiền" : "Tỷ Lệ"
 					}, {
-						title: "券码",
+						title: "Mã Phiếu",
 						dataIndex: "code",
 						key: "code",
 						render: e => b.a.createElement(d.a, {
@@ -31389,22 +31389,22 @@
 								cursor: "pointer"
 							},
 							onClick: () => {
-								S()(e), p.a.success("复制成功")
+								S()(e), p.a.success("Sao chép thành công.")
 							}
 						}, e)
 					}, {
-						title: "剩余次数",
+						title: "Số Lần Còn Lại",
 						dataIndex: "limit_use",
 						key: "limit_use",
-						render: e => b.a.createElement(d.a, null, null !== e ? e : "无限")
+						render: e => b.a.createElement(d.a, null, null !== e ? e : "Không Giới Hạn")
 					}, {
-						title: "有效期",
+						title: "Thời Hạn Hiệu Lực",
 						dataIndex: "started_at",
 						key: "started_at",
 						align: "left",
 						render: (e, t) => "".concat(_()(1e3 * t.started_at).format("YYYY/MM/DD HH:mm"), " ~ ").concat(_()(1e3 * t.ended_at).format("YYYY/MM/DD HH:mm"))
 					}, {
-						title: "操作",
+						title: "Tùy Chọn",
 						dataIndex: "action",
 						key: "action",
 						align: "right",
@@ -31418,23 +31418,23 @@
 								}))
 							},
 							href: "javascript:void(0);"
-						}, "编辑"), b.a.createElement(f.a, {
+						}, "Chỉnh Sửa"), b.a.createElement(f.a, {
 							type: "vertical"
 						}), b.a.createElement("a", {
 							onClick: () => {
 								h.a.confirm({
-									title: "警告",
-									content: "确定要删除该条项目吗？",
+									title: "Cảnh Báo",
+									content: "Bạn có chắc chắn muốn xóa mục này không?",
 									onOk: () => this.drop(n),
-									okText: "确定",
-									cancelText: "取消"
+									okText: "Đồng ý",
+									cancelText: "Hủy bỏ"
 								})
 							},
 							href: "javascript:void(0);"
-						}, "删除"))
+						}, "Xóa"))
 					}];
 				return b.a.createElement(w.a, o()({}, this.props, {
-					title: "优惠券管理"
+					title: "Quản Lý Phiếu Mã Ưu Đãi"
 				}), b.a.createElement(O.a, {
 					loading: n
 				}, b.a.createElement("div", {
@@ -31449,7 +31449,7 @@
 					onClick: () => this.modalVisible()
 				}, b.a.createElement(u.a, {
 					type: "plus"
-				}), " 添加优惠券")), b.a.createElement(c.a, {
+				}), " Thêm Phiếu Mã Ưu Đãi")), b.a.createElement(c.a, {
 					tableLayout: "auto",
 					dataSource: t,
 					columns: x,
@@ -31463,12 +31463,12 @@
 					}),
 					onChange: (e, t, n) => this.tableOnChange(e, n)
 				})))), b.a.createElement(h.a, {
-					title: "".concat(this.state.submit.id ? "编辑优惠券" : "新建优惠券"),
+					title: "".concat(this.state.submit.id ? "Chỉnh Sửa Phiếu Mã Ưu Đãi" : "Tạo Mới Phiếu Mã Ưu Đãi"),
 					visible: this.state.visible,
 					onCancel: () => this.modalVisible(),
 					onOk: () => this.generate(),
-					okText: "提交",
-					cancelText: "取消",
+					okText: "Lưu",
+					cancelText: "Hủy Bỏ",
 					okButtonProps: {
 						loading: r
 					},
@@ -31477,8 +31477,8 @@
 					className: "form-group"
 				}, b.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "名称"), b.a.createElement(s.a, {
-					placeholder: "请输入优惠券名称",
+				}, "Tên"), b.a.createElement(s.a, {
+					placeholder: "Vui lòng nhập tên phiếu mã ưu đãi.",
 					value: this.state.submit.name,
 					onChange: e => {
 						this.setState({
@@ -31491,8 +31491,8 @@
 					className: "form-group"
 				}, b.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "自定义优惠券码"), b.a.createElement(s.a, {
-					placeholder: "自定义优惠券码(留空随机生成)",
+				}, "Tự Định Nghĩa Mã Phiếu Mã Ưu Đãi"), b.a.createElement(s.a, {
+					placeholder: "Tự Định Nghĩa Mã Phiếu Mã Ưu Đãi (Để Trống Sẽ Tạo Ngẫu Nhiên)",
 					value: this.state.submit.code,
 					onChange: e => {
 						this.setState({
@@ -31506,7 +31506,7 @@
 					className: "form-group"
 				}, b.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "优惠信息"), b.a.createElement(s.a, {
+				}, "Thông Tin Ưu Đãi"), b.a.createElement(s.a, {
 					type: "number",
 					addonBefore: b.a.createElement(a.a, {
 						style: {
@@ -31522,11 +31522,11 @@
 						}
 					}, b.a.createElement(a.a.Option, {
 						value: 1
-					}, "按金额优惠"), b.a.createElement(a.a.Option, {
+					}, "Thông Tin Ưu Đãi"), b.a.createElement(a.a.Option, {
 						value: 2
-					}, "按比例优惠")),
+					}, "Ưu Đãi Theo Tỷ Lệ")),
 					addonAfter: 1 === this.state.submit.type ? "¥" : "%",
-					placeholder: "请输入值",
+					placeholder: "Vui lòng nhập giá trị.",
 					value: this.state.submit.value,
 					onChange: e => {
 						this.setState({
@@ -31539,7 +31539,7 @@
 					className: "form-group"
 				}, b.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "优惠券有效期"), b.a.createElement(i.a.RangePicker, {
+				}, "Thời Hạn Hiệu Lực Của Phiếu Mã Ưu Đãi"), b.a.createElement(i.a.RangePicker, {
 					style: {
 						width: "100%"
 					},
@@ -31565,8 +31565,8 @@
 					className: "form-group"
 				}, b.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "最大使用次数"), b.a.createElement(s.a, {
-					placeholder: "限制最大使用次数，用完则无法使用(为空则不限制)",
+				}, "Số Lần Sử Dụng Tối Đa"), b.a.createElement(s.a, {
+					placeholder: "Giới Hạn Số Lần Sử Dụng Tối Đa, Hết Lượt Sử Dụng Sẽ Không Thể Sử Dụng Nữa (Để Trống Sẽ Không Giới Hạn)",
 					value: this.state.submit.limit_use,
 					onChange: e => {
 						this.setState({
@@ -31579,8 +31579,8 @@
 					className: "form-group"
 				}, b.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "每个用户可使用次数"), b.a.createElement(s.a, {
-					placeholder: "限制每个用户可使用次数(为空则不限制)",
+				}, "Số Lần Sử Dụng Cho Mỗi Người Dùng"), b.a.createElement(s.a, {
+					placeholder: "Giới Hạn Số Lần Sử Dụng Cho Mỗi Người Dùng (Để Trống Sẽ Không Giới Hạn)",
 					value: this.state.submit.limit_use_with_user,
 					onChange: e => {
 						this.setState({
@@ -31593,7 +31593,7 @@
 					className: "form-group"
 				}, b.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "指定订阅"), b.a.createElement("div", null, b.a.createElement(a.a, {
+				}, "Chỉ Định Gói Dịch Vụ"), b.a.createElement("div", null, b.a.createElement(a.a, {
 					value: this.state.submit.limit_plan_ids || [],
 					onChange: e => {
 						this.setState({
@@ -31603,7 +31603,7 @@
 						})
 					},
 					mode: "multiple",
-					placeholder: "限制指定订阅可以使用优惠(为空则不限制)",
+					placeholder: "Giới hạn ưu đãi có thể sử dụng cho đăng ký cụ thể (để trống nếu không giới hạn).",
 					style: {
 						width: "100%"
 					}
@@ -31614,7 +31614,7 @@
 					className: "form-group"
 				}, b.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "指定周期"), b.a.createElement("div", null, b.a.createElement(a.a, {
+				}, "Chu kỳ được chỉ định."), b.a.createElement("div", null, b.a.createElement(a.a, {
 					value: this.state.submit.limit_period || [],
 					onChange: e => {
 						this.setState({
@@ -31624,7 +31624,7 @@
 						})
 					},
 					mode: "multiple",
-					placeholder: "限制指定周期可以使用优惠(为空则不限制)",
+					placeholder: "Giới Hạn Ưu Đãi Cho Đăng Ký Được Chỉ Định (Để Trống Sẽ Không Giới Hạn)",
 					style: {
 						width: "100%"
 					}
@@ -31635,8 +31635,8 @@
 					className: "form-group"
 				}, b.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "生成数量"), b.a.createElement(s.a, {
-					placeholder: "输入数量批量生成",
+				}, "Số Lượng Tạo Mới"), b.a.createElement(s.a, {
+					placeholder: "Vui lòng nhập số lượng để tạo mới một lần.",
 					value: this.state.submit.generate_count,
 					onChange: e => {
 						this.setState({
@@ -32335,23 +32335,23 @@
 				return u.a.createElement(u.a.Fragment, null, u.a.cloneElement(this.props.children, {
 					onClick: () => this.show()
 				}), u.a.createElement(r.a, {
-					title: "创建用户",
+					title: "Tạo Người Dùng",
 					visible: l,
 					onCancel: () => this.hide(),
-					cancelText: "取消",
+					cancelText: "Hủy Bỏ",
 					onOk: () => this.submit(),
 					okButtonProps: {
 						loading: n
 					},
-					okText: "生成"
+					okText: "Tạo Mới"
 				}, u.a.createElement("div", null, u.a.createElement("div", {
 					className: "form-group"
 				}, u.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "邮箱"), u.a.createElement(a.a.Group, {
+				}, "Địa Chỉ Email"), u.a.createElement(a.a.Group, {
 					compact: !0
 				}, !h.generate_count && u.a.createElement(a.a, {
-					placeholder: "账号（批量生成请留空）",
+					placeholder: "Tài Khoản (Để Trống Nếu Muốn Tạo Mới Một Lần)",
 					style: {
 						width: "45%"
 					},
@@ -32365,7 +32365,7 @@
 					},
 					disabled: !0
 				}), u.a.createElement(a.a, {
-					placeholder: "域",
+					placeholder: "gmail.com",
 					style: {
 						width: "45%"
 					},
@@ -32375,16 +32375,16 @@
 					className: "form-group"
 				}, u.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "密码"), u.a.createElement(a.a, {
+				}, "Mật Khẩu"), u.a.createElement(a.a, {
 					value: h.password,
-					placeholder: "留空则密码与邮箱相同",
+					placeholder: "Nếu để trống, mật khẩu sẽ giống với địa chỉ email.",
 					onChange: e => this.formChange("password", e.target.value)
 				})), u.a.createElement("div", {
 					className: "form-group"
 				}, u.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "到期时间"), u.a.createElement("div", null, u.a.createElement(i.a, {
-					placeholder: "请选择用户到期日期，为空则不限制到期时间",
+				}, "Thời Gian Hết Hạn"), u.a.createElement("div", null, u.a.createElement(i.a, {
+					placeholder: "Vui lòng chọn ngày hết hạn cho người dùng. Nếu để trống, không giới hạn thời gian hết hạn.",
 					defaultValue: h.expired_at && d()(1e3 * t.expired_at),
 					style: {
 						width: "100%"
@@ -32394,8 +32394,8 @@
 					className: "form-group"
 				}, u.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "订阅计划"), u.a.createElement(o.a, {
-					placeholder: "请选择用户订阅计划",
+				}, "Gói Dịch Vụ"), u.a.createElement(o.a, {
+					placeholder: "Vui lòng chọn gói dịch vụ cho người dùng.",
 					style: {
 						width: "100%"
 					},
@@ -32403,16 +32403,16 @@
 					onChange: e => this.formChange("plan_id", e)
 				}, u.a.createElement(o.a.Option, {
 					value: null
-				}, "无"), s.map((e => u.a.createElement(o.a.Option, {
+				}, "Không"), s.map((e => u.a.createElement(o.a.Option, {
 					key: Math.random(),
 					value: e.id
 				}, e.name))))), !h.email_prefix && u.a.createElement("div", {
 					className: "form-group"
 				}, u.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "生成数量"), u.a.createElement(a.a, {
+				}, "Số Lượng Tạo Mới"), u.a.createElement(a.a, {
 					value: h.generate_count,
-					placeholder: "如果为批量生成请输入生成数量",
+					placeholder: "Nếu bạn muốn tạo mới một lần, vui lòng nhập số lượng để tạo mới.",
 					onChange: e => this.formChange("generate_count", e.target.value)
 				})))))
 			}
@@ -32646,48 +32646,48 @@
 					n = e.fetchLoading,
 					r = e.pagination,
 					a = e.filter,
-					f = ["低", "中", "高"],
+					f = ["Thấp", "Trung", "Cao"],
 					m = [{
 						title: "#",
 						dataIndex: "id",
 						key: "id"
 					}, {
-						title: "主题",
+						title: "Chủ Đề",
 						dataIndex: "subject",
 						key: "subject"
 					}, {
-						title: "工单级别",
+						title: "Cấp Độ Công Việc",
 						dataIndex: "level",
 						key: "level",
 						render: e => f[e]
 					}, {
-						title: "工单状态",
+						title: "Trạng Thái Công Việc",
 						dataIndex: "reply_status",
 						key: "reply_status",
 						filters: 1 !== a.status && [{
-							text: "已回复",
+							text: "Đã Trả Lời",
 							value: 0
 						}, {
-							text: "待回复",
+							text: "Chờ Trả Lời",
 							value: 1
 						}],
 						render: (e, t) => 1 === t.status ? d.a.createElement("span", null, d.a.createElement(h.a, {
 							status: "success"
-						}), "已关闭") : d.a.createElement("span", null, d.a.createElement(h.a, {
+						}), "Đã Đóng") : d.a.createElement("span", null, d.a.createElement(h.a, {
 							status: e ? "error" : "processing"
-						}), e ? "待回复" : "已回复")
+						}), e ? "Chờ Trả Lời" : "Đã Trả Lời")
 					}, {
-						title: "创建时间",
+						title: "Thời Gian Tạo",
 						dataIndex: "created_at",
 						key: "created_at",
 						render: e => v()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}, {
-						title: "最后回复",
+						title: "Trả Lời Cuối",
 						dataIndex: "updated_at",
 						key: "updated_at",
 						render: e => v()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}, {
-						title: "操作",
+						title: "Tùy Chọn",
 						dataIndex: "action",
 						key: "action",
 						align: "right",
@@ -32695,16 +32695,16 @@
 						render: (e, t) => d.a.createElement("div", null, d.a.createElement("a", {
 							href: "javascript:void(0);",
 							onClick: () => this.toChat(t.id)
-						}, "查看"), d.a.createElement(u.a, {
+						}, "Xem"), d.a.createElement(u.a, {
 							type: "vertical"
 						}), d.a.createElement("a", {
 							disabled: t.status,
 							href: "javascript:void(0);",
 							onClick: () => this.close(t.id)
-						}, "关闭"))
+						}, "Đóng"))
 					}];
 				return d.a.createElement(p.a, o()({}, this.props, {
-					title: "工单管理"
+					title: "Quản Lý Công Việc"
 				}), d.a.createElement(y.a, {
 					loading: n
 				}, d.a.createElement("div", {
@@ -32718,14 +32718,14 @@
 					onChange: e => this.filter("status", e.target.value)
 				}, d.a.createElement(l.a.Button, {
 					value: 0
-				}, "已开启"), d.a.createElement(l.a.Button, {
+				}, "Đã Kích Hoạt"), d.a.createElement(l.a.Button, {
 					value: 1
-				}, "已关闭")), d.a.createElement("div", {
+				}, "Đã Đóng")), d.a.createElement("div", {
 					style: {
 						float: "right"
 					}
 				}, d.a.createElement(c.a, {
-					placeholder: "输入邮箱搜索",
+					placeholder: "Vui lòng nhập địa chỉ email để tìm kiếm.",
 					onChange: e => this.onSearch("email", e.target.value)
 				}))), d.a.createElement(i.a, {
 					tableLayout: "auto",
@@ -32934,19 +32934,19 @@
 					className: "text-dark"
 				}, window.settings.title || "AikoPanel")), a.a.createElement("p", {
 					className: "font-size-sm text-muted mb-3"
-				}, "登录到管理中心")), a.a.createElement("div", {
+				}, "Đăng Nhập Vào Trung Tâm Quản Lý")), a.a.createElement("div", {
 					className: "form-group"
 				}, a.a.createElement("input", {
 					type: "text",
 					className: "form-control form-control-alt",
-					placeholder: "邮箱",
+					placeholder: "Địa Chỉ Email",
 					ref: "email"
 				})), a.a.createElement("div", {
 					className: "form-group"
 				}, a.a.createElement("input", {
 					type: "password",
 					className: "form-control form-control-alt",
-					placeholder: "密码",
+					placeholder: "Mật Khẩu",
 					ref: "password"
 				})), a.a.createElement("div", {
 					className: "form-group mb-0"
@@ -32959,19 +32959,19 @@
 					type: "loading"
 				}) : a.a.createElement("span", null, a.a.createElement("i", {
 					className: "si si-login mr-1"
-				}), "登入")))))), a.a.createElement("div", {
+				}), "Đăng Nhập")))))), a.a.createElement("div", {
 					className: "text-center bg-gray-lighter p-3 px-4"
 				}, a.a.createElement("a", {
 					onClick: () => {
 						r.a.info({
-							title: "忘记密码",
-							content: a.a.createElement("div", null, a.a.createElement("div", null, "在站点目录下执行命令找回密码"), a.a.createElement("code", null, "php artisan reset:password 管理员邮箱")),
+							title: "Quên Mật Khẩu",
+							content: a.a.createElement("div", null, a.a.createElement("div", null, "Thực hiện lệnh trong ssh thư mục trang web để tìm mật khẩu"), a.a.createElement("code", null, "php artisan reset:password + Email quản trị")),
 							centered: !0,
-							okText: "我知道了",
+							okText: "Tôi hiểu rồi",
 							onOk() {}
 						})
 					}
-				}, "忘记密码"))))))))
+				}, "Quên Mật Khẩu"))))))))
 			}
 		}
 		t.default = Object(s.c)((e => ({
@@ -36067,24 +36067,24 @@
 					i = e.pagination,
 					s = e.loading,
 					c = [{
-						title: "日期",
+						title: "Ngày",
 						dataIndex: "record_at",
 						key: "record_at",
 						render: e => d()(1e3 * e).format("YYYY-MM-DD")
 					}, {
-						title: "上行",
+						title: "Download",
 						dataIndex: "u",
 						key: "d",
 						align: "right",
 						render: e => Object(p.b)(e)
 					}, {
-						title: "下行",
+						title: "Upload",
 						dataIndex: "d",
 						key: "d",
 						align: "right",
 						render: e => Object(p.b)(e)
 					}, {
-						title: "倍率",
+						title: "Tỷ Lệ",
 						dataIndex: "server_rate",
 						key: "server_rate",
 						align: "right"
@@ -36106,7 +36106,7 @@
 					},
 					footer: !1,
 					visible: t,
-					title: "流量记录"
+					title: "Ghi Nhận Lưu Lượng"
 				}, u.a.createElement(m.a, {
 					loading: s
 				}, u.a.createElement(o.a, {
@@ -53066,8 +53066,8 @@
 			}
 			ban() {
 				p.a.confirm({
-					title: "提醒",
-					content: "确定要进行封禁吗？",
+					title: "Thông Báo",
+					content: "Bạn có chắc chắn muốn chặn không?",
 					onOk: () => {
 						this.props.dispatch({
 							type: "user/ban"
@@ -53096,31 +53096,31 @@
 			resetSecret(e) {
 				var t = this;
 				p.a.confirm({
-					title: "重置安全信息",
-					content: "确定要重置".concat(e.email, "的安全信息吗？"),
+					title: "Đặt Lại Thông Tin Bảo Mật",
+					content: "Bạn có chắc chắn muốn đặt lại không?".concat(e.email, "Nó có phải là thông tin bảo mật?"),
 					onOk() {
 						t.props.dispatch({
 							type: "user/resetSecret",
 							id: e.id
 						})
 					},
-					okText: "确定",
-					cancelText: "取消"
+					okText: "Chắc chắn",
+					cancelText: "Hủy bỏ"
 				})
 			}
 			delUser(e) {
 				var t = this;
 				p.a.confirm({
-					title: "删除用户",
-					content: "确定要删除".concat(e.email, "的用户信息吗？"),
+					title: "Xóa Người Dùng",
+					content: "Bạn có chắc chắn muốn xóa không?".concat(e.email, "Bạn có chắc chắn muốn xóa thông tin người dùng không?"),
 					onOk() {
 						t.props.dispatch({
 							type: "user/delUser",
 							id: e.id
 						})
 					},
-					okText: "确定",
-					cancelText: "取消"
+					okText: "Chắc chắn",
+					cancelText: "Hủy bỏ"
 				})
 			}
 			render() {
@@ -53137,31 +53137,31 @@
 						key: "id",
 						sorter: !0
 					}, {
-						title: "邮箱",
+						title: "Địa chỉ Email",
 						dataIndex: "email",
 						key: "email",
 						render: (e, t) => g.a.createElement(f.a, {
 							placement: "top",
-							title: t.t ? "最后在线".concat(w()(1e3 * t.t).format("YYYY-MM-DD HH:mm:ss")) : "从未在线"
+							title: t.t ? "Lần Truy Cập Cuối Cùng".concat(w()(1e3 * t.t).format("YYYY-MM-DD HH:mm:ss")) : "Chưa Bao Giờ Trực Tuyến"
 						}, g.a.createElement(d.a, {
 							status: (new Date).getTime() / 1e3 - 600 > t.t ? "default" : "success"
 						}), e)
 					}, {
-						title: "状态",
+						title: "Trạng Thái",
 						dataIndex: "banned",
 						key: "banned",
 						sorter: !0,
 						render: e => g.a.createElement(h.a, {
 							color: e ? "red" : "green"
-						}, e ? "封禁" : "正常")
+						}, e ? "Chặn" : "Bình Thường")
 					}, {
-						title: "订阅",
+						title: "Gói Dịch Vụ",
 						dataIndex: "plan_name",
 						key: "plan_id",
 						sorter: !0,
 						render: e => e || "-"
 					}, {
-						title: "权限组",
+						title: "Nhóm Máy Chủ",
 						dataIndex: "group_id",
 						key: "group_id",
 						sorter: !0,
@@ -53170,7 +53170,7 @@
 							return t ? t.name : "-"
 						}
 					}, {
-						title: "已用(G)",
+						title: "Đã Sử Dụng (GB)",
 						dataIndex: "total_used",
 						key: "total_used",
 						sorter: !0,
@@ -53178,43 +53178,43 @@
 							color: parseFloat(e) > parseFloat(t.transfer_enable) ? "red" : "green"
 						}, e)
 					}, {
-						title: "流量(G)",
+						title: "Lưu Lượng (GB)",
 						dataIndex: "transfer_enable",
 						key: "transfer_enable",
 						sorter: !0,
 						render: (e, t) => e
 					}, {
-						title: "设备数",
+						title: "Số Thiết Bị",
 						dataIndex: "device_limit",
 						key: "updated_at",
 						sorter: (e, t) => e.alive_ip - t.alive_ip,
 						render: (e, t) => `${null!==t.alive_ip?t.alive_ip:0} / ${null!==t.device_limit?t.device_limit:"∞"}`
 					}, {
-						title: "到期时间",
+						title: "Thời Gian Hết Hạn",
 						dataIndex: "expired_at",
 						key: "expired_at",
 						sorter: !0,
 						render: e => g.a.createElement(h.a, {
 							color: e < (new Date).getTime() / 1e3 && null !== e ? "red" : "green"
-						}, e ? w()(1e3 * e).format("YYYY/MM/DD HH:mm") : null === e ? "长期有效" : "-")
+						}, e ? w()(1e3 * e).format("YYYY/MM/DD HH:mm") : null === e ? "Không Giới Hạn Thời Gian Hết Hạn" : "-")
 					}, {
-						title: "余额",
+						title: "Số Dư",
 						dataIndex: "balance",
 						key: "balance",
 						sorter: !0
 					}, {
-						title: "佣金",
+						title: "Hoa Hồng",
 						dataIndex: "commission_balance",
 						key: "commission_balance",
 						sorter: !0
 					}, {
-						title: "加入时间",
+						title: "Thời Gian Tham Gia",
 						dataIndex: "created_at",
 						key: "created_at",
 						sorter: !0,
 						render: e => w()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}, {
-						title: "操作",
+						title: "Tùy Chọn",
 						dataIndex: "action",
 						key: "action",
 						align: "right",
@@ -53230,7 +53230,7 @@
 								key: t.id
 							}, g.a.createElement("a", null, g.a.createElement(u.a, {
 								type: "edit"
-							}), " 编辑"))), g.a.createElement(l.a.Item, {
+							}), " Chỉnh Sửa"))), g.a.createElement(l.a.Item, {
 								onContextMenu: e => {
 									e.stopPropagation()
 								}
@@ -53239,23 +53239,23 @@
 								key: t.email
 							}, g.a.createElement("a", null, g.a.createElement(u.a, {
 								type: "plus"
-							}), " 分配订单"))), g.a.createElement(l.a.Item, null, g.a.createElement("a", {
+							}), " Phân Công Đơn Hàng"))), g.a.createElement(l.a.Item, null, g.a.createElement("a", {
 								onClick: () => Object(L.a)(t.subscribe_url)
 							}, g.a.createElement(u.a, {
 								type: "copy"
-							}), " 复制订阅URL")), g.a.createElement(l.a.Item, null, g.a.createElement("a", {
+							}), " Sao Chép URL Đăng Ký")), g.a.createElement(l.a.Item, null, g.a.createElement("a", {
 								onClick: () => this.resetSecret(t)
 							}, g.a.createElement(u.a, {
 								type: "reload"
-							}), " 重置UUID及订阅URL")), g.a.createElement(l.a.Item, {
+							}), " Đặt Lại UUID và URL Đăng Ký")), g.a.createElement(l.a.Item, {
 								onClick: () => this.orderFilter("user_id", "=", t.id)
 							}, g.a.createElement("a", null, g.a.createElement(u.a, {
 								type: "account-book"
-							}), " TA的订单")), g.a.createElement(l.a.Item, {
+							}), " Các Đơn Hàng Của Người Dùng")), g.a.createElement(l.a.Item, {
 								onClick: () => this.userFilter("invite_user_id", "=", t.id, !0)
 							}, g.a.createElement("a", null, g.a.createElement(u.a, {
 								type: "usergroup-add"
-							}), " TA的邀请")), g.a.createElement(l.a.Item, {
+							}), " Lời Mời Của Người Dùng")), g.a.createElement(l.a.Item, {
 								onContextMenu: e => {
 									e.stopPropagation()
 								}
@@ -53264,19 +53264,19 @@
 								key: null == t ? void 0 : t.email
 							}, g.a.createElement("a", null, g.a.createElement(u.a, {
 								type: "solution"
-							}), " TA的流量记录"))), g.a.createElement(l.a.Item, null, g.a.createElement("a", {
+							}), " Ghi Nhận Lưu Lượng Của Người Dùng"))), g.a.createElement(l.a.Item, null, g.a.createElement("a", {
 								onClick: () => this.delUser(t)
 							}, g.a.createElement(u.a, {
 								type: "delete"
-							}), " 删除用户")))
+							}), " Xóa Người Dùng")))
 						}, g.a.createElement("a", {
 							href: "javascript:void(0);"
-						}, "操作 ", g.a.createElement(u.a, {
+						}, "Tùy Chọn ", g.a.createElement(u.a, {
 							type: "caret-down"
 						}))))
 					}];
 				return g.a.createElement(v.a, o()({}, this.props, {
-					title: "用户管理"
+					title: "Quản Lý Người Dùng"
 				}), g.a.createElement(P.a, {
 					loading: _
 				}, g.a.createElement("div", {
@@ -53289,7 +53289,7 @@
 						padding: 15
 					}
 				}, g.a.createElement(f.a, {
-					title: "Tips：可以使用过滤器过滤后再使用操作对过滤的用户进行操作。",
+					title: "Mẹo: Bạn có thể sử dụng bộ lọc để lọc và sau đó sử dụng thao tác để vận hành người dùng lọc.",
 					placement: "right"
 				}, g.a.createElement(C.a, null, g.a.createElement(O.a, {
 					key: E.length,
@@ -53300,15 +53300,15 @@
 					}),
 					keys: [{
 						key: "email",
-						title: "邮箱",
+						title: "Địa chỉ Email",
 						condition: ["模糊"]
 					}, {
 						key: "id",
-						title: "用户ID",
+						title: "ID Người Dùng",
 						condition: ["=", ">=", ">", "<", "<="]
 					}, {
 						key: "plan_id",
-						title: "订阅",
+						title: "Gói Dịch Vụ",
 						condition: ["="],
 						type: "select",
 						options: R.map((e => ({
@@ -53317,15 +53317,15 @@
 						})))
 					}, {
 						key: "transfer_enable",
-						title: "流量",
+						title: "Lưu Lượng",
 						condition: [">=", ">", "<", "<="]
 					}, {
 						key: "d",
-						title: "下行",
+						title: "Lưu Lượng (Download)",
 						condition: [">=", ">", "<", "<="]
 					}, {
 						key: "expired_at",
-						title: "到期时间",
+						title: "Thời Gian Hết Hạn",
 						condition: [">=", ">", "<", "<="],
 						type: "date"
 					}, {
@@ -53338,38 +53338,38 @@
 						condition: ["="]
 					}, {
 						key: "banned",
-						title: "账号状态",
+						title: "Trạng Thái Tài Khoản",
 						condition: ["="],
 						type: "select",
 						options: [{
-							key: "正常",
+							key: "Bình Thường",
 							value: 0
 						}, {
-							key: "封禁",
+							key: "Chặn",
 							value: 1
 						}]
 					}, {
 						key: "invite_by_email",
-						title: "邀请人邮箱",
+						title: "Địa chỉ Email Người Mời",
 						condition: ["模糊"]
 					}, {
 						key: "invite_user_id",
-						title: "邀请人ID",
+						title: "ID Người Mời",
 						condition: ["="]
 					}, {
 						key: "remarks",
-						title: "备注",
+						title: "Ghi Chú",
 						condition: ["模糊"]
 					}, {
 						key: "is_admin",
-						title: "管理员",
+						title: "Tìm Quản Trị Viên",
 						condition: ["="],
 						type: "select",
 						options: [{
-							key: "是",
+							key: "Đúng",
 							value: 1
 						}, {
-							key: "否",
+							key: "Không",
 							value: 0
 						}]
 					}]
@@ -53377,24 +53377,24 @@
 					type: E.length > 0 ? "primary" : ""
 				}, g.a.createElement(u.a, {
 					type: "filter"
-				}), " 过滤器")), g.a.createElement(c.a, {
+				}), " Bộ Lọc")), g.a.createElement(c.a, {
 					overlay: g.a.createElement(l.a, null, g.a.createElement(l.a.Item, null, g.a.createElement("a", {
 						onClick: () => this.dumpCSV()
 					}, g.a.createElement(u.a, {
 						type: "file-excel"
-					}), " 导出CSV")), g.a.createElement(l.a.Item, null, g.a.createElement(y.a, null, g.a.createElement("a", null, g.a.createElement(u.a, {
+					}), " Xuất File CSV")), g.a.createElement(l.a.Item, null, g.a.createElement(y.a, null, g.a.createElement("a", null, g.a.createElement(u.a, {
 						type: "mail"
-					}), " 发送邮件"))), g.a.createElement(l.a.Item, {
+					}), " Gửi Email"))), g.a.createElement(l.a.Item, {
 						disabled: !E.length
 					}, g.a.createElement("a", {
 						disabled: !E.length,
 						onClick: () => this.ban()
 					}, g.a.createElement(u.a, {
 						type: "stop"
-					}), " 批量封禁")))
+					}), " Chặn Đồng Loạt")))
 				}, g.a.createElement(s.a, null, g.a.createElement(u.a, {
 					type: "select"
-				}), "操作")))), g.a.createElement(T.a, null, g.a.createElement(s.a, {
+				}), "Tùy Chọn")))), g.a.createElement(T.a, null, g.a.createElement(s.a, {
 					className: "ml-2"
 				}, g.a.createElement(u.a, {
 					type: "user-add"
@@ -53424,14 +53424,14 @@
 					key: null === (t = this.record) || void 0 === t ? void 0 : t.id
 				}, g.a.createElement("a", null, g.a.createElement(u.a, {
 					type: "edit"
-				}), " 编辑"))), g.a.createElement("li", {
+				}), " Chỉnh Sửa"))), g.a.createElement("li", {
 					className: "ant-dropdown-menu-item"
 				}, g.a.createElement(S.a, {
 					email: null === (n = this.record) || void 0 === n ? void 0 : n.email,
 					key: null === (r = this.record) || void 0 === r ? void 0 : r.email
 				}, g.a.createElement("a", null, g.a.createElement(u.a, {
 					type: "plus"
-				}), " 分配订单"))), g.a.createElement("li", {
+				}), " Phân Công Đơn Hàng"))), g.a.createElement("li", {
 					className: "ant-dropdown-menu-item"
 				}, g.a.createElement("a", {
 					onClick: () => {
@@ -53440,7 +53440,7 @@
 					}
 				}, g.a.createElement(u.a, {
 					type: "copy"
-				}), " 复制订阅URL")), g.a.createElement("li", {
+				}), " Sao Chép URL Đăng Ký")), g.a.createElement("li", {
 					className: "ant-dropdown-menu-item"
 				}, g.a.createElement("a", {
 					style: {
@@ -53449,7 +53449,7 @@
 					onClick: () => this.resetSecret(this.record)
 				}, g.a.createElement(u.a, {
 					type: "reload"
-				}), " 重置UUID及订阅URL")), g.a.createElement("li", {
+				}), " Đặt Lại UUID và URL Đăng Ký")), g.a.createElement("li", {
 					className: "ant-dropdown-menu-item",
 					onClick: () => {
 						var e;
@@ -53457,7 +53457,7 @@
 					}
 				}, g.a.createElement("a", null, g.a.createElement(u.a, {
 					type: "account-book"
-				}), " TA的订单")), g.a.createElement("li", {
+				}), " Đơn Hàng Của Người Dùng")), g.a.createElement("li", {
 					className: "ant-dropdown-menu-item",
 					onClick: () => {
 						var e;
@@ -53465,14 +53465,14 @@
 					}
 				}, g.a.createElement("a", null, g.a.createElement(u.a, {
 					type: "usergroup-add"
-				}), " TA的邀请")), g.a.createElement("li", {
+				}), " Lời Mời Của Người Dùng")), g.a.createElement("li", {
 					className: "ant-dropdown-menu-item"
 				}, g.a.createElement(j.a, {
 					userId: null === (i = this.record) || void 0 === i ? void 0 : i.id,
 					key: null === (p = this.record) || void 0 === p ? void 0 : p.email
 				}, g.a.createElement("a", null, g.a.createElement(u.a, {
 					type: "solution"
-				}), " TA的流量记录")))))))))
+				}), " Ghi Nhận Lưu Lượng Của Người Dùng")))))))))
 			}
 		}
 		t.default = Object(E.c)((e => ({
@@ -54703,7 +54703,7 @@
 						return s().wrap((function(e) {
 							for (;;) switch (e.prev = e.next) {
 								case 0:
-									return r.a.loading("发送中"), e.next = 3, c({
+									return r.a.loading("Đang Gửi"), e.next = 3, c({
 										type: "setState",
 										payload: {
 											replyLoading: !0
@@ -55411,39 +55411,39 @@
 				return d.a.createElement(d.a.Fragment, null, d.a.cloneElement(this.props.children, {
 					onClick: () => this.show()
 				}), d.a.createElement(s.a, {
-					title: this.state.submit.id ? "编辑支付方式" : "添加支付方式",
+					title: this.state.submit.id ? "Chỉnh Sửa Phương Thức Thanh Toán" : "Thêm Phương Thức Thanh Toán",
 					visible: this.state.visible,
 					onCancel: () => this.setState({
 						visible: !1
 					}),
 					onOk: () => this.save(),
-					okText: this.state.submit.id ? "保存" : "添加",
+					okText: this.state.submit.id ? "Lưu" : "Thêm",
 					okButtonProps: {
 						loading: e
 					},
-					cancelText: "取消"
+					cancelText: "Hủy bỏ"
 				}, d.a.createElement("div", null, d.a.createElement("div", {
 					className: "form-group"
 				}, d.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "显示名称"), d.a.createElement(v.a, {
-					placeholder: "用于前端显示使用",
+				}, "Tên Hiển Thị"), d.a.createElement(v.a, {
+					placeholder: "Được sử dụng để hiển thị trên giao diện người dùng",
 					defaultValue: a.name,
 					onChange: e => this.submitOnChange("name", e.target.value)
 				})), d.a.createElement("div", {
 					className: "form-group"
 				}, d.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "图标URL(选填)"), d.a.createElement(v.a, {
-					placeholder: "用于前端显示使用(https://x.com/icon.svg)",
+				}, "URL Biểu Tượng (Không Bắt Buộc)"), d.a.createElement(v.a, {
+					placeholder: "Được sử dụng cho màn hình phía người dùng (https://x.com/icon.svg)",
 					defaultValue: a.icon,
 					onChange: e => this.submitOnChange("icon", e.target.value)
 				})), d.a.createElement("div", {
 					className: "form-group"
 				}, d.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "自定义通知域名(选填)"), d.a.createElement(v.a, {
-					placeholder: "网关的通知将会发送到该域名(https://x.com)",
+				}, "URL Biểu Tượng (Không Bắt Buộc)"), d.a.createElement(v.a, {
+					placeholder: "Thông báo về cổng sẽ được gửi đến tên miền(https://x.com)",
 					defaultValue: a.notify_domain,
 					onChange: e => this.submitOnChange("notify_domain", e.target.value)
 				})), d.a.createElement("div", {
@@ -55454,10 +55454,10 @@
 					className: "form-group"
 				}, d.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "百分比手续费(选填)"), d.a.createElement(v.a, {
+				}, "Phí Giao Dịch Tính Theo Tỷ Lệ Phần Trăm (Không Bắt Buộc)"), d.a.createElement(v.a, {
 					suffix: "%",
 					type: "number",
-					placeholder: "在订单金额基础上附加手续费",
+					placeholder: "Thêm Phí Giao Dịch Dựa Trên Số Tiền Đặt Hàng",
 					defaultValue: a.handling_fee_percent,
 					onChange: e => this.submitOnChange("handling_fee_percent", e.target.value)
 				}))), d.a.createElement("div", {
@@ -55466,16 +55466,16 @@
 					className: "form-group"
 				}, d.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "固定手续费(选填)"), d.a.createElement(v.a, {
+				}, "Phí Giao Dịch Cố Định (Không Bắt Buộc)"), d.a.createElement(v.a, {
 					type: "number",
-					placeholder: "在订单金额基础上附加手续费",
+					placeholder: "Thêm phí giao dịch dựa trên số tiền đặt hàng",
 					defaultValue: a.handling_fee_fixed / 100,
 					onChange: e => this.submitOnChange("handling_fee_fixed", 100 * e.target.value)
 				})))), d.a.createElement("div", {
 					className: "form-group"
 				}, d.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "接口文件"), d.a.createElement("div", null, d.a.createElement(g.a, {
+				}, "Tệp Giao Diện"), d.a.createElement("div", null, d.a.createElement(g.a, {
 					style: {
 						width: "100%"
 					},
@@ -55549,7 +55549,7 @@
 							}
 						}), " ", e)
 					}, {
-						title: "启用",
+						title: "Kích Hoạt",
 						dataIndex: "enable",
 						key: "enable",
 						render: (e, t) => d.a.createElement(u.a, {
@@ -55558,24 +55558,24 @@
 							onChange: e => this.show(t.id)
 						})
 					}, {
-						title: "显示名称",
+						title: "Tên Hiển Thị",
 						dataIndex: "name",
 						key: "name"
 					}, {
-						title: "支付接口",
+						title: "Giao Diện Thanh Toán",
 						dataIndex: "payment",
 						key: "payment"
 					}, {
-						title: d.a.createElement("span", null, "通知地址 ", d.a.createElement(l.a, {
+						title: d.a.createElement("span", null, "Địa Chỉ Thông Báo ", d.a.createElement(l.a, {
 							placement: "top",
-							title: "支付网关将会把数据通知到本地址，请通过防火墙放行本地址。"
+							title: "Cổng thanh toán sẽ thông báo dữ liệu đến địa chỉ này, vui lòng phát hành địa chỉ này thông qua tường lửa."
 						}, d.a.createElement(h.a, {
 							type: "question-circle"
 						}))),
 						dataIndex: "notify_url",
 						key: "notify_url"
 					}, {
-						title: "操作",
+						title: "Tùy Chọn",
 						dataIndex: "action",
 						key: "action",
 						align: "right",
@@ -55585,26 +55585,26 @@
 							record: t
 						}, d.a.createElement("a", {
 							href: "javascript:void(0);"
-						}, "编辑")), d.a.createElement(c.a, {
+						}, "Chỉnh Sửa")), d.a.createElement(c.a, {
 							type: "vertical"
 						}), d.a.createElement("a", {
 							href: "javascript:void(0)",
 							onClick: () => {
 								s.a.confirm({
-									title: "警告",
-									content: "确定要删除该条项目吗？",
+									title: "Cảnh Báo",
+									content: "Bạn có chắc chắn muốn xóa mục này không?",
 									onOk: () => this.props.dispatch({
 										type: "payment/drop",
 										id: t.id
 									}),
-									okText: "确定",
-									cancelText: "取消"
+									okText: "Chắc chắn",
+									cancelText: "Hủy bỏ"
 								})
 							}
-						}, "删除"))
+						}, "Xóa"))
 					}];
 				return d.a.createElement(p.a, o()({}, this.props, {
-					title: "支付配置"
+					title: "Cấu Hình Thanh Toán"
 				}), d.a.createElement("div", {
 					className: "d-flex justify-content-between align-items-center"
 				}), d.a.createElement(_.a, {
@@ -55621,7 +55621,7 @@
 					key: 0
 				}, d.a.createElement(a.a, null, d.a.createElement(h.a, {
 					type: "plus"
-				}), " 添加支付方式"))), d.a.createElement(E.a, {
+				}), " Thêm Phương Thức Thanh Toán"))), d.a.createElement(E.a, {
 					onDragEnd: (t, n) => {
 						e.props.dispatch({
 							type: "payment/sort",
@@ -59035,7 +59035,7 @@
 						select: d()({}, this.defaultValue),
 						selectIndex: 0
 					})
-				}))) : h.a.error("值不能为空")
+				}))) : h.a.error("Giá trị không thể để trống")
 			}
 			onChange(e, t, n, r) {
 				var o = this.state.filter;
@@ -59049,8 +59049,8 @@
 				var e = !0;
 				this.state.filter.forEach((t => {
 					"" === t.value && (u.a.error({
-						message: "过滤器",
-						description: "欲检索内容不能为空",
+						message: "Bộ Lọc",
+						description: "Nội dung tìm kiếm không thể để trống",
 						duration: 1.5
 					}), e = !1)
 				})), e && (this.props.onOk(this.state.filter), this.setState({
@@ -59082,7 +59082,7 @@
 					onClick: () => this.show()
 				}), m.a.createElement(r.a, {
 					onOk: () => this.onOk(),
-					title: "过滤器",
+					title: "Bộ Lọc",
 					visible: this.state.visible,
 					onClose: () => this.hide(),
 					className: "aikopanel-filter-drawer",
@@ -59091,7 +59091,7 @@
 					var n = this.props.keys.find((e => e.key === this.state.filter[t].key));
 					return m.a.createElement(m.a.Fragment, null, m.a.createElement(c.a, {
 						type: "horizontal"
-					}, "条件".concat(t + 1), " ", m.a.createElement(l.a, {
+					}, "Điều Kiện".concat(t + 1), " ", m.a.createElement(l.a, {
 						type: "delete",
 						style: {
 							color: "#ff4d4f"
@@ -59099,7 +59099,7 @@
 						onClick: () => this.onDelete(t)
 					})), m.a.createElement("div", {
 						className: "form-group"
-					}, m.a.createElement("label", null, "字段名"), m.a.createElement("div", null, m.a.createElement(s.a, {
+					}, m.a.createElement("label", null, "Tên Trường"), m.a.createElement("div", null, m.a.createElement(s.a, {
 						value: this.state.filter[t].key,
 						style: {
 							width: "100%"
@@ -59110,7 +59110,7 @@
 						onClick: () => this.onChange("key", this.props.keys[n].key, t, n)
 					}, e.title)))))), m.a.createElement("div", {
 						className: "form-group"
-					}, m.a.createElement("label", null, "条件"), m.a.createElement("div", null, m.a.createElement(s.a, {
+					}, m.a.createElement("label", null, "Điều Kiện"), m.a.createElement("div", null, m.a.createElement(s.a, {
 						value: this.state.filter[t].condition,
 						style: {
 							width: "100%"
@@ -59121,12 +59121,12 @@
 						value: e
 					}, e)))))), m.a.createElement("div", {
 						className: "form-group"
-					}, m.a.createElement("label", null, "欲检索内容"), m.a.createElement("div", null, "select" === n.type && m.a.createElement(s.a, {
+					}, m.a.createElement("label", null, "Nội dung tìm kiếm"), m.a.createElement("div", null, "select" === n.type && m.a.createElement(s.a, {
 						defaultValue: this.state.filter[t].value || void 0,
 						style: {
 							width: "100%"
 						},
-						placeholder: "请选择值",
+						placeholder: "Vui lòng chọn giá trị",
 						onChange: e => this.onChange("value", e, t)
 					}, n.options.map(((e, t) => m.a.createElement(s.a.Option, {
 						value: e.value
@@ -59143,7 +59143,7 @@
 							width: "100%"
 						},
 						defaultValue: this.state.filter[t].value || void 0,
-						placeholder: "值",
+						placeholder: "Giá Trị",
 						onChange: e => this.onChange("value", e.target.value, t)
 					}))))
 				})), m.a.createElement(o.a, {
@@ -59154,7 +59154,7 @@
 					onClick: () => this.add()
 				}, m.a.createElement(l.a, {
 					type: "plus"
-				}), " 添加条件"), m.a.createElement("div", {
+				}), " Thêm Điều Kiện"), m.a.createElement("div", {
 					className: "aikopanel-drawer-action"
 				}, m.a.createElement(o.a, {
 					disabled: !this.state.filter.length,
@@ -59163,16 +59163,16 @@
 					style: {
 						float: "left"
 					}
-				}, "重置"), m.a.createElement(o.a, {
+				}, "Đặt Lại"), m.a.createElement(o.a, {
 					style: {
 						marginRight: 8
 					},
 					onClick: () => this.hide()
-				}, "取消"), m.a.createElement(o.a, {
+				}, "Hủy Bỏ"), m.a.createElement(o.a, {
 					disabled: !this.state.filter.length,
 					onClick: () => this.onOk(),
 					type: "primary"
-				}, "检索"))))
+				}, "Tìm Kiếm"))))
 			}
 		}
 	},
@@ -60490,7 +60490,7 @@
 								case 0:
 									return e.next = 2, n((e => e.user));
 								case 2:
-									return t = e.sent, o = t.filter, r.a.loading("导出中"), e.next = 7, Object(a.b)("/" + window.settings.secure_path + "/user/dumpCSV", {
+									return t = e.sent, o = t.filter, r.a.loading("Đang Xuất Dữ Liệu"), e.next = 7, Object(a.b)("/" + window.settings.secure_path + "/user/dumpCSV", {
 										filter: o
 									});
 								case 7:
@@ -60546,7 +60546,7 @@
 									}
 									return e.abrupt("return");
 								case 13:
-									r.a.success("已加入队列执行"), "function" == typeof o && o();
+									r.a.success("Đã Thêm Vào Hàng Đợi Để Thực Hiện"), "function" == typeof o && o();
 								case 15:
 								case "end":
 									return e.stop()
@@ -60601,7 +60601,7 @@
 									}
 									return e.abrupt("return");
 								case 5:
-									return r.a.success("重置成功"), e.next = 8, o({
+									return r.a.success("Đặt Lại Thành Công"), e.next = 8, o({
 										type: "fetch"
 									});
 								case 8:
@@ -60628,7 +60628,7 @@
 									}
 									return e.abrupt("return");
 								case 5:
-									return r.a.success("删除成功"), e.next = 8, o({
+									return r.a.success("Xóa Thành Công"), e.next = 8, o({
 										type: "fetch"
 									});
 								case 8:
@@ -60985,15 +60985,15 @@
 					onClose: () => this.setState({
 						visible: !1
 					}),
-					title: "".concat(this.state.record.id ? "编辑订阅" : "新建订阅"),
+					title: "".concat(this.state.record.id ? "Chỉnh Sửa Gói Dịch Vụ" : "Tạo Mới Gói Dịch Vụ"),
 					visible: this.state.visible,
 					width: "80%"
 				}, m.a.createElement("div", null, m.a.createElement("div", {
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "套餐名称"), m.a.createElement(C.a, {
-					placeholder: "请输入套餐名称",
+				}, "Tên Gói Cước"), m.a.createElement(C.a, {
+					placeholder: "Vui lòng nhập tên gói cước.",
 					value: this.state.record.name,
 					onChange: e => {
 						this.setState({
@@ -61006,10 +61006,10 @@
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "套餐描述"), m.a.createElement(C.a.TextArea, {
+				}, "Mô Tả Gói Cước"), m.a.createElement(C.a.TextArea, {
 					rows: 4,
 					value: this.state.record.content,
-					placeholder: "请输入套餐描述，支持HTML",
+					placeholder: "Vui lòng nhập mô tả gói cước, hỗ trợ định dạng HTML.",
 					onChange: e => {
 						this.setState({
 							record: d()({}, this.state.record, {
@@ -61019,9 +61019,9 @@
 					}
 				})), m.a.createElement(k.a, {
 					orientation: "center"
-				}, "售价设置 ", m.a.createElement(l.a, {
+				}, "Cài Đặt Giá Bán ", m.a.createElement(l.a, {
 					placement: "top",
-					title: "将金额留空则不会进行出售"
+					title: "Nếu bạn để trống số tiền, thì không có giao dịch bán hàng sẽ được thực hiện."
 				}, m.a.createElement(h.a, {
 					type: "info-circle"
 				}))), m.a.createElement(E.a, {
@@ -61032,7 +61032,7 @@
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "月付"), m.a.createElement(C.a, {
+				}, "1 Tháng"), m.a.createElement(C.a, {
 					value: null !== this.state.record.month_price ? this.state.record.month_price : void 0,
 					onChange: e => this.priceOnChange("month_price", e.target.value)
 				}))), m.a.createElement(S.a, {
@@ -61041,7 +61041,7 @@
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "季付"), m.a.createElement(C.a, {
+				}, "3 Tháng"), m.a.createElement(C.a, {
 					value: null !== this.state.record.quarter_price ? this.state.record.quarter_price : void 0,
 					onChange: e => this.priceOnChange("quarter_price", e.target.value)
 				}))), m.a.createElement(S.a, {
@@ -61050,7 +61050,7 @@
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "半年"), m.a.createElement(C.a, {
+				}, "6 Tháng"), m.a.createElement(C.a, {
 					value: null !== this.state.record.half_year_price ? this.state.record.half_year_price : void 0,
 					onChange: e => this.priceOnChange("half_year_price", e.target.value)
 				}))), m.a.createElement(S.a, {
@@ -61059,7 +61059,7 @@
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "年付"), m.a.createElement(C.a, {
+				}, "1 Năm"), m.a.createElement(C.a, {
 					value: null !== this.state.record.year_price ? this.state.record.year_price : void 0,
 					onChange: e => this.priceOnChange("year_price", e.target.value)
 				}))), m.a.createElement(S.a, {
@@ -61068,7 +61068,7 @@
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "两年付"), m.a.createElement(C.a, {
+				}, "2 Năm"), m.a.createElement(C.a, {
 					value: null !== this.state.record.two_year_price ? this.state.record.two_year_price : void 0,
 					onChange: e => this.priceOnChange("two_year_price", e.target.value)
 				}))), m.a.createElement(S.a, {
@@ -61077,7 +61077,7 @@
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "三年付"), m.a.createElement(C.a, {
+				}, "3 Năm"), m.a.createElement(C.a, {
 					value: null !== this.state.record.three_year_price ? this.state.record.three_year_price : void 0,
 					onChange: e => this.priceOnChange("three_year_price", e.target.value)
 				})))), m.a.createElement(E.a, {
@@ -61088,7 +61088,7 @@
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "一次性"), m.a.createElement(C.a, {
+				}, "Vĩnh Viễn"), m.a.createElement(C.a, {
 					addonAfter: e.currency_symbol,
 					value: null !== this.state.record.onetime_price ? this.state.record.onetime_price : void 0,
 					onChange: e => this.priceOnChange("onetime_price", e.target.value)
@@ -61098,7 +61098,7 @@
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "重置包"), m.a.createElement(C.a, {
+				}, "Đặt Lại Gói"), m.a.createElement(C.a, {
 					addonAfter: e.currency_symbol,
 					value: null !== this.state.record.reset_price ? this.state.record.reset_price : void 0,
 					onChange: e => this.priceOnChange("reset_price", e.target.value)
@@ -61106,9 +61106,9 @@
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "套餐流量"), m.a.createElement(C.a, {
+				}, "Lưu Lượng Gói Cước"), m.a.createElement(C.a, {
 					addonAfter: "GB",
-					placeholder: "请输入套餐流量",
+					placeholder: "Vui lòng nhập lượng dữ liệu cho gói cước.",
 					value: this.state.record.transfer_enable,
 					onChange: e => {
 						this.setState({
@@ -61121,8 +61121,8 @@
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "设备数限制"), m.a.createElement(C.a, {
-					placeholder: "留空则不限制",
+				}, "Giới Hạn Số Lượng Thiết Bị"), m.a.createElement(C.a, {
+					placeholder: "Nếu để trống, sẽ không có giới hạn về số lượng thiết bị.",
 					value: this.state.record.device_limit,
 					onChange: e => {
 						this.setState({
@@ -61135,10 +61135,10 @@
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "权限组 ", m.a.createElement(O.a, null, m.a.createElement("a", {
+				}, "Nhóm Máy Chủ ", m.a.createElement(O.a, null, m.a.createElement("a", {
 					href: "javascript:(0);"
-				}, "添加权限组"))), m.a.createElement(_.a, {
-					placeholder: "请选择权限组",
+				}, "Thêm Nhóm Máy Chủ"))), m.a.createElement(_.a, {
+					placeholder: "Vui lòng chọn Nhóm Máy Chủ.",
 					style: {
 						width: "100%"
 					},
@@ -61157,8 +61157,8 @@
 					className: "form-group"
 				}, m.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "流量重置方式"), m.a.createElement(_.a, {
-					placeholder: "请选择权限组",
+				}, "Phương Thức Reset Lưu Lượng"), m.a.createElement(_.a, {
+					placeholder: "Vui lòng chọn Nhóm Máy Chủ.",
 					style: {
 						width: "100%"
 					},
@@ -61173,27 +61173,27 @@
 				}, m.a.createElement(_.a.Option, {
 					key: null,
 					value: null
-				}, "跟随系统设置"), m.a.createElement(_.a.Option, {
+				}, "Theo Cài Đặt Hệ Thống"), m.a.createElement(_.a.Option, {
 					key: 0,
 					value: 0
-				}, "每月1号"), m.a.createElement(_.a.Option, {
+				}, "Mỗi Ngày 1 trong Tháng"), m.a.createElement(_.a.Option, {
 					key: 1,
 					value: 1
-				}, "按月重置"), m.a.createElement(_.a.Option, {
+				}, "Reset Lại Vào Ngày Đã Mua"), m.a.createElement(_.a.Option, {
 					key: 2,
 					value: 2
-				}, "不重置"), m.a.createElement(_.a.Option, {
+				}, "Không Reset"), m.a.createElement(_.a.Option, {
 					key: 3,
 					value: 3
-				}, "每年1月1日"), m.a.createElement(_.a.Option, {
+				}, "Mỗi Ngày 1 Tháng 1 trong Năm"), m.a.createElement(_.a.Option, {
 					key: 4,
 					value: 4
-				}, "按年重置")))), m.a.createElement("div", {
+				}, "Reset Theo Năm")))), m.a.createElement("div", {
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "最大容纳用户量"), m.a.createElement(C.a, {
-					placeholder: "留空则不限制",
+				}, "Số Lượng Người Mua Tối Đa"), m.a.createElement(C.a, {
+					placeholder: "Nếu để trống, sẽ không có giới hạn về số lượng người mua.",
 					value: this.state.record.capacity_limit,
 					onChange: e => {
 						this.setState({
@@ -61206,9 +61206,9 @@
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "限速"), m.a.createElement(C.a, {
+				}, "Giới Hạn Tốc Độ"), m.a.createElement(C.a, {
 					addonAfter: "Mbps",
-					placeholder: "留空则不限制",
+					placeholder: "Nếu để trống, không có giới hạn về tốc độ.",
 					value: this.state.record.speed_limit,
 					onChange: e => {
 						this.setState({
@@ -61225,7 +61225,7 @@
 						marginTop: 5
 					}
 				}, m.a.createElement(l.a, {
-					title: "勾选后变更的流量、限速、权限组将应用到该套餐下的用户",
+					title: "Sau khi tích chọn, các thay đổi về lưu lượng, giới hạn tốc độ và Nhóm Máy Chủ sẽ được áp dụng cho người dùng trong gói cước đó.",
 					placement: "top"
 				}, m.a.createElement(x.a, {
 					onChange: e => this.setState({
@@ -61233,18 +61233,18 @@
 							force_update: e.target.checked
 						})
 					})
-				}, "强制更新到用户"))), m.a.createElement(i.a, {
+				}, "Cập Nhật Bắt Buộc Cho Người Dùng"))), m.a.createElement(i.a, {
 					style: {
 						marginRight: 8
 					},
 					onClick: () => this.setState({
 						visible: !1
 					})
-				}, "取消"), m.a.createElement(i.a, {
+				}, "Hủy Bỏ"), m.a.createElement(i.a, {
 					loading: t,
 					onClick: () => t || this.save(),
 					type: "primary"
-				}, "提交"))))
+				}, "Lưu"))))
 			}
 		}
 		var L = Object(v.c)((e => ({
@@ -61303,7 +61303,7 @@
 					r = t.fetchLoading,
 					f = this.props.serverGroup.groups,
 					d = [{
-						title: "排序",
+						title: "Sắp Xếp",
 						dataIndex: "sort",
 						key: "sort",
 						render: (e, t) => m.a.createElement(m.a.Fragment, null, m.a.createElement(h.a, {
@@ -61313,7 +61313,7 @@
 							}
 						}))
 					}, {
-						title: "销售状态",
+						title: "Trạng Thái Bán Hàng",
 						dataIndex: "show",
 						key: "show",
 						render: (e, t) => m.a.createElement(u.a, {
@@ -61322,9 +61322,9 @@
 							onClick: () => this.update(t.id, "show", parseInt(e) ? 0 : 1)
 						})
 					}, {
-						title: m.a.createElement("span", null, "续费 ", m.a.createElement(l.a, {
+						title: m.a.createElement("span", null, "Gia Hạn ", m.a.createElement(l.a, {
 							placement: "top",
-							title: "在订阅停止销售时，已购用户是否可以续费"
+							title: "Khi đăng ký ngừng bán, người dùng đã mua có thể gia hạn không?"
 						}, m.a.createElement(h.a, {
 							type: "question-circle"
 						}))),
@@ -61336,11 +61336,11 @@
 							onClick: () => this.update(t.id, "renew", parseInt(e) ? 0 : 1)
 						})
 					}, {
-						title: "名称",
+						title: "Tên",
 						dataIndex: "name",
 						key: "name"
 					}, {
-						title: "统计",
+						title: "Thống Kê",
 						dataIndex: "count",
 						key: "count",
 						render: e => m.a.createElement(m.a.Fragment, null, m.a.createElement(h.a, {
@@ -61350,57 +61350,57 @@
 							}
 						}), " ", e)
 					}, {
-						title: "流量",
+						title: "Lưu Lượng",
 						dataIndex: "transfer_enable",
 						key: "transfer_enable",
 						render: e => m.a.createElement(m.a.Fragment, null, e, " GB")
 					}, {
-						title: "设备数限制",
+						title: "Giới Hạn Số Lượng Thiết Bị",
 						dataIndex: "device_limit",
 						key: "device_limit",
 						render: e => null !== e ? e : "-"
 					}, {
-						title: "月付",
+						title: "1 Tháng",
 						dataIndex: "month_price",
 						key: "month_price",
 						render: e => null !== e ? e.toFixed(2) : "-"
 					}, {
-						title: "季付",
+						title: "3 Tháng",
 						dataIndex: "quarter_price",
 						key: "quarter_price",
 						render: e => null !== e ? e.toFixed(2) : "-"
 					}, {
-						title: "半年付",
+						title: "6 Tháng",
 						dataIndex: "half_year_price",
 						key: "half_year_price",
 						render: e => null !== e ? e.toFixed(2) : "-"
 					}, {
-						title: "年付",
+						title: "1 Năm",
 						dataIndex: "year_price",
 						key: "year_price",
 						render: e => null !== e ? e.toFixed(2) : "-"
 					}, {
-						title: "两年付",
+						title: "2 Năm",
 						dataIndex: "two_year_price",
 						key: "two_year_price",
 						render: e => null !== e ? e.toFixed(2) : "-"
 					}, {
-						title: "三年付",
+						title: "3 Năm",
 						dataIndex: "three_year_price",
 						key: "three_year_price",
 						render: e => null !== e ? e.toFixed(2) : "-"
 					}, {
-						title: "一次性",
+						title: "Vĩnh Viễn",
 						dataIndex: "onetime_price",
 						key: "onetime_price",
 						render: e => null !== e ? e.toFixed(2) : "-"
 					}, {
-						title: "重置包",
+						title: "Đặt Lại Gói",
 						dataIndex: "reset_price",
 						key: "reset_price",
 						render: e => null !== e ? e.toFixed(2) : "-"
 					}, {
-						title: "权限组",
+						title: "Nhóm Máy Chủ",
 						dataIndex: "group_id",
 						key: "group_id",
 						render: (e, t) => {
@@ -61410,7 +61410,7 @@
 							})), n
 						}
 					}, {
-						title: "操作",
+						title: "Tùy Chọn",
 						dataIndex: "action",
 						key: "action",
 						fixed: "right",
@@ -61426,23 +61426,23 @@
 								key: null == t ? void 0 : t.id
 							}, m.a.createElement("a", null, m.a.createElement(h.a, {
 								type: "edit"
-							}), " 编辑"))), m.a.createElement(s.a.Item, {
+							}), " Chỉnh Sửa"))), m.a.createElement(s.a.Item, {
 								style: {
 									color: "#ff4d4f"
 								},
 								onClick: () => this.drop(t.id)
 							}, m.a.createElement(h.a, {
 								type: "delete"
-							}), " 删除"))
+							}), " Xóa"))
 						}, m.a.createElement("a", {
 							href: "javascript:void(0);"
-						}, "操作 ", m.a.createElement(h.a, {
+						}, "Tùy Chọn ", m.a.createElement(h.a, {
 							type: "caret-down"
 						}))))
 					}],
 					p = this;
 				return m.a.createElement(g.a, o()({}, this.props, {
-					title: "订阅管理"
+					title: "Quản lý Gói Dịch Vụ"
 				}), m.a.createElement("div", {
 					className: "d-flex justify-content-between align-items-center"
 				}), m.a.createElement(P.a, {
@@ -61457,7 +61457,7 @@
 					}
 				}, m.a.createElement(L, null, m.a.createElement(i.a, null, m.a.createElement(h.a, {
 					type: "plus"
-				}), " 添加订阅"))), m.a.createElement(b.a, {
+				}), " Thêm Gói Dịch Vụ"))), m.a.createElement(b.a, {
 					onDragEnd: (e, t) => {
 						p.props.dispatch({
 							type: "plan/sort",
@@ -61487,7 +61487,7 @@
 					key: null === (e = this.record) || void 0 === e ? void 0 : e.id
 				}, m.a.createElement("a", null, m.a.createElement(h.a, {
 					type: "edit"
-				}), " 编辑"))), m.a.createElement("li", {
+				}), " Chỉnh Sửa"))), m.a.createElement("li", {
 					className: "ant-dropdown-menu-item",
 					onClick: () => {
 						var e;
@@ -61499,7 +61499,7 @@
 					}
 				}, m.a.createElement(h.a, {
 					type: "delete"
-				}), " 删除")))))))))
+				}), " Xóa")))))))))
 			}
 		}
 		t.default = Object(v.c)((e => ({
@@ -62073,7 +62073,7 @@
 				}), f.a.createElement(y.a, {
 					width: "80%",
 					visible: e,
-					title: i ? "编辑知识" : "新增知识",
+					title: i ? "Chỉnh Sửa Kiến Thức" : "Thêm Kiến Thức Mới",
 					id: "knowledge",
 					onClose: () => this.hide()
 				}, r ? f.a.createElement(u.a, {
@@ -62082,24 +62082,24 @@
 					className: "form-group"
 				}, f.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "标题"), f.a.createElement(w.a, {
-					placeholder: "请输入知识标题",
+				}, "Tiêu Đề"), f.a.createElement(w.a, {
+					placeholder: "Vui lòng nhập tiêu đề kiến thức.",
 					value: n.title,
 					onChange: e => this.formChange("title", e.target.value)
 				})), f.a.createElement("div", {
 					className: "form-group"
 				}, f.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "分类"), f.a.createElement(w.a, {
-					placeholder: "请输入分类，分类将会自动归集",
+				}, "Phân Loại"), f.a.createElement(w.a, {
+					placeholder: "Vui lòng nhập phân loại, phân loại sẽ tự động được nhóm lại.",
 					value: n.category,
 					onChange: e => this.formChange("category", e.target.value)
 				})), f.a.createElement("div", {
 					className: "form-group"
 				}, f.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "语言"), f.a.createElement(b.a, {
-					placeholder: "请选择知识语言",
+				}, "Ngôn Ngữ"), f.a.createElement(b.a, {
+					placeholder: "Vui lòng chọn ngôn ngữ cho kiến thức.",
 					defaultValue: n.language || 1,
 					style: {
 						width: "100%"
@@ -62112,7 +62112,7 @@
 					className: "form-group"
 				}, f.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "内容"), f.a.createElement(T, {
+				}, "Nội Dung"), f.a.createElement(T, {
 					key: this.key,
 					style: {
 						height: "500px"
@@ -62135,11 +62135,11 @@
 						marginRight: 8
 					},
 					onClick: () => this.hide()
-				}, "取消"), f.a.createElement(a.a, {
+				}, "Hủy Bỏ"), f.a.createElement(a.a, {
 					loading: o,
 					onClick: () => this.save(),
 					type: "primary"
-				}, "提交"))))
+				}, "Lưu"))))
 			}
 		}
 		var P = Object(g.c)((e => ({
@@ -62190,7 +62190,7 @@
 					t = e.knowledges,
 					n = e.fetchLoading,
 					r = (e.categorys, [{
-						title: "排序",
+						title: "Sắp Xếp",
 						dataIndex: "sort",
 						key: "sort",
 						render: e => f.a.createElement(f.a.Fragment, null, f.a.createElement(u.a, {
@@ -62200,11 +62200,11 @@
 							}
 						}))
 					}, {
-						title: "文章ID",
+						title: "ID Bài Viết",
 						dataIndex: "id",
 						key: "id"
 					}, {
-						title: "显示",
+						title: "Hiển Thị",
 						dataIndex: "show",
 						key: "show",
 						render: (e, t) => f.a.createElement(l.a, {
@@ -62213,21 +62213,21 @@
 							checked: e
 						})
 					}, {
-						title: "标题",
+						title: "Tiêu Đề",
 						dataIndex: "title",
 						key: "title"
 					}, {
-						title: "分类",
+						title: "Phân Loại",
 						dataIndex: "category",
 						key: "category"
 					}, {
-						title: "更新时间",
+						title: "Thời Gian Cập Nhật",
 						dataIndex: "updated_at",
 						key: "updated_at",
 						align: "right",
 						render: e => m()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}, {
-						title: "操作",
+						title: "Tùy Chọn",
 						dataIndex: "action",
 						key: "action",
 						align: "right",
@@ -62236,24 +62236,24 @@
 							id: t.id
 						}, f.a.createElement("a", {
 							href: "javascript:void(0);"
-						}, "编辑")), f.a.createElement(c.a, {
+						}, "Chỉnh Sửa")), f.a.createElement(c.a, {
 							type: "vertical"
 						}), f.a.createElement("a", {
 							href: "javascript:void(0);",
 							onClick: () => {
 								s.a.confirm({
-									title: "警告",
-									content: "确定要删除该条项目吗？",
+									title: "Cảnh Báo",
+									content: "Bạn có chắc chắn muốn xóa mục này không?",
 									onOk: () => this.drop(t),
-									okText: "确定",
-									cancelText: "取消"
+									okText: "Chắc chắn",
+									cancelText: "Hủy Bỏ"
 								})
 							}
-						}, "删除"))
+						}, "Xóa Bỏ"))
 					}]),
 					h = this;
 				return f.a.createElement(d.a, o()({}, this.props, {
-					title: "知识库管理"
+					title: "Quản Lý Kho Kiến Thức"
 				}), f.a.createElement(j.a, {
 					loading: n
 				}, f.a.createElement("div", {
@@ -62266,7 +62266,7 @@
 					}
 				}, f.a.createElement(P, null, f.a.createElement(a.a, null, f.a.createElement(u.a, {
 					type: "plus"
-				}), "新增"))), f.a.createElement(v.a, {
+				}), "Thêm Mới"))), f.a.createElement(v.a, {
 					onDragEnd: (e, t) => {
 						h.props.dispatch({
 							type: "knowledge/sort",
@@ -64350,32 +64350,32 @@
 				return u.a.createElement(u.a.Fragment, null, u.a.cloneElement(this.props.children, {
 					onClick: () => this.show()
 				}), u.a.createElement(r.a, {
-					title: "订单分配",
+					title: "Phân Bổ Đơn Hàng",
 					visible: t,
 					onCancel: () => this.show(),
 					onOk: () => this.ok(),
 					okText: c ? u.a.createElement(a.a, {
 						type: "loading"
-					}) : "确定",
-					cancelText: "取消"
+					}) : "Xác Nhận",
+					cancelText: "Hủy Bỏ"
 				}, u.a.createElement("div", {
 					className: "form-group"
 				}, u.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "用户邮箱"), u.a.createElement(i.a, {
-					placeholder: "请输入用户邮箱",
+				}, "Email Người Dùng"), u.a.createElement(i.a, {
+					placeholder: "Vui lòng nhập địa chỉ email của người dùng.",
 					value: n.email,
 					onChange: e => this.setSubmit("email", e.target.value)
 				})), u.a.createElement("div", {
 					className: "form-group"
 				}, u.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "请选择订阅"), u.a.createElement("div", null, u.a.createElement(o.a, {
+				}, "Vui lòng chọn đăng ký."), u.a.createElement("div", null, u.a.createElement(o.a, {
 					value: n.plan_id,
 					style: {
 						width: "100%"
 					},
-					placeholder: "请选择订阅",
+					placeholder: "Vui lòng chọn một đăng ký.",
 					onChange: e => this.setSubmit("plan_id", e)
 				}, s.map((e => u.a.createElement(o.a.Option, {
 					value: e.id,
@@ -64384,12 +64384,12 @@
 					className: "form-group"
 				}, u.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "请选择周期"), u.a.createElement("div", null, u.a.createElement(o.a, {
+				}, "Vui lòng chọn một chu kỳ."), u.a.createElement("div", null, u.a.createElement(o.a, {
 					value: n.period,
 					style: {
 						width: "100%"
 					},
-					placeholder: "请选择周期",
+					placeholder: "Vui lòng chọn một chu kỳ.",
 					onChange: e => this.setSubmit("period", e)
 				}, Object.keys(f.a.periodText).map((e => u.a.createElement(o.a.Option, {
 					value: e,
@@ -64398,8 +64398,8 @@
 					className: "form-group"
 				}, u.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "支付金额"), u.a.createElement(i.a, {
-					placeholder: "请输入需要支付的金额",
+				}, "Số Tiền Thanh Toán"), u.a.createElement(i.a, {
+					placeholder: "Vui lòng nhập số tiền bạn cần thanh toán.",
 					addonAfter: "¥",
 					value: n.total_amount,
 					onChange: e => this.setSubmit("total_amount", e.target.value)
@@ -65183,7 +65183,7 @@
 				return c.a.createElement(c.a.Fragment, null, c.a.cloneElement(this.props.children, {
 					onClick: () => this.show()
 				}), c.a.createElement(r.a, {
-					title: "发送邮件",
+					title: "Gửi Email",
 					visible: o,
 					onOk: () => this.send(),
 					okButtonProps: {
@@ -65194,15 +65194,15 @@
 					className: "form-group"
 				}, c.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "收件人"), c.a.createElement(a.a, {
+				}, "Người Nhận"), c.a.createElement(a.a, {
 					disabled: !0,
-					value: t.length ? "过滤用户" : "全部用户"
+					value: t.length ? "Lọc Người Dùng" : "Tất Cả Người Dùng"
 				})), c.a.createElement("div", {
 					className: "form-group"
 				}, c.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "主题"), c.a.createElement(a.a, {
-					placeholder: "请输入邮件主题",
+				}, "Chủ Đề"), c.a.createElement(a.a, {
+					placeholder: "Vui lòng nhập chủ đề của email.",
 					value: this.state.submit.subject,
 					onChange: e => {
 						this.setState({
@@ -65215,10 +65215,10 @@
 					className: "form-group"
 				}, c.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
-				}, "发送内容"), c.a.createElement(a.a.TextArea, {
+				}, "Nội Dung Email"), c.a.createElement(a.a.TextArea, {
 					rows: 12,
 					value: this.state.submit.content,
-					placeholder: "请输入邮件内容",
+					placeholder: "Vui lòng nhập nội dung của email.",
 					onChange: e => {
 						this.setState({
 							submit: i()({}, this.state.submit, {
@@ -71554,7 +71554,7 @@
 					onClick: () => this.getOrderInfo()
 				}, this.props.children), g.a.createElement(x.a, {
 					visible: this.state.visible,
-					title: "订单信息",
+					title: "Thông Tin Đơn Hàng",
 					onCancel: () => this.onShow(),
 					footer: !1
 				}, this.state.user.email ? g.a.createElement("div", null, g.a.createElement(E.a, {
@@ -71562,7 +71562,7 @@
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "邮箱"), g.a.createElement(S.a, {
+				}, "Email"), g.a.createElement(S.a, {
 					span: 18
 				}, g.a.createElement("a", {
 					onClick: () => this.jumpUserFilter("email", "模糊", this.state.user.email),
@@ -71572,94 +71572,94 @@
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "订单号"), g.a.createElement(S.a, {
+				}, "Đơn Hàng Số"), g.a.createElement(S.a, {
 					span: 18
 				}, this.state.order.trade_no)), g.a.createElement(E.a, {
 					gutter: [16, 16],
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "订单周期"), g.a.createElement(S.a, {
+				}, "Chu Kỳ Đơn Hàng"), g.a.createElement(S.a, {
 					span: 18
 				}, y.a.periodText[this.state.order.period])), g.a.createElement(E.a, {
 					gutter: [16, 16],
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "订单状态"), g.a.createElement(S.a, {
+				}, "Trạng Thái Đơn Hàng"), g.a.createElement(S.a, {
 					span: 18
 				}, y.a.orderStatusText[this.state.order.status])), g.a.createElement(E.a, {
 					gutter: [16, 16],
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "订阅计划"), g.a.createElement(S.a, {
+				}, "Gói Dịch Vụ"), g.a.createElement(S.a, {
 					span: 18
 				}, null === (e = t.find((e => e.id === this.state.order.plan_id))) || void 0 === e ? void 0 : e.name)), g.a.createElement(E.a, {
 					gutter: [16, 16],
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "回调单号"), g.a.createElement(S.a, {
+				}, "Số Đơn Gọi Lại"), g.a.createElement(S.a, {
 					span: 18
 				}, this.state.order.callback_no ? this.state.order.callback_no : "-")), g.a.createElement(_.a, null), g.a.createElement(E.a, {
 					gutter: [16, 16],
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "支付金额"), g.a.createElement(S.a, {
+				}, "Số Tiền Thanh Toán"), g.a.createElement(S.a, {
 					span: 18
 				}, (this.state.order.total_amount / 100).toFixed(2))), g.a.createElement(E.a, {
 					gutter: [16, 16],
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "余额支付"), g.a.createElement(S.a, {
+				}, "Thanh Toán Bằng Số Dư"), g.a.createElement(S.a, {
 					span: 18
 				}, (this.state.order.balance_amount / 100).toFixed(2))), g.a.createElement(E.a, {
 					gutter: [16, 16],
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "优惠金额"), g.a.createElement(S.a, {
+				}, "Số Tiền Giảm Giá"), g.a.createElement(S.a, {
 					span: 18
 				}, (this.state.order.discount_amount / 100).toFixed(2))), g.a.createElement(E.a, {
 					gutter: [16, 16],
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "退回金额"), g.a.createElement(S.a, {
+				}, "Số Tiền Hoàn Trả"), g.a.createElement(S.a, {
 					span: 18
 				}, (this.state.order.refund_amount / 100).toFixed(2))), g.a.createElement(E.a, {
 					gutter: [16, 16],
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "折抵金额"), g.a.createElement(S.a, {
+				}, "Số Tiền Khấu Trừ"), g.a.createElement(S.a, {
 					span: 18
 				}, (this.state.order.surplus_amount / 100).toFixed(2))), g.a.createElement(_.a, null), g.a.createElement(E.a, {
 					gutter: [16, 16],
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "创建时间"), g.a.createElement(S.a, {
+				}, "Thời Gian Tạo"), g.a.createElement(S.a, {
 					span: 18
 				}, w()(1e3 * this.state.order.created_at).format("YYYY-MM-DD HH:mm:ss"))), g.a.createElement(E.a, {
 					gutter: [16, 16],
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "更新时间"), g.a.createElement(S.a, {
+				}, "Thời Gian Cập Nhật"), g.a.createElement(S.a, {
 					span: 18
 				}, w()(1e3 * this.state.order.updated_at).format("YYYY-MM-DD HH:mm:ss"))), this.state.order.invite_user_id && 3 === this.state.order.status ? g.a.createElement("div", null, g.a.createElement(_.a, null), g.a.createElement(E.a, {
 					gutter: [16, 16],
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "邀请人"), g.a.createElement(S.a, {
+				}, "Người Mời"), g.a.createElement(S.a, {
 					span: 18
 				}, g.a.createElement(f.a, {
-					title: "查看TA邀请的人"
+					title: "Xem Người Được Mời bởi TA"
 				}, g.a.createElement("a", {
 					onClick: () => this.jumpUserFilter("invite_by_email", "模糊", this.state.invite_user.email),
 					href: "javascript:void(0);"
@@ -71668,21 +71668,21 @@
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "佣金金额"), g.a.createElement(S.a, {
+				}, "Số Tiền Hoa Hồng"), g.a.createElement(S.a, {
 					span: 18
 				}, (this.state.order.commission_balance / 100).toFixed(2))), this.state.order.actual_commission_balance && g.a.createElement(E.a, {
 					gutter: [16, 16],
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "实际发放"), g.a.createElement(S.a, {
+				}, "Số Tiền Thực Tế Được Cấp"), g.a.createElement(S.a, {
 					span: 18
 				}, (this.state.order.actual_commission_balance / 100).toFixed(2))), g.a.createElement(E.a, {
 					gutter: [16, 16],
 					style: n
 				}, g.a.createElement(S.a, {
 					span: 6
-				}, "佣金状态"), g.a.createElement(S.a, {
+				}, "Trạng Thái Hoa Hồng"), g.a.createElement(S.a, {
 					span: 18
 				}, y.a.commissionStatusText[this.state.order.commission_status]))) : "") : g.a.createElement(d.a, {
 					type: "loading",
@@ -71742,7 +71742,7 @@
 					r = e.pagination,
 					a = e.filter,
 					m = [{
-						title: "# 订单号",
+						title: "# Số Đơn Hàng",
 						dataIndex: "trade_no",
 						key: "trade_no",
 						render: (e, t) => g.a.createElement(M, {
@@ -71751,27 +71751,27 @@
 							href: "javascript:void(0);"
 						}, e.substr(0, 3), "...", e.substr(-3)))
 					}, {
-						title: "类型",
+						title: "Loại",
 						dataIndex: "type",
 						key: "type",
 						render: e => ({
-							1: "新购",
-							2: "续费",
-							3: "变更",
-							4: "流量包"
+							1: "Mua Mới",
+							2: "Gia Hạn",
+							3: "Thay Đổi",
+							4: "Gói Dữ Liệu"
 						} [e])
 					}, {
-						title: "订阅计划",
+						title: "Gói Dịch Vụ",
 						dataIndex: "plan_name",
 						key: "plan_name"
 					}, {
-						title: "周期",
+						title: "Chu Kỳ",
 						dataIndex: "period",
 						key: "period",
 						align: "center",
 						render: (e, t) => g.a.createElement(p.a, null, y.a.periodText[t.period])
 					}, {
-						title: "支付金额",
+						title: "Số Tiền Thanh Toán",
 						dataIndex: "total_amount",
 						key: "total_amount",
 						align: "right",
@@ -71779,8 +71779,8 @@
 					}, {
 						title: g.a.createElement("span", null, g.a.createElement(f.a, {
 							placement: "top",
-							title: "标记为[已支付]后将会由系统进行开通后并完成"
-						}, "订单状态 ", g.a.createElement(d.a, {
+							title: "Sau khi đánh dấu là [Đã Thanh Toán], hệ thống sẽ tự động mở và hoàn tất quá trình kích hoạt."
+						}, "Trạng Thái Đơn Hàng ", g.a.createElement(d.a, {
 							type: "question-circle"
 						}))),
 						dataIndex: "status",
@@ -71796,7 +71796,7 @@
 										tradeNo: t.trade_no
 									})
 								}
-							}, "已支付"), g.a.createElement(h.a.Item, {
+							}, "Đã Thanh Toán"), g.a.createElement(h.a.Item, {
 								key: "2",
 								onClick: e => {
 									this.props.dispatch({
@@ -71804,24 +71804,24 @@
 										tradeNo: t.trade_no
 									})
 								}
-							}, "取消"))
+							}, "Hủy"))
 						}, g.a.createElement("div", null, g.a.createElement(u.a, {
 							status: ["error", "processing", "default", "success", "default"][e]
 						}), g.a.createElement("span", null, y.a.orderStatusText[e], " "), 0 === e && g.a.createElement("a", {
 							href: "javascript:void(0);"
-						}, "标记为 ", g.a.createElement(d.a, {
+						}, "Đánh Dấu Là ", g.a.createElement(d.a, {
 							type: "caret-down"
 						})))))
 					}, {
-						title: "佣金金额",
+						title: "Số Tiền Hoa Hồng",
 						dataIndex: "commission_balance",
 						key: "commission_balance",
 						align: "right",
 						render: (e, t) => 0 === t.status || 2 === t.status ? "-" : e ? (e / 100).toFixed(2) : "-"
 					}, {
-						title: g.a.createElement("span", null, "佣金状态 ", g.a.createElement(f.a, {
+						title: g.a.createElement("span", null, "Trạng Thái Hoa Hồng ", g.a.createElement(f.a, {
 							placement: "top",
-							title: "标记为[有效]后将会由系统处理后发放到用户并完成"
+							title: "Sau khi đánh dấu là [Hợp Lệ], hệ thống sẽ xử lý và chi trả hoa hồng cho người dùng, hoàn tất quá trình."
 						}, g.a.createElement(d.a, {
 							type: "question-circle"
 						}))),
@@ -71841,36 +71841,36 @@
 									onClick: e => {
 										this.update(t.trade_no, "commission_status", e.key)
 									}
-								}, "待确认"), g.a.createElement(h.a.Item, {
+								}, "Đang Chờ Xác Nhận"), g.a.createElement(h.a.Item, {
 									key: "1",
 									disabled: 1 === e,
 									onClick: e => {
 										this.update(t.trade_no, "commission_status", e.key)
 									}
-								}, "有效"), g.a.createElement(h.a.Item, {
+								}, "Hợp Lệ"), g.a.createElement(h.a.Item, {
 									key: "3",
 									disabled: 3 === e,
 									onClick: e => {
 										this.update(t.trade_no, "commission_status", e.key)
 									}
-								}, "无效"))
+								}, "Không Hợp Lệ"))
 							}, g.a.createElement("div", null, g.a.createElement(u.a, {
 								status: n[e]
 							}), g.a.createElement("span", null, y.a.commissionStatusText[e], " "), g.a.createElement("a", {
 								href: "javascript:void(0);"
-							}, "标记为 ", g.a.createElement(d.a, {
+							}, "Đánh Dấu Là ", g.a.createElement(d.a, {
 								type: "caret-down"
 							})))))
 						}
 					}, {
-						title: "创建时间",
+						title: "Thời Gian Tạo",
 						dataIndex: "created_at",
 						key: "created_at",
 						align: "right",
 						render: e => w()(1e3 * e).format("YYYY/MM/DD HH:mm")
 					}];
 				return g.a.createElement(v.a, o()({}, this.props, {
-					title: "订单管理"
+					title: "Quản Lý Đơn Hàng"
 				}), g.a.createElement("div", {
 					className: "d-flex justify-content-between align-items-center"
 				}), g.a.createElement(I.a, {
@@ -71891,72 +71891,72 @@
 					}),
 					keys: [{
 						key: "trade_no",
-						title: "订单号",
+						title: "Số Đơn Hàng",
 						condition: ["模糊", "="]
 					}, {
 						key: "status",
-						title: "订单状态",
+						title: "Trạng Thái Đơn Hàng",
 						type: "select",
 						condition: ["="],
 						options: [{
-							key: "未支付",
+							key: "Chưa Thanh Toán",
 							value: 0
 						}, {
-							key: "已支付",
+							key: "Đã Thanh Toán",
 							value: 1
 						}, {
-							key: "已取消",
+							key: "Đã Hủy",
 							value: 2
 						}, {
-							key: "已完成",
+							key: "Đã Hoàn Thành",
 							value: 3
 						}]
 					}, {
 						key: "commission_status",
-						title: "佣金状态",
+						title: "Trạng Thái Hoa Hồng",
 						type: "select",
 						condition: ["="],
 						options: [{
-							key: "待确认",
+							key: "Chờ Xác Nhận",
 							value: 0
 						}, {
-							key: "发放中",
+							key: "Đang Tiến Hành Chi Trả",
 							value: 1
 						}, {
-							key: "已发放",
+							key: "Đã Chi Trả",
 							value: 2
 						}, {
-							key: "无效",
+							key: "Không Hợp Lệ",
 							value: 3
 						}]
 					}, {
 						key: "user_id",
-						title: "用户ID",
+						title: "ID Người Dùng",
 						condition: ["="]
 					}, {
 						key: "invite_user_id",
-						title: "邀请人ID",
+						title: "ID Người Mời",
 						condition: ["=", "!="]
 					}, {
 						key: "callback_no",
-						title: "回调单号",
+						title: "Số Đơn Gọi Lại",
 						condition: ["模糊"]
 					}, {
 						key: "commission_balance",
-						title: "佣金金额",
+						title: "Số Tiền Hoa Hồng",
 						condition: [">", "<", "=", "!=", ">=", "<="]
 					}]
 				}, g.a.createElement(c.a, {
 					type: a.length > 0 ? "primary" : ""
 				}, g.a.createElement(d.a, {
 					type: "filter"
-				}), " 过滤器"))), g.a.createElement(R.a, null, g.a.createElement(c.a, {
+				}), " Bộ Lọc"))), g.a.createElement(R.a, null, g.a.createElement(c.a, {
 					style: {
 						marginLeft: 10
 					}
 				}, g.a.createElement(d.a, {
 					type: "plus"
-				}), " 添加订单"))), g.a.createElement(i.a, {
+				}), " Thêm Đơn Hàng"))), g.a.createElement(i.a, {
 					tableLayout: "auto",
 					dataSource: t,
 					pagination: s()({}, r, {
@@ -75376,7 +75376,7 @@
 								break
 							}
 							return i.a.error({
-								message: "请求失败",
+								message: "Yêu Cầu Thất Bại",
 								description: Object.values(s.errors)[0][0],
 								duration: 1.5
 							}), e.abrupt("return", {
@@ -75385,7 +75385,7 @@
 							});
 						case 28:
 							return i.a.error({
-								message: "请求失败",
+								message: "Yêu Cầu Thất Bại",
 								description: s.message,
 								duration: 1.5
 							}), e.abrupt("return", {
@@ -75589,14 +75589,14 @@
 				"ko-KR": "한국어"
 			},
 			periodText: {
-				month_price: "月付",
-				quarter_price: "季付",
-				half_year_price: "半年付",
-				year_price: "年付",
-				two_year_price: "两年付",
-				three_year_price: "三年付",
-				onetime_price: "一次性",
-				reset_price: "流量重置包"
+				month_price: "1 Tháng",
+				quarter_price: "3 Tháng",
+				half_year_price: "6 Tháng",
+				year_price: "1 Năm",
+				two_year_price: "2 Năm",
+				three_year_price: "3 Năm",
+				onetime_price: "Vĩnh Viễn",
+				reset_price: "Gói Reset Lưu Lượng"
 			},
 			tutorialCategoryText: {
 				1: "Windows",
@@ -75615,28 +75615,28 @@
 				6: "fa fa-2x fa-wifi"
 			},
 			orderStatusText: {
-				0: "待支付",
-				1: "开通中",
-				2: "已取消",
-				3: "已完成",
-				4: "已折抵"
-			},
-			commissionStatusText: {
-				0: "待确认",
-				1: "发放中",
-				2: "已发放",
-				3: "已驳回"
-			},
-			ticketStatusText: {
-				0: "开启",
-				1: "待回复",
-				2: "待答复",
-				3: "关闭"
-			},
-			routeActionText: {
-				block: "禁止访问",
-				dns: "指定DNS服务器进行解析"
-			}
+				0: "Chưa Thanh Toán",
+				1: "Đang Mở",
+				2: "Đã Hủy",
+				3: "Đã Hoàn Thành",
+				4: "Đã Giảm Giá"
+			 },
+			 commissionStatusText: {
+				0: "Chờ Xác Nhận",
+				1: "Đang Phát Hành",
+				2: "Đã Phát Hành",
+				3: "Đã Từ Chối"
+			 },
+			 ticketStatusText: {
+				0: "Đã Mở",
+				1: "Chờ Trả Lời",
+				2: "Chờ Phản Hồi",
+				3: "Đã Đóng"
+			 },
+			 routeActionText: {
+				block: "Chặn Truy Cập",
+				dns: "Chỉ Định Máy Chủ DNS để Giải Nghĩa"
+			 }
 		}
 	},
 	tRgb: function(e, t, n) {
@@ -78331,7 +78331,7 @@
 				}), y.a.createElement(R.a, {
 					id: "server",
 					maskClosable: !0,
-					title: e.id ? "编辑节点" : "新建节点",
+					title: e.id ? "Chỉnh Sửa Server" : "Thêm Server Mới",
 					width: "80%",
 					visible: this.state.visible,
 					onClose: () => this.onShow()
@@ -78339,35 +78339,35 @@
 					className: "row"
 				}, y.a.createElement("div", {
 					className: "form-group col-8"
-				}, y.a.createElement("label", null, "节点名称"), y.a.createElement(s.a, {
-					placeholder: "请输入节点名称",
+				}, y.a.createElement("label", null, "Tên Server"), y.a.createElement(s.a, {
+					placeholder: "Vui lòng nhập tên cho nút.",
 					value: e.name,
 					onChange: e => this.formChange("name", e.target.value)
 				})), y.a.createElement("div", {
 					className: "form-group col-4"
-				}, y.a.createElement("label", null, "倍率"), y.a.createElement(s.a, {
+				}, y.a.createElement("label", null, "Tỷ Lệ"), y.a.createElement(s.a, {
 					addonAfter: "x",
-					placeholder: "请输入节点倍率",
+					placeholder: "Vui lòng nhập tỷ lệ cho nút.",
 					value: e.rate,
 					onChange: e => this.formChange("rate", e.target.value)
 				}))), y.a.createElement("div", {
 					className: "form-group"
-				}, y.a.createElement("label", null, "节点标签"), y.a.createElement(N.a, {
+				}, y.a.createElement("label", null, "Nhãn Server"), y.a.createElement(N.a, {
 					mode: "tags",
 					value: e.tags || [],
 					style: {
 						width: "100%"
 					},
-					placeholder: "输入后回车添加标签",
+					placeholder: "Nhập và nhấn Enter để thêm nhãn.",
 					onChange: e => this.formChange("tags", e.length > 0 ? e : null)
 				})), y.a.createElement("div", {
 					className: "form-group"
-				}, y.a.createElement("label", null, "权限组 ", y.a.createElement(V.a, null, y.a.createElement("a", {
+				}, y.a.createElement("label", null, "Nhóm Máy Chủ ", y.a.createElement(V.a, null, y.a.createElement("a", {
 					href: "javascript:(0);"
-				}, "添加权限组"))), y.a.createElement(N.a, {
+				}, "Thêm Nhóm Máy Chủ"))), y.a.createElement(N.a, {
 					mode: "multiple",
 					value: e.group_id,
-					placeholder: "请选择权限组",
+					placeholder: "Vui lòng chọn Nhóm Máy Chủ.",
 					style: {
 						width: "100%"
 					},
@@ -78378,7 +78378,7 @@
 					className: "row"
 				}, y.a.createElement("div", {
 					className: "form-group col-md-3 col-xs-12"
-				}, y.a.createElement("label", null, "HYSTERIA版本"), y.a.createElement(N.a, {
+				}, y.a.createElement("label", null, "Phiên Bản HYSTERIA"), y.a.createElement(N.a, {
 					value: parseInt(e.version) ? parseInt(e.version) : 1,
 					style: {
 						width: "100%"
@@ -78394,24 +78394,24 @@
 					className: "row"
 				}, y.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
-				}, y.a.createElement("label", null, "节点地址"), y.a.createElement(s.a, {
-					placeholder: "地址或IP",
+				}, y.a.createElement("label", null, "Địa Chỉ Server"), y.a.createElement(s.a, {
+					placeholder: "Địa Chỉ Domain hoặc Địa Chỉ IP",
 					value: e.host,
 					onChange: e => this.formChange("host", e.target.value)
 				}))), y.a.createElement("div", {
 					className: "row"
 				}, y.a.createElement("div", {
 					className: "form-group col-md-4 col-xs-12"
-				}, y.a.createElement("label", null, "连接端口"), y.a.createElement(s.a, {
-					placeholder: "用户连接端口",
+				}, y.a.createElement("label", null, "Cổng Kết Nối"), y.a.createElement(s.a, {
+					placeholder: "Cổng Kết Nối Người Dùng",
 					value: e.port,
 					onChange: e => {
 						this.formChange("port", e.target.value)
 					}
 				})), y.a.createElement("div", {
 					className: "form-group col-md-4 col-xs-12"
-				}, y.a.createElement("label", null, "服务端口"), y.a.createElement(s.a, {
-					placeholder: "服务端开放端口",
+				}, y.a.createElement("label", null, "Cổng Dịch Vụ"), y.a.createElement(s.a, {
+					placeholder: "Cổng Mở Dịch Vụ",
 					value: e.server_port,
 					onChange: e => {
 						this.formChange("server_port", e.target.value)
@@ -78420,12 +78420,12 @@
 					className: "form-group col-md-4 col-xs-12"
 				}, y.a.createElement("label", null, y.a.createElement(u.a, {
 					placement: "top",
-					title: "使用自签名证书需要允许不安全，用户才可以连接"
-				}, "允许不安全 ", y.a.createElement(m.a, {
+					title: "Để sử dụng chứng chỉ tự ký, người dùng cần cho phép kết nối không an toàn."
+				}, "Cho phép Không An Toàn ", y.a.createElement(m.a, {
 					type: "question-circle"
 				}))), y.a.createElement(N.a, {
 					value: parseInt(e.insecure) ? 1 : 0,
-					placeholder: "允许不安全",
+					placeholder: "Cho phép Kết Nối Không An Toàn",
 					style: {
 						width: "100%"
 					},
@@ -78433,20 +78433,20 @@
 				}, y.a.createElement(N.a.Option, {
 					key: 0,
 					value: 0
-				}, "否"), y.a.createElement(N.a.Option, {
+				}, "Không"), y.a.createElement(N.a.Option, {
 					key: 1,
 					value: 1
-				}, "是")))), y.a.createElement("div", {
+				}, "Cho Chép")))), y.a.createElement("div", {
 					className: "form-group"
-				}, y.a.createElement("label", null, "服务器名称指示(sni)"), y.a.createElement(s.a, {
-					placeholder: "当节点地址与证书不一致时用于证书验证",
+				}, y.a.createElement("label", null, "Chỉ Dẫn Tên Máy Chủ (SNI)"), y.a.createElement(s.a, {
+					placeholder: "Sử dụng để Xác Thực Chứng Chỉ Khi Địa Chỉ Nút và Chứng Chỉ Không Khớp",
 					value: e.server_name,
 					onChange: e => this.formChange("server_name", e.target.value)
 				})), y.a.createElement("div", {
 					className: "row"
 				}, 1 == parseInt(e.version) && y.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, y.a.createElement("label", null, "混淆方式obfs"), y.a.createElement(N.a, {
+				}, y.a.createElement("label", null, "Phương Pháp Mã Hóa (Obfuscation)"), y.a.createElement(N.a, {
 					value: e.obfs,
 					style: {
 						width: "100%"
@@ -78455,18 +78455,18 @@
 				}, y.a.createElement(N.a.Option, {
 					key: 0,
 					value: null
-				}, "无"), y.a.createElement(N.a.Option, {
+				}, "Không có"), y.a.createElement(N.a.Option, {
 					key: 1,
 					value: "xplus"
 				}, "xplus"))), 1 == parseInt(e.version) && "xplus" === e.obfs && y.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, y.a.createElement("label", null, "混淆密码obfsParam"), y.a.createElement(s.a, {
+				}, y.a.createElement("label", null, "Mật Khẩu Mã Hóa (Obfuscation) (obfsParam)"), y.a.createElement(s.a, {
 					value: e.obfs_password,
-					placeholder: "留空自动生成",
+					placeholder: "Nếu để trống, sẽ tự động tạo ra.",
 					onChange: e => this.formChange("obfs_password", e.target.value)
 				})), 2 == parseInt(e.version) && y.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, y.a.createElement("label", null, "混淆方式obfs"), y.a.createElement(N.a, {
+				}, y.a.createElement("label", null, "Phương pháp mã hóa (obfs)"), y.a.createElement(N.a, {
 					value: e.obfs,
 					style: {
 						width: "100%"
@@ -78475,40 +78475,40 @@
 				}, y.a.createElement(N.a.Option, {
 					key: 0,
 					value: null
-				}, "无"), y.a.createElement(N.a.Option, {
+				}, "Không có"), y.a.createElement(N.a.Option, {
 					key: 1,
 					value: "salamander"
 				}, "salamander"))), 2 == parseInt(e.version) && "salamander" === e.obfs && y.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, y.a.createElement("label", null, "混淆密码obfs_password"), y.a.createElement(s.a, {
+				}, y.a.createElement("label", null, "Mật khẩu mã hóa (obfs_password)"), y.a.createElement(s.a, {
 					value: e.obfs_password,
-					placeholder: "留空自动生成",
+					placeholder: "Nếu để trống, mật khẩu mờ hóa sẽ được tạo tự động.",
 					onChange: e => this.formChange("obfs_password", e.target.value)
 				}))), y.a.createElement("div", {
 					className: "row"
 				}, y.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, y.a.createElement("label", null, "上行带宽"), y.a.createElement(s.a, {
+				}, y.a.createElement("label", null, "Băng thông Tải Lên"), y.a.createElement(s.a, {
 					addonAfter: "Mbps",
-					placeholder: "请根据实际网络情况尽量准确地填写",
+					placeholder: "Vui lòng điền vào theo thực tế tình hình mạng của bạn.",
 					value: e.up_mbps,
 					onChange: e => this.formChange("up_mbps", e.target.value)
 				})), y.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, y.a.createElement("label", null, "下行带宽"), y.a.createElement(s.a, {
+				}, y.a.createElement("label", null, "Băng thông Tải Xuống"), y.a.createElement(s.a, {
 					addonAfter: "Mbps",
-					placeholder: "请根据实际网络情况尽量准确地填写",
+					placeholder: "Vui lòng điền thông tin càng chính xác càng tốt dựa trên tình hình mạng thực tế.",
 					value: e.down_mbps,
 					onChange: e => this.formChange("down_mbps", e.target.value)
 				}))), y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, y.a.createElement(u.a, {
 					placement: "top"
-				}, "父节点 ", y.a.createElement("a", {
+				}, "Chuyển Tiếp Server ", y.a.createElement("a", {
 					target: "_blank",
 					href: "https://docs.v2board.com/use/node.html#父节点与子节点关系",
 					rel: "noreferrer"
-				}, "更多解答"))), y.a.createElement(N.a, {
+				}, "Tham Khảo"))), y.a.createElement(N.a, {
 					value: e.parent_id || "",
 					onChange: e => this.formChange("parent_id", e),
 					style: {
@@ -78516,17 +78516,17 @@
 					}
 				}, y.a.createElement(N.a.Option, {
 					value: ""
-				}, "无"), n.map((t => {
+				}, "Không"), n.map((t => {
 					if ("hysteria" === t.type && t.id !== e.id) return y.a.createElement(N.a.Option, {
 						key: Math.random(),
 						value: t.id
 					}, t.name)
 				})))), y.a.createElement("div", {
 					className: "form-group"
-				}, y.a.createElement("label", null, "路由组"), y.a.createElement(N.a, {
+				}, y.a.createElement("label", null, "Nhóm Định Tuyến"), y.a.createElement(N.a, {
 					mode: "multiple",
 					value: e.route_id || [],
-					placeholder: "请选择路由组",
+					placeholder: "Vui lòng chọn một nhóm định tuyến.",
 					style: {
 						width: "100%"
 					},
@@ -78540,11 +78540,11 @@
 						marginRight: 8
 					},
 					onClick: () => this.onShow()
-				}, "取消"), y.a.createElement(c.a, {
+				}, "Hủy Bỏ"), y.a.createElement(c.a, {
 					loading: t,
 					onClick: () => this.save(),
 					type: "primary"
-				}, "提交"))))
+				}, "Lưu"))))
 			}
 		}
 		var W = Object(_.c)((e => ({
@@ -78589,19 +78589,19 @@
 				}, y.a.createElement("label", null, "Server Name(SNI)"), y.a.createElement(s.a, {
 					value: t,
 					onChange: e => this.change("server_name", e.target.value),
-					placeholder: 2 == h ? "REALITY必填，与后端保持一致" : ""
+					placeholder: 2 == h ? "REALITY (Thực Tế) là bắt buộc và cần phải khớp với phía máy chủ." : ""
 				})), 2 == h && y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, "Server Address"), y.a.createElement(s.a, {
 					value: c,
 					onChange: e => this.change("dest", e.target.value),
-					placeholder: "REALITY目标地址,默认使用SNI"
+					placeholder: "Địa chỉ mục tiêu REALITY (REALITY Target Address), mặc định sử dụng SNI (Server Name Indication)."
 				})), 2 == h && y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, "Server Port"), y.a.createElement(s.a, {
 					value: a,
 					onChange: e => this.change("server_port", e.target.value),
-					placeholder: "REALITY目标端口,默认443"
+					placeholder: "Cổng Đích REALITY, mặc định là 443"
 				})), 2 == h && y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, "Proxy Protocol"), y.a.createElement(N.a, {
@@ -78624,19 +78624,19 @@
 				}, y.a.createElement("label", null, "Private Key"), y.a.createElement(s.a, {
 					value: r,
 					onChange: e => this.change("private_key", e.target.value),
-					placeholder: "留空自动生成"
+					placeholder: "Nếu để trống, sẽ được tạo tự động."
 				})), 2 == h && y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, "Public Key"), y.a.createElement(s.a, {
 					value: o,
 					onChange: e => this.change("public_key", e.target.value),
-					placeholder: "留空自动生成"
+					placeholder: "Nếu để trống, giá trị sẽ được tạo tự động hoặc sử dụng giá trị mặc định."
 				})), 2 == h && y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, "ShortId"), y.a.createElement(s.a, {
 					value: i,
 					onChange: e => this.change("short_id", e.target.value),
-					placeholder: "留空自动生成"
+					placeholder: "Nếu để trống, giá trị sẽ được tự động tạo ra hoặc sử dụng giá trị mặc định."
 				})), y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, "FingerPrint"), y.a.createElement(N.a, {
@@ -78645,7 +78645,7 @@
 						width: "100%"
 					},
 					onChange: e => this.change("fingerprint", e),
-					placeholder: "TLS指纹默认Chrome"
+					placeholder: "Vân tay TLS mặc định cho Chrome."
 				}, y.a.createElement(N.a.Option, {
 					key: 0,
 					value: "chrome"
@@ -78714,8 +78714,8 @@
 					})
 				} catch (e) {
 					H.a.error({
-						message: "请求失败",
-						description: "传输协议配置格式有误"
+						message: "Yêu cầu không thành công",
+						description: "Định dạng cấu hình giao thức truyền là sai"
 					})
 				}
 			}
@@ -78772,11 +78772,11 @@
 							id: "v2ray-protocol"
 						}, y.a.createElement("div", {
 							className: "form-group"
-						}, y.a.createElement("label", null, "协议详细配置", y.a.createElement("a", {
+						}, y.a.createElement("label", null, "Cấu hình chi tiết giao thức", y.a.createElement("a", {
 							href: "https://www.v2ray.com/chapter_02/05_transport.html"
 						}, y.a.createElement(m.a, {
 							type: "link"
-						}), "参考")), y.a.createElement(F.a, {
+						}), "Tham khảo")), y.a.createElement(F.a, {
 							placeholder: (null == r ? void 0 : r[this.state.server.network]) || "",
 							mode: "json",
 							theme: "github",
@@ -78821,7 +78821,7 @@
 				}), y.a.createElement(R.a, {
 					id: "server",
 					maskClosable: !0,
-					title: e.id ? "编辑节点" : "新建节点",
+					title: e.id ? "Chỉnh sửa Server" : "Tạo Server Mới",
 					width: "80%",
 					visible: this.state.visible,
 					onClose: () => this.onShow()
@@ -78829,35 +78829,35 @@
 					className: "row"
 				}, y.a.createElement("div", {
 					className: "form-group col-8"
-				}, y.a.createElement("label", null, "节点名称"), y.a.createElement(s.a, {
-					placeholder: "请输入节点名称",
+				}, y.a.createElement("label", null, "Tên Server"), y.a.createElement(s.a, {
+					placeholder: "Vui lòng nhập tên cho nút.",
 					value: e.name,
 					onChange: e => this.formChange("name", e.target.value)
 				})), y.a.createElement("div", {
 					className: "form-group col-4"
-				}, y.a.createElement("label", null, "倍率"), y.a.createElement(s.a, {
+				}, y.a.createElement("label", null, "Tỷ lệ"), y.a.createElement(s.a, {
 					addonAfter: "x",
-					placeholder: "请输入节点倍率",
+					placeholder: "Vui lòng nhập tỷ lệ cho nút.",
 					value: e.rate,
 					onChange: e => this.formChange("rate", e.target.value)
 				}))), y.a.createElement("div", {
 					className: "form-group"
-				}, y.a.createElement("label", null, "节点标签"), y.a.createElement(N.a, {
+				}, y.a.createElement("label", null, "Nhãn Server"), y.a.createElement(N.a, {
 					mode: "tags",
 					value: e.tags || [],
 					style: {
 						width: "100%"
 					},
-					placeholder: "输入后回车添加标签",
+					placeholder: "Hãy nhập nhãn và nhấn Enter để thêm nhãn.",
 					onChange: e => this.formChange("tags", e.length > 0 ? e : null)
 				})), y.a.createElement("div", {
 					className: "form-group"
-				}, y.a.createElement("label", null, "权限组 ", y.a.createElement(V.a, null, y.a.createElement("a", {
+				}, y.a.createElement("label", null, "Nhóm Máy Chủ ", y.a.createElement(V.a, null, y.a.createElement("a", {
 					href: "javascript:(0);"
-				}, "添加权限组"))), y.a.createElement(N.a, {
+				}, "Thêm Nhóm Máy Chủ"))), y.a.createElement(N.a, {
 					mode: "multiple",
 					value: e.group_id,
-					placeholder: "请选择权限组",
+					placeholder: "Vui lòng chọn một Nhóm Máy Chủ.",
 					style: {
 						width: "100%"
 					},
@@ -78868,16 +78868,16 @@
 					className: "row"
 				}, y.a.createElement("div", {
 					className: "form-group col-md-8 col-xs-12"
-				}, y.a.createElement("label", null, "节点地址"), y.a.createElement(s.a, {
-					placeholder: "请输入连接地址",
+				}, y.a.createElement("label", null, "Địa Chỉ Server"), y.a.createElement(s.a, {
+					placeholder: "Vui lòng nhập địa chỉ kết nối.",
 					value: e.host,
 					onChange: e => this.formChange("host", e.target.value)
 				})), y.a.createElement("div", {
 					className: "form-group col-md-4 col-xs-12"
-				}, y.a.createElement("label", null, "安全性 ", 0 != parseInt(e.tls) && y.a.createElement("a", {
+				}, y.a.createElement("label", null, "An ninh ", 0 != parseInt(e.tls) && y.a.createElement("a", {
 					href: "javascript:void(0);",
-					onClick: () => this.showChildDrawer("编辑安全性配置", "tls_settings")
-				}, "编辑配置")), y.a.createElement(N.a, {
+					onClick: () => this.showChildDrawer("Chỉnh sửa Cấu hình Bảo mật", "tls_settings")
+				}, "Chỉnh sửa Cấu hình")), y.a.createElement(N.a, {
 					value: parseInt(e.tls) || 0,
 					style: {
 						width: "100%"
@@ -78886,7 +78886,7 @@
 				}, y.a.createElement(N.a.Option, {
 					key: 0,
 					value: 0
-				}, "无"), y.a.createElement(N.a.Option, {
+				}, "Không"), y.a.createElement(N.a.Option, {
 					key: 1,
 					value: 1
 				}, "TLS"), y.a.createElement(N.a.Option, {
@@ -78896,28 +78896,28 @@
 					className: "row"
 				}, y.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, y.a.createElement("label", null, "连接端口"), y.a.createElement(s.a, {
-					placeholder: "用户连接端口",
+				}, y.a.createElement("label", null, "Cổng Kết Nối"), y.a.createElement(s.a, {
+					placeholder: "Cổng Kết Nối Người Dùng",
 					value: e.port,
 					onChange: e => {
 						this.formChange("port", e.target.value)
 					}
 				})), y.a.createElement("div", {
 					className: "form-group col-md-6 col-xs-12"
-				}, y.a.createElement("label", null, "服务端口"), y.a.createElement(s.a, {
-					placeholder: "非NAT同连接端口",
+				}, y.a.createElement("label", null, "Cổng Dịch Vụ"), y.a.createElement(s.a, {
+					placeholder: "Không NAT cổng kết nối giống nhau",
 					value: e.server_port,
 					onChange: e => this.formChange("server_port", e.target.value)
 				}))), y.a.createElement("div", {
 					className: "row"
 				}, y.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
-				}, y.a.createElement("label", null, "传输协议 ", y.a.createElement("a", {
+				}, y.a.createElement("label", null, "Giao thức Truyền tải ", y.a.createElement("a", {
 					href: "javascript:void(0);",
-					onClick: () => this.showChildDrawer("编辑协议配置", "network_settings")
-				}, "编辑配置")), y.a.createElement(N.a, {
+					onClick: () => this.showChildDrawer("Chỉnh sửa cấu hình giao thức", "network_settings")
+				}, "Chỉnh sửa Cấu hình")), y.a.createElement(N.a, {
 					value: e.network,
-					placeholder: "选择传输协议",
+					placeholder: "Chọn Giao thức Truyền tải",
 					style: {
 						width: "100%"
 					},
@@ -78934,22 +78934,22 @@
 					className: "row"
 				}, y.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
-				}, y.a.createElement("label", null, "XTLS流控算法"), y.a.createElement(N.a, {
+				}, y.a.createElement("label", null, "Thuật toán điều khiển luồng XTLS"), y.a.createElement(N.a, {
 					value: e.flow,
-					placeholder: "选择XTLS流控算法",
+					placeholder: "Thuật toán kiểm soát luồng XTLS",
 					style: {
 						width: "100%"
 					},
 					onChange: e => this.formChange("flow", e)
 				}, y.a.createElement(N.a.Option, {
 					value: null
-				}, "无"), y.a.createElement(N.a.Option, {
+				}, "Không"), y.a.createElement(N.a.Option, {
 					value: "xtls-rprx-vision"
 				}, "xtls-rprx-vision")))), y.a.createElement("div", {
 					className: "form-group"
 				}, y.a.createElement("label", null, y.a.createElement(u.a, {
 					placement: "top"
-				}, "父节点 ", y.a.createElement("a", {
+				}, "Chuyển Tiếp Server ", y.a.createElement("a", {
 					target: "_blank",
 					href: "https://docs.v2board.com/use/node.html#父节点与子节点关系",
 					rel: "noreferrer"
@@ -78963,17 +78963,17 @@
 					}
 				}, y.a.createElement(N.a.Option, {
 					value: ""
-				}, "无"), n.map((t => {
+				}, "Không"), n.map((t => {
 					if ("vless" === t.type && t.id !== e.id) return y.a.createElement(N.a.Option, {
 						key: Math.random(),
 						value: t.id
 					}, t.name)
 				})))), y.a.createElement("div", {
 					className: "form-group"
-				}, y.a.createElement("label", null, "路由组"), y.a.createElement(N.a, {
+				}, y.a.createElement("label", null, "Nhóm Định Tuyến"), y.a.createElement(N.a, {
 					mode: "multiple",
 					value: e.route_id || [],
-					placeholder: "请选择路由组",
+					placeholder: "Chọn nhóm định tuyến",
 					style: {
 						width: "100%"
 					},
@@ -78987,11 +78987,11 @@
 						marginRight: 8
 					},
 					onClick: () => this.onShow()
-				}, "取消"), y.a.createElement(c.a, {
+				}, "Hủy Bỏ"), y.a.createElement(c.a, {
 					loading: t,
 					onClick: () => this.save(),
 					type: "primary"
-				}, "提交")), y.a.createElement(R.a, {
+				}, "Lưu")), y.a.createElement(R.a, {
 					closable: !1,
 					id: "server",
 					width: "80%",
@@ -79105,45 +79105,45 @@
 							record: e
 						}, y.a.createElement("a", null, y.a.createElement(m.a, {
 							type: "edit"
-						}), " 编辑")), "vmess" === e.type && y.a.createElement(k.a, {
+						}), " Chỉnh Sửa")), "vmess" === e.type && y.a.createElement(k.a, {
 							key: e.id,
 							record: e
 						}, y.a.createElement("a", null, y.a.createElement(m.a, {
 							type: "edit"
-						}), " 编辑")), "trojan" === e.type && y.a.createElement(C.a, {
+						}), " Chỉnh Sửa")), "trojan" === e.type && y.a.createElement(C.a, {
 							key: e.id,
 							record: e
 						}, y.a.createElement("a", null, y.a.createElement(m.a, {
 							type: "edit"
-						}), " 编辑")), "hysteria" === e.type && y.a.createElement(W, {
+						}), " Chỉnh Sửa")), "hysteria" === e.type && y.a.createElement(W, {
 							key: e.id,
 							record: e
 						}, y.a.createElement("a", null, y.a.createElement(m.a, {
 							type: "edit"
-						}), " 编辑")), "vless" === e.type && y.a.createElement(G, {
+						}), " Chỉnh Sửa")), "vless" === e.type && y.a.createElement(G, {
 							key: e.id,
 							record: e
 						}, y.a.createElement("a", null, y.a.createElement(m.a, {
 							type: "edit"
-						}), " 编辑"))), y.a.createElement(p.a.Item, {
+						}), " Chỉnh Sửa"))), y.a.createElement(p.a.Item, {
 							onClick: () => this.copy(e)
 						}, y.a.createElement(m.a, {
 							type: "copy"
-						}), " 复制"), y.a.createElement(p.a.Item, {
+						}), " Sao Chép"), y.a.createElement(p.a.Item, {
 							style: {
 								color: "#ff4d4f"
 							},
 							onClick: () => this.drop(e)
 						}, y.a.createElement(m.a, {
 							type: "delete"
-						}), " 删除"))
+						}), " Xóa"))
 					}, t || y.a.createElement("a", {
 						href: "javascript:void(0);"
-					}, "操作 ", y.a.createElement(m.a, {
+					}, "Tùy Chọn ", y.a.createElement(m.a, {
 						type: "caret-down"
 					}))),
 					$ = [{
-						title: "节点ID",
+						title: "ID Server",
 						dataIndex: "id",
 						key: "id",
 						width: 150,
@@ -79154,7 +79154,7 @@
 						onFilter: (e, t) => t.type === e.toLowerCase(),
 						render: (e, t) => y.a.createElement("span", null, this.getTypeTag(t.type, t.parent_id ? e + " => " + t.parent_id : e))
 					}, {
-						title: "显隐",
+						title: "Hiện/Ẩn",
 						dataIndex: "show",
 						key: "show",
 						render: (e, t) => y.a.createElement(f.a, {
@@ -79167,12 +79167,12 @@
 							placement: "top",
 							title: y.a.createElement("div", null, y.a.createElement(h.a, {
 								status: "error"
-							}), " 未运行", y.a.createElement("br", null), y.a.createElement(h.a, {
+							}), " Chưa Chạy", y.a.createElement("br", null), y.a.createElement(h.a, {
 								status: "warning"
-							}), " 无人使用或服务端上报异常", y.a.createElement("br", null), y.a.createElement(h.a, {
+							}), " Không có người sử dụng hoặc báo cáo lỗi từ máy chủ.", y.a.createElement("br", null), y.a.createElement(h.a, {
 								status: "processing"
-							}), " 运行正常", y.a.createElement("br", null))
-						}, "节点 ", y.a.createElement(m.a, {
+							}), " Hoạt động bình thường.", y.a.createElement("br", null))
+						}, "Server ", y.a.createElement(m.a, {
 							type: "question-circle"
 						}))),
 						dataIndex: "name",
@@ -79181,7 +79181,7 @@
 							status: D[t.available_status]
 						}), y.a.createElement("span", null, e))
 					}, {
-						title: "地址",
+						title: "Địa Chỉ",
 						dataIndex: "host",
 						key: "host",
 						render: (e, t) => y.a.createElement("span", {
@@ -79189,14 +79189,14 @@
 								cursor: "pointer"
 							},
 							onClick: () => {
-								S()(t.host), l.a.success("复制成功")
+								S()(t.host), l.a.success("Sao chép thành công")
 							}
 						}, t.host + ":" + t.port)
 					}, {
 						title: y.a.createElement("span", null, y.a.createElement(u.a, {
 							placement: "top",
-							title: "根据服务端上报频率而定"
-						}, "人数 ", y.a.createElement(m.a, {
+							title: "Tùy theo tần suất báo cáo từ phía máy chủ dịch vụ mà quy định"
+						}, "Số người ", y.a.createElement(m.a, {
 							type: "question-circle"
 						}))),
 						dataIndex: "online",
@@ -79210,8 +79210,8 @@
 					}, {
 						title: y.a.createElement(u.a, {
 							placement: "top",
-							title: "使用的流量将乘以倍率进行扣除"
-						}, "倍率 ", y.a.createElement(m.a, {
+							title: "Số lượng người sử dụng sẽ bị trừ đi theo tỷ lệ nhân đôi lưu lượng sử dụng."
+						}, "Tỷ Lệ ", y.a.createElement(m.a, {
 							type: "question-circle"
 						})),
 						dataIndex: "rate",
@@ -79223,7 +79223,7 @@
 							}
 						}, e + " x")
 					}, {
-						title: "权限组",
+						title: "Nhóm Máy Chủ",
 						dataIndex: "group_id",
 						key: "group_id",
 						filters: R.map((e => ({
@@ -79239,7 +79239,7 @@
 							})), y.a.createElement(y.a.Fragment, null, n)
 						}
 					}, {
-						title: "操作",
+						title: "Hoạt Động",
 						dataIndex: "action",
 						key: "action",
 						align: "right",
@@ -79249,10 +79249,10 @@
 					}],
 					F = this;
 				return y.a.createElement(b.a, o()({}, this.props, {
-					title: "节点管理"
+					title: "Quản Lý Server"
 				}), y.a.createElement(P.a, {
 					when: A,
-					message: e => window.confirm("节点排序还没有保存，是否离开")
+					message: e => window.confirm("Bạn có muốn rời đi mà chưa lưu thay đổi trong việc sắp xếp các nút không?")
 				}), y.a.createElement(M.a, {
 					loading: O
 				}, y.a.createElement("div", {
@@ -79279,7 +79279,7 @@
 				}, y.a.createElement(c.a, null, y.a.createElement(m.a, {
 					type: "plus"
 				}))), y.a.createElement(s.a, {
-					placeholder: "输入任意关键字搜索",
+					placeholder: "Nhập từ khóa bất kỳ để tìm kiếm.",
 					style: {
 						width: 200
 					},
@@ -79302,7 +79302,7 @@
 							}
 						})
 					}
-				}, A ? "保存排序" : "编辑排序")), Object(L.f)() ? y.a.createElement(i.a, {
+				}, A ? "Lưu Thứ Tự" : "Chỉnh Sửa Thứ Tự")), Object(L.f)() ? y.a.createElement(i.a, {
 					className: "aikopanel-table",
 					itemLayout: "vertical",
 					dataSource: N ? E.filter((e => -1 !== JSON.stringify(e).indexOf(N))) : E,
@@ -79342,7 +79342,7 @@
 					tableLayout: "auto",
 					dataSource: N ? E.filter((e => -1 !== JSON.stringify(e).indexOf(N))) : E,
 					columns: A ? [{
-						title: "排序",
+						title: "Sắp Xếp",
 						dataIndex: "sort",
 						key: "sort",
 						align: "left",
@@ -79352,16 +79352,16 @@
 							style: {
 								cursor: "move"
 							},
-							title: "拖动排序"
+							title: "Kéo Thả Sắp Xếp"
 						}))
 					}, {
-						title: "节点ID",
+						title: "ID Server",
 						dataIndex: "id",
 						key: "id",
 						width: 150,
 						render: (e, t) => y.a.createElement("span", null, this.getTypeTag(t.type, t.parent_id ? e + " => " + t.parent_id : e))
 					}, {
-						title: "节点",
+						title: "Server",
 						dataIndex: "name",
 						key: "name"
 					}] : $,
@@ -79390,32 +79390,32 @@
 					record: this.record
 				}, y.a.createElement("a", null, y.a.createElement(m.a, {
 					type: "form"
-				}), " 编辑")), "vmess" === (null === (t = this.record) || void 0 === t ? void 0 : t.type) && y.a.createElement(k.a, {
+				}), " Chỉnh Sửa")), "vmess" === (null === (t = this.record) || void 0 === t ? void 0 : t.type) && y.a.createElement(k.a, {
 					key: Math.random(),
 					record: this.record
 				}, y.a.createElement("a", null, y.a.createElement(m.a, {
 					type: "form"
-				}), " 编辑")), "trojan" === (null === (n = this.record) || void 0 === n ? void 0 : n.type) && y.a.createElement(C.a, {
+				}), " Chỉnh Sửa")), "trojan" === (null === (n = this.record) || void 0 === n ? void 0 : n.type) && y.a.createElement(C.a, {
 					key: Math.random(),
 					record: this.record
 				}, y.a.createElement("a", null, y.a.createElement(m.a, {
 					type: "form"
-				}), " 编辑")), "hysteria" === (null === (r = this.record) || void 0 === r ? void 0 : r.type) && y.a.createElement(W, {
+				}), " Chỉnh Sửa")), "hysteria" === (null === (r = this.record) || void 0 === r ? void 0 : r.type) && y.a.createElement(W, {
 					key: Math.random(),
 					record: this.record
 				}, y.a.createElement("a", null, y.a.createElement(m.a, {
 					type: "form"
-				}), " 编辑")), "vless" === (null === (v = this.record) || void 0 === v ? void 0 : v.type) && y.a.createElement(G, {
+				}), " Chỉnh Sửa")), "vless" === (null === (v = this.record) || void 0 === v ? void 0 : v.type) && y.a.createElement(G, {
 					key: Math.random(),
 					record: this.record
 				}, y.a.createElement("a", null, y.a.createElement(m.a, {
 					type: "form"
-				}), " 编辑"))), y.a.createElement("li", {
+				}), " Chỉnh Sửa"))), y.a.createElement("li", {
 					onClick: () => this.copy(this.record),
 					className: "ant-dropdown-menu-item"
 				}, y.a.createElement("a", null, y.a.createElement(m.a, {
 					type: "copy"
-				}), " 复制")), y.a.createElement("li", {
+				}), " Sao Chép")), y.a.createElement("li", {
 					onClick: () => this.drop(this.record),
 					className: "ant-dropdown-menu-item"
 				}, y.a.createElement("a", {
@@ -79424,7 +79424,7 @@
 					}
 				}, y.a.createElement(m.a, {
 					type: "delete"
-				}), " 删除")))))))))
+				}), " Xóa")))))))))
 			}
 		}
 		t.default = Object(_.c)((e => ({
@@ -82775,7 +82775,7 @@
 						visible: !0
 					})
 				}), f.a.createElement(g.a, {
-					title: "".concat(this.state.route.id ? "编辑路由" : "创建路由"),
+					title: "".concat(this.state.route.id ? "Chỉnh Sửa Định Tuyến" : "Tạo Định Tuyến"),
 					visible: this.state.visible,
 					onCancel: () => this.setState({
 						visible: !1
@@ -82783,14 +82783,14 @@
 					onOk: () => r || this.save(),
 					okText: r ? f.a.createElement(s.a, {
 						type: "loading"
-					}) : "提交",
-					cancelText: "取消"
+					}) : "Lưu",
+					cancelText: "Hủy Bỏ"
 				}, f.a.createElement("div", null, f.a.createElement("div", {
 					className: "form-group"
 				}, f.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "备注"), f.a.createElement(y.a, {
-					placeholder: "请输入备注",
+				}, "Ghi Chú"), f.a.createElement(y.a, {
+					placeholder: "Vui lòng nhập ghi chú.",
 					value: this.state.route.remarks,
 					onChange: e => {
 						this.setState({
@@ -82803,7 +82803,7 @@
 					className: "form-group"
 				}, f.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "匹配值"), f.a.createElement(y.a.TextArea, {
+				}, "Giá Trị Khớp"), f.a.createElement(y.a.TextArea, {
 					rows: 5,
 					placeholder: "example.com\n*.example.com",
 					value: "object" == typeof this.state.route.match ? null === (e = this.state.route.match) || void 0 === e ? void 0 : e.join("\n") : null === (t = this.state.route.match) || void 0 === t || null === (n = t.split(",")) || void 0 === n ? void 0 : n.join("\n"),
@@ -82819,9 +82819,9 @@
 					className: "form-group"
 				}, f.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "动作"), f.a.createElement("div", null, f.a.createElement(v.a, {
+				}, "Tùy Chọn"), f.a.createElement("div", null, f.a.createElement(v.a, {
 					value: this.state.route.action,
-					placeholder: "请选择动作",
+					placeholder: "Vui lòng chọn một hành động.",
 					style: {
 						width: "100%"
 					},
@@ -82838,8 +82838,8 @@
 					className: "form-group"
 				}, f.a.createElement("label", {
 					for: "example-text-input-alt"
-				}, "DNS服务器"), f.a.createElement(y.a, {
-					placeholder: "请输入用于解析的DNS服务器地址",
+				}, "Máy Chủ DNS"), f.a.createElement(y.a, {
+					placeholder: "Vui lòng nhập địa chỉ máy chủ DNS được sử dụng để giải quyết tên miền.",
 					value: this.state.route.action_value,
 					onChange: e => {
 						this.setState({
@@ -82890,24 +82890,24 @@
 						dataIndex: "id",
 						key: "id"
 					}, {
-						title: "备注",
+						title: "Ghi chú",
 						dataIndex: "remarks",
 						key: "remarks"
 					}, {
-						title: "匹配数量",
+						title: "Số Lượng Khớp",
 						dataIndex: "match",
 						key: "match",
 						render: e => {
 							var t;
-							return "匹配 ".concat("string" == typeof e ? null === (t = e.split(",").filter((e => !!e))) || void 0 === t ? void 0 : t.length : e.length, " 条规则")
+							return "Khớp ".concat("string" == typeof e ? null === (t = e.split(",").filter((e => !!e))) || void 0 === t ? void 0 : t.length : e.length, " Quy tắc")
 						}
 					}, {
-						title: "动作",
+						title: "Tùy Chọn",
 						dataIndex: "action",
 						key: "action",
 						render: e => b.a.routeActionText[e]
 					}, {
-						title: "操作",
+						title: "Hoạt động",
 						dataIndex: "action2",
 						key: "action2",
 						align: "right",
@@ -82916,15 +82916,15 @@
 							key: t.id
 						}, f.a.createElement("a", {
 							href: "javascript:void(0);"
-						}, "编辑")), f.a.createElement(c.a, {
+						}, "Chỉnh sửa")), f.a.createElement(c.a, {
 							type: "vertical"
 						}), f.a.createElement("a", {
 							href: "javascript:void(0);",
 							onClick: () => this.drop(t.id)
-						}, "删除"))
+						}, "Xóa"))
 					}];
 				return f.a.createElement(d.a, o()({}, this.props, {
-					title: "路由管理"
+					title: "Quản lý Định tuyến"
 				}), f.a.createElement("div", {
 					className: "d-flex justify-content-between align-items-center"
 				}), f.a.createElement(m.a, {
@@ -82941,7 +82941,7 @@
 					onClick: () => this.modalVisible()
 				}, f.a.createElement(s.a, {
 					type: "plus"
-				}), " 添加路由"))), f.a.createElement(i.a, {
+				}), " Thêm Định tuyến"))), f.a.createElement(i.a, {
 					tableLayout: "auto",
 					columns: r,
 					dataSource: t,
@@ -84442,7 +84442,7 @@
 		}
 
 		function f(e) {
-			i()(e), r.a.success("复制成功")
+			i()(e), r.a.success("Sao chép thành công")
 		}
 
 		function d(e) {
@@ -84541,11 +84541,11 @@
 						id: "v2ray-protocol"
 					}, f.a.createElement("div", {
 						className: "form-group"
-					}, f.a.createElement("label", null, "协议详细配置", f.a.createElement("a", {
+					}, f.a.createElement("label", null, "Cấu hình chi tiết giao thức.", f.a.createElement("a", {
 						href: "https://www.v2ray.com/chapter_02/05_transport.html"
 					}, f.a.createElement(a.a, {
 						type: "link"
-					}), "参考")), f.a.createElement(m.a, {
+					}), "Tham khảo")), f.a.createElement(m.a, {
 						placeholder: (null == t ? void 0 : t[this.state.server.network]) || "",
 						mode: "json",
 						theme: "github",
@@ -84584,7 +84584,7 @@
 				}), f.a.createElement(r.a, {
 					id: "server",
 					maskClosable: !0,
-					title: e.id ? "编辑节点" : "新建节点",
+					title: e.id ? "Chỉnh Sửa Server" : "Tạo Nút Mới",
 					width: "80%",
 					visible: this.state.visible,
 					onClose: () => this.onShow()
@@ -84592,35 +84592,35 @@
 					className: "row"
 				}, f.a.createElement("div", {
 					className: "form-group col-8"
-				}, f.a.createElement("label", null, "节点名称"), f.a.createElement(c.a, {
-					placeholder: "请输入节点名称",
+				}, f.a.createElement("label", null, "Tên Server"), f.a.createElement(c.a, {
+					placeholder: "Vui lòng nhập tên cho nút.",
 					value: e.name,
 					onChange: e => this.formChange("name", e.target.value)
 				})), f.a.createElement("div", {
 					className: "form-group col-4"
-				}, f.a.createElement("label", null, "倍率"), f.a.createElement(c.a, {
+				}, f.a.createElement("label", null, "Tỷ Lệ"), f.a.createElement(c.a, {
 					addonAfter: "x",
-					placeholder: "请输入节点倍率",
+					placeholder: "Vui lòng nhập tỷ lệ cho nút.",
 					value: e.rate,
 					onChange: e => this.formChange("rate", e.target.value)
 				}))), f.a.createElement("div", {
 					className: "form-group"
-				}, f.a.createElement("label", null, "节点标签"), f.a.createElement(s.a, {
+				}, f.a.createElement("label", null, "Nhãn Server"), f.a.createElement(s.a, {
 					mode: "tags",
 					value: e.tags || [],
 					style: {
 						width: "100%"
 					},
-					placeholder: "输入后回车添加标签",
+					placeholder: "Hãy nhập nhãn và nhấn Enter để thêm nhãn.",
 					onChange: e => this.formChange("tags", e.length > 0 ? e : null)
 				})), f.a.createElement("div", {
 					className: "form-group"
-				}, f.a.createElement("label", null, "权限组 ", f.a.createElement(p.a, null, f.a.createElement("a", {
+				}, f.a.createElement("label", null, "Nhóm Máy Chủ ", f.a.createElement(p.a, null, f.a.createElement("a", {
 					href: "javascript:(0);"
-				}, "添加权限组"))), f.a.createElement(s.a, {
+				}, "Thêm Nhóm Máy Chủ"))), f.a.createElement(s.a, {
 					mode: "multiple",
 					value: e.group_id,
-					placeholder: "请选择权限组",
+					placeholder: "Vui lòng chọn một Nhóm Máy Chủ.",
 					style: {
 						width: "100%"
 					},
@@ -84631,24 +84631,24 @@
 					className: "row"
 				}, f.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
-				}, f.a.createElement("label", null, "节点地址"), f.a.createElement(c.a, {
-					placeholder: "地址或IP",
+				}, f.a.createElement("label", null, "Địa Chỉ Server"), f.a.createElement(c.a, {
+					placeholder: "Địa chỉ hoặc Địa chỉ IP",
 					value: e.host,
 					onChange: e => this.formChange("host", e.target.value)
 				}))), f.a.createElement("div", {
 					className: "row"
 				}, f.a.createElement("div", {
 					className: "form-group col-md-4 col-xs-12"
-				}, f.a.createElement("label", null, "连接端口"), f.a.createElement(c.a, {
-					placeholder: "用户连接端口",
+				}, f.a.createElement("label", null, "Cổng Kết Nối"), f.a.createElement(c.a, {
+					placeholder: "Cổng Kết Nối Người Dùng",
 					value: e.port,
 					onChange: e => {
 						this.formChange("port", e.target.value)
 					}
 				})), f.a.createElement("div", {
 					className: "form-group col-md-4 col-xs-12"
-				}, f.a.createElement("label", null, "服务端口"), f.a.createElement(c.a, {
-					placeholder: "服务端开放端口",
+				}, f.a.createElement("label", null, "Cổng Dịch Vụ"), f.a.createElement(c.a, {
+					placeholder: "Cổng Mở Dịch Vụ",
 					value: e.server_port,
 					onChange: e => {
 						this.formChange("server_port", e.target.value)
@@ -84657,12 +84657,12 @@
 					className: "form-group col-md-4 col-xs-12"
 				}, f.a.createElement("label", null, f.a.createElement(i.a, {
 					placement: "top",
-					title: "使用自签名证书需要允许不安全，用户才可以连接"
-				}, "允许不安全 ", f.a.createElement(a.a, {
+					title: "Để sử dụng chứng chỉ tự ký, người dùng cần phải cho phép kết nối không an toàn."
+				}, "Cho phép kết nối không an toàn. ", f.a.createElement(a.a, {
 					type: "question-circle"
 				}))), f.a.createElement(s.a, {
 					value: parseInt(e.allow_insecure) ? 1 : 0,
-					placeholder: "允许不安全",
+					placeholder: "Đồng ý kết nối không an toàn.",
 					style: {
 						width: "100%"
 					},
@@ -84670,25 +84670,25 @@
 				}, f.a.createElement(s.a.Option, {
 					key: 0,
 					value: 0
-				}, "否"), f.a.createElement(s.a.Option, {
+				}, "Không"), f.a.createElement(s.a.Option, {
 					key: 1,
 					value: 1
-				}, "是")))), f.a.createElement("div", {
+				}, "Đồng ý")))), f.a.createElement("div", {
 					className: "form-group"
-				}, f.a.createElement("label", null, "服务器名称指示(sni)"), f.a.createElement(c.a, {
-					placeholder: "当节点地址与证书不一致时用于证书验证",
+				}, f.a.createElement("label", null, "Chỉ thị Tên Máy Chủ (SNI)"), f.a.createElement(c.a, {
+					placeholder: "Khi địa chỉ nút không khớp với chứng chỉ, SNI được sử dụng để xác minh chứng chỉ.",
 					value: e.server_name,
 					onChange: e => this.formChange("server_name", e.target.value)
 				})), f.a.createElement("div", {
 					className: "row"
 				}, f.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
-				}, f.a.createElement("label", null, "传输协议 ", f.a.createElement("a", {
+				}, f.a.createElement("label", null, "Giao thức Truyền tải ", f.a.createElement("a", {
 					href: "javascript:void(0);",
-					onClick: () => this.showChildDrawer("编辑协议配置", "network_settings")
-				}, "编辑配置")), f.a.createElement(s.a, {
+					onClick: () => this.showChildDrawer("Chỉnh sửa Cấu hình Giao thức.", "network_settings")
+				}, "Chỉnh sửa Cấu hình")), f.a.createElement(s.a, {
 					value: e.network,
-					placeholder: "选择传输协议",
+					placeholder: "Vui lòng chọn một giao thức truyền tải.",
 					style: {
 						width: "100%"
 					},
@@ -84703,11 +84703,11 @@
 					className: "form-group"
 				}, f.a.createElement("label", null, f.a.createElement(i.a, {
 					placement: "top"
-				}, "父节点 ", f.a.createElement("a", {
+				}, "Chuyển Tiếp Server ", f.a.createElement("a", {
 					target: "_blank",
 					href: "https://docs.v2board.com/use/node.html#父节点与子节点关系",
 					rel: "noreferrer"
-				}, "更多解答"))), f.a.createElement(s.a, {
+				}, "Tham Khảo"))), f.a.createElement(s.a, {
 					value: e.parent_id || "",
 					onChange: e => this.formChange("parent_id", e),
 					style: {
@@ -84715,17 +84715,17 @@
 					}
 				}, f.a.createElement(s.a.Option, {
 					value: ""
-				}, "无"), n.map((t => {
+				}, "Không"), n.map((t => {
 					if ("trojan" === t.type && t.id !== e.id) return f.a.createElement(s.a.Option, {
 						key: Math.random(),
 						value: t.id
 					}, t.name)
 				})))), f.a.createElement("div", {
 					className: "form-group"
-				}, f.a.createElement("label", null, "路由组"), f.a.createElement(s.a, {
+				}, f.a.createElement("label", null, "Nhóm Định tuyến"), f.a.createElement(s.a, {
 					mode: "multiple",
 					value: e.route_id || [],
-					placeholder: "请选择路由组",
+					placeholder: "Vui lòng chọn một Nhóm Định tuyến.",
 					style: {
 						width: "100%"
 					},
@@ -84739,11 +84739,11 @@
 						marginRight: 8
 					},
 					onClick: () => this.onShow()
-				}, "取消"), f.a.createElement(o.a, {
+				}, "Hủy Bỏ"), f.a.createElement(o.a, {
 					loading: t,
 					onClick: () => this.save(),
 					type: "primary"
-				}, "提交")), f.a.createElement(r.a, {
+				}, "Lưu")), f.a.createElement(r.a, {
 					closable: !1,
 					id: "server",
 					width: "80%",
