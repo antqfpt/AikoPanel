@@ -43170,11 +43170,11 @@
 				})
 			},
 			i18nText: {
+				"vi-VN": "Tiếng Việt",
+				"en-US": "English",
 				"zh-CN": "简体中文",
 				"zh-TW": "繁體中文",
-				"en-US": "English",
 				"ja-JP": "日本語",
-				"vi-VN": "Tiếng Việt",
 				"ko-KR": "한국어",
 				"fa-IR": "فارسی"
 			}

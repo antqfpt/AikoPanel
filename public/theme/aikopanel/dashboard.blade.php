@@ -33,10 +33,10 @@
             background_url: '{{$theme_config['background_url']}}',
             description: '{{$description}}',
             i18n: [
-                'zh-CN',
-                'en-US',
-                'ja-JP',
                 'vi-VN',
+                'en-US',
+                'zh-CN',
+                'ja-JP',
                 'ko-KR',
                 'zh-TW',
                 'fa-IR'
