@@ -25227,12 +25227,12 @@
 				}, e)))))), s.a.createElement("div", {
 					className: "form-group"
 				}, s.a.createElement("label", null, Object(u.formatMessage)({
-					id: "Tài Khoản Rút Tiền"
+					id: "Tài khoản nhận tiền"
 				})), s.a.createElement(o.a, {
 					type: "text",
 					className: "form-control",
 					placeholder: Object(u.formatMessage)({
-						id: "Vui lòng nhập Tài Khoản Rút Tiền"
+						id: "Vui lòng nhập tài khoản để nhận tiền"
 					}),
 					onChange: e => this.setState({
 						withdrawAccount: e.target.value
