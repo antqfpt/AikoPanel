@@ -4954,7 +4954,7 @@
 					title: "Auto backup database",
 					description: "Database sẽ được backup theo thời gian mà bạn đã config ở dưới đây -> gửi tới telegram"
 				}, f.a.createElement(a.a, {
-					addonAfter: "Giây",
+					addonAfter: "Giờ",
 					size: "large",
 					type: "number",
 					placeholder: "Xin Nhập Vào",
@@ -4964,8 +4964,8 @@
 					type: "text",
 					className: "form-control",
 					placeholder: "Vui lòng nhập telegram id của bạn (ID này sẽ nhận được thông báo backup database)", 
-					defaultValue: w.admin_telegram_id,
-					onChange: e => this.set("app", "admin_telegram_id", e.target.value)
+					defaultValue: w.database_telegram_id,
+					onChange: e => this.set("app", "database_telegram_id", e.target.value)
 				}))))))))
 			}
 		}
