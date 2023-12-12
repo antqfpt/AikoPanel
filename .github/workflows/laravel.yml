@@ -2,9 +2,9 @@ name: Laravel
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   laravel-tests:
@@ -14,8 +14,17 @@ jobs:
     steps:
     - uses: shivammathur/setup-php@15c43e89cdef867065b0213be354c2841860869e
       with:
-        php-version: '8.0'
-    - uses: actions/checkout@v3
+        php-version: '7.4'
+    # Add ionCube Loader
+    - name: Install ionCube
+      run: |
+        curl -O https://downloads.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz
+        tar xvfz ioncube_loaders_lin_x86-64.tar.gz
+        PHP_EXT_DIR=$(php -i | grep ^extension_dir | awk '{print $3}')
+        PHP_VERSION=$(php -r 'echo PHP_MAJOR_VERSION.".".PHP_MINOR_VERSION;')
+        cp "ioncube/ioncube_loader_lin_${PHP_VERSION}.so" "$PHP_EXT_DIR"
+        echo "zend_extension=ioncube_loader_lin_${PHP_VERSION}.so" >> $GITHUB_ENV
+
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Dependencies
