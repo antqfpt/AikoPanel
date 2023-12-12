@@ -4931,7 +4931,7 @@
 					title: "License AikoPanel",
 					description: "Vui lòng nhập mã giấy phép được cung cấp bởi AikoPanel"
 				}, f.a.createElement("input", {
-					type: "text",
+					type: "password",
 					className: "form-control",
 					placeholder: "Vui lòng nhập mã giấy phép AikoPanel", 
 					defaultValue: w.license,
