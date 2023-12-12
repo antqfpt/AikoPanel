@@ -8,7 +8,7 @@
             {
                 "tag": "proxyDns",
                 "address": "8.8.8.8",
-                "detour": "select"
+                "detour": "Tự động chọn"
             },
             {
                 "tag": "localDns",
@@ -64,7 +64,7 @@
     "route": {
         "auto_detect_interface": true,
         "override_android_vpn": true,
-        "final": "select",
+        "final": "Lựa chọn nút",
         "rules": [
             {
                 "protocol": "dns",
@@ -96,8 +96,8 @@
         ]
     },
     "experimental": {
-        "clash_api": {
-            "external_controller": "127.0.0.1:9090"
+        "cache_file": {
+          "enabled": true
         }
     }
 }
