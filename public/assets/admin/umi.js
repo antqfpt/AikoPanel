@@ -73649,165 +73649,189 @@
 				this.orderChartObj = g.b(null === (t = this.orderChart) || void 0 === t ? void 0 : t.current, "vintage", {
 					renderer: "svg"
 				});
-				var n = {
-					tooltip: {
-						trigger: "axis"
-					},
-					legend: {
-						data: [],
-						left: "0",
-						z: 4
-					},
-					grid: {
-						left: "1%",
-						right: "1%",
-						bottom: "3%",
-						containLabel: !0
-					},
-					xAxis: {
-						type: "category",
-						boundaryGap: !1,
-						data: []
-					},
-					yAxis: {
-						type: "value"
-					},
-					series: []
-				};
-				e.forEach((e => {
-					-1 === n.legend.data.indexOf(e.type) && n.legend.data.push(e.type), -1 === n.xAxis.data.indexOf(e.date) && n.xAxis.data.push(e.date);
-					var t = n.series.find((t => t.name === e.type));
-					t ? t.data.push(e.value) : n.series.push({
-						name: e.type,
-						type: "line",
-						smooth: !0,
-						data: [e.value]
-					})
-				})), this.orderChartObj.setOption(n), window.addEventListener("resize", this.chartResize.bind(this))
+                var n = {
+                    tooltip: {
+                        trigger: "axis"
+                    },
+                    legend: {
+                        data: [],
+                        left: "0",
+                        z: 4
+                    },
+                    grid: {
+                        left: "1%",
+                        right: "1%",
+                        bottom: "3%",
+                        containLabel: !0
+                    },
+                    xAxis: {
+                        type: "category",
+                        boundaryGap: !1,
+                        data: []
+                    },
+                    yAxis: {
+                        type: "value"
+                    },
+                    series: []
+                };
+                e.forEach(e=>{
+                    -1 === n.legend.data.indexOf(e.type) && n.legend.data.push(e.type),
+                    -1 === n.xAxis.data.indexOf(e.date) && n.xAxis.data.push(e.date);
+                    var t = n.series.find(t=>t.name === e.type);
+                    t ? t.data.push(e.value) : n.series.push({
+                        name: e.type,
+                        type: "line",
+                        smooth: !0,
+                        data: [e.value]
+                    })
+                }
+                ),
+                this.orderChartObj.setOption(n),
+                window.addEventListener("resize", this.chartResize.bind(this))
 			}
 			serverLastRankChartRender(e) {
 				var t;
 				this.serverLastRankChartObj = g.b(null === (t = this.serverLastRankChart) || void 0 === t ? void 0 : t.current);
-				var n = {
-					tooltip: {
-						trigger: "axis",
-						formatter: e => "".concat(e[0].value, " GB")
-					},
-					grid: {
-						top: "1%",
-						left: "1%",
-						right: "1%",
-						bottom: "3%",
-						containLabel: !0
-					},
-					xAxis: {
-						type: "value"
-					},
-					yAxis: {
-						type: "category",
-						data: []
-					},
-					series: [{
-						data: [],
-						type: "bar"
-					}]
-				};
-				e.reverse().forEach((e => {
-					n.yAxis.data.push(e.server_name), n.series[0].data.push(e.total)
-				})), this.serverLastRankChartObj.setOption(n)
+                var n = {
+                    tooltip: {
+                        trigger: "axis",
+                        formatter: e=>{
+                            return "".concat(e[0].value, " GB")
+                        }
+                    },
+                    grid: {
+                        top: "1%",
+                        left: "1%",
+                        right: "1%",
+                        bottom: "3%",
+                        containLabel: !0
+                    },
+                    xAxis: {
+                        type: "value"
+                    },
+                    yAxis: {
+                        type: "category",
+                        data: []
+                    },
+                    series: [{
+                        data: [],
+                        type: "bar"
+                    }]
+                };
+                e.reverse().forEach(e=>{
+                    n.yAxis.data.push(e.server_name),
+                    n.series[0].data.push(e.total)
+                }
+                ),
+                this.serverLastRankChartObj.setOption(n)
 			}
 			serverTodayRankChartRender(e) {
 				var t;
 				this.serverTodayRankChartObj = g.b(null === (t = this.serverTodayRankChart) || void 0 === t ? void 0 : t.current);
-				var n = {
-					tooltip: {
-						trigger: "axis",
-						formatter: e => "".concat(e[0].value, " GB")
-					},
-					grid: {
-						top: "1%",
-						left: "1%",
-						right: "1%",
-						bottom: "3%",
-						containLabel: !0
-					},
-					xAxis: {
-						type: "value"
-					},
-					yAxis: {
-						type: "category",
-						data: []
-					},
-					series: [{
-						data: [],
-						type: "bar"
-					}]
-				};
-				e.reverse().forEach((e => {
-					n.yAxis.data.push(e.server_name), n.series[0].data.push(e.total)
-				})), this.serverTodayRankChartObj.setOption(n)
+                var n = {
+                    tooltip: {
+                        trigger: "axis",
+                        formatter: e=>{
+                            return "".concat(e[0].value, " GB")
+                        }
+                    },
+                    grid: {
+                        top: "1%",
+                        left: "1%",
+                        right: "1%",
+                        bottom: "3%",
+                        containLabel: !0
+                    },
+                    xAxis: {
+                        type: "value"
+                    },
+                    yAxis: {
+                        type: "category",
+                        data: []
+                    },
+                    series: [{
+                        data: [],
+                        type: "bar"
+                    }]
+                };
+                e.reverse().forEach(e=>{
+                    n.yAxis.data.push(e.server_name),
+                    n.series[0].data.push(e.total)
+                }
+                ),
+                this.serverTodayRankChartObj.setOption(n)
 			}
 			userTodayRankChartRender(e) {
 				var t;
 				this.userTodayRankChartObj = g.b(null === (t = this.userTodayRankChart) || void 0 === t ? void 0 : t.current);
-				var n = {
-					tooltip: {
-						trigger: "axis",
-						formatter: e => "".concat(e[0].value, " GB")
-					},
-					grid: {
-						top: "1%",
-						left: "1%",
-						right: "1%",
-						bottom: "3%",
-						containLabel: !0
-					},
-					xAxis: {
-						type: "value"
-					},
-					yAxis: {
-						type: "category",
-						data: []
-					},
-					series: [{
-						data: [],
-						type: "bar"
-					}]
-				};
-				e.reverse().forEach((e => {
-					n.yAxis.data.push(e.email), n.series[0].data.push(e.total)
-				})), this.userTodayRankChartObj.setOption(n)
+                var n = {
+                    tooltip: {
+                        trigger: "axis",
+                        formatter: e=>{
+                            return "".concat(e[0].value, " GB")
+                        }
+                    },
+                    grid: {
+                        top: "1%",
+                        left: "1%",
+                        right: "1%",
+                        bottom: "3%",
+                        containLabel: !0
+                    },
+                    xAxis: {
+                        type: "value"
+                    },
+                    yAxis: {
+                        type: "category",
+                        data: []
+                    },
+                    series: [{
+                        data: [],
+                        type: "bar"
+                    }]
+                };
+                e.reverse().forEach(e=>{
+                    n.yAxis.data.push(e.email),
+                    n.series[0].data.push(e.total)
+                }
+                ),
+                this.userTodayRankChartObj.setOption(n)
 			}
 			userLastRankChartRender(e) {
 				var t;
 				this.userLastRankChartObj = g.b(null === (t = this.userLastRankChart) || void 0 === t ? void 0 : t.current);
-				var n = {
-					tooltip: {
-						trigger: "axis",
-						formatter: e => "".concat(e[0].value, " GB")
-					},
-					grid: {
-						top: "1%",
-						left: "1%",
-						right: "1%",
-						bottom: "3%",
-						containLabel: !0
-					},
-					xAxis: {
-						type: "value"
-					},
-					yAxis: {
-						type: "category",
-						data: []
-					},
-					series: [{
-						data: [],
-						type: "bar"
-					}]
-				};
-				e.reverse().forEach((e => {
-					n.yAxis.data.push(e.email), n.series[0].data.push(e.total)
-				})), this.userLastRankChartObj.setOption(n)
+                var n = {
+                    tooltip: {
+                        trigger: "axis",
+                        formatter: e=>{
+                            return "".concat(e[0].value, " GB")
+                        }
+                    },
+                    grid: {
+                        top: "1%",
+                        left: "1%",
+                        right: "1%",
+                        bottom: "3%",
+                        containLabel: !0
+                    },
+                    xAxis: {
+                        type: "value"
+                    },
+                    yAxis: {
+                        type: "category",
+                        data: []
+                    },
+                    series: [{
+                        data: [],
+                        type: "bar"
+                    }]
+                };
+                e.reverse().forEach(e=>{
+                    n.yAxis.data.push(e.email),
+                    n.series[0].data.push(e.total)
+                }
+                ),
+                this.userLastRankChartObj.setOption(n)
 			}
 			chartResize() {
 				this.orderChartObj.resize(), this.serverLastRankChartObj.resize(), this.serverTodayRankChartObj.resize(), this.userTodayRankChartObj.resize(), this.userLastRankChartObj.resize()
