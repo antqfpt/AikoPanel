@@ -74162,10 +74162,13 @@
 				}))))))
 			}
 		}
-		t.default = Object(u.c)((e => ({
-			stat: e.stat,
-			config: e.config
-		})))(O)
+		t.default = Object(u.c)(e => {
+			var t = e.stat, n = e.config;
+			return {
+				stat: t,
+				config: n
+			}
+		})(O)
 	},
 	sRdV: function(e, t, n) {
 		"use strict";
