@@ -78621,24 +78621,6 @@
 				}))), y.a.createElement("div", {
 					className: "row"
 				}, y.a.createElement("div", {
-					className: "form-group col-md-4 col-xs-12"
-				}, y.a.createElement("label", null, "Cổng Kết Nối"), y.a.createElement(s.a, {
-					placeholder: "Cổng Kết Nối Người Dùng",
-					value: e.port,
-					onChange: e => {
-						this.formChange("port", e.target.value)
-					}
-				})), y.a.createElement("div", {
-					className: "form-group col-md-4 col-xs-12"
-				}, y.a.createElement("label", null, "Cổng Dịch Vụ"), y.a.createElement(s.a, {
-					placeholder: "Cổng Mở Dịch Vụ",
-					value: e.server_port,
-					onChange: e => {
-						this.formChange("server_port", e.target.value)
-					}
-				})), y.a.createElement("div", {
-					className: "row"
-				}, y.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
 				}, y.a.createElement("label", null, "IP (IPv4)"), y.a.createElement(s.a, {
 					addonAfter: "IP",
@@ -78655,6 +78637,24 @@
 					value: e.record_id,
 					onChange: e => this.formChange("record_id", e.target.value)
 				}))), y.a.createElement("div", {
+					className: "row"
+				}, y.a.createElement("div", {
+					className: "form-group col-md-4 col-xs-12"
+				}, y.a.createElement("label", null, "Cổng Kết Nối"), y.a.createElement(s.a, {
+					placeholder: "Cổng Kết Nối Người Dùng",
+					value: e.port,
+					onChange: e => {
+						this.formChange("port", e.target.value)
+					}
+				})), y.a.createElement("div", {
+					className: "form-group col-md-4 col-xs-12"
+				}, y.a.createElement("label", null, "Cổng Dịch Vụ"), y.a.createElement(s.a, {
+					placeholder: "Cổng Mở Dịch Vụ",
+					value: e.server_port,
+					onChange: e => {
+						this.formChange("server_port", e.target.value)
+					}
+				})), y.a.createElement("div", {
 					className: "form-group col-md-4 col-xs-12"
 				}, y.a.createElement("label", null, y.a.createElement(u.a, {
 					placement: "top",
@@ -84996,6 +84996,24 @@
 				}))), f.a.createElement("div", {
 					className: "row"
 				}, f.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, f.a.createElement("label", null, "IP (IPv4)"), f.a.createElement(c.a, {
+					addonAfter: "IP",
+					placeholder: "Vui lòng nhập IP (IPv4)",
+					value: e.ip,
+					onChange: e => this.formChange("ip", e.target.value)
+				}))),f.a.createElement("div", {
+					className: "row"
+				}, f.a.createElement("div", {
+					className: "form-group col-md-12 col-xs-12"
+				}, f.a.createElement("label", null, "Cloudflare Record ID"), f.a.createElement(c.a, {
+					addonAfter: "Record ID",
+					placeholder: "Vui lòng nhập Record ID",
+					value: e.record_id,
+					onChange: e => this.formChange("record_id", e.target.value)
+				}))), f.a.createElement("div", {
+					className: "row"
+				}, f.a.createElement("div", {
 					className: "form-group col-md-4 col-xs-12"
 				}, f.a.createElement("label", null, "Cổng Kết Nối"), f.a.createElement(c.a, {
 					placeholder: "Cổng Kết Nối Người Dùng",
@@ -85018,25 +85036,7 @@
 					title: "Để sử dụng chứng chỉ tự ký, người dùng cần phải cho phép kết nối không an toàn."
 				}, "Cho phép kết nối không an toàn. ", f.a.createElement(a.a, {
 					type: "question-circle"
-				}))), f.a.createElement("div", {
-					className: "row"
-				}, f.a.createElement("div", {
-					className: "form-group col-md-12 col-xs-12"
-				}, f.a.createElement("label", null, "IP (IPv4)"), f.a.createElement(c.a, {
-					addonAfter: "IP",
-					placeholder: "Vui lòng nhập IP (IPv4)",
-					value: e.ip,
-					onChange: e => this.formChange("ip", e.target.value)
-				}))),f.a.createElement("div", {
-					className: "row"
-				}, f.a.createElement("div", {
-					className: "form-group col-md-12 col-xs-12"
-				}, f.a.createElement("label", null, "Cloudflare Record ID"), f.a.createElement(c.a, {
-					addonAfter: "Record ID",
-					placeholder: "Vui lòng nhập Record ID",
-					value: e.record_id,
-					onChange: e => this.formChange("record_id", e.target.value)
-				}))),f.a.createElement(s.a, {
+				}))), f.a.createElement(s.a, {
 					value: parseInt(e.allow_insecure) ? 1 : 0,
 					placeholder: "Đồng ý kết nối không an toàn.",
 					style: {
