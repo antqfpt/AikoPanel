@@ -22,8 +22,8 @@ jobs:
         tar xvfz ioncube_loaders_lin_x86-64.tar.gz
         PHP_EXT_DIR=$(php -i | grep ^extension_dir | awk '{print $3}')
         PHP_VERSION=$(php -r 'echo PHP_MAJOR_VERSION.".".PHP_MINOR_VERSION;')
-        cp "ioncube/ioncube_loader_lin_${PHP_VERSION}.so" "$PHP_EXT_DIR"
-        echo "zend_extension=ioncube_loader_lin_${PHP_VERSION}.so" >> $GITHUB_ENV
+        sudo cp "ioncube/ioncube_loader_lin_${PHP_VERSION}.so" "$PHP_EXT_DIR"
+        echo "zend_extension=ioncube_loader_lin_${PHP_VERSION}.so" | sudo tee -a "$(php -i | grep 'Loaded Configuration File' | awk '{print $NF}')"
 
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
