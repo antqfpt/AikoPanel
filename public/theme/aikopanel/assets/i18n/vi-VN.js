@@ -187,14 +187,12 @@ window.settings.i18n['vi-VN'] = {
   'Bước 2': 'Bước 2',
   'Mở Telegram và tìm kiếm': 'Mở Telegram và tìm kiếm',
   'Gửi cho Bot của bạn': 'Gửi cho Bot của bạn',
-  'Hướng Dẫn Sử Dụng': 'Kiến Thức Cơ Bản',
   'Cập Nhật Cuối: {date}': 'Cập Nhật Cuối: {date}',
   'Sao Chép Thành Công': 'Sao Chép Thành Công',
   'Có đơn hàng chưa thanh toán': 'Có đơn hàng chưa thanh toán',
   'Thanh Toán Ngay': 'Thanh Toán Ngay',
   'Công Việc đang được xử lý': ' Công Việc đang được xử lý',
   'Xem Ngay': 'Xem Ngay',
-  'Hướng Dẫn Sử Dụng': 'Tài liệu sử dụng',
   'Lịch Sử Mua Hàng': 'Lịch Sử Mua Hàng',
   'Thống Kê Lưu Lượng': 'Thống Kê Lưu Lượng',
   'Thiết Lập Gói': 'Thiết lập gói',
@@ -255,6 +253,6 @@ window.settings.i18n['vi-VN'] = {
   'Hai lần nhập mật khẩu không giống nhau': 'Xem Hai lần nhập mật khẩu không giống nhau',
   'Thời Gian Phát Hành': 'Thời Gian Phát Hành',
   'Đặt Lại Làm Mới Lưu Lượng': 'Đặt Lại Làm Mới Lưu Lượng',
-  'Đang Online {alive_ip}/{device_limit} Thiết Bị': '\nĐang Online {alive_ip}/{device_limit} Thiết Bị',
+  'Đang Online {alive_ip}/{device_limit} Thiết Bị': ' Đang Online {alive_ip}/{device_limit} Thiết Bị',
   "Tiện ích": "Tiện ích Nâng Cao"
 };
