@@ -25838,7 +25838,7 @@
 							l.a.createElement("button", {
 								className: "Aiko-DVS DVS-Aiko-Mod1",
 
-								onClick: () => window.location.href = 'https://dvsteam.net/idapple',
+								onClick: () => window.location.href = d.subscribe_url + "&flag=idapple",
 								style: {
 									alignItems: "center"
 								}
