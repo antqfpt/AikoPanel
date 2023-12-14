@@ -25838,7 +25838,7 @@
 							l.a.createElement("button", {
 								className: "Aiko-DVS DVS-Aiko-Mod1",
 
-								onClick: () => window.location.href = d.subscribe_url + "&flag=idapple",
+								onClick: () => window.location.href = d.subscribe_url + "&flag=appleid",
 								style: {
 									alignItems: "center"
 								}
