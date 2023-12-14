@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>IDAPPLE Web {{ $appname }}</title>
+    <title>AppleID Web {{ $appname }}</title>
     <style>
         body {
             background-color: #f4f4f4;
@@ -68,13 +68,49 @@
         }
     </style>
     <script>
-        // ...Các đoạn mã JavaScript...
+        function copyTextToClipboard(text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '-9999px';
+            document.body.appendChild(el);
+            const selected =
+                document.getSelection().rangeCount > 0
+                    ? document.getSelection().getRangeAt(0)
+                    : false;
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            if (selected) {
+                document.getSelection().removeAllRanges();
+                document.getSelection().addRange(selected);
+            }
+
+            // Show success alert using SweetAlert2
+            Swal.fire({
+                icon: 'success',
+                title: 'Copied to clipboard!',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        }
+
+        function copyUsernameToClipboard() {
+            const username = document.getElementById('username').innerText;
+            copyTextToClipboard(username);
+        }
+
+        function copyPasswordToClipboard() {
+            const password = document.getElementById('password').innerText;
+            copyTextToClipboard(password);
+        }
     </script>
 </head>
 <body>
     <div class="container">
         <div class="card">
-            <h1>Lấy IDAPPLE Web {{ $appname }}</h1>
+            <h1>Lấy AppleID Web {{ $appname }}</h1>
             <div class="text-center">
                 <p><strong>Trạng thái:</strong> {{ $statusid }}</p>
                 <p><strong>Username:</strong> <span id="username">{{ $username }}</span></p>
