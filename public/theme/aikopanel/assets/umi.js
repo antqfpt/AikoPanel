@@ -25513,22 +25513,22 @@
 			}
 			componentDidMount() {
 				this.props.dispatch({
-					type: "user/getSubscribe"
-				}),
-				this.props.dispatch({
-					type: "user/getStat"
-				}), this.props.dispatch({
-					type: "notice/fetch",
-					complete: () => {
-						var e, t = (null === (e = this.props.notice) || void 0 === e ? void 0 : e.notices) || [];
-						if (t.length) {
-							var n = t.find((e => -1 !== e.tags.indexOf("\u5f39\u7a97")));
-							console.log(n), n && this.modalVisible(n)
+						type: "user/getSubscribe"
+					}),
+					this.props.dispatch({
+						type: "user/getStat"
+					}), this.props.dispatch({
+						type: "notice/fetch",
+						complete: () => {
+							var e, t = (null === (e = this.props.notice) || void 0 === e ? void 0 : e.notices) || [];
+							if (t.length) {
+								var n = t.find((e => -1 !== e.tags.indexOf("\u5f39\u7a97")));
+								console.log(n), n && this.modalVisible(n)
+							}
 						}
-					}
-				}), this.props.dispatch({
-					type: "comm/config"
-				})
+					}), this.props.dispatch({
+						type: "comm/config"
+					})
 			}
 			modalVisible(e) {
 				this.setState({
@@ -25606,7 +25606,9 @@
 						Object(k.a)("/user/resetSecurity").then((t => {
 							200 === t.code && (q.a.success(Object(b.formatMessage)({
 								id: "Đặt Lại Thành Công"
-							})), e.fetchData())
+							})), setTimeout(function() {
+								window.location.reload();
+							}, 789), e.fetchData())
 						}))
 					},
 					onCancel() {},
@@ -25618,6 +25620,10 @@
 					})
 				})
 			}
+
+
+
+
 			render() {
 				var e, t, n, r, s = this.props.user,
 					u = s.stat,
@@ -25838,10 +25844,10 @@
 								}
 							}, [
 								l.a.createElement("i", {
-									className: "nav-main-link-icon fas fa-cloud-download-alt"
+									className: "nav-main-link-icon fab fa-apple"
 								}), " ",
 								l.a.createElement("span", null, Object(b.formatMessage)({
-									id: "Tải Sa Đao Rốc Két"
+									id: "Lấy ID Apple"
 								}))
 							]),
 							l.a.createElement("button", {

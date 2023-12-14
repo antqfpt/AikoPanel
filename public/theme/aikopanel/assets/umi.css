@@ -19322,6 +19322,30 @@ a.text-xplay-lighter:focus,a.text-xplay-lighter:hover {
     line-height: 1
 }
 
+i.fa.fa-exclamation-triangle {
+    color: #FFEB3B;
+    -webkit-text-stroke: .8px rgb(20 20 20 / 70%);
+}
+
+i.fa.fa-mobile-alt {
+    color: #0086e3;
+}
+
+i.fa.fa-question-circle {
+    color: #0086e3;
+}
+
+i.fa.fa-check-circle {
+    color: #06ee6d;
+    -webkit-text-stroke: .5px rgb(20 20 20 / 70%);
+}
+
+::before {}
+
+i.nav-main-link-icon.fab.fa-apple {
+    font-size: 18px;
+}
+
 .fa-lg {
     font-size: 1.333333em;
     line-height: .75em;
