@@ -777,7 +777,7 @@
 				})), Object(u.n)() && (t.push({
 					title: "ClashMeta",
 					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=meta") + "&name=" + window.settings.title
-				}),t.push({
+				}), t.push({
 					title: "Clash For Windows",
 					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=clashpc") + "&name=" + window.settings.title
 				})), Object(u.g)() && (t.push({
@@ -789,7 +789,7 @@
 				}), t.push({
 					title: "Surfboard",
 					href: "surge:///install-config?url=" + encodeURIComponent(e) + "&name=" + window.settings.title
-				}),t.push({
+				}), t.push({
 					title: "V2rayNG",
 					href: "v2rayng://install-config?url=" + e + "&flag=v2rayng"
 				})), c.a.createElement("div", {
@@ -11984,9 +11984,9 @@
 			yearSelect: "연 선택",
 			decadeSelect: "연대 선택",
 			yearFormat: "YYYY년",
-			dateFormat: "YYYY-MM-DD",
+			dateFormat: "DD-MM-YYYY",
 			dayFormat: "Do",
-			dateTimeFormat: "YYYY-MM-DD HH:mm:ss",
+			dateTimeFormat: "DD-MM-YYYY HH:mm:ss",
 			monthBeforeYear: !1,
 			previousMonth: "이전 달 (PageUp)",
 			nextMonth: "다음 달 (PageDown)",
@@ -12788,18 +12788,29 @@
 				const selectedOption = this.selectRef.value;
 				let sniValue;
 
+				if (selectedOption === '') {
+					return c.a.error(Object(m.formatMessage)({
+						id: "Vui Lòng Chọn SNI Bạn Cần",
+					}));
+				}
+
 				if (selectedOption === '0') {
 					sniValue = this.inputRef.value;
+					if (sniValue.includes('http://') || sniValue.includes('https://')) {
+						return c.a.error(Object(m.formatMessage)({
+							id: 'Vui lòng không nhập "http://" hoặc "https://" hãy xóa đi',
+						}));
+					}
 				} else {
 					sniValue = selectedOption;
 				}
 
 				s.a.confirm({
 					title: Object(m.formatMessage)({
-						id: "Bạn có chắc chắn đặt thay đổi SNI ?",
+						id: "Bạn Có Chắc Muốn Thay Đổi SNI Hiện Tại Không ?",
 					}),
 					content: Object(m.formatMessage)({
-						id: "Nếu bạn thay đổi SNi thì bạn cần phải cập nhật lại link đăng kí trên ứng dung để có thể hoạt động hiệu quả",
+						id: "Nếu bạn thay đổi SNI thì bạn cần phải cập nhật Đồng Bộ lại server mới sử dụng được nha👈",
 					}),
 					onOk: () => {
 						this.props.dispatch({
@@ -12808,28 +12819,31 @@
 						});
 						s.a.success({
 							title: Object(m.formatMessage)({
-								id: "SNI đã cập nhật thành công",
+								id: "Cập Nhật SNI Thành Công",
 							}),
 							content: Object(m.formatMessage)({
-								id: "Vui lòng cập nhật lại link đăng kí trên ứng dụng",
+								id: "✅ Vui Lòng Đồng Bộ Lại Server Về APP 📲",
 							}),
+							onOk: () => window.location.reload(),
 						});
 					},
 					onCancel() {},
 					okText: Object(m.formatMessage)({
-						id: "xác nhận",
+						id: "Xác Nhận",
 					}),
 					cancelText: Object(m.formatMessage)({
-						id: "Hủy bỏ",
+						id: "Hủy Bỏ",
 					}),
 				});
 			}
+
+
 			changeAvatar() {
 				var self = this;
 
 				if (!self.refs.new_avatar_url.value.includes("https://") && !self.refs.new_avatar_url.value.includes("http://")) {
 					return c.a.error(Object(m.formatMessage)({
-						id: "Avatar chỉ hỗ trợ đường dẫn",
+						id: "Avatar chỉ hỗ trợ đường dẫn link có https:// hoặc http://",
 					}));
 				}
 
@@ -12962,7 +12976,7 @@
 												"label",
 												null,
 												Object(m.formatMessage)({
-													id: "SNI Hiện tại",
+													id: "SNI Hiện Tại",
 												}),
 												": ",
 												t.sni
@@ -12982,7 +12996,7 @@
 															value: '',
 														},
 														Object(m.formatMessage)({
-															id: "SNI mặc định",
+															id: "--Chọn SNI--",
 														})
 													),
 													l.a.createElement(
@@ -13022,7 +13036,7 @@
 															value: '0',
 														},
 														Object(m.formatMessage)({
-															id: "SNI Tùy Chỉnh",
+															id: "Tùy Chỉnh SNI Riêng",
 														})
 													)
 												),
@@ -13030,7 +13044,7 @@
 													type: "text",
 													className: "form-control",
 													placeholder: Object(m.formatMessage)({
-														id: "Vui lòng nhập SNI mới",
+														id: "Vui lòng nhập SNI vào đây",
 													}),
 													ref: this.setInputRef,
 												}),
@@ -15131,13 +15145,13 @@
 					ref: "chat"
 				}, null === (t = this.props.ticket) || void 0 === t ? void 0 : t.message.map((e => e.is_me ? s.a.createElement("div", null, s.a.createElement("div", {
 					className: "font-size-sm text-muted my-2 text-right"
-				}, l()(1e3 * e.created_at).format("YYYY/MM/DD HH:mm")), s.a.createElement("div", {
+				}, l()(1e3 * e.created_at).format("DD/MM/YYYY HH:mm")), s.a.createElement("div", {
 					className: "text-right ml-4"
 				}, s.a.createElement("div", {
 					className: "d-inline-block bg-gray-lighter px-3 py-2 mb-2 mw-100 rounded text-left"
 				}, e.message))) : s.a.createElement("div", null, s.a.createElement("div", {
 					className: "font-size-sm text-muted my-2"
-				}, l()(1e3 * e.created_at).format("YYYY/MM/DD HH:mm")), s.a.createElement("div", {
+				}, l()(1e3 * e.created_at).format("DD/MM/YYYY HH:mm")), s.a.createElement("div", {
 					className: "mr-4"
 				}, s.a.createElement("div", {
 					className: "d-inline-block bg-success-lighter px-3 py-2 mb-2 mw-100 rounded text-left"
@@ -15653,7 +15667,7 @@
 					currency: 'VND'
 				}))) : "", f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Thời Gian Tạo"
-				}), "："), f.a.createElement("span", null, x()(1e3 * t.created_at).format("YYYY-MM-DD HH:mm:ss")))))), 0 === t.status && f.a.createElement(f.a.Fragment, null, f.a.createElement("div", {
+				}), "："), f.a.createElement("span", null, x()(1e3 * t.created_at).format("DD-MM-YYYY HH:mm:ss")))))), 0 === t.status && f.a.createElement(f.a.Fragment, null, f.a.createElement("div", {
 					className: "block block-rounded js-appear-enabled"
 				}, f.a.createElement("div", {
 					className: "block-header block-header-default"
@@ -25352,7 +25366,7 @@
 						}),
 						dataIndex: "record_at",
 						key: "record_at",
-						render: e => e ? h()(1e3 * e).format("YYYY/MM/DD") : "-"
+						render: e => e ? h()(1e3 * e).format("DD/MM/YYYY") : "-"
 					}, {
 						title: Object(v.formatMessage)({
 							id: "Upload Thực Tế"
@@ -25471,6 +25485,7 @@
 			a = (n("fV52"), n("3I+P")),
 			s = (n("Pwec"), n("CtXQ")),
 			c = (n("2qtc"), n("kLXV")),
+			q = (n("miYZ"), n("tsqr")),
 			u = n("q1tI"),
 			l = n.n(u),
 			f = n("L12J"),
@@ -25482,7 +25497,8 @@
 			y = n("/MKj"),
 			g = n("/Ira"),
 			b = n("Y2fQ"),
-			w = n("v32e");
+			w = n("v32e"),
+			k = n("t3Un");
 		class x extends l.a.Component {
 			constructor(e) {
 				super(e), this.state = {
@@ -25498,14 +25514,15 @@
 			componentDidMount() {
 				this.props.dispatch({
 					type: "user/getSubscribe"
-				}), this.props.dispatch({
+				}),
+				this.props.dispatch({
 					type: "user/getStat"
 				}), this.props.dispatch({
 					type: "notice/fetch",
 					complete: () => {
 						var e, t = (null === (e = this.props.notice) || void 0 === e ? void 0 : e.notices) || [];
 						if (t.length) {
-							var n = t.find((e => -1 !== e.tags.indexOf("Pop-up")));
+							var n = t.find((e => -1 !== e.tags.indexOf("\u5f39\u7a97")));
 							console.log(n), n && this.modalVisible(n)
 						}
 					}
@@ -25540,7 +25557,7 @@
 					className: "font-size-lg text-white mb-1"
 				}, e.title), l.a.createElement("p", {
 					className: "font-w600 text-white-75"
-				}, v()(1e3 * e.created_at).format("YYYY-MM-DD"))))
+				}, v()(1e3 * e.created_at).format("DD-MM-YYYY"))))
 			}
 			resetPackage() {
 				var e = this.props.user.subscribe,
@@ -25576,10 +25593,36 @@
 					}
 				})
 			}
+			resetSecurity() {
+				var e = this;
+				c.a.confirm({
+					title: Object(b.formatMessage)({
+						id: "Bạn có chắc muốn đặt lại thông tin đăng ký không?"
+					}),
+					content: Object(b.formatMessage)({
+						id: "Nếu địa chỉ đăng ký hoặc thông tin của bạn đã bị rò rỉ, bạn có thể thực hiện thao tác này. Sau khi đặt lại, UUID và đăng ký của bạn sẽ thay đổi, và bạn sẽ cần phải đăng ký lại."
+					}),
+					onOk() {
+						Object(k.a)("/user/resetSecurity").then((t => {
+							200 === t.code && (q.a.success(Object(b.formatMessage)({
+								id: "Đặt Lại Thành Công"
+							})), e.fetchData())
+						}))
+					},
+					onCancel() {},
+					okText: Object(b.formatMessage)({
+						id: "Xác Nhận"
+					}),
+					cancelText: Object(b.formatMessage)({
+						id: "Hủy Bỏ"
+					})
+				})
+			}
 			render() {
 				var e, t, n, r, s = this.props.user,
 					u = s.stat,
 					d = s.subscribe,
+					dvsInfo = s.userInfo,
 					m = this.props.notice.notices,
 					y = Object(p.f)(d.u + d.d, d.transfer_enable),
 					x = [];
@@ -25615,12 +25658,12 @@
 				}, l.a.createElement("p", {
 					className: "mb-0"
 				}, Object(b.formatMessage)({
-					id: "Lưu Lượng Đã Sử Dụng hiện tại đạt {rate}%"
+					id: "Lưu Lượng Đã Sử Dụng Hiện Tại Đạt {rate}%"
 				}, {
-					rate: y
+					rate: (y).toFixed(2)
 				}), " ", (null === (r = d.plan) || void 0 === r ? void 0 : r.reset_price) && l.a.createElement("a", {
 					onClick: () => this.resetPackage()
-				}, l.a.createElement("strong", null, "Reset Lưu Lượng Đã Sử Dụng"))))), l.a.createElement(f.a, o()({}, this.props, {
+				}, l.a.createElement("strong", null, "\n👉 Reset Lưu Lượng Đã Sử Dụng"))))), l.a.createElement(f.a, o()({}, this.props, {
 					title: Object(b.formatMessage)({
 						id: "Trang Chủ"
 					})
@@ -25653,81 +25696,216 @@
 				}, d.email ? d.plan_id ? l.a.createElement("div", null, l.a.createElement("div", null, l.a.createElement("div", {
 					className: "justify-content-md-between align-items-md-center"
 				}, l.a.createElement("div", null, l.a.createElement("h3", {
-					className: "h4 mb-3"
-				}, d.plan.name), null === d.expired_at ? l.a.createElement("p", {
-					className: "font-size-sm text-muted"
-				}, Object(b.formatMessage)({
-					id: "Gói Này Có Thời Gian Vĩnh Viễn"
-				})) : l.a.createElement("p", {
-					className: "font-size-sm text-muted"
-				}, Object(p.h)(d.expired_at) ? l.a.createElement("a", {
-					className: "font-w600 text-danger",
-					href: "javascript:void(0);"
-				}, Object(b.formatMessage)({
-					id: "Gói Đã Quá Hạn"
-				})) : l.a.createElement("span", null, Object(b.formatMessage)({
-					id: "Hết Hạn vào ngày {date}, còn {day} ngày nữa."
-				}, {
-					date: v()(1e3 * d.expired_at).format("YYYY/MM/DD"),
-					day: ((d.expired_at - v()().format("X")) / 86400).toFixed(0)
-				}), null !== d.reset_day ? 0 !== d.reset_day ? Object(b.formatMessage)({
-					id: "Lưu Lượng Đã Sử Dụng sẽ được đặt lại sau {reset_day} ngày"
-				}, {
-					reset_day: d.reset_day
-				}) : Object(b.formatMessage)({
-					id: "Lưu Lượng Đã Sử Dụng đã được đặt lại vào hôm nay"
-				}) : "")), l.a.createElement("div", {
-						className: "mb-0"
-					}, l.a.createElement("div", {
-						className: "progress mb-1",
-						style: {
-							height: 6
-						}
-					}, l.a.createElement("div", {
-						className: "progress-bar progress-bar-striped progress-bar-animated bg-".concat(y >= 100 ? "danger" : y >= 80 ? "warning" : "success"),
-						role: "progressbar",
-						style: {
-							width: Object(p.f)(d.u + d.d, d.transfer_enable) + "%"
-						}
-					})), l.a.createElement("div", {
-						className: "font-size-sm font-w600 mb-3"
-					}, l.a.createElement("p", {
-						className: "font-w700"
+						className: "h4 mb-3"
+					}, d.plan.name), null === d.expired_at ? l.a.createElement("p", {
+						className: "font-size-sm text-muted"
 					}, Object(b.formatMessage)({
-						id: "Đã Sử Dụng {used} / Tổng Cộng {total}"
+						id: "Gói Này Có Thời Gian Vĩnh Viễn"
+					})) : l.a.createElement("p", {
+						className: "font-size-sm text-muted"
+					}, Object(p.h)(d.expired_at) ? l.a.createElement("a", {
+						className: "font-w600 text-danger",
+						href: "javascript:void(0);"
+					}, Object(b.formatMessage)({
+						id: "Gói Đã Quá Hạn"
+					})) : l.a.createElement("span", null, Object(b.formatMessage)({
+						id: "Hết Hạn vào ngày {date}, còn {day} ngày nữa."
 					}, {
-						used: Object(p.b)(d.u + d.d),
-						total: Object(p.b)(d.transfer_enable)
-					})), l.a.createElement("p", {
-						className: "font-w700"
-					}, l.a.createElement("span", {
-						className: "tooltip-container"
-					}, l.a.createElement("i", {
-						className: "fa fa-question-circle"
-					}), l.a.createElement("span", {
-						className: "tooltip-text"
-					}, `IP: ${d.ip_online}`)), " ", Object(b.formatMessage)({
-						id: "Đang Online {alive_ip}/{device_limit} Thiết Bị"
+						date: v()(1e3 * d.expired_at).format("DD/MM/YYYY"),
+						day: ((d.expired_at - v()().format("X")) / 86400).toFixed(0)
+					}), null !== d.reset_day ? 0 !== d.reset_day ? Object(b.formatMessage)({
+						id: "Lưu Lượng Đã Sử Dụng sẽ được đặt lại sau {reset_day} ngày"
 					}, {
-						alive_ip: d.alive_ip,
-						device_limit: null == d.device_limit ? "∞" : d.device_limit
-					})))
+						reset_day: d.reset_day
+					}) : Object(b.formatMessage)({
+						id: "Lưu Lượng Đã Sử Dụng đã được đặt lại vào hôm nay"
+					}) : "")), l.a.createElement("div", {
+							className: "mb-0 dvs-center"
+						}, l.a.createElement("div", null, Object(b.formatMessage)({
+							id: "Thống Kê Sử Dụng"
+						})), l.a.createElement("div", {
+								className: "font-dvs-aiko"
+							},
+							l.a.createElement("span", {
+									className: "tooltip-container"
+								},
+								l.a.createElement("i", {
+									className: "fa fa-question-circle"
+								}),
+								l.a.createElement("span", {
+									className: "tooltip-text"
+								}, `Thống Kê IP Online:\n ${d.ip_online}`)
+							),
+							" ",
+							Object(b.formatMessage)({
+								id: "Đang Online {alive_ip} Thiết Bị"
+							}, {
+								alive_ip: d.alive_ip
+							}),
+							" ",
+							l.a.createElement("i", {
+								className: "fa fa-mobile-alt"
+							}),
+							" \n",
+							null == d.device_limit ? l.a.createElement("i", {
+								className: "fa fa-check-circle"
+							}) : l.a.createElement("i", {
+								className: "fa fa-exclamation-triangle"
+							}),
+							" ",
+							null == d.device_limit ? Object(b.formatMessage)({
+								id: "Không Giới Hạn Thiết Bị Sử Dụng"
+							}) : Object(b.formatMessage)({
+								id: "Giới Hạn Sử Dụng: {device_limit} Thiết Bị"
+							}, {
+								device_limit: d.device_limit
+							})
+						)
 
-				), y >= 80 && !Object(p.h)(d.expired_at) && (null == d || null === (e = d.plan) || void 0 === e ? void 0 : e.reset_price) && l.a.createElement("div", {
-					className: "mb-4"
-				}, l.a.createElement(i.a, {
-					type: "primary",
-					onClick: () => this.resetPackage()
-				}, Object(b.formatMessage)({
-					id: "Reset Lưu Lượng Đã Sử Dụng"
-				}))), Object(p.h)(d.expired_at) && l.a.createElement("div", {
-					className: "mb-4"
-				}, l.a.createElement(i.a, {
-					type: "primary",
-					onClick: () => h.a.push(Object(p.m)(d) ? "/plan/" + d.plan_id : "/plan")
-				}, Object(b.formatMessage)({
-					id: Object(p.m)(d) ? "Gia Hạn Gói Dịch Vụ" : "Mua Gói Dịch Vụ"
-				})))), l.a.createElement("div", null)))) : l.a.createElement("a", {
+						, l.a.createElement("div", {
+							className: "progress mb-1",
+							style: {
+								height: 6
+							}
+						}, l.a.createElement("div", {
+							className: "progress-bar progress-bar-striped progress-bar-animated",
+							role: "progressbar",
+							style: {
+								width: (d.u + d.d) / (d.transfer_enable) * 100 + "%",
+								backgroundColor: y < 50 ? "#37b837" : y < 90 ? "#ffff37" : "#ff6363"
+							}
+						}, l.a.createElement("span", {
+							className: "progress-text",
+							style: {
+								color: y < 50 ? "#56ff59" : y < 90 ? "#ffff37" : "#ff6363"
+							}
+						}, ((d.u + d.d) / (d.transfer_enable) * 100).toFixed(2) + "%"))), l.a.createElement("div", {
+							className: "dvs-aiko-transfer font-w600"
+						}, l.a.createElement("div", {
+							className: "font-w700"
+						}, Object(b.formatMessage)({
+							id: "Đã Sử Dụng {used} / Tổng Cộng {total}"
+						}, {
+							used: Object(p.b)(d.u + d.d),
+							total: Object(p.b)(d.transfer_enable)
+						}))),
+						l.a.createElement("div", {
+							className: "font-dvsAiko"
+						}, Object(b.formatMessage)({
+							id: "Đang Sử Dụng SNI"
+						}), "\n", dvsInfo.sni)),
+					l.a.createElement("div", {
+							className: "aikopanel-dvs-center"
+						},
+						l.a.createElement("div", {
+								className: "aikopanel-dvs"
+							},
+							l.a.createElement("button", {
+								className: "Aiko-DVS DVS-Aiko-Mod4",
+								onClick: () => window.location.href = '/#/utilities',
+
+								style: {
+									alignItems: "center"
+								}
+							}, [
+								l.a.createElement("i", {
+									className: "nav-main-link-icon fas fa-cogs"
+								}), " ",
+								l.a.createElement("span", null, Object(b.formatMessage)({
+									id: "Thay Đổi SNI"
+								}))
+							]), l.a.createElement("button", {
+								className: "Aiko-DVS DVS-Aiko-Mod3",
+
+								onClick: () => window.location.href = '/#/knowledge',
+								style: {
+									alignItems: "center"
+								}
+							}, [
+								l.a.createElement("i", {
+									className: "nav-main-link-icon fas fa-book"
+								}), " ",
+								l.a.createElement("span", null, Object(b.formatMessage)({
+									id: "Hướng Dẫn Sử Dụng"
+								}))
+							]),
+							l.a.createElement("button", {
+								className: "Aiko-DVS DVS-Aiko-Mod1",
+
+								onClick: () => window.location.href = 'https://dvsteam.net/idapple',
+								style: {
+									alignItems: "center"
+								}
+							}, [
+								l.a.createElement("i", {
+									className: "nav-main-link-icon fas fa-cloud-download-alt"
+								}), " ",
+								l.a.createElement("span", null, Object(b.formatMessage)({
+									id: "Tải Sa Đao Rốc Két"
+								}))
+							]),
+							l.a.createElement("button", {
+								className: "Aiko-DVS DVS-Aiko-Mod2",
+								type: "danger",
+								onClick: () => this.resetSecurity()
+							}, [
+								l.a.createElement("i", {
+									className: "nav-main-link-icon fas fa-undo-alt"
+								}), " ",
+								Object(b["formatMessage"])({
+									id: "Reset Liên Kết Server"
+								})
+							])
+						),
+						l.a.createElement(g.a, {
+							subscribeUrl: d.subscribe_url
+						}, l.a.createElement("div", {
+							className: "aikopanel-DevDVS-App"
+						}, null, l.a.createElement("div", {
+							className: "aikopanel-DevDVS-item"
+						}, l.a.createElement("div", {
+							className: "Aiko-DVS padding-dvs",
+							style: {
+								alignItems: "center"
+							}
+						}, [
+							l.a.createElement("i", {
+								className: "nav-main-link-icon si si-feed"
+							}), " ",
+							Object(b.formatMessage)({
+								id: "Đồng Bộ Máy Chủ Về APP"
+							})
+						])), l.a.createElement("img", {
+							src: "https://cdn-icons-png.flaticon.com/512/732/732225.png",
+							alt: "Ảnh",
+							className: "description1"
+						}), l.a.createElement("img", {
+							src: "https://stc.hnammobilecare.com/hcare/uploads/images/120-logo-android.jpg",
+							alt: "Ảnh",
+							className: "description2"
+						}), l.a.createElement("img", {
+							src: "data:image/png;base64,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",
+							alt: "Ảnh",
+							className: "description3"
+						}), l.a.createElement("img", {
+							src: "https://maychuvatly.com/wp-content/uploads/2020/12/linux.jpg",
+							alt: "Ảnh",
+							className: "description4"
+						}))),
+						y >= 80 && !Object(p.h)(d.expired_at) && (null == d || null === (e = d.plan) || void 0 === e ? void 0 : e.reset_price) && l.a.createElement("div", null,
+							l.a.createElement(i.a, {
+								type: "primary",
+								onClick: () => this.resetPackage()
+							}, Object(b.formatMessage)({
+								id: "Reset Lưu Lượng Đã Sử Dụng"
+							}))), Object(p.h)(d.expired_at) && l.a.createElement("div", {
+							className: "mb-4"
+						}, l.a.createElement(i.a, {
+							type: "primary",
+							onClick: () => h.a.push(Object(p.m)(d) ? "/plan/" + d.plan_id : "/plan")
+						}, Object(b.formatMessage)({
+							id: Object(p.m)(d) ? "Gia Hạn Gói Dịch Vụ" : "Mua Gói Dịch Vụ"
+						}))))), l.a.createElement("div", null)))) : l.a.createElement("a", {
 					onClick: () => h.a.push("/plan")
 				}, l.a.createElement("div", null, l.a.createElement("div", {
 					className: "text-center"
@@ -26649,7 +26827,7 @@
 				}, e.title), s.a.createElement("small", null, Object(l.formatMessage)({
 					id: "Cập Nhật Cuối: {date}"
 				}, {
-					date: p()(1e3 * e.updated_at).format("YYYY/MM/DD")
+					date: p()(1e3 * e.updated_at).format("DD/MM/YYYY")
 				})))))))))))))))
 			}
 		}
@@ -36821,7 +36999,7 @@
 								window.$crisp && window.$crisp.push(["set", "session:data", [
 									[
 										["Plan", (null === (o = r.data.plan) || void 0 === o ? void 0 : o.name) || "-"],
-										["ExpireTime", f()(1e3 * r.data.expired_at).format("YYYY-MM-DD")],
+										["ExpireTime", f()(1e3 * r.data.expired_at).format("DD-MM-YYYY")],
 										["UsedTraffic", Object(u.b)(r.data.u + r.data.d)],
 										["AllTraffic", Object(u.b)(r.data.transfer_enable)]
 									]
@@ -41408,7 +41586,7 @@
 						dataIndex: "created_at",
 						key: "created_at",
 						align: "right",
-						render: e => b()(1e3 * e).format("YYYY/MM/DD HH:mm")
+						render: e => b()(1e3 * e).format("DD/MM/YYYY HH:mm")
 					}],
 					k = [{
 						title: Object(w.formatMessage)({
@@ -41416,7 +41594,7 @@
 						}),
 						dataIndex: "created_at",
 						key: "created_at",
-						render: e => b()(1e3 * e).format("YYYY/MM/DD HH:mm")
+						render: e => b()(1e3 * e).format("DD/MM/YYYY HH:mm")
 					}, {
 						title: Object(w.formatMessage)({
 							id: "Tiền Hoa Hồng"
@@ -43527,14 +43705,14 @@
 						}),
 						dataIndex: "created_at",
 						key: "created_at",
-						render: e => b()(1e3 * e).format("YYYY/MM/DD HH:mm")
+						render: e => b()(1e3 * e).format("DD/MM/YYYY HH:mm")
 					}, {
 						title: Object(w.formatMessage)({
 							id: "Phản Hồi Cuối Cùng"
 						}),
 						dataIndex: "updated_at",
 						key: "updated_at",
-						render: e => b()(1e3 * e).format("YYYY/MM/DD HH:mm")
+						render: e => b()(1e3 * e).format("DD/MM/YYYY HH:mm")
 					}, {
 						title: Object(w.formatMessage)({
 							id: "Tùy Chọn"
@@ -48941,7 +49119,7 @@
 						}),
 						dataIndex: "created_at",
 						key: "created_at",
-						render: e => V()(1e3 * e).format("YYYY/MM/DD HH:mm")
+						render: e => V()(1e3 * e).format("DD/MM/YYYY HH:mm")
 					}, {
 						title: Object(z.formatMessage)({
 							id: "Tùy Chọn"
@@ -48990,7 +49168,7 @@
 						})), b.a.createElement("div", null, b.a.createElement(L.a, {
 							status: r[e.status]
 						}), B.a.orderStatusText[e.status] && B.a.orderStatusText[e.status]()))
-					}, null === (t = e.plan) || void 0 === t ? void 0 : t.name, " ", b.a.createElement(P.Item.Brief, null, V()(1e3 * e.created_at).format("YYYY-MM-DD HH:mm:ss")))
+					}, null === (t = e.plan) || void 0 === t ? void 0 : t.name, " ", b.a.createElement(P.Item.Brief, null, V()(1e3 * e.created_at).format("DD-MM-YYYY HH:mm:ss")))
 				}))) : b.a.createElement(i.a, {
 					tableLayout: "auto",
 					dataSource: t,
@@ -49359,18 +49537,28 @@
 				n = 1073741824;
 			e = parseInt(e);
 
-			if (e > n) {
-				return (e / n).toLocaleString('vi-VN') + " GB";
-			} else if (e > t) {
-				return (e / t).toLocaleString('vi-VN') + " MB";
-			} else if (e > 1024) {
-				return (e / 1024).toLocaleString('vi-VN') + " KB";
+			if (e >= n) {
+				return (e / n).toLocaleString('vi-VN', {
+					minimumFractionDigits: 0,
+					maximumFractionDigits: 0
+				}) + " GB";
+			} else if (e >= t) {
+				return (e / t).toLocaleString('vi-VN', {
+					minimumFractionDigits: 0,
+					maximumFractionDigits: 0
+				}) + " MB";
+			} else if (e >= 1024) {
+				return (e / 1024).toLocaleString('vi-VN', {
+					minimumFractionDigits: 0,
+					maximumFractionDigits: 0
+				}) + " KB";
 			} else if (e < 0) {
 				return 0;
 			} else {
 				return e.toLocaleString('vi-VN') + " B";
 			}
 		}
+
 
 		function g(e) {
 			return null !== e && e < (new Date).getTime() / 1e3
