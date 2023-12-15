@@ -778,9 +778,12 @@
 					title: "ClashMeta",
 					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=meta") + "&name=" + window.settings.title
 				}), t.push({
+					title: "ClashMeta For Android",
+					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=clash") + "&name=" + window.settings.title
+				})), Object(u.g)() && (t.push({
 					title: "Clash For Windows",
 					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=clashpc") + "&name=" + window.settings.title
-				})), Object(u.g)() && (t.push({
+				}), t.push({
 					title: "NekoBox For Android",
 					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=meta") + "&name=" + window.settings.title
 				}) && t.push({
