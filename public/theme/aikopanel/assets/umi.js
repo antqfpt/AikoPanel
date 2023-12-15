@@ -752,7 +752,7 @@
 				}), t.push({
 					title: "QuantumultX",
 					href: "quantumult-x:///update-configuration?remote-resource=" + encodeURI(JSON.stringify({
-						server_remote: [e + ", tag=" + window.settings.title]
+						server_remote: [e + 'flag=qxping' + ", tag=" + window.settings.title]
 					}))
 				}), t.push({
 					title: "Surge",
@@ -772,7 +772,7 @@
 				}), t.push({
 					title: "QuantumultX",
 					href: "quantumult-x:///update-configuration?remote-resource=" + encodeURI(JSON.stringify({
-						server_remote: [e + ", tag=" + window.settings.title]
+						server_remote: [e + 'flag=qxping' + ", tag=" + window.settings.title]
 					}))
 				})), Object(u.n)() && (t.push({
 					title: "ClashMeta",
