@@ -25761,7 +25761,7 @@
 							},
 							Object(b.formatMessage)({
 									id: "IP Đang Truy Cập"
-								}), ": ", )
+								}), ": ", dvsInfo.last_login_ip )
 						))))
 					, l.a.createElement("div", {
 						className: "row mb-3 mb-md-0"
