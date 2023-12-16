@@ -752,7 +752,7 @@
 				}), t.push({
 					title: "QuantumultX",
 					href: "quantumult-x:///update-configuration?remote-resource=" + encodeURI(JSON.stringify({
-						server_remote: [e + '&flag=qxping' + ", tag=" + window.settings.title]
+						server_remote: [e + ", tag=" + window.settings.title]
 					}))
 				}), t.push({
 					title: "Surge",
@@ -772,18 +772,15 @@
 				}), t.push({
 					title: "QuantumultX",
 					href: "quantumult-x:///update-configuration?remote-resource=" + encodeURI(JSON.stringify({
-						server_remote: [e + '&flag=qxping' + ", tag=" + window.settings.title]
+						server_remote: [e + ", tag=" + window.settings.title]
 					}))
 				})), Object(u.n)() && (t.push({
 					title: "ClashMeta",
 					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=meta") + "&name=" + window.settings.title
 				}), t.push({
-					title: "ClashMeta For Android",
-					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=clash") + "&name=" + window.settings.title
-				})), Object(u.g)() && (t.push({
 					title: "Clash For Windows",
 					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=clashpc") + "&name=" + window.settings.title
-				}), t.push({
+				})), Object(u.g)() && (t.push({
 					title: "NekoBox For Android",
 					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=meta") + "&name=" + window.settings.title
 				}) && t.push({
@@ -19957,6 +19954,7 @@
 			p = n("TEnU"),
 			d = n("nDCI"),
 			h = n("yWgo"),
+			dvs = n("/Ira"),
 			m = window.settings.theme;
 		class v extends i.a.Component {
 			constructor(e) {
@@ -19998,7 +19996,9 @@
 				}), Object(h.q)("dark_mode", 1)), this.forceUpdate()
 			}
 			render() {
-				var e = this.props.user.userInfo;
+				var e = this.props.user.userInfo,
+					s = this.props.user,
+					d = s.subscribe;
 				return i.a.createElement("header", {
 						id: "page-header",
 					}, i.a.createElement("div", {
@@ -20060,7 +20060,7 @@
 					}, i.a.createElement("img", {
 						className: "user_avatar",
 						alt: "Avatar",
-						src: e.avatar_url,
+						src: window.settings.logo,
 						style: {
 							width: "28px",
 							height: "28px",
@@ -20137,10 +20137,11 @@
 								},
 								i.a.createElement("i", {
 									className: "fas fa-home"
-								}),
-								" Trang Chủ"
+								}), Object(u.formatMessage)({
+									id: "Trang Chủ",
+								})
 							)
-						),
+						), d.plan_id === null ?
 						i.a.createElement("div", {
 								className: "with-border"
 							},
@@ -20150,10 +20151,25 @@
 								},
 								i.a.createElement("i", {
 									className: "fas fa-shopping-cart"
-								}),
-								" Mua Gói Dịch Vụ"
+								}), Object(u.formatMessage)({
+									id: "Mua Gói Dịch Vụ",
+								})
 							)
-						),
+						) :
+						i.a.createElement(dvs.a, {
+								subscribeUrl: d.subscribe_url
+							},
+							i.a.createElement("div", {
+									className: "with-border"
+								},
+								i.a.createElement("div", {
+										className: "footer-item pressable",
+									},
+									i.a.createElement("i", {
+										className: "fa fa-sitemap"
+									}),
+									" Đồng Bộ Máy Chủ"
+								))),
 						i.a.createElement("div", {
 								onClick: () => (window.location.href = "/#/utilities"),
 								className: "footer-item",
@@ -25645,10 +25661,6 @@
 					})
 				})
 			}
-
-
-
-
 			render() {
 				var e, t, n, r, s = this.props.user,
 					u = s.stat,
@@ -25720,93 +25732,159 @@
 					}, l.a.createElement("div", {
 						className: "col-xl-12"
 					}, l.a.createElement("div", {
-							className: "block block-rounded js-appear-enabled"
+						className: "block block-rounded js-appear-enabled"
+					}, l.a.createElement("div", {
+						className: "block-content p-0"
+					}), l.a.createElement("div", {
+							className: "block-content email-dvs-aiko"
 						}, l.a.createElement("div", {
-							className: "block-header block-header-default"
-						}, l.a.createElement("h3", {
-							className: "block-title"
-						}, Object(b.formatMessage)({
-							id: "Thông Tin Tài Khoảng"
-						}))), l.a.createElement("div", {
-							className: "block-content p-0"
-						}), l.a.createElement("div", {
-								className: "block-content email-dvs-aiko"
+							className: "settings-dvs-aiko"
+						}, l.a.createElement("div", {
+							className: "title-dvs-aiko"
+						}, null === (t = window) || void 0 === t || null === (n = t.settings) || void 0 === n ? void 0 : n.title)), l.a.createElement("img", {
+							className: "avatar-aiko-dvs",
+							alt: "Avatar",
+							src: dvsInfo.avatar_url,
+							onClick: () => window.location.href = '/#/utilities'
+
+						}),
+						l.a.createElement("div", {
+							className: "email-dvs-aiko"
+						}, dvsInfo.email),
+						l.a.createElement("p", {
+								className: "font-size-dvs text-muted"
 							},
-							l.a.createElement("div", {
-									className: "email-dvs-aiko"
-								}, dvsInfo.email),
-							l.a.createElement("p", {
-									className: "font-size-dvs text-muted"
-								},
-								Object(b.formatMessage)({
-									id: "Thời Gian Tạo"
-								}), ": ",
-								l.a.createElement("span", {
-									className: "font-size-dvs text-muted"
-								}, v()(1e3 * dvsInfo.created_at).format("DD/MM/YYYY - HH:mm:ss"))),
-							dvsInfo.balance !== 0 ? l.a.createElement("div", {
-									className: "font-sodu-dvs text-muted"
-								},
-								Object(b.formatMessage)({
-									id: "Số Dư Ví Hiện Tại"
-								}), ": ", (Math.round(dvsInfo.balance / 100)).toLocaleString(), " ", dvsConfig.currency
-							) : null,
-							l.a.createElement("div", {
-									className: "he-dieu text-muted"
+							Object(b.formatMessage)({
+								id: "Thời Gian Tạo"
+							}), ": ",
+							l.a.createElement("span", {
+								className: "font-size-dvs text-muted"
+							}, v()(1e3 * dvsInfo.created_at).format("DD/MM/YYYY - HH:mm:ss"))),
+						dvsInfo.balance !== 0 ? l.a.createElement("div", {
+								className: "font-sodu-dvs text-muted"
+							},
+							Object(b.formatMessage)({
+								id: "Số Dư Ví Hiện Tại"
+							}), ": ", (Math.round(dvsInfo.balance / 100)).toLocaleString(), " ", dvsConfig.currency
+						) : null,
+						l.a.createElement("div", {
+								className: "he-dieu text-muted"
+							},
+							l.a.createElement("span", {
+									className: "hdh-dvs text-muted"
 								},
 								Object(b.formatMessage)({
 									id: "Hệ Điều Hành Truy Cập"
-								}), ": ",
-								this.getOperatingSystems().join(', ')
-							),
-							l.a.createElement("div", {
+								}), ": "),
+							this.getOperatingSystems().join(', ')
+						), l.a.createElement("div", {
 								className: "he-dieu text-muted"
 							},
-							Object(b.formatMessage)({
+							l.a.createElement("span", {
+									className: "hdh-dvs text-muted"
+								},
+								Object(b.formatMessage)({
 									id: "IP Đang Truy Cập"
-								}), ": ", dvsInfo.last_login_ip )
-						))))
-					, l.a.createElement("div", {
-						className: "row mb-3 mb-md-0"
+								}), ": "), dvsInfo.last_login_ip),
+						dvsConfig.zalo_discuss_link !== null ?
+						l.a.createElement("button", {
+							className: "Aiko-DVS DVS-Aiko-zalo",
+							onClick: () => window.location.href = dvsConfig.zalo_discuss_link
+						}, [
+							l.a.createElement("img", {
+								className: "icon-zalo",
+								src: "https://dvsteam.net/idapple/logo-zalo.png",
+								alt: "Zalo Logo"
+							}), " ",
+							l.a.createElement("span", null, Object(b.formatMessage)({
+								id: "Nhóm Zalo"
+							}))
+						]) : null,
+						dvsConfig.telegram_discuss_link !== null ?
+						l.a.createElement("button", {
+							className: "Aiko-DVS DVS-Aiko-telegram",
+							onClick: () => window.location.href = dvsConfig.telegram_discuss_link,
+							style: {
+								alignItems: "center"
+							}
+						}, [
+							l.a.createElement("img", {
+								className: "icon-telegram",
+								src: "https://dvsteam.net/idapple/logo-telegram.png",
+								alt: "Telegram Logo"
+							}), " ",
+							l.a.createElement("span", null, Object(b.formatMessage)({
+								id: "Nhóm Telegram"
+							}))
+						]) : null
+
+
+
+					)))), l.a.createElement("div", {
+						className: "dvs-row mb-3 mb-md-0"
 					}, l.a.createElement("div", {
 						className: "col-xl-12"
 					}, l.a.createElement("div", {
 						className: "block block-rounded js-appear-enabled"
 					}, l.a.createElement("div", {
-						className: "block-header block-header-default"
-					}, l.a.createElement("h3", {
-						className: "block-title"
-					}, Object(b.formatMessage)({
-						id: "Gói Dịch Vụ Của Bạn"
-					}))), l.a.createElement("div", {
 						className: "block-content dvs-goi"
 					}, d.email ? d.plan_id ? l.a.createElement("div", null, l.a.createElement("div", null, l.a.createElement("div", {
 						className: "justify-content-md-between align-items-md-center"
-					}, l.a.createElement("div", null, l.a.createElement("h3", {
-							className: "h4 mb-3"
-						}, d.plan.name), null === d.expired_at ? l.a.createElement("p", {
+					}, l.a.createElement("div", null,
+						l.a.createElement("div", null, l.a.createElement("div", {
+								className: "thongtingoi"
+							}, l.a.createElement("h3", {
+								className: "h4 mb-3"
+							}, d.plan.name)),
+							l.a.createElement("div", {
+									className: "dvs-thongtin"
+								},
+								l.a.createElement("span", {
+									className: "dvs-thongtin1"
+								}, Object(b.formatMessage)({
+									id: "THÔNG TIN GÓI"
+								}))))
+
+						, null === d.expired_at ? l.a.createElement("p", {
 							className: "font-size-sm text-muted"
 						}, Object(b.formatMessage)({
 							id: "Gói Này Có Thời Gian Vĩnh Viễn"
-						})) : l.a.createElement("p", {
-							className: "font-size-sm text-muted"
+						})) : l.a.createElement("div", {
+							className: "font-size-sm text-muted dvs-aiko-data"
 						}, Object(p.h)(d.expired_at) ? l.a.createElement("a", {
 							className: "font-w600 text-danger",
 							href: "javascript:void(0);"
 						}, Object(b.formatMessage)({
 							id: "Gói Đã Quá Hạn"
-						})) : l.a.createElement("span", null, Object(b.formatMessage)({
-							id: "Hết Hạn vào ngày {date}, còn {day} ngày nữa."
-						}, {
-							date: v()(1e3 * d.expired_at).format("DD/MM/YYYY HH:mm:ss"),
-							day: ((d.expired_at - v()().format("X")) / 86400).toFixed(0)
-						}), null !== d.reset_day ? 0 !== d.reset_day ? Object(b.formatMessage)({
-							id: "Lưu Lượng Đã Sử Dụng sẽ được đặt lại sau {reset_day} ngày"
-						}, {
-							reset_day: d.reset_day
-						}) : Object(b.formatMessage)({
-							id: "Lưu Lượng Đã Sử Dụng đã được đặt lại vào hôm nay"
-						}) : "")), l.a.createElement("div", {
+						})) : l.a.createElement("div", {
+							className: "hansudung"
+						}, l.a.createElement("div", {
+								className: "hansudung2"
+							},
+							l.a.createElement("i", {
+								className: "fas fa-calendar-alt"
+							}),
+							Object(b.formatMessage)({
+								id: "Hạn Sử Dụng: {date}"
+							}, {
+								date: v()(1e3 * d.expired_at).format("DD/MM/YYYY - HH:mm:ss")
+							}),
+							l.a.createElement("div", null,
+								l.a.createElement("i", {
+									className: "fas fa-hourglass-half"
+								}),
+								Object(b.formatMessage)({
+									id: "Còn Lại {day} Ngày Nữa Hết Hạn."
+								}, {
+									day: ((d.expired_at - v()().format("X")) / 86400).toFixed(0)
+								})
+							), null !== d.reset_day ? 0 !== d.reset_day ? Object(b.formatMessage)({
+								id: "Lưu Lượng Đã Sử Dụng Sẽ Reset Sau {reset_day} Ngày Nữa"
+							}, {
+								reset_day: d.reset_day
+							}) : Object(b.formatMessage)({
+								id: "Lưu Lượng Đã Sử Dụng Sẽ Được Reset Trong Ngày Hôm Nay"
+							}) : ""))), l.a.createElement("div", {
 								className: "mb-0 dvs-center"
 							}, l.a.createElement("div", null, Object(b.formatMessage)({
 								id: "Thống Kê Sử Dụng"
@@ -25817,7 +25895,7 @@
 										className: "tooltip-container"
 									},
 									l.a.createElement("i", {
-										className: "fa fa-question-circle"
+										className: "fa fa-mobile-alt" // fa fa-question-circle icon dấu ? dvsteam 16/12
 									}),
 									l.a.createElement("span", {
 										className: "tooltip-text"
@@ -25846,6 +25924,8 @@
 									id: "Giới Hạn Sử Dụng: {device_limit} Thiết Bị"
 								}, {
 									device_limit: d.device_limit
+								}), " ", l.a.createElement("i", {
+									className: "fa fa-exclamation-triangle"
 								})
 							)
 
@@ -26026,7 +26106,7 @@
 						className: "aikopanel-shortcuts-item",
 						onClick: () => h.a.push("/knowledge")
 					}, l.a.createElement("div", null, Object(b.formatMessage)({
-						id: "Xem Hướng Dẫn"
+						id: "Xem Hướng Dẫn Sử Dụng"
 					})), l.a.createElement("div", {
 						className: "description"
 					}, Object(b.formatMessage)({
@@ -26050,6 +26130,48 @@
 							float: "right"
 						},
 						className: "nav-main-link-icon si si-".concat(Object(p.m)(d) ? "clock" : "bag")
+					})), l.a.createElement("div", {
+						className: "aikopanel-shortcuts-item",
+						onClick: () => h.a.push("/order")
+					}, l.a.createElement("div", null, Object(b.formatMessage)({
+						id: "Lịch Sửa Mua Hàng"
+					})), l.a.createElement("div", {
+						className: "description"
+					}, Object(b.formatMessage)({
+						id: "Xem trạng thái những đơn hàng bạn đã mua"
+					})), l.a.createElement("i", {
+						style: {
+							float: "right"
+						},
+						className: "nav-main-link-icon si si-list"
+					})), l.a.createElement("div", {
+						className: "aikopanel-shortcuts-item",
+						onClick: () => h.a.push("/node")
+					}, l.a.createElement("div", null, Object(b.formatMessage)({
+						id: "Thông Tin Trạng Thái Máy Chủ"
+					})), l.a.createElement("div", {
+						className: "description"
+					}, Object(b.formatMessage)({
+						id: "Thống kê những máy chủ của bạn, và trạng thái hoat jđộng"
+					})), l.a.createElement("i", {
+						style: {
+							float: "right"
+						},
+						className: "nav-main-link-icon si si-check"
+					})), l.a.createElement("div", {
+						className: "aikopanel-shortcuts-item",
+						onClick: () => h.a.push("/profile")
+					}, l.a.createElement("div", null, Object(b.formatMessage)({
+						id: "Thay Đổi Mật Khẩu"
+					})), l.a.createElement("div", {
+						className: "description"
+					}, Object(b.formatMessage)({
+						id: "Nếu tài khoảng bị lộ, hoặc bị lợi dụng hãy đổi mới"
+					})), l.a.createElement("i", {
+						style: {
+							float: "right"
+						},
+						className: "nav-main-link-icon si si-user"
 					})), l.a.createElement("div", {
 						className: "aikopanel-shortcuts-item",
 						onClick: () => h.a.push("/ticket")
