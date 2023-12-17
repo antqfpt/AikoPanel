@@ -56814,7 +56814,7 @@
 								case 4:
 									return n.next = 6,
 										Object(a.b)("/passport/auth/login", {
-											email: r,
+											login: r,
 											password: o
 										});
 								case 6:
