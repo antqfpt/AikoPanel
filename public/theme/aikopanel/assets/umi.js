@@ -35068,7 +35068,7 @@
 				var e = this.props.location.query.redirect;
 				this.props.dispatch({
 					type: "passport/login",
-					login: this.refs.login.value,
+					email: this.refs.email.value,
 					password: this.refs.password.value,
 					redirect: e
 				})
@@ -35135,7 +35135,7 @@
 					placeholder: Object(u.formatMessage)({
 						id: "Tài Khoản Email"
 					}),
-					ref: "login"
+					ref: "email"
 				})), i.a.createElement("div", {
 					className: "form-group",
 					style: {
@@ -56800,7 +56800,7 @@
 						for (;;)
 							switch (n.prev = n.next) {
 								case 0:
-									return r = e.login,
+									return r = e.email,
 										o = e.password,
 										i = e.redirect,
 										u = t.put,
@@ -56814,7 +56814,7 @@
 								case 4:
 									return n.next = 6,
 										Object(a.b)("/passport/auth/login", {
-											login: r,
+											email: r,
 											password: o
 										});
 								case 6:
