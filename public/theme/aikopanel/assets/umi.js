@@ -15538,6 +15538,38 @@
 					})
 				})
 			}
+			changeUserName() {
+				var e = this;
+				i.a.confirm({
+					title: Object(h.formatMessage)({
+						id: "Bạn có chắc chắn thay đổi UserName ?"
+					}),
+					content: Object(h.formatMessage)({
+						id: "Nếu bạn thay đổi UserName thì bạn cần phải load lại trang web để có thể thấy UserName mới"
+					}),
+					onOk() {
+						e.props.dispatch({
+								type: "user/changeUserName",
+								avatar: e.refs.new_username.value
+							}),
+							i.a.success({
+								title: Object(h.formatMessage)({
+									id: "Username đã cập nhật thành công"
+								}),
+								content: Object(h.formatMessage)({
+									id: "Username mới của bạn là: " + e.refs.new_username.value
+								})
+							})
+					},
+					onCancel() {},
+					okText: Object(h.formatMessage)({
+						id: "xác nhận"
+					}),
+					cancelText: Object(h.formatMessage)({
+						id: "Hủy bỏ"
+					})
+				})
+			}
 			changeAvatar() {
 				var e = this;
 				if (!e.refs.new_avatar_url.value.includes("https://") && !e.refs.new_avatar_url.value.includes("http://"))
@@ -15616,6 +15648,7 @@
 					n = (e.subscribe,
 						e.changeSNILoading),
 					r = e.changeAvatarLoading,
+					un = e.changeUserNameLoading,
 					i = this.props.comm.config;
 				return l.a.createElement(u.a, o()({}, this.props, {
 					title: Object(h.formatMessage)({
@@ -15703,6 +15736,31 @@
 				}, Object(h.formatMessage)({
 					id: "Cá nhân hoá"
 				})), l.a.createElement("div", {
+					className: "block-options"
+				})), l.a.createElement("div", {
+					className: "block-content"
+				}, l.a.createElement("div", {
+					className: "row push"
+				}, l.a.createElement("div", {
+					className: "col-lg-8 col-xl-5"
+				}, l.a.createElement("div", {
+					className: "form-group"
+				}, l.a.createElement("label", null, Object(h.formatMessage)({
+					id: "Thay đổi UserName"
+				})), l.a.createElement("input", {
+					type: "text",
+					className: "form-control",
+					placeholder: Object(h.formatMessage)({
+						id: "Vui lòng nhập UserName mới"
+					}),
+					ref: "new_username"
+				})), l.a.createElement(a.a, {
+					type: "primary",
+					onClick: () => this.changeUserName(),
+					loading: un
+				}, Object(h.formatMessage)({
+					id: "Lưu"
+				})))),l.a.createElement("div", {
 					className: "block-options"
 				})), l.a.createElement("div", {
 					className: "block-content"
@@ -30547,7 +30605,7 @@
 						onClick: () => window.location.href = "/#/utilities"
 					}), f.a.createElement("div", {
 						className: "email-dvs-aiko"
-					}, h.email, " ", u.plan_id && f.a.createElement("i", {
+					}, h.username ? h.username : h.email, " ", u.plan_id && f.a.createElement("i", {
 						className: "bi bi-patch-check-fill"
 					})), f.a.createElement("p", {
 						className: "font-size-dvs text-muted"
@@ -30576,7 +30634,7 @@
 						onClick: () => window.location.href = g.zalo_discuss_link
 					}, [f.a.createElement("img", {
 						className: "icon-zalo",
-						src: "https://dvsteam.net/idapple/logo-zalo.png",
+						src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEVHcEy2wMetveDr7u/Kzofx8vP5+vr///8+evLm7P/x8/MebPrW4P/19/8AZv+LqvsAXf8Sa/5VhOk0cet0m/+euP+9zv5hkP9Uh/zL1/xqjuAtcvoATf+twv7p6+tRgeiitvBsj+oAUN8DWuAAW+Q8aySXAAAAIXRSTlMAIDtHC37T/5T/lO//+/////+H2v///////1P///9RoPsYPczvAAABTElEQVR4AX2TB2LDIBAEhdqGGNChXpD7/9+Yg7jbeGz1YenJAyLNAqlI3smLEg+URZ488SPxyu9j9kbhHS1u302Fj1yNDeEz+lI/RQIu7cgtScTwfamNQZSChca0iFKyYKlDHN9H6vlmIGMsaQTG6qGnqaGJb1Q/KdsCWkFj4Ew5wZMmsyGFQLfw4YicZKF15Pz7zAv/7uQ0lJPovdATsPKBrRd6MNIX6Aa+IxYq3wonL0IHxqw+hbzJwrqA4y4Jpg29GMZx1HxxTo4dFju49SoYvlkDnNHJXk8K6DuJ0MjU+G5ESRPBCRWiCJ5MjkCUMFmhmfHJqlkg+WW6hf3SzDxhdsYs8SXH5Bvqpv1y0Hhlf132lo7H0/F4mPCAqk7ivnHM+cQcj2O1Tky/P3AR8bAzd5aN4Fw57fLkEVE3pweaWiRv5CKdA6l4KPwHUIgnkoB3qewAAAAASUVORK5CYII=",
 						alt: "Zalo Logo"
 					}), " ", f.a.createElement("span", null, Object(w.formatMessage)({
 						id: "Nhóm Zalo"
@@ -30588,7 +30646,7 @@
 						}
 					}, [f.a.createElement("img", {
 						className: "icon-telegram",
-						src: "https://dvsteam.net/idapple/logo-telegram.png",
+						src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAvVBMVEUAAABHt/Qwpd43sOwzq+c3ruo4sOg/tO83sOc4rOk3r+c1rOg4r+g6r+kvo980quY4qOgzqOQ3p+c0p+QwqOAwpt9TsOaV0O7Y8Pgvpd8yqOJuwOfM6Pj///94w+oxpuFMsOCg0/Dw+PzA4PNArODi8Pi44PD4//8wpOAtotowpd5fuOOw3PCDyOgwoOAuo90qn9ctodswoNgsoNkqntUqndQrn9gnn9MooNgqntYontYqndUvn9konNQom9Nm6UXDAAAAPXRSTlMACEiYwN7wGJj/gP/IMBj/yP+A8P+Y////8P///////////////////9j////////E////8Jj/gP//4P8wnkXuQgAAAbhJREFUeAFsjgMCgEAQALNtu/9/sUWuOawhXIiSrKiapiqyJApfdEMzTzRDf4VFC8I2YNp7iiU+yh0Iv3BuTVwVwm9M1T3inur7ts9uUOCyVL19fuD/Ewa8R0SGH8I9IocS0YAYAxC9SJLET9AX45A0fJNkeVFkpKawQRlWYQU3RInUTQt05CtFQer7qq/gshzGqSXqipCEtD9J+npuDwb2pYJyxpd8xcjUbWXTRQKDMBAF0Kms2dTdWyweXO5/rM4UqT0smR8c7rh+TF334B4OY/Bc13dRED52JLxuqHGbUt33PVj5vu9O2ZJCrAdTzNGF+8Rd0QDB2/hxWnPK0QkHkBV4QggehHTt24BztmvsuXjxQDYNftwEiusmR0E7QMJMKWpgqJQ67jpr6qIZDFXD0Erf2/ymRVMewsBiZogi++ZBXqiGgR0AROaLH+7QwjQiet02/qC1DvCBzrXBjrEOoCT+ZIzW+01qYoNzAmQgs0acYY5Bljb9VA7gxcmLIisynAvSt3MHWmVeVEWFc0FbQpu8hJ4jqz/SgQ+DxGKtruqOTQbwzYls3bORA/8Gw0h61noy+vz9n00ab2KwYRKTAAAAAElFTkSuQmCC",
 						alt: "Telegram Logo"
 					}), " ", f.a.createElement("span", null, Object(w.formatMessage)({
 						id: "Nhóm Telegram"
@@ -44004,6 +44062,7 @@
 				changePasswordLoading: !1,
 				changeSNILoading: !1,
 				changeAvatarLoading: !1,
+				changeUserNameLoading: !1,
 				resetSecurityLoading: !1,
 				events: []
 			},
@@ -44268,6 +44327,49 @@
 									return n.abrupt("return");
 								case 11:
 									r.a.success("Sửa đổi SNI thành công, vui lòng cập nhật lại liên kết đăng kí");
+								case 13:
+								case "end":
+									return n.stop()
+							}
+					}), n)
+				}))(),
+				changeUserName: (e, t) => p().mark((function n() {
+					var o, a, s;
+					return p().wrap((function(n) {
+						for (;;)
+							switch (n.prev = n.next) {
+								case 0:
+									return o = e.avatar,
+										a = t.put,
+										n.next = 4,
+										a({
+											type: "setState",
+											payload: {
+												changeUserNameLoading: !0
+											}
+										});
+								case 4:
+									return n.next = 6,
+										Object(i.b)("/user/changeUserName", {
+											username: o
+										});
+								case 6:
+									return s = n.sent,
+										n.next = 9,
+										a({
+											type: "setState",
+											payload: {
+												changeUserNameLoading: !1
+											}
+										});
+								case 9:
+									if (200 === s.code) {
+										n.next = 11;
+										break
+									}
+									return n.abrupt("return");
+								case 11:
+									r.a.success("Sửa đổi Avatar thành công, vui lòng load lại trang để cập nhật thay đổi");
 								case 13:
 								case "end":
 									return n.stop()
