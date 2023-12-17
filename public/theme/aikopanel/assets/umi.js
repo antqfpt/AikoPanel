@@ -30610,9 +30610,7 @@
 					})), f.a.createElement("p", {
 						className: "font-size-dvs text-muted"
 					}, Object(w.formatMessage)({
-						id: "ID: {id} | "
-					}, {
-						id: h.id
+						id: "ID: " + h.id + " | "
 					}),Object(w.formatMessage)({
 						id: "Thời Gian Tạo"
 					}), ": ", f.a.createElement("span", {
