@@ -35068,7 +35068,7 @@
 				var e = this.props.location.query.redirect;
 				this.props.dispatch({
 					type: "passport/login",
-					email: this.refs.email.value,
+					login: this.refs.email.value,
 					password: this.refs.password.value,
 					redirect: e
 				})
