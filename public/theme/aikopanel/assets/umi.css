@@ -28165,3 +28165,7 @@ Aiko-DVS button:active {
     visibility: visible;
     opacity: 1;
 }
+
+.icon-margin {
+    margin: 10px;
+}

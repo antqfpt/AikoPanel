@@ -30822,20 +30822,17 @@
 						className: "nav-main-link-icon si si-feed"
 					}), " ", Object(w.formatMessage)({
 						id: "Đồng Bộ Máy Chủ Về APP"
-					})])), f.a.createElement("img", {
-						alt: "Ảnh",
-						className: "description1"
-					}), f.a.createElement("i", {
-						className: "fab fa-windows",
+					})])), f.a.createElement("i", {
+						className: "fab fa-windows fa-2x icon-margin",
 						"aria-hidden": "true"
 					}), f.a.createElement("i", {
-						className: "fab fa-apple",
+						className: "fab fa-apple fa-2x icon-margin",
 						"aria-hidden": "true"
 					}), f.a.createElement("i", {
-						className: "fab fa-android",
+						className: "fab fa-android fa-2x icon-margin",
 						"aria-hidden": "true"
 					}), f.a.createElement("i", {
-						className: "fab fa-linux",
+						className: "fab fa-linux fa-2x icon-margin",
 						"aria-hidden": "true"
 					}))), E >= 80 && !Object(d.h)(h.expired_at) && (null == u || null === (e = u.plan) || void 0 === e ? void 0 : e.reset_price) && f.a.createElement("div", null, f.a.createElement(a.a, {
 						type: "primary",
