@@ -35112,7 +35112,19 @@
 					className: "block-content block-content-full px-lg-4 py-md-4 py-lg-4"
 				}, i.a.createElement("div", {
 					className: "mb-3 text-center"
-				}, i.a.createElement("a", {
+				}, i.a.createElement("div", null, i.a.createElement("div", null, i.a.createElement("div", {
+					className: "justify-content-md-between align-items-md-center"
+				}, i.a.createElement("div", null, i.a.createElement("div", null, i.a.createElement("div", {
+					className: "thongtingoi"
+				}, i.a.createElement("h3", {
+					className: "h4 mb-3"
+				}, window.settings.title )), i.a.createElement("div", {
+					className: "dvs-thongtin"
+				}, i.a.createElement("span", {
+					className: "dvs-thongtin1"
+				}, Object(u.formatMessage)({
+					id: "AikoPanelv3"
+				})))))))), i.a.createElement("a", {
 					className: "font-size-h1",
 					href: "javascript:void(0);"
 				}, window.settings.logo ? i.a.createElement("img", {
