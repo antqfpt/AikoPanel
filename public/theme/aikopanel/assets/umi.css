@@ -437,10 +437,56 @@ template {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+.text-dark-dvs {
+    font-size: 18px;
+    font-weight: 500;
+    color: #84beff;
+    text-shadow: -0.5px 0 #e3e3e3, 0 0.5px #939393, 0.5px 0 #000000, 0 -0.5px #6a6b6b, 1px 1px 2px rgb(4 4 4);
+    margin-top: 25px;
+}
+
+.h4-dvs-mb-3 {
+    border: 1px solid #a4cbf7;
+    border-top: 2px solid #8ec3ff;
+    border-radius: 62px;
+    padding: 2px 0px 12px;
+    background-image: linear-gradient(0deg,#d7e9ff 5%,#a8cffe 50%,#d7e9ff 100%);
+    font-size: 20px;
+    margin-bottom: 0!important;
+    text-shadow: -0.5px 0 #ffffff, 0 0.5px #f5f5f5, 0.5px 0 #ffffff, 0 -0.5px #ffffff, 1px 1px 2px rgba(0,0,0,.3);
+    margin: 0 35px;
+    font-weight: 600;
+    color: black;
+    box-shadow: 0 -2px 8px rgb(140 184 233), 0 -1px 2px rgb(255 255 255) !important;
+}
+
+.dvs-thongtin1-dangnhap {
+    border-radius: 6px;
+    background-image: linear-gradient(90deg,#ffffff 5%,#ffffff 50%,#ffffff 100%),linear-gradient(0deg,#ffffff 5%,#937cff 50%,#af9eff 90%);
+    padding: 2px 15px;
+    color: #575757;
+    font-family: sans-serif;
+    border: 1px solid #6db1ff;
+    position: relative;
+    z-index: 2;
+    /* text-transform: uppercase; */
+    font-size: 9px !important;
+}
+
+.thongtingoi-dangnhap {
+    text-align: center;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -35px;
+    position: relative;
+    z-index: 1;
+}
+
 .py-dvs {
     text-align: right;
     margin-right: 22px;
-    margin-top: -35px;
+    margin-top: -31px;
     margin-bottom: 5px;
 }
 
@@ -1281,6 +1327,7 @@ h3.h4.mb-3 {
     font-size: 20px;
     margin-bottom: 0!important;
     text-shadow: -.5px 0 #ffffff,0 .5px #f5f5f5,.5px 0 #ffffff,0 -.5px #ffffff,1px 1px 2px rgba(0,0,0,.3);
+    box-shadow: 0 -2px 8px #8fb3d9, 0 -1px 2px rgb(255 255 255) !important;
 }
 
 .dvs-goi {
@@ -1289,7 +1336,7 @@ h3.h4.mb-3 {
     border: 1.99px solid #a3caf5;
     padding-top: 0!important;
     padding-bottom: 0!important;
-    box-shadow: 0 1px 10px rgb(143 179 217),0 1px 2px rgb(211 211 211);
+    box-shadow: 0 1px 10px #8fb3d9, 0 1px 2px rgb(211 211 211);
     margin-top: 10px!important;
     background: #ffffff!important;
 }
@@ -3360,7 +3407,7 @@ textarea.form-control {
     user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
-    padding: 6px .7rem;
+    padding: 8.8px .7rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
@@ -3413,6 +3460,7 @@ a.btn.disabled,fieldset:disabled a.btn {
     border-color: #054d9e;
     box-shadow: 0 0 0 .2rem rgba(43,124,215,.5)
 }
+
 
 .btn-primary.disabled,.btn-primary:disabled {
     color: #fff;
@@ -14297,6 +14345,7 @@ h3.block-title {
     margin-bottom: 15px;
     padding: 5px 15px;
     text-shadow: -.5px 0 #ffffff,0 .5px #f5f5f5,.5px 0 #ffffff,0 -.5px #ffffff,1px 1px 2px rgba(0,0,0,.3);
+    box-shadow: 0 -2px 8px #8fb3d9, 0 -1px 2px rgb(255 255 255) !important;
 }
 
 .email-dvs-aiko {
@@ -14703,6 +14752,11 @@ a.block.block-link-shadow:active {
 .block.block-fx-pop {
     box-shadow: 0 .5rem 2rem #d4dcec;
     opacity: 1
+}
+
+.aiko-dvs-dangnhap {
+    border: 2px solid #8ec3ff;
+    box-shadow: 0 1px 10px rgb(140 184 233), 0 1px 2px rgb(255 255 255) !important;
 }
 
 .block.block-fx-rotate-right {
@@ -17058,6 +17112,11 @@ a.bg-xplay-lighter:focus,a.bg-xplay-lighter:hover,button.bg-xplay-lighter:focus,
 
 .font-w400 {
     font-weight: 400!important
+}
+
+button.btn.btn-block.dvs-aiko-btn.btn-primary.font-w400 {
+    border: 1px solid #1e83ff;
+    font-weight: 500 !important;
 }
 
 .font-w500 {
@@ -27454,13 +27513,13 @@ a:not([href]):hover {
         padding: 0 20px;
         border: 1px solid #76adff;
         border-radius: 5rem;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 600;
         white-space: nowrap
     }
 
     .h6-dvs.text-muted {
-        font-size: 15px
+        font-size: 14px;
     }
 
     i.fa-solid.fa-tag {
@@ -27478,10 +27537,10 @@ a:not([href]):hover {
     }
 
     .h6-dvs-aiko {
-        font-size: 18px;
+        font-size: 16px;
         top: 2px;
         color: #495057;
-        padding-right: 10px;
+        padding-right: 7px;
         padding-left: 1.55px
     }
 
@@ -27961,9 +28020,11 @@ img {
 }
 
 img.aikopanel-logo.mb-3 {
-    width: 30%;
+    width: 40%;
     height: auto;
     border-radius: 1rem;
+    margin-top: 25px;
+    margin-bottom: 6px !important;
 }
 
 img.icon-zalo {

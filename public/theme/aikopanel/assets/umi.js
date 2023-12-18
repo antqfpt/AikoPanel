@@ -15760,7 +15760,7 @@
 					loading: un
 				}, Object(h.formatMessage)({
 					id: "Lưu"
-				})))),l.a.createElement("div", {
+				})))), l.a.createElement("div", {
 					className: "block-options"
 				})), l.a.createElement("div", {
 					className: "block-content"
@@ -24009,7 +24009,7 @@
 				}, a.a.createElement("img", {
 					className: "user_avatar",
 					alt: "Avatar",
-					src: window.settings.logo,
+					src: window.settings.logo || e.avatar_url,
 					style: {
 						width: "28px",
 						height: "28px",
@@ -30611,7 +30611,7 @@
 						className: "font-size-dvs text-muted"
 					}, Object(w.formatMessage)({
 						id: "ID: " + h.id + " | "
-					}),Object(w.formatMessage)({
+					}), Object(w.formatMessage)({
 						id: "Thời Gian Tạo"
 					}), ": ", f.a.createElement("span", {
 						className: "font-size-dvs text-muted"
@@ -35095,8 +35095,18 @@
 					}
 				}, i.a.createElement("div", {
 					className: "mx-2 mx-sm-0"
+				}, i.a.createElement("div", null, i.a.createElement("div", null, i.a.createElement("div", {
+					className: "thongtingoi-dangnhap"
 				}, i.a.createElement("div", {
-					className: "block block-rounded block-transparent block-fx-pop w-100 mb-0 overflow-hidden bg-image",
+					className: "h4-dvs-mb-3"
+				}, window.settings.title), i.a.createElement("div", {
+					className: "dvs-thongtin"
+				}, i.a.createElement("div", {
+					className: "dvs-thongtin1-dangnhap"
+				}, Object(u.formatMessage)({
+					id: "AikoPanel v" + window.settings.version
+				})))))), i.a.createElement("div", {
+					className: "block aiko-dvs-dangnhap block-rounded block-transparent block-fx-pop w-100 mb-0 overflow-hidden bg-image",
 					style: {
 						boxShadow: "0 0.5rem 2rem #0000000d"
 					}
@@ -35110,25 +35120,17 @@
 					className: "mb-3 text-center"
 				}, i.a.createElement("div", null, i.a.createElement("div", null, i.a.createElement("div", {
 					className: "justify-content-md-between align-items-md-center"
-				}, i.a.createElement("div", null, i.a.createElement("div", null, i.a.createElement("div", {
-					className: "thongtingoi"
-				}, i.a.createElement("h3", {
-					className: "h4 mb-3"
-				}, window.settings.title )), i.a.createElement("div", {
-					className: "dvs-thongtin"
-				}, i.a.createElement("span", {
-					className: "dvs-thongtin1"
-				}, Object(u.formatMessage)({
-					id: "AikoPanelv3"
-				})))))))), i.a.createElement("a", {
+				}))), i.a.createElement("a", {
 					className: "font-size-h1",
 					href: "javascript:void(0);"
 				}, window.settings.logo ? i.a.createElement("img", {
 					className: "aikopanel-logo mb-3",
 					src: window.settings.logo
-				}) : i.a.createElement("span", {
-					className: "text-dark"
-				}, window.settings.title || "AikoPanel")), window.settings.description && i.a.createElement("p", {
+				}) : i.a.createElement("div", {
+					className: "text-dark-dvs"
+				}, Object(u.formatMessage)({
+					id: "Đăng Nhập Vào "
+				}), window.settings.title || "AikoPanel")), window.settings.description && i.a.createElement("p", {
 					className: "font-size-sm text-muted mb-3"
 				}, window.settings.description)), i.a.createElement("div", {
 					className: "form-group",
@@ -35173,7 +35175,7 @@
 				}, i.a.createElement("button", {
 					disabled: e,
 					type: "submit",
-					className: "btn btn-block btn-primary font-w400",
+					className: "btn btn-block dvs-aiko-btn btn-primary font-w400",
 					onClick: () => this.login()
 				}, e ? i.a.createElement(o.a, {
 					type: "loading"
