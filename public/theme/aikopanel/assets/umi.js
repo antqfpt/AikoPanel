@@ -997,7 +997,7 @@
 						t.push({
 							title: "QuantumultX",
 							href: "quantumult-x:///update-configuration?remote-resource=" + encodeURI(JSON.stringify({
-								server_remote: [e + ", tag=" + window.settings.title]
+								server_remote: [e + "&flag=qxping" + ", tag=" + window.settings.title]
 							}))
 						}),
 						t.push({
@@ -1023,7 +1023,7 @@
 						t.push({
 							title: "QuantumultX",
 							href: "quantumult-x:///update-configuration?remote-resource=" + encodeURI(JSON.stringify({
-								server_remote: [e + ", tag=" + window.settings.title]
+								server_remote: [e + "&flag=qxping" + ", tag=" + window.settings.title]
 							}))
 						})),
 					Object(l.n)() && (t.push({
@@ -30791,7 +30791,7 @@
 						id: "Hướng Dẫn Sử Dụng"
 					}))]), f.a.createElement("button", {
 						className: "Aiko-DVS DVS-Aiko-Mod1",
-						onClick: () => window.location.href = u.subscribe_url + "&flag=appleid",
+						onClick: () => window.location.href = g.appleid_custom_url || u.subscribe_url + "&flag=appleid",
 						style: {
 							alignItems: "center"
 						}
