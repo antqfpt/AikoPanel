@@ -1,61 +1,99 @@
-<?php //002cd
-if(extension_loaded('ionCube Loader')){die('The file '.__FILE__." is corrupted.\n");}echo("\nScript error: the ".(($cli=(php_sapi_name()=='cli')) ?'ionCube':'<a href="https://www.ioncube.com">ionCube</a>')." Loader for PHP needs to be installed.\n\nThe ionCube Loader is the industry standard PHP extension for running protected PHP code,\nand can usually be added easily to a PHP installation.\n\nFor Loaders please visit".($cli?":\n\nhttps://get-loader.ioncube.com\n\nFor":' <a href="https://get-loader.ioncube.com">get-loader.ioncube.com</a> and for')." an instructional video please see".($cli?":\n\nhttp://ioncu.be/LV\n\n":' <a href="http://ioncu.be/LV">http://ioncu.be/LV</a> ')."\n\n");exit(199);
+<?php
+echo <<<HTML
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>AikoPanel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #e74c3c;
+            font-size: 20px;
+        }
+
+        p {
+            color: #555;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        a {
+            color: #3498db;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease-in-out;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .fa-shopping-cart {
+            margin-right: 8px;
+        }
+
+        .fas.fa-exclamation-triangle {
+            color: #dfb21f;
+            font-size: 5em;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"><i class="fas fa-exclamation-triangle"></i>
+        <h1><i class="fas fa-exclamation-circle"></i> Website Chưa Được Kích Hoạt</h1>
+        <p>Vui Lòng Liên Hệ © <a href="https://t.me/Tele_Aiko" target="_blank">Dev Aikocute</a></p>
+
+        <p id="activation-message">Để Kích Hoạt Key</p>
+        <button onclick="window.location='https://t.me/Tele_Aiko';">
+            <i class="fas fa-shopping-cart"></i> Mua Key Ủy Quyền
+        </button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var domainName = window.location.hostname.toUpperCase();
+            var activationMessage = "Để Kích Hoạt Key Cho " + domainName;
+            document.getElementById('activation-message').innerText = activationMessage;
+        });
+    </script>
+</body>
+
+</html>
+HTML;
 ?>
-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
