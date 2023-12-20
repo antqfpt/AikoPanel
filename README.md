@@ -2,34 +2,17 @@
 
 ## Nhánh này hỗ trợ các backend sau
 
-- [Aiko-Server](https://github.com/AikoPanel/AikoServer)
+- [AikoServer](https://github.com/AikoPanel/AikoServer)
+- [Aiko-Server](https://github.com/Github-Aiko/Aiko-Server)
 
 **Lưu Ý** : Nhánh này chỉ hỗ trợ mỗi AikoServer Backend
 
-## Bước di chuyển từ phiên bản gốc
-
-Thực hiện các bước sau để chuyển các tệp của bảng điều khiển:
-
-```
-git remote set-url origin https://github.com/AikoPanel/AikoPanel
-git checkout master  
-./update.sh  
-```
-
-Thực hiện các bước sau để làm mới cài đặt bộ nhớ cache và khởi động lại hàng đợi:
-
-```
-php artisan config:clear
-php artisan config:cache
-php artisan horizon:terminate
-```
-
 # **AikoPanel**
 
-- PHP 7.4 + Loader Ioncube
+- PHP ^7.4 + Loader Ioncube
 - Composer
-- MariaDB 10.7+
-- Redis
+- MariaDB ^10.4
+- Redis ^7
 - Laravel
 
 ## Demo
