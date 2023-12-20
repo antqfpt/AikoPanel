@@ -495,6 +495,15 @@ body {
     font-size: 14px
 }
 
+.ant-tooltip-inner {
+    color: #fff;
+    background-color: rgba(0,0,0,0.75);
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    font-weight: 400;
+    white-space: pre-wrap;
+}
+
 [contenteditable] {
     -webkit-user-select: auto!important
 }
@@ -1016,7 +1025,7 @@ body {
 }
 
 i.fa-solid.fa-cart-shopping {
-    color: #FFEB3B;
+    color: #42e900;
     -webkit-text-stroke: 1px rgb(73 73 73 / 70%);
     font-size: 25px;
 }
@@ -3460,7 +3469,6 @@ a.btn.disabled,fieldset:disabled a.btn {
     border-color: #054d9e;
     box-shadow: 0 0 0 .2rem rgba(43,124,215,.5)
 }
-
 
 .btn-primary.disabled,.btn-primary:disabled {
     color: #fff;
@@ -14350,6 +14358,7 @@ h3.block-title {
 
 .email-dvs-aiko {
     color: black;
+    white-space: pre-wrap;
 }
 
 i.bi.bi-patch-check-fill {

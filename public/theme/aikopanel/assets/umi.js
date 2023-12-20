@@ -18714,13 +18714,7 @@
 					className: "block-content pb-4"
 				}, f.a.createElement("div", {
 					className: "aikopanel-order-info"
-				}, f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "Tên Sản Phẩm"
-				}), "："), f.a.createElement("span", null, t.plan.name)), f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "Loại/Chu Kỳ"
-				}), "："), f.a.createElement("span", null, h.a.periodText[t.period] && h.a.periodText[t.period]())), f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "Lưu Lượng Sản Phẩm"
-				}), "："), f.a.createElement("span", null, t.plan.transfer_enable, " GB"))))), f.a.createElement("div", {
+				}))), f.a.createElement("div", {
 					className: "block block-rounded"
 				}, f.a.createElement("div", {
 					className: "block-header block-header-default"
@@ -18765,7 +18759,13 @@
 					className: "aikopanel-order-info"
 				}, f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Mã Đơn Hàng"
-				}), "："), f.a.createElement("span", null, t.trade_no)), t.discount_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+				}), "："), f.a.createElement("span", null, t.trade_no)), f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+					id: "Tên Sản Phẩm"
+				}), "："), f.a.createElement("span", null, t.plan.name)), f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+					id: "Loại/Chu Kỳ"
+				}), "："), f.a.createElement("span", null, h.a.periodText[t.period] && h.a.periodText[t.period]())), f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
+					id: "Lưu Lượng Sản Phẩm"
+				}), "："), f.a.createElement("span", null, t.plan.transfer_enable, " GB")), t.discount_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Số Tiền Giảm Giá"
 				}), "："), f.a.createElement("span", null, (t.discount_amount / 100).toLocaleString("vi-VN", {
 					style: "currency",
@@ -24083,7 +24083,7 @@
 					className: "fas fa-home"
 				}), " ", Object(l.formatMessage)({
 					id: "Trang Chủ"
-				}))), null === t.plan_id ? a.a.createElement("div", {
+				}))), (null === t.plan_id || 0 === t.plan_id) ? a.a.createElement("div", {
 					className: "with-border"
 				}, a.a.createElement("div", {
 					onClick: () => window.location.href = "/#/plan",
@@ -30381,43 +30381,62 @@
 			v = n("wd/R"),
 			y = n.n(v),
 			g = n("/MKj"),
+			S = (n("5Dmo"),
+				n("3S7+")),
 			b = n("/Ira"),
 			w = n("Y2fQ"),
 			x = n("v32e"),
 			E = n("t3Un");
 		class O extends f.a.Component {
 			constructor(e) {
-				super(e),
-					this.state = {
-						user: {
-							plan: {}
-						},
-						stat: [],
-						loading: !0,
-						visible: !1,
-						notices: []
-					}
+				super(e);
+				this.state = {
+					user: {
+						plan: {}
+					},
+					stat: [],
+					loading: !0,
+					visible: !1,
+					notices: [],
+					tooltipOpen: false,
+				}
 			}
 			componentDidMount() {
 				this.props.dispatch({
-						type: "user/getSubscribe"
-					}),
-					this.props.dispatch({
-						type: "user/getStat"
-					}),
-					this.props.dispatch({
-						type: "notice/fetch",
-						complete: () => {
-							var e, t = (null === (e = this.props.notice) || void 0 === e ? void 0 : e.notices) || [];
-							if (t.length) {
-								var n = t.find((e => -1 !== e.tags.indexOf("弹窗")));
-								n && this.modalVisible(n)
-							}
+					type: "user/getSubscribe"
+				});
+				this.props.dispatch({
+					type: "user/getStat"
+				});
+				this.props.dispatch({
+					type: "notice/fetch",
+					complete: () => {
+						var e, t = (null === (e = this.props.notice) || void 0 === e ? void 0 : e.notices) || [];
+						if (t.length) {
+							var n = t.find((e => -1 !== e.tags.indexOf("弹窗")));
+							n && this.modalVisible(n)
 						}
-					}),
-					this.props.dispatch({
-						type: "comm/config"
-					})
+					}
+				});
+				this.props.dispatch({
+					type: "comm/config"
+				});
+
+				this.openTooltipTimer = setTimeout(() => {
+					this.setState({
+						tooltipOpen: true
+					});
+
+					this.closeTooltipTimer = setTimeout(() => {
+						this.setState({
+							tooltipOpen: false
+						});
+					}, 4000);
+				}, 1234);
+			}
+			componentWillUnmount() {
+				clearTimeout(this.openTooltipTimer);
+				clearTimeout(this.closeTooltipTimer);
 			}
 			modalVisible(e) {
 				this.setState({
@@ -30593,66 +30612,83 @@
 					}, f.a.createElement("div", {
 						className: "block-content p-0"
 					}), f.a.createElement("div", {
-						className: "block-content email-dvs-aiko"
-					}, f.a.createElement("div", {
-						className: "settings-dvs-aiko"
-					}, f.a.createElement("div", {
-						className: "title-dvs-aiko"
-					}, null === (t = window) || void 0 === t || null === (n = t.settings) || void 0 === n ? void 0 : n.title)), f.a.createElement("img", {
-						className: "avatar-aiko-dvs",
-						alt: "Avatar",
-						src: h.avatar_url,
-						onClick: () => window.location.href = "/#/utilities"
-					}), f.a.createElement("div", {
-						className: "email-dvs-aiko"
-					}, h.username ? h.username : h.email, " ", u.plan_id && f.a.createElement("i", {
-						className: "bi bi-patch-check-fill"
-					})), f.a.createElement("p", {
-						className: "font-size-dvs text-muted"
-					}, Object(w.formatMessage)({
-						id: "ID: " + h.id + " | "
-					}), Object(w.formatMessage)({
-						id: "Thời Gian Tạo"
-					}), ": ", f.a.createElement("span", {
-						className: "font-size-dvs text-muted"
-					}, y()(1e3 * h.created_at).format("DD/MM/YYYY - HH:mm:ss"))), 0 !== h.balance ? f.a.createElement("div", {
-						className: "font-sodu-dvs text-muted"
-					}, Object(w.formatMessage)({
-						id: "Số Dư Ví Hiện Tại"
-					}), ": ", Math.round(h.balance / 100).toLocaleString(), " ", g.currency) : null, f.a.createElement("div", {
-						className: "he-dieu text-muted"
-					}, f.a.createElement("span", {
-						className: "hdh-dvs text-muted"
-					}, Object(w.formatMessage)({
-						id: "Hệ Điều Hành Truy Cập"
-					}), ": "), this.getOperatingSystems().join(", ")), f.a.createElement("div", {
-						className: "he-dieu text-muted"
-					}, f.a.createElement("span", {
-						className: "hdh-dvs text-muted"
-					}, Object(w.formatMessage)({
-						id: "IP Đang Truy Cập"
-					}), ": "), h.last_login_ip), null !== g.zalo_discuss_link ? f.a.createElement("button", {
-						className: "Aiko-DVS DVS-Aiko-zalo",
-						onClick: () => window.location.href = g.zalo_discuss_link
-					}, [f.a.createElement("img", {
-						className: "icon-zalo",
-						src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEVHcEy2wMetveDr7u/Kzofx8vP5+vr///8+evLm7P/x8/MebPrW4P/19/8AZv+LqvsAXf8Sa/5VhOk0cet0m/+euP+9zv5hkP9Uh/zL1/xqjuAtcvoATf+twv7p6+tRgeiitvBsj+oAUN8DWuAAW+Q8aySXAAAAIXRSTlMAIDtHC37T/5T/lO//+/////+H2v///////1P///9RoPsYPczvAAABTElEQVR4AX2TB2LDIBAEhdqGGNChXpD7/9+Yg7jbeGz1YenJAyLNAqlI3smLEg+URZ488SPxyu9j9kbhHS1u302Fj1yNDeEz+lI/RQIu7cgtScTwfamNQZSChca0iFKyYKlDHN9H6vlmIGMsaQTG6qGnqaGJb1Q/KdsCWkFj4Ew5wZMmsyGFQLfw4YicZKF15Pz7zAv/7uQ0lJPovdATsPKBrRd6MNIX6Aa+IxYq3wonL0IHxqw+hbzJwrqA4y4Jpg29GMZx1HxxTo4dFju49SoYvlkDnNHJXk8K6DuJ0MjU+G5ESRPBCRWiCJ5MjkCUMFmhmfHJqlkg+WW6hf3SzDxhdsYs8SXH5Bvqpv1y0Hhlf132lo7H0/F4mPCAqk7ivnHM+cQcj2O1Tky/P3AR8bAzd5aN4Fw57fLkEVE3pweaWiRv5CKdA6l4KPwHUIgnkoB3qewAAAAASUVORK5CYII=",
-						alt: "Zalo Logo"
-					}), " ", f.a.createElement("span", null, Object(w.formatMessage)({
-						id: "Nhóm Zalo"
-					}))]) : null, null !== g.telegram_discuss_link ? f.a.createElement("button", {
-						className: "Aiko-DVS DVS-Aiko-telegram",
-						onClick: () => window.location.href = g.telegram_discuss_link,
-						style: {
-							alignItems: "center"
-						}
-					}, [f.a.createElement("img", {
-						className: "icon-telegram",
-						src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAvVBMVEUAAABHt/Qwpd43sOwzq+c3ruo4sOg/tO83sOc4rOk3r+c1rOg4r+g6r+kvo980quY4qOgzqOQ3p+c0p+QwqOAwpt9TsOaV0O7Y8Pgvpd8yqOJuwOfM6Pj///94w+oxpuFMsOCg0/Dw+PzA4PNArODi8Pi44PD4//8wpOAtotowpd5fuOOw3PCDyOgwoOAuo90qn9ctodswoNgsoNkqntUqndQrn9gnn9MooNgqntYontYqndUvn9konNQom9Nm6UXDAAAAPXRSTlMACEiYwN7wGJj/gP/IMBj/yP+A8P+Y////8P///////////////////9j////////E////8Jj/gP//4P8wnkXuQgAAAbhJREFUeAFsjgMCgEAQALNtu/9/sUWuOawhXIiSrKiapiqyJApfdEMzTzRDf4VFC8I2YNp7iiU+yh0Iv3BuTVwVwm9M1T3inur7ts9uUOCyVL19fuD/Ewa8R0SGH8I9IocS0YAYAxC9SJLET9AX45A0fJNkeVFkpKawQRlWYQU3RInUTQt05CtFQer7qq/gshzGqSXqipCEtD9J+npuDwb2pYJyxpd8xcjUbWXTRQKDMBAF0Kms2dTdWyweXO5/rM4UqT0smR8c7rh+TF334B4OY/Bc13dRED52JLxuqHGbUt33PVj5vu9O2ZJCrAdTzNGF+8Rd0QDB2/hxWnPK0QkHkBV4QggehHTt24BztmvsuXjxQDYNftwEiusmR0E7QMJMKWpgqJQ67jpr6qIZDFXD0Erf2/ymRVMewsBiZogi++ZBXqiGgR0AROaLH+7QwjQiet02/qC1DvCBzrXBjrEOoCT+ZIzW+01qYoNzAmQgs0acYY5Bljb9VA7gxcmLIisynAvSt3MHWmVeVEWFc0FbQpu8hJ4jqz/SgQ+DxGKtruqOTQbwzYls3bORA/8Gw0h61noy+vz9n00ab2KwYRKTAAAAAElFTkSuQmCC",
-						alt: "Telegram Logo"
-					}), " ", f.a.createElement("span", null, Object(w.formatMessage)({
-						id: "Nhóm Telegram"
-					}))]) : null)))), f.a.createElement("div", {
+							className: "block-content email-dvs-aiko"
+						}, f.a.createElement("div", {
+							className: "settings-dvs-aiko"
+						}, f.a.createElement("div", {
+							className: "title-dvs-aiko"
+						}, null === (t = window) || void 0 === t || null === (n = t.settings) || void 0 === n ? void 0 : n.title)), f.a.createElement("img", {
+							className: "avatar-aiko-dvs",
+							alt: "Avatar",
+							src: h.avatar_url,
+							onClick: () => window.location.href = "/#/utilities"
+						}), (u.plan_id !== null && u.plan_id !== 0) ? f.a.createElement("div", {
+							className: "email-dvs-aiko"
+						}, h.username ? h.username : h.email, f.a.createElement(S.a, {
+							placement: "top",
+							title: Object(w.formatMessage)({
+							id: "Đã Xác Minh"
+						}),
+							visible: this.state.tooltipOpen
+						}, " ", f.a.createElement("i", {
+							className: "bi bi-patch-check-fill"
+						}))) : f.a.createElement("div", {
+							className: "email-dvs-aiko"
+						}, h.username ? h.username : h.email, f.a.createElement("div", {}, f.a.createElement(S.a, {
+							placement: "bottom",
+							title: Object(w.formatMessage)({
+							id: "Tài Khoảng Chưa Được Xác Minh\n❌ Vì Bạn Chưa Có Gói Dịch Vụ"
+						}),
+							visible: this.state.tooltipOpen
+						})))
+						, f.a.createElement("p", {
+							className: "font-size-dvs text-muted"
+						}, Object(w.formatMessage)({
+							id: "ID: " + h.id + " | "
+						}), Object(w.formatMessage)({
+							id: "Thời Gian Tạo"
+						}), ": ", f.a.createElement("span", {
+							className: "font-size-dvs text-muted"
+						}, y()(1e3 * h.created_at).format("DD/MM/YYYY - HH:mm:ss"))), 0 !== h.balance ? f.a.createElement("div", {
+							className: "font-sodu-dvs text-muted"
+						}, Object(w.formatMessage)({
+							id: "Số Dư Ví Hiện Tại"
+						}), ": ", Math.round(h.balance / 100).toLocaleString(), " ", g.currency) : null, f.a.createElement("div", {
+							className: "he-dieu text-muted"
+						}, f.a.createElement("span", {
+							className: "hdh-dvs text-muted"
+						}, Object(w.formatMessage)({
+							id: "Hệ Điều Hành Truy Cập"
+						}), ": "), this.getOperatingSystems().join(", "))
+
+						, f.a.createElement("div", {
+							className: "he-dieu text-muted"
+						}, f.a.createElement("span", {
+							className: "hdh-dvs text-muted"
+						}, Object(w.formatMessage)({
+							id: "IP Đang Truy Cập"
+						}), ": "), h.last_login_ip), null !== g.zalo_discuss_link ? f.a.createElement("button", {
+							className: "Aiko-DVS DVS-Aiko-zalo",
+							onClick: () => window.location.href = g.zalo_discuss_link
+						}, [f.a.createElement("img", {
+							className: "icon-zalo",
+							src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEVHcEy2wMetveDr7u/Kzofx8vP5+vr///8+evLm7P/x8/MebPrW4P/19/8AZv+LqvsAXf8Sa/5VhOk0cet0m/+euP+9zv5hkP9Uh/zL1/xqjuAtcvoATf+twv7p6+tRgeiitvBsj+oAUN8DWuAAW+Q8aySXAAAAIXRSTlMAIDtHC37T/5T/lO//+/////+H2v///////1P///9RoPsYPczvAAABTElEQVR4AX2TB2LDIBAEhdqGGNChXpD7/9+Yg7jbeGz1YenJAyLNAqlI3smLEg+URZ488SPxyu9j9kbhHS1u302Fj1yNDeEz+lI/RQIu7cgtScTwfamNQZSChca0iFKyYKlDHN9H6vlmIGMsaQTG6qGnqaGJb1Q/KdsCWkFj4Ew5wZMmsyGFQLfw4YicZKF15Pz7zAv/7uQ0lJPovdATsPKBrRd6MNIX6Aa+IxYq3wonL0IHxqw+hbzJwrqA4y4Jpg29GMZx1HxxTo4dFju49SoYvlkDnNHJXk8K6DuJ0MjU+G5ESRPBCRWiCJ5MjkCUMFmhmfHJqlkg+WW6hf3SzDxhdsYs8SXH5Bvqpv1y0Hhlf132lo7H0/F4mPCAqk7ivnHM+cQcj2O1Tky/P3AR8bAzd5aN4Fw57fLkEVE3pweaWiRv5CKdA6l4KPwHUIgnkoB3qewAAAAASUVORK5CYII=",
+							alt: "Zalo Logo"
+						}), " ", f.a.createElement("span", null, Object(w.formatMessage)({
+							id: "Nhóm Zalo"
+						}))]) : null, null !== g.telegram_discuss_link ? f.a.createElement("button", {
+							className: "Aiko-DVS DVS-Aiko-telegram",
+							onClick: () => window.location.href = g.telegram_discuss_link,
+							style: {
+								alignItems: "center"
+							}
+						}, [f.a.createElement("img", {
+							className: "icon-telegram",
+							src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAvVBMVEUAAABHt/Qwpd43sOwzq+c3ruo4sOg/tO83sOc4rOk3r+c1rOg4r+g6r+kvo980quY4qOgzqOQ3p+c0p+QwqOAwpt9TsOaV0O7Y8Pgvpd8yqOJuwOfM6Pj///94w+oxpuFMsOCg0/Dw+PzA4PNArODi8Pi44PD4//8wpOAtotowpd5fuOOw3PCDyOgwoOAuo90qn9ctodswoNgsoNkqntUqndQrn9gnn9MooNgqntYontYqndUvn9konNQom9Nm6UXDAAAAPXRSTlMACEiYwN7wGJj/gP/IMBj/yP+A8P+Y////8P///////////////////9j////////E////8Jj/gP//4P8wnkXuQgAAAbhJREFUeAFsjgMCgEAQALNtu/9/sUWuOawhXIiSrKiapiqyJApfdEMzTzRDf4VFC8I2YNp7iiU+yh0Iv3BuTVwVwm9M1T3inur7ts9uUOCyVL19fuD/Ewa8R0SGH8I9IocS0YAYAxC9SJLET9AX45A0fJNkeVFkpKawQRlWYQU3RInUTQt05CtFQer7qq/gshzGqSXqipCEtD9J+npuDwb2pYJyxpd8xcjUbWXTRQKDMBAF0Kms2dTdWyweXO5/rM4UqT0smR8c7rh+TF334B4OY/Bc13dRED52JLxuqHGbUt33PVj5vu9O2ZJCrAdTzNGF+8Rd0QDB2/hxWnPK0QkHkBV4QggehHTt24BztmvsuXjxQDYNftwEiusmR0E7QMJMKWpgqJQ67jpr6qIZDFXD0Erf2/ymRVMewsBiZogi++ZBXqiGgR0AROaLH+7QwjQiet02/qC1DvCBzrXBjrEOoCT+ZIzW+01qYoNzAmQgs0acYY5Bljb9VA7gxcmLIisynAvSt3MHWmVeVEWFc0FbQpu8hJ4jqz/SgQ+DxGKtruqOTQbwzYls3bORA/8Gw0h61noy+vz9n00ab2KwYRKTAAAAAElFTkSuQmCC",
+							alt: "Telegram Logo"
+						}), " ", f.a.createElement("span", null, Object(w.formatMessage)({
+							id: "Nhóm Telegram"
+						}))]) : null)))), f.a.createElement("div", {
 						className: "dvs-row mb-3 mb-md-0"
 					}, f.a.createElement("div", {
 						className: "col-xl-12"
@@ -35323,7 +35359,17 @@
 					}
 				}, a.a.createElement("div", {
 					className: "mx-2 mx-sm-0"
+				}, a.a.createElement("div", null, a.a.createElement("div", null, a.a.createElement("div", {
+					className: "thongtingoi-dangnhap"
 				}, a.a.createElement("div", {
+					className: "h4-dvs-mb-3"
+				}, window.settings.title), a.a.createElement("div", {
+					className: "dvs-thongtin"
+				}, a.a.createElement("div", {
+					className: "dvs-thongtin1-dangnhap"
+				}, Object(u.formatMessage)({
+					id: "AikoPanel v" + window.settings.version
+				})))))), a.a.createElement("div", {
 					className: "block block-rounded block-transparent block-fx-pop w-100 mb-0 overflow-hidden bg-image",
 					style: {
 						boxShadow: "0 0.5rem 2rem #0000000d"
@@ -35342,9 +35388,11 @@
 				}, window.settings.logo ? a.a.createElement("img", {
 					className: "aikopanel-logo mb-3",
 					src: window.settings.logo
-				}) : a.a.createElement("span", {
-					className: "text-dark"
-				}, window.settings.title || "AikoPanel")), window.settings.description && a.a.createElement("p", {
+				}) : a.a.createElement("div", {
+					className: "text-dark-dvs"
+				}, Object(u.formatMessage)({
+					id: "Đăng Ký Tài Khoảng"
+				}))), window.settings.description && a.a.createElement("p", {
 					className: "font-size-sm text-muted mb-3"
 				}, window.settings.description)), o ? a.a.createElement("div", {
 					className: "content content-full text-center"
@@ -49686,7 +49734,17 @@
 					}
 				}, a.a.createElement("div", {
 					className: "mx-2 mx-sm-0"
+				},a.a.createElement("div", null, a.a.createElement("div", null, a.a.createElement("div", {
+					className: "thongtingoi-dangnhap"
 				}, a.a.createElement("div", {
+					className: "h4-dvs-mb-3"
+				}, window.settings.title), a.a.createElement("div", {
+					className: "dvs-thongtin"
+				}, a.a.createElement("div", {
+					className: "dvs-thongtin1-dangnhap"
+				}, Object(u.formatMessage)({
+					id: "AikoPanel v" + window.settings.version
+				})))))), a.a.createElement("div", {
 					className: "block block-rounded block-transparent block-fx-pop w-100 mb-0 overflow-hidden bg-image",
 					style: {
 						boxShadow: "0 0.5rem 2rem #0000000d"
@@ -49705,9 +49763,11 @@
 				}, window.settings.logo ? a.a.createElement("img", {
 					className: "aikopanel-logo mb-3",
 					src: window.settings.logo
-				}) : a.a.createElement("span", {
-					className: "text-dark"
-				}, window.settings.title || "AikoPanel")), window.settings.description && a.a.createElement("p", {
+				}) : a.a.createElement("div", {
+					className: "text-dark-dvs"
+				}, Object(u.formatMessage)({
+					id: "Lấy Lại Mật Khẩu"
+				}))), window.settings.description && a.a.createElement("p", {
 					className: "font-size-sm text-muted mb-3"
 				}, window.settings.description)), a.a.createElement("div", {
 					className: "form-group"
