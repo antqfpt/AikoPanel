@@ -123,7 +123,7 @@ sup {
 .h6-dvs-aiko {
     font-size: 15px;
     top: 2px;
-    color: #495057;
+    color: #272727;
     padding-right: 10px;
     padding-left: 1.55px;
 }
@@ -1024,6 +1024,28 @@ body {
     box-sizing: border-box
 }
 
+.custom-title {
+    margin: -28px 0 15px;
+    border: 1.3px solid #4196ff;
+    padding: 4px 20px;
+    border-radius: 23px;
+    background: #a8cfff;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+}
+
+.custom-title-dvs1 {
+    margin: 1px 30px -15px;
+    font-size: 10px;
+    background: white;
+    border: 1px solid #4b9cff;
+    border-radius: 5px;
+    padding: 2px 9px;
+    color: #575757;
+    font-weight: 700;
+}
+
 i.fa-solid.fa-cart-shopping {
     color: #42e900;
     -webkit-text-stroke: 1px rgb(73 73 73 / 70%);
@@ -1330,10 +1352,11 @@ template {
 
 h3.h4.mb-3 {
     border: 1px solid #6db1ff;
+    border-top: 2px solid #6db1ff;
     border-radius: 62px;
-    padding: 8px 20px 13px;
+    padding: 5px 20px 10px;
     background-image: linear-gradient(0deg,#d7e9ff 5%,#a8cffe 50%,#d7e9ff 100%);
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 0!important;
     text-shadow: -.5px 0 #ffffff,0 .5px #f5f5f5,.5px 0 #ffffff,0 -.5px #ffffff,1px 1px 2px rgba(0,0,0,.3);
     box-shadow: 0 -2px 8px #8fb3d9, 0 -1px 2px rgb(255 255 255) !important;
@@ -1342,7 +1365,7 @@ h3.h4.mb-3 {
 .dvs-goi {
     text-align: center;
     white-space: pre-wrap;
-    border: 1.99px solid #a3caf5;
+    border: 1.99px solid #6db1ff;
     padding-top: 0!important;
     padding-bottom: 0!important;
     box-shadow: 0 1px 10px #8fb3d9, 0 1px 2px rgb(211 211 211);
@@ -1355,7 +1378,7 @@ h3.h4.mb-3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -11px;
+    margin-top: -9px;
     font-size: 10px;
     font-weight: 700;
 }
@@ -1363,7 +1386,7 @@ h3.h4.mb-3 {
 span.dvs-thongtin1 {
     border-radius: 6px;
     background-image: linear-gradient(90deg,#ffffff 5%,#ffffff 50%,#ffffff 100%),linear-gradient(0deg,#ffffff 5%,#937cff 50%,#af9eff 90%);
-    padding: 2px 15px;
+    padding: 1px 15px;
     color: #000000;
     font-family: sans-serif;
     border: 1px solid #6db1ff;
@@ -1374,7 +1397,7 @@ span.dvs-thongtin1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -22px;
+    margin-top: -18px;
 }
 
 .h1,h1 {
@@ -1434,7 +1457,12 @@ hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 0;
-    border-top: 1px solid #e2e8f2
+    border-top: 1px solid #90c0fb;
+}
+
+.dvs-hr {
+    border-top: 1px solid #6badff;
+    margin: 0;
 }
 
 .small,small {
@@ -13668,6 +13696,11 @@ a.badge-secondary.focus,a.badge-secondary:focus {
     margin-bottom: .875rem
 }
 
+.block.block-rounded.dvs-border {
+    border: 1px solid #4c9cff;
+    box-shadow: 0px 1px 10px rgb(140 184 233), 0 1px 2px rgb(255 255 255) !important;
+}
+
 .content .items-push-2x>div {
     margin-bottom: 1.75rem
 }
@@ -14335,7 +14368,7 @@ h3.block-title {
     box-shadow: 0 1px 10px rgb(143 179 217),0 1px 2px rgb(211 211 211);
     padding: 10px;
     margin-top: 20px;
-    border: 2px solid #a4cbf7;
+    border: 2px solid #6db1ff;
 }
 
 .settings-dvs-aiko {
@@ -14347,6 +14380,7 @@ h3.block-title {
 
 .title-dvs-aiko {
     border: 1px solid #6db1ff;
+    border-top: 2px solid #6db1ff;
     border-radius: 30px;
     background-image: linear-gradient(0deg,#d7e9ff 5%,#a8cffe 50%,#d7e9ff 100%);
     margin-top: -30px;
@@ -14676,10 +14710,10 @@ a.block {
 }
 
 .dvs-plan {
-    border: 1px solid #76adff;
+    border: 1.5px solid #6eb2ff;
     border-radius: 1.2rem;
     margin-top: 6%;
-    box-shadow: 0 1px 10px rgb(141 202 255),0 1px 2px rgb(153 153 153);
+    box-shadow: 0 1px 10px rgb(143 179 217), 0 1px 2px rgb(211 211 211);
 }
 
 .dvs-block-title {
@@ -14697,10 +14731,12 @@ a.block {
     display: inline-block;
     padding: 0 15px;
     border: 1px solid #76adff;
+    border-top: 2px solid #6db1ff;
     border-radius: 5rem;
     font-size: 17px;
     font-weight: 600;
     white-space: nowrap;
+    box-shadow: 0 -2px 8px #8fb3d9, 0 -1px 2px rgb(255 255 255) !important;
 }
 
 .h6-dvs.text-muted {
@@ -27521,10 +27557,12 @@ a:not([href]):hover {
         display: inline-block;
         padding: 0 20px;
         border: 1px solid #76adff;
+        border-top: 2px solid #6db1ff;
         border-radius: 5rem;
         font-size: 20px;
         font-weight: 600;
-        white-space: nowrap
+        white-space: nowrap;
+        box-shadow: 0 -2px 8px #8fb3d9, 0 -1px 2px rgb(255 255 255) !important;
     }
 
     .h6-dvs.text-muted {
@@ -27540,7 +27578,7 @@ a:not([href]):hover {
     .h6-dvs-aiko {
         font-size: 15px;
         top: 2px;
-        color: #495057;
+        color: #272727;
         padding-right: 10px;
         padding-left: 1.55px
     }
@@ -27548,7 +27586,7 @@ a:not([href]):hover {
     .h6-dvs-aiko {
         font-size: 16px;
         top: 2px;
-        color: #495057;
+        color: #272727;
         padding-right: 7px;
         padding-left: 1.55px
     }
@@ -27860,7 +27898,7 @@ a:not([href]):hover {
 .aikopanel-shortcuts-item {
     cursor: pointer;
     padding: 20px;
-    border-bottom: 1px solid #eee;
+    border-top: 1px solid #a8cfff;
     position: relative;
     font-weight: 500;
 }
@@ -28213,9 +28251,9 @@ Aiko-DVS button:active {
 
 .tooltip-text {
     visibility: hidden;
-    background-color: #3f71a7;
-    color: #fff;
-    border: 2px solid #d7e9ff;
+    background-color: #a4cbf7;
+    color: #3f3f3f;
+    border: 1px solid #18a2ff;
     border-radius: 10px!important;
     text-align: center;
     padding: 10px;
@@ -28237,5 +28275,71 @@ Aiko-DVS button:active {
 }
 
 .icon-margin {
-    margin: 10px;
+    margin: 4px 22px;
+}
+
+i.fab.fa-linux.fa-2x.icon-margin {
+    color: #ffee00;
+    -webkit-text-stroke: 1px rgb(129 129 129);
+    font-size: 32px;
+}
+
+i.fab.fa-android.fa-2x.icon-margin {
+    color: #0cdd00;
+    -webkit-text-stroke: 1px rgb(0 0 0 / 47%);
+    font-size: 35px;
+}
+
+i.fab.fa-apple.fa-2x.icon-margin {
+    color: #ffffff;
+    -webkit-text-stroke: 1px rgb(107 105 105 / 87%);
+    font-size: 35px;
+}
+
+i.fab.fa-windows.fa-2x.icon-margin {
+    color: #53b3ff;
+    -webkit-text-stroke: 1px rgb(105 105 105 / 32%);
+    font-size: 29px;
+}
+
+.dvs1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 15px 5px;
+    border: 1.5px solid #58a3ff;
+    border-radius: 10px;
+    margin: 20px 0px 15px;
+    width: 100%;
+}
+
+.custom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* border: .5px solid #ffffff; */
+    border-radius: 5px;
+    margin: 5px 0;
+    width: 100%;
+    font-weight: 600;
+    white-space: normal;
+    z-index: 1;
+}
+
+.custom-info,.custom-info-value {
+    flex: 1;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px 10px;
+    border: 1px solid #63a8ff;
+    background: #e5f1ff;
+    text-align: left;
+    white-space: nowrap;
+    border-radius: 3px 0 0 3px;
+}
+
+.custom-info-value {
+    text-align: right;
+    border-radius: 0 3px 3px 0;
 }

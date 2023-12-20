@@ -15660,10 +15660,10 @@
 					className: "content content-full"
 				}, l.a.createElement("div", {
 					className: "row mb-3 mb-md-0"
-				}, l.a.createElement("div", {
+				}, t.plan_id === null || t.plan_id === 0 ? null : l.a.createElement("div", {
 					className: "col-md-12"
 				}, l.a.createElement("div", {
-					className: "block block-rounded "
+					className: "block block-rounded dvs-border"
 				}, l.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, l.a.createElement("h3", {
@@ -15728,17 +15728,17 @@
 				}, l.a.createElement("div", {
 					className: "col-md-12"
 				}, l.a.createElement("div", {
-					className: "block block-rounded "
+					className: "block block-rounded dvs-border"
 				}, l.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, l.a.createElement("h3", {
 					className: "block-title"
 				}, Object(h.formatMessage)({
-					id: "Cá nhân hoá"
+					id: "Cá Nhân Hóa"
 				})), l.a.createElement("div", {
 					className: "block-options"
 				})), l.a.createElement("div", {
-					className: "block-content"
+					className: "block-content dvs-border"
 				}, l.a.createElement("div", {
 					className: "row push"
 				}, l.a.createElement("div", {
@@ -15762,8 +15762,10 @@
 					id: "Lưu"
 				})))), l.a.createElement("div", {
 					className: "block-options"
-				})), l.a.createElement("div", {
-					className: "block-content"
+				})), l.a.createElement("hr", {
+					className: "dvs-hr"
+				}), l.a.createElement("div", {
+					className: "block-content dvs-border"
 				}, l.a.createElement("div", {
 					className: "row push"
 				}, l.a.createElement("div", {
@@ -15796,7 +15798,7 @@
 				}, l.a.createElement("h3", {
 					className: "block-title"
 				}, Object(h.formatMessage)({
-					id: "BIND Telegram"
+					id: "Liên Kế Telegram"
 				})), l.a.createElement("div", {
 					className: "block-options"
 				}, l.a.createElement(d.a, null, l.a.createElement("button", {
@@ -15837,7 +15839,7 @@
 				}, Object(h.formatMessage)({
 					id: "Vào ngay"
 				}))))) : l.a.createElement(l.a.Fragment, null), l.a.createElement("div", {
-					className: "block block-rounded "
+					className: "block block-rounded dvs-border"
 				}, l.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, l.a.createElement("h3", {
@@ -15991,7 +15993,7 @@
 				}, u.a.createElement("div", {
 					className: "col-md-12"
 				}, u.a.createElement("div", {
-					className: "block block-rounded "
+					className: "block block-rounded dvs-border"
 				}, u.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, u.a.createElement("h3", {
@@ -16050,7 +16052,7 @@
 				}, u.a.createElement("div", {
 					className: "col-md-12"
 				}, u.a.createElement("div", {
-					className: "block block-rounded "
+					className: "block block-rounded dvs-border"
 				}, u.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, u.a.createElement("h3", {
@@ -16131,7 +16133,7 @@
 				}, Object(m.formatMessage)({
 					id: "Vào ngay"
 				}))))) : u.a.createElement(u.a.Fragment, null), u.a.createElement("div", {
-					className: "block block-rounded "
+					className: "block block-rounded dvs-border"
 				}, u.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, u.a.createElement("h3", {
@@ -17790,35 +17792,44 @@
 						}), i.a.createElement("div", {
 							className: "block-content py-3-dvs"
 						}, i.a.createElement(i.a.Fragment, null, e.content ? "object" == typeof r ? i.a.createElement("div", {
-							className: "mb-3"
-						}, r.map((e => i.a.createElement("div", {
-							style: {
-								textAlign: "left",
-								marginBottom: 8,
-								opacity: e.support ? 1 : .3
-							}
-						}, e.support ? i.a.createElement("i", {
-							className: "si si-check text-primary",
-							style: {
-								fontSize: 21,
-								verticalAlign: "sub"
-							}
-						}) : i.a.createElement("i", {
-							className: "si si-close text-primary",
-							style: {
-								fontSize: 21,
-								verticalAlign: "sub"
-							}
-						}), i.a.createElement("span", {
-							style: {
-								paddingLeft: 8
-							}
-						}, e.feature))))) : i.a.createElement("div", {
-							className: "mb-3",
-							dangerouslySetInnerHTML: {
-								__html: e.content
-							}
-						}) : ""), i.a.createElement("button", {
+								className: "mb-3"
+							}, r.map((e => i.a.createElement("div", {
+								style: {
+									textAlign: "left",
+									marginBottom: 8,
+									opacity: e.support ? 1 : .3
+								}
+							}, e.support ? i.a.createElement("i", {
+								className: "si si-check text-primary",
+								style: {
+									fontSize: 21,
+									verticalAlign: "sub"
+								}
+							}) : i.a.createElement("i", {
+								className: "si si-close text-primary",
+								style: {
+									fontSize: 21,
+									verticalAlign: "sub"
+								}
+							}), i.a.createElement("span", {
+								style: {
+									paddingLeft: 8
+								}
+							}, e.feature))))) : i.a.createElement("div", {
+								className: "mb-3",
+								dangerouslySetInnerHTML: {
+									__html: e.content
+										.replace(/{{name}}/g, e.name)
+										.replace(/{{device_limit}}/g, e.device_limit)
+										.replace(/{{transfer_enable}}/g, (e.transfer_enable).toLocaleString())
+										.replace(/{{appleid_limit}}/g, e.appleid_limit)
+										.replace(/{{created_at}}/g, new Date(e.created_at * 1000).toLocaleString('vi-VN'))
+										.replace(/{{updated_at}}/g, new Date(e.updated_at * 1000).toLocaleString('vi-VN')),
+								}
+							})
+
+							:
+							""), i.a.createElement("button", {
 							type: "button",
 							disabled: o,
 							class: "btn btn-sm btn-alt-primary"
@@ -18703,19 +18714,7 @@
 				}, f.a.createElement(i.a, c()({
 					className: "py-4"
 				}, this.getResultText(t.status))))), f.a.createElement("div", {
-					className: "block block-rounded"
-				}, f.a.createElement("div", {
-					className: "block-header block-header-default"
-				}, f.a.createElement("h3", {
-					className: "block-title aikopanel-trade-no"
-				}, Object(b.formatMessage)({
-					id: "Thông Tin Sản Phẩm"
-				}))), f.a.createElement("div", {
-					className: "block-content pb-4"
-				}, f.a.createElement("div", {
-					className: "aikopanel-order-info"
-				}))), f.a.createElement("div", {
-					className: "block block-rounded"
+					className: "dvs-border block block-rounded"
 				}, f.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, f.a.createElement("h3", {
@@ -18752,7 +18751,7 @@
 					size: "sm",
 					type: "light"
 				}), " ", Object(b.formatMessage)({
-					id: "Đóng Đơn Hàng"
+					id: "Hủy Đơn Hàng"
 				})))), f.a.createElement("div", {
 					className: "block-content pb-4"
 				}, f.a.createElement("div", {
@@ -18762,9 +18761,9 @@
 				}), "："), f.a.createElement("span", null, t.trade_no)), f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Tên Sản Phẩm"
 				}), "："), f.a.createElement("span", null, t.plan.name)), f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "Loại/Chu Kỳ"
+					id: "Thời Hạn"
 				}), "："), f.a.createElement("span", null, h.a.periodText[t.period] && h.a.periodText[t.period]())), f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
-					id: "Lưu Lượng Sản Phẩm"
+					id: "Dung Lượng"
 				}), "："), f.a.createElement("span", null, t.plan.transfer_enable, " GB")), t.discount_amount ? f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Số Tiền Giảm Giá"
 				}), "："), f.a.createElement("span", null, (t.discount_amount / 100).toLocaleString("vi-VN", {
@@ -18793,7 +18792,7 @@
 				}))) : "", f.a.createElement("div", null, f.a.createElement("span", null, Object(b.formatMessage)({
 					id: "Thời Gian Tạo"
 				}), "："), f.a.createElement("span", null, x()(1e3 * t.created_at).format("DD-MM-YYYY HH:mm:ss")))))), 0 === t.status && f.a.createElement(f.a.Fragment, null, f.a.createElement("div", {
-					className: "block block-rounded js-appear-enabled"
+					className: "dvs-border block block-rounded js-appear-enabled"
 				}, f.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, f.a.createElement("h3", {
@@ -21495,8 +21494,9 @@
 								var t = this;
 								return p.a.createElement(e, S({}, this.props, _({}, r, this.context.intl), {
 									ref: a ? function(e) {
-										return t._wrappedInstance = e
-									} : null
+											return t._wrappedInstance = e
+										} :
+										null
 								}))
 							}
 						}]),
@@ -30612,83 +30612,80 @@
 					}, f.a.createElement("div", {
 						className: "block-content p-0"
 					}), f.a.createElement("div", {
-							className: "block-content email-dvs-aiko"
-						}, f.a.createElement("div", {
-							className: "settings-dvs-aiko"
-						}, f.a.createElement("div", {
-							className: "title-dvs-aiko"
-						}, null === (t = window) || void 0 === t || null === (n = t.settings) || void 0 === n ? void 0 : n.title)), f.a.createElement("img", {
-							className: "avatar-aiko-dvs",
-							alt: "Avatar",
-							src: h.avatar_url,
-							onClick: () => window.location.href = "/#/utilities"
-						}), (u.plan_id !== null && u.plan_id !== 0) ? f.a.createElement("div", {
-							className: "email-dvs-aiko"
-						}, h.username ? h.username : h.email, f.a.createElement(S.a, {
-							placement: "top",
-							title: Object(w.formatMessage)({
+						className: "block-content email-dvs-aiko"
+					}, f.a.createElement("div", {
+						className: "settings-dvs-aiko"
+					}, f.a.createElement("div", {
+						className: "title-dvs-aiko"
+					}, null === (t = window) || void 0 === t || null === (n = t.settings) || void 0 === n ? void 0 : n.title)), f.a.createElement("img", {
+						className: "avatar-aiko-dvs",
+						alt: "Avatar",
+						src: h.avatar_url,
+						onClick: () => window.location.href = "/#/utilities"
+					}), (u.plan_id !== null && u.plan_id !== 0) ? f.a.createElement("div", {
+						className: "email-dvs-aiko"
+					}, h.username ? h.username : h.email, f.a.createElement(S.a, {
+						placement: "top",
+						title: Object(w.formatMessage)({
 							id: "Đã Xác Minh"
 						}),
-							visible: this.state.tooltipOpen
-						}, " ", f.a.createElement("i", {
-							className: "bi bi-patch-check-fill"
-						}))) : f.a.createElement("div", {
-							className: "email-dvs-aiko"
-						}, h.username ? h.username : h.email, f.a.createElement("div", {}, f.a.createElement(S.a, {
-							placement: "bottom",
-							title: Object(w.formatMessage)({
-							id: "Tài Khoảng Chưa Được Xác Minh\n❌ Vì Bạn Chưa Có Gói Dịch Vụ"
+						visible: this.state.tooltipOpen
+					}, " ", f.a.createElement("i", {
+						className: "bi bi-patch-check-fill"
+					}))) : f.a.createElement("div", {
+						className: "email-dvs-aiko"
+					}, h.username ? h.username : h.email, f.a.createElement("div", {}, f.a.createElement(S.a, {
+						placement: "bottom",
+						title: Object(w.formatMessage)({
+							id: "Tài khoản Chưa Được Xác Minh\n❌ Vì Bạn Chưa Có Gói Dịch Vụ"
 						}),
-							visible: this.state.tooltipOpen
-						})))
-						, f.a.createElement("p", {
-							className: "font-size-dvs text-muted"
-						}, Object(w.formatMessage)({
-							id: "ID: " + h.id + " | "
-						}), Object(w.formatMessage)({
-							id: "Thời Gian Tạo"
-						}), ": ", f.a.createElement("span", {
-							className: "font-size-dvs text-muted"
-						}, y()(1e3 * h.created_at).format("DD/MM/YYYY - HH:mm:ss"))), 0 !== h.balance ? f.a.createElement("div", {
-							className: "font-sodu-dvs text-muted"
-						}, Object(w.formatMessage)({
-							id: "Số Dư Ví Hiện Tại"
-						}), ": ", Math.round(h.balance / 100).toLocaleString(), " ", g.currency) : null, f.a.createElement("div", {
-							className: "he-dieu text-muted"
-						}, f.a.createElement("span", {
-							className: "hdh-dvs text-muted"
-						}, Object(w.formatMessage)({
-							id: "Hệ Điều Hành Truy Cập"
-						}), ": "), this.getOperatingSystems().join(", "))
-
-						, f.a.createElement("div", {
-							className: "he-dieu text-muted"
-						}, f.a.createElement("span", {
-							className: "hdh-dvs text-muted"
-						}, Object(w.formatMessage)({
-							id: "IP Đang Truy Cập"
-						}), ": "), h.last_login_ip), null !== g.zalo_discuss_link ? f.a.createElement("button", {
-							className: "Aiko-DVS DVS-Aiko-zalo",
-							onClick: () => window.location.href = g.zalo_discuss_link
-						}, [f.a.createElement("img", {
-							className: "icon-zalo",
-							src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEVHcEy2wMetveDr7u/Kzofx8vP5+vr///8+evLm7P/x8/MebPrW4P/19/8AZv+LqvsAXf8Sa/5VhOk0cet0m/+euP+9zv5hkP9Uh/zL1/xqjuAtcvoATf+twv7p6+tRgeiitvBsj+oAUN8DWuAAW+Q8aySXAAAAIXRSTlMAIDtHC37T/5T/lO//+/////+H2v///////1P///9RoPsYPczvAAABTElEQVR4AX2TB2LDIBAEhdqGGNChXpD7/9+Yg7jbeGz1YenJAyLNAqlI3smLEg+URZ488SPxyu9j9kbhHS1u302Fj1yNDeEz+lI/RQIu7cgtScTwfamNQZSChca0iFKyYKlDHN9H6vlmIGMsaQTG6qGnqaGJb1Q/KdsCWkFj4Ew5wZMmsyGFQLfw4YicZKF15Pz7zAv/7uQ0lJPovdATsPKBrRd6MNIX6Aa+IxYq3wonL0IHxqw+hbzJwrqA4y4Jpg29GMZx1HxxTo4dFju49SoYvlkDnNHJXk8K6DuJ0MjU+G5ESRPBCRWiCJ5MjkCUMFmhmfHJqlkg+WW6hf3SzDxhdsYs8SXH5Bvqpv1y0Hhlf132lo7H0/F4mPCAqk7ivnHM+cQcj2O1Tky/P3AR8bAzd5aN4Fw57fLkEVE3pweaWiRv5CKdA6l4KPwHUIgnkoB3qewAAAAASUVORK5CYII=",
-							alt: "Zalo Logo"
-						}), " ", f.a.createElement("span", null, Object(w.formatMessage)({
-							id: "Nhóm Zalo"
-						}))]) : null, null !== g.telegram_discuss_link ? f.a.createElement("button", {
-							className: "Aiko-DVS DVS-Aiko-telegram",
-							onClick: () => window.location.href = g.telegram_discuss_link,
-							style: {
-								alignItems: "center"
-							}
-						}, [f.a.createElement("img", {
-							className: "icon-telegram",
-							src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAvVBMVEUAAABHt/Qwpd43sOwzq+c3ruo4sOg/tO83sOc4rOk3r+c1rOg4r+g6r+kvo980quY4qOgzqOQ3p+c0p+QwqOAwpt9TsOaV0O7Y8Pgvpd8yqOJuwOfM6Pj///94w+oxpuFMsOCg0/Dw+PzA4PNArODi8Pi44PD4//8wpOAtotowpd5fuOOw3PCDyOgwoOAuo90qn9ctodswoNgsoNkqntUqndQrn9gnn9MooNgqntYontYqndUvn9konNQom9Nm6UXDAAAAPXRSTlMACEiYwN7wGJj/gP/IMBj/yP+A8P+Y////8P///////////////////9j////////E////8Jj/gP//4P8wnkXuQgAAAbhJREFUeAFsjgMCgEAQALNtu/9/sUWuOawhXIiSrKiapiqyJApfdEMzTzRDf4VFC8I2YNp7iiU+yh0Iv3BuTVwVwm9M1T3inur7ts9uUOCyVL19fuD/Ewa8R0SGH8I9IocS0YAYAxC9SJLET9AX45A0fJNkeVFkpKawQRlWYQU3RInUTQt05CtFQer7qq/gshzGqSXqipCEtD9J+npuDwb2pYJyxpd8xcjUbWXTRQKDMBAF0Kms2dTdWyweXO5/rM4UqT0smR8c7rh+TF334B4OY/Bc13dRED52JLxuqHGbUt33PVj5vu9O2ZJCrAdTzNGF+8Rd0QDB2/hxWnPK0QkHkBV4QggehHTt24BztmvsuXjxQDYNftwEiusmR0E7QMJMKWpgqJQ67jpr6qIZDFXD0Erf2/ymRVMewsBiZogi++ZBXqiGgR0AROaLH+7QwjQiet02/qC1DvCBzrXBjrEOoCT+ZIzW+01qYoNzAmQgs0acYY5Bljb9VA7gxcmLIisynAvSt3MHWmVeVEWFc0FbQpu8hJ4jqz/SgQ+DxGKtruqOTQbwzYls3bORA/8Gw0h61noy+vz9n00ab2KwYRKTAAAAAElFTkSuQmCC",
-							alt: "Telegram Logo"
-						}), " ", f.a.createElement("span", null, Object(w.formatMessage)({
-							id: "Nhóm Telegram"
-						}))]) : null)))), f.a.createElement("div", {
+						visible: this.state.tooltipOpen
+					}))), f.a.createElement("p", {
+						className: "font-size-dvs text-muted"
+					}, Object(w.formatMessage)({
+						id: "ID Định Danh"
+					}), ": ", h.id, " - ", f.a.createElement("i", {
+						className: "bi bi-calendar2-day"
+					}), " ", f.a.createElement("span", {
+						className: "font-size-dvs text-muted"
+					}, y()(1e3 * h.created_at).format("DD/MM/YYYY - HH:mm:ss"))), 0 !== h.balance ? f.a.createElement("div", {
+						className: "font-sodu-dvs text-muted"
+					}, Object(w.formatMessage)({
+						id: "Số Dư Ví Hiện Tại"
+					}), ": ", Math.round(h.balance / 100).toLocaleString(), " ", g.currency) : null, f.a.createElement("div", {
+						className: "he-dieu text-muted"
+					}, f.a.createElement("span", {
+						className: "hdh-dvs text-muted"
+					}, Object(w.formatMessage)({
+						id: "Hệ Điều Hành Truy Cập"
+					}), ": "), this.getOperatingSystems().join(", ")), f.a.createElement("div", {
+						className: "he-dieu text-muted"
+					}, f.a.createElement("span", {
+						className: "hdh-dvs text-muted"
+					}, Object(w.formatMessage)({
+						id: "IP Đang Truy Cập"
+					}), ": "), h.last_login_ip), null !== g.zalo_discuss_link ? f.a.createElement("button", {
+						className: "Aiko-DVS DVS-Aiko-zalo",
+						onClick: () => window.location.href = g.zalo_discuss_link
+					}, [f.a.createElement("img", {
+						className: "icon-zalo",
+						src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAb1BMVEVHcEy2wMetveDr7u/Kzofx8vP5+vr///8+evLm7P/x8/MebPrW4P/19/8AZv+LqvsAXf8Sa/5VhOk0cet0m/+euP+9zv5hkP9Uh/zL1/xqjuAtcvoATf+twv7p6+tRgeiitvBsj+oAUN8DWuAAW+Q8aySXAAAAIXRSTlMAIDtHC37T/5T/lO//+/////+H2v///////1P///9RoPsYPczvAAABTElEQVR4AX2TB2LDIBAEhdqGGNChXpD7/9+Yg7jbeGz1YenJAyLNAqlI3smLEg+URZ488SPxyu9j9kbhHS1u302Fj1yNDeEz+lI/RQIu7cgtScTwfamNQZSChca0iFKyYKlDHN9H6vlmIGMsaQTG6qGnqaGJb1Q/KdsCWkFj4Ew5wZMmsyGFQLfw4YicZKF15Pz7zAv/7uQ0lJPovdATsPKBrRd6MNIX6Aa+IxYq3wonL0IHxqw+hbzJwrqA4y4Jpg29GMZx1HxxTo4dFju49SoYvlkDnNHJXk8K6DuJ0MjU+G5ESRPBCRWiCJ5MjkCUMFmhmfHJqlkg+WW6hf3SzDxhdsYs8SXH5Bvqpv1y0Hhlf132lo7H0/F4mPCAqk7ivnHM+cQcj2O1Tky/P3AR8bAzd5aN4Fw57fLkEVE3pweaWiRv5CKdA6l4KPwHUIgnkoB3qewAAAAASUVORK5CYII=",
+						alt: "Zalo Logo"
+					}), " ", f.a.createElement("span", null, Object(w.formatMessage)({
+						id: "Nhóm Zalo"
+					}))]) : null, null !== g.telegram_discuss_link ? f.a.createElement("button", {
+						className: "Aiko-DVS DVS-Aiko-telegram",
+						onClick: () => window.location.href = g.telegram_discuss_link,
+						style: {
+							alignItems: "center"
+						}
+					}, [f.a.createElement("img", {
+						className: "icon-telegram",
+						src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAvVBMVEUAAABHt/Qwpd43sOwzq+c3ruo4sOg/tO83sOc4rOk3r+c1rOg4r+g6r+kvo980quY4qOgzqOQ3p+c0p+QwqOAwpt9TsOaV0O7Y8Pgvpd8yqOJuwOfM6Pj///94w+oxpuFMsOCg0/Dw+PzA4PNArODi8Pi44PD4//8wpOAtotowpd5fuOOw3PCDyOgwoOAuo90qn9ctodswoNgsoNkqntUqndQrn9gnn9MooNgqntYontYqndUvn9konNQom9Nm6UXDAAAAPXRSTlMACEiYwN7wGJj/gP/IMBj/yP+A8P+Y////8P///////////////////9j////////E////8Jj/gP//4P8wnkXuQgAAAbhJREFUeAFsjgMCgEAQALNtu/9/sUWuOawhXIiSrKiapiqyJApfdEMzTzRDf4VFC8I2YNp7iiU+yh0Iv3BuTVwVwm9M1T3inur7ts9uUOCyVL19fuD/Ewa8R0SGH8I9IocS0YAYAxC9SJLET9AX45A0fJNkeVFkpKawQRlWYQU3RInUTQt05CtFQer7qq/gshzGqSXqipCEtD9J+npuDwb2pYJyxpd8xcjUbWXTRQKDMBAF0Kms2dTdWyweXO5/rM4UqT0smR8c7rh+TF334B4OY/Bc13dRED52JLxuqHGbUt33PVj5vu9O2ZJCrAdTzNGF+8Rd0QDB2/hxWnPK0QkHkBV4QggehHTt24BztmvsuXjxQDYNftwEiusmR0E7QMJMKWpgqJQ67jpr6qIZDFXD0Erf2/ymRVMewsBiZogi++ZBXqiGgR0AROaLH+7QwjQiet02/qC1DvCBzrXBjrEOoCT+ZIzW+01qYoNzAmQgs0acYY5Bljb9VA7gxcmLIisynAvSt3MHWmVeVEWFc0FbQpu8hJ4jqz/SgQ+DxGKtruqOTQbwzYls3bORA/8Gw0h61noy+vz9n00ab2KwYRKTAAAAAElFTkSuQmCC",
+						alt: "Telegram Logo"
+					}), " ", f.a.createElement("span", null, Object(w.formatMessage)({
+						id: "Nhóm Telegram"
+					}))]) : null)))), f.a.createElement("div", {
 						className: "dvs-row mb-3 mb-md-0"
 					}, f.a.createElement("div", {
 						className: "col-xl-12"
@@ -30899,7 +30896,7 @@
 					}, f.a.createElement("div", {
 						className: "col-xl-12"
 					}, f.a.createElement("div", {
-						className: "block block-rounded js-appear-enabled"
+						className: "block block-rounded js-appear-enabled dvs-border"
 					}, f.a.createElement("div", {
 						className: "block-header block-header-default"
 					}, f.a.createElement("h3", {
@@ -30911,7 +30908,7 @@
 					}, f.a.createElement("div", {
 						className: "justify-content-md-between align-items-md-center"
 					}, f.a.createElement("div", {
-						className: "mb-3"
+						// className: "mb-3"
 					}, f.a.createElement("div", {
 						className: "aikopanel-shortcuts-item",
 						onClick: () => m.a.push("/knowledge")
@@ -30944,7 +30941,7 @@
 						className: "aikopanel-shortcuts-item",
 						onClick: () => m.a.push("/order")
 					}, f.a.createElement("div", null, Object(w.formatMessage)({
-						id: "Lịch Sửa Mua Hàng"
+						id: "Lịch Sử Mua Hàng"
 					})), f.a.createElement("div", {
 						className: "description"
 					}, Object(w.formatMessage)({
@@ -30962,7 +30959,7 @@
 					})), f.a.createElement("div", {
 						className: "description"
 					}, Object(w.formatMessage)({
-						id: "Thống kê những máy chủ của bạn, và trạng thái hoat jđộng"
+						id: "Thống kê những máy chủ của bạn, và trạng thái hoạt động"
 					})), f.a.createElement("i", {
 						style: {
 							float: "right"
@@ -30976,7 +30973,7 @@
 					})), f.a.createElement("div", {
 						className: "description"
 					}, Object(w.formatMessage)({
-						id: "Nếu tài khoảng bị lộ, hoặc bị lợi dụng hãy đổi mới"
+						id: "Nếu tài khoản bị lộ, hoặc bị lợi dụng hãy đổi mới"
 					})), f.a.createElement("i", {
 						style: {
 							float: "right"
@@ -31886,7 +31883,7 @@
 				}, s.a.createElement("div", {
 					className: "col-md-12"
 				}, s.a.createElement("div", {
-					className: "block block-rounded "
+					className: "block block-rounded dvs-border"
 				}, s.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, s.a.createElement("h3", {
@@ -32284,34 +32281,6 @@
 						render: e => f.a.createElement(s.a, {
 							status: parseInt(e) ? "processing" : "error"
 						})
-					}, {
-						title: f.a.createElement("span", null, f.a.createElement(c.a, {
-							placement: "top",
-							title: Object(y.formatMessage)({
-								id: "Lưu Lượng Sử Dụng sẽ được nhân với Hệ Số để trừ đi"
-							})
-						}, Object(y.formatMessage)({
-							id: "Hệ Số"
-						}), " ", f.a.createElement(l.a, {
-							type: "question-circle"
-						}))),
-						dataIndex: "rate",
-						key: "rate",
-						align: "center",
-						render: e => f.a.createElement(i.a, {
-							style: {
-								minWidth: 60
-							}
-						}, e + " x")
-					}, {
-						title: Object(y.formatMessage)({
-							id: "Nhãn"
-						}),
-						dataIndex: "tags",
-						key: "tags",
-						render: e => e ? e.map((e => f.a.createElement(i.a, {
-							key: Math.random()
-						}, e))) : "-"
 					}];
 				return Object(v.f)(r.u + r.d, r.transfer_enable),
 					f.a.createElement(p.a, o()({}, this.props, {
@@ -32696,43 +32665,27 @@
 				}, f.a.createElement("div", {
 					className: "col-md-8 col-sm-12"
 				}, f.a.createElement("div", {
-					className: "block block-link-pop block-rounded py-3",
-					style: {
-						backgroundColor: "#fff"
-					}
-				}, f.a.createElement("h4", {
-					className: "mb-0 px-3"
-				}, t.name), g && "object" == typeof g ? f.a.createElement("div", {
-					className: "aikopanel-plan-content px-3"
-				}, null == g ? void 0 : g.map((e => f.a.createElement("div", {
-					style: {
-						textAlign: "left",
-						marginBottom: 8,
-						opacity: e.support ? 1 : .3
-					}
-				}, e.support ? f.a.createElement("i", {
-					className: "si si-check text-primary",
-					style: {
-						fontSize: 21,
-						verticalAlign: "sub"
-					}
-				}) : f.a.createElement("i", {
-					className: "si si-close text-primary",
-					style: {
-						fontSize: 21,
-						verticalAlign: "sub"
-					}
-				}), f.a.createElement("span", {
-					style: {
-						paddingLeft: 8
-					}
-				}, e.feature))))) : f.a.createElement("div", {
-					dangerouslySetInnerHTML: {
-						__html: t.content
-					},
-					className: "aikopanel-plan-content"
-				})), f.a.createElement("div", {
-					className: "block block-rounded js-appear-enabled"
+					className: "dvs1",
+				}, f.a.createElement("div", {
+					className: "custom-title"
+				}, t.name, f.a.createElement("div", {
+					className: "custom-title-dvs"
+				}, f.a.createElement("div", {
+					className: "custom-title-dvs1"
+				}, "Thông Tin Gói Hàng"))), f.a.createElement("div", {
+					className: "custom-row",
+				}, f.a.createElement("div", {
+					className: "custom-info"
+				}, "Giới Hạn Sử Dụng"), f.a.createElement("div", {
+					className: "custom-info-value"
+				}, t.device_limit, " Thiết Bị")), f.a.createElement("div", {
+					className: "custom-row",
+				}, f.a.createElement("div", {
+					className: "custom-info"
+				}, "Dung Lượng"), f.a.createElement("div", {
+					className: "custom-info-value"
+				}, t.transfer_enable, " GB"))), f.a.createElement("div", {
+					className: "dvs-border block block-rounded js-appear-enabled"
 				}, f.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, f.a.createElement("h3", {
@@ -35391,7 +35344,7 @@
 				}) : a.a.createElement("div", {
 					className: "text-dark-dvs"
 				}, Object(u.formatMessage)({
-					id: "Đăng Ký Tài Khoảng"
+					id: "Đăng Ký Tài khoản"
 				}))), window.settings.description && a.a.createElement("p", {
 					className: "font-size-sm text-muted mb-3"
 				}, window.settings.description)), o ? a.a.createElement("div", {
@@ -43348,7 +43301,8 @@
 									s = -1,
 									d = -2;
 								break
-							} - 1 !== s && (u[o.marker][(o.open ? 3 : 0) + (o.length || 0) % 3] = s)
+							} -
+						1 !== s && (u[o.marker][(o.open ? 3 : 0) + (o.length || 0) % 3] = s)
 					}
 			}
 		}
@@ -49734,7 +49688,7 @@
 					}
 				}, a.a.createElement("div", {
 					className: "mx-2 mx-sm-0"
-				},a.a.createElement("div", null, a.a.createElement("div", null, a.a.createElement("div", {
+				}, a.a.createElement("div", null, a.a.createElement("div", null, a.a.createElement("div", {
 					className: "thongtingoi-dangnhap"
 				}, a.a.createElement("div", {
 					className: "h4-dvs-mb-3"
