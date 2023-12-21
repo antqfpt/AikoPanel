@@ -1024,6 +1024,23 @@ body {
     box-sizing: border-box
 }
 
+.dvs-aiko-tongmuagoi {
+    text-align: right;
+    margin-bottom: -21px;
+    margin-top: -8px;
+}
+
+.tongmuagoi {
+    background: #e50303;
+    color: white;
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 10px;
+    border: 2px solid #ffffff;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+}
+
 .custom-title {
     margin: -28px 0 15px;
     border: 1.3px solid #4196ff;
@@ -27466,10 +27483,10 @@ a:not([href]):hover {
 }
 
 .aikopanel-select {
-    border-bottom: 1px solid #eee;
+    border-top: 1px solid #a8cfff !important;
     padding: 20px;
     display: flex;
-    font-size: 16px
+    font-size: 16px;
 }
 
 .aikopanel-select.active {
@@ -27601,7 +27618,7 @@ a:not([href]):hover {
 
     .aikopanel-select {
         border: unset;
-        padding: 15px 20px
+        padding: 5px 20px;
     }
 
     .aikopanel-select-radio {

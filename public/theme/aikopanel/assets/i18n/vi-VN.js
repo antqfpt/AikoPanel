@@ -1,5 +1,6 @@
 window.settings.i18n['vi-VN'] = {
   'Yêu Cầu Thất Bại': 'Yêu Cầu Thất Bại',
+  '1Ngày': '1 Ngày',
   '1Tháng': '1 Tháng',
   '3Tháng': '3 Tháng',
   '6Tháng': '6 Tháng',
