@@ -11,7 +11,7 @@
 
 - PHP ^7.4 + Loader Ioncube
 - Composer
-- MariaDB ^10.4
+- MariaDB ^10.4 or Mysql ^8
 - Redis ^7
 - Laravel
 
