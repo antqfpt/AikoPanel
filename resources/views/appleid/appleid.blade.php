@@ -118,6 +118,7 @@
                 <button onclick="copyUsernameToClipboard()" class="btn btn-primary">Copy Username</button>
                 <button onclick="copyPasswordToClipboard()" class="btn btn-primary">Copy Password</button>
                 <p><strong>Lưu ý:</strong> App Shadowrocket và Quantumult X đều nằm trong mục gia đình nhé</p>
+                <hr> <!-- Horizontal line -->
                 @if (!empty($quantumultx))
                     <p><strong>Quantumult X:</strong> Bấm vào để tải Quantumult X</p>
                     <button onclick="window.location.href='{{ $quantumultx }}'" class="btn btn-primary">Tải Quantumult X</button>
