@@ -1024,6 +1024,16 @@ body {
     box-sizing: border-box
 }
 
+span.dvs-thongtin1-version {
+    margin: 0 25px;
+    border-radius: 6px;
+    background-image: linear-gradient(90deg,#ffffff 5%,#ffffff 50%,#ffffff 100%),linear-gradient(0deg,#ffffff 5%,#937cff 50%,#af9eff 90%);
+    padding: 0px 15px;
+    color: #565353;
+    font-family: sans-serif;
+    border: 1px solid #6eb1ff;
+}
+
 .dvs-aiko-tongmuagoi {
     text-align: right;
     margin-bottom: -21px;
@@ -1395,12 +1405,34 @@ h3.h4.mb-3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -9px;
+    margin-bottom: -21px;
     font-size: 10px;
     font-weight: 700;
 }
 
+.dvs-thongtin-version {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.dvs-thongtin-version-aiko {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -10px;
+    margin-top: -2px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
 span.dvs-thongtin1 {
+    margin: 2px 20px;
     border-radius: 6px;
     background-image: linear-gradient(90deg,#ffffff 5%,#ffffff 50%,#ffffff 100%),linear-gradient(0deg,#ffffff 5%,#937cff 50%,#af9eff 90%);
     padding: 1px 15px;
@@ -1414,7 +1446,7 @@ span.dvs-thongtin1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -18px;
+    margin-top: -19px;
 }
 
 .h1,h1 {
@@ -5878,7 +5910,7 @@ a.badge-dark.focus,a.badge-dark:focus {
     z-index: 1;
     color: #495057;
     text-decoration: none;
-    background-color: #f6f7fb
+    background-color: transparent;
 }
 
 .list-group-item-action:active {
@@ -5890,8 +5922,8 @@ a.badge-dark.focus,a.badge-dark:focus {
     position: relative;
     display: block;
     padding: .75rem 1.25rem;
-    background-color: #fff;
-    border: 1px solid #e2e8f2
+    background-color: transparent !important;
+    border: 1px solid #c7d0dd;
 }
 
 .list-group-item:first-child {
@@ -14402,7 +14434,7 @@ h3.block-title {
     background-image: linear-gradient(0deg,#d7e9ff 5%,#a8cffe 50%,#d7e9ff 100%);
     margin-top: -30px;
     margin-bottom: 15px;
-    padding: 5px 15px;
+    padding: 2px 25px;
     text-shadow: -.5px 0 #ffffff,0 .5px #f5f5f5,.5px 0 #ffffff,0 -.5px #ffffff,1px 1px 2px rgba(0,0,0,.3);
     box-shadow: 0 -2px 8px #8fb3d9, 0 -1px 2px rgb(255 255 255) !important;
 }
@@ -14410,11 +14442,12 @@ h3.block-title {
 .email-dvs-aiko {
     color: black;
     white-space: pre-wrap;
+    font-size: 18px;
 }
 
 i.bi.bi-patch-check-fill {
     color: #377dff;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .mb-0.dvs-center {
@@ -17443,9 +17476,9 @@ a.text-body-color-light:focus,a.text-body-color-light:hover {
 }
 
 .font-sodu-dvs.text-muted {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
-    color: #0040ff!important;
+    color: #2673d1!important;
 }
 
 a.text-muted.link-fx:before {
