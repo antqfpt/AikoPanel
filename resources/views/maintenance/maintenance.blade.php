@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>ĐANG BẢO TRÌ UPDATE</title>
+    <title>{{$title}}</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -72,7 +71,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <i class="fas fa-exclamation-triangle"></i>
@@ -114,5 +112,3 @@
 </body>
 
 </html>
-HTML;
-?>
