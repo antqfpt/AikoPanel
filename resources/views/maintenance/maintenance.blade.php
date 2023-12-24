@@ -1,5 +1,3 @@
-<?php
-echo <<<HTML
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +5,8 @@ echo <<<HTML
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>AikoPanel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title> {{title}} ĐANG BẢO TRÌ UPDATE</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -44,13 +43,13 @@ echo <<<HTML
         }
 
         button {
-            background-color: #3498db;
+            background-color: #6e49cb;
             color: white;
             padding: 10px 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            margin-top: 20px;
+            margin-top: 5px;
             transition: all 0.3s ease-in-out;
             display: inline-flex;
             align-items: center;
@@ -75,22 +74,42 @@ echo <<<HTML
 </head>
 
 <body>
-    <div class="container"><i class="fas fa-exclamation-triangle"></i>
-        <h1><i class="fas fa-exclamation-circle"></i> Website Chưa Được Kích Hoạt</h1>
-        <p>Vui Lòng Liên Hệ © <a href="https://t.me/AikoPanel" target="_blank">Dev Aikocute</a></p>
+    <div class="container">
+        <i class="fas fa-exclamation-triangle"></i>
+        <h1>
+            <i class="fas fa-exclamation-circle"></i>
+            Website Đang Bảo Trì
 
-        <p id="activation-message">Để Kích Hoạt Key</p>
-        <button onclick="window.location='https://t.me/AikoPanel';">
-            <i class="fas fa-shopping-cart"></i> Mua Key Ủy Quyền
+        </h1>
+        <b>
+            <span id="activation-message"></span>
+        </b>
+        <br>
+        <span>Đang Trong Quá Trình Nâng Cấp</span>
+        <br>
+        <span>Vui lòng đợi trang giây lát...</span>
+        <br>
+        <br>
+        <span>
+            <b>
+                Hãy tham gia nhóm để<br>Theo giõi hoạt động mới nhất
+            </b>
+        </span>
+        <br>
+        @if (!empty($support))
+        <button onclick="window.location.href='{{ $support }}'">
+            <i class="fa-solid fa-user-group"></i>
+            Tham Gia Nhóm
         </button>
+        @endif
     </div>
-
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             var domainName = window.location.hostname.toUpperCase();
-            var activationMessage = "Để Kích Hoạt Key Cho " + domainName;
+            var activationMessage = domainName;
             document.getElementById('activation-message').innerText = activationMessage;
-        });
+        }
+        );
     </script>
 </body>
 
