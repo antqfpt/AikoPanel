@@ -77,10 +77,10 @@ echo <<<HTML
 <body>
     <div class="container"><i class="fas fa-exclamation-triangle"></i>
         <h1><i class="fas fa-exclamation-circle"></i> Website Chưa Được Kích Hoạt</h1>
-        <p>Vui Lòng Liên Hệ © <a href="https://t.me/Tele_Aiko" target="_blank">Dev Aikocute</a></p>
+        <p>Vui Lòng Liên Hệ © <a href="https://t.me/AikoPanel" target="_blank">Dev Aikocute</a></p>
 
         <p id="activation-message">Để Kích Hoạt Key</p>
-        <button onclick="window.location='https://t.me/Tele_Aiko';">
+        <button onclick="window.location='https://t.me/AikoPanel';">
             <i class="fas fa-shopping-cart"></i> Mua Key Ủy Quyền
         </button>
     </div>
