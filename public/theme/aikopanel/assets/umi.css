@@ -14541,6 +14541,18 @@ i.bi.bi-patch-check-fill {
     margin-bottom: 1.25rem;
 }
 
+p.font-size-sm-text-muted {
+    margin: 20px 0 15px;
+    color: #21971a;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #ffffff;
+    background: #a6cdfb;
+    border: 1px solid;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 0 10px;
+}
+
 .block-content .items-push-2x>div {
     margin-bottom: 2.5rem
 }

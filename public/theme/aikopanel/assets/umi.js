@@ -12859,19 +12859,19 @@
 				})), l.a.createElement("option", {
 					value: "1"
 				}, Object(h.formatMessage)({
-					id: "Nền Liên Quân Viettel"
+					id: "SNI Liên Quân"
 				})), l.a.createElement("option", {
 					value: "2"
 				}, Object(h.formatMessage)({
-					id: "Nền Free Fire Viettel"
+					id: "SNI Free Fire"
 				})), l.a.createElement("option", {
 					value: "3"
 				}, Object(h.formatMessage)({
-					id: "Nền Tiktok Viettel"
+					id: "SNI Tiktok"
 				})), l.a.createElement("option", {
 					value: "4"
 				}, Object(h.formatMessage)({
-					id: "Softbank Nhật Bản"
+					id: "SNI Softbank Nhật Bản"
 				})), l.a.createElement("option", {
 					value: "0"
 				}, Object(h.formatMessage)({
@@ -14644,11 +14644,11 @@
 						className: "h6-dvs-aiko"
 					}, t.currency_symbol), "/ ", n.tag))), i.a.createElement("i", {
 						className: "fa-solid fa-cart-shopping"
-					}), " ", e.name, i.a.createElement("div", {
+					}), " ", e.name, t.show_total_user_enable ? i.a.createElement("div", {
 						className: "dvs-aiko-tongmuagoi"
 					}, i.a.createElement("div", {
 						className: "tongmuagoi"
-					}, "Đã bán ", e.total))), a && i.a.createElement("span", {
+					}, "Đã bán ", e.total)): i.a.createElement(l.a.Fragment, null)), a && i.a.createElement("span", {
 						className: "aikopanel-sold-out-tag"
 					}, Object(p.formatMessage)({
 						id: "Sắp Hết Hàng"
@@ -25707,7 +25707,7 @@
 				}, Object(x.formatMessage)({
 					id: "THÔNG TIN GÓI"
 				})))))), null === h.expired_at ? f.a.createElement("p", {
-					className: "font-size-sm text-muted"
+					className: "font-size-sm-text-muted"
 				}, Object(x.formatMessage)({
 					id: "Gói Này Có Thời Gian Vĩnh Viễn"
 				})) : f.a.createElement("div", {
