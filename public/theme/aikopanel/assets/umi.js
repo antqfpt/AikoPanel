@@ -26029,7 +26029,7 @@
 					maskClosable: !0,
 					footer: !1,
 					onCancel: () => this.modalVisible()
-				}, this.state.notice.content && l.a.createElement("div", {
+				}, this.state.notice.content && f.a.createElement("div", {
                     className: "notice-content",
                     dangerouslySetInnerHTML: {
                         __html: this.state.notice.content
