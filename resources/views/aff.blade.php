@@ -21,7 +21,7 @@
             version: '{{$version}}',
             background_url: '{{$background_url}}',
             logo: '{{$logo}}',
-            secure_path: '{{$secure_path}}'
+            affiliate_path: '{{$affiliate_path}}'
         }
     </script>
 </head>
