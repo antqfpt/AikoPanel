@@ -74033,12 +74033,8 @@
 			}
 			componentDidMount() {
 				this.props.dispatch({
-						type: "config/fetch",
-						key: "site"
-					}),
-					this.props.dispatch({
-						type: "serverGroup/fetch"
-					})
+					type: "serverGroup/fetch"
+				})
 			}
 			priceOnChange(e, t) {
 				this.setState({
@@ -89019,10 +89015,6 @@
 						complete: e => {
 							this.userLastRankChartRender(e)
 						}
-					}),
-					this.props.dispatch({
-						type: "config/fetch",
-						key: "site"
 					})
 			}
 			componentWillUnmount() {
