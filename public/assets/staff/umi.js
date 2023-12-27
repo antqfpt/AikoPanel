@@ -76720,16 +76720,7 @@
 				}, Object.keys(f.a.periodText).map((e => u.a.createElement(o.a.Option, {
 					value: e,
 					key: Math.random()
-				}, f.a.periodText[e])))))), u.a.createElement("div", {
-					className: "form-group"
-				}, u.a.createElement("label", {
-					for: "example-text-input-alt"
-				}, "Số Tiền Thanh Toán"), u.a.createElement(i.a, {
-					placeholder: "Vui lòng nhập số tiền bạn cần thanh toán.",
-					addonAfter: "₫",
-					value: n.total_amount,
-					onChange: e => this.setSubmit("total_amount", e.target.value)
-				}))))
+				}, f.a.periodText[e]))))))))
 			}
 		}
 		t.a = Object(h.c)((e => ({
