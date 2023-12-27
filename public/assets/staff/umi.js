@@ -88984,15 +88984,6 @@
 						}), t)
 					})))(),
 					this.props.dispatch({
-						type: "stat/getOverride"
-					}),
-					this.props.dispatch({
-						type: "stat/getOrder",
-						complete: e => {
-							this.orderChartRender(e)
-						}
-					}),
-					this.props.dispatch({
 						type: "stat/getServerLastRank",
 						complete: e => {
 							this.serverLastRankChartRender(e)
