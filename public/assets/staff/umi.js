@@ -88241,6 +88241,9 @@
 						}), t)
 					})))(),
 					this.props.dispatch({
+						type: "invite/fetch",
+					}),
+					this.props.dispatch({
 						type: "stat/getServerLastRank",
 						complete: e => {
 							this.serverLastRankChartRender(e)
