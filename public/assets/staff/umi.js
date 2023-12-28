@@ -26973,9 +26973,8 @@
 								var t = this;
 								return f.a.createElement(e, C({}, this.props, k({}, r, this.context.intl), {
 									ref: i ? function(e) {
-											return t._wrappedInstance = e
-										} :
-										null
+										return t._wrappedInstance = e
+									} : null
 								}))
 							}
 						}]),
@@ -76669,6 +76668,7 @@
 					n = e.submit,
 					s = this.props.plan.plans,
 					c = this.props.order.assignLoading;
+				let selectedPlan = s.find(plan => plan.id === n.plan_id);
 				return u.a.createElement(u.a.Fragment, null, u.a.cloneElement(this.props.children, {
 					onClick: () => this.show()
 				}), u.a.createElement(r.a, {
@@ -76713,10 +76713,15 @@
 					},
 					placeholder: "Vui lòng chọn một chu kỳ.",
 					onChange: e => this.setSubmit("period", e)
-				}, Object.keys(f.a.periodText).map((e => u.a.createElement(o.a.Option, {
-					value: e,
-					key: Math.random()
-				}, f.a.periodText[e]))))))))
+				}, Object.keys(f.a.periodText).map((e => {
+					if (selectedPlan && selectedPlan[e]) {
+						let displayText = `${f.a.periodText[e]} - ${selectedPlan[e].toLocaleString('vi-VN', {style : 'currency', currency : 'VND'})}`;
+						return u.a.createElement(o.a.Option, {
+							value: e,
+							key: Math.random()
+						}, displayText);
+					}
+				})))))));
 			}
 		}
 		t.a = Object(h.c)((e => ({

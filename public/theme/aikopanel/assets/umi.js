@@ -27163,10 +27163,7 @@
 					tableLayout: "auto",
 					dataSource: t,
 					columns: l,
-					pagination: !1,
-					scroll: {
-						x: 900
-					}
+					pagination: !1
 				}))) : u.a.createElement("div", {
 					className: "alert alert-dark",
 					role: "alert"
