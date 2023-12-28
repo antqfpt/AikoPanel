@@ -18288,7 +18288,10 @@
 				}
 			}
 			isAdmin() {
-				return -1 !== this.props.location.pathname.indexOf("admin")
+                return -1 !== this.props.location.pathname.indexOf("admin")
+            }
+			isStaff() {
+				return -1 !== this.props.location.pathname.indexOf("staff")
 			}
 			render() {
 				return i.a.createElement("nav", {

@@ -19740,6 +19740,9 @@
 			isAdmin() {
 				return -1 !== this.props.location.pathname.indexOf("admin")
 			}
+			isStaff() {
+                return -1 !== this.props.location.pathname.indexOf("staff")
+            }
 			render() {
 				return a.a.createElement("nav", {
 					id: "sidebar"
