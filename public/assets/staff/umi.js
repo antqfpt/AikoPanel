@@ -38007,43 +38007,6 @@
 						}), e)
 					}))()
 				},
-				fetch: (e, t) => s().mark((function e() {
-					var n, r;
-					return s().wrap((function(e) {
-						for (;;) switch (e.prev = e.next) {
-							case 0:
-								return n = t.put, e.next = 3, n({
-									type: "setState",
-									payload: {
-										fetchLoading: !0
-									}
-								});
-							case 3:
-								return e.next = 5, Object(i.a)("/user/invite/fetch");
-							case 5:
-								return r = e.sent, e.next = 8, n({
-									type: "setState",
-									payload: {
-										fetchLoading: !1
-									}
-								});
-							case 8:
-								if (200 === r.code) {
-									e.next = 10;
-									break
-								}
-								return e.abrupt("return");
-							case 10:
-								return e.next = 12, n({
-									type: "setState",
-									payload: a()({}, r.data)
-								});
-							case 12:
-							case "end":
-								return e.stop()
-						}
-					}), e)
-				}))(),
 				getUserTodayRank(e) {
 					var t = e.complete;
 					return a().mark((function e() {
@@ -64531,10 +64494,6 @@
 						key: "invite_user_id",
 						title: "ID Người Mời",
 						condition: ["="]
-					}, {
-						key: "remarks",
-						title: "Ghi Chú",
-						condition: ["~"]
 					}]
 				}, g.a.createElement(s.a, {
 					type: E.length > 0 ? "primary" : ""
@@ -88342,11 +88301,6 @@
 							}
 					}), t)
 				})))()
-			}
-			fetchData() {
-				this.props.dispatch({
-					type: "invite/fetch"
-				})
 			}
 			render() {
 				var e = this.props,
