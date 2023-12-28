@@ -88292,45 +88292,9 @@
                   , t = e.stat
                   , n = e.config
                   , r = [];
-                return t.ticket_pending_total && c.a.createElement(l.a, o()({}, this.props, {
+                return c.a.createElement(l.a, o()({}, this.props, {
                     title: "Bảng điều khiển"
                 }), c.a.createElement("div", {
-                    className: "col-sm-6 col-xl-3 js-appear-enabled animated",
-                    "data-toggle": "appear"
-                }, c.a.createElement("a", {
-                    className: "block block-bordered block-link-pop text-center mb-0",
-                    onClick: ()=>f.a.push("/order")
-                }, c.a.createElement("div", {
-                    className: "block-content block-content-full text-center"
-                }, c.a.createElement("i", {
-                    className: "fa-2x si si-list text-primary d-none d-sm-inline-block mb-3"
-                }), c.a.createElement("div", {
-                    className: "font-w600 text-uppercase"
-                }, "Quản lý đơn hàng")))), c.a.createElement("div", {
-                    className: "col-sm-6 col-xl-3 js-appear-enabled animated",
-                    "data-toggle": "appear"
-                }, c.a.createElement("a", {
-                    className: "block block-bordered block-link-pop text-center mb-0",
-                    onClick: ()=>f.a.push("/plan")
-                }, c.a.createElement("div", {
-                    className: "block-content block-content-full text-center"
-                }, c.a.createElement("i", {
-                    className: "fa-2x si si-bag text-primary d-none d-sm-inline-block mb-3"
-                }), c.a.createElement("div", {
-                    className: "font-w600 text-uppercase"
-                }, "Quản lý đặt hàng")))), c.a.createElement("div", {
-                    className: "col-sm-6 col-xl-3 js-appear-enabled animated",
-                    "data-toggle": "appear"
-                }, c.a.createElement("a", {
-                    className: "block block-bordered block-link-pop text-center mb-0",
-                    onClick: ()=>f.a.push("/user")
-                }, c.a.createElement("div", {
-                    className: "block-content block-content-full text-center"
-                }, c.a.createElement("i", {
-                    className: "fa-2x si si-users text-primary d-none d-sm-inline-block mb-3"
-                }), c.a.createElement("div", {
-                    className: "font-w600 text-uppercase"
-                }, "Quản lý người dùng")))), c.a.createElement("div", {
                     className: "row no-gutters"
                 }, c.a.createElement("div", {
                     className: "col-lg-12 js-appear-enabled animated",
