@@ -22884,7 +22884,7 @@
 			l = s.host,
 			u = document.createElement("link");
 		u.rel = "stylesheet",
-			u.href = l ? "./theme/".concat(c.color, ".css") : "./assets/admin/theme/".concat(c.color, ".css"),
+			u.href = l ? "./theme/".concat(c.color, ".css") : "./assets/staff/theme/".concat(c.color, ".css"),
 			document.getElementsByTagName("head")[0].appendChild(u),
 			a.a.locale("zh-cn"),
 			"1" === Object(r.d)("dark_mode") && Object(o.enable)({
@@ -65075,7 +65075,7 @@
 										}
 										return e.abrupt("return");
 									case 9:
-										if (t.data.is_admin) {
+										if (t.data.is_staff) {
 											e.next = 11;
 											break
 										}
@@ -72519,7 +72519,7 @@
 										}
 										return e.abrupt("return");
 									case 7:
-										if (!t.data.is_admin) {
+										if (!t.data.is_staff) {
 											e.next = 11;
 											break
 										}
@@ -96235,7 +96235,7 @@
 										return e.abrupt("return");
 									case 9:
 										if (Object(c.h)(t.data.auth_data),
-											t.data.is_admin) {
+											t.data.is_staff) {
 											e.next = 12;
 											break
 										}
