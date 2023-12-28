@@ -87552,852 +87552,936 @@
 		t.decode = t.parse = n("kd2E"),
 			t.encode = t.stringify = n("4JlD")
 	},
-	sFYk: function(e, t, n) {
-		"use strict";
-		n.r(t);
-		var r = n("jehZ"),
-			o = n.n(r),
-			i = n("1l/V"),
-			a = n.n(i),
-			s = n("q1tI"),
-			c = n.n(s),
-			l = n("Bl7J"),
-			u = n("/MKj"),
-			h = n("3a4m"),
-			f = n.n(h),
-			d = n("t3Un"),
-			p = n("20nU"),
-			m = n("IrRn"),
-			g = n("G+eS"),
-			v = n("k5Tp"),
-			y = n("MJSk"),
-			b = n("LadE"),
-			w = n("Syqx"),
-			x = n("/zI/"),
-			_ = n("NiBb"),
-			E = n("TLXH"),
-			S = n("xVpn"),
-			k = n("l6yY");
-
-		function C() {
-			C = function() {
-				return e
-			};
-			var e = {},
-				t = Object.prototype,
-				n = t.hasOwnProperty,
-				r = Object.defineProperty || function(e, t, n) {
-					e[t] = n.value
-				},
-				o = "function" == typeof Symbol ? Symbol : {},
-				i = o.iterator || "@@iterator",
-				a = o.asyncIterator || "@@asyncIterator",
-				s = o.toStringTag || "@@toStringTag";
-
-			function c(e, t, n) {
-				return Object.defineProperty(e, t, {
-						value: n,
-						enumerable: !0,
-						configurable: !0,
-						writable: !0
-					}),
-					e[t]
-			}
-			try {
-				c({}, "")
-			} catch (e) {
-				c = function(e, t, n) {
-					return e[t] = n
-				}
-			}
-
-			function l(e, t, n, o) {
-				var i = t && t.prototype instanceof f ? t : f,
-					a = Object.create(i.prototype),
-					s = new k(o || []);
-				return r(a, "_invoke", {
-						value: x(e, n, s)
-					}),
-					a
-			}
-
-			function u(e, t, n) {
-				try {
-					return {
-						type: "normal",
-						arg: e.call(t, n)
-					}
-				} catch (e) {
-					return {
-						type: "throw",
-						arg: e
-					}
-				}
-			}
-			e.wrap = l;
-			var h = {};
-
-			function f() {}
-
-			function d() {}
-
-			function p() {}
-			var m = {};
-			c(m, i, (function() {
-				return this
-			}));
-			var g = Object.getPrototypeOf,
-				v = g && g(g(O([])));
-			v && v !== t && n.call(v, i) && (m = v);
-			var y = p.prototype = f.prototype = Object.create(m);
-
-			function b(e) {
-				["next", "throw", "return"].forEach((function(t) {
-					c(e, t, (function(e) {
-						return this._invoke(t, e)
-					}))
-				}))
-			}
-
-			function w(e, t) {
-				function o(r, i, a, s) {
-					var c = u(e[r], e, i);
-					if ("throw" !== c.type) {
-						var l = c.arg,
-							h = l.value;
-						return h && "object" == typeof h && n.call(h, "__await") ? t.resolve(h.__await).then((function(e) {
-							o("next", e, a, s)
-						}), (function(e) {
-							o("throw", e, a, s)
-						})) : t.resolve(h).then((function(e) {
-							l.value = e,
-								a(l)
-						}), (function(e) {
-							return o("throw", e, a, s)
-						}))
-					}
-					s(c.arg)
-				}
-				var i;
-				r(this, "_invoke", {
-					value: function(e, n) {
-						function r() {
-							return new t((function(t, r) {
-								o(e, n, t, r)
-							}))
-						}
-						return i = i ? i.then(r, r) : r()
-					}
-				})
-			}
-
-			function x(e, t, n) {
-				var r = "suspendedStart";
-				return function(o, i) {
-					if ("executing" === r)
-						throw new Error("Generator is already running");
-					if ("completed" === r) {
-						if ("throw" === o)
-							throw i;
-						return {
-							value: void 0,
-							done: !0
-						}
-					}
-					for (n.method = o,
-						n.arg = i;;) {
-						var a = n.delegate;
-						if (a) {
-							var s = _(a, n);
-							if (s) {
-								if (s === h)
-									continue;
-								return s
-							}
-						}
-						if ("next" === n.method)
-							n.sent = n._sent = n.arg;
-						else if ("throw" === n.method) {
-							if ("suspendedStart" === r)
-								throw r = "completed",
-									n.arg;
-							n.dispatchException(n.arg)
-						} else
-							"return" === n.method && n.abrupt("return", n.arg);
-						r = "executing";
-						var c = u(e, t, n);
-						if ("normal" === c.type) {
-							if (r = n.done ? "completed" : "suspendedYield",
-								c.arg === h)
-								continue;
-							return {
-								value: c.arg,
-								done: n.done
-							}
-						}
-						"throw" === c.type && (r = "completed",
-							n.method = "throw",
-							n.arg = c.arg)
-					}
-				}
-			}
-
-			function _(e, t) {
-				var n = t.method,
-					r = e.iterator[n];
-				if (void 0 === r)
-					return t.delegate = null,
-						"throw" === n && e.iterator.return && (t.method = "return",
-							t.arg = void 0,
-							_(e, t),
-							"throw" === t.method) || "return" !== n && (t.method = "throw",
-							t.arg = new TypeError("The iterator does not provide a '" + n + "' method")),
-						h;
-				var o = u(r, e.iterator, t.arg);
-				if ("throw" === o.type)
-					return t.method = "throw",
-						t.arg = o.arg,
-						t.delegate = null,
-						h;
-				var i = o.arg;
-				return i ? i.done ? (t[e.resultName] = i.value,
-					t.next = e.nextLoc,
-					"return" !== t.method && (t.method = "next",
-						t.arg = void 0),
-					t.delegate = null,
-					h) : i : (t.method = "throw",
-					t.arg = new TypeError("iterator result is not an object"),
-					t.delegate = null,
-					h)
-			}
-
-			function E(e) {
-				var t = {
-					tryLoc: e[0]
-				};
-				1 in e && (t.catchLoc = e[1]),
-					2 in e && (t.finallyLoc = e[2],
-						t.afterLoc = e[3]),
-					this.tryEntries.push(t)
-			}
-
-			function S(e) {
-				var t = e.completion || {};
-				t.type = "normal",
-					delete t.arg,
-					e.completion = t
-			}
-
-			function k(e) {
-				this.tryEntries = [{
-						tryLoc: "root"
-					}],
-					e.forEach(E, this),
-					this.reset(!0)
-			}
-
-			function O(e) {
-				if (e) {
-					var t = e[i];
-					if (t)
-						return t.call(e);
-					if ("function" == typeof e.next)
-						return e;
-					if (!isNaN(e.length)) {
-						var r = -1,
-							o = function t() {
-								for (; ++r < e.length;)
-									if (n.call(e, r))
-										return t.value = e[r],
-											t.done = !1,
-											t;
-								return t.value = void 0,
-									t.done = !0,
-									t
-							};
-						return o.next = o
-					}
-				}
-				return {
-					next: T
-				}
-			}
-
-			function T() {
-				return {
-					value: void 0,
-					done: !0
-				}
-			}
-			return d.prototype = p,
-				r(y, "constructor", {
-					value: p,
-					configurable: !0
-				}),
-				r(p, "constructor", {
-					value: d,
-					configurable: !0
-				}),
-				d.displayName = c(p, s, "GeneratorFunction"),
-				e.isGeneratorFunction = function(e) {
-					var t = "function" == typeof e && e.constructor;
-					return !!t && (t === d || "GeneratorFunction" === (t.displayName || t.name))
-				},
-				e.mark = function(e) {
-					return Object.setPrototypeOf ? Object.setPrototypeOf(e, p) : (e.__proto__ = p,
-							c(e, s, "GeneratorFunction")),
-						e.prototype = Object.create(y),
-						e
-				},
-				e.awrap = function(e) {
-					return {
-						__await: e
-					}
-				},
-				b(w.prototype),
-				c(w.prototype, a, (function() {
-					return this
-				})),
-				e.AsyncIterator = w,
-				e.async = function(t, n, r, o, i) {
-					void 0 === i && (i = Promise);
-					var a = new w(l(t, n, r, o), i);
-					return e.isGeneratorFunction(n) ? a : a.next().then((function(e) {
-						return e.done ? e.value : a.next()
-					}))
-				},
-				b(y),
-				c(y, s, "Generator"),
-				c(y, i, (function() {
-					return this
-				})),
-				c(y, "toString", (function() {
-					return "[object Generator]"
-				})),
-				e.keys = function(e) {
-					var t = Object(e),
-						n = [];
-					for (var r in t)
-						n.push(r);
-					return n.reverse(),
-						function e() {
-							for (; n.length;) {
-								var r = n.pop();
-								if (r in t)
-									return e.value = r,
-										e.done = !1,
-										e
-							}
-							return e.done = !0,
-								e
-						}
-				},
-				e.values = O,
-				k.prototype = {
-					constructor: k,
-					reset: function(e) {
-						if (this.prev = 0,
-							this.next = 0,
-							this.sent = this._sent = void 0,
-							this.done = !1,
-							this.delegate = null,
-							this.method = "next",
-							this.arg = void 0,
-							this.tryEntries.forEach(S),
-							!e)
-							for (var t in this)
-								"t" === t.charAt(0) && n.call(this, t) && !isNaN(+t.slice(1)) && (this[t] = void 0)
-					},
-					stop: function() {
-						this.done = !0;
-						var e = this.tryEntries[0].completion;
-						if ("throw" === e.type)
-							throw e.arg;
-						return this.rval
-					},
-					dispatchException: function(e) {
-						if (this.done)
-							throw e;
-						var t = this;
-
-						function r(n, r) {
-							return a.type = "throw",
-								a.arg = e,
-								t.next = n,
-								r && (t.method = "next",
-									t.arg = void 0),
-								!!r
-						}
-						for (var o = this.tryEntries.length - 1; o >= 0; --o) {
-							var i = this.tryEntries[o],
-								a = i.completion;
-							if ("root" === i.tryLoc)
-								return r("end");
-							if (i.tryLoc <= this.prev) {
-								var s = n.call(i, "catchLoc"),
-									c = n.call(i, "finallyLoc");
-								if (s && c) {
-									if (this.prev < i.catchLoc)
-										return r(i.catchLoc, !0);
-									if (this.prev < i.finallyLoc)
-										return r(i.finallyLoc)
-								} else if (s) {
-									if (this.prev < i.catchLoc)
-										return r(i.catchLoc, !0)
-								} else {
-									if (!c)
-										throw new Error("try statement without catch or finally");
-									if (this.prev < i.finallyLoc)
-										return r(i.finallyLoc)
-								}
-							}
-						}
-					},
-					abrupt: function(e, t) {
-						for (var r = this.tryEntries.length - 1; r >= 0; --r) {
-							var o = this.tryEntries[r];
-							if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) {
-								var i = o;
-								break
-							}
-						}
-						i && ("break" === e || "continue" === e) && i.tryLoc <= t && t <= i.finallyLoc && (i = null);
-						var a = i ? i.completion : {};
-						return a.type = e,
-							a.arg = t,
-							i ? (this.method = "next",
-								this.next = i.finallyLoc,
-								h) : this.complete(a)
-					},
-					complete: function(e, t) {
-						if ("throw" === e.type)
-							throw e.arg;
-						return "break" === e.type || "continue" === e.type ? this.next = e.arg : "return" === e.type ? (this.rval = this.arg = e.arg,
-								this.method = "return",
-								this.next = "end") : "normal" === e.type && t && (this.next = t),
-							h
-					},
-					finish: function(e) {
-						for (var t = this.tryEntries.length - 1; t >= 0; --t) {
-							var n = this.tryEntries[t];
-							if (n.finallyLoc === e)
-								return this.complete(n.completion, n.afterLoc),
-									S(n),
-									h
-						}
-					},
-					catch: function(e) {
-						for (var t = this.tryEntries.length - 1; t >= 0; --t) {
-							var n = this.tryEntries[t];
-							if (n.tryLoc === e) {
-								var r = n.completion;
-								if ("throw" === r.type) {
-									var o = r.arg;
-									S(n)
-								}
-								return o
-							}
-						}
-						throw new Error("illegal catch attempt")
-					},
-					delegateYield: function(e, t, n) {
-						return this.delegate = {
-								iterator: O(e),
-								resultName: t,
-								nextLoc: n
-							},
-							"next" === this.method && (this.arg = void 0),
-							h
-					}
-				},
-				e
-		}
-		m.a([v.a, y.a, b.a, w.a, x.a, _.a, E.a, k.a, S.a]);
-		class O extends c.a.Component {
-			constructor(e) {
-				super(e),
-					this.state = {},
-					this.orderChart = c.a.createRef(),
-					this.orderChartObj = void 0,
-					this.serverLastRankChart = c.a.createRef(),
-					this.serverTodayRankChart = c.a.createRef(),
-					this.userTodayRankChart = c.a.createRef(),
-					this.userLastRankChart = c.a.createRef(),
-					this.serverLastRankChartObj = void 0,
-					this.serverTodayRankChartObj = void 0,
-					this.userTodayRankChartObj = void 0,
-					this.userLastRankChartObj = void 0
-			}
-			orderChartRender(e) {
-				var t;
-				this.orderChartObj = g.b(null === (t = this.orderChart) || void 0 === t ? void 0 : t.current, "vintage", {
-					renderer: "svg"
-				});
-				var n = {
-					tooltip: {
-						trigger: "axis"
-					},
-					legend: {
-						data: [],
-						left: "0",
-						z: 4
-					},
-					grid: {
-						left: "1%",
-						right: "1%",
-						bottom: "3%",
-						containLabel: !0
-					},
-					xAxis: {
-						type: "category",
-						boundaryGap: !1,
-						data: []
-					},
-					yAxis: {
-						type: "value"
-					},
-					series: []
-				};
-				e.forEach(e => {
-						-1 === n.legend.data.indexOf(e.type) && n.legend.data.push(e.type),
-							-1 === n.xAxis.data.indexOf(e.date) && n.xAxis.data.push(e.date);
-						var t = n.series.find(t => t.name === e.type);
-						t ? t.data.push(e.value) : n.series.push({
-							name: e.type,
-							type: "line",
-							smooth: !0,
-							data: [e.value]
-						})
-					}),
-					this.orderChartObj.setOption(n),
-					window.addEventListener("resize", this.chartResize.bind(this))
-			}
-			serverLastRankChartRender(e) {
-				var t;
-				this.serverLastRankChartObj = g.b(null === (t = this.serverLastRankChart) || void 0 === t ? void 0 : t.current);
-				var n = {
-					tooltip: {
-						trigger: "axis",
-						formatter: e => {
-							var roundedValue = Math.round(e[0].value * 100) / 100;
-							return "".concat(roundedValue, " GB")
-						}
-					},
-					grid: {
-						top: "1%",
-						left: "1%",
-						right: "1%",
-						bottom: "3%",
-						containLabel: !0
-					},
-					xAxis: {
-						type: "value"
-					},
-					yAxis: {
-						type: "category",
-						data: []
-					},
-					series: [{
-						data: [],
-						type: "bar"
-					}]
-				};
-				e.reverse().forEach(e => {
-						var roundedTotal = Math.round(e.total * 100) / 100;
-						n.yAxis.data.push(e.server_name),
-							n.series[0].data.push(roundedTotal)
-					}),
-					this.serverLastRankChartObj.setOption(n)
-			}
-			serverTodayRankChartRender(e) {
-				var t;
-				this.serverTodayRankChartObj = g.b(null === (t = this.serverTodayRankChart) || void 0 === t ? void 0 : t.current);
-				var n = {
-					tooltip: {
-						trigger: "axis",
-						formatter: e => {
-							var roundedValue = Math.round(e[0].value * 100) / 100;
-							return "".concat(roundedValue, " GB")
-						}
-					},
-					grid: {
-						top: "1%",
-						left: "1%",
-						right: "1%",
-						bottom: "3%",
-						containLabel: !0
-					},
-					xAxis: {
-						type: "value"
-					},
-					yAxis: {
-						type: "category",
-						data: []
-					},
-					series: [{
-						data: [],
-						type: "bar"
-					}]
-				};
-				e.reverse().forEach(e => {
-						var roundedTotal = Math.round(e.total * 100) / 100;
-						n.yAxis.data.push(e.server_name),
-							n.series[0].data.push(roundedTotal)
-					}),
-					this.serverTodayRankChartObj.setOption(n)
-			}
-			userTodayRankChartRender(e) {
-				var t;
-				this.userTodayRankChartObj = g.b(null === (t = this.userTodayRankChart) || void 0 === t ? void 0 : t.current);
-				var n = {
-					tooltip: {
-						trigger: "axis",
-						formatter: e => {
-							var roundedValue = Math.round(e[0].value * 100) / 100;
-							return "".concat(roundedValue, " GB")
-						}
-					},
-					grid: {
-						top: "1%",
-						left: "1%",
-						right: "1%",
-						bottom: "3%",
-						containLabel: !0
-					},
-					xAxis: {
-						type: "value"
-					},
-					yAxis: {
-						type: "category",
-						data: []
-					},
-					series: [{
-						data: [],
-						type: "bar"
-					}]
-				};
-				e.reverse().forEach(e => {
-						var roundedTotal = Math.round(e.total * 100) / 100;
-						n.yAxis.data.push(e.email),
-							n.series[0].data.push(roundedTotal)
-					}),
-					this.userTodayRankChartObj.setOption(n)
-			}
-			userLastRankChartRender(e) {
-				var t;
-				this.userLastRankChartObj = g.b(null === (t = this.userLastRankChart) || void 0 === t ? void 0 : t.current);
-				var n = {
-					tooltip: {
-						trigger: "axis",
-						formatter: e => {
-							var roundedValue = Math.round(e[0].value * 100) / 100;
-							return "".concat(roundedValue, " GB")
-						}
-					},
-					grid: {
-						top: "1%",
-						left: "1%",
-						right: "1%",
-						bottom: "3%",
-						containLabel: !0
-					},
-					xAxis: {
-						type: "value"
-					},
-					yAxis: {
-						type: "category",
-						data: []
-					},
-					series: [{
-						data: [],
-						type: "bar"
-					}]
-				};
-				e.reverse().forEach(e => {
-						var roundedTotal = Math.round(e.total * 100) / 100;
-						n.yAxis.data.push(e.email),
-							n.series[0].data.push(roundedTotal)
-					}),
-					this.userLastRankChartObj.setOption(n)
-			}
-			chartResize() {
-				this.orderChartObj.resize(),
-					this.serverLastRankChartObj.resize(),
-					this.serverTodayRankChartObj.resize(),
-					this.userTodayRankChartObj.resize(),
-					this.userLastRankChartObj.resize()
-			}
-			componentDidMount() {
-				var e = this;
-					this.props.dispatch({
-						type: "stat/getServerLastRank",
-						complete: e => {
-							this.serverLastRankChartRender(e)
-						}
-					}),
-					this.props.dispatch({
-						type: "stat/getServerTodayRank",
-						complete: e => {
-							this.serverTodayRankChartRender(e)
-						}
-					}),
-					this.props.dispatch({
-						type: "stat/getUserTodayRank",
-						complete: e => {
-							this.userTodayRankChartRender(e)
-						}
-					}),
-					this.props.dispatch({
-						type: "stat/getUserLastRank",
-						complete: e => {
-							this.userLastRankChartRender(e)
-						}
-					})
-			}
-			componentWillUnmount() {
-				window.removeEventListener("resize", this.chartResize.bind(this))
-			}
-			orderFilter() {
-				this.props.dispatch({
-						type: "order/addFilter",
-						key: "commission_status",
-						condition: "=",
-						value: 0
-					}),
-					this.props.dispatch({
-						type: "order/addFilter",
-						key: "invite_user_id",
-						condition: "!=",
-						value: ""
-					}),
-					f.a.push("/order")
-			}
-			checkQueue() {
-				var e = this;
-				return a()(C().mark((function t() {
-					var n, r;
-					return C().wrap((function(t) {
-						for (;;)
-							switch (t.prev = t.next) {
-								case 0:
-									return n = new URL(p.a.serviceHost),
-										t.next = 3,
-										Object(d.a)((null == n ? void 0 : n.origin) + "/monitor/api/stats");
-								case 3:
-									r = t.sent,
-										e.setState({
-											queueStatus: null == r ? void 0 : r.status
-										});
-								case 5:
-								case "end":
-									return t.stop()
-							}
-					}), t)
-				})))()
-			}
-			render() {
-				var e = this.props,
-					t = e.stat,
-					n = e.config,
-					r = [];
-				return r.push(),
-					c.a.createElement(l.a, o()({}, this.props, {
-						title: "Bảng điều khiển"
-					}), this.state.queueStatus && "running" !== this.state.queueStatus && c.a.createElement("div", {
-						className: "row"
-					}, c.a.createElement("div", {
-						className: "col-lg-12"
-					}, c.a.createElement("div", {
-						className: "alert alert-danger",
-						role: "alert"
-					}, c.a.createElement("p", {
-						className: "mb-0"
-					}, "Dịch vụ trong danh sách nhóm hiện tại đang hoạt động bất thường, có thể dẫn đến không thể sử dụng dịch vụ.")))), r.map((e => e)), c.a.createElement("div", {
-						className: "row mt-xl-3"
-					}, c.a.createElement("div", {
-						className: "col-lg-6 js-appear-enabled animated pr-xl-1",
-						"data-toggle": "appear"
-					}, c.a.createElement("div", {
-						className: "block border-bottom"
-					}, c.a.createElement("div", {
-						class: "block-header block-header-default"
-					}, c.a.createElement("h3", {
-						class: "block-title"
-					}, "Thống Kê Lưu Lượng Server Sử Dụng Nhiều Nhất Hôm Nay")), c.a.createElement("div", {
-						className: "block-content"
-					}, c.a.createElement("div", {
-						className: "px-sm-3 pt-sm-3 py-3 clearfix",
-						id: "serverTodayRankChart",
-						style: {
-							height: 400
-						},
-						ref: this.serverTodayRankChart
-					})))), c.a.createElement("div", {
-						className: "col-lg-6 js-appear-enabled animated pr-xl-1",
-						"data-toggle": "appear"
-					}, c.a.createElement("div", {
-						className: "block border-bottom"
-					}, c.a.createElement("div", {
-						class: "block-header block-header-default"
-					}, c.a.createElement("h3", {
-						class: "block-title"
-					}, "Tóp 15 Người Dùng Sử Dụng Lưu Lượng Hôm Nay")), c.a.createElement("div", {
-						className: "block-content"
-					}, c.a.createElement("div", {
-						className: "px-sm-3 pt-sm-3 py-3 clearfix",
-						id: "userTodayRankChart",
-						style: {
-							height: 400
-						},
-						ref: this.userTodayRankChart
-					})))), c.a.createElement("div", {
-						className: "col-lg-6 js-appear-enabled animated",
-						"data-toggle": "appear"
-					}, c.a.createElement("div", {
-						className: "block border-bottom"
-					}, c.a.createElement("div", {
-						class: "block-header block-header-default"
-					}, c.a.createElement("h3", {
-						class: "block-title"
-					}, "Thống Kê Lưu Lượng Server Sử Dụng Nhiều Nhất Hôm Qua")), c.a.createElement("div", {
-						className: "block-content"
-					}, c.a.createElement("div", {
-						className: "px-sm-3 pt-sm-3 py-3 clearfix",
-						id: "serverLastRankChart",
-						style: {
-							height: 400
-						},
-						ref: this.serverLastRankChart
-					})))), c.a.createElement("div", {
-						className: "col-lg-6 js-appear-enabled animated",
-						"data-toggle": "appear"
-					}, c.a.createElement("div", {
-						className: "block border-bottom"
-					}, c.a.createElement("div", {
-						class: "block-header block-header-default"
-					}, c.a.createElement("h3", {
-						class: "block-title"
-					}, "Thống Kê 15 Người Dùng Nhiều Nhất Ngày Hôm Qua")), c.a.createElement("div", {
-						className: "block-content"
-					}, c.a.createElement("div", {
-						className: "px-sm-3 pt-sm-3 py-3 clearfix",
-						id: "userLastRankChart",
-						style: {
-							height: 400
-						},
-						ref: this.userLastRankChart
-					}))))))
-			}
-		}
-		t.default = Object(u.c)(e => {
-			var t = e.stat,
-				n = e.config;
-			return {
-				stat: t,
-				config: n
-			}
-		})(O)
-	},
+    sFYk: function(e, t, n) {
+        "use strict";
+        n.r(t);
+        var r = n("jehZ")
+          , o = n.n(r)
+          , i = n("1l/V")
+          , a = n.n(i)
+          , s = n("q1tI")
+          , c = n.n(s)
+          , l = n("Bl7J")
+          , u = n("/MKj")
+          , h = n("3a4m")
+          , f = n.n(h)
+          , d = n("t3Un")
+          , p = n("20nU")
+          , m = n("IrRn")
+          , g = n("G+eS")
+          , v = n("k5Tp")
+          , y = n("MJSk")
+          , b = n("LadE")
+          , w = n("Syqx")
+          , x = n("/zI/")
+          , _ = n("NiBb")
+          , E = n("TLXH")
+          , S = n("xVpn")
+          , k = n("l6yY");
+        function C() {
+            C = function() {
+                return e
+            }
+            ;
+            var e = {}
+              , t = Object.prototype
+              , n = t.hasOwnProperty
+              , r = Object.defineProperty || function(e, t, n) {
+                e[t] = n.value
+            }
+              , o = "function" == typeof Symbol ? Symbol : {}
+              , i = o.iterator || "@@iterator"
+              , a = o.asyncIterator || "@@asyncIterator"
+              , s = o.toStringTag || "@@toStringTag";
+            function c(e, t, n) {
+                return Object.defineProperty(e, t, {
+                    value: n,
+                    enumerable: !0,
+                    configurable: !0,
+                    writable: !0
+                }),
+                e[t]
+            }
+            try {
+                c({}, "")
+            } catch (e) {
+                c = function(e, t, n) {
+                    return e[t] = n
+                }
+            }
+            function l(e, t, n, o) {
+                var i = t && t.prototype instanceof f ? t : f
+                  , a = Object.create(i.prototype)
+                  , s = new k(o || []);
+                return r(a, "_invoke", {
+                    value: x(e, n, s)
+                }),
+                a
+            }
+            function u(e, t, n) {
+                try {
+                    return {
+                        type: "normal",
+                        arg: e.call(t, n)
+                    }
+                } catch (e) {
+                    return {
+                        type: "throw",
+                        arg: e
+                    }
+                }
+            }
+            e.wrap = l;
+            var h = {};
+            function f() {}
+            function d() {}
+            function p() {}
+            var m = {};
+            c(m, i, (function() {
+                return this
+            }
+            ));
+            var g = Object.getPrototypeOf
+              , v = g && g(g(O([])));
+            v && v !== t && n.call(v, i) && (m = v);
+            var y = p.prototype = f.prototype = Object.create(m);
+            function b(e) {
+                ["next", "throw", "return"].forEach((function(t) {
+                    c(e, t, (function(e) {
+                        return this._invoke(t, e)
+                    }
+                    ))
+                }
+                ))
+            }
+            function w(e, t) {
+                function o(r, i, a, s) {
+                    var c = u(e[r], e, i);
+                    if ("throw" !== c.type) {
+                        var l = c.arg
+                          , h = l.value;
+                        return h && "object" == typeof h && n.call(h, "__await") ? t.resolve(h.__await).then((function(e) {
+                            o("next", e, a, s)
+                        }
+                        ), (function(e) {
+                            o("throw", e, a, s)
+                        }
+                        )) : t.resolve(h).then((function(e) {
+                            l.value = e,
+                            a(l)
+                        }
+                        ), (function(e) {
+                            return o("throw", e, a, s)
+                        }
+                        ))
+                    }
+                    s(c.arg)
+                }
+                var i;
+                r(this, "_invoke", {
+                    value: function(e, n) {
+                        function r() {
+                            return new t((function(t, r) {
+                                o(e, n, t, r)
+                            }
+                            ))
+                        }
+                        return i = i ? i.then(r, r) : r()
+                    }
+                })
+            }
+            function x(e, t, n) {
+                var r = "suspendedStart";
+                return function(o, i) {
+                    if ("executing" === r)
+                        throw new Error("Generator is already running");
+                    if ("completed" === r) {
+                        if ("throw" === o)
+                            throw i;
+                        return {
+                            value: void 0,
+                            done: !0
+                        }
+                    }
+                    for (n.method = o,
+                    n.arg = i; ; ) {
+                        var a = n.delegate;
+                        if (a) {
+                            var s = _(a, n);
+                            if (s) {
+                                if (s === h)
+                                    continue;
+                                return s
+                            }
+                        }
+                        if ("next" === n.method)
+                            n.sent = n._sent = n.arg;
+                        else if ("throw" === n.method) {
+                            if ("suspendedStart" === r)
+                                throw r = "completed",
+                                n.arg;
+                            n.dispatchException(n.arg)
+                        } else
+                            "return" === n.method && n.abrupt("return", n.arg);
+                        r = "executing";
+                        var c = u(e, t, n);
+                        if ("normal" === c.type) {
+                            if (r = n.done ? "completed" : "suspendedYield",
+                            c.arg === h)
+                                continue;
+                            return {
+                                value: c.arg,
+                                done: n.done
+                            }
+                        }
+                        "throw" === c.type && (r = "completed",
+                        n.method = "throw",
+                        n.arg = c.arg)
+                    }
+                }
+            }
+            function _(e, t) {
+                var n = t.method
+                  , r = e.iterator[n];
+                if (void 0 === r)
+                    return t.delegate = null,
+                    "throw" === n && e.iterator.return && (t.method = "return",
+                    t.arg = void 0,
+                    _(e, t),
+                    "throw" === t.method) || "return" !== n && (t.method = "throw",
+                    t.arg = new TypeError("The iterator does not provide a '" + n + "' method")),
+                    h;
+                var o = u(r, e.iterator, t.arg);
+                if ("throw" === o.type)
+                    return t.method = "throw",
+                    t.arg = o.arg,
+                    t.delegate = null,
+                    h;
+                var i = o.arg;
+                return i ? i.done ? (t[e.resultName] = i.value,
+                t.next = e.nextLoc,
+                "return" !== t.method && (t.method = "next",
+                t.arg = void 0),
+                t.delegate = null,
+                h) : i : (t.method = "throw",
+                t.arg = new TypeError("iterator result is not an object"),
+                t.delegate = null,
+                h)
+            }
+            function E(e) {
+                var t = {
+                    tryLoc: e[0]
+                };
+                1 in e && (t.catchLoc = e[1]),
+                2 in e && (t.finallyLoc = e[2],
+                t.afterLoc = e[3]),
+                this.tryEntries.push(t)
+            }
+            function S(e) {
+                var t = e.completion || {};
+                t.type = "normal",
+                delete t.arg,
+                e.completion = t
+            }
+            function k(e) {
+                this.tryEntries = [{
+                    tryLoc: "root"
+                }],
+                e.forEach(E, this),
+                this.reset(!0)
+            }
+            function O(e) {
+                if (e) {
+                    var t = e[i];
+                    if (t)
+                        return t.call(e);
+                    if ("function" == typeof e.next)
+                        return e;
+                    if (!isNaN(e.length)) {
+                        var r = -1
+                          , o = function t() {
+                            for (; ++r < e.length; )
+                                if (n.call(e, r))
+                                    return t.value = e[r],
+                                    t.done = !1,
+                                    t;
+                            return t.value = void 0,
+                            t.done = !0,
+                            t
+                        };
+                        return o.next = o
+                    }
+                }
+                return {
+                    next: T
+                }
+            }
+            function T() {
+                return {
+                    value: void 0,
+                    done: !0
+                }
+            }
+            return d.prototype = p,
+            r(y, "constructor", {
+                value: p,
+                configurable: !0
+            }),
+            r(p, "constructor", {
+                value: d,
+                configurable: !0
+            }),
+            d.displayName = c(p, s, "GeneratorFunction"),
+            e.isGeneratorFunction = function(e) {
+                var t = "function" == typeof e && e.constructor;
+                return !!t && (t === d || "GeneratorFunction" === (t.displayName || t.name))
+            }
+            ,
+            e.mark = function(e) {
+                return Object.setPrototypeOf ? Object.setPrototypeOf(e, p) : (e.__proto__ = p,
+                c(e, s, "GeneratorFunction")),
+                e.prototype = Object.create(y),
+                e
+            }
+            ,
+            e.awrap = function(e) {
+                return {
+                    __await: e
+                }
+            }
+            ,
+            b(w.prototype),
+            c(w.prototype, a, (function() {
+                return this
+            }
+            )),
+            e.AsyncIterator = w,
+            e.async = function(t, n, r, o, i) {
+                void 0 === i && (i = Promise);
+                var a = new w(l(t, n, r, o),i);
+                return e.isGeneratorFunction(n) ? a : a.next().then((function(e) {
+                    return e.done ? e.value : a.next()
+                }
+                ))
+            }
+            ,
+            b(y),
+            c(y, s, "Generator"),
+            c(y, i, (function() {
+                return this
+            }
+            )),
+            c(y, "toString", (function() {
+                return "[object Generator]"
+            }
+            )),
+            e.keys = function(e) {
+                var t = Object(e)
+                  , n = [];
+                for (var r in t)
+                    n.push(r);
+                return n.reverse(),
+                function e() {
+                    for (; n.length; ) {
+                        var r = n.pop();
+                        if (r in t)
+                            return e.value = r,
+                            e.done = !1,
+                            e
+                    }
+                    return e.done = !0,
+                    e
+                }
+            }
+            ,
+            e.values = O,
+            k.prototype = {
+                constructor: k,
+                reset: function(e) {
+                    if (this.prev = 0,
+                    this.next = 0,
+                    this.sent = this._sent = void 0,
+                    this.done = !1,
+                    this.delegate = null,
+                    this.method = "next",
+                    this.arg = void 0,
+                    this.tryEntries.forEach(S),
+                    !e)
+                        for (var t in this)
+                            "t" === t.charAt(0) && n.call(this, t) && !isNaN(+t.slice(1)) && (this[t] = void 0)
+                },
+                stop: function() {
+                    this.done = !0;
+                    var e = this.tryEntries[0].completion;
+                    if ("throw" === e.type)
+                        throw e.arg;
+                    return this.rval
+                },
+                dispatchException: function(e) {
+                    if (this.done)
+                        throw e;
+                    var t = this;
+                    function r(n, r) {
+                        return a.type = "throw",
+                        a.arg = e,
+                        t.next = n,
+                        r && (t.method = "next",
+                        t.arg = void 0),
+                        !!r
+                    }
+                    for (var o = this.tryEntries.length - 1; o >= 0; --o) {
+                        var i = this.tryEntries[o]
+                          , a = i.completion;
+                        if ("root" === i.tryLoc)
+                            return r("end");
+                        if (i.tryLoc <= this.prev) {
+                            var s = n.call(i, "catchLoc")
+                              , c = n.call(i, "finallyLoc");
+                            if (s && c) {
+                                if (this.prev < i.catchLoc)
+                                    return r(i.catchLoc, !0);
+                                if (this.prev < i.finallyLoc)
+                                    return r(i.finallyLoc)
+                            } else if (s) {
+                                if (this.prev < i.catchLoc)
+                                    return r(i.catchLoc, !0)
+                            } else {
+                                if (!c)
+                                    throw new Error("try statement without catch or finally");
+                                if (this.prev < i.finallyLoc)
+                                    return r(i.finallyLoc)
+                            }
+                        }
+                    }
+                },
+                abrupt: function(e, t) {
+                    for (var r = this.tryEntries.length - 1; r >= 0; --r) {
+                        var o = this.tryEntries[r];
+                        if (o.tryLoc <= this.prev && n.call(o, "finallyLoc") && this.prev < o.finallyLoc) {
+                            var i = o;
+                            break
+                        }
+                    }
+                    i && ("break" === e || "continue" === e) && i.tryLoc <= t && t <= i.finallyLoc && (i = null);
+                    var a = i ? i.completion : {};
+                    return a.type = e,
+                    a.arg = t,
+                    i ? (this.method = "next",
+                    this.next = i.finallyLoc,
+                    h) : this.complete(a)
+                },
+                complete: function(e, t) {
+                    if ("throw" === e.type)
+                        throw e.arg;
+                    return "break" === e.type || "continue" === e.type ? this.next = e.arg : "return" === e.type ? (this.rval = this.arg = e.arg,
+                    this.method = "return",
+                    this.next = "end") : "normal" === e.type && t && (this.next = t),
+                    h
+                },
+                finish: function(e) {
+                    for (var t = this.tryEntries.length - 1; t >= 0; --t) {
+                        var n = this.tryEntries[t];
+                        if (n.finallyLoc === e)
+                            return this.complete(n.completion, n.afterLoc),
+                            S(n),
+                            h
+                    }
+                },
+                catch: function(e) {
+                    for (var t = this.tryEntries.length - 1; t >= 0; --t) {
+                        var n = this.tryEntries[t];
+                        if (n.tryLoc === e) {
+                            var r = n.completion;
+                            if ("throw" === r.type) {
+                                var o = r.arg;
+                                S(n)
+                            }
+                            return o
+                        }
+                    }
+                    throw new Error("illegal catch attempt")
+                },
+                delegateYield: function(e, t, n) {
+                    return this.delegate = {
+                        iterator: O(e),
+                        resultName: t,
+                        nextLoc: n
+                    },
+                    "next" === this.method && (this.arg = void 0),
+                    h
+                }
+            },
+            e
+        }
+        m.a([v.a, y.a, b.a, w.a, x.a, _.a, E.a, k.a, S.a]);
+        class O extends c.a.Component {
+            constructor(e) {
+                super(e),
+                this.state = {},
+                this.orderChart = c.a.createRef(),
+                this.orderChartObj = void 0,
+                this.serverLastRankChart = c.a.createRef(),
+                this.serverTodayRankChart = c.a.createRef(),
+                this.userTodayRankChart = c.a.createRef(),
+                this.userLastRankChart = c.a.createRef(),
+                this.serverLastRankChartObj = void 0,
+                this.serverTodayRankChartObj = void 0,
+                this.userTodayRankChartObj = void 0,
+                this.userLastRankChartObj = void 0
+            }
+            orderChartRender(e) {
+                var t;
+                this.orderChartObj = g.b(null === (t = this.orderChart) || void 0 === t ? void 0 : t.current, "vintage", {
+                    renderer: "svg"
+                });
+                var n = {
+                    tooltip: {
+                        trigger: "axis"
+                    },
+                    legend: {
+                        data: [],
+                        left: "0",
+                        z: 4
+                    },
+                    grid: {
+                        left: "1%",
+                        right: "1%",
+                        bottom: "3%",
+                        containLabel: !0
+                    },
+                    xAxis: {
+                        type: "category",
+                        boundaryGap: !1,
+                        data: []
+                    },
+                    yAxis: {
+                        type: "value"
+                    },
+                    series: []
+                };
+                e.forEach(e=>{
+                    -1 === n.legend.data.indexOf(e.type) && n.legend.data.push(e.type),
+                    -1 === n.xAxis.data.indexOf(e.date) && n.xAxis.data.push(e.date);
+                    var t = n.series.find(t=>t.name === e.type);
+                    t ? t.data.push(e.value) : n.series.push({
+                        name: e.type,
+                        type: "line",
+                        smooth: !0,
+                        data: [e.value]
+                    })
+                }
+                ),
+                this.orderChartObj.setOption(n),
+                window.addEventListener("resize", this.chartResize.bind(this))
+            }
+            serverLastRankChartRender(e) {
+                var t;
+                this.serverLastRankChartObj = g.b(null === (t = this.serverLastRankChart) || void 0 === t ? void 0 : t.current);
+                var n = {
+                    tooltip: {
+                        trigger: "axis",
+                        formatter: e=>{
+                            var roundedValue = Math.round(e[0].value * 100) / 100;
+                            return "".concat(roundedValue, " GB")
+                        }
+                    },
+                    grid: {
+                        top: "1%",
+                        left: "1%",
+                        right: "1%",
+                        bottom: "3%",
+                        containLabel: !0
+                    },
+                    xAxis: {
+                        type: "value"
+                    },
+                    yAxis: {
+                        type: "category",
+                        data: []
+                    },
+                    series: [{
+                        data: [],
+                        type: "bar"
+                    }]
+                };
+                e.reverse().forEach(e=>{
+                    var roundedTotal = Math.round(e.total * 100) / 100;
+                    n.yAxis.data.push(e.server_name),
+                    n.series[0].data.push(roundedTotal)
+                }
+                ),
+                this.serverLastRankChartObj.setOption(n)
+            }
+            serverTodayRankChartRender(e) {
+                var t;
+                this.serverTodayRankChartObj = g.b(null === (t = this.serverTodayRankChart) || void 0 === t ? void 0 : t.current);
+                var n = {
+                    tooltip: {
+                        trigger: "axis",
+                        formatter: e=>{
+                            var roundedValue = Math.round(e[0].value * 100) / 100;
+                            return "".concat(roundedValue, " GB")
+                        }
+                    },
+                    grid: {
+                        top: "1%",
+                        left: "1%",
+                        right: "1%",
+                        bottom: "3%",
+                        containLabel: !0
+                    },
+                    xAxis: {
+                        type: "value"
+                    },
+                    yAxis: {
+                        type: "category",
+                        data: []
+                    },
+                    series: [{
+                        data: [],
+                        type: "bar"
+                    }]
+                };
+                e.reverse().forEach(e=>{
+                    var roundedTotal = Math.round(e.total * 100) / 100;
+                    n.yAxis.data.push(e.server_name),
+                    n.series[0].data.push(roundedTotal)
+                }
+                ),
+                this.serverTodayRankChartObj.setOption(n)
+            }
+            userTodayRankChartRender(e) {
+                var t;
+                this.userTodayRankChartObj = g.b(null === (t = this.userTodayRankChart) || void 0 === t ? void 0 : t.current);
+                var n = {
+                    tooltip: {
+                        trigger: "axis",
+                        formatter: e=>{
+                            var roundedValue = Math.round(e[0].value * 100) / 100;
+                            return "".concat(roundedValue, " GB")
+                        }
+                    },
+                    grid: {
+                        top: "1%",
+                        left: "1%",
+                        right: "1%",
+                        bottom: "3%",
+                        containLabel: !0
+                    },
+                    xAxis: {
+                        type: "value"
+                    },
+                    yAxis: {
+                        type: "category",
+                        data: []
+                    },
+                    series: [{
+                        data: [],
+                        type: "bar"
+                    }]
+                };
+                e.reverse().forEach(e=>{
+                    var roundedTotal = Math.round(e.total * 100) / 100;
+                    n.yAxis.data.push(e.email),
+                    n.series[0].data.push(roundedTotal)
+                }
+                ),
+                this.userTodayRankChartObj.setOption(n)
+            }
+            userLastRankChartRender(e) {
+                var t;
+                this.userLastRankChartObj = g.b(null === (t = this.userLastRankChart) || void 0 === t ? void 0 : t.current);
+                var n = {
+                    tooltip: {
+                        trigger: "axis",
+                        formatter: e=>{
+                            var roundedValue = Math.round(e[0].value * 100) / 100;
+                            return "".concat(roundedValue, " GB")
+                        }
+                    },
+                    grid: {
+                        top: "1%",
+                        left: "1%",
+                        right: "1%",
+                        bottom: "3%",
+                        containLabel: !0
+                    },
+                    xAxis: {
+                        type: "value"
+                    },
+                    yAxis: {
+                        type: "category",
+                        data: []
+                    },
+                    series: [{
+                        data: [],
+                        type: "bar"
+                    }]
+                };
+                e.reverse().forEach(e=>{
+                    var roundedTotal = Math.round(e.total * 100) / 100;
+                    n.yAxis.data.push(e.email),
+                    n.series[0].data.push(roundedTotal)
+                }
+                ),
+                this.userLastRankChartObj.setOption(n)
+            }
+            chartResize() {
+                this.orderChartObj.resize(),
+                this.serverLastRankChartObj.resize(),
+                this.serverTodayRankChartObj.resize(),
+                this.userTodayRankChartObj.resize(),
+                this.userLastRankChartObj.resize()
+            }
+            componentDidMount() {
+                var e = this;
+                this.props.dispatch({
+                    type: "stat/getOverride"
+                }),
+                this.props.dispatch({
+                    type: "stat/getOrder",
+                    complete: e=>{
+                        this.orderChartRender(e)
+                    }
+                }),
+                this.props.dispatch({
+                    type: "stat/getServerLastRank",
+                    complete: e=>{
+                        this.serverLastRankChartRender(e)
+                    }
+                }),
+                this.props.dispatch({
+                    type: "stat/getServerTodayRank",
+                    complete: e=>{
+                        this.serverTodayRankChartRender(e)
+                    }
+                }),
+                this.props.dispatch({
+                    type: "stat/getUserTodayRank",
+                    complete: e=>{
+                        this.userTodayRankChartRender(e)
+                    }
+                }),
+                this.props.dispatch({
+                    type: "stat/getUserLastRank",
+                    complete: e=>{
+                        this.userLastRankChartRender(e)
+                    }
+                })
+            }
+            componentWillUnmount() {
+                window.removeEventListener("resize", this.chartResize.bind(this))
+            }
+            orderFilter() {
+                this.props.dispatch({
+                    type: "order/addFilter",
+                    key: "commission_status",
+                    condition: "=",
+                    value: 0
+                }),
+                this.props.dispatch({
+                    type: "order/addFilter",
+                    key: "invite_user_id",
+                    condition: "!=",
+                    value: ""
+                }),
+                f.a.push("/order")
+            }
+            render() {
+                var e = this.props
+                  , t = e.stat
+                  , n = e.config
+                  , r = [];
+                return t.ticket_pending_total && c.a.createElement(l.a, o()({}, this.props, {
+                    title: "Bảng điều khiển"
+                }), c.a.createElement("div", {
+                    className: "col-sm-6 col-xl-3 js-appear-enabled animated",
+                    "data-toggle": "appear"
+                }, c.a.createElement("a", {
+                    className: "block block-bordered block-link-pop text-center mb-0",
+                    onClick: ()=>f.a.push("/order")
+                }, c.a.createElement("div", {
+                    className: "block-content block-content-full text-center"
+                }, c.a.createElement("i", {
+                    className: "fa-2x si si-list text-primary d-none d-sm-inline-block mb-3"
+                }), c.a.createElement("div", {
+                    className: "font-w600 text-uppercase"
+                }, "Quản lý đơn hàng")))), c.a.createElement("div", {
+                    className: "col-sm-6 col-xl-3 js-appear-enabled animated",
+                    "data-toggle": "appear"
+                }, c.a.createElement("a", {
+                    className: "block block-bordered block-link-pop text-center mb-0",
+                    onClick: ()=>f.a.push("/plan")
+                }, c.a.createElement("div", {
+                    className: "block-content block-content-full text-center"
+                }, c.a.createElement("i", {
+                    className: "fa-2x si si-bag text-primary d-none d-sm-inline-block mb-3"
+                }), c.a.createElement("div", {
+                    className: "font-w600 text-uppercase"
+                }, "Quản lý đặt hàng")))), c.a.createElement("div", {
+                    className: "col-sm-6 col-xl-3 js-appear-enabled animated",
+                    "data-toggle": "appear"
+                }, c.a.createElement("a", {
+                    className: "block block-bordered block-link-pop text-center mb-0",
+                    onClick: ()=>f.a.push("/user")
+                }, c.a.createElement("div", {
+                    className: "block-content block-content-full text-center"
+                }, c.a.createElement("i", {
+                    className: "fa-2x si si-users text-primary d-none d-sm-inline-block mb-3"
+                }), c.a.createElement("div", {
+                    className: "font-w600 text-uppercase"
+                }, "Quản lý người dùng")))), c.a.createElement("div", {
+                    className: "row no-gutters"
+                }, c.a.createElement("div", {
+                    className: "col-lg-12 js-appear-enabled animated",
+                    "data-toggle": "appear"
+                }, c.a.createElement("div", {
+                    className: "block border-bottom mb-0"
+                }, c.a.createElement("div", {
+                    className: "block-content"
+                }, c.a.createElement("div", {
+                    className: "px-sm-3 clearfix"
+                }, c.a.createElement("i", {
+                    className: "fa fa-chart-line fa-2x text-gray-light float-right"
+                }), c.a.createElement("p", {
+                    className: "text-muted w-75 mb-1"
+                }, "Thu nhập hôm nay"), c.a.createElement("p", {
+                    className: "display-4 text-black font-w300 mb-2"
+                }, t.day_income ? (t.day_income / 100).toLocaleString() : "0", c.a.createElement("span", {
+                    className: "font-size-h5 font-w600 text-muted"
+                }, n.site.currency)))))), c.a.createElement("div", {
+                    className: "col-lg-12 js-appear-enabled animated",
+                    "data-toggle": "appear"
+                }, c.a.createElement("div", {
+                    className: "block border-bottom mb-0 aikopanel-stats-bar",
+                    onScroll: e=>console.log(e.currentTarget.scrollLeft)
+                }, c.a.createElement("div", {
+                    className: "block-content block-content-full"
+                }, c.a.createElement("div", {
+                    class: "d-flex align-items-center"
+                }, c.a.createElement("div", {
+                    class: "pr-4 pr-sm-5 pl-0 pl-sm-3"
+                }, c.a.createElement("p", {
+                    class: "fs-3 text-dark mb-0"
+                }, t.month_income ? (t.month_income / 100).toLocaleString() : "0", " ", n.site.currency), c.a.createElement("p", {
+                    class: "text-muted mb-0"
+                }, "Thu nhập tháng này")), c.a.createElement("div", {
+                    class: "px-4 px-sm-5 border-start"
+                }, c.a.createElement("p", {
+                    class: "fs-3 text-dark mb-0"
+                }, t.last_month_income ? (t.last_month_income / 100).toLocaleString() : "0", " ", n.site.currency), c.a.createElement("p", {
+                    class: "text-muted mb-0"
+                }, "Thu nhập trong tháng trước")), c.a.createElement("div", {
+                    class: "px-4 px-sm-5 border-start"
+                }, c.a.createElement("p", {
+                    class: "fs-3 text-dark mb-0"
+                }, t.commission_last_month_payout ? (t.commission_last_month_payout / 100).toLocaleString() : "0", " ", n.site.currency), c.a.createElement("p", {
+                    class: "text-muted mb-0"
+                }, "Khoản tiền hoa hồng trả trong tháng trước")), c.a.createElement("div", {
+                    class: "px-4 px-sm-5 border-start"
+                }, c.a.createElement("p", {
+                    class: "fs-3 text-dark mb-0"
+                }, t.month_register_total || "-"), c.a.createElement("p", {
+                    class: "text-muted mb-0"
+                }, "Thêm người dùng tháng này")))))), c.a.createElement("div", {
+                    className: "col-lg-12 js-appear-enabled animated",
+                    "data-toggle": "appear"
+                }, c.a.createElement("div", {
+                    className: "block border-bottom mb-0"
+                }, c.a.createElement("div", {
+                    className: "px-sm-3 pt-sm-3 py-3 clearfix",
+                    id: "orderChart",
+                    style: {
+                        height: 400
+                    },
+                    ref: this.orderChart
+                })))), c.a.createElement("div", {
+                    className: "row mt-xl-3"
+                }, c.a.createElement("div", {
+                    className: "col-lg-6 js-appear-enabled animated pr-xl-1",
+                    "data-toggle": "appear"
+                }, c.a.createElement("div", {
+                    className: "block border-bottom"
+                }, c.a.createElement("div", {
+                    class: "block-header block-header-default"
+                }, c.a.createElement("h3", {
+                    class: "block-title"
+                }, "Thống Kê Lưu Lượng Server Sử Dụng Nhiều Nhất Hôm Nay")), c.a.createElement("div", {
+                    className: "block-content"
+                }, c.a.createElement("div", {
+                    className: "px-sm-3 pt-sm-3 py-3 clearfix",
+                    id: "serverTodayRankChart",
+                    style: {
+                        height: 400
+                    },
+                    ref: this.serverTodayRankChart
+                })))), c.a.createElement("div", {
+                    className: "col-lg-6 js-appear-enabled animated pr-xl-1",
+                    "data-toggle": "appear"
+                }, c.a.createElement("div", {
+                    className: "block border-bottom"
+                }, c.a.createElement("div", {
+                    class: "block-header block-header-default"
+                }, c.a.createElement("h3", {
+                    class: "block-title"
+                }, "Tóp 15 Người Dùng Sử Dụng Lưu Lượng Hôm Nay")), c.a.createElement("div", {
+                    className: "block-content"
+                }, c.a.createElement("div", {
+                    className: "px-sm-3 pt-sm-3 py-3 clearfix",
+                    id: "userTodayRankChart",
+                    style: {
+                        height: 400
+                    },
+                    ref: this.userTodayRankChart
+                })))),c.a.createElement("div", {
+                    className: "col-lg-6 js-appear-enabled animated",
+                    "data-toggle": "appear"
+                }, c.a.createElement("div", {
+                    className: "block border-bottom"
+                }, c.a.createElement("div", {
+                    class: "block-header block-header-default"
+                }, c.a.createElement("h3", {
+                    class: "block-title"
+                }, "Thống Kê Lưu Lượng Server Sử Dụng Nhiều Nhất Hôm Qua")), c.a.createElement("div", {
+                    className: "block-content"
+                }, c.a.createElement("div", {
+                    className: "px-sm-3 pt-sm-3 py-3 clearfix",
+                    id: "serverLastRankChart",
+                    style: {
+                        height: 400
+                    },
+                    ref: this.serverLastRankChart
+                })))), c.a.createElement("div", {
+                    className: "col-lg-6 js-appear-enabled animated",
+                    "data-toggle": "appear"
+                }, c.a.createElement("div", {
+                    className: "block border-bottom"
+                }, c.a.createElement("div", {
+                    class: "block-header block-header-default"
+                }, c.a.createElement("h3", {
+                    class: "block-title"
+                }, "Thống Kê 15 Người Dùng Nhiều Nhất Ngày Hôm Qua")), c.a.createElement("div", {
+                    className: "block-content"
+                }, c.a.createElement("div", {
+                    className: "px-sm-3 pt-sm-3 py-3 clearfix",
+                    id: "userLastRankChart",
+                    style: {
+                        height: 400
+                    },
+                    ref: this.userLastRankChart
+                }))))))
+            }
+        }
+        t.default = Object(u.c)(e=>{
+            var t = e.stat
+              , n = e.config;
+            return {
+                stat: t,
+                config: n
+            }
+        }
+        )(O)
+    },
 	sRdV: function(e, t, n) {
 		"use strict";
 		e.exports = function(e) {
