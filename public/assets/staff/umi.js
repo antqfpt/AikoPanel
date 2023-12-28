@@ -18287,8 +18287,8 @@
 						}, t)))
 				}
 			}
-			isAdmin() {
-				return -1 !== this.props.location.pathname.indexOf("admin")
+			isStaff() {
+				return -1 !== this.props.location.pathname.indexOf("staff")
 			}
 			render() {
 				return i.a.createElement("nav", {
@@ -36765,7 +36765,7 @@
 						redirect: t
 					}),
 					this.props.dispatch({
-						type: "user/checkLogin",
+						type: "user/checkLoginStaff",
 						redirect: t
 					}),
 					window.addEventListener("keydown", this.keyDown, !1)
@@ -65076,7 +65076,7 @@
 										}
 										return e.abrupt("return");
 									case 9:
-										if (t.data.is_admin) {
+										if (t.data.is_staff) {
 											e.next = 11;
 											break
 										}
@@ -72496,7 +72496,7 @@
 				})
 			},
 			effects: {
-				checkLogin(e, t) {
+				checkLoginStaff(e, t) {
 					var n = e.redirect,
 						r = t.put;
 					return f().mark((function e() {
@@ -72512,7 +72512,7 @@
 										return e.abrupt("return");
 									case 2:
 										return e.next = 4,
-											Object(a.a)("/user/checkLogin");
+											Object(a.a)("/user/checkLoginStaff");
 									case 4:
 										if (200 === (t = e.sent).code) {
 											e.next = 7;
@@ -72520,7 +72520,7 @@
 										}
 										return e.abrupt("return");
 									case 7:
-										if (!t.data.is_admin) {
+										if (!t.data.is_staff) {
 											e.next = 11;
 											break
 										}
@@ -96236,7 +96236,7 @@
 										return e.abrupt("return");
 									case 9:
 										if (Object(c.h)(t.data.auth_data),
-											t.data.is_admin) {
+											t.data.is_staff) {
 											e.next = 12;
 											break
 										}
