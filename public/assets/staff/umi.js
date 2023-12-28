@@ -18288,7 +18288,7 @@
 				}
 			}
 			isAdmin() {
-				return -1 !== this.props.location.pathname.indexOf("admin")
+				return -1 !== this.props.location.pathname.indexOf("staff")
 			}
 			render() {
 				return i.a.createElement("nav", {
@@ -88229,19 +88229,6 @@
 			}
 			componentDidMount() {
 				var e = this;
-				a()(C().mark((function t() {
-						return C().wrap((function(t) {
-							for (;;)
-								switch (t.prev = t.next) {
-									case 0:
-										return t.next = 2,
-											e.checkQueue();
-									case 2:
-									case "end":
-										return t.stop()
-								}
-						}), t)
-					})))(),
 					this.props.dispatch({
 						type: "stat/getServerLastRank",
 						complete: e => {
