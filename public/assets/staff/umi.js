@@ -18288,10 +18288,7 @@
 				}
 			}
 			isAdmin() {
-                return -1 !== this.props.location.pathname.indexOf("admin")
-            }
-			isStaff() {
-				return -1 !== this.props.location.pathname.indexOf("staff")
+				return -1 !== this.props.location.pathname.indexOf("admin")
 			}
 			render() {
 				return i.a.createElement("nav", {
@@ -26976,8 +26973,9 @@
 								var t = this;
 								return f.a.createElement(e, C({}, this.props, k({}, r, this.context.intl), {
 									ref: i ? function(e) {
-										return t._wrappedInstance = e
-									} : null
+											return t._wrappedInstance = e
+										} :
+										null
 								}))
 							}
 						}]),
@@ -65078,7 +65076,7 @@
 										}
 										return e.abrupt("return");
 									case 9:
-										if (t.data.is_staff) {
+										if (t.data.is_admin) {
 											e.next = 11;
 											break
 										}
@@ -72522,7 +72520,7 @@
 										}
 										return e.abrupt("return");
 									case 7:
-										if (!t.data.is_staff) {
+										if (!t.data.is_admin) {
 											e.next = 11;
 											break
 										}
@@ -96238,7 +96236,7 @@
 										return e.abrupt("return");
 									case 9:
 										if (Object(c.h)(t.data.auth_data),
-											t.data.is_staff) {
+											t.data.is_admin) {
 											e.next = 12;
 											break
 										}
