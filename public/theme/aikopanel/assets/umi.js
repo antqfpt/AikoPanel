@@ -779,7 +779,7 @@
 					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=clash") + "&name=" + window.settings.title
 				}), t.push({
 					title: "NekoBox For Android",
-					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=meta") + "&name=" + window.settings.title
+					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=neko") + "&name=" + window.settings.title
 				}) && t.push({
 					title: "ClashMeta For Android",
 					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=meta") + "&name=" + window.settings.title
