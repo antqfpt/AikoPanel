@@ -64330,16 +64330,6 @@
 						sorter: !0,
 						render: (e, t) => e
 					}, {
-						title: "Số Dư",
-						dataIndex: "balance",
-						key: "balance",
-						sorter: !0
-					}, {
-						title: "Hoa Hồng",
-						dataIndex: "commission_balance",
-						key: "commission_balance",
-						sorter: !0
-					}, {
 						title: "SNI User",
 						dataIndex: "sni",
 						key: "sni",
@@ -64350,6 +64340,16 @@
 							'v9.tiktokcdn.com': 'Tiktok',
 							'www.linemo.jp': 'Softbank Japan',
 						}[e] || e || 'Mặc Định')
+					}, {
+						title: "Số Dư",
+						dataIndex: "balance",
+						key: "balance",
+						sorter: !0
+					}, {
+						title: "Hoa Hồng",
+						dataIndex: "commission_balance",
+						key: "commission_balance",
+						sorter: !0
 					}, {
 						title: "Thời Gian Tham Gia",
 						dataIndex: "created_at",
@@ -88223,15 +88223,6 @@
             componentDidMount() {
                 var e = this;
                 this.props.dispatch({
-                    type: "stat/getOverride"
-                }),
-                this.props.dispatch({
-                    type: "stat/getOrder",
-                    complete: e=>{
-                        this.orderChartRender(e)
-                    }
-                }),
-                this.props.dispatch({
                     type: "stat/getServerLastRank",
                     complete: e=>{
                         this.serverLastRankChartRender(e)
@@ -88277,6 +88268,7 @@
             render() {
                 var e = this.props
                   , t = e.stat
+				  , info = this.props.user.userInfo
                   , n = e.config
                   , r = [];
                 return c.a.createElement(l.a, o()({}, this.props, {
@@ -88296,11 +88288,11 @@
                     className: "fa fa-chart-line fa-2x text-gray-light float-right"
                 }), c.a.createElement("p", {
                     className: "text-muted w-75 mb-1"
-                }, "Thu nhập hôm nay"), c.a.createElement("p", {
+                }, "Doanh thu CTV ( có thể rút ) "), c.a.createElement("p", {
                     className: "display-4 text-black font-w300 mb-2"
-                }, t.day_income ? (t.day_income / 100).toLocaleString() : "0", c.a.createElement("span", {
+                }, info.commission_balance ? (info.commission_balance / 100).toLocaleString() : "0", c.a.createElement("span", {
                     className: "font-size-h5 font-w600 text-muted"
-                }, n.site.currency)))))), c.a.createElement("div", {
+                }, "VNĐ")))))), c.a.createElement("div", {
                     className: "col-lg-12 js-appear-enabled animated",
                     "data-toggle": "appear"
                 }, c.a.createElement("div", {
@@ -88314,39 +88306,21 @@
                     class: "pr-4 pr-sm-5 pl-0 pl-sm-3"
                 }, c.a.createElement("p", {
                     class: "fs-3 text-dark mb-0"
-                }, t.month_income ? (t.month_income / 100).toLocaleString() : "0", " ", n.site.currency), c.a.createElement("p", {
+                }, info.balance ? (info.balance / 100).toLocaleString() : "0", " ", "VNĐ"), c.a.createElement("p", {
                     class: "text-muted mb-0"
-                }, "Thu nhập tháng này")), c.a.createElement("div", {
+                }, "Số dư ")), c.a.createElement("div", {
                     class: "px-4 px-sm-5 border-start"
                 }, c.a.createElement("p", {
                     class: "fs-3 text-dark mb-0"
-                }, t.last_month_income ? (t.last_month_income / 100).toLocaleString() : "0", " ", n.site.currency), c.a.createElement("p", {
+                }, info.commission_rate ? (info.commission_rate / 100).toLocaleString() : "0", " ", "%"), c.a.createElement("p", {
                     class: "text-muted mb-0"
-                }, "Thu nhập trong tháng trước")), c.a.createElement("div", {
+                }, "Tỷ lệ Hoàn Tiền")), c.a.createElement("div", {
                     class: "px-4 px-sm-5 border-start"
                 }, c.a.createElement("p", {
                     class: "fs-3 text-dark mb-0"
-                }, t.commission_last_month_payout ? (t.commission_last_month_payout / 100).toLocaleString() : "0", " ", n.site.currency), c.a.createElement("p", {
+                }, info.discount ? (info.discount / 100).toLocaleString() : "0", " ", "%"), c.a.createElement("p", {
                     class: "text-muted mb-0"
-                }, "Khoản tiền hoa hồng trả trong tháng trước")), c.a.createElement("div", {
-                    class: "px-4 px-sm-5 border-start"
-                }, c.a.createElement("p", {
-                    class: "fs-3 text-dark mb-0"
-                }, t.month_register_total || "-"), c.a.createElement("p", {
-                    class: "text-muted mb-0"
-                }, "Thêm người dùng tháng này")))))), c.a.createElement("div", {
-                    className: "col-lg-12 js-appear-enabled animated",
-                    "data-toggle": "appear"
-                }, c.a.createElement("div", {
-                    className: "block border-bottom mb-0"
-                }, c.a.createElement("div", {
-                    className: "px-sm-3 pt-sm-3 py-3 clearfix",
-                    id: "orderChart",
-                    style: {
-                        height: 400
-                    },
-                    ref: this.orderChart
-                })))), c.a.createElement("div", {
+                }, "Chiết khấu độc quyền"))))))), c.a.createElement("div", {
                     className: "row mt-xl-3"
                 }, c.a.createElement("div", {
                     className: "col-lg-6 js-appear-enabled animated pr-xl-1",
