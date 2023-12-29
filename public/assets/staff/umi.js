@@ -88222,6 +88222,9 @@
             }
             componentDidMount() {
                 var e = this;
+				this.props.user.userInfo.email || this.props.dispatch({
+					type: "user/getUserInfo"
+				}),
                 this.props.dispatch({
                     type: "stat/getServerLastRank",
                     complete: e=>{
@@ -88268,7 +88271,7 @@
             render() {
                 var e = this.props
                   , t = e.stat
-				  , info = this.props.user.userInfo
+				  , info = e.user.userInfo
                   , n = e.config
                   , r = [];
                 return c.a.createElement(l.a, o()({}, this.props, {
