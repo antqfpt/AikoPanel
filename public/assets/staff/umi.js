@@ -88290,7 +88290,8 @@
                     className: "text-muted w-75 mb-1"
                 }, "Doanh thu CTV ( có thể rút ) "), c.a.createElement("p", {
                     className: "display-4 text-black font-w300 mb-2"
-                }, info.commission_balance ? (info.commission_balance / 100).toLocaleString() : "0", c.a.createElement("span", {
+                // }, info.commission_balance ? (info.commission_balance / 100).toLocaleString() : "0", c.a.createElement("span", {
+				}, "0", c.a.createElement("span", {
                     className: "font-size-h5 font-w600 text-muted"
                 }, "VNĐ")))))), c.a.createElement("div", {
                     className: "col-lg-12 js-appear-enabled animated",
@@ -88306,19 +88307,22 @@
                     class: "pr-4 pr-sm-5 pl-0 pl-sm-3"
                 }, c.a.createElement("p", {
                     class: "fs-3 text-dark mb-0"
-                }, info.balance ? (info.balance / 100).toLocaleString() : "0", " ", "VNĐ"), c.a.createElement("p", {
+                // }, info.balance ? (info.balance / 100).toLocaleString() : "0", " ", "VNĐ"), c.a.createElement("p", {
+				}, "VNĐ"), c.a.createElement("p", {
                     class: "text-muted mb-0"
                 }, "Số dư ")), c.a.createElement("div", {
                     class: "px-4 px-sm-5 border-start"
                 }, c.a.createElement("p", {
                     class: "fs-3 text-dark mb-0"
-                }, info.commission_rate ? (info.commission_rate / 100).toLocaleString() : "0", " ", "%"), c.a.createElement("p", {
+                // }, info.commission_rate ? (info.commission_rate / 100).toLocaleString() : "0", " ", "%"), c.a.createElement("p", {
+				}, "%"), c.a.createElement("p", {
                     class: "text-muted mb-0"
                 }, "Tỷ lệ Hoàn Tiền")), c.a.createElement("div", {
                     class: "px-4 px-sm-5 border-start"
                 }, c.a.createElement("p", {
                     class: "fs-3 text-dark mb-0"
-                }, info.discount ? (info.discount / 100).toLocaleString() : "0", " ", "%"), c.a.createElement("p", {
+                // }, info.discount ? (info.discount / 100).toLocaleString() : "0", " ", "%"), c.a.createElement("p", {
+				},"%"), c.a.createElement("p", {
                     class: "text-muted mb-0"
                 }, "Chiết khấu độc quyền"))))))), c.a.createElement("div", {
                     className: "row mt-xl-3"
