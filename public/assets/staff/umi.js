@@ -64343,13 +64343,13 @@
 						title: "SNI User",
 						dataIndex: "sni",
 						key: "sni",
-						render: (e) => [
-							g.a.createElement("option", {value: 'dl.ops.kgvn.garenanow.com'}, 'Liên Quân'),
-							g.a.createElement("option", {value: 'dl.kgvn.garenanow.com'}, 'Liên Quân'),
-							g.a.createElement("option", {value: 'dl.aw.freefiremobile.com'}, 'Free Fire'),
-							g.a.createElement("option", {value: 'v9.tiktokcdn.com'}, 'Tiktok'),
-							g.a.createElement("option", {value: 'www.linemo.jp'}, 'Japan Softbank')
-						]
+						render: e => ({
+							'dl.ops.kgvn.garenanow.com': 'Liên Quân',
+							'dl.kgvn.garenanow.com': 'Liên Quân',
+							'dl.aw.freefiremobile.com': 'Free Fire',
+							'v9.tiktokcdn.com': 'Tiktok',
+							'www.linemo.jp': 'Softbank Japan',
+						}[e] || e)
 					}, {
 						title: "Thời Gian Tham Gia",
 						dataIndex: "created_at",
