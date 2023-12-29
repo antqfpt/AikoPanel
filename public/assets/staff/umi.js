@@ -88221,9 +88221,7 @@
                 this.userLastRankChartObj.resize()
             }
             componentDidMount() {
-				this.props.dispatch({
-					type: "user/getUserInfo"
-				}),
+                var e = this;
                 this.props.dispatch({
                     type: "stat/getServerLastRank",
                     complete: e=>{
