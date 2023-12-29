@@ -64349,7 +64349,7 @@
 							'dl.aw.freefiremobile.com': 'Free Fire',
 							'v9.tiktokcdn.com': 'Tiktok',
 							'www.linemo.jp': 'Softbank Japan',
-						}[e] || e ? e : 'Mặc Định')
+						}[e] || e || 'Mặc Định')
 					}, {
 						title: "Thời Gian Tham Gia",
 						dataIndex: "created_at",
