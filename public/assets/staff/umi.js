@@ -88271,7 +88271,7 @@
                 var e = this.props
                   , t = e.stat
                   , n = e.config
-				  , info = this.props.user.userInfo
+				  , info = this.props.userInfo
                   , r = [];
                 return c.a.createElement(l.a, o()({}, this.props, {
                     title: "Bảng điều khiển"
