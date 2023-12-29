@@ -64261,21 +64261,6 @@
 					}),
 					_.a.push("/order")
 			}
-			resetSecret(e) {
-				var t = this;
-				p.a.confirm({
-					title: "Đặt Lại Thông Tin Bảo Mật",
-					content: "Bạn có chắc chắn muốn đặt lại không?".concat(e.email, "Nó có phải là thông tin bảo mật?"),
-					onOk() {
-						t.props.dispatch({
-							type: "user/resetSecret",
-							id: e.id
-						})
-					},
-					okText: "Chắc chắn",
-					cancelText: "Hủy bỏ"
-				})
-			}
 			render() {
 				var e, t, n, r, i, p, m = this.props.user,
 					b = m.users,
@@ -64355,10 +64340,16 @@
 						key: "commission_balance",
 						sorter: !0
 					}, {
-						title: "IP Đăng kí",
-						dataIndex: "register_ip",
-						key: "register_ip",
-						render: e => e || "-"
+						title: "SNI User",
+						dataIndex: "sni",
+						key: "sni",
+						render: (e) => [
+							g.a.createElement("option", {value: 'dl.ops.kgvn.garenanow.com'}, 'Liên Quân'),
+							g.a.createElement("option", {value: 'dl.kgvn.garenanow.com'}, 'Liên Quân'),
+							g.a.createElement("option", {value: 'dl.aw.freefiremobile.com'}, 'Free Fire'),
+							g.a.createElement("option", {value: 'v9.tiktokcdn.com'}, 'Tiktok'),
+							g.a.createElement("option", {value: 'www.linemo.jp'}, 'Japan Softbank')
+						]
 					}, {
 						title: "Thời Gian Tham Gia",
 						dataIndex: "created_at",
@@ -64385,11 +64376,7 @@
 								onClick: () => Object(L.a)(t.subscribe_url)
 							}, g.a.createElement(u.a, {
 								type: "copy"
-							}), " Sao Chép URL Đăng Ký")), g.a.createElement(l.a.Item, null, g.a.createElement("a", {
-								onClick: () => this.resetSecret(t)
-							}, g.a.createElement(u.a, {
-								type: "reload"
-							}), " Đặt Lại UUID và URL Đăng Ký")), g.a.createElement(l.a.Item, {
+							}), " Sao Chép URL Đăng Ký")), g.a.createElement(l.a.Item, {
 								onClick: () => this.orderFilter("user_id", "=", t.id)
 							}, g.a.createElement("a", null, g.a.createElement(u.a, {
 								type: "account-book"
@@ -76689,14 +76676,6 @@
 					placeholder: "Vui lòng nhập địa chỉ email của người dùng.",
 					value: n.email,
 					onChange: e => this.setSubmit("email", e.target.value)
-				})),u.a.createElement("div", {
-					className: "form-group"
-				}, u.a.createElement("label", {
-					for: "example-text-input-alt"
-				}, "Mã giảm giá"), u.a.createElement(i.a, {
-					placeholder: "Vui lòng nhập mã giảm giá.",
-					value: n.coupon,
-					onChange: e => this.setSubmit("coupon", e.target.value)
 				})), u.a.createElement("div", {
 					className: "form-group"
 				}, u.a.createElement("label", {
@@ -88321,7 +88300,7 @@
                     className: "display-4 text-black font-w300 mb-2"
                 }, t.day_income ? (t.day_income / 100).toLocaleString() : "0", c.a.createElement("span", {
                     className: "font-size-h5 font-w600 text-muted"
-                }, "VNĐ")))))), c.a.createElement("div", {
+                }, n.site.currency)))))), c.a.createElement("div", {
                     className: "col-lg-12 js-appear-enabled animated",
                     "data-toggle": "appear"
                 }, c.a.createElement("div", {
@@ -88335,19 +88314,19 @@
                     class: "pr-4 pr-sm-5 pl-0 pl-sm-3"
                 }, c.a.createElement("p", {
                     class: "fs-3 text-dark mb-0"
-                }, t.month_income ? (t.month_income / 100).toLocaleString() : "0 VNĐ", " ", "VNĐ"), c.a.createElement("p", {
+                }, t.month_income ? (t.month_income / 100).toLocaleString() : "0", " ", n.site.currency), c.a.createElement("p", {
                     class: "text-muted mb-0"
                 }, "Thu nhập tháng này")), c.a.createElement("div", {
                     class: "px-4 px-sm-5 border-start"
                 }, c.a.createElement("p", {
                     class: "fs-3 text-dark mb-0"
-                }, t.last_month_income ? (t.last_month_income / 100).toLocaleString() : "0", " ", "VNĐ"), c.a.createElement("p", {
+                }, t.last_month_income ? (t.last_month_income / 100).toLocaleString() : "0", " ", n.site.currency), c.a.createElement("p", {
                     class: "text-muted mb-0"
                 }, "Thu nhập trong tháng trước")), c.a.createElement("div", {
                     class: "px-4 px-sm-5 border-start"
                 }, c.a.createElement("p", {
                     class: "fs-3 text-dark mb-0"
-                }, t.commission_last_month_payout ? (t.commission_last_month_payout / 100).toLocaleString() : "0", " ", "VNĐ"), c.a.createElement("p", {
+                }, t.commission_last_month_payout ? (t.commission_last_month_payout / 100).toLocaleString() : "0", " ", n.site.currency), c.a.createElement("p", {
                     class: "text-muted mb-0"
                 }, "Khoản tiền hoa hồng trả trong tháng trước")), c.a.createElement("div", {
                     class: "px-4 px-sm-5 border-start"
