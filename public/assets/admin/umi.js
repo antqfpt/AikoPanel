@@ -12433,15 +12433,6 @@
 					className: "row"
 				}, d.a.createElement("div", {
 					className: "form-group col-md-12 col-xs-12"
-				}, d.a.createElement("label", null, "Record ID"), d.a.createElement(s.a, {
-					addonAfter: "Record ID",
-					placeholder: "Vui lòng nhập Record ID",
-					value: e.record_id,
-					onChange: e => this.formChange("record_id", e.target.value)
-				}))), d.a.createElement("div", {
-					className: "row"
-				}, d.a.createElement("div", {
-					className: "form-group col-md-12 col-xs-12"
 				}, d.a.createElement("label", null, "Truyền tải Giao thức ", d.a.createElement("a", {
 					href: "javascript:void(0);",
 					onClick: () => this.showChildDrawer("Chỉnh sửa Cấu hình Giao thức", "networkSettings")
@@ -27861,15 +27852,6 @@
 					placeholder: "Vui lòng nhập IP (IPv4)",
 					value: e.ip,
 					onChange: e => this.formChange("ip", e.target.value)
-				}))), h.a.createElement("div", {
-					className: "row"
-				}, h.a.createElement("div", {
-					className: "form-group col-md-12 col-xs-12"
-				}, h.a.createElement("label", null, "Cloudflare Record ID"), h.a.createElement(s.a, {
-					addonAfter: "Record ID",
-					placeholder: "Vui lòng nhập Record ID",
-					value: e.record_id,
-					onChange: e => this.formChange("record_id", e.target.value)
 				}))), h.a.createElement("div", {
 					className: "form-group"
 				}, h.a.createElement("label", null, "Thuật Toán Mã Hóa"), h.a.createElement(a.a, {
@@ -99637,15 +99619,6 @@
 				}))), y.a.createElement("div", {
 					className: "row"
 				}, y.a.createElement("div", {
-					className: "form-group col-md-12 col-xs-12"
-				}, y.a.createElement("label", null, "Cloudflare Record ID"), y.a.createElement(s.a, {
-					addonAfter: "Record ID",
-					placeholder: "Vui lòng nhập Record ID",
-					value: e.record_id,
-					onChange: e => this.formChange("record_id", e.target.value)
-				}))), y.a.createElement("div", {
-					className: "row"
-				}, y.a.createElement("div", {
 					className: "form-group col-md-4 col-xs-12"
 				}, y.a.createElement("label", null, "Cổng Kết Nối"), y.a.createElement(s.a, {
 					placeholder: "Cổng Kết Nối Người Dùng",
@@ -100195,15 +100168,6 @@
 					placeholder: "Vui lòng nhập IP (IPv4)",
 					value: e.ip,
 					onChange: e => this.formChange("ip", e.target.value)
-				}))), y.a.createElement("div", {
-					className: "row"
-				}, y.a.createElement("div", {
-					className: "form-group col-md-12 col-xs-12"
-				}, y.a.createElement("label", null, "Cloudflare Record ID"), y.a.createElement(s.a, {
-					addonAfter: "Record ID",
-					placeholder: "Vui lòng nhập Record ID",
-					value: e.record_id,
-					onChange: e => this.formChange("record_id", e.target.value)
 				}))), y.a.createElement("div", {
 					className: "row"
 				}, y.a.createElement("div", {
@@ -107124,15 +107088,6 @@
 					placeholder: "Vui lòng nhập IP (IPv4)",
 					value: e.ip,
 					onChange: e => this.formChange("ip", e.target.value)
-				}))), f.a.createElement("div", {
-					className: "row"
-				}, f.a.createElement("div", {
-					className: "form-group col-md-12 col-xs-12"
-				}, f.a.createElement("label", null, "Cloudflare Record ID"), f.a.createElement(c.a, {
-					addonAfter: "Record ID",
-					placeholder: "Vui lòng nhập Record ID",
-					value: e.record_id,
-					onChange: e => this.formChange("record_id", e.target.value)
 				}))), f.a.createElement("div", {
 					className: "row"
 				}, f.a.createElement("div", {
