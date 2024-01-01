@@ -5484,6 +5484,7 @@
 					y = e.telegram,
 					b = e.setTelegramWebhookLoading,
 					w = e.app,
+					aikopanel = e.aikopanel,
 					x = e.testSendMailLoading,
 					_ = e.safe,
 					E = this.props.plan.plans;
@@ -6588,7 +6589,32 @@
 					placeholder: "itms-services://?action=download-manifest&url=https://xxxxxxxx.plist",
 					defaultValue: w.appleid_quanx,
 					onChange: e => this.set("app", "appleid_quanx", e.target.value)
-				}))) : ""))))))
+				}))) : ""))),f.a.createElement(s.a.TabPane, {
+					tab: "AikoPanel Test",
+					key: "aikopanel"
+				}, f.a.createElement("div", {
+					className: "block-content"
+				}, f.a.createElement("div", {
+					className: "row"
+				}, f.a.createElement("div", {
+					className: "col-lg-12"
+				}, f.a.createElement("div", {
+					className: "alert alert-warning",
+					role: "alert"
+				}, f.a.createElement("p", {
+					className: "mb-0"
+				}, "Quản lý Quản lý và cập nhật phiên bản của AikoPanel , Chức năng được tích hợp riêng trên AikoPanel"))))), f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "AikoPanel Version",
+					description: "Vui lòng nhập mã giấy phép được cung cấp bởi AikoPanel"
+				}, f.a.createElement("input", {
+					type: "password",
+					className: "form-control",
+					placeholder: "Vui lòng nhập mã giấy phép AikoPanel",
+					defaultValue: aikopanel.version,
+					onChange: e => this.set("aikopanel", "version", e.target.value)
+				})))))))
 			}
 		}
 		t.default = Object(p.c)((e => ({
