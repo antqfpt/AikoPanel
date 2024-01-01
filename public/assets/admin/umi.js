@@ -16639,6 +16639,7 @@
 				email: {},
 				telegram: {},
 				app: {},
+				aikopanel: {},
 				safe: {},
 				tabs: "site",
 				fetchLoading: !1,
