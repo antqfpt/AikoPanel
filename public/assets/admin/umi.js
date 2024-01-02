@@ -68585,6 +68585,18 @@
 							key: "Không",
 							value: 0
 						}]
+					}, {
+						key: "is_staff",
+						title: "Tìm Nhân Viên ( Cộng tác viên )",
+						condition: ["="],
+						type: "select",
+						options: [{
+							key: "Đúng",
+							value: 1
+						}, {
+							key: "Không",
+							value: 0
+						}]
 					}]
 				}, g.a.createElement(s.a, {
 					type: E.length > 0 ? "primary" : ""
@@ -78136,6 +78148,7 @@
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
 				}, "Giới Hạn Số Lượng Thiết Bị"), m.a.createElement(C.a, {
+					addonAfter: "Thiết bị",
 					placeholder: "Nếu để trống, sẽ không có giới hạn về số lượng thiết bị.",
 					value: this.state.record.device_limit,
 					onChange: e => {
@@ -78150,6 +78163,7 @@
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
 				}, "Giới Hạn Số Lượng lần lấy AppleID"), m.a.createElement(C.a, {
+					addonAfter: "Lần",
 					placeholder: "Nếu để trống, sẽ không có giới hạn về số lần lấy AppleID.",
 					value: this.state.record.appleid_limit,
 					onChange: e => {
