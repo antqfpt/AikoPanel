@@ -5484,6 +5484,7 @@
 					y = e.telegram,
 					b = e.setTelegramWebhookLoading,
 					w = e.app,
+					aikopanel = e.aikopanel,
 					x = e.testSendMailLoading,
 					_ = e.safe,
 					E = this.props.plan.plans;
@@ -5814,9 +5815,7 @@
 					value: 3
 				}, "Mỗi năm 1 lần vào ngày 1 tháng 1"), f.a.createElement("option", {
 					value: 4
-				}, "Thiết lập lại theo năm"), f.a.createElement("option", {
-					value: 5
-				}, "Mỗi ngày 1 lần"))), f.a.createElement(m, {
+				}, "Thiết lập lại theo năm"))), f.a.createElement(m, {
 					title: "Mở chế độ giảm giá hoặc chiết khấu",
 					description: "Sau khi kích hoạt, người dùng có thể thay đổi đơn đặt hàng, chiết khấu sẽ được áp dụng bởi hệ thống đối với đơn đặt hàng gốc, vui lòng xem tài liệu tham khảo"
 				}, f.a.createElement(c.a, {
@@ -6454,8 +6453,69 @@
 					checked: parseInt(y.auto_stop_node),
 					onChange: e => this.set("telegram", "auto_stop_node", e ? 1 : 0)
 				}))) : "") : "") : "")), f.a.createElement(s.a.TabPane, {
+                    tab: "APP",
+                    key: "app"
+                }, f.a.createElement("div", {
+                    className: "block-content"
+                }, f.a.createElement("div", {
+                    className: "row"
+                }, f.a.createElement("div", {
+                    className: "col-lg-12"
+                }, f.a.createElement("div", {
+                    className: "alert alert-warning",
+                    role: "alert"
+                }, f.a.createElement("p", {
+                    className: "mb-0"
+                }, "Dùng cho quản lý phiên bản và cập nhật của ứng dụng di động (APP)"))))), f.a.createElement("div", {
+                    className: ""
+                }, f.a.createElement(m, {
+                    title: "Windows",
+                    description: "Số phiên bản và địa chỉ tải xuống cho Windows"
+                }, f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control",
+                    placeholder: "1.0.0",
+                    defaultValue: w.windows_version,
+                    onChange: e=>this.set("app", "windows_version", e.target.value)
+                }), f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control mt-1",
+                    placeholder: "https://xxxx.com/xxx.exe",
+                    defaultValue: w.windows_download_url,
+                    onChange: e=>this.set("app", "windows_download_url", e.target.value)
+                })), f.a.createElement(m, {
+                    title: "macOS",
+                    description: "Số phiên bản và địa chỉ tải xuống cho macOS"
+                }, f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control",
+                    placeholder: "1.0.0",
+                    defaultValue: w.macos_version,
+                    onChange: e=>this.set("app", "macos_version", e.target.value)
+                }), f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control mt-1",
+                    placeholder: "https://xxxx.com/xxx.dmg",
+                    defaultValue: w.macos_download_url,
+                    onChange: e=>this.set("app", "macos_download_url", e.target.value)
+                })), f.a.createElement(m, {
+                    title: "Android",
+                    description: "Số phiên bản và địa chỉ tải xuống cho Android"
+                }, f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control",
+                    placeholder: "1.0.0",
+                    defaultValue: w.android_version,
+                    onChange: e=>this.set("app", "android_version", e.target.value)
+                }), f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control mt-1",
+                    placeholder: "https://xxxx.com/xxx.apk",
+                    defaultValue: w.android_download_url,
+                    onChange: e=>this.set("app", "android_download_url", e.target.value)
+				})))),f.a.createElement(s.a.TabPane, {
 					tab: "AikoPanel",
-					key: "app"
+					key: "aikopanel"
 				}, f.a.createElement("div", {
 					className: "block-content"
 				}, f.a.createElement("div", {
@@ -6476,14 +6536,14 @@
 					type: "password",
 					className: "form-control",
 					placeholder: "Vui lòng nhập mã giấy phép AikoPanel",
-					defaultValue: w.license,
-					onChange: e => this.set("app", "license", e.target.value)
+					defaultValue: aikopanel.license,
+					onChange: e => this.set("aikopanel", "license", e.target.value)
 				})), f.a.createElement(m, {
 					title: "Chế độ bảo trì",
 					description: "Sau khi mở, người dùng sẽ không thể đăng nhập vào bảng điều khiển, vui lòng sử dụng chức năng này khi bạn cần bảo trì bảng điều khiển."
 				}, f.a.createElement(c.a, {
-					checked: parseInt(w.maintenance_mode_enable),
-					onChange: e => this.set("app", "maintenance_mode_enable", e ? 1 : 0)
+					checked: parseInt(aikopanel.maintenance_mode_enable),
+					onChange: e => this.set("aikopanel", "maintenance_mode_enable", e ? 1 : 0)
 				})), f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
@@ -6494,22 +6554,22 @@
 					size: "large",
 					type: "number",
 					placeholder: "Không nhập thì mặc định là không xoá phiên đăng nhập của người dùng",
-					defaultValue: w.session_ttl,
-					onChange: e => this.set("app", "session_ttl", e.target.value)
+					defaultValue: aikopanel.session_ttl,
+					onChange: e => this.set("aikopanel", "session_ttl", e.target.value)
 				}))), w.session_ttl ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
 					isChildren: !0,
 					title: "Ngoại lệ cho Admin",
 					description: "Sau khi mở, phiên đăng nhập của quản trị viên sẽ không bị xoá"
 				}, f.a.createElement(c.a, {
-					checked: parseInt(w.admin_session_ttl),
-					onChange: e => this.set("app", "admin_session_ttl", e ? 1 : 0)
+					checked: parseInt(aikopanel.admin_session_ttl),
+					onChange: e => this.set("aikopanel", "admin_session_ttl", e ? 1 : 0)
 				}))) : "", f.a.createElement(m, {
 					title: "Xoá người dùng không hoạt động",
 					description: "Sau khi config nó thì hãy xoá hết tất cả người dùng không hoạt động. "
 				}, f.a.createElement("select", {
-					onChange: e => this.set("app", "interval_clear_user", e.target.value),
+					onChange: e => this.set("aikopanel", "interval_clear_user", e.target.value),
 					className: "form-control",
-					value: w.interval_clear_user,
+					value: aikopanel.interval_clear_user,
 					placeholder: "Vui lòng chọn thời gian xoá người dùng không hoạt động"
 				}, f.a.createElement("option", {
 					value: 0
@@ -6531,14 +6591,14 @@
 					size: "large",
 					type: "number",
 					placeholder: "Xin Nhập Vào",
-					defaultValue: w.interval_backup_database,
-					onChange: e => this.set("app", "interval_backup_database", e.target.value)
+					defaultValue: aikopanel.interval_backup_database,
+					onChange: e => this.set("aikopanel", "interval_backup_database", e.target.value)
 				}), f.a.createElement("input", {
 					type: "text",
 					className: "form-control",
 					placeholder: "Vui lòng nhập telegram id của bạn (ID này sẽ nhận được thông báo backup database)",
-					defaultValue: w.database_telegram_id,
-					onChange: e => this.set("app", "database_telegram_id", e.target.value)
+					defaultValue: aikopanel.database_telegram_id,
+					onChange: e => this.set("aikopanel", "database_telegram_id", e.target.value)
 				}))), f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
@@ -6549,15 +6609,15 @@
 					size: "large",
 					type: "text",
 					placeholder: "Vui lòng nhập Zone ID của bạn",
-					defaultValue: w.cloudflare_zone_id,
-					onChange: e => this.set("app", "cloudflare_zone_id", e.target.value)
+					defaultValue: aikopanel.cloudflare_zone_id,
+					onChange: e => this.set("aikopanel", "cloudflare_zone_id", e.target.value)
 				}), f.a.createElement(a.a, {
 					addonAfter: "API Token",
 					size: "large",
 					type: "text",
 					placeholder: "Vui lòng nhập API Cloudflare Token của bạn",
-					defaultValue: w.cloudflare_api_token,
-					onChange: e => this.set("app", "cloudflare_api_token", e.target.value)
+					defaultValue: aikopanel.cloudflare_api_token,
+					onChange: e => this.set("aikopanel", "cloudflare_api_token", e.target.value)
 				}))), f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
@@ -6568,15 +6628,15 @@
 					size: "large",
 					type: "text",
 					placeholder: "Link IDAPPLE Custom (Câu file PHP free hoặc từ 1 nguồn Free nào đó )",
-					defaultValue: w.appleid_custom_url,
-					onChange: e => this.set("app", "appleid_custom_url", e.target.value)
+					defaultValue: aikopanel.appleid_custom_url,
+					onChange: e => this.set("aikopanel", "appleid_custom_url", e.target.value)
 				}), f.a.createElement(a.a, {
 					addonAfter: "URL",
 					size: "large",
 					type: "text",
 					placeholder: "AppleID LINK | https://idapple.aikocute.net/share/xxxxxx",
-					defaultValue: w.appleid_api,
-					onChange: e => this.set("app", "appleid_api", e.target.value)
+					defaultValue: aikopanel.appleid_api,
+					onChange: e => this.set("aikopanel", "appleid_api", e.target.value)
 				})), w.appleid_api ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
 					isChildren: !0,
 					title: "Link cấp Ứng dụng Quantumult-X",
@@ -6586,8 +6646,8 @@
 					size: "large",
 					type: "text",
 					placeholder: "itms-services://?action=download-manifest&url=https://xxxxxxxx.plist",
-					defaultValue: w.appleid_quanx,
-					onChange: e => this.set("app", "appleid_quanx", e.target.value)
+					defaultValue: aikopanel.appleid_quanx,
+					onChange: e => this.set("aikopanel", "appleid_quanx", e.target.value)
 				}))) : ""))))))
 			}
 		}
@@ -12426,7 +12486,7 @@
 					className: "form-group col-md-12 col-xs-12"
 				}, d.a.createElement("label", null, "IP (IPv4)"), d.a.createElement(s.a, {
 					addonAfter: "IP",
-					placeholder: "Vui lòng nhập IP (IPv4)",
+					placeholder: "Web sẽ Auto điền nếu dùng AutoDNS",
 					value: e.ip,
 					onChange: e => this.formChange("ip", e.target.value)
 				}))), d.a.createElement("div", {
@@ -16613,6 +16673,7 @@
 				email: {},
 				telegram: {},
 				app: {},
+				aikopanel: {},
 				safe: {},
 				tabs: "site",
 				fetchLoading: !1,
@@ -27849,7 +27910,7 @@
 					className: "form-group col-md-12 col-xs-12"
 				}, h.a.createElement("label", null, "IP (IPv4)"), h.a.createElement(s.a, {
 					addonAfter: "IP",
-					placeholder: "Vui lòng nhập IP (IPv4)",
+					placeholder: "Web sẽ Auto điền nếu dùng AutoDNS",
 					value: e.ip,
 					onChange: e => this.formChange("ip", e.target.value)
 				}))), h.a.createElement("div", {
@@ -68524,6 +68585,18 @@
 							key: "Không",
 							value: 0
 						}]
+					}, {
+						key: "is_staff",
+						title: "Tìm Nhân Viên ( Cộng tác viên )",
+						condition: ["="],
+						type: "select",
+						options: [{
+							key: "Đúng",
+							value: 1
+						}, {
+							key: "Không",
+							value: 0
+						}]
 					}]
 				}, g.a.createElement(s.a, {
 					type: E.length > 0 ? "primary" : ""
@@ -78075,6 +78148,7 @@
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
 				}, "Giới Hạn Số Lượng Thiết Bị"), m.a.createElement(C.a, {
+					addonAfter: "Thiết bị",
 					placeholder: "Nếu để trống, sẽ không có giới hạn về số lượng thiết bị.",
 					value: this.state.record.device_limit,
 					onChange: e => {
@@ -78089,6 +78163,7 @@
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
 				}, "Giới Hạn Số Lượng lần lấy AppleID"), m.a.createElement(C.a, {
+					addonAfter: "Lần",
 					placeholder: "Nếu để trống, sẽ không có giới hạn về số lần lấy AppleID.",
 					value: this.state.record.appleid_limit,
 					onChange: e => {
@@ -78155,10 +78230,7 @@
 				}, "Mỗi Ngày 1 Tháng 1 trong Năm"), m.a.createElement(_.a.Option, {
 					key: 4,
 					value: 4
-				}, "Reset Theo Năm"), m.a.createElement(_.a.Option, {
-					key: 5,
-					value: 5
-				}, "Mỗi ngày 1 lần")))), m.a.createElement("div", {
+				}, "Reset Theo Năm")))), m.a.createElement("div", {
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
@@ -99613,7 +99685,7 @@
 					className: "form-group col-md-12 col-xs-12"
 				}, y.a.createElement("label", null, "IP (IPv4)"), y.a.createElement(s.a, {
 					addonAfter: "IP",
-					placeholder: "Vui lòng nhập IP (IPv4)",
+					placeholder: "Web sẽ Auto điền nếu dùng AutoDNS",
 					value: e.ip,
 					onChange: e => this.formChange("ip", e.target.value)
 				}))), y.a.createElement("div", {
@@ -100165,7 +100237,7 @@
 					className: "form-group col-md-12 col-xs-12"
 				}, y.a.createElement("label", null, "IP (IPv4)"), y.a.createElement(s.a, {
 					addonAfter: "IP",
-					placeholder: "Vui lòng nhập IP (IPv4)",
+					placeholder: "Web sẽ Auto điền nếu dùng AutoDNS",
 					value: e.ip,
 					onChange: e => this.formChange("ip", e.target.value)
 				}))), y.a.createElement("div", {
@@ -107085,7 +107157,7 @@
 					className: "form-group col-md-12 col-xs-12"
 				}, f.a.createElement("label", null, "IP (IPv4)"), f.a.createElement(c.a, {
 					addonAfter: "IP",
-					placeholder: "Vui lòng nhập IP (IPv4)",
+					placeholder: "Web sẽ Auto điền nếu dùng AutoDNS",
 					value: e.ip,
 					onChange: e => this.formChange("ip", e.target.value)
 				}))), f.a.createElement("div", {
