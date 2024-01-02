@@ -5815,9 +5815,7 @@
 					value: 3
 				}, "Mỗi năm 1 lần vào ngày 1 tháng 1"), f.a.createElement("option", {
 					value: 4
-				}, "Thiết lập lại theo năm"), f.a.createElement("option", {
-					value: 5
-				}, "Mỗi ngày 1 lần"))), f.a.createElement(m, {
+				}, "Thiết lập lại theo năm"))), f.a.createElement(m, {
 					title: "Mở chế độ giảm giá hoặc chiết khấu",
 					description: "Sau khi kích hoạt, người dùng có thể thay đổi đơn đặt hàng, chiết khấu sẽ được áp dụng bởi hệ thống đối với đơn đặt hàng gốc, vui lòng xem tài liệu tham khảo"
 				}, f.a.createElement(c.a, {
@@ -12488,7 +12486,7 @@
 					className: "form-group col-md-12 col-xs-12"
 				}, d.a.createElement("label", null, "IP (IPv4)"), d.a.createElement(s.a, {
 					addonAfter: "IP",
-					placeholder: "Vui lòng nhập IP (IPv4)",
+					placeholder: "Web sẽ Auto điền nếu dùng AutoDNS",
 					value: e.ip,
 					onChange: e => this.formChange("ip", e.target.value)
 				}))), d.a.createElement("div", {
@@ -27912,7 +27910,7 @@
 					className: "form-group col-md-12 col-xs-12"
 				}, h.a.createElement("label", null, "IP (IPv4)"), h.a.createElement(s.a, {
 					addonAfter: "IP",
-					placeholder: "Vui lòng nhập IP (IPv4)",
+					placeholder: "Web sẽ Auto điền nếu dùng AutoDNS",
 					value: e.ip,
 					onChange: e => this.formChange("ip", e.target.value)
 				}))), h.a.createElement("div", {
@@ -78218,10 +78216,7 @@
 				}, "Mỗi Ngày 1 Tháng 1 trong Năm"), m.a.createElement(_.a.Option, {
 					key: 4,
 					value: 4
-				}, "Reset Theo Năm"), m.a.createElement(_.a.Option, {
-					key: 5,
-					value: 5
-				}, "Mỗi ngày 1 lần")))), m.a.createElement("div", {
+				}, "Reset Theo Năm")))), m.a.createElement("div", {
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
@@ -99676,7 +99671,7 @@
 					className: "form-group col-md-12 col-xs-12"
 				}, y.a.createElement("label", null, "IP (IPv4)"), y.a.createElement(s.a, {
 					addonAfter: "IP",
-					placeholder: "Vui lòng nhập IP (IPv4)",
+					placeholder: "Web sẽ Auto điền nếu dùng AutoDNS",
 					value: e.ip,
 					onChange: e => this.formChange("ip", e.target.value)
 				}))), y.a.createElement("div", {
@@ -100228,7 +100223,7 @@
 					className: "form-group col-md-12 col-xs-12"
 				}, y.a.createElement("label", null, "IP (IPv4)"), y.a.createElement(s.a, {
 					addonAfter: "IP",
-					placeholder: "Vui lòng nhập IP (IPv4)",
+					placeholder: "Web sẽ Auto điền nếu dùng AutoDNS",
 					value: e.ip,
 					onChange: e => this.formChange("ip", e.target.value)
 				}))), y.a.createElement("div", {
@@ -107148,7 +107143,7 @@
 					className: "form-group col-md-12 col-xs-12"
 				}, f.a.createElement("label", null, "IP (IPv4)"), f.a.createElement(c.a, {
 					addonAfter: "IP",
-					placeholder: "Vui lòng nhập IP (IPv4)",
+					placeholder: "Web sẽ Auto điền nếu dùng AutoDNS",
 					value: e.ip,
 					onChange: e => this.formChange("ip", e.target.value)
 				}))), f.a.createElement("div", {
