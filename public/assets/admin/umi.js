@@ -5815,7 +5815,9 @@
 					value: 3
 				}, "Mỗi năm 1 lần vào ngày 1 tháng 1"), f.a.createElement("option", {
 					value: 4
-				}, "Thiết lập lại theo năm"))), f.a.createElement(m, {
+				}, "Thiết lập lại theo năm"), f.a.createElement("option", {
+					value: 5
+				}, "Thiết lập mỗi ngày"))), f.a.createElement(m, {
 					title: "Mở chế độ giảm giá hoặc chiết khấu",
 					description: "Sau khi kích hoạt, người dùng có thể thay đổi đơn đặt hàng, chiết khấu sẽ được áp dụng bởi hệ thống đối với đơn đặt hàng gốc, vui lòng xem tài liệu tham khảo"
 				}, f.a.createElement(c.a, {
@@ -78230,7 +78232,10 @@
 				}, "Mỗi Ngày 1 Tháng 1 trong Năm"), m.a.createElement(_.a.Option, {
 					key: 4,
 					value: 4
-				}, "Reset Theo Năm")))), m.a.createElement("div", {
+				}, "Reset Theo Năm"), m.a.createElement(_.a.Option, {
+					key: 5,
+					value: 5
+				}, "Reset Mỗi ngày")))), m.a.createElement("div", {
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
