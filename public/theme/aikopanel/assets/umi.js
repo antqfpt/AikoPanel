@@ -19799,6 +19799,9 @@
 				this.props.user.userInfo.email || this.props.dispatch({
 					type: "user/getUserInfo"
 				})
+				this.props.user.subscribe || this.props.dispatch({
+					type: "user/getSubscribe"
+				})
 			}
 			showDropmenu(e) {
 				var t = this;
