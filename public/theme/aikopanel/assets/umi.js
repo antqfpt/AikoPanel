@@ -12700,8 +12700,6 @@
 							title: Object(h.formatMessage)({ id: "Cập Nhật SNI Thành Công" }),
 							content: Object(h.formatMessage)({ id: "✅ Vui Lòng Đồng Bộ Lại Server Về APP 📲" }),
 							onOk: () => {
-								// Thay đổi URL nếu cần và tải lại trang
-								window.location.href = "/#/utilities";
 								window.location.reload();
 							}
 						});
@@ -12730,7 +12728,10 @@
 							}),
 							content: Object(h.formatMessage)({
 								id: "Username mới của bạn là: " + e.refs.new_username.value
-							})
+							}),
+							onOk: () => {
+								window.location.reload();
+							}
 						})
 					},
 					onCancel() {},
@@ -12764,7 +12765,10 @@
 							}),
 							content: Object(h.formatMessage)({
 								id: "URL Avatar mới của bạn là: " + e.refs.new_avatar_url.value
-							})
+							}),
+							onOk: () => {
+								window.location.reload();
+							}
 						})
 					},
 					onCancel() {},
@@ -19798,8 +19802,8 @@
 			componentDidMount() {
 				this.props.user.userInfo.email || this.props.dispatch({
 					type: "user/getUserInfo"
-				})
-				this.props.user.subscribe || this.props.dispatch({
+				}),
+				this.props.dispatch({
 					type: "user/getSubscribe"
 				})
 			}
