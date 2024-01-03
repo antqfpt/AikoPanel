@@ -100690,6 +100690,12 @@
 							size: "small",
 							checked: parseInt(e.show),
 							onClick: () => this.update(e, "show", parseInt(e.show) ? 0 : 1)
+						}), y.a.createElement("span", {
+							style: { margin: "0 3px" },
+						}), y.a.createElement(f.a, {
+							size: "small",
+							checked: parseInt(e.report),
+							onClick: () => this.update(e, "report", parseInt(e.report) ? 0 : 1)
 						}), y.a.createElement(a.a, {
 							type: "vertical"
 						}), y.a.createElement("span", null, I(e)))
