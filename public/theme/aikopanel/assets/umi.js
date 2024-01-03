@@ -12669,48 +12669,48 @@
 				})
 			}
 			changeSNI() {
-				const e = this.selectRef.value;
-				let t;
-				if ("" === e) return s.a.error(Object(h.formatMessage)({
-					id: "Vui Lòng Chọn SNI Bạn Cần"
-				}));
-				if ("0" === e) {
-					if (t = this.inputRef.value, t.includes("http://") || t.includes("https://")) return s.a.error(Object(h.formatMessage)({
-						id: 'Vui lòng không nhập "http://" hoặc "https://" hãy xóa đi'
-					}))
-				} else t = e;
+				const selectedSNI = this.selectRef.value;
+				let sniValue;
+			
+				if (selectedSNI === "") {
+					s.a.error(Object(h.formatMessage)({ id: "Vui Lòng Chọn SNI Bạn Cần" }));
+					return;
+				}
+			
+				if (selectedSNI === "0") {
+					sniValue = this.inputRef.value;
+					if (sniValue.includes("http://") || sniValue.includes("https://")) {
+						s.a.error(Object(h.formatMessage)({
+							id: 'Vui lòng không nhập "http://" hoặc "https://" hãy xóa đi'
+						}));
+						return;
+					}
+				} else {
+					sniValue = selectedSNI;
+				}
 				i.a.confirm({
-					title: Object(h.formatMessage)({
-						id: "Bạn Có Chắc Muốn Thay Đổi SNI Hiện Tại Không ?"
-					}),
-					content: Object(h.formatMessage)({
-						id: "Nếu bạn thay đổi SNI thì bạn cần phải cập nhật Đồng Bộ lại server mới sử dụng được nha👈"
-					}),
+					title: Object(h.formatMessage)({ id: "Bạn Có Chắc Muốn Thay Đổi SNI Hiện Tại Không ?" }),
+					content: Object(h.formatMessage)({ id: "Nếu bạn thay đổi SNI thì bạn cần phải cập nhật Đồng Bộ lại server mới sử dụng được nha👈" }),
 					onOk: () => {
 						this.props.dispatch({
 							type: "user/changeSNI",
-							sni: t
-						}), i.a.success({
-							title: Object(h.formatMessage)({
-								id: "Cập Nhật SNI Thành Công"
-							}),
-							content: Object(h.formatMessage)({
-								id: "✅ Vui Lòng Đồng Bộ Lại Server Về APP 📲"
-							}),
-							// trả về dashboard và reload lại trang
-							// onOk: () => window.location.reload()
-							onOk: () => { window.location.href = "/#/utilities" }
-						})
+							sni: sniValue
+						});
+						i.a.success({
+							title: Object(h.formatMessage)({ id: "Cập Nhật SNI Thành Công" }),
+							content: Object(h.formatMessage)({ id: "✅ Vui Lòng Đồng Bộ Lại Server Về APP 📲" }),
+							onOk: () => {
+								// Thay đổi URL nếu cần và tải lại trang
+								window.location.href = "/#/utilities";
+								window.location.reload();
+							}
+						});
 					},
 					onCancel() {},
-					okText: Object(h.formatMessage)({
-						id: "Xác Nhận"
-					}),
-					cancelText: Object(h.formatMessage)({
-						id: "Hủy Bỏ"
-					})
-				})
-			}
+					okText: Object(h.formatMessage)({ id: "Xác Nhận" }),
+					cancelText: Object(h.formatMessage)({ id: "Hủy Bỏ" })
+				});
+			}			
 			changeUserName() {
 				var e = this;
 				i.a.confirm({
