@@ -12692,14 +12692,14 @@
 							sni: t
 						}), i.a.success({
 							title: Object(h.formatMessage)({
-								id: "Cập Nhật SNI Thành Công, SNI mói là: " + t
+								id: "Cập Nhật SNI Thành Công"
 							}),
 							content: Object(h.formatMessage)({
 								id: "✅ Vui Lòng Đồng Bộ Lại Server Về APP 📲"
 							}),
 							// trả về dashboard và reload lại trang
 							// onOk: () => window.location.reload()
-							onOk: () => { window.location.href = "/utilities" }
+							onOk: () => { window.location.href = "/#/utilities" }
 						})
 					},
 					onCancel() {},
