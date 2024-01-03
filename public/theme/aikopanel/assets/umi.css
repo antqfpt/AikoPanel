@@ -1066,10 +1066,10 @@ body {
 
 span.dvs-thongtin1-version {
     margin: 0 25px;
-    border-radius: 6px;
+    border-radius: 4px;
     background-image: linear-gradient(90deg,#ffffff 5%,#ffffff 50%,#ffffff 100%),linear-gradient(0deg,#ffffff 5%,#937cff 50%,#af9eff 90%);
     padding: 0px 15px;
-    color: #565353;
+    color: #FF0000;
     font-family: sans-serif;
     border: 1px solid #6eb1ff;
 }
@@ -1139,10 +1139,10 @@ article,aside,figcaption,figure,footer,header,hgroup,main,nav,section {
 body {
     margin: 0;
     font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 0.9rem;
+    font-weight: 500;
     line-height: 1.5;
-    color: #495057;
+    color: #000;
     text-align: left;
     background-color: #f0f3f8;
 }
@@ -1420,7 +1420,7 @@ template {
 h3.h4.mb-3 {
     border: 1px solid #6db1ff;
     border-top: 2px solid #6db1ff;
-    border-radius: 62px;
+    border-radius: 10px;
     padding: 5px 20px 10px;
     background-image: linear-gradient(0deg,#d7e9ff 5%,#a8cffe 50%,#d7e9ff 100%);
     font-size: 18px;
@@ -1476,7 +1476,7 @@ span.dvs-thongtin1 {
     border-radius: 6px;
     background-image: linear-gradient(90deg,#ffffff 5%,#ffffff 50%,#ffffff 100%),linear-gradient(0deg,#ffffff 5%,#937cff 50%,#af9eff 90%);
     padding: 1px 15px;
-    color: #000000;
+    color: #FF0000;
     font-family: sans-serif;
     border: 1px solid #6db1ff;
 }
@@ -5873,8 +5873,8 @@ a.badge-dark.focus,a.badge-dark:focus {
     line-height: 0;
     font-size: 1rem;
     background-color: #e9ecef;
-    border-radius: .4rem;
-    height: 18px!important;
+    border-radius: 1rem;
+    height: 14px!important;
     box-shadow: 0 0 5px 1px rgb(116 116 116),0 1px 2px rgb(107 107 107);
 }
 
@@ -5887,7 +5887,7 @@ a.badge-dark.focus,a.badge-dark:focus {
     font-weight: bold;
     -webkit-text-stroke: 1px rgb(20 20 20 / 70%);
     border-radius: 4px;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .progress-bar {
@@ -14452,7 +14452,7 @@ h3.block-title {
 .block-content.email-dvs-aiko {
     font-weight: 600;
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     border-radius: 15px;
     background: #ffffff;
     box-shadow: 0 1px 10px rgb(143 179 217),0 1px 2px rgb(211 211 211);
@@ -14471,7 +14471,7 @@ h3.block-title {
 .title-dvs-aiko {
     border: 1px solid #6db1ff;
     border-top: 2px solid #6db1ff;
-    border-radius: 30px;
+    border-radius: 10px;
     background-image: linear-gradient(0deg,#d7e9ff 5%,#a8cffe 50%,#d7e9ff 100%);
     margin-top: -30px;
     margin-bottom: 15px;
@@ -14483,7 +14483,7 @@ h3.block-title {
 .email-dvs-aiko {
     color: black;
     white-space: pre-wrap;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 i.bi.bi-patch-check-fill {
@@ -14498,13 +14498,14 @@ i.bi.bi-patch-check-fill {
     padding: 10px 10px;
     margin-bottom: 10px!important;
     background-image: linear-gradient(0deg,#a8cfff 5%,#9ac1e3 50%,#a8cfff 100%);
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 13px;
     color: #1d1d1d;
     box-shadow: 0 1px 10px rgb(147 144 151),0 1px 2px rgb(249 248 248);
 }
 
 .font-dvsAiko {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     padding: 3px 10px;
     margin: 10px;
@@ -14512,7 +14513,7 @@ i.bi.bi-patch-check-fill {
     border: 1px solid #4e6aea;
     display: inline-block;
     border-radius: 10px;
-    color: #000000;
+    color: #FF0000;
     box-shadow: 0 1px 10px rgb(147 144 151),0 1px 2px rgb(183 183 183);
 }
 
@@ -14522,13 +14523,13 @@ i.bi.bi-patch-check-fill {
     border: 1px solid #5671e9;
     background: #d7e9ff;
     border-radius: .5rem;
-    color: #4d4d4d;
+    color: #000;
     text-align: center;
     padding: 2px 10px;
     margin: 10px;
     font-family: inherit;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 12px;
     box-shadow: 0 1px 10px rgb(147 144 151),0 1px 2px rgb(183 183 183);
 }
 
@@ -14584,12 +14585,14 @@ i.bi.bi-patch-check-fill {
 
 p.font-size-sm-text-muted {
     margin: 20px 0 15px;
-    color: #21971a;
+    color: #FF0000;
     font-weight: 600;
-    text-shadow: 1px 1px 1px #ffffff;
-    background: #a6cdfb;
-    border: 1px solid;
-    border-radius: 10px;
+    font-size: 14px;
+    /*text-shadow: 1px 1px 1px #ffffff;*/
+    background: #fff;
+    border-radius: 7px;
+    border: 1px solid #6db1ff;
+    border-top: 2px solid #6db1ff;
     display: inline-block;
     padding: 0 10px;
 }
@@ -15116,7 +15119,7 @@ a.block.block-link-shadow:active {
     font-weight: 500;
     line-height: 1.25rem;
     letter-spacing: .0125em;
-    color: #555d65;
+    color: #000;
     border-radius: .2rem
 }
 
@@ -17289,7 +17292,7 @@ button.btn.btn-block.dvs-aiko-btn.btn-primary.font-w400 {
 }
 
 .font-size-sm {
-    font-size: .975rem!important;
+    font-size: .9rem!important;
     font-weight: 500;
 }
 
@@ -17490,7 +17493,7 @@ a.text-body-color-light:focus,a.text-body-color-light:hover {
 }
 
 .text-muted {
-    color: #6c757d!important
+    color: #000!important
 }
 
 .hdh-dvs.text-muted {
@@ -17513,7 +17516,7 @@ a.text-body-color-light:focus,a.text-body-color-light:hover {
 
 .hansudung2 {
     text-align: center;
-    color: #3a3a3a;
+    color: #FF0000;
     font-weight: 600
 }
 
@@ -17585,7 +17588,8 @@ a.text-white-50:focus,a.text-white-50:hover {
 }
 
 .text-white-75 {
-    color: hsl(0deg 0% 0% / 75%)!important;
+    color: #000;
+    font-weight: 700;
 }
 
 a.text-white-75.link-fx:before {
@@ -28251,7 +28255,7 @@ svg {
     padding: 7px 0;
     margin: 5px;
     display: inline-block;
-    font-size: 14px;
+    font-size: 12px;
     white-space: nowrap;
     transition: transform .3s ease;
 }
@@ -28288,7 +28292,7 @@ button.Aiko-DVS.DVS-Aiko-Mod3 {
     color: black;
     box-shadow: 0 1px 10px rgb(255 231 103),0 1px 2px rgb(250 255 159);
     text-shadow: 1px 1px 2px #fff4f4;
-    font-size: 12.4px;
+    font-size: 12px;
 }
 
 button.Aiko-DVS.DVS-Aiko-Mod4 {
@@ -28316,7 +28320,7 @@ button.Aiko-DVS.DVS-Aiko-Mod2 {
     color: black;
     box-shadow: 0 1px 10px rgb(255 159 176),0 1px 2px rgb(255 159 196);
     text-shadow: 1px 1px 2px white;
-    font-size: 12.6px;
+    font-size: 12px;
 }
 
 @keyframes blink {
@@ -28363,7 +28367,7 @@ Aiko-DVS button:active {
     box-shadow: 0 1px 10px rgb(134 134 134),0 1px 2px rgb(159 235 255);
     text-shadow: 1px 1px 2px #71b7ff;
     white-space: initial;
-    border-radius: 1rem;
+    border-radius: 0.7rem;
     text-shadow: -.5px 0 #ffffff,0 .5px #f5f5f5,.5px 0 #ffffff,0 -.5px #ffffff,1px 1px 2px rgba(0,0,0,.3);
 }
 
