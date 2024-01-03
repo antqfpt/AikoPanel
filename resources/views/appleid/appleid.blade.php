@@ -112,6 +112,7 @@
         <div class="card">
             <h1>Lấy AppleID Web {{ $appname }}</h1>
             <div class="text-center">
+                <p><strong>Số lần lấy còn lại:</strong> {{ $appleidlimit }}</p>
                 <p><strong>Trạng thái:</strong> {{ $statusid }}</p>
                 <p><strong>Username:</strong> <span id="username">{{ $username }}</span></p>
                 <p><strong>Password:</strong> <span id="password">{{ $password }}</span></p>
