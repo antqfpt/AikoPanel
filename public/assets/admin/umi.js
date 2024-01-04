@@ -5481,7 +5481,7 @@
 					g = e.emailTemplate,
 					v = (e.themeTemplate,
 						e.email),
-					y = e.telegram,
+					y = e.connect,
 					b = e.setTelegramWebhookLoading,
 					w = e.app,
 					aikopanel = e.aikopanel,
@@ -6226,7 +6226,7 @@
 					onChange: (e) => this.set("email", "email_payments_success", e ? 1 : 0),
 				})))), f.a.createElement(s.a.TabPane, {
 					tab: "Liên kết",
-					key: "telegram"
+					key: "connect"
 				}, f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
@@ -6639,7 +6639,7 @@
 					placeholder: "AppleID LINK | https://idapple.aikocute.net/share/xxxxxx",
 					defaultValue: aikopanel.appleid_api,
 					onChange: e => this.set("aikopanel", "appleid_api", e.target.value)
-				})), w.appleid_api ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+				})), aikopanel.appleid_api ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
 					isChildren: !0,
 					title: "Link cấp Ứng dụng Quantumult-X",
 					description: "Link cấp ứng dụng cho Quantumult-X"
@@ -16673,7 +16673,7 @@
 				frontend: {},
 				server: {},
 				email: {},
-				telegram: {},
+				connect: {},
 				app: {},
 				aikopanel: {},
 				safe: {},
