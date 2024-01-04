@@ -756,7 +756,7 @@
 					href: "stash://install-config?url=" + encodeURIComponent(e) + "&name=" + window.settings.title
 				}), t.push({
 					title: "FoXray",
-					href: "https://yiguo.dev/sub/add/?url=" + encodeURIComponent(e) + "#" + window.settings.title
+					href: "foxray://yiguo.dev/sub/add/?url=" + encodeURIComponent(e) + "#" + window.settings.title
 				})), Object(l.k)() && (t.push({
 					title: "ClashX",
 					href: "clash://install-config?url=" + encodeURIComponent(e) + "&name=" + window.settings.title
@@ -772,7 +772,7 @@
 						server_remote: [e + "&flag=qxping, tag=" + window.settings.title]}))
 				}), t.push({
 					title: "FoXray",
-					href: "https://yiguo.dev/sub/add/?url=" + encodeURIComponent(e) + "#" + window.settings.title
+					href: "foxray://yiguo.dev/sub/add/?url=" + encodeURIComponent(e) + "#" + window.settings.title
 				})), Object(l.n)() && (t.push({
 					title: "ClashMeta",
 					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=meta") + "&name=" + window.settings.title
@@ -793,7 +793,7 @@
 					href: "surge:///install-config?url=" + encodeURIComponent(e) + "&name=" + window.settings.title
 				}), t.push({
 					title: "FoXray",
-					href: "https://yiguo.dev/sub/add/?url=" + encodeURIComponent(e) + "#" + window.settings.title
+					href: "foxray://yiguo.dev/sub/add/?url=" + encodeURIComponent(e) + "#" + window.settings.title
 				}), t.push({
 					title: "V2rayNG",
 					href: "v2rayng://install-sub/?url=" + e + "&flag=v2rayng"
