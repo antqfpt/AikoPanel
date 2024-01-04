@@ -796,7 +796,7 @@
 					href: "foxray://yiguo.dev/sub/add/?url=" + encodeURIComponent(e) + "#" + window.settings.title
 				}), t.push({
 					title: "V2rayNG",
-					href: "v2rayng://install-sub/?url=" + e + "&flag=v2rayng"
+					href: "v2rayng://install-sub/?url=" + e + "&flag=v2rayng" + "&name=" + window.settings.title
 				})), c.a.createElement("div", {
 					className: v.a.oneClickSubscribe,
 					ref: "subscribeBox"
