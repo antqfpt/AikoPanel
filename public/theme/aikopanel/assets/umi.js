@@ -754,6 +754,9 @@
 				}), t.push({
 					title: "Stash",
 					href: "stash://install-config?url=" + encodeURIComponent(e) + "&name=" + window.settings.title
+				}), t.push({
+					title: "FoXray",
+					href: "https://yiguo.dev/sub/add/?url=" + encodeURIComponent(e) + "#" + window.settings.title
 				})), Object(l.k)() && (t.push({
 					title: "ClashX",
 					href: "clash://install-config?url=" + encodeURIComponent(e) + "&name=" + window.settings.title
@@ -766,8 +769,10 @@
 				}), t.push({
 					title: "QuantumultX",
 					href: "quantumult-x:///update-configuration?remote-resource=" + encodeURI(JSON.stringify({
-						server_remote: [e + "&flag=qxping, tag=" + window.settings.title]
-					}))
+						server_remote: [e + "&flag=qxping, tag=" + window.settings.title]}))
+				}), t.push({
+					title: "FoXray",
+					href: "https://yiguo.dev/sub/add/?url=" + encodeURIComponent(e) + "#" + window.settings.title
 				})), Object(l.n)() && (t.push({
 					title: "ClashMeta",
 					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=meta") + "&name=" + window.settings.title
@@ -787,8 +792,11 @@
 					title: "Surfboard",
 					href: "surge:///install-config?url=" + encodeURIComponent(e) + "&name=" + window.settings.title
 				}), t.push({
+					title: "FoXray",
+					href: "https://yiguo.dev/sub/add/?url=" + encodeURIComponent(e) + "#" + window.settings.title
+				}), t.push({
 					title: "V2rayNG",
-					href: "v2rayng://install-config?url=" + e + "&flag=v2rayng"
+					href: "v2rayng://install-sub/?url=" + e + "&flag=v2rayng"
 				})), c.a.createElement("div", {
 					className: v.a.oneClickSubscribe,
 					ref: "subscribeBox"

@@ -78202,7 +78202,7 @@
 				}, m.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
 				}, "Phương Thức Reset Lưu Lượng"), m.a.createElement(_.a, {
-					placeholder: "Vui lòng chọn Nhóm Máy Chủ.",
+					placeholder: "Vui lòng chọn phương thức đặt lại dung lượng",
 					style: {
 						width: "100%"
 					},
