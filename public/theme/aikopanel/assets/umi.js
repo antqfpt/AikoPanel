@@ -754,6 +754,9 @@
 				}), t.push({
 					title: "Stash",
 					href: "stash://install-config?url=" + encodeURIComponent(e) + "&name=" + window.settings.title
+				}),t.push({
+					title: "Streisand",
+					href: "streisand://import/" + e + "&name=" + window.settings.title,
 				})), Object(l.k)() && (t.push({
 					title: "ClashX",
 					href: "clash://install-config?url=" + encodeURIComponent(e) + "&name=" + window.settings.title
@@ -766,8 +769,10 @@
 				}), t.push({
 					title: "QuantumultX",
 					href: "quantumult-x:///update-configuration?remote-resource=" + encodeURI(JSON.stringify({
-						server_remote: [e + "&flag=qxping, tag=" + window.settings.title]
-					}))
+						server_remote: [e + "&flag=qxping, tag=" + window.settings.title]}))
+				}),t.push({
+					title: "Streisand",
+					href: "streisand://import/" + e + "&name=" + window.settings.title,
 				})), Object(l.n)() && (t.push({
 					title: "ClashMeta",
 					href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=meta") + "&name=" + window.settings.title
@@ -788,7 +793,7 @@
 					href: "surge:///install-config?url=" + encodeURIComponent(e) + "&name=" + window.settings.title
 				}), t.push({
 					title: "V2rayNG",
-					href: "v2rayng://install-config?url=" + e + "&flag=v2rayng"
+					href: "v2rayng://install-sub/?url=" + encodeURIComponent(e + "&flag=v2rayng") + "&name=" + window.settings.title
 				})), c.a.createElement("div", {
 					className: v.a.oneClickSubscribe,
 					ref: "subscribeBox"
@@ -12669,46 +12674,46 @@
 				})
 			}
 			changeSNI() {
-				const e = this.selectRef.value;
-				let t;
-				if ("" === e) return s.a.error(Object(h.formatMessage)({
-					id: "Vui Lòng Chọn SNI Bạn Cần"
-				}));
-				if ("0" === e) {
-					if (t = this.inputRef.value, t.includes("http://") || t.includes("https://")) return s.a.error(Object(h.formatMessage)({
-						id: 'Vui lòng không nhập "http://" hoặc "https://" hãy xóa đi'
-					}))
-				} else t = e;
+				const selectedSNI = this.selectRef.value;
+				let sniValue;
+			
+				if (selectedSNI === "") {
+					s.a.error(Object(h.formatMessage)({ id: "Vui Lòng Chọn SNI Bạn Cần" }));
+					return;
+				}
+			
+				if (selectedSNI === "0") {
+					sniValue = this.inputRef.value;
+					if (sniValue.includes("http://") || sniValue.includes("https://")) {
+						s.a.error(Object(h.formatMessage)({
+							id: 'Vui lòng không nhập "http://" hoặc "https://" hãy xóa đi'
+						}));
+						return;
+					}
+				} else {
+					sniValue = selectedSNI;
+				}
 				i.a.confirm({
-					title: Object(h.formatMessage)({
-						id: "Bạn Có Chắc Muốn Thay Đổi SNI Hiện Tại Không ?"
-					}),
-					content: Object(h.formatMessage)({
-						id: "Nếu bạn thay đổi SNI thì bạn cần phải cập nhật Đồng Bộ lại server mới sử dụng được nha👈"
-					}),
+					title: Object(h.formatMessage)({ id: "Bạn Có Chắc Muốn Thay Đổi SNI Hiện Tại Không ?" }),
+					content: Object(h.formatMessage)({ id: "Nếu bạn thay đổi SNI thì bạn cần phải cập nhật Đồng Bộ lại server mới sử dụng được nha👈" }),
 					onOk: () => {
 						this.props.dispatch({
 							type: "user/changeSNI",
-							sni: t
-						}), i.a.success({
-							title: Object(h.formatMessage)({
-								id: "Cập Nhật SNI Thành Công"
-							}),
-							content: Object(h.formatMessage)({
-								id: "✅ Vui Lòng Đồng Bộ Lại Server Về APP 📲"
-							}),
-							onOk: () => window.location.reload()
-						})
+							sni: sniValue
+						});
+						i.a.success({
+							title: Object(h.formatMessage)({ id: "Cập Nhật SNI Thành Công" }),
+							content: Object(h.formatMessage)({ id: "✅ Vui Lòng Đồng Bộ Lại Server Về APP 📲" }),
+							onOk: () => {
+								window.location.reload();
+							}
+						});
 					},
 					onCancel() {},
-					okText: Object(h.formatMessage)({
-						id: "Xác Nhận"
-					}),
-					cancelText: Object(h.formatMessage)({
-						id: "Hủy Bỏ"
-					})
-				})
-			}
+					okText: Object(h.formatMessage)({ id: "Xác Nhận" }),
+					cancelText: Object(h.formatMessage)({ id: "Hủy Bỏ" })
+				});
+			}			
 			changeUserName() {
 				var e = this;
 				i.a.confirm({
@@ -12728,7 +12733,10 @@
 							}),
 							content: Object(h.formatMessage)({
 								id: "Username mới của bạn là: " + e.refs.new_username.value
-							})
+							}),
+							onOk: () => {
+								window.location.reload();
+							}
 						})
 					},
 					onCancel() {},
@@ -12762,7 +12770,10 @@
 							}),
 							content: Object(h.formatMessage)({
 								id: "URL Avatar mới của bạn là: " + e.refs.new_avatar_url.value
-							})
+							}),
+							onOk: () => {
+								window.location.reload();
+							}
 						})
 					},
 					onCancel() {},
@@ -19796,6 +19807,9 @@
 			componentDidMount() {
 				this.props.user.userInfo.email || this.props.dispatch({
 					type: "user/getUserInfo"
+				}),
+				this.props.dispatch({
+					type: "user/getSubscribe"
 				})
 			}
 			showDropmenu(e) {

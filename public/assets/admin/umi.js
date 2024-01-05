@@ -5481,7 +5481,7 @@
 					g = e.emailTemplate,
 					v = (e.themeTemplate,
 						e.email),
-					y = e.telegram,
+					y = e.connect,
 					b = e.setTelegramWebhookLoading,
 					w = e.app,
 					aikopanel = e.aikopanel,
@@ -5815,7 +5815,9 @@
 					value: 3
 				}, "Mỗi năm 1 lần vào ngày 1 tháng 1"), f.a.createElement("option", {
 					value: 4
-				}, "Thiết lập lại theo năm"))), f.a.createElement(m, {
+				}, "Thiết lập lại theo năm"), f.a.createElement("option", {
+					value: 5
+				}, "Thiết lập mỗi ngày"))), f.a.createElement(m, {
 					title: "Mở chế độ giảm giá hoặc chiết khấu",
 					description: "Sau khi kích hoạt, người dùng có thể thay đổi đơn đặt hàng, chiết khấu sẽ được áp dụng bởi hệ thống đối với đơn đặt hàng gốc, vui lòng xem tài liệu tham khảo"
 				}, f.a.createElement(c.a, {
@@ -6224,7 +6226,7 @@
 					onChange: (e) => this.set("email", "email_payments_success", e ? 1 : 0),
 				})))), f.a.createElement(s.a.TabPane, {
 					tab: "Liên kết",
-					key: "telegram"
+					key: "connect"
 				}, f.a.createElement("div", {
 					className: ""
 				}, f.a.createElement(m, {
@@ -6637,7 +6639,7 @@
 					placeholder: "AppleID LINK | https://idapple.aikocute.net/share/xxxxxx",
 					defaultValue: aikopanel.appleid_api,
 					onChange: e => this.set("aikopanel", "appleid_api", e.target.value)
-				})), w.appleid_api ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+				})), aikopanel.appleid_api ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
 					isChildren: !0,
 					title: "Link cấp Ứng dụng Quantumult-X",
 					description: "Link cấp ứng dụng cho Quantumult-X"
@@ -16671,7 +16673,7 @@
 				frontend: {},
 				server: {},
 				email: {},
-				telegram: {},
+				connect: {},
 				app: {},
 				aikopanel: {},
 				safe: {},
@@ -78200,7 +78202,7 @@
 				}, m.a.createElement("label", {
 					htmlFor: "example-text-input-alt"
 				}, "Phương Thức Reset Lưu Lượng"), m.a.createElement(_.a, {
-					placeholder: "Vui lòng chọn Nhóm Máy Chủ.",
+					placeholder: "Vui lòng chọn phương thức đặt lại dung lượng",
 					style: {
 						width: "100%"
 					},
@@ -78230,7 +78232,10 @@
 				}, "Mỗi Ngày 1 Tháng 1 trong Năm"), m.a.createElement(_.a.Option, {
 					key: 4,
 					value: 4
-				}, "Reset Theo Năm")))), m.a.createElement("div", {
+				}, "Reset Theo Năm"), m.a.createElement(_.a.Option, {
+					key: 5,
+					value: 5
+				}, "Reset Mỗi ngày")))), m.a.createElement("div", {
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
@@ -100685,6 +100690,12 @@
 							size: "small",
 							checked: parseInt(e.show),
 							onClick: () => this.update(e, "show", parseInt(e.show) ? 0 : 1)
+						}), y.a.createElement("span", {
+							style: { margin: "0 3px" },
+						}), y.a.createElement(f.a, {
+							size: "small",
+							checked: parseInt(e.report),
+							onClick: () => this.update(e, "report", parseInt(e.report) ? 0 : 1)
 						}), y.a.createElement(a.a, {
 							type: "vertical"
 						}), y.a.createElement("span", null, I(e)))
