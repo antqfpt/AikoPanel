@@ -13086,7 +13086,7 @@
 				this.props.dispatch({
 					type: "user/getUserInfo"
 				}),this.props.dispatch({
-					type: "user/getApplicationInfo"
+					type: "user/getApplications"
 				}), this.props.dispatch({
 					type: "comm/config"
 				})
@@ -13177,7 +13177,7 @@
 					}))), u.a.createElement("div", {
 						className: "block-options"
 					}, u.a.createElement("a", {
-						href: app.zalo_discuss_link,
+						href: r.zalo_discuss_link,
 						target: "_blank",
 						className: "btn-dvs"
 					}, u.a.createElement("i", {
