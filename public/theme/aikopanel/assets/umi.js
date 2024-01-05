@@ -13049,6 +13049,159 @@
 			comm: e.comm
 		})))(m)
 	},
+	Application: function(e, t, n) {
+		"use strict";
+		n.r(t);
+		var r = n("jehZ"),
+			o = n.n(r),
+			a = (n("BoS7"), n("Sdc0")),
+			i = (n("+L6B"), n("2/Rp")),
+			s = (n("2qtc"), n("kLXV")),
+			c = (n("miYZ"), n("tsqr")),
+			l = n("q1tI"),
+			u = n.n(l),
+			f = n("L12J"),
+			p = n("/MKj"),
+			d = n("t3Un"),
+			h = (n("E3Iv"), n("Td40"), n("yxnn")),
+			m = n("Y2fQ");
+		n("v32e");
+		class v extends u.a.Component {
+			componentDidMount() {
+				this.props.dispatch({
+					type: "user/getUserInfo"
+				}), this.props.dispatch({
+					type: "comm/config"
+				})
+			}
+			render() {
+				var e = this.props.user,
+					t = e.userInfo,
+					n = e.changePasswordLoading,
+					r = this.props.comm.config;
+				return u.a.createElement(f.a, o()({}, this.props, {
+					title: Object(m.formatMessage)({
+						id: "Ứng dụng"
+					})
+				}), u.a.createElement("main", {
+					id: "main-container"
+				}, u.a.createElement("div", {
+					className: "row mb-3 mb-md-0"
+				}, u.a.createElement("div", {
+					className: "col-md-12"
+				}, u.a.createElement("div", {
+					className: "block block-rounded dvs-border"
+				}, u.a.createElement("div", {
+					className: "block-header block-header-default"
+				}, u.a.createElement("h3", {
+					className: "block-title"
+				}, Object(m.formatMessage)({
+					id: "Thông Báo"
+				}))), u.a.createElement("div", {
+					className: "block-content"
+				}, u.a.createElement("div", {
+					className: "row"
+				}, u.a.createElement("div", {
+					className: "col-lg-8 col-xl-5"
+				}, u.a.createElement("div", {
+					className: "form-group"
+				}, u.a.createElement("label", null, Object(m.formatMessage)({
+					id: "Nhắc Nhở qua Email Khi Hết Hạn"
+				})), u.a.createElement("div", null, u.a.createElement(a.a, {
+					loading: this.props.user.remind_expire_loading,
+					checked: t.remind_expire,
+					onChange: e => this.update("remind_expire", e ? 1 : 0)
+				}))), u.a.createElement("div", {
+					className: "form-group"
+				}, u.a.createElement("label", null, Object(m.formatMessage)({
+					id: "Nhắc Nhở qua Email Về Lưu Lượng"
+				})), u.a.createElement("div", null, u.a.createElement(a.a, {
+					loading: this.props.user.remind_traffic_loading,
+					checked: t.remind_traffic,
+					onChange: e => this.update("remind_traffic", e ? 1 : 0)
+				}))))))))), u.a.createElement("div", {
+					className: "row mb-3 mb-md-0"
+				}, u.a.createElement("div", {
+					className: "col-md-12"
+				}, r.is_telegram ? u.a.createElement("div", {
+					className: "block block-rounded bind_telegram"
+				}, u.a.createElement("div", {
+					className: "block-header block-header-default"
+				}, u.a.createElement("h3", {
+					className: "block-title"
+				}, Object(m.formatMessage)({
+					id: "Liên Kết với Telegram"
+				})), u.a.createElement("div", {
+					className: "block-options"
+				}, u.a.createElement(h.a, null, u.a.createElement("button", {
+					type: "button",
+					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3"
+				}, Object(m.formatMessage)({
+					id: "Bắt Đầu Ngay"
+				})))))) : u.a.createElement(u.a.Fragment, null), r.telegram_discuss_link ? u.a.createElement("div", {
+					className: "block block-rounded join_telegram_disscuss"
+				}, u.a.createElement("div", {
+					className: "block-header block-header-default"
+				}, u.a.createElement("h3", {
+					className: "block-title"
+				}, Object(m.formatMessage)({
+					id: "Nhóm Telegram"
+				})), u.a.createElement("div", {
+					className: "block-options"
+				}, u.a.createElement("a", {
+					href: r.telegram_discuss_link,
+					target: "_blank",
+					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3"
+				}, Object(m.formatMessage)({
+					id: "Tham Gia Ngay"
+				}))))) : u.a.createElement(u.a.Fragment, null), r.zalo_discuss_link ? u.a.createElement("div", {
+					className: "block block-rounded join_telegram_disscuss"
+				}, u.a.createElement("div", {
+					className: "block-header block-header-default"
+				}, u.a.createElement("h3", {
+					className: "block-title"
+				}, Object(m.formatMessage)({
+					id: "Nhóm Zalo"
+				})), u.a.createElement("div", {
+					className: "block-options"
+				}, u.a.createElement("a", {
+					href: r.zalo_discuss_link,
+					target: "_blank",
+					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3"
+				}, Object(m.formatMessage)({
+					id: "Vào ngay"
+				}))))) : u.a.createElement(u.a.Fragment, null), u.a.createElement("div", {
+					className: "block block-rounded dvs-border"
+				}, u.a.createElement("div", {
+					className: "block-header block-header-default"
+				}, u.a.createElement("h3", {
+					className: "block-title"
+				}, Object(m.formatMessage)({
+					id: "Reset Liên Kết Server"
+				})), u.a.createElement("div", {
+					className: "block-options"
+				})), u.a.createElement("div", {
+					className: "block-content"
+				}, u.a.createElement("div", {
+					className: "row push"
+				}, u.a.createElement("div", {
+					className: "col-md-12"
+				}, u.a.createElement("div", {
+					className: "alert alert-warning mb-3",
+					role: "alert"
+				}, "Khi địa chỉ gói dịch vụ hoặc tài khoản của bạn bị rò rỉ và bị người khác lạm dụng, bạn có thể đặt lại thông tin đăng ký tại đây để tránh gây ra tổn thất không đáng có."), u.a.createElement(i.a, {
+					type: "danger",
+					onClick: () => this.resetSecurity()
+				}, Object(m.formatMessage)({
+					id: "Đặt Lại"
+				}))))))))))
+			}
+		}
+		t.default = Object(p.c)((e => ({
+			user: e.user,
+			comm: e.comm
+		})))(v)
+	},
 	DQfm: function(e, t, n) {
 		"use strict";
 		n.r(t);
@@ -19630,6 +19783,15 @@
 						}),
 						type: "item",
 						href: "/knowledge",
+						icon: a.a.createElement("i", {
+							className: "nav-main-link-icon si si-book-open"
+						})
+					},{
+						title: Object(l.formatMessage)({
+							id: "Ứng dụng"
+						}),
+						type: "item",
+						href: "/application",
 						icon: a.a.createElement("i", {
 							className: "nav-main-link-icon si si-book-open"
 						})
@@ -37519,6 +37681,10 @@
 				path: "/utilities",
 				exact: !0,
 				component: n("Utilities").default
+			},{
+				path: "/application",
+				exact: !0,
+				component: n("Application").default
 			}, {
 				path: "/register",
 				exact: !0,
