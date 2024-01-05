@@ -13086,6 +13086,10 @@
 				}), u.a.createElement("main", {
 					id: "main-container"
 				}, u.a.createElement("div", {
+					className: "content content-full"
+				}, u.a.createElement("div", {
+					className: "block-content pb-3"
+				}, u.a.createElement("div", {
 					className: "row mb-3 mb-md-0"
 				}, u.a.createElement("div", {
 					className: "col-md-12"
@@ -13194,7 +13198,7 @@
 					onClick: () => this.resetSecurity()
 				}, Object(m.formatMessage)({
 					id: "Đặt Lại"
-				}))))))))))
+				}))))))))))))
 			}
 		}
 		t.default = Object(p.c)((e => ({
@@ -19793,7 +19797,7 @@
 						type: "item",
 						href: "/application",
 						icon: a.a.createElement("i", {
-							className: "nav-main-link-icon si si-book-open"
+							className: "nav-main-link-icon fa-brands fa-app-store"
 						})
 					}, {
 						title: Object(l.formatMessage)({
