@@ -437,6 +437,21 @@ template {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+.application-dvs-aiko-Android {
+    background: #d2ecff;
+    display: inline-block;
+    padding: 0px 30px;
+    border-radius: 10px;
+    border: 1px solid #8dbffd;
+}
+
+.application-dvs-aiko-Android {}
+
+.block-content-dvs {
+    padding: 10px;
+    padding-bottom: 0;
+}
+
 .thongtin-dangky {
     text-align: center;
     /* display: flex; */
@@ -1032,6 +1047,30 @@ body {
 
 *,:after,:before {
     box-sizing: border-box
+}
+
+.application-dvs-aiko {
+    margin-top: -12px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 00;
+    color: #06688d;
+}
+
+.application-dvs {
+    border: 0.5px solid #89bdfd !important;
+    margin: 25px 0 0;
+}
+
+.dvs-options {
+    white-space: normal;
+}
+
+.dvs-title {
+    display: flex;
+    cursor: pointer;
+    white-space: nowrap;
+    align-items: center;
 }
 
 .laylaimatkhau {
@@ -3578,6 +3617,14 @@ a.btn.disabled,fieldset:disabled a.btn {
     color: #fff;
     background-color: #0553ab;
     border-color: #054d9e
+}
+
+.btn-dvs {
+    border-radius: 20px !important;
+    border: 1px solid #4a77af !important;
+    background: #2196F3 !important;
+    color: #fffdfd !important;
+    padding: 4px 10px;
 }
 
 .btn-primary.focus,.btn-primary:focus {
@@ -14635,6 +14682,11 @@ p.font-size-sm-text-muted {
     border-top-right-radius: 1.2rem;
 }
 
+.block-header-dvs.block-header.block-header-default {
+    padding: 10px 11px !important;
+    border-radius: 10px !important;
+}
+
 .block.block-rounded>.block-header:last-child,.block.block-rounded>.nav-tabs:last-child {
     border-bottom-right-radius: 1.2rem;
     border-bottom-left-radius: 1.2rem;
@@ -14923,7 +14975,7 @@ a.block.block-link-shadow:active {
 
 .block-options {
     flex: 0 0 auto;
-    padding-left: 1.25rem
+    padding-left: 1.25rem;
 }
 
 .block-options .block-options-item {
@@ -19752,6 +19804,10 @@ a.text-xplay-lighter:focus,a.text-xplay-lighter:hover {
     font-variant: normal;
     text-rendering: auto;
     line-height: 1
+}
+
+i.fa.fa-download {
+    margin-right: 5px;
 }
 
 i.fas.fa-hourglass-half {
@@ -27653,7 +27709,7 @@ i.fa-dvs-fa-check {
     }
 
     .block-content {
-        background-color: #fff
+        background-color: #fff;
     }
 
     .block-content.py-3-dvs {
@@ -28202,6 +28258,13 @@ img.description1 {
 img {
     vertical-align: middle;
     border-style: none
+}
+
+img.dvs-aiko-application {
+    width: 30px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
 img.aikopanel-logo.mb-3 {

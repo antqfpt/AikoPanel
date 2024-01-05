@@ -754,7 +754,7 @@
 				}), t.push({
 					title: "Stash",
 					href: "stash://install-config?url=" + encodeURIComponent(e) + "&name=" + window.settings.title
-				}),t.push({
+				}), t.push({
 					title: "Streisand",
 					href: "streisand://import/" + e + "&name=" + window.settings.title,
 				})), Object(l.k)() && (t.push({
@@ -769,8 +769,9 @@
 				}), t.push({
 					title: "QuantumultX",
 					href: "quantumult-x:///update-configuration?remote-resource=" + encodeURI(JSON.stringify({
-						server_remote: [e + "&flag=qxping, tag=" + window.settings.title]}))
-				}),t.push({
+						server_remote: [e + "&flag=qxping, tag=" + window.settings.title]
+					}))
+				}), t.push({
 					title: "Streisand",
 					href: "streisand://import/" + e + "&name=" + window.settings.title,
 				})), Object(l.n)() && (t.push({
@@ -12676,12 +12677,14 @@
 			changeSNI() {
 				const selectedSNI = this.selectRef.value;
 				let sniValue;
-			
+
 				if (selectedSNI === "") {
-					s.a.error(Object(h.formatMessage)({ id: "Vui Lòng Chọn SNI Bạn Cần" }));
+					s.a.error(Object(h.formatMessage)({
+						id: "Vui Lòng Chọn SNI Bạn Cần"
+					}));
 					return;
 				}
-			
+
 				if (selectedSNI === "0") {
 					sniValue = this.inputRef.value;
 					if (sniValue.includes("http://") || sniValue.includes("https://")) {
@@ -12694,26 +12697,38 @@
 					sniValue = selectedSNI;
 				}
 				i.a.confirm({
-					title: Object(h.formatMessage)({ id: "Bạn Có Chắc Muốn Thay Đổi SNI Hiện Tại Không ?" }),
-					content: Object(h.formatMessage)({ id: "Nếu bạn thay đổi SNI thì bạn cần phải cập nhật Đồng Bộ lại server mới sử dụng được nha👈" }),
+					title: Object(h.formatMessage)({
+						id: "Bạn Có Chắc Muốn Thay Đổi SNI Hiện Tại Không ?"
+					}),
+					content: Object(h.formatMessage)({
+						id: "Nếu bạn thay đổi SNI thì bạn cần phải cập nhật Đồng Bộ lại server mới sử dụng được nha👈"
+					}),
 					onOk: () => {
 						this.props.dispatch({
 							type: "user/changeSNI",
 							sni: sniValue
 						});
 						i.a.success({
-							title: Object(h.formatMessage)({ id: "Cập Nhật SNI Thành Công" }),
-							content: Object(h.formatMessage)({ id: "✅ Vui Lòng Đồng Bộ Lại Server Về APP 📲" }),
+							title: Object(h.formatMessage)({
+								id: "Cập Nhật SNI Thành Công"
+							}),
+							content: Object(h.formatMessage)({
+								id: "✅ Vui Lòng Đồng Bộ Lại Server Về APP 📲"
+							}),
 							onOk: () => {
 								window.location.reload();
 							}
 						});
 					},
 					onCancel() {},
-					okText: Object(h.formatMessage)({ id: "Xác Nhận" }),
-					cancelText: Object(h.formatMessage)({ id: "Hủy Bỏ" })
+					okText: Object(h.formatMessage)({
+						id: "Xác Nhận"
+					}),
+					cancelText: Object(h.formatMessage)({
+						id: "Hủy Bỏ"
+					})
 				});
-			}			
+			}
 			changeUserName() {
 				var e = this;
 				i.a.confirm({
@@ -13070,6 +13085,8 @@
 			componentDidMount() {
 				this.props.dispatch({
 					type: "user/getUserInfo"
+				}),this.props.dispatch({
+					type: "user/getApplicationInfo"
 				}), this.props.dispatch({
 					type: "comm/config"
 				})
@@ -13077,6 +13094,7 @@
 			render() {
 				var e = this.props.user,
 					t = e.userInfo,
+					app = e.applications,
 					n = e.changePasswordLoading,
 					r = this.props.comm.config;
 				return u.a.createElement(f.a, o()({}, this.props, {
@@ -13087,8 +13105,6 @@
 					id: "main-container"
 				}, u.a.createElement("div", {
 					className: "content content-full"
-				}, u.a.createElement("div", {
-					className: "block-content pb-3"
 				}, u.a.createElement("div", {
 					className: "row mb-3 mb-md-0"
 				}, u.a.createElement("div", {
@@ -13127,78 +13143,177 @@
 					className: "row mb-3 mb-md-0"
 				}, u.a.createElement("div", {
 					className: "col-md-12"
-				}, r.is_telegram ? u.a.createElement("div", {
-					className: "block block-rounded bind_telegram"
 				}, u.a.createElement("div", {
-					className: "block-header block-header-default"
-				}, u.a.createElement("h3", {
-					className: "block-title"
-				}, Object(m.formatMessage)({
-					id: "Liên Kết với Telegram"
-				})), u.a.createElement("div", {
-					className: "block-options"
-				}, u.a.createElement(h.a, null, u.a.createElement("button", {
-					type: "button",
-					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3"
-				}, Object(m.formatMessage)({
-					id: "Bắt Đầu Ngay"
-				})))))) : u.a.createElement(u.a.Fragment, null), r.telegram_discuss_link ? u.a.createElement("div", {
-					className: "block block-rounded join_telegram_disscuss"
-				}, u.a.createElement("div", {
-					className: "block-header block-header-default"
-				}, u.a.createElement("h3", {
-					className: "block-title"
-				}, Object(m.formatMessage)({
-					id: "Nhóm Telegram"
-				})), u.a.createElement("div", {
-					className: "block-options"
-				}, u.a.createElement("a", {
-					href: r.telegram_discuss_link,
-					target: "_blank",
-					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3"
-				}, Object(m.formatMessage)({
-					id: "Tham Gia Ngay"
-				}))))) : u.a.createElement(u.a.Fragment, null), r.zalo_discuss_link ? u.a.createElement("div", {
-					className: "block block-rounded join_telegram_disscuss"
-				}, u.a.createElement("div", {
-					className: "block-header block-header-default"
-				}, u.a.createElement("h3", {
-					className: "block-title"
-				}, Object(m.formatMessage)({
-					id: "Nhóm Zalo"
-				})), u.a.createElement("div", {
-					className: "block-options"
-				}, u.a.createElement("a", {
-					href: r.zalo_discuss_link,
-					target: "_blank",
-					className: "btn btn-primary btn-sm btn-primary btn-rounded px-3"
-				}, Object(m.formatMessage)({
-					id: "Vào ngay"
-				}))))) : u.a.createElement(u.a.Fragment, null), u.a.createElement("div", {
 					className: "block block-rounded dvs-border"
 				}, u.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, u.a.createElement("h3", {
 					className: "block-title"
 				}, Object(m.formatMessage)({
-					id: "Reset Liên Kết Server"
+					id: "Tổng Hợp Ứng Dụng"
 				})), u.a.createElement("div", {
 					className: "block-options"
 				})), u.a.createElement("div", {
-					className: "block-content"
-				}, u.a.createElement("div", {
-					className: "row push"
-				}, u.a.createElement("div", {
-					className: "col-md-12"
-				}, u.a.createElement("div", {
-					className: "alert alert-warning mb-3",
-					role: "alert"
-				}, "Khi địa chỉ gói dịch vụ hoặc tài khoản của bạn bị rò rỉ và bị người khác lạm dụng, bạn có thể đặt lại thông tin đăng ký tại đây để tránh gây ra tổn thất không đáng có."), u.a.createElement(i.a, {
-					type: "danger",
-					onClick: () => this.resetSecurity()
-				}, Object(m.formatMessage)({
-					id: "Đặt Lại"
-				}))))))))))))
+						className: "application-dvs"
+					}),u.a.createElement("div", {
+						className: "application-dvs-aiko"
+					}, u.a.createElement("div", {
+						className: "application-dvs-aiko-Android"
+					}, Object(m.formatMessage)({
+					id: "Hệ Điều Hành Android"
+				}))), u.a.createElement("div", {
+						className: "block-content-dvs"
+					}, r.zalo_discuss_link ? u.a.createElement("div", {
+						className: "block block-rounded join_telegram_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/./images/icon/V2rayNG.png'
+					}), Object(m.formatMessage)({
+						id: "v2rayNG"
+					}))), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: app.zalo_discuss_link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+
+					r.zalo_discuss_link ? u.a.createElement("div", {
+						className: "block block-rounded join_telegram_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/./images/icon/Sing-box.png'
+					}), Object(m.formatMessage)({
+						id: "Sing-Box"
+					}))), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: r.zalo_discuss_link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+					r.zalo_discuss_link ? u.a.createElement("div", {
+						className: "block block-rounded join_telegram_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/./images/icon/NekoBox For Android.png'
+					}),  u.a.createElement("div", {
+					    className: "dvs-options"
+					}, Object(m.formatMessage)({
+						id: "NekoBox For Android"
+					}))), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: r.zalo_discuss_link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null), u.a.createElement("div", {
+					className: "block-options"
+				})), u.a.createElement("div", {
+						className: "application-dvs"
+					}),u.a.createElement("div", {
+						className: "application-dvs-aiko"
+					}, u.a.createElement("div", {
+						className: "application-dvs-aiko-Android"
+					}, Object(m.formatMessage)({
+					id: "Hệ Điều Hành iOS"
+				}))),u.a.createElement("div", {
+						className: "block-content-dvs"
+					}, r.zalo_discuss_link ? u.a.createElement("div", {
+						className: "block block-rounded join_telegram_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/./images/icon/Shadowrocket.png'
+					}), Object(m.formatMessage)({
+						id: "Shadowrocket"
+					}))), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: r.zalo_discuss_link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+
+					r.zalo_discuss_link ? u.a.createElement("div", {
+						className: "block block-rounded join_telegram_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/./images/icon/Sing-box.png'
+					}), Object(m.formatMessage)({
+						id: "Sing-Box"
+					}))), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: r.zalo_discuss_link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+					r.zalo_discuss_link ? u.a.createElement("div", {
+						className: "block block-rounded join_telegram_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/./images/icon/QuantumultX.png'
+					}),  u.a.createElement("div", {
+					    className: "dvs-options"
+					}, Object(m.formatMessage)({
+						id: "Quantumult - X"
+					}))), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: r.zalo_discuss_link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null), u.a.createElement("div", {
+					className: "block-options"
+				}))))))))
 			}
 		}
 		t.default = Object(p.c)((e => ({
@@ -19790,7 +19905,7 @@
 						icon: a.a.createElement("i", {
 							className: "nav-main-link-icon si si-book-open"
 						})
-					},{
+					}, {
 						title: Object(l.formatMessage)({
 							id: "Ứng dụng"
 						}),
@@ -19918,8 +20033,8 @@
 				return -1 !== this.props.location.pathname.indexOf("admin")
 			}
 			isStaff() {
-                return -1 !== this.props.location.pathname.indexOf("staff")
-            }
+				return -1 !== this.props.location.pathname.indexOf("staff")
+			}
 			render() {
 				return a.a.createElement("nav", {
 					id: "sidebar"
@@ -19972,11 +20087,11 @@
 			}
 			componentDidMount() {
 				this.props.user.userInfo.email || this.props.dispatch({
-					type: "user/getUserInfo"
-				}),
-				this.props.dispatch({
-					type: "user/getSubscribe"
-				})
+						type: "user/getUserInfo"
+					}),
+					this.props.dispatch({
+						type: "user/getSubscribe"
+					})
 			}
 			showDropmenu(e) {
 				var t = this;
@@ -30213,7 +30328,7 @@
 					className: "font-size-sm text-muted",
 					href: "javascript:void(0);",
 					onClick: () => s.a.push("/login")
-				},"« ", Object(u.formatMessage)({
+				}, "« ", Object(u.formatMessage)({
 					id: "Quay Lại Đăng Nhập"
 				})), a.a.createElement(f.a, null, a.a.createElement("span", {
 					className: "aikopanel-login-i18n-btn"
@@ -37085,7 +37200,9 @@
 				subscribe: {},
 				stat: [],
 				userInfo: {},
+				applications: {},
 				getUserInfoLoading: !1,
+				getApplicationsLoading: !1,
 				changePasswordLoading: !1,
 				changeSNILoading: !1,
 				changeAvatarLoading: !1,
@@ -37202,6 +37319,45 @@
 									]
 								]]));
 							case 14:
+							case "end":
+								return e.stop()
+						}
+					}), e)
+				}))(),
+				getApplications: (e, t) => p().mark((function e() {
+					var n, r;
+					return p().wrap((function(e) {
+						for (;;) switch (e.prev = e.next) {
+							case 0:
+								return n = t.put, e.next = 3, n({
+									type: "setState",
+									payload: {
+										getApplicationsLoading: !0
+									}
+								});
+							case 3:
+								return e.next = 5, Object(i.a)("/user/applications");
+							case 5:
+								return r = e.sent, e.next = 8, n({
+									type: "setState",
+									payload: {
+										getApplicationsLoading: !1
+									}
+								});
+							case 8:
+								if (200 === r.code) {
+									e.next = 10;
+									break
+								}
+								return e.abrupt("return");
+							case 10:
+								return e.next = 12, n({
+									type: "setState",
+									payload: {
+										applications: r.data
+									}
+								});
+							case 12:
 							case "end":
 								return e.stop()
 						}
@@ -37685,7 +37841,7 @@
 				path: "/utilities",
 				exact: !0,
 				component: n("Utilities").default
-			},{
+			}, {
 				path: "/application",
 				exact: !0,
 				component: n("Application").default
@@ -41601,7 +41757,7 @@
 					className: "font-size-sm text-muted",
 					href: "javascript:void(0);",
 					onClick: () => s.a.push("/login")
-				},"« ", Object(u.formatMessage)({
+				}, "« ", Object(u.formatMessage)({
 					id: "Quay Lại Đăng Nhập"
 				})), a.a.createElement(f.a, null, a.a.createElement("span", {
 					className: "aikopanel-login-i18n-btn"
