@@ -13175,7 +13175,7 @@
 						className: "block-rounded-join-dvs"
 					}, Object(m.formatMessage)({
 						id: "Phiên bản"
-					}), ": v",Android?.AikoPanel.version )), u.a.createElement("div", {
+					}), ": v",Android?.v2rayng.version )), u.a.createElement("div", {
 						className: "block-header-dvs block-header block-header-default"
 					}, u.a.createElement("div", {
 						className: "dvs-title"
@@ -13187,7 +13187,7 @@
 					}))), u.a.createElement("div", {
 						className: "block-options"
 					}, u.a.createElement("a", {
-						href: Android?.AikoPanel.link,
+						href: Android?.v2rayng.link,
 						// target: "_blank",
 						className: "btn-dvs"
 					}, u.a.createElement("i", {
