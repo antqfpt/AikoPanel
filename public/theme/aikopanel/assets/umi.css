@@ -437,6 +437,17 @@ template {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+.block-rounded-join-dvs {
+    background: #db5c00;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #5f9ce7;
+    border-top: none;
+}
+
 .application-dvs-aiko-Android {
     background: #d2ecff;
     display: inline-block;
@@ -1047,6 +1058,13 @@ body {
 
 *,:after,:before {
     box-sizing: border-box
+}
+
+.block-rounded-join {
+    text-align: center;
+    margin-bottom: -13px;
+    font-size: 8px;
+    /* text-transform: uppercase; */
 }
 
 .application-dvs-aiko {
@@ -14442,6 +14460,12 @@ a.badge-secondary.focus,a.badge-secondary:focus {
     box-shadow: none
 }
 
+.join_dvs_disscuss {
+    border: 1px solid #5f9ce7;
+    overflow: overlay;
+    border-radius: 7px!important;
+}
+
 .block-header {
     display: flex;
     flex-direction: row;
@@ -14684,7 +14708,7 @@ p.font-size-sm-text-muted {
 
 .block-header-dvs.block-header.block-header-default {
     padding: 10px 11px !important;
-    border-radius: 10px !important;
+    border-radius: 5px !important;
 }
 
 .block.block-rounded>.block-header:last-child,.block.block-rounded>.nav-tabs:last-child {

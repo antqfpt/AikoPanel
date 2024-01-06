@@ -13095,6 +13095,10 @@
 				var e = this.props.user,
 					t = e.userInfo,
 					app = e.applications,
+					Android = app.Android,
+					iOS = app.iOS,
+					Windows = app.Windows,
+					macOS = app.macOS
 					n = e.changePasswordLoading,
 					r = this.props.comm.config;
 				return u.a.createElement(f.a, o()({}, this.props, {
@@ -13164,8 +13168,14 @@
 				}))), u.a.createElement("div", {
 						className: "block-content-dvs"
 					}, r.zalo_discuss_link ? u.a.createElement("div", {
-						className: "block block-rounded join_telegram_disscuss"
+						className: "block join_dvs_disscuss"
 					}, u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": v",Android?.AikoPanel.version )), u.a.createElement("div", {
 						className: "block-header-dvs block-header block-header-default"
 					}, u.a.createElement("div", {
 						className: "dvs-title"
@@ -13177,8 +13187,8 @@
 					}))), u.a.createElement("div", {
 						className: "block-options"
 					}, u.a.createElement("a", {
-						href: r.zalo_discuss_link,
-						target: "_blank",
+						href: Android?.AikoPanel.link,
+						// target: "_blank",
 						className: "btn-dvs"
 					}, u.a.createElement("i", {
 						className: "fa fa-download"
