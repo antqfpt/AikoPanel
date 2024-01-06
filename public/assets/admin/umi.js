@@ -6468,9 +6468,14 @@
                     role: "alert"
                 }, f.a.createElement("p", {
                     className: "mb-0"
-                }, "Dùng cho quản lý phiên bản và cập nhật của ứng dụng di động (APP)"))))), f.a.createElement("div", {
-                    className: ""
-                }, f.a.createElement(m, {
+                }, "Dùng cho quản lý phiên bản và cập nhật của ứng dụng di động (APP)"))))), f.a.createElement(m, {
+					title: "App Cá Nhân",
+					description: "Sau khi mở, thông tin cá nhân của người dùng sẽ được hiển thị trong user center"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_personalized_enable),
+					onChange: e => this.set("app", "app_personalized_enable", e ? 1 : 0)
+				})), parseInt(w.app_personalized_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
                     title: "Windows",
                     description: "Số phiên bản và địa chỉ tải xuống cho Windows"
                 }, f.a.createElement("input", {
@@ -6485,7 +6490,8 @@
                     placeholder: "https://xxxx.com/xxx.exe",
                     defaultValue: w.windows_download_url,
                     onChange: e=>this.set("app", "windows_download_url", e.target.value)
-                })), f.a.createElement(m, {
+				}))) : "", parseInt(w.app_personalized_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
                     title: "macOS",
                     description: "Số phiên bản và địa chỉ tải xuống cho macOS"
                 }, f.a.createElement("input", {
@@ -6500,7 +6506,8 @@
                     placeholder: "https://xxxx.com/xxx.dmg",
                     defaultValue: w.macos_download_url,
                     onChange: e=>this.set("app", "macos_download_url", e.target.value)
-                })), f.a.createElement(m, {
+				}))) : "", parseInt(w.app_personalized_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
                     title: "Android",
                     description: "Số phiên bản và địa chỉ tải xuống cho Android"
                 }, f.a.createElement("input", {
@@ -6515,7 +6522,7 @@
                     placeholder: "https://xxxx.com/xxx.apk",
                     defaultValue: w.android_download_url,
                     onChange: e=>this.set("app", "android_download_url", e.target.value)
-				})))),f.a.createElement(s.a.TabPane, {
+				}))) : "" ), f.a.createElement(s.a.TabPane, {
 					tab: "AikoPanel",
 					key: "aikopanel"
 				}, f.a.createElement("div", {
