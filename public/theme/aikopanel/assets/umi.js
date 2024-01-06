@@ -15952,9 +15952,19 @@
 				}, Object(m.formatMessage)({
 					id: "Thông Báo"
 				}))), u.a.createElement("div", {
+					className: "block block-rounded dvs-border"
+				}, u.a.createElement("div", {
+					className: "block-header block-header-default"
+				}, u.a.createElement("h3", {
+					className: "block-title"
+				}, Object(m.formatMessage)({
+					id: "Reset Liên Kết Server"
+				})), u.a.createElement("div", {
+					className: "block-options"
+				})), u.a.createElement("div", {
 					className: "block-content"
 				}, u.a.createElement("div", {
-					className: "col-lg-8 col-xl-5"
+					className: "row push"
 				}, u.a.createElement("div", {
 					className: "col-md-12"
 				}, u.a.createElement("div", {
@@ -15965,7 +15975,7 @@
 					onClick: () => window.location.href = r.appleid_custom_url || t.subscribe_url + "&flag=appleid",
 				}, Object(m.formatMessage)({
 					id: "Lấy AppleID"
-				})))))))), u.a.createElement("div", {
+				}))))))), u.a.createElement("div", {
 					className: "row mb-3 mb-md-0"
 				}, u.a.createElement("div", {
 					className: "col-md-12"
@@ -16569,7 +16579,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-					)))))))
+					)))))))))
 			}
 		}
 		t.default = Object(p.c)((e => ({
