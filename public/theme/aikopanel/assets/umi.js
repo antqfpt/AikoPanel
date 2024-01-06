@@ -13085,7 +13085,7 @@
 			componentDidMount() {
 				this.props.dispatch({
 					type: "user/getUserInfo"
-				}),this.props.dispatch({
+				}), this.props.dispatch({
 					type: "user/getApplications"
 				}), this.props.dispatch({
 					type: "user/getSubscribe"
@@ -13095,7 +13095,7 @@
 			}
 			render() {
 				var e = this.props.user,
-					t = e.subscribe;
+					t = e.subscribe,
 					app = e.applications,
 					Android = app.Android,
 					iOS = app.iOS,
