@@ -15952,14 +15952,6 @@
 				}, Object(m.formatMessage)({
 					id: "Thông Báo"
 				}))), u.a.createElement("div", {
-					className: "block block-rounded dvs-border"
-				}, u.a.createElement("div", {
-					className: "block-header block-header-default"
-				}, u.a.createElement("h3", {
-					className: "block-title"
-				}, Object(m.formatMessage)({
-					id: "Reset Liên Kết Server"
-				})), u.a.createElement("div", {
 					className: "block-options"
 				})), u.a.createElement("div", {
 					className: "block-content"
@@ -16579,7 +16571,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-					)))))))))
+					)))))))
 			}
 		}
 		t.default = Object(p.c)((e => ({
