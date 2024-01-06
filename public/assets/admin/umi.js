@@ -6522,7 +6522,34 @@
                     placeholder: "https://xxxx.com/xxx.apk",
                     defaultValue: w.android_download_url,
                     onChange: e=>this.set("app", "android_download_url", e.target.value)
-				}))) : "" ), f.a.createElement(s.a.TabPane, {
+				}))) : "" ), f.a.createElement(m, {
+					title: "App Windows",
+					description: "Sau khi mở, thông tin cá nhân của người dùng sẽ được hiển thị trong user center"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_windows_enable),
+					onChange: e => this.set("app", "app_windows_enable", e ? 1 : 0)
+				})), parseInt(w.app_windows_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Clash For Windows",
+                    description: "Cho phép người dùng sử dụng Clash For Windows"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_windows_cfa),
+					onChange: e => this.set("app", "app_windows_cfa", e ? 1 : 0)
+				}))) : "", parseInt(w.app_windows_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Sing-Box",
+                    description: "Cho phép người dùng sử dụng Sing-Box"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_windows_sb),
+					onChange: e => this.set("app", "app_windows_sb", e ? 1 : 0)
+				}))) : "", parseInt(w.app_windows_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Clash Meta",
+                    description: "Cho phép người dùng sử dụng Clash Meta"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_windows_meta),
+					onChange: e => this.set("app", "app_windows_meta", e ? 1 : 0)
+				}))): " " , f.a.createElement(s.a.TabPane, {
 					tab: "AikoPanel",
 					key: "aikopanel"
 				}, f.a.createElement("div", {
