@@ -6531,24 +6531,161 @@
 				})), parseInt(w.app_windows_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
 					isChildren: !0,
                     title: "Clash For Windows",
-                    description: "Cho phép người dùng sử dụng Clash For Windows"
+                    description: "Cho phép người dùng tải xuống Clash For Windows"
 				}, f.a.createElement(c.a, {
 					checked: parseInt(w.app_windows_cfa),
 					onChange: e => this.set("app", "app_windows_cfa", e ? 1 : 0)
 				}))) : "", parseInt(w.app_windows_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
 					isChildren: !0,
-                    title: "Sing-Box",
-                    description: "Cho phép người dùng sử dụng Sing-Box"
+                    title: "NekoRay",
+                    description: "Cho phép người dùng tải xuống NekoRay"
 				}, f.a.createElement(c.a, {
-					checked: parseInt(w.app_windows_sb),
-					onChange: e => this.set("app", "app_windows_sb", e ? 1 : 0)
+					checked: parseInt(w.app_windows_nekoray),
+					onChange: e => this.set("app", "app_windows_nekoray", e ? 1 : 0)
 				}))) : "", parseInt(w.app_windows_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
 					isChildren: !0,
-                    title: "Clash Meta",
-                    description: "Cho phép người dùng sử dụng Clash Meta"
+                    title: "Netch",
+                    description: "Cho phép người dùng tải xuống Netch"
 				}, f.a.createElement(c.a, {
-					checked: parseInt(w.app_windows_meta),
-					onChange: e => this.set("app", "app_windows_meta", e ? 1 : 0)
+					checked: parseInt(w.app_windows_netch),
+					onChange: e => this.set("app", "app_windows_netch", e ? 1 : 0)
+				}))): " ", f.a.createElement(m, {
+					title: "App macOS",
+					description: "Sau khi mở, thông tin cá nhân của người dùng sẽ được hiển thị trong user center"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_macos_enable),
+					onChange: e => this.set("app", "app_macos_enable", e ? 1 : 0)
+				})), parseInt(w.app_macos_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Sing-Box",
+                    description: "Cho phép người dùng tải xuống Sing-Box"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_macos_sb),
+					onChange: e => this.set("app", "app_macos_sb", e ? 1 : 0)
+				}))) : " ", parseInt(w.app_macos_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Clash X",
+                    description: "Cho phép người dùng tải xuống Clash X"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_macos_clashx),
+					onChange: e => this.set("app", "app_macos_clashx", e ? 1 : 0)
+				}))) : " ", parseInt(w.app_macos_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Clash for Windows",
+                    description: "Cho phép người dùng tải xuống Clash for Windows"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_macos_cfw),
+					onChange: e => this.set("app", "app_macos_cfw", e ? 1 : 0)
+				}))): " ", parseInt(w.app_macos_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Shadowrocket ( Only Apple Silicon ) ",
+                    description: "Cho phép người dùng tải xuống Shadowrocket"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_macos_shadowrocket),
+					onChange: e => this.set("app", "app_macos_shadowrocket", e ? 1 : 0)
+				}))): " ",parseInt(w.app_macos_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Quantumult X",
+                    description: "Cho phép người dùng tải xuống Quantumult X"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_macos_qx),
+					onChange: e => this.set("app", "app_macos_qx", e ? 1 : 0)
+				}))): " " ,f.a.createElement(m, {
+					title: "App IOS",
+					description: "Sau khi mở, thông tin cá nhân của người dùng sẽ được hiển thị trong user center"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_ios_enable),
+					onChange: e => this.set("app", "app_ios_enable", e ? 1 : 0)
+				})), parseInt(w.app_ios_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Sing-Box",
+                    description: "Cho phép người dùng tải xuống Sing-Box"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_ios_sb),
+					onChange: e => this.set("app", "app_ios_sb", e ? 1 : 0)
+				}))) : "", parseInt(w.app_ios_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Shadowrocket",
+                    description: "Cho phép người dùng tải xuống Shadowrocket"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_ios_shadowrocket),
+					onChange: e => this.set("app", "app_ios_shadowrocket", e ? 1 : 0)
+				}))) : "", parseInt(w.app_ios_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Quantumult X",
+                    description: "Cho phép người dùng tải xuống Quantumult X"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_ios_qx),
+					onChange: e => this.set("app", "app_ios_qx", e ? 1 : 0)
+				}))): " ", parseInt(w.app_ios_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Surge",
+                    description: "Cho phép người dùng tải xuống Surge"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_ios_surge),
+					onChange: e => this.set("app", "app_ios_surge", e ? 1 : 0)
+				}))): " ", parseInt(w.app_ios_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Stash",
+                    description: "Cho phép người dùng tải xuống Stash"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_ios_stash),
+					onChange: e => this.set("app", "app_ios_stash", e ? 1 : 0)
+				}))): " ",parseInt(w.app_ios_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Streisand",
+                    description: "Cho phép người dùng tải xuống Streisand"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_ios_streisand),
+					onChange: e => this.set("app", "app_ios_streisand", e ? 1 : 0)
+				}))): " " , f.a.createElement(m, {
+					title: "App Android",
+					description: "Sau khi mở, thông tin cá nhân của người dùng sẽ được hiển thị trong user center"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_android_enable),
+					onChange: e => this.set("app", "app_android_enable", e ? 1 : 0)
+				})), parseInt(w.app_android_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Sing-Box",
+                    description: "Cho phép người dùng tải xuống Sing-Box"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_android_sb),
+					onChange: e => this.set("app", "app_android_sb", e ? 1 : 0)
+				}))) : "", parseInt(w.app_android_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Clash For Android",
+                    description: "Cho phép người dùng tải xuống Clash For Android"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_android_cfa),
+					onChange: e => this.set("app", "app_android_cfa", e ? 1 : 0)
+				}))) : "", parseInt(w.app_android_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "NekoBox",
+                    description: "Cho phép người dùng tải xuống NekoBox"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_android_nekobox),
+					onChange: e => this.set("app", "app_android_nekobox", e ? 1 : 0)
+				}))): " ",parseInt(w.app_android_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "ClashMeta",
+                    description: "Cho phép người dùng tải xuống Clash Meta"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_android_meta),
+					onChange: e => this.set("app", "app_android_meta", e ? 1 : 0)
+				}))): " ", parseInt(w.app_android_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "Surfboard",
+                    description: "Cho phép người dùng tải xuống Surfboard"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_android_surfboard),
+					onChange: e => this.set("app", "app_android_surfboard", e ? 1 : 0)
+				}))): " ",parseInt(w.app_android_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "V2RayNG",
+                    description: "Cho phép người dùng tải xuống V2RayNG"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_android_v2rayng),
+					onChange: e => this.set("app", "app_android_v2rayng", e ? 1 : 0)
 				}))): " " ) , f.a.createElement(s.a.TabPane, {
 					tab: "AikoPanel",
 					key: "aikopanel"
