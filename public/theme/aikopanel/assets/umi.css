@@ -450,7 +450,7 @@ template {
 }
 
 .block-rounded-price {
-    margin: -5px 1px -14.7px;
+    margin: -6px 1px -15.45px;
 }
 
 .block-rounded-join-dvs {
@@ -1079,7 +1079,7 @@ body {
 
 .block-rounded-join {
     text-align: right;
-    margin: -14.5px 27px;
+    margin: -14px 27px;
     font-size: 8px;
     /* text-transform: uppercase; */
 }
