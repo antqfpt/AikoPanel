@@ -437,15 +437,32 @@ template {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+.block-rounded-price-dvs {
+    display: inline-block;
+    background: #df0000;
+    padding: 0 20px 0px 10px;
+    font-size: 9px;
+    border-radius: 9px 0px 30px;
+    border: 1px solid #4c9cff;
+    border-left: none;
+    border-top: none;
+    color: white;
+}
+
+.block-rounded-price {
+    margin: -5px 1px -14.7px;
+}
+
 .block-rounded-join-dvs {
-    background: #db5c00;
+    background: #0dd36e;
     position: relative;
     z-index: 1;
     display: inline-block;
-    padding: 0 10px;
-    border-radius: 0 0 5px 5px;
-    border: 1px solid #5f9ce7;
+    padding: 0 5px;
+    border-radius: 0px 0px 3px 3px;
+    border: 1px solid #4c9cff;
     border-top: none;
+    color: #0058a3;
 }
 
 .application-dvs-aiko-Android {
@@ -1061,8 +1078,8 @@ body {
 }
 
 .block-rounded-join {
-    text-align: center;
-    margin-bottom: -13px;
+    text-align: right;
+    margin: -14.5px 27px;
     font-size: 8px;
     /* text-transform: uppercase; */
 }
@@ -14461,8 +14478,6 @@ a.badge-secondary.focus,a.badge-secondary:focus {
 }
 
 .join_dvs_disscuss {
-    border: 1px solid #5f9ce7;
-    overflow: overlay;
     border-radius: 7px!important;
 }
 
@@ -14707,8 +14722,9 @@ p.font-size-sm-text-muted {
 }
 
 .block-header-dvs.block-header.block-header-default {
-    padding: 10px 11px !important;
+    padding: 21px 11px 8px !important;
     border-radius: 5px !important;
+    border: 1.5px solid #4c9cff;
 }
 
 .block.block-rounded>.block-header:last-child,.block.block-rounded>.nav-tabs:last-child {

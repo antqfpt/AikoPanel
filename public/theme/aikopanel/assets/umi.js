@@ -13088,12 +13088,14 @@
 				}),this.props.dispatch({
 					type: "user/getApplications"
 				}), this.props.dispatch({
+					type: "user/getSubscribe"
+				}), this.props.dispatch({
 					type: "comm/config"
 				})
 			}
 			render() {
 				var e = this.props.user,
-					t = e.userInfo,
+					t = e.subscribe;
 					app = e.applications,
 					Android = app.Android,
 					iOS = app.iOS,
@@ -13122,28 +13124,22 @@
 				}, Object(m.formatMessage)({
 					id: "Thông Báo"
 				}))), u.a.createElement("div", {
+					className: "block-options"
+				})), u.a.createElement("div", {
 					className: "block-content"
 				}, u.a.createElement("div", {
-					className: "row"
+					className: "row push"
 				}, u.a.createElement("div", {
-					className: "col-lg-8 col-xl-5"
+					className: "col-md-12"
 				}, u.a.createElement("div", {
-					className: "form-group"
-				}, u.a.createElement("label", null, Object(m.formatMessage)({
-					id: "Nhắc Nhở qua Email Khi Hết Hạn"
-				})), u.a.createElement("div", null, u.a.createElement(a.a, {
-					loading: this.props.user.remind_expire_loading,
-					checked: t.remind_expire,
-					onChange: e => this.update("remind_expire", e ? 1 : 0)
-				}))), u.a.createElement("div", {
-					className: "form-group"
-				}, u.a.createElement("label", null, Object(m.formatMessage)({
-					id: "Nhắc Nhở qua Email Về Lưu Lượng"
-				})), u.a.createElement("div", null, u.a.createElement(a.a, {
-					loading: this.props.user.remind_traffic_loading,
-					checked: t.remind_traffic,
-					onChange: e => this.update("remind_traffic", e ? 1 : 0)
-				}))))))))), u.a.createElement("div", {
+					className: "alert alert-warning mb-3",
+					role: "alert"
+				}, "APP IOS, ứng dụng trả phí! Đặc biệt hơn, bạn có thể tải ứng dụng này MIỄN PHÍ chỉ bằng một cú nhấp chuột. Hãy nhấp vào nút bên dưới để bắt đầu tải xuống ngay lập tức."), u.a.createElement(i.a, {
+					type: "danger",
+					onClick: () => window.location.href = r.appleid_custom_url || t.subscribe_url + "&flag=appleid",
+				}, Object(m.formatMessage)({
+					id: "Lấy AppleID"
+				}))))))), u.a.createElement("div", {
 					className: "row mb-3 mb-md-0"
 				}, u.a.createElement("div", {
 					className: "col-md-12"
@@ -13167,50 +13163,58 @@
 					id: "Hệ Điều Hành Android"
 				}))), u.a.createElement("div", {
 						className: "block-content-dvs"
-					}, r.zalo_discuss_link ? u.a.createElement("div", {
+					}, Android?.v2rayng ? u.a.createElement("div", {
 						className: "block join_dvs_disscuss"
 					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, Android?.v2rayng.price)), u.a.createElement("div", {
 						className: "block-rounded-join"
 					},u.a.createElement("div", {
 						className: "block-rounded-join-dvs"
 					}, Object(m.formatMessage)({
 						id: "Phiên bản"
-					}), ": v",Android?.v2rayng.version )), u.a.createElement("div", {
+					}), ": ",Android?.v2rayng.version )), u.a.createElement("div", {
 						className: "block-header-dvs block-header block-header-default"
 					}, u.a.createElement("div", {
 						className: "dvs-title"
 					}, u.a.createElement("div", null, u.a.createElement("img", {
 						className: "dvs-aiko-application",
-						src: '/theme/aikopanel/assets/./images/icon/V2rayNG.png'
-					}), Object(m.formatMessage)({
-						id: "v2rayNG"
-					}))), u.a.createElement("div", {
+						src: '/theme/aikopanel/assets/images/icon/V2rayNG.png'
+					}), Android?.v2rayng.name)), u.a.createElement("div", {
 						className: "block-options"
 					}, u.a.createElement("a", {
 						href: Android?.v2rayng.link,
-						// target: "_blank",
+						target: "_blank",
 						className: "btn-dvs"
 					}, u.a.createElement("i", {
 						className: "fa fa-download"
 					}), Object(m.formatMessage)({
 						id: "Tải Xuống"
-					}))))) : u.a.createElement(u.a.Fragment, null),
-
-					r.zalo_discuss_link ? u.a.createElement("div", {
-						className: "block block-rounded join_telegram_disscuss"
+					}))))) : u.a.createElement(u.a.Fragment, null), Android?.surfboard ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
 					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, Android?.surfboard.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ",Android?.surfboard.version )), u.a.createElement("div", {
 						className: "block-header-dvs block-header block-header-default"
 					}, u.a.createElement("div", {
 						className: "dvs-title"
 					}, u.a.createElement("div", null, u.a.createElement("img", {
 						className: "dvs-aiko-application",
-						src: '/theme/aikopanel/assets/./images/icon/Sing-box.png'
-					}), Object(m.formatMessage)({
-						id: "Sing-Box"
-					}))), u.a.createElement("div", {
+						src: '/theme/aikopanel/assets/images/icon/Surfboard.png'
+					}), Android?.surfboard.name)), u.a.createElement("div", {
 						className: "block-options"
 					}, u.a.createElement("a", {
-						href: r.zalo_discuss_link,
+						href: Android?.surfboard.link,
 						target: "_blank",
 						className: "btn-dvs"
 					}, u.a.createElement("i", {
@@ -13218,30 +13222,101 @@
 					}), Object(m.formatMessage)({
 						id: "Tải Xuống"
 					}))))) : u.a.createElement(u.a.Fragment, null),
-					r.zalo_discuss_link ? u.a.createElement("div", {
-						className: "block block-rounded join_telegram_disscuss"
+					
+					Android?.singbox ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
 					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, Android?.singbox.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ",Android?.singbox.version )), u.a.createElement("div", {
 						className: "block-header-dvs block-header block-header-default"
 					}, u.a.createElement("div", {
 						className: "dvs-title"
-					}, u.a.createElement("img", {
+					}, u.a.createElement("div", null, u.a.createElement("img", {
 						className: "dvs-aiko-application",
-						src: '/theme/aikopanel/assets/./images/icon/NekoBox For Android.png'
-					}),  u.a.createElement("div", {
-					    className: "dvs-options"
-					}, Object(m.formatMessage)({
-						id: "NekoBox For Android"
-					}))), u.a.createElement("div", {
+						src: '/theme/aikopanel/assets/images/icon/Sing-box.png'
+					}), Android?.singbox.name)), u.a.createElement("div", {
 						className: "block-options"
 					}, u.a.createElement("a", {
-						href: r.zalo_discuss_link,
+						href: Android?.singbox.link,
 						target: "_blank",
 						className: "btn-dvs"
 					}, u.a.createElement("i", {
 						className: "fa fa-download"
 					}), Object(m.formatMessage)({
 						id: "Tải Xuống"
-					}))))) : u.a.createElement(u.a.Fragment, null), u.a.createElement("div", {
+					}))))) : u.a.createElement(u.a.Fragment, null),
+					
+					Android?.nekobox ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, Android?.singbox.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ",Android?.nekobox.version )), u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/images/icon/NekoBox For Android.png'
+					}), Android?.nekobox.name)), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: Android?.nekobox.link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+					
+					Android?.meta ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, Android?.meta.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ",Android?.meta.version )), u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/images/icon/ClashMeta.png'
+					}), Android?.meta.name)), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: Android?.meta.link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+					
+					 u.a.createElement("div", {
 					className: "block-options"
 				})), u.a.createElement("div", {
 						className: "application-dvs"
@@ -13253,21 +13328,31 @@
 					id: "Hệ Điều Hành iOS"
 				}))),u.a.createElement("div", {
 						className: "block-content-dvs"
-					}, r.zalo_discuss_link ? u.a.createElement("div", {
-						className: "block block-rounded join_telegram_disscuss"
+					},
+					
+					iOS?.shadowrocket ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
 					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, iOS?.shadowrocket.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ",iOS?.shadowrocket.version )), u.a.createElement("div", {
 						className: "block-header-dvs block-header block-header-default"
 					}, u.a.createElement("div", {
 						className: "dvs-title"
 					}, u.a.createElement("div", null, u.a.createElement("img", {
 						className: "dvs-aiko-application",
-						src: '/theme/aikopanel/assets/./images/icon/Shadowrocket.png'
-					}), Object(m.formatMessage)({
-						id: "Shadowrocket"
-					}))), u.a.createElement("div", {
+						src: '/theme/aikopanel/assets/images/icon/Shadowrocket.png'
+					}), iOS?.shadowrocket.name)), u.a.createElement("div", {
 						className: "block-options"
 					}, u.a.createElement("a", {
-						href: r.zalo_discuss_link,
+						href: iOS?.shadowrocket.link,
 						target: "_blank",
 						className: "btn-dvs"
 					}, u.a.createElement("i", {
@@ -13276,21 +13361,29 @@
 						id: "Tải Xuống"
 					}))))) : u.a.createElement(u.a.Fragment, null),
 
-					r.zalo_discuss_link ? u.a.createElement("div", {
-						className: "block block-rounded join_telegram_disscuss"
+					iOS?.quantumultx ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
 					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, iOS?.quantumultx.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ",iOS?.quantumultx.version )), u.a.createElement("div", {
 						className: "block-header-dvs block-header block-header-default"
 					}, u.a.createElement("div", {
 						className: "dvs-title"
 					}, u.a.createElement("div", null, u.a.createElement("img", {
 						className: "dvs-aiko-application",
-						src: '/theme/aikopanel/assets/./images/icon/Sing-box.png'
-					}), Object(m.formatMessage)({
-						id: "Sing-Box"
-					}))), u.a.createElement("div", {
+						src: '/theme/aikopanel/assets/images/icon/QuantumultX.png'
+					}), iOS?.quantumultx.name)), u.a.createElement("div", {
 						className: "block-options"
 					}, u.a.createElement("a", {
-						href: r.zalo_discuss_link,
+						href: iOS?.quantumultx.link,
 						target: "_blank",
 						className: "btn-dvs"
 					}, u.a.createElement("i", {
@@ -13298,32 +13391,348 @@
 					}), Object(m.formatMessage)({
 						id: "Tải Xuống"
 					}))))) : u.a.createElement(u.a.Fragment, null),
-					r.zalo_discuss_link ? u.a.createElement("div", {
-						className: "block block-rounded join_telegram_disscuss"
+					
+					iOS?.surge ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
 					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, iOS?.surge.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ",iOS?.surge.version )), u.a.createElement("div", {
 						className: "block-header-dvs block-header block-header-default"
 					}, u.a.createElement("div", {
 						className: "dvs-title"
-					}, u.a.createElement("img", {
+					}, u.a.createElement("div", null, u.a.createElement("img", {
 						className: "dvs-aiko-application",
-						src: '/theme/aikopanel/assets/./images/icon/QuantumultX.png'
-					}),  u.a.createElement("div", {
-					    className: "dvs-options"
-					}, Object(m.formatMessage)({
-						id: "Quantumult - X"
-					}))), u.a.createElement("div", {
+						src: '/theme/aikopanel/assets/images/icon/Surge.png'
+					}), iOS?.surge.name)), u.a.createElement("div", {
 						className: "block-options"
 					}, u.a.createElement("a", {
-						href: r.zalo_discuss_link,
+						href: iOS?.surge.link,
 						target: "_blank",
 						className: "btn-dvs"
 					}, u.a.createElement("i", {
 						className: "fa fa-download"
 					}), Object(m.formatMessage)({
 						id: "Tải Xuống"
-					}))))) : u.a.createElement(u.a.Fragment, null), u.a.createElement("div", {
+					}))))) : u.a.createElement(u.a.Fragment, null),
+					
+					iOS?.stash ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, iOS?.stash.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ",iOS?.stash.version )), u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/images/icon/Stash.png'
+					}), iOS?.stash.name)), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: iOS?.stash.link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+					
+					iOS?.streisand ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, iOS?.streisand.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ",iOS?.streisand.version )), u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/images/icon/Streisand.png'
+					}), iOS?.streisand.name)), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: iOS?.streisand.link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+					
+					u.a.createElement("div", {
 					className: "block-options"
-				}))))))))
+				})), u.a.createElement("div", {
+						className: "application-dvs"
+					}),u.a.createElement("div", {
+						className: "application-dvs-aiko"
+					}, u.a.createElement("div", {
+						className: "application-dvs-aiko-Android"
+					}, Object(m.formatMessage)({
+					id: "Hệ Điều Hành Windows"
+				}))), u.a.createElement("div", {
+						className: "block-content-dvs"
+					},
+										
+					Windows?.clash ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, Windows?.clash.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ", Windows?.clash.version)), u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/images/icon/ClashMeta For Windows.png'
+					}), Windows?.clash.name)), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: Windows?.clash.link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+															
+					Windows?.nekoray ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, Windows?.nekoray.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ", Windows?.nekoray.version)), u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/images/icon/ClashMeta For Windows.png'
+					}), Windows?.nekoray.name)), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: Windows?.nekoray.link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+															
+					Windows?.netch ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, Windows?.netch.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ", Windows?.netch.version)), u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/images/icon/ClashMeta For Windows.png'
+					}), Windows?.netch.name)), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: Windows?.netch.link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+					
+					),
+										
+					u.a.createElement("div", {
+					className: "block-options"
+				}), u.a.createElement("div", {
+						className: "application-dvs"
+					}),u.a.createElement("div", {
+						className: "application-dvs-aiko"
+					}, u.a.createElement("div", {
+						className: "application-dvs-aiko-Android"
+					}, Object(m.formatMessage)({
+					id: "Hệ Điều Hành macOS"
+				}))), u.a.createElement("div", {
+						className: "block-content-dvs"
+					},
+										
+					macOS?.singbox ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, macOS?.singbox.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ", macOS?.singbox.version)), u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/images/icon/Sing-box.png'
+					}), macOS?.singbox.name)), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: macOS?.singbox.link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+															
+					macOS?.clashx ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, macOS?.clashx.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ", macOS?.clashx.version)), u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/images/icon/ClashX.png'
+					}), macOS?.clashx.name)), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: macOS?.clashx.link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+															
+					macOS?.quantumultx ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, macOS?.quantumultx.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ", macOS?.quantumultx.version)), u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/images/icon/QuantumultX.png'
+					}), macOS?.quantumultx.name)), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: macOS?.quantumultx.link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+																				
+					macOS?.shadowrocket ? u.a.createElement("div", {
+						className: "block join_dvs_disscuss"
+					}, u.a.createElement("div", {
+						className: "block-rounded-price"
+					},u.a.createElement("div", {
+						className: "block-rounded-price-dvs"
+					}, macOS?.shadowrocket.price)), u.a.createElement("div", {
+						className: "block-rounded-join"
+					},u.a.createElement("div", {
+						className: "block-rounded-join-dvs"
+					}, Object(m.formatMessage)({
+						id: "Phiên bản"
+					}), ": ", macOS?.shadowrocket.version)), u.a.createElement("div", {
+						className: "block-header-dvs block-header block-header-default"
+					}, u.a.createElement("div", {
+						className: "dvs-title"
+					}, u.a.createElement("div", null, u.a.createElement("img", {
+						className: "dvs-aiko-application",
+						src: '/theme/aikopanel/assets/images/icon/Shadowrocket.png'
+					}), macOS?.shadowrocket.name)), u.a.createElement("div", {
+						className: "block-options"
+					}, u.a.createElement("a", {
+						href: macOS?.shadowrocket.link,
+						target: "_blank",
+						className: "btn-dvs"
+					}, u.a.createElement("i", {
+						className: "fa fa-download"
+					}), Object(m.formatMessage)({
+						id: "Tải Xuống"
+					}))))) : u.a.createElement(u.a.Fragment, null),
+					
+					)))))))
 			}
 		}
 		t.default = Object(p.c)((e => ({
