@@ -16151,6 +16151,36 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
+						Android?.v2box ? u.a.createElement("div", {
+							className: "block join_dvs_disscuss"
+						}, u.a.createElement("div", {
+							className: "block-rounded-price"
+						}, u.a.createElement("div", {
+							className: "block-rounded-price-dvs"
+						}, Android?.v2box.price)), u.a.createElement("div", {
+							className: "block-rounded-join"
+						}, u.a.createElement("div", {
+							className: "block-rounded-join-dvs"
+						}, Object(m.formatMessage)({
+							id: "Phiên bản"
+						}), ": ", Android?.v2box.version)), u.a.createElement("div", {
+							className: "block-header-dvs block-header block-header-default"
+						}, u.a.createElement("div", {
+							className: "dvs-title"
+						}, u.a.createElement("div", null, u.a.createElement("img", {
+							className: "dvs-aiko-application",
+							src: '/theme/aikopanel/assets/images/icon/V2Box.png'
+						}), Android?.v2box.name)), u.a.createElement("div", {
+							className: "block-options"
+						}, u.a.createElement("a", {
+							href: Android?.v2box.link,
+							target: "_blank",
+							className: "btn-dvs"
+						}, u.a.createElement("i", {
+							className: "fa fa-download"
+						}), Object(m.formatMessage)({
+							id: "Tải Xuống"
+						}))))) : u.a.createElement(u.a.Fragment, null),
 						u.a.createElement("div", {
 							className: "block-options"
 						})), u.a.createElement("div", {
@@ -16307,6 +16337,36 @@
 							className: "block-options"
 						}, u.a.createElement("a", {
 							href: iOS?.stash.link,
+							target: "_blank",
+							className: "btn-dvs"
+						}, u.a.createElement("i", {
+							className: "fa fa-download"
+						}), Object(m.formatMessage)({
+							id: "Tải Xuống"
+						}))))) : u.a.createElement(u.a.Fragment, null),
+						iOS?.v2box ? u.a.createElement("div", {
+							className: "block join_dvs_disscuss"
+						}, u.a.createElement("div", {
+							className: "block-rounded-price"
+						}, u.a.createElement("div", {
+							className: "block-rounded-price-dvs"
+						}, iOS?.v2box.price)), u.a.createElement("div", {
+							className: "block-rounded-join"
+						}, u.a.createElement("div", {
+							className: "block-rounded-join-dvs"
+						}, Object(m.formatMessage)({
+							id: "Phiên bản"
+						}), ": ", iOS?.v2box.version)), u.a.createElement("div", {
+							className: "block-header-dvs block-header block-header-default"
+						}, u.a.createElement("div", {
+							className: "dvs-title"
+						}, u.a.createElement("div", null, u.a.createElement("img", {
+							className: "dvs-aiko-application",
+							src: '/theme/aikopanel/assets/images/icon/V2Box.png'
+						}), iOS?.v2box.name)), u.a.createElement("div", {
+							className: "block-options"
+						}, u.a.createElement("a", {
+							href: iOS?.v2box.link,
 							target: "_blank",
 							className: "btn-dvs"
 						}, u.a.createElement("i", {
@@ -16604,6 +16664,36 @@
 							className: "block-options"
 						}, u.a.createElement("a", {
 							href: macOS?.shadowrocket.link,
+							target: "_blank",
+							className: "btn-dvs"
+						}, u.a.createElement("i", {
+							className: "fa fa-download"
+						}), Object(m.formatMessage)({
+							id: "Tải Xuống"
+						}))))) : u.a.createElement(u.a.Fragment, null),
+						macOS?.v2box ? u.a.createElement("div", {
+							className: "block join_dvs_disscuss"
+						}, u.a.createElement("div", {
+							className: "block-rounded-price"
+						}, u.a.createElement("div", {
+							className: "block-rounded-price-dvs"
+						}, macOS?.v2box.price)), u.a.createElement("div", {
+							className: "block-rounded-join"
+						}, u.a.createElement("div", {
+							className: "block-rounded-join-dvs"
+						}, Object(m.formatMessage)({
+							id: "Phiên bản"
+						}), ": ", macOS?.v2box.version)), u.a.createElement("div", {
+							className: "block-header-dvs block-header block-header-default"
+						}, u.a.createElement("div", {
+							className: "dvs-title"
+						}, u.a.createElement("div", null, u.a.createElement("img", {
+							className: "dvs-aiko-application",
+							src: '/theme/aikopanel/assets/images/icon/V2Box.png'
+						}), macOS?.v2box.name)), u.a.createElement("div", {
+							className: "block-options"
+						}, u.a.createElement("a", {
+							href: macOS?.v2box.link,
 							target: "_blank",
 							className: "btn-dvs"
 						}, u.a.createElement("i", {
