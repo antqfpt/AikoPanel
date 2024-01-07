@@ -6481,9 +6481,9 @@
                 }, f.a.createElement("input", {
                     type: "text",
                     className: "form-control",
-                    placeholder: "1.0.0",
-                    defaultValue: w.windows_version,
-                    onChange: e=>this.set("app", "windows_version", e.target.value)
+                    placeholder: "Tên App",
+                    defaultValue: w.windows_name,
+                    onChange: e=>this.set("app", "windows_name", e.target.value)
                 }), f.a.createElement("input", {
                     type: "text",
                     className: "form-control mt-1",
@@ -6497,9 +6497,9 @@
                 }, f.a.createElement("input", {
                     type: "text",
                     className: "form-control",
-                    placeholder: "1.0.0",
-                    defaultValue: w.macos_version,
-                    onChange: e=>this.set("app", "macos_version", e.target.value)
+                    placeholder: "Tên App",
+                    defaultValue: w.macos_name,
+                    onChange: e=>this.set("app", "macos_name", e.target.value)
                 }), f.a.createElement("input", {
                     type: "text",
                     className: "form-control mt-1",
@@ -6508,14 +6508,30 @@
                     onChange: e=>this.set("app", "macos_download_url", e.target.value)
 				}))) : "", parseInt(w.app_personalized_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
 					isChildren: !0,
+                    title: "IOS",
+                    description: "Số phiên bản và địa chỉ tải xuống cho IOS"
+                }, f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control",
+                    placeholder: "Tên App",
+                    defaultValue: w.ios_name,
+                    onChange: e=>this.set("app", "ios_name", e.target.value)
+                }), f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control mt-1",
+                    placeholder: "https://xxxx.com/xxx.ipa",
+                    defaultValue: w.ios_download_url,
+                    onChange: e=>this.set("app", "ios_download_url", e.target.value)
+				}))) : "", parseInt(w.app_personalized_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
                     title: "Android",
                     description: "Số phiên bản và địa chỉ tải xuống cho Android"
                 }, f.a.createElement("input", {
                     type: "text",
                     className: "form-control",
-                    placeholder: "1.0.0",
-                    defaultValue: w.android_version,
-                    onChange: e=>this.set("app", "android_version", e.target.value)
+                    placeholder: "Tên App",
+                    defaultValue: w.android_name,
+                    onChange: e=>this.set("app", "android_name", e.target.value)
                 }), f.a.createElement("input", {
                     type: "text",
                     className: "form-control mt-1",
@@ -6590,6 +6606,13 @@
 				}, f.a.createElement(c.a, {
 					checked: parseInt(w.app_macos_qx),
 					onChange: e => this.set("app", "app_macos_qx", e ? 1 : 0)
+				}))): " ",parseInt(w.app_macos_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "V2Box",
+                    description: "Cho phép người dùng tải xuống V2Box"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_macos_v2box),
+					onChange: e => this.set("app", "app_macos_v2box", e ? 1 : 0)
 				}))): " " ,f.a.createElement(m, {
 					title: "App IOS",
 					description: "Sau khi mở, thông tin cá nhân của người dùng sẽ được hiển thị trong user center"
@@ -6638,6 +6661,13 @@
 				}, f.a.createElement(c.a, {
 					checked: parseInt(w.app_ios_streisand),
 					onChange: e => this.set("app", "app_ios_streisand", e ? 1 : 0)
+				}))): " ",parseInt(w.app_ios_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "V2Box",
+                    description: "Cho phép người dùng tải xuống V2Box"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_ios_v2box),
+					onChange: e => this.set("app", "app_ios_v2box", e ? 1 : 0)
 				}))): " " , f.a.createElement(m, {
 					title: "App Android",
 					description: "Sau khi mở, thông tin cá nhân của người dùng sẽ được hiển thị trong user center"
@@ -6686,6 +6716,13 @@
 				}, f.a.createElement(c.a, {
 					checked: parseInt(w.app_android_v2rayng),
 					onChange: e => this.set("app", "app_android_v2rayng", e ? 1 : 0)
+				}))): " ",parseInt(w.app_android_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "V2Box",
+                    description: "Cho phép người dùng tải xuống V2Box"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_android_v2box),
+					onChange: e => this.set("app", "app_android_v2box", e ? 1 : 0)
 				}))): " " ) , f.a.createElement(s.a.TabPane, {
 					tab: "AikoPanel",
 					key: "aikopanel"

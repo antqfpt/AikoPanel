@@ -15764,7 +15764,7 @@
 				})), l.a.createElement("div", {
 					className: "block-options"
 				})), l.a.createElement("div", {
-					className: "block-content dvs-border"
+					className: "block-content"
 				}, l.a.createElement("div", {
 					className: "row push"
 				}, l.a.createElement("div", {
@@ -15791,7 +15791,7 @@
 				})), l.a.createElement("hr", {
 					className: "dvs-hr"
 				}), l.a.createElement("div", {
-					className: "block-content dvs-border"
+					className: "block-content"
 				}, l.a.createElement("div", {
 					className: "row push"
 				}, l.a.createElement("div", {
@@ -15940,8 +15940,7 @@
 					Android = app.Android,
 					iOS = app.iOS,
 					Windows = app.Windows,
-					macOS = app.macOS
-				n = e.changePasswordLoading,
+					macOS = app.macOS,
 					r = this.props.comm.config;
 				return u.a.createElement(f.a, o()({}, this.props, {
 					title: Object(m.formatMessage)({
@@ -15956,28 +15955,33 @@
 				}, u.a.createElement("div", {
 					className: "col-md-12"
 				}, u.a.createElement("div", {
+					className: "block-dvs-header"
+				}, u.a.createElement("div", {
+					className: "block-title-dvs"
+				}, Object(m.formatMessage)({
+					id: "Thông Báo Cho IOS"
+				}))), u.a.createElement("div", {
 					className: "block block-rounded dvs-border"
 				}, u.a.createElement("div", {
-					className: "block-header block-header-default"
-				}, u.a.createElement("h3", {
-					className: "block-title"
-				}, Object(m.formatMessage)({
-					id: "Thông Báo"
-				}))), u.a.createElement("div", {
-					className: "block-content"
-				}, u.a.createElement("div", {
-					className: "row push"
-				}, u.a.createElement("div", {
-					className: "col-md-12"
-				}, u.a.createElement("div", {
-					className: "alert alert-warning mb-3",
-					role: "alert"
-				}, "APP IOS, ứng dụng trả phí! Đặc biệt hơn, bạn có thể tải ứng dụng này MIỄN PHÍ chỉ bằng một cú nhấp chuột. Hãy nhấp vào nút bên dưới để bắt đầu tải xuống ngay lập tức."), u.a.createElement(i.a, {
-					type: "danger",
-					onClick: () => window.location.href = r.appleid_custom_url || t.subscribe_url + "&flag=appleid",
-				}, Object(m.formatMessage)({
-					id: "Lấy AppleID"
-				})))))))), u.a.createElement("div", {
+						className: "block-content"
+					}, (t.plan_id === null || t.plan_id === 0) ?
+					u.a.createElement("div", {
+						className: "col-md-12 text-align-center"
+					}, u.a.createElement("div", {
+						className: "my-4 alert alert-warning mb-3",
+						role: "alert"
+					}, "Vui lòng MUA GÓI để được lấy ID Apple tải app miễn phí cho iPhone , ID Apple của chúng tôi đã mua app sẵn để phục vụ các bạn")) :
+					u.a.createElement("div", {
+						className: "col-md-12 text-align-center"
+					}, u.a.createElement("div", {
+						className: "my-4 alert alert-warning mb-3",
+						role: "alert"
+					}, "APP IOS, ứng dụng trả phí ! Đặc biệt hơn, bạn có thể tải ứng dụng này MIỄN PHÍ Bằng ID Apple của chúng tôi, vì chúng tôi đã mua APP sẵn để các bạn tải miễn phí. Hãy nhấp vào nút bên dưới để Lấy ID Apple và tải xuống ngay lập tức."), u.a.createElement(i.a, {
+						className: "Lay-AppleID",
+						onClick: () => window.location.href = r.appleid_custom_url || t.subscribe_url + "&flag=appleid",
+					}, Object(m.formatMessage)({
+						id: "Lấy ID Apple Miễn Phí"
+					}))))))), u.a.createElement("div", {
 					className: "row mb-3 mb-md-0"
 				}, u.a.createElement("div", {
 					className: "col-md-12"
@@ -15986,12 +15990,15 @@
 					}, u.a.createElement("div", {
 						className: "block-header block-header-default"
 					}, u.a.createElement("h3", {
-						className: "block-title"
+						className: "block-title dvs-site"
 					}, Object(m.formatMessage)({
 						id: "Tổng Hợp Ứng Dụng"
 					})), u.a.createElement("div", {
 						className: "block-options"
-					})), u.a.createElement("div", {
+					}, u.a.createElement("button", {
+						className: "dvs-aiko-options",
+						onClick: () => window.location.href = '/#/knowledge'
+					}, "Hướng Dẫn Sử Dụng APP"))), u.a.createElement("div", {
 						className: "application-dvs"
 					}), u.a.createElement("div", {
 						className: "application-dvs-aiko"
@@ -16803,7 +16810,7 @@
 				}, u.a.createElement("div", {
 					className: "col-lg-12"
 				}, u.a.createElement("div", {
-					className: "block "
+					className: "block dvs-border "
 				}, u.a.createElement("div", {
 					className: "block-content pb-3"
 				}, u.a.createElement("i", {
@@ -22324,9 +22331,8 @@
 								var t = this;
 								return p.a.createElement(e, _({}, this.props, k({}, r, this.context.intl), {
 									ref: a ? function(e) {
-											return t._wrappedInstance = e
-										} :
-										null
+										return t._wrappedInstance = e
+									} : null
 								}))
 							}
 						}]),
@@ -31139,7 +31145,7 @@
 				}, u.a.createElement("div", {
 					className: "content content-full"
 				}, u.a.createElement("div", {
-					className: "block block-rounded  ".concat(n ? "block-mode-loading" : "")
+					className: "block block-rounded dvs-border".concat(n ? "block-mode-loading" : "")
 				}, u.a.createElement("div", {
 					className: "bg-white"
 				}, u.a.createElement("div", {
@@ -33336,7 +33342,7 @@
 					}, u.a.createElement("span", {
 						className: "sr-only"
 					}, "Loading...")) : t.length > 0 ? u.a.createElement("div", {
-						className: "block block-rounded js-appear-enabled"
+						className: "block dvs-border block-rounded js-appear-enabled"
 					}, u.a.createElement("div", {
 						className: "block-content p-0"
 					}, u.a.createElement(a.a, {
@@ -44400,8 +44406,7 @@
 									s = -1,
 									d = -2;
 								break
-							} -
-						1 !== s && (u[o.marker][(o.open ? 3 : 0) + (o.length || 0) % 3] = s)
+							} - 1 !== s && (u[o.marker][(o.open ? 3 : 0) + (o.length || 0) % 3] = s)
 					}
 			}
 		}
@@ -51239,7 +51244,7 @@
 				}, d.a.createElement("div", {
 					className: "col-md-12"
 				}, d.a.createElement("div", {
-					className: "block block-rounded js-appear-enabled ".concat(p ? "block-mode-loading" : "")
+					className: "dvs-border block block-rounded js-appear-enabled ".concat(p ? "block-mode-loading" : "")
 				}, d.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, d.a.createElement("h3", {
@@ -51268,7 +51273,7 @@
 				}, d.a.createElement("div", {
 					className: "col-md-12"
 				}, d.a.createElement("div", {
-					className: "block block-rounded js-appear-enabled ".concat(p ? "block-mode-loading" : "")
+					className: "dvs-border block block-rounded js-appear-enabled ".concat(p ? "block-mode-loading" : "")
 				}, d.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, d.a.createElement("h3", {
@@ -53631,7 +53636,7 @@
 				}, m.a.createElement("div", {
 					className: "content content-full"
 				}, m.a.createElement("div", {
-					className: "block block-rounded js-appear-enabled ".concat(n ? "block-mode-loading" : "")
+					className: "dvs-border block block-rounded js-appear-enabled ".concat(n ? "block-mode-loading" : "")
 				}, m.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, m.a.createElement("h3", {
@@ -60209,7 +60214,7 @@
 				}, b.a.createElement("div", {
 					className: "content content-full"
 				}, b.a.createElement("div", {
-					className: "block block-rounded  ".concat(n ? "block-mode-loading" : "")
+					className: "block block-rounded dvs-border".concat(n ? "dvs-border block-mode-loading" : "")
 				}, b.a.createElement("div", {
 					className: "bg-white"
 				}, Object(B.l)() ? b.a.createElement(N, null, t.map((e => {

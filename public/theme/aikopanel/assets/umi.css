@@ -437,6 +437,19 @@ template {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+.block-title-dvs {
+    border: 1px solid #4c9cff;
+    border-top: 2px solid #4c9cff;
+    background-image: linear-gradient(0deg,#d7e9ff 5%,#a8cffe 50%,#d7e9ff 100%);
+    border-radius: 10px;
+    padding: 5px 50px 5px;
+    font-size: 18px;
+    margin-bottom: 0!important;
+    text-shadow: -0.5px 0 #ffffff, 0 0.5px #f5f5f5, 0.5px 0 #ffffff, 0 -0.5px #ffffff, 1px 1px 2px rgba(0,0,0,.3);
+    box-shadow: 0 -2px 8px #8fb3d9, 0 -1px 2px rgb(255 255 255) !important;
+    display: inline-block;
+}
+
 .block-rounded-price-dvs {
     display: inline-block;
     background: #df0000;
@@ -473,7 +486,8 @@ template {
     border: 1px solid #8dbffd;
 }
 
-.application-dvs-aiko-Android {}
+.application-dvs-aiko-Android {
+}
 
 .block-content-dvs {
     padding: 10px;
@@ -1077,6 +1091,15 @@ body {
     box-sizing: border-box
 }
 
+.text-align-center {
+    text-align: center;
+}
+
+.block-dvs-header {
+    text-align: center;
+    margin-bottom: -21px;
+}
+
 .block-rounded-join {
     text-align: right;
     margin: -14px 27px;
@@ -1407,8 +1430,26 @@ select {
     -webkit-appearance: button
 }
 
+button.dvs-aiko-options {
+    border-radius: 9px;
+    background-image: linear-gradient(0deg,#2889ff 5%,#b6d7ff 50%,#ffffff 100%);
+    border: 1px solid #2486ff;
+    border-bottom: 2px solid #0052b7;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
 [type=button]:not(:disabled),[type=reset]:not(:disabled),[type=submit]:not(:disabled),button:not(:disabled) {
     cursor: pointer
+}
+
+.Lay-AppleID {
+    background-image: linear-gradient(0deg,#64aaff 5%,#ffffff 50%,#71b1ff 100%);
+    border: 1px solid #4c9cff !important;
+    font-weight: 500 !important;
+    padding: 5px 10px;
+    color: #453425 !important;
 }
 
 [type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner {
@@ -13867,10 +13908,11 @@ a.badge-secondary.focus,a.badge-secondary:focus {
     margin-bottom: .875rem
 }
 
-.block.block-rounded.dvs-border {
+.dvs-border {
     border: 1px solid #4c9cff;
     box-shadow: 0px 1px 10px rgb(140 184 233), 0 1px 2px rgb(255 255 255) !important;
     overflow: hidden;
+    border-radius: 1.2rem;
 }
 
 .content .items-push-2x>div {
@@ -14515,6 +14557,11 @@ a.badge-secondary.focus,a.badge-secondary:focus {
     font-weight: 600;
     line-height: 1.75;
     text-align: center;
+}
+
+.dvs-site {
+    font-size: 18px;
+    white-space: normal;
 }
 
 h3.block-title {
