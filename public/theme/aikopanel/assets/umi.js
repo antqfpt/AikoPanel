@@ -15967,11 +15967,7 @@
 					className: "block block-rounded dvs-border"
 				}, u.a.createElement("div", {
 					className: "block-header block-header-default"
-				}, u.a.createElement("h3", {
-					className: "block-title"
-				}, Object(m.formatMessage)({
-					id: "Reset Liên Kết Server"
-				})), u.a.createElement("div", {
+				}, u.a.createElement("div", {
 					className: "block-options"
 				})), u.a.createElement("div", {
 					className: "block-content"
