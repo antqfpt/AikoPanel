@@ -6484,6 +6484,18 @@
                     placeholder: "Tên App",
                     defaultValue: w.windows_name,
                     onChange: e=>this.set("app", "windows_name", e.target.value)
+                }),f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control",
+                    placeholder: "Version",
+                    defaultValue: w.windows_version,
+                    onChange: e=>this.set("app", "windows_version", e.target.value)
+                }),f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control",
+                    placeholder: "Logo URL",
+                    defaultValue: w.windows_logo_url,
+                    onChange: e=>this.set("app", "windows_logo_url", e.target.value)
                 }), f.a.createElement("input", {
                     type: "text",
                     className: "form-control mt-1",
