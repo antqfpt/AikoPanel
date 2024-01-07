@@ -15968,10 +15968,6 @@
 				}, u.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, u.a.createElement("div", {
-					className: "row push"
-				}, u.a.createElement("div", {
-					className: "col-md-12"
-				}, u.a.createElement("div", {
 					className: "alert alert-warning mb-3",
 					role: "alert"
 				}, "APP IOS, ứng dụng trả phí! Đặc biệt hơn, bạn có thể tải ứng dụng này MIỄN PHÍ chỉ bằng một cú nhấp chuột. Hãy nhấp vào nút bên dưới để bắt đầu tải xuống ngay lập tức."), u.a.createElement(i.a, {
@@ -15979,7 +15975,7 @@
 					onClick: () => window.location.href = r.appleid_custom_url || t.subscribe_url + "&flag=appleid",
 				}, Object(m.formatMessage)({
 					id: "Lấy AppleID"
-				}))))))))), u.a.createElement("div", {
+				}))))))), u.a.createElement("div", {
 					className: "row mb-3 mb-md-0"
 				}, u.a.createElement("div", {
 					className: "col-md-12"
