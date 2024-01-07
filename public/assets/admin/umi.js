@@ -6565,6 +6565,13 @@
 				}, f.a.createElement(c.a, {
 					checked: parseInt(w.app_windows_netch),
 					onChange: e => this.set("app", "app_windows_netch", e ? 1 : 0)
+				}))): " ",parseInt(w.app_windows_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
+                    title: "V2rayN",
+                    description: "Cho phép người dùng tải xuống V2rayN"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(w.app_windows_v2rayn),
+					onChange: e => this.set("app", "app_windows_v2rayn", e ? 1 : 0)
 				}))): " ", f.a.createElement(m, {
 					title: "App macOS",
 					description: "Sau khi mở, thông tin cá nhân của người dùng sẽ được hiển thị trong user center"
