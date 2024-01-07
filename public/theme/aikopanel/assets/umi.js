@@ -16405,7 +16405,7 @@
 							className: "dvs-title"
 						}, u.a.createElement("div", null, u.a.createElement("img", {
 							className: "dvs-aiko-application",
-							src: '/theme/aikopanel/assets/images/icon/ClashMeta For Windows.png'
+							src: '/theme/aikopanel/assets/images/icon/NekoRay.png'
 						}), Windows?.nekoray.name)), u.a.createElement("div", {
 							className: "block-options"
 						}, u.a.createElement("a", {
@@ -16435,11 +16435,41 @@
 							className: "dvs-title"
 						}, u.a.createElement("div", null, u.a.createElement("img", {
 							className: "dvs-aiko-application",
-							src: '/theme/aikopanel/assets/images/icon/ClashMeta For Windows.png'
+							src: '/theme/aikopanel/assets/images/icon/Netch.png'
 						}), Windows?.netch.name)), u.a.createElement("div", {
 							className: "block-options"
 						}, u.a.createElement("a", {
 							href: Windows?.netch.link,
+							target: "_blank",
+							className: "btn-dvs"
+						}, u.a.createElement("i", {
+							className: "fa fa-download"
+						}), Object(m.formatMessage)({
+							id: "Tải Xuống"
+						}))))) : u.a.createElement(u.a.Fragment, null),
+						Windows?.v2rayn ? u.a.createElement("div", {
+							className: "block join_dvs_disscuss"
+						}, u.a.createElement("div", {
+							className: "block-rounded-price"
+						}, u.a.createElement("div", {
+							className: "block-rounded-price-dvs"
+						}, Windows?.v2rayn.price)), u.a.createElement("div", {
+							className: "block-rounded-join"
+						}, u.a.createElement("div", {
+							className: "block-rounded-join-dvs"
+						}, Object(m.formatMessage)({
+							id: "Phiên bản"
+						}), ": ", Windows?.v2rayn.version)), u.a.createElement("div", {
+							className: "block-header-dvs block-header block-header-default"
+						}, u.a.createElement("div", {
+							className: "dvs-title"
+						}, u.a.createElement("div", null, u.a.createElement("img", {
+							className: "dvs-aiko-application",
+							src: '/theme/aikopanel/assets/images/icon/V2rayN.png'
+						}), Windows?.v2rayn.name)), u.a.createElement("div", {
+							className: "block-options"
+						}, u.a.createElement("a", {
+							href: Windows?.v2rayn.link,
 							target: "_blank",
 							className: "btn-dvs"
 						}, u.a.createElement("i", {
