@@ -15964,6 +15964,10 @@
 				}, Object(m.formatMessage)({
 					id: "Thông Báo"
 				}))), u.a.createElement("div", {
+					className: "block-options"
+				})), u.a.createElement("div", {
+					className: "block-content"
+				}, u.a.createElement("div", {
 					className: "row push"
 				}, u.a.createElement("div", {
 					className: "col-md-12"
