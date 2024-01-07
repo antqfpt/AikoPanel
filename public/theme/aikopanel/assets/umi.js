@@ -1001,6 +1001,10 @@
 							}))
 						}),
 						t.push({
+							title: "V2Box",
+							href: "v2box://install-sub/?url=" + encodeURIComponent(e + "&flag=v2box") + "&name=" + window.settings.title
+						}),
+						t.push({
 							title: "Surge",
 							href: "surge:///install-config?url=" + encodeURIComponent(e) + "&name=" + window.settings.title
 						}),
@@ -1031,6 +1035,10 @@
 							}))
 						}),
 						t.push({
+							title: "V2Box",
+							href: "v2box://install-sub/?url=" + encodeURIComponent(e + "&flag=v2box") + "&name=" + window.settings.title
+						}),
+						t.push({
 							title: "Streisand",
 							href: "streisand://import/" + e + "&name=" + window.settings.title,
 						})),
@@ -1052,6 +1060,10 @@
 						}) && t.push({
 							title: "ClashMeta For Android",
 							href: "clash://install-config?url=" + encodeURIComponent(e + "&flag=meta") + "&name=" + window.settings.title
+						}),
+						t.push({
+							title: "V2Box",
+							href: "v2box://install-sub/?url=" + encodeURIComponent(e + "&flag=v2box") + "&name=" + window.settings.title
 						}),
 						t.push({
 							title: "Surfboard",
