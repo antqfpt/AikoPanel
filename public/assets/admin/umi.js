@@ -6484,13 +6484,13 @@
                     placeholder: "Tên App",
                     defaultValue: w.windows_name,
                     onChange: e=>this.set("app", "windows_name", e.target.value)
-                }),f.a.createElement("input", {
+                }), f.a.createElement("input", {
                     type: "text",
                     className: "form-control",
                     placeholder: "Version",
                     defaultValue: w.windows_version,
                     onChange: e=>this.set("app", "windows_version", e.target.value)
-                }),f.a.createElement("input", {
+                }), f.a.createElement("input", {
                     type: "text",
                     className: "form-control",
                     placeholder: "Logo URL",
@@ -6499,7 +6499,7 @@
                 }), f.a.createElement("input", {
                     type: "text",
                     className: "form-control mt-1",
-                    placeholder: "https://xxxx.com/xxx.exe",
+                    placeholder: "APP URL",
                     defaultValue: w.windows_download_url,
                     onChange: e=>this.set("app", "windows_download_url", e.target.value)
 				}))) : "", parseInt(w.app_personalized_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
@@ -6515,7 +6515,19 @@
                 }), f.a.createElement("input", {
                     type: "text",
                     className: "form-control mt-1",
-                    placeholder: "https://xxxx.com/xxx.dmg",
+                    placeholder: "Version",
+                    defaultValue: w.macos_version,
+                    onChange: e=>this.set("app", "macos_version", e.target.value)
+				}), f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control mt-1",
+                    placeholder: "Logo URL",
+                    defaultValue: w.macos_logo_url,
+                    onChange: e=>this.set("app", "macos_logo_url", e.target.value)
+				}),f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control mt-1",
+                    placeholder: "APP URL",
                     defaultValue: w.macos_download_url,
                     onChange: e=>this.set("app", "macos_download_url", e.target.value)
 				}))) : "", parseInt(w.app_personalized_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
@@ -6528,10 +6540,22 @@
                     placeholder: "Tên App",
                     defaultValue: w.ios_name,
                     onChange: e=>this.set("app", "ios_name", e.target.value)
+                }),f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control",
+                    placeholder: "Version",
+                    defaultValue: w.ios_version,
+                    onChange: e=>this.set("app", "ios_version", e.target.value)
+                }),f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control",
+                    placeholder: "Logo URL",
+                    defaultValue: w.ios_logo_url,
+                    onChange: e=>this.set("app", "ios_logo_url", e.target.value)
                 }), f.a.createElement("input", {
                     type: "text",
                     className: "form-control mt-1",
-                    placeholder: "https://xxxx.com/xxx.ipa",
+                    placeholder: "APP URL",
                     defaultValue: w.ios_download_url,
                     onChange: e=>this.set("app", "ios_download_url", e.target.value)
 				}))) : "", parseInt(w.app_personalized_enable) ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
@@ -6546,8 +6570,20 @@
                     onChange: e=>this.set("app", "android_name", e.target.value)
                 }), f.a.createElement("input", {
                     type: "text",
+                    className: "form-control",
+                    placeholder: "Version",
+                    defaultValue: w.android_version,
+                    onChange: e=>this.set("app", "android_version", e.target.value)
+                }), f.a.createElement("input", {
+                    type: "text",
+                    className: "form-control",
+                    placeholder: "Logo URL",
+                    defaultValue: w.android_logo_url,
+                    onChange: e=>this.set("app", "android_logo_url", e.target.value)
+                }), f.a.createElement("input", {
+                    type: "text",
                     className: "form-control mt-1",
-                    placeholder: "https://xxxx.com/xxx.apk",
+                    placeholder: "APP URL",
                     defaultValue: w.android_download_url,
                     onChange: e=>this.set("app", "android_download_url", e.target.value)
 				}))) : "" , f.a.createElement(m, {
