@@ -6470,7 +6470,7 @@
                     className: "mb-0"
                 }, "Dùng cho quản lý phiên bản và cập nhật của ứng dụng di động (APP)"))))), f.a.createElement(m, {
 					title: "App Cá Nhân",
-					description: "Sau khi mở, thông tin cá nhân của người dùng sẽ được hiển thị trong user center"
+					description: "Sau khi mở, sẽ hiện thông tin cần chỉnh sửa bấm tắt để thu cho nó gọn nhé "
 				}, f.a.createElement(c.a, {
 					checked: parseInt(w.app_personalized_enable),
 					onChange: e => this.set("app", "app_personalized_enable", e ? 1 : 0)
@@ -6588,7 +6588,7 @@
                     onChange: e=>this.set("app", "android_download_url", e.target.value)
 				}))) : "" , f.a.createElement(m, {
 					title: "App Windows",
-					description: "Sau khi mở, thông tin cá nhân của người dùng sẽ được hiển thị trong user center"
+					description: "Sau khi mở, sẽ hiện thông tin cần chỉnh sửa bấm tắt để thu cho nó gọn nhé "
 				}, f.a.createElement(c.a, {
 					checked: parseInt(w.app_windows_enable),
 					onChange: e => this.set("app", "app_windows_enable", e ? 1 : 0)
@@ -6622,7 +6622,7 @@
 					onChange: e => this.set("app", "app_windows_v2rayn", e ? 1 : 0)
 				}))): " ", f.a.createElement(m, {
 					title: "App macOS",
-					description: "Sau khi mở, thông tin cá nhân của người dùng sẽ được hiển thị trong user center"
+					description: "Sau khi mở, sẽ hiện thông tin cần chỉnh sửa bấm tắt để thu cho nó gọn nhé "
 				}, f.a.createElement(c.a, {
 					checked: parseInt(w.app_macos_enable),
 					onChange: e => this.set("app", "app_macos_enable", e ? 1 : 0)
@@ -6670,7 +6670,7 @@
 					onChange: e => this.set("app", "app_macos_v2box", e ? 1 : 0)
 				}))): " " ,f.a.createElement(m, {
 					title: "App IOS",
-					description: "Sau khi mở, thông tin cá nhân của người dùng sẽ được hiển thị trong user center"
+					description: "Sau khi mở, sẽ hiện thông tin cần chỉnh sửa bấm tắt để thu cho nó gọn nhé "
 				}, f.a.createElement(c.a, {
 					checked: parseInt(w.app_ios_enable),
 					onChange: e => this.set("app", "app_ios_enable", e ? 1 : 0)
@@ -6725,7 +6725,7 @@
 					onChange: e => this.set("app", "app_ios_v2box", e ? 1 : 0)
 				}))): " " , f.a.createElement(m, {
 					title: "App Android",
-					description: "Sau khi mở, thông tin cá nhân của người dùng sẽ được hiển thị trong user center"
+					description: "Sau khi mở, sẽ hiện thông tin cần chỉnh sửa bấm tắt để thu cho nó gọn nhé "
 				}, f.a.createElement(c.a, {
 					checked: parseInt(w.app_android_enable),
 					onChange: e => this.set("app", "app_android_enable", e ? 1 : 0)
