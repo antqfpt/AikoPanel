@@ -15968,8 +15968,6 @@
 				}, u.a.createElement("div", {
 					className: "block-header block-header-default"
 				}, u.a.createElement("div", {
-					className: "block-options"
-				})), u.a.createElement("div", {
 					className: "block-content"
 				}, u.a.createElement("div", {
 					className: "row push"
@@ -15983,7 +15981,7 @@
 					onClick: () => window.location.href = r.appleid_custom_url || t.subscribe_url + "&flag=appleid",
 				}, Object(m.formatMessage)({
 					id: "Lấy AppleID"
-				}))))))))), u.a.createElement("div", {
+				})))))))))), u.a.createElement("div", {
 					className: "row mb-3 mb-md-0"
 				}, u.a.createElement("div", {
 					className: "col-md-12"
