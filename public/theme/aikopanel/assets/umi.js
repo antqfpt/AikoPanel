@@ -16008,7 +16008,7 @@
 						id: "Hệ Điều Hành Android"
 					}))), u.a.createElement("div", {
 							className: "block-content-dvs"
-						}, Android?.v2rayng.enable ? u.a.createElement("div", {
+						}, Android?.v2rayng ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16038,7 +16038,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						Android?.surfboard.enable ? u.a.createElement("div", {
+						Android?.surfboard ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16068,7 +16068,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						Android?.singbox.enable ? u.a.createElement("div", {
+						Android?.singbox ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16098,7 +16098,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						Android?.nekobox.enable ? u.a.createElement("div", {
+						Android?.nekobox ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16128,7 +16128,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						Android?.meta.enable ? u.a.createElement("div", {
+						Android?.meta ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16158,7 +16158,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						Android?.v2box.enable ? u.a.createElement("div", {
+						Android?.v2box ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16188,7 +16188,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						Android?.cfa.enable ? u.a.createElement("div", {
+						Android?.cfa ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16231,7 +16231,7 @@
 					}))), u.a.createElement("div", {
 							className: "block-content-dvs"
 						},
-						iOS?.singbox.enable ? u.a.createElement("div", {
+						iOS?.singbox ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16261,7 +16261,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						iOS?.shadowrocket.enable ? u.a.createElement("div", {
+						iOS?.shadowrocket ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16291,7 +16291,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						iOS?.quantumultx.enable ? u.a.createElement("div", {
+						iOS?.quantumultx ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16321,7 +16321,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						iOS?.surge.enable ? u.a.createElement("div", {
+						iOS?.surge ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16351,7 +16351,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						iOS?.stash.enable ? u.a.createElement("div", {
+						iOS?.stash ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16381,7 +16381,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						iOS?.v2box.enable ? u.a.createElement("div", {
+						iOS?.v2box ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16411,7 +16411,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						iOS?.streisand.enable ? u.a.createElement("div", {
+						iOS?.streisand ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16454,7 +16454,7 @@
 					}))), u.a.createElement("div", {
 							className: "block-content-dvs"
 						},
-						Windows?.clash.enable ? u.a.createElement("div", {
+						Windows?.clash ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16484,7 +16484,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						Windows?.nekoray.enable ? u.a.createElement("div", {
+						Windows?.nekoray ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16514,7 +16514,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						Windows?.netch.enable ? u.a.createElement("div", {
+						Windows?.netch ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16544,7 +16544,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						Windows?.v2rayn.enable ? u.a.createElement("div", {
+						Windows?.v2rayn ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16588,7 +16588,7 @@
 					}))), u.a.createElement("div", {
 							className: "block-content-dvs"
 						},
-						macOS?.singbox.enable ? u.a.createElement("div", {
+						macOS?.singbox ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16618,7 +16618,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						macOS?.clashx.enable ? u.a.createElement("div", {
+						macOS?.clashx ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16648,7 +16648,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						macOS?.quantumultx.enable ? u.a.createElement("div", {
+						macOS?.quantumultx ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16678,7 +16678,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						macOS?.shadowrocket.enable ? u.a.createElement("div", {
+						macOS?.shadowrocket ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
@@ -16708,7 +16708,7 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-						macOS?.v2box.enable ? u.a.createElement("div", {
+						macOS?.v2box ? u.a.createElement("div", {
 							className: "block join_dvs_disscuss"
 						}, u.a.createElement("div", {
 							className: "block-rounded-price"
