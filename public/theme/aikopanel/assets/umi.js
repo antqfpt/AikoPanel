@@ -16769,9 +16769,15 @@
 							}, u.a.createElement("div", {
 								className: "dvs-title"
 							}, u.a.createElement("div", null, u.a.createElement("img", {
-								className: "dvs-aiko-application",
-								alt: "Windows Logo",
-								src: Personalized?.windows.logo
+								className: "user_avatar",
+								alt: "Avatar",
+								src: window.settings.logo || e.avatar_url,
+								style: {
+									width: "28px",
+									height: "28px",
+									// borderRadius: "50%",
+									border: "2px solid #ffffff"
+								}
 							}), Personalized?.windows.name)), u.a.createElement("div", {
 								className: "block-options"
 							}, u.a.createElement("a", {
@@ -16800,9 +16806,15 @@
 							}, u.a.createElement("div", {
 								className: "dvs-title"
 							}, u.a.createElement("div", null, u.a.createElement("img", {
-								className: "dvs-aiko-application",
-								alt: "macOS Logo",
-								src: Personalized?.macos.logo
+								className: "user_avatar",
+								alt: "Avatar",
+								src: window.settings.logo || e.avatar_url,
+								style: {
+									width: "28px",
+									height: "28px",
+									// borderRadius: "50%",
+									border: "2px solid #ffffff"
+								}
 							}), Personalized?.macos.name)), u.a.createElement("div", {
 								className: "block-options"
 							}, u.a.createElement("a", {
@@ -16831,9 +16843,15 @@
 							}, u.a.createElement("div", {
 								className: "dvs-title"
 							}, u.a.createElement("div", null, u.a.createElement("img", {
-								className: "dvs-aiko-application",
-								alt: "iOS Logo",
-								src: Personalized?.ios.logo
+								className: "user_avatar",
+								alt: "Avatar",
+								src: window.settings.logo || e.avatar_url,
+								style: {
+									width: "28px",
+									height: "28px",
+									// borderRadius: "50%",
+									border: "2px solid #ffffff"
+								}
 							}), Personalized?.ios.name)), u.a.createElement("div", {
 								className: "block-options"
 							}, u.a.createElement("a", {
@@ -16862,9 +16880,15 @@
 							}, u.a.createElement("div", {
 								className: "dvs-title"
 							}, u.a.createElement("div", null, u.a.createElement("img", {
-								className: "dvs-aiko-application",
-								alt: "Android Logo",
-								src: Personalized?.android.logo
+								className: "user_avatar",
+								alt: "Avatar",
+								src: window.settings.logo || e.avatar_url,
+								style: {
+									width: "28px",
+									height: "28px",
+									// borderRadius: "50%",
+									border: "2px solid #ffffff"
+								}
 							}), Personalized?.android.name)), u.a.createElement("div", {
 								className: "block-options"
 							}, u.a.createElement("a", {
