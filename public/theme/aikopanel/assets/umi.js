@@ -15941,6 +15941,7 @@
 					iOS = app.iOS,
 					Windows = app.Windows,
 					macOS = app.macOS,
+					Personalized = app.Personalized,
 					r = this.props.comm.config;
 				return u.a.createElement(f.a, o()({}, this.props, {
 					title: Object(m.formatMessage)({
