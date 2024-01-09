@@ -1432,7 +1432,7 @@ select {
 
 button.dvs-aiko-options {
     border-radius: 9px;
-    background-image: linear-gradient(0deg,#2889ff 5%,#b6d7ff 50%,#ffffff 100%);
+    background-image: linear-gradient(0deg,#a8cfff 5%,#b6d7ff 50%,#ffffff 100%);
     border: 1px solid #2486ff;
     border-bottom: 2px solid #0052b7;
     font-size: 12px;
@@ -1445,7 +1445,7 @@ button.dvs-aiko-options {
 }
 
 .Lay-AppleID {
-    background-image: linear-gradient(0deg,#64aaff 5%,#ffffff 50%,#71b1ff 100%);
+    background-image: linear-gradient(0deg,#a8cfff 5%,#ffffff 50%,#a8cfff 100%);
     border: 1px solid #4c9cff !important;
     font-weight: 500 !important;
     padding: 5px 10px;
@@ -14562,6 +14562,7 @@ a.badge-secondary.focus,a.badge-secondary:focus {
 .dvs-site {
     font-size: 18px;
     white-space: normal;
+    text-align: left;
 }
 
 h3.block-title {
