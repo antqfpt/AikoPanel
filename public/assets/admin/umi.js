@@ -22360,44 +22360,6 @@
 				})), p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
-					htmlFor: "example-text-input-alt"
-				}, "Phương Thức Reset Lưu Lượng"), p.a.createElement(c.a, {
-					placeholder: "Vui lòng chọn phương thức đặt lại dung lượng",
-					style: {
-						width: "100%"
-					},
-					value: this.state.record.reset_traffic_method,
-					onChange: e => {
-						this.setState({
-							record: d()({}, this.state.record, {
-								reset_traffic_method: e
-							})
-						})
-					}
-				}, p.a.createElement(c.a.Option, {
-					key: null,
-					value: null
-				}, "Theo Cài Đặt Hệ Thống"), p.a.createElement(c.a.Option, {
-					key: 0,
-					value: 0
-				}, "Mỗi Ngày 1 trong Tháng"), p.a.createElement(c.a.Option, {
-					key: 1,
-					value: 1
-				}, "Reset Lại Vào Ngày Đã Mua"), p.a.createElement(c.a.Option, {
-					key: 2,
-					value: 2
-				}, "Không Reset"), p.a.createElement(c.a.Option, {
-					key: 3,
-					value: 3
-				}, "Mỗi Ngày 1 Tháng 1 trong Năm"), p.a.createElement(c.a.Option, {
-					key: 4,
-					value: 4
-				}, "Reset Theo Năm"), p.a.createElement(c.a.Option, {
-					key: 5,
-					value: 5
-				}, "Reset Mỗi ngày"))) , p.a.createElement("div", {
-					className: "form-group"
-				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
 				}, "Giới Hạn Số Lượng Thiết Bị"), p.a.createElement(u.a, {
 					placeholder: "Nếu để trống, không giới hạn số lượng thiết bị.",
