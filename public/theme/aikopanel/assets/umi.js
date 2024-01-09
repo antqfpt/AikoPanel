@@ -16738,7 +16738,144 @@
 						}), Object(m.formatMessage)({
 							id: "Tải Xuống"
 						}))))) : u.a.createElement(u.a.Fragment, null),
-					)))))))
+						u.a.createElement("div", {
+							className: "block-options"
+						}), u.a.createElement("div", {
+							className: "application-dvs"
+						}), u.a.createElement("div", {
+							className: "application-dvs-aiko"
+						}, u.a.createElement("div", {
+							className: "application-dvs-aiko-Android"
+						}, Object(m.formatMessage)({
+							id: "App Của Website"
+						}))), u.a.createElement("div", {
+								className: "block-content-dvs"
+							},
+							Personalized?.windows ? u.a.createElement("div", {
+								className: "block join_dvs_disscuss"
+							}, u.a.createElement("div", {
+								className: "block-rounded-price"
+							}, u.a.createElement("div", {
+								className: "block-rounded-price-dvs"
+							}, 'Miễn phí')), u.a.createElement("div", {
+								className: "block-rounded-join"
+							}, u.a.createElement("div", {
+								className: "block-rounded-join-dvs"
+							}, Object(m.formatMessage)({
+								id: "Phiên bản"
+							}), ": ", Personalized?.singbox.version)), u.a.createElement("div", {
+								className: "block-header-dvs block-header block-header-default"
+							}, u.a.createElement("div", {
+								className: "dvs-title"
+							}, u.a.createElement("div", null, u.a.createElement("img", {
+								className: "dvs-aiko-application",
+								alt: "Windows Logo",
+								src: Personalized?.windows.logo
+							}), Personalized?.windows.name)), u.a.createElement("div", {
+								className: "block-options"
+							}, u.a.createElement("a", {
+								href: Personalized?.windows.link,
+								target: "_blank",
+								className: "btn-dvs"
+							}, u.a.createElement("i", {
+								className: "fa fa-download"
+							}), Object(m.formatMessage)({
+								id: "Tải Xuống"
+							}))))) : u.a.createElement(u.a.Fragment, null),
+							Personalized?.macos ? u.a.createElement("div", {
+								className: "block join_dvs_disscuss"
+							}, u.a.createElement("div", {
+								className: "block-rounded-price"
+							}, u.a.createElement("div", {
+								className: "block-rounded-price-dvs"
+							}, 'Miễn phí' )), u.a.createElement("div", {
+								className: "block-rounded-join"
+							}, u.a.createElement("div", {
+								className: "block-rounded-join-dvs"
+							}, Object(m.formatMessage)({
+								id: "Phiên bản"
+							}), ": ", Personalized?.macos.version)), u.a.createElement("div", {
+								className: "block-header-dvs block-header block-header-default"
+							}, u.a.createElement("div", {
+								className: "dvs-title"
+							}, u.a.createElement("div", null, u.a.createElement("img", {
+								className: "dvs-aiko-application",
+								alt: "macOS Logo",
+								src: Personalized?.macos.logo
+							}), Personalized?.macos.name)), u.a.createElement("div", {
+								className: "block-options"
+							}, u.a.createElement("a", {
+								href: Personalized?.macos.link,
+								target: "_blank",
+								className: "btn-dvs"
+							}, u.a.createElement("i", {
+								className: "fa fa-download"
+							}), Object(m.formatMessage)({
+								id: "Tải Xuống"
+							}))))) : u.a.createElement(u.a.Fragment, null),
+							Personalized?.ios ? u.a.createElement("div", {
+								className: "block join_dvs_disscuss"
+							}, u.a.createElement("div", {
+								className: "block-rounded-price"
+							}, u.a.createElement("div", {
+								className: "block-rounded-price-dvs"
+							}, 'Miễn phí' )), u.a.createElement("div", {
+								className: "block-rounded-join"
+							}, u.a.createElement("div", {
+								className: "block-rounded-join-dvs"
+							}, Object(m.formatMessage)({
+								id: "Phiên bản"
+							}), ": ", Personalized?.ios.version)), u.a.createElement("div", {
+								className: "block-header-dvs block-header block-header-default"
+							}, u.a.createElement("div", {
+								className: "dvs-title"
+							}, u.a.createElement("div", null, u.a.createElement("img", {
+								className: "dvs-aiko-application",
+								alt: "iOS Logo",
+								src: Personalized?.ios.logo
+							}), Personalized?.ios.name)), u.a.createElement("div", {
+								className: "block-options"
+							}, u.a.createElement("a", {
+								href: Personalized?.ios.link,
+								target: "_blank",
+								className: "btn-dvs"
+							}, u.a.createElement("i", {
+								className: "fa fa-download"
+							}), Object(m.formatMessage)({
+								id: "Tải Xuống"
+							}))))) : u.a.createElement(u.a.Fragment, null),
+							Personalized?.android ? u.a.createElement("div", {
+								className: "block join_dvs_disscuss"
+							}, u.a.createElement("div", {
+								className: "block-rounded-price"
+							}, u.a.createElement("div", {
+								className: "block-rounded-price-dvs"
+							}, 'Miễn phí' )), u.a.createElement("div", {
+								className: "block-rounded-join"
+							}, u.a.createElement("div", {
+								className: "block-rounded-join-dvs"
+							}, Object(m.formatMessage)({
+								id: "Phiên bản"
+							}), ": ", Personalized?.android.version)), u.a.createElement("div", {
+								className: "block-header-dvs block-header block-header-default"
+							}, u.a.createElement("div", {
+								className: "dvs-title"
+							}, u.a.createElement("div", null, u.a.createElement("img", {
+								className: "dvs-aiko-application",
+								alt: "Android Logo",
+								src: Personalized?.android.logo
+							}), Personalized?.android.name)), u.a.createElement("div", {
+								className: "block-options"
+							}, u.a.createElement("a", {
+								href: Personalized?.android.link,
+								target: "_blank",
+								className: "btn-dvs"
+							}, u.a.createElement("i", {
+								className: "fa fa-download"
+							}), Object(m.formatMessage)({
+								id: "Tải Xuống"
+							}))))) : u.a.createElement(u.a.Fragment, null),
+					))))))))
 			}
 		}
 		t.default = Object(p.c)((e => ({
