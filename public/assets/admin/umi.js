@@ -5622,6 +5622,38 @@
 				}, f.a.createElement(c.a, {
 					checked: parseInt(statistics.getorder_enable),
 					onChange: e => this.set("statistics", "getorder_enable", e ? 1 : 0)
+				}))),f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Thống kê lưu lượng truy cập của Node ngày hôm nay", 
+					description: "Sau khi kích hoạt, sẽ hiển thị thống kê lưu lượng truy cập của Node ngày hôm nay"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(statistics.node_traffic_today),
+					onChange: e => this.set("statistics", "node_traffic_today", e ? 1 : 0)
+				}))),f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Thống kê lưu lượng truy cập của người dùng ngày hôm nay", 
+					description: "Sau khi kích hoạt, sẽ hiển thị thống kê lưu lượng truy cập của người dùng ngày hôm nay"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(statistics.user_traffic_today),
+					onChange: e => this.set("statistics", "user_traffic_today", e ? 1 : 0)
+				}))),f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Thống kê lưu lượng node truy cập ngày hôm qua", 
+					description: "Sau khi kích hoạt, sẽ hiển thị thống kê lưu lượng node truy cập ngày hôm qua"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(statistics.node_traffic_yesterday),
+					onChange: e => this.set("statistics", "node_traffic_yesterday", e ? 1 : 0)
+				}))),f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Thống kê lưu lượng truy cập của người dùng ngày hôm qua", 
+					description: "Sau khi kích hoạt, sẽ hiển thị thống kê lưu lượng truy cập của người dùng ngày hôm qua"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(statistics.user_traffic_yesterday),
+					onChange: e => this.set("statistics", "user_traffic_yesterday", e ? 1 : 0)
 				})))), f.a.createElement(s.a.TabPane, {
 					tab: "An toàn",
 					key: "safe"
@@ -94284,7 +94316,7 @@
 						ref: this.orderChart
 					}))) : "" ), c.a.createElement("div", {
 						className: "row mt-xl-3"
-					}, c.a.createElement("div", {
+					}, n.statistics.node_traffic_today ? c.a.createElement("div", {
 						className: "col-lg-6 js-appear-enabled animated pr-xl-1",
 						"data-toggle": "appear"
 					}, c.a.createElement("div", {
@@ -94302,7 +94334,7 @@
 							height: 400
 						},
 						ref: this.serverTodayRankChart
-					})))), c.a.createElement("div", {
+					})))) : " ", n.statistics.user_traffic_today ? c.a.createElement("div", {
 						className: "col-lg-6 js-appear-enabled animated pr-xl-1",
 						"data-toggle": "appear"
 					}, c.a.createElement("div", {
@@ -94320,7 +94352,7 @@
 							height: 400
 						},
 						ref: this.userTodayRankChart
-					})))), c.a.createElement("div", {
+					})))) : "" , n.statistics.node_traffic_yesterday ? c.a.createElement("div", {
 						className: "col-lg-6 js-appear-enabled animated",
 						"data-toggle": "appear"
 					}, c.a.createElement("div", {
@@ -94338,7 +94370,7 @@
 							height: 400
 						},
 						ref: this.serverLastRankChart
-					})))), c.a.createElement("div", {
+					})))) : "", n.statistics.user_traffic_yesterday ? c.a.createElement("div", {
 						className: "col-lg-6 js-appear-enabled animated",
 						"data-toggle": "appear"
 					}, c.a.createElement("div", {
@@ -94356,7 +94388,7 @@
 							height: 400
 						},
 						ref: this.userLastRankChart
-					}))))))
+					})))) : ""))
 			}
 		}
 		t.default = Object(u.c)(e => {
