@@ -22402,7 +22402,7 @@
 					defaultValue: t.transfer_enable,
 					placeholder: "Vui lòng nhập lưu lượng.",
 					onChange: e => this.formChange("transfer_enable", e.target.value)
-				})), p.a.createElement("div", {
+				})), t.expired_at ? p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
@@ -22433,7 +22433,7 @@
 				}, "Reset Theo Năm"), p.a.createElement(c.a.Option, {
 					key: 5,
 					value: 5
-				}, "Reset Mỗi ngày"))) , p.a.createElement("div", {
+				}, "Reset Mỗi ngày"))) : " " , p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
