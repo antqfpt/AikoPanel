@@ -94095,7 +94095,7 @@
 					}),
 					this.props.dispatch({
 						type: "config/fetch",
-						key: "site"
+						key: ["site", "statistics"]
 					})
 			}
 			componentWillUnmount() {
