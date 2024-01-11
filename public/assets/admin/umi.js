@@ -5472,6 +5472,7 @@
 			render() {
 				var e = this.props.config,
 					t = e.site,
+					statistics = e.statistics,
 					n = e.invite,
 					r = e.subscribe,
 					l = e.frontend,
@@ -5610,6 +5611,17 @@
 					placeholder: "đ",
 					defaultValue: t.currency_symbol,
 					onChange: e => this.set("site", "currency_symbol", e.target.value)
+				})))), f.a.createElement(s.a.TabPane, {
+					tab: "Thống kê",
+					key: "statistics"
+				}, f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Thống kê Order và Doanh thu theo ngày", 
+					description: "Sau khi kích hoạt, sẽ hiển thị thống kê Order và Doanh thu theo ngày"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(statistics.getorder_enable),
+					onChange: e => this.set("statistics", "getorder_enable", e ? 1 : 0)
 				})))), f.a.createElement(s.a.TabPane, {
 					tab: "An toàn",
 					key: "safe"
@@ -16932,6 +16944,7 @@
 			state: a()({}, {
 				invite: {},
 				site: {},
+				statistics: {},
 				subscribe: {},
 				frontend: {},
 				server: {},
@@ -94257,7 +94270,7 @@
 						class: "fs-3 text-dark mb-0"
 					}, t.month_register_total || "-"), c.a.createElement("p", {
 						class: "text-muted mb-0"
-					}, "Thêm người dùng tháng này")))))), c.a.createElement("div", {
+					}, "Thêm người dùng tháng này")))))), n.statistics.getorder_enable ? c.a.createElement("div", {
 						className: "col-lg-12 js-appear-enabled animated",
 						"data-toggle": "appear"
 					}, c.a.createElement("div", {
@@ -94269,7 +94282,7 @@
 							height: 400
 						},
 						ref: this.orderChart
-					})))), c.a.createElement("div", {
+					}))) : "" ), c.a.createElement("div", {
 						className: "row mt-xl-3"
 					}, c.a.createElement("div", {
 						className: "col-lg-6 js-appear-enabled animated pr-xl-1",
