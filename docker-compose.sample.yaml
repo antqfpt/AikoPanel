@@ -1,6 +1,6 @@
 version: '3'
 services:
-  xboard:
+  aikopanel:
     # build: 
     #   context: .
     image: aikocute/aikopanel:latest
