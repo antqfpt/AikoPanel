@@ -5472,6 +5472,7 @@
 			render() {
 				var e = this.props.config,
 					t = e.site,
+					statistics = e.statistics,
 					n = e.invite,
 					r = e.subscribe,
 					l = e.frontend,
@@ -5610,6 +5611,49 @@
 					placeholder: "đ",
 					defaultValue: t.currency_symbol,
 					onChange: e => this.set("site", "currency_symbol", e.target.value)
+				})))), f.a.createElement(s.a.TabPane, {
+					tab: "Thống kê",
+					key: "statistics"
+				}, f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Thống kê Order và Doanh thu theo ngày", 
+					description: "Sau khi kích hoạt, sẽ hiển thị thống kê Order và Doanh thu theo ngày"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(statistics.getorder_enable),
+					onChange: e => this.set("statistics", "getorder_enable", e ? 1 : 0)
+				}))),f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Thống kê lưu lượng truy cập của Node ngày hôm nay", 
+					description: "Sau khi kích hoạt, sẽ hiển thị thống kê lưu lượng truy cập của Node ngày hôm nay"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(statistics.node_traffic_today),
+					onChange: e => this.set("statistics", "node_traffic_today", e ? 1 : 0)
+				}))),f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Thống kê lưu lượng truy cập của người dùng ngày hôm nay", 
+					description: "Sau khi kích hoạt, sẽ hiển thị thống kê lưu lượng truy cập của người dùng ngày hôm nay"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(statistics.user_traffic_today),
+					onChange: e => this.set("statistics", "user_traffic_today", e ? 1 : 0)
+				}))),f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Thống kê lưu lượng node truy cập ngày hôm qua", 
+					description: "Sau khi kích hoạt, sẽ hiển thị thống kê lưu lượng node truy cập ngày hôm qua"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(statistics.node_traffic_yesterday),
+					onChange: e => this.set("statistics", "node_traffic_yesterday", e ? 1 : 0)
+				}))),f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Thống kê lưu lượng truy cập của người dùng ngày hôm qua", 
+					description: "Sau khi kích hoạt, sẽ hiển thị thống kê lưu lượng truy cập của người dùng ngày hôm qua"
+				}, f.a.createElement(c.a, {
+					checked: parseInt(statistics.user_traffic_yesterday),
+					onChange: e => this.set("statistics", "user_traffic_yesterday", e ? 1 : 0)
 				})))), f.a.createElement(s.a.TabPane, {
 					tab: "An toàn",
 					key: "safe"
@@ -16932,6 +16976,7 @@
 			state: a()({}, {
 				invite: {},
 				site: {},
+				statistics: {},
 				subscribe: {},
 				frontend: {},
 				server: {},
@@ -22357,7 +22402,38 @@
 					defaultValue: t.transfer_enable,
 					placeholder: "Vui lòng nhập lưu lượng.",
 					onChange: e => this.formChange("transfer_enable", e.target.value)
-				})), p.a.createElement("div", {
+				})), t.expired_at ? p.a.createElement("div", {
+					className: "form-group"
+				}, p.a.createElement("label", {
+					for: "example-text-input-alt"
+				}, "Phương thức đặt lại lưu lượng"), p.a.createElement(c.a, {
+					style: {
+						width: "100%"
+					},
+					defaultValue: parseInt(t.reset_traffic_method),
+					onChange: e => this.formChange("reset_traffic_method", e)
+				}, p.a.createElement(c.a.Option, {
+					key: null,
+					value: null
+				}, "Theo Cài Đặt Hệ Thống"), p.a.createElement(c.a.Option, {
+					key: 0,
+					value: 0
+				}, "Mỗi Ngày 1 trong Tháng"), p.a.createElement(c.a.Option, {
+					key: 1,
+					value: 1
+				}, "Reset Lại Vào Ngày Đã Mua"), p.a.createElement(c.a.Option, {
+					key: 2,
+					value: 2
+				}, "Không Reset"), p.a.createElement(c.a.Option, {
+					key: 3,
+					value: 3
+				}, "Mỗi Ngày 1 Tháng 1 trong Năm"), p.a.createElement(c.a.Option, {
+					key: 4,
+					value: 4
+				}, "Reset Theo Năm"), p.a.createElement(c.a.Option, {
+					key: 5,
+					value: 5
+				}, "Reset Mỗi ngày"))) : " " , p.a.createElement("div", {
 					className: "form-group"
 				}, p.a.createElement("label", {
 					for: "example-text-input-alt"
@@ -78515,18 +78591,36 @@
 				})), m.a.createElement("div", {
 					className: "form-group"
 				}, m.a.createElement("label", {
-					for: "example-text-input-alt"
-				}, "SNI của gói"), m.a.createElement(C.a, {
+					htmlFor: "example-text-input-alt"
+				}, "SNI của gói"), m.a.createElement(_.a, {
 					placeholder: "Nếu để trống, sẽ sử dung sni của Node",
+					style: {
+						width: "100%"
+					},
 					value: this.state.record.sni,
 					onChange: e => {
 						this.setState({
 							record: d()({}, this.state.record, {
-								sni: e.target.value
+								sni: e
 							})
 						})
 					}
-				})), m.a.createElement("div", {
+				}, m.a.createElement(_.a.Option, {
+					key: null,
+					value: null
+				}, "Mặc định ( Theo Node )"), m.a.createElement(_.a.Option, {
+					key: 'dl.ops.kgvn.garenanow.com',
+					value: 'dl.ops.kgvn.garenanow.com'
+				}, "Liên quân"), m.a.createElement(_.a.Option, {
+					key: 'dl.aw.freefiremobile.com',
+					value: 'dl.aw.freefiremobile.com'
+				}, "Free Fire"), m.a.createElement(_.a.Option, {
+					key: 'v9.tiktokcdn.com',
+					value: 'v9.tiktokcdn.com'
+				}, "Tik Tok"), m.a.createElement(_.a.Option, {
+					key: 'www.linemo.jp',
+					value: 'www.linemo.jp'
+				}, "Japan ( Softbank )"))), m.a.createElement("div", {
 					className: "form-group"
 				}, m.a.createElement("label", {
 					for: "example-text-input-alt"
@@ -94019,7 +94113,6 @@
 					}),
 					this.props.dispatch({
 						type: "config/fetch",
-						key: "site"
 					})
 			}
 			componentWillUnmount() {
@@ -94226,7 +94319,7 @@
 						class: "fs-3 text-dark mb-0"
 					}, t.month_register_total || "-"), c.a.createElement("p", {
 						class: "text-muted mb-0"
-					}, "Thêm người dùng tháng này")))))), c.a.createElement("div", {
+					}, "Thêm người dùng tháng này")))))), n.statistics.getorder_enable ? c.a.createElement("div", {
 						className: "col-lg-12 js-appear-enabled animated",
 						"data-toggle": "appear"
 					}, c.a.createElement("div", {
@@ -94238,9 +94331,9 @@
 							height: 400
 						},
 						ref: this.orderChart
-					})))), c.a.createElement("div", {
+					}))) : "" ), c.a.createElement("div", {
 						className: "row mt-xl-3"
-					}, c.a.createElement("div", {
+					}, n.statistics.node_traffic_today ? c.a.createElement("div", {
 						className: "col-lg-6 js-appear-enabled animated pr-xl-1",
 						"data-toggle": "appear"
 					}, c.a.createElement("div", {
@@ -94258,7 +94351,7 @@
 							height: 400
 						},
 						ref: this.serverTodayRankChart
-					})))), c.a.createElement("div", {
+					})))) : " ", n.statistics.user_traffic_today ? c.a.createElement("div", {
 						className: "col-lg-6 js-appear-enabled animated pr-xl-1",
 						"data-toggle": "appear"
 					}, c.a.createElement("div", {
@@ -94276,7 +94369,7 @@
 							height: 400
 						},
 						ref: this.userTodayRankChart
-					})))), c.a.createElement("div", {
+					})))) : "" , n.statistics.node_traffic_yesterday ? c.a.createElement("div", {
 						className: "col-lg-6 js-appear-enabled animated",
 						"data-toggle": "appear"
 					}, c.a.createElement("div", {
@@ -94294,7 +94387,7 @@
 							height: 400
 						},
 						ref: this.serverLastRankChart
-					})))), c.a.createElement("div", {
+					})))) : "", n.statistics.user_traffic_yesterday ? c.a.createElement("div", {
 						className: "col-lg-6 js-appear-enabled animated",
 						"data-toggle": "appear"
 					}, c.a.createElement("div", {
@@ -94312,7 +94405,7 @@
 							height: 400
 						},
 						ref: this.userLastRankChart
-					}))))))
+					})))) : ""))
 			}
 		}
 		t.default = Object(u.c)(e => {
@@ -99821,6 +99914,7 @@
 					this.state = {
 						server: this.props.record || {
 							insecure: 0,
+							version: 1,
 							rate: 1
 						},
 						visible: !1,
