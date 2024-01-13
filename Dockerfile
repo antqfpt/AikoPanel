@@ -16,13 +16,6 @@ WORKDIR /www
 COPY .docker /
 COPY . /www
 
-# Download and install IonCube Loader
-RUN wget https://downloads.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz \
-&& tar xvzf ioncube_loaders_lin_x86-64.tar.gz \
-&& mv ioncube/ioncube_loader_lin_8.1.so `php-config --extension-dir` \
-&& rm -rf ioncube ioncube_loaders_lin_x86-64.tar.gz \
-&& echo "zend_extension=ioncube_loader_lin_8.1.so" > /usr/local/etc/php/conf.d/00-ioncube.ini
-
 # Install Composer dependencies
 RUN composer install --optimize-autoloader --no-cache --no-dev \
 && php artisan storage:link \
