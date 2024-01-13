@@ -78,7 +78,7 @@ jobs:
           context: .
           push: true
           platforms: linux/amd64,linux/arm64
-          tags: ${{ env.REGISTRY }}/${{ github.repository_owner }}/AikoPanel:latest,${{ env.REGISTRY }}/${{ github.repository_owner }}/aikopanel,${{ env.REGISTRY }}/${{ github.repository_owner }}/aikopanel:${{ steps.get_version.outputs.version }}
+          tags: ${{ env.REGISTRY }}/aikopanel/aikopanel:latest,${{ env.REGISTRY }}/aikopanel/aikopanel,${{ env.REGISTRY }}/aikopanel/aikopanel:${{ steps.get_version.outputs.version }}
 
       # Sign the resulting Docker image digest except on PRs.
       # This will only write to the public Rekor transparency log when the Docker
