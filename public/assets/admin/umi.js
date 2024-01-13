@@ -68754,6 +68754,11 @@
 						key: "commission_balance",
 						sorter: !0
 					}, {
+						title: "IP Đăng nhập",
+						dataIndex: "last_login_ip",
+						key: "last_login_ip",
+						render: e => e || "-"
+					},{
 						title: "IP Đăng kí",
 						dataIndex: "register_ip",
 						key: "register_ip",
