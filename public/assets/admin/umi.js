@@ -6841,14 +6841,7 @@
 					href: "https://docs.aikopanel.com/"
 				}, "Hướng đẫn của AikoPanel"))))))), f.a.createElement("div", {
 					className: ""
-				}, f.a.createElement(m, {
-					title: "Kiểu viền"
-				}, f.a.createElement(c.a, {
-					checkedChildren: "Sáng",
-					unCheckedChildren: "Tối",
-					checked: "light" === l.frontend_theme_sidebar ? 1 : 0,
-					onChange: e => this.set("site", "frontend_theme_sidebar", e ? "light" : "dark")
-				})), 
+				},
 				// f.a.createElement(m, {
 				// 	title: "Kiểu tiêu đề",
 				// 	description: "Kiểu tiêu đề sẽ thay đổi màu sắc của tiêu đề và chân trang"
