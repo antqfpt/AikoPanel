@@ -5971,7 +5971,7 @@
 					onChange: e => this.set("subscribe", "show_client_info_sni", e ? 1 : 0)
 				}))) : "", f.a.createElement(m, {
 					title: "Danh Sách máy chủ thông báo gói hết hạn",
-					description: "Sau khi mở, thông tin gói hết hạn sẽ được gửi đến máy chủ trong danh sách này Mỗi máy chủ cách nhau một dấu phẩy ví dụ:  'ID: ' . $user['id'], 'Gói Đã Hết Hạn', 'Vui Lòng Lên Web Gia Hạn', config('aikopanel.app_url'), 'Email: ' . $user['email'], "
+					description: "Sau khi mở, thông tin gói hết hạn sẽ được gửi đến máy chủ trong danh sách này Mỗi máy chủ cách nhau một dấu phẩy ."
 				}, f.a.createElement("textarea", {
 					rows: "4",
 					type: "text",
