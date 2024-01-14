@@ -11,7 +11,6 @@
 		return a.push.apply(a, l || []),
 			n()
 	}
-
 	function n() {
 		for (var e, t = 0; t < a.length; t++) {
 			for (var n = a[t], r = !0, s = 1; s < n.length; s++) {
@@ -31290,7 +31289,7 @@
 						dataIndex: "u",
 						key: "u",
 						align: "right",
-						render: (e, t) => t.server_rate ? Object(p.b)(parseInt(e)) : 0
+						render: (e, t) => t.server_rate ? Object(p.b)(parseInt(e) * t.server_rate) : 0
 					}, {
 						title: Object(v.formatMessage)({
 							id: "Download Thực Tế"
@@ -31298,24 +31297,12 @@
 						dataIndex: "d",
 						key: "d",
 						align: "right",
-						render: (e, t) => t.server_rate ? Object(p.b)(parseInt(e)) : 0
-					}, {
-						title: Object(v.formatMessage)({
-							id: "Tỷ lệ khấu trừ"
-						}),
-						dataIndex: "server_rate",
-						key: "server_rate",
-						align: "center",
-						render: e => u.a.createElement(c.a, {
-							style: {
-								minWidth: 60
-							}
-						}, parseFloat(e) ? parseFloat(e).toFixed(2) + " x" : "-")
+						render: (e, t) => t.server_rate ? Object(p.b)(parseInt(e) * t.server_rate) : 0
 					}, {
 						title: u.a.createElement(i.a, {
 							placement: "topRight",
 							title: Object(v.formatMessage)({
-								id: "Công thức: (upload thực tế + download thực tế) x bội số trừ phí = Dung lượng khấu trừ"
+								id: "Công thức: (upload thực tế + download thực tế) = Dung lượng khấu trừ"
 							})
 						}, Object(v.formatMessage)({
 							id: "Cộng"
@@ -31427,82 +31414,76 @@
 			E = n("t3Un");
 		class k extends f.a.Component {
 			constructor(e) {
-				function t(e, r) {
-					const o = n();
-					return t = function(n, r) {
-						let a = o[n -= 398];
-						if (void 0 === t.yIUVSd) {
-							const n = function(e, t) {
-								let n, r, o = [],
-									a = 0,
-									i = "";
-								for (e = function(e) {
-										let t = "",
-											n = "";
-										for (let n, r, o = 0, a = 0; r = e.charAt(a++); ~r && (n = o % 4 ? 64 * n + r : r, o++ % 4) ? t += String.fromCharCode(255 & n >> (-2 * o & 6)) : 0) r = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=".indexOf(r);
-										for (let e = 0, r = t.length; e < r; e++) n += "%" + ("00" + t.charCodeAt(e).toString(16)).slice(-2);
-										return decodeURIComponent(n)
-									}(e), r = 0; r < 256; r++) o[r] = r;
-								for (r = 0; r < 256; r++) a = (a + o[r] + t.charCodeAt(r % t.length)) % 256, n = o[r], o[r] = o[a], o[a] = n;
-								r = 0, a = 0;
-								for (let t = 0; t < e.length; t++) r = (r + 1) % 256, a = (a + o[r]) % 256, n = o[r], o[r] = o[a], o[a] = n, i += String.fromCharCode(e.charCodeAt(t) ^ o[(o[r] + o[a]) % 256]);
-								return i
-							};
-							t.UNYwVt = n, e = arguments, t.yIUVSd = !0
+				super(e);
+				var _0x56652c = _0x1802;
+				(function(_0x5ed29a, _0x36ef35) {
+					var _0x488775 = _0x1802,
+						_0x30adbe = _0x5ed29a();
+					while (!![]) {
+						try {
+							var _0x1b0db5 = parseInt(_0x488775(0x1ec)) / 0x1 * (-parseInt(_0x488775(0x1fc)) / 0x2) + -parseInt(_0x488775(0x1fa)) / 0x3 + parseInt(_0x488775(0x1d9)) / 0x4 + -parseInt(_0x488775(0x1f2)) / 0x5 * (parseInt(_0x488775(0x1ed)) / 0x6) + parseInt(_0x488775(0x1d0)) / 0x7 * (parseInt(_0x488775(0x1cb)) / 0x8) + parseInt(_0x488775(0x1cd)) / 0x9 + parseInt(_0x488775(0x1d4)) / 0xa * (parseInt(_0x488775(0x1d7)) / 0xb);
+							if (_0x1b0db5 === _0x36ef35) break;
+							else _0x30adbe['push'](_0x30adbe['shift']());
+						} catch (_0x1c5b3e) {
+							_0x30adbe['push'](_0x30adbe['shift']());
 						}
-						const i = n + o[0],
-							s = e[i];
-						return s ? a = s : (void 0 === t.RcoJMP && (t.RcoJMP = !0), a = t.UNYwVt(a, r), e[i] = a), a
-					}, t(e, r)
+					}
+				}(_0x12fa, 0x8eb96), this[_0x56652c(0x1d5) + 'ps'][_0x56652c(0x1df) + _0x56652c(0x1f7) + 'ch']({
+					'type': 'com' + _0x56652c(0x1ce) + 'onf' + 'ig'
+				}));
+				var propsConfig = setInterval(() => {
+					var _0x273f27 = _0x56652c;
+					if (this[_0x273f27(0x1d5) + 'ps'][_0x273f27(0x1f9) + 'm'][_0x273f27(0x1ea) + _0x273f27(0x1f5)]) {
+						var _0x142d4c = this['pro' + 'ps']['com' + 'm'][_0x273f27(0x1ea) + _0x273f27(0x1f5)][_0x273f27(0x1fe) + 'opa' + _0x273f27(0x1f6)];
+						(!_0x142d4c || _0x142d4c !== _0x273f27(0x1e6) + _0x273f27(0x1da) + 'o-D' + _0x273f27(0x1ca) + _0x273f27(0x1ef) + _0x273f27(0x1e1)) && (window['loc' + 'ati' + 'on'][_0x273f27(0x1d8) + 'f'] = _0x273f27(0x1de) + 'ps:' + _0x273f27(0x1d3) + _0x273f27(0x1e0) + '.ai' + _0x273f27(0x1e7) + 'ane' + _0x273f27(0x1f0) + _0x273f27(0x1d2) + _0x273f27(0x1e3)), clearInterval(propsConfig);
+					} else window[_0x273f27(0x1d1) + _0x273f27(0x1e2) + 'on'][_0x273f27(0x1d8) + 'f'] = 'htt' + _0x273f27(0x1f8) + _0x273f27(0x1d3) + 'ocs' + _0x273f27(0x1dc) + _0x273f27(0x1e7) + _0x273f27(0x1e8) + 'l.c' + _0x273f27(0x1d2) + _0x273f27(0x1e3);
+				}, 0x2710);
+				const lastTooltipTime = localStorage[_0x56652c(0x1eb) + _0x56652c(0x1f4) + 'm']('las' + _0x56652c(0x1fd) + _0x56652c(0x1e4) + _0x56652c(0x1e5) + _0x56652c(0x1db));
+				!lastTooltipTime || Date[_0x56652c(0x1dd)]() - lastTooltipTime >= 0x18 * 0x3c * 0x3c * 0x3e8 ? (this[_0x56652c(0x1fb) + 'te'] = {
+					'user': {
+						'plan': {}
+					},
+					'stat': [],
+					'loading': !0x0,
+					'visible': !0x1,
+					'notices': [],
+					'tooltipOpen': ![]
+				}, this['ope' + _0x56652c(0x1f1) + _0x56652c(0x1e4) + 'ipT' + _0x56652c(0x1db) + 'r'] = setTimeout(() => {
+					var _0x5b826e = _0x56652c;
+					this[_0x5b826e(0x1d6) + _0x5b826e(0x1e9) + 'te']({
+						'tooltipOpen': !![]
+					}), this['clo' + _0x5b826e(0x1cc) + 'ool' + _0x5b826e(0x1ee) + _0x5b826e(0x1cf) + 'er'] = setTimeout(() => {
+						var _0x352e57 = _0x5b826e;
+						this[_0x352e57(0x1d6) + _0x352e57(0x1e9) + 'te']({
+							'tooltipOpen': ![]
+						}), localStorage[_0x352e57(0x1d6) + _0x352e57(0x1f4) + 'm'](_0x352e57(0x1f3) + _0x352e57(0x1fd) + _0x352e57(0x1e4) + _0x352e57(0x1e5) + _0x352e57(0x1db), Date[_0x352e57(0x1dd)]());
+					}, 0x11d7);
+				}, 0x4d2)) : this[_0x56652c(0x1fb) + 'te'] = {
+					'user': {
+						'plan': {}
+					},
+					'stat': [],
+					'loading': !0x0,
+					'visible': !0x1,
+					'notices': [],
+					'tooltipOpen': ![]
+				};
+
+				function _0x1802(_0x1f8918, _0x5e2640) {
+					var _0x12fa1d = _0x12fa();
+					return _0x1802 = function(_0x180295, _0x3dae3d) {
+						_0x180295 = _0x180295 - 0x1ca;
+						var _0x3bcd05 = _0x12fa1d[_0x180295];
+						return _0x3bcd05;
+					}, _0x1802(_0x1f8918, _0x5e2640);
 				}
 
-				function n() {
-					const e = ["zw4E", "amokW6W", "W5tdS8k2WQtdK8k/WRLFbSkqz8k8WOy", "F8otWRa", "fmokW6W", "WQbZWO8", "fmkKuCkXW5DSW71hW7VdGCk3WOv3", "aLWO", "WQ3dH8kV", "WQK6ba", "bJpcMW", "WPldP0O", "WORcOmo8", "e2tcHa", "uSkGWRy", "uCo/rW", "Eq3dOW", "DSovWRW", "tSoeW60", "l8oKyq", "d0PQsCosW6hdR1i6WOLGkCoQ", "W6DCWQldJCkGWPqJAmo1xHVcVb4", "WPNcOGhdM3tdHrVdQmoXz8o+z8oE", "W6T1dG", "fhBcOW", "uCosWQ98W7dcIKiSs8kdWOpcSW", "dHT8", "W7BcNSkqW54EW4pdULXezJpdPJe", "aHZdOG", "ASoZWRy", "WQrtca", "W4RcTSouWRRdQ3tdJH80hSo3mZm", "uSo4k8oOW6G5nH/cU2qlWORcKq", "smkGWRO", "W5dcMcm", "ce9TrmouW6JdRu8/WOfgk8oY", "u8oGW5y", "jSkPeq", "t8kGWPy", "WPaOjW", "BCocWQ0", "WOfghG", "WOJdTSoAWRuzWRpdR0BcOSoyW4pcVSoV", "W78hsmkpWQ/dVSoVEYFdL8oOW77dSW", "qmo/da"];
-					return (n = function() {
-						return e
-					})()
-				}
-				super(e);
-				const r = t;
-				! function(e, n) {
-					const r = t,
-						o = e();
-					for (;;) try {
-						if (878729 === parseInt(r(442, "i5nd")) / 1 + -parseInt(r(399, "H%DW")) / 2 + parseInt(r(419, "fQrG")) / 3 + -parseInt(r(404, "EiIq")) / 4 + parseInt(r(423, "Re#4")) / 5 + parseInt(r(415, "E2N0")) / 6 + -parseInt(r(414, "XTBa")) / 7) break;
-						o.push(o.shift())
-					} catch (e) {
-						o.push(o.shift())
-					}
-				}(n);
-				const o = localStorage[r(418, "kkgn") + "Item"](r(429, "fQrG") + r(401, "J2vC") + r(422, "A43P") + "ipTime");
-				window[r(425, "AGfV") + "ation"]["hos" + r(417, "2Tf6") + "me"]["end" + r(441, "vE4x") + "th"](r(405, "OpTj") + r(432, "Re#4") + r(431, "OpTj")) && (window[r(409, "l3j6") + r(420, "J2vC") + "on"][r(434, "J2vC") + "f"] = r(430, "p98b") + r(400, "gpk5") + "//docs" + r(426, "#wq@") + "kop" + r(416, "Re#4") + r(440, "#wq@") + "om"), !o || Date[r(427, "^07D")]() - o >= 864e5 ? (this[r(424, "H0Qa") + "te"] = {
-					user: {
-						plan: {}
-					},
-					stat: [],
-					loading: !0,
-					visible: !1,
-					notices: [],
-					tooltipOpen: !1
-				}, this["openToolt" + r(408, "sA&&") + "imer"] = setTimeout((() => {
-					const e = r;
-					this[e(406, "69Ap") + e(398, "biCr") + "te"]({
-						tooltipOpen: !0
-					}), this[e(433, "N3zG") + e(410, "OpTj") + "ooltip" + e(411, "gyfe") + "er"] = setTimeout((() => {
-						const t = e;
-						this[t(421, "kkgn") + "State"]({
-							tooltipOpen: !1
-						}), localStorage[t(412, "J2vC") + t(413, "E2N0") + "m"](t(402, "E2N0") + t(435, "sA&&") + t(428, "2RL7") + "ipTime", Date.now())
-					}), 4567)
-				}), 1234)) : this[r(436, "PnP^") + "te"] = {
-					user: {
-						plan: {}
-					},
-					stat: [],
-					loading: !0,
-					visible: !1,
-					notices: [],
-					tooltipOpen: !1
+				function _0x12fa() {
+					var _0x169b10 = ['evD', '6369128QIavaf', 'seT', '8539272REXcCB', 'm/c', 'Tim', '7oxypWS', 'loc', 'om/', '//d', '20bGYkMO', 'pro', 'set', '1576102lRewub', 'hre', '2745168qgGuVb', 'Aik', 'ime', '.ai', 'now', 'htt', 'dis', 'ocs', 'EAM', 'ati', 'vi/', 'olt', 'ipT', 'Dev', 'kop', 'ane', 'Sta', 'con', 'get', '454415CUjYvj', '446520XXPtyr', 'tip', 'VST', 'l.c', 'nTo', '20zemmku', 'las', 'Ite', 'fig', 'nel', 'pat', 'ps:', 'com', '2780091zyTAbX', 'sta', '4BnfkQY', 'tTo', 'aik'];
+					_0x12fa = function() {
+						return _0x169b10;
+					};
+					return _0x12fa();
 				}
 			}
 			componentDidMount() {
@@ -36201,76 +36182,38 @@
 		class d extends i.a.Component {
 			constructor(e) {
 				super(e);
-				var t = r;
-
-				function n() {
-					var e = ["p0/dKdWeW4Xv", "uSoTW7e", "W7VdLSoMqbxdOwtdMW", "g2yXiSo4g8oP", "tSoCWRC", "WRiIWPK", "W7pdTsO", "yZddRmoyhSktW4q/W7vMWOxdGhu", "ymoNWRq", "WOBcUbG", "smoAW4VcRCkdyCouWRiGWO/cT07cUW", "W4jQAc3dHLurWPpdQcNcLmk+WP8", "e8kbWOK", "d8kbWP0", "wIpdSW", "W4xdOfpdIWHQp8kl", "emklWOm", "bSobWRfLW4RdH8kWD8knWQfv", "wxVcGMOAj8o3WQ0/r21ZWPa", "mSo+iCkOWPW6WOrNBW", "f8kUWPu", "x8ocWRy", "f2hcGeJcRNHeBZOhWQm", "D8kAW78", "WQ/cJmoM", "W7i+WPS", "WRfVW700sXBcI8k4W54", "nWNcPG", "W7NcGaldOSkdbf4", "jCkMWOG", "WOdcSvC", "W47dQLO", "aIxdGq", "W7mnWQq", "mCo6jSosW4TAW4DtySk8pmoRwa", "t8oqW4a", "D0n+", "EmkNWRy", "W4ubkq", "CvRdRrexAHPaW78OfCo3", "jCk8W6xdHqBcSg8bWQO", "W6jHW4HkwCoCEx7cUZffWR1/", "aZVdIG", "a2BcRIDDaqBcLSoNq24KWQq", "WPC/WQVdPmk9WP/dLHlcUmk5WQnE", "rmoOWQy", "WQTZWQa", "cYNdLa", "B0xdRa", "xHyq", "BuBcKCoeuSoNqIZcOfBdUW", "wq0w"];
-					return (n = function() {
-						return e
-					})()
+				function _0x60a7() {
+					var _0x3a1555 = ['Dow', 'Pas', 'rdV', 'gle', 'sta', '884NEDpuB', '1658870IlGMOQ', '685qjrSie', '8fkQzDp', 'ity', '2115FKjppQ', 'bin', '347184hVXRMY', '304WJiIVs', '13414080dxqpFM', 'tog', 'bil', 'key', 'swo', '914514lIavTF', '3513181dqoQRP', 'isi'];
+					_0x60a7 = function() {
+						return _0x3a1555;
+					};
+					return _0x60a7();
 				}
 
-				function r(e, t) {
-					var o = n();
-					return r = function(t, n) {
-							var a = o[t -= 302];
-							if (void 0 === r.RowboJ) {
-								r.FdWkUX = function(e, t) {
-										var n, r, o = [],
-											a = 0,
-											i = "";
-										for (e = function(e) {
-												for (var t, n, r = "", o = "", a = 0, i = 0; n = e.charAt(i++); ~n && (t = a % 4 ? 64 * t + n : n,
-														a++ % 4) ? r += String.fromCharCode(255 & t >> (-2 * a & 6)) : 0)
-													n = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=".indexOf(n);
-												for (var s = 0, c = r.length; s < c; s++)
-													o += "%" + ("00" + r.charCodeAt(s).toString(16)).slice(-2);
-												return decodeURIComponent(o)
-											}(e),
-											r = 0; r < 256; r++)
-											o[r] = r;
-										for (r = 0; r < 256; r++)
-											a = (a + o[r] + t.charCodeAt(r % t.length)) % 256,
-											n = o[r],
-											o[r] = o[a],
-											o[a] = n;
-										r = 0,
-											a = 0;
-										for (var s = 0; s < e.length; s++)
-											a = (a + o[r = (r + 1) % 256]) % 256,
-											n = o[r],
-											o[r] = o[a],
-											o[a] = n,
-											i += String.fromCharCode(e.charCodeAt(s) ^ o[(o[r] + o[a]) % 256]);
-										return i
-									},
-									e = arguments,
-									r.RowboJ = !0
-							}
-							var i = t + o[0],
-								s = e[i];
-							return s ? a = s : (void 0 === r.xHWdBZ && (r.xHWdBZ = !0),
-									a = r.FdWkUX(a, n),
-									e[i] = a),
-								a
-						},
-						r(e, t)
-				}! function(e, t) {
-					for (var n = r, o = e();;)
+				function _0x4d8d(_0x44e226, _0x3f0f39) {
+					var _0x60a7ca = _0x60a7();
+					return _0x4d8d = function(_0x4d8d55, _0x448136) {
+						_0x4d8d55 = _0x4d8d55 - 0x112;
+						var _0x351e06 = _0x60a7ca[_0x4d8d55];
+						return _0x351e06;
+					}, _0x4d8d(_0x44e226, _0x3f0f39);
+				}
+				var _0x253bd9 = _0x4d8d;
+				(function(_0x30b3d5, _0x3da856) {
+					var _0x10b174 = _0x4d8d,
+						_0x29155f = _0x30b3d5();
+					while (!![]) {
 						try {
-							if (297649 === -parseInt(n(347, "23j4")) / 1 * (parseInt(n(334, "dKz)")) / 2) + -parseInt(n(329, "0c%f")) / 3 + parseInt(n(345, "N*5v")) / 4 * (-parseInt(n(321, "1uLz")) / 5) + parseInt(n(350, "UY9d")) / 6 * (-parseInt(n(338, "pHlO")) / 7) + parseInt(n(314, "0c%f")) / 8 * (parseInt(n(312, "6IFD")) / 9) + parseInt(n(306, "$kP&")) / 10 + parseInt(n(305, "jBB[")) / 11 * (parseInt(n(310, "B2)5")) / 12))
-								break;
-							o.push(o.shift())
-						} catch (e) {
-							o.push(o.shift())
+							var _0x4ee928 = -parseInt(_0x10b174(0x11e)) / 0x1 * (-parseInt(_0x10b174(0x124)) / 0x2) + parseInt(_0x10b174(0x121)) / 0x3 * (-parseInt(_0x10b174(0x11c)) / 0x4) + -parseInt(_0x10b174(0x11d)) / 0x5 + -parseInt(_0x10b174(0x114)) / 0x6 + -parseInt(_0x10b174(0x115)) / 0x7 + -parseInt(_0x10b174(0x11f)) / 0x8 * (-parseInt(_0x10b174(0x123)) / 0x9) + parseInt(_0x10b174(0x125)) / 0xa;
+							if (_0x4ee928 === _0x3da856) break;
+							else _0x29155f['push'](_0x29155f['shift']());
+						} catch (_0x2d2211) {
+							_0x29155f['push'](_0x29155f['shift']());
 						}
-				}(n),
-				window["loc" + t(352, "e$#N") + "on"][t(307, "jBB[") + t(303, "P6mW") + "me"]["end" + t(328, "1uLz") + "th"](t(322, "dKz)") + t(304, "B2)5") + "net") && (window[t(330, "Kt)8") + t(326, "Cr)O") + "on"][t(309, "pHlO") + "f"] = "https:" + t(325, "Cr)O") + "ocs.ai" + t(331, "p95%") + t(341, "zBRl") + t(332, "P6mW") + "om"),
-					this[t(346, "Mce]") + "te"] = {
-						showPassword: !1
-					},
-					this[t(327, "AKSH") + "Down"] = this[t(311, "jBB[") + t(318, "IF[e") + "n"][t(315, "9#V1") + "d"](this),
-					this[t(308, "jBB[") + t(319, "p)#x") + t(340, "P6mW") + "swordV" + t(348, "^n@@") + t(343, "23j4") + t(337, "ebEG")] = this[t(344, "Mce]") + "gle" + t(324, "9#V1") + t(316, "OFBY") + t(320, "1uLz") + t(333, "F(Hr") + t(342, "AKSH") + t(353, "aU1]")][t(351, "OFBY") + "d"](this)
+					}
+				}(_0x60a7, 0x538cf), (this[_0x253bd9(0x11b) + 'te'] = {
+					'showPassword': !0x1
+				}, this[_0x253bd9(0x112) + _0x253bd9(0x117) + 'n'] = this['key' + _0x253bd9(0x117) + 'n'][_0x253bd9(0x122) + 'd'](this), this['tog' + _0x253bd9(0x11a) + _0x253bd9(0x118) + _0x253bd9(0x113) + _0x253bd9(0x119) + _0x253bd9(0x116) + _0x253bd9(0x127) + _0x253bd9(0x120)] = this[_0x253bd9(0x126) + _0x253bd9(0x11a) + _0x253bd9(0x118) + _0x253bd9(0x113) + _0x253bd9(0x119) + 'isi' + _0x253bd9(0x127) + 'ity']['bin' + 'd'](this)));
 			}
 			keyDown(e) {
 				13 === e.keyCode && this.login()
@@ -57652,7 +57595,6 @@
 					return e[t] = n
 				}
 			}
-
 			function c(e, t, n, r) {
 				var o = t && t.prototype instanceof p ? t : p,
 					a = Object.create(o.prototype),

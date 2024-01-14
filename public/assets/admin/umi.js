@@ -5476,6 +5476,7 @@
 					n = e.invite,
 					r = e.subscribe,
 					l = e.frontend,
+					advanced = e.advanced,
 					u = e.server,
 					h = e.tabs,
 					p = e.fetchLoading,
@@ -5934,36 +5935,51 @@
 					checked: parseInt(r.show_info_to_server_enable),
 					onChange: e => this.set("subscribe", "show_info_to_server_enable", e ? 1 : 0)
 				})), r.show_info_to_server_enable ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
 					title: "Hiển thị thông tin Gói",
 					description: "Sẽ hiển thị thông tin gói sau khi khách cập nhật"
 				}, f.a.createElement(c.a, {
 					checked: parseInt(r.show_client_info_plan),
 					onChange: e => this.set("subscribe", "show_client_info_plan", e ? 1 : 0)
 				})), f.a.createElement(m, {
+					isChildren: !0,
 					title: "Hiển thị thông tin Hạn sử dụng",
 					description: "Sẽ hiển thị thông tin Hạn sử dụng sau khi khách cập nhật"
 				}, f.a.createElement(c.a, {
 					checked: parseInt(r.show_client_info_expire_at),
 					onChange: e => this.set("subscribe", "show_client_info_expire_at", e ? 1 : 0)
 				})), f.a.createElement(m, {
+					isChildren: !0,
 					title: "Hiển thị thông tin thời gian lấy link đặt hàng",
 					description: "Sẽ hiển thị thông tin thời gian lấy link đặt hàng sau khi khách cập nhật"
 				}, f.a.createElement(c.a, {
 					checked: parseInt(r.show_client_info_time_getsubscribe),
 					onChange: e => this.set("subscribe", "show_client_info_time_getsubscribe", e ? 1 : 0)
 				})), f.a.createElement(m, {
+					isChildren: !0,
 					title: "Hiển thị thông tin Data sử dụng",
 					description: "Sẽ hiển thị thông tin Data sử dụng sau khi khách cập nhật"
 				}, f.a.createElement(c.a, {
 					checked: parseInt(r.show_client_info_used_traffic),
 					onChange: e => this.set("subscribe", "show_client_info_used_traffic", e ? 1 : 0)
 				})), f.a.createElement(m, {
+					isChildren: !0,
 					title: "Hiển thị thông tin SNI",
 					description: "Sẽ hiển thị thông tin SNI sau khi khách cập nhật"
 				}, f.a.createElement(c.a, {
 					checked: parseInt(r.show_client_info_sni),
 					onChange: e => this.set("subscribe", "show_client_info_sni", e ? 1 : 0)
-				}))) : "")), f.a.createElement(s.a.TabPane, {
+				}))) : "", f.a.createElement(m, {
+					title: "Danh Sách máy chủ thông báo gói hết hạn",
+					description: "Sau khi mở, thông tin gói hết hạn sẽ được gửi đến máy chủ trong danh sách này Mỗi máy chủ cách nhau một dấu phẩy ."
+				}, f.a.createElement("textarea", {
+					rows: "4",
+					type: "text",
+					className: "form-control",
+					placeholder: "",
+					defaultValue: r.overdue_custom_message,
+					onChange: e => this.set("subscribe", "overdue_custom_message", e.target.value)
+				})))), f.a.createElement(s.a.TabPane, {
 					tab: "Mời & Thanh toán",
 					key: "invite"
 				}, f.a.createElement("div", {
@@ -6823,6 +6839,57 @@
 					checked: parseInt(w.app_android_v2box),
 					onChange: e => this.set("app", "app_android_v2box", e ? 1 : 0)
 				}))): " " ) , f.a.createElement(s.a.TabPane, {
+					tab: "Nâng cao",
+					key: "advanced"
+				}, f.a.createElement("div", {
+					className: "block-content"
+				}, f.a.createElement("div", {
+					className: "row"
+				}, f.a.createElement("div", {
+					className: "col-lg-12"
+				}, f.a.createElement("div", {
+					className: "alert alert-warning",
+					role: "alert"
+				}, f.a.createElement("p", {
+					className: "mb-0"
+				}, "Đây là bản điều khiển để sử dụng một số chức năng nâng cao của AikoPanel, Hãy tìm hiểu kỹ trước khi quyết định thay đổi một thứ gì. ", f.a.createElement("b", null, f.a.createElement("a", {
+					href: "https://docs.aikopanel.com/"
+				}, "Hướng đẫn của AikoPanel"))))))), f.a.createElement("div", {
+					className: ""
+				},
+				// f.a.createElement(m, {
+				// 	title: "Kiểu tiêu đề",
+				// 	description: "Kiểu tiêu đề sẽ thay đổi màu sắc của tiêu đề và chân trang"
+				// }, f.a.createElement(c.a, {
+				// 	checkedChildren: "Sáng",
+				// 	unCheckedChildren: "Tối",
+				// 	checked: "light" === l.frontend_theme_header ? 1 : 0,
+				// 	onChange: e => this.set("site", "frontend_theme_header", e ? "light" : "dark")
+				// })), 
+				f.a.createElement(m, {
+					title: "Sing-Box Config",
+					description: "Loại config sẽ được sử dụng cho Sing-Box, Lưu ý rằng bạn phải cập nhật lại config sing-box sau khi thay đổi loại config này"
+				}, f.a.createElement("select", {
+					className: "form-control",
+					defaultValue: advanced.advanced_singbox_config,
+					onChange: e => this.set("advanced", "advanced_singbox_config", e.target.value)
+				}, f.a.createElement("option", {
+					value: "default"
+				}, "Mặc định (default)"), f.a.createElement("option", {
+					value: "xb"
+				}, "XB")))
+				// , f.a.createElement(m, {
+				// 	title: "Hình nền",
+				// 	description: "Sẽ hiển thị trên trang đăng nhập sau khi đăng nhập"
+				// }, f.a.createElement("input", {
+				// 	type: "text",
+				// 	className: "form-control",
+				// 	placeholder: "https://xxxxx.com/wallpaper.png",
+				// 	defaultValue: l.frontend_background_url,
+				// 	onChange: e => this.set("frontend", "frontend_background_url", e.target.value)
+				// }))
+				)), 
+				f.a.createElement(s.a.TabPane, {
 					tab: "AikoPanel",
 					key: "aikopanel"
 				}, f.a.createElement("div", {
@@ -16983,6 +17050,7 @@
 				email: {},
 				connect: {},
 				app: {},
+				advanced: {},
 				aikopanel: {},
 				safe: {},
 				tabs: "site",
@@ -68754,6 +68822,11 @@
 						key: "commission_balance",
 						sorter: !0
 					}, {
+						title: "IP Đăng nhập",
+						dataIndex: "last_login_ip",
+						key: "last_login_ip",
+						render: e => e || "-"
+					},{
 						title: "IP Đăng kí",
 						dataIndex: "register_ip",
 						key: "register_ip",
