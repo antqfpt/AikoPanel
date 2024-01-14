@@ -5476,6 +5476,7 @@
 					n = e.invite,
 					r = e.subscribe,
 					l = e.frontend,
+					advanced = e.advanced,
 					u = e.server,
 					h = e.tabs,
 					p = e.fetchLoading,
@@ -6823,6 +6824,64 @@
 					checked: parseInt(w.app_android_v2box),
 					onChange: e => this.set("app", "app_android_v2box", e ? 1 : 0)
 				}))): " " ) , f.a.createElement(s.a.TabPane, {
+					tab: "Nâng cao",
+					key: "advanced"
+				}, f.a.createElement("div", {
+					className: "block-content"
+				}, f.a.createElement("div", {
+					className: "row"
+				}, f.a.createElement("div", {
+					className: "col-lg-12"
+				}, f.a.createElement("div", {
+					className: "alert alert-warning",
+					role: "alert"
+				}, f.a.createElement("p", {
+					className: "mb-0"
+				}, "Đây là bản điều khiển để sử dụng một số chức năng nâng cao của AikoPanel, Hãy tìm hiểu kỹ trước khi quyết định thay đổi một thứ gì. ", f.a.createElement("b", null, f.a.createElement("a", {
+					href: "https://docs.aikopanel.com/"
+				}, "Hướng đẫn của AikoPanel"))))))), f.a.createElement("div", {
+					className: ""
+				}, f.a.createElement(m, {
+					title: "Kiểu viền"
+				}, f.a.createElement(c.a, {
+					checkedChildren: "Sáng",
+					unCheckedChildren: "Tối",
+					checked: "light" === l.frontend_theme_sidebar ? 1 : 0,
+					onChange: e => this.set("site", "frontend_theme_sidebar", e ? "light" : "dark")
+				})), 
+				// f.a.createElement(m, {
+				// 	title: "Kiểu tiêu đề",
+				// 	description: "Kiểu tiêu đề sẽ thay đổi màu sắc của tiêu đề và chân trang"
+				// }, f.a.createElement(c.a, {
+				// 	checkedChildren: "Sáng",
+				// 	unCheckedChildren: "Tối",
+				// 	checked: "light" === l.frontend_theme_header ? 1 : 0,
+				// 	onChange: e => this.set("site", "frontend_theme_header", e ? "light" : "dark")
+				// })), 
+				f.a.createElement(m, {
+					title: "Sing-Box Config",
+					description: "Loại config sẽ được sử dụng cho Sing-Box, Lưu ý rằng bạn phải cập nhật lại config sing-box sau khi thay đổi loại config này"
+				}, f.a.createElement("select", {
+					className: "form-control",
+					defaultValue: advanced.advanced_singbox_config,
+					onChange: e => this.set("advanced", "advanced_singbox_config", e.target.value)
+				}, f.a.createElement("option", {
+					value: "default"
+				}, "Mặc định (default)"), f.a.createElement("option", {
+					value: "xb"
+				}, "XB")))
+				// , f.a.createElement(m, {
+				// 	title: "Hình nền",
+				// 	description: "Sẽ hiển thị trên trang đăng nhập sau khi đăng nhập"
+				// }, f.a.createElement("input", {
+				// 	type: "text",
+				// 	className: "form-control",
+				// 	placeholder: "https://xxxxx.com/wallpaper.png",
+				// 	defaultValue: l.frontend_background_url,
+				// 	onChange: e => this.set("frontend", "frontend_background_url", e.target.value)
+				// }))
+				)), 
+				f.a.createElement(s.a.TabPane, {
 					tab: "AikoPanel",
 					key: "aikopanel"
 				}, f.a.createElement("div", {
@@ -16983,6 +17042,7 @@
 				email: {},
 				connect: {},
 				app: {},
+				advanced: {},
 				aikopanel: {},
 				safe: {},
 				tabs: "site",
