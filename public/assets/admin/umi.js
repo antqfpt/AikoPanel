@@ -5935,36 +5935,51 @@
 					checked: parseInt(r.show_info_to_server_enable),
 					onChange: e => this.set("subscribe", "show_info_to_server_enable", e ? 1 : 0)
 				})), r.show_info_to_server_enable ? f.a.createElement(f.a.Fragment, null, f.a.createElement(m, {
+					isChildren: !0,
 					title: "Hiển thị thông tin Gói",
 					description: "Sẽ hiển thị thông tin gói sau khi khách cập nhật"
 				}, f.a.createElement(c.a, {
 					checked: parseInt(r.show_client_info_plan),
 					onChange: e => this.set("subscribe", "show_client_info_plan", e ? 1 : 0)
 				})), f.a.createElement(m, {
+					isChildren: !0,
 					title: "Hiển thị thông tin Hạn sử dụng",
 					description: "Sẽ hiển thị thông tin Hạn sử dụng sau khi khách cập nhật"
 				}, f.a.createElement(c.a, {
 					checked: parseInt(r.show_client_info_expire_at),
 					onChange: e => this.set("subscribe", "show_client_info_expire_at", e ? 1 : 0)
 				})), f.a.createElement(m, {
+					isChildren: !0,
 					title: "Hiển thị thông tin thời gian lấy link đặt hàng",
 					description: "Sẽ hiển thị thông tin thời gian lấy link đặt hàng sau khi khách cập nhật"
 				}, f.a.createElement(c.a, {
 					checked: parseInt(r.show_client_info_time_getsubscribe),
 					onChange: e => this.set("subscribe", "show_client_info_time_getsubscribe", e ? 1 : 0)
 				})), f.a.createElement(m, {
+					isChildren: !0,
 					title: "Hiển thị thông tin Data sử dụng",
 					description: "Sẽ hiển thị thông tin Data sử dụng sau khi khách cập nhật"
 				}, f.a.createElement(c.a, {
 					checked: parseInt(r.show_client_info_used_traffic),
 					onChange: e => this.set("subscribe", "show_client_info_used_traffic", e ? 1 : 0)
 				})), f.a.createElement(m, {
+					isChildren: !0,
 					title: "Hiển thị thông tin SNI",
 					description: "Sẽ hiển thị thông tin SNI sau khi khách cập nhật"
 				}, f.a.createElement(c.a, {
 					checked: parseInt(r.show_client_info_sni),
 					onChange: e => this.set("subscribe", "show_client_info_sni", e ? 1 : 0)
-				}))) : "")), f.a.createElement(s.a.TabPane, {
+				}))) : "", f.a.createElement(m, {
+					title: "Danh Sách máy chủ thông báo gói hết hạn",
+					description: "Sau khi mở, thông tin gói hết hạn sẽ được gửi đến máy chủ trong danh sách này Mỗi máy chủ cách nhau một dấu phẩy ví dụ:  'ID: ' . $user['id'], 'Gói Đã Hết Hạn', 'Vui Lòng Lên Web Gia Hạn', config('aikopanel.app_url'), 'Email: ' . $user['email'], "
+				}, f.a.createElement("textarea", {
+					rows: "4",
+					type: "text",
+					className: "form-control",
+					placeholder: "",
+					defaultValue: r.overdue_custom_message,
+					onChange: e => this.set("subscribe", "overdue_custom_message", e.target.value)
+				})))), f.a.createElement(s.a.TabPane, {
 					tab: "Mời & Thanh toán",
 					key: "invite"
 				}, f.a.createElement("div", {
