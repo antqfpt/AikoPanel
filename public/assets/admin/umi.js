@@ -6877,9 +6877,9 @@
 					value: "default"
 				}, "Mặc định (default)"),f.a.createElement("option", {
 					value: "aiko"
-				}, "Aiko"),f.a.createElement("option", {
+				}, "Aiko ( Since sing-box 1.8.0 "),f.a.createElement("option", {
 					value: "xb"
-				}, "XB")))
+				}, "XB ( cts.v1.mk ) Config" )))
 				// , f.a.createElement(m, {
 				// 	title: "Hình nền",
 				// 	description: "Sẽ hiển thị trên trang đăng nhập sau khi đăng nhập"
