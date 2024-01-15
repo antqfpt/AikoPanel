@@ -6875,7 +6875,9 @@
 					onChange: e => this.set("advanced", "advanced_singbox_config", e.target.value)
 				}, f.a.createElement("option", {
 					value: "default"
-				}, "Mặc định (default)"), f.a.createElement("option", {
+				}, "Mặc định (default)"),f.a.createElement("option", {
+					value: "aiko"
+				}, "Aiko"),f.a.createElement("option", {
 					value: "xb"
 				}, "XB")))
 				// , f.a.createElement(m, {
